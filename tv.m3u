@@ -816,6 +816,10 @@ http://113.163.189.104:8135/liveeventf.m3u8
 
 http://118.107.85.5:1935/radio/sonla_aac/chunklist.m3u8
 
+#EXTINF:-1 group-title="PHÁT THANH" tvg-logo="https://i.ibb.co/KXT1YCb/icon-1-01.jpg", Thanh Hóa
+
+http://113.160.182.222:8080/hls/radio/index.m3u8
+
 #EXTINF:-1 group-title="PHÁT THANH" tvg-logo="https://i.ibb.co/KXT1YCb/icon-1-01.jpg", Thừa Thiên Huế
 
 http://trtlive.f77de468.cdnviet.com/Radio-online/playlist.m3u8
