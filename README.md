@@ -1,2 +1,2 @@
-# ghimtui.github.io
-Truyền hình di động
+# https://ghimtui.github.io
+<i>Trang tin tức đời sống<i>
