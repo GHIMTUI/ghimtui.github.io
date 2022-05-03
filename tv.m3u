@@ -215,9 +215,9 @@ http://livecdn.fptplay.net/hda3/cartoonnetworkhd_vhls.smil/chunklist_b5000000.m3
 
 http://livecdn.fptplay.net/hda3/dreamworks_4000.stream/chunklist.m3u8
 
-#EXTINF:-1 group-title="QUỐC TẾ" tvg-logo="https://static.wikia.nocookie.net/logos/images/a/a7/Happy_Kids_2018.png/revision/latest?cb=20220207014649&path-prefix=vi", KIDS
+#EXTINF:-1 group-title="QUỐC TẾ" tvg-logo="https://scontent.fsgn5-8.fna.fbcdn.net/v/t39.30808-6/272441467_364245508990301_6828786737043808799_n.png?_nc_cat=109&ccb=1-5&_nc_sid=85a577&efg=eyJpIjoidCJ9&_nc_ohc=DK72pB210q0AX-PCRv1&_nc_ht=scontent.fsgn5-8.fna&oh=00_AT8TYKRILICd1V0QuTFlgwryffgmC2e_dTsfDhT-GTuNhQ&oe=6275F169", VSAMTV
 
-https://pprex49o5aliv.vcdn.cloud/live/happy-kids/chunklist_2.m3u8
+http://uni5rtmp.tulix.tv/playout2multi10/playout2multi10.stream/playlist.m3u8
 
 #EXTINF:-1 group-title="QUỐC TẾ" tvg-logo="https://1.bp.blogspot.com/-oSriZPbSiVA/YP65RjiVtRI/AAAAAAAAMqQ/pzi_wTKN9uU-gna7I3OfTCy8xsXdNTkQwCNcBGAsYHQ/s0/kenh-music-box-vtvcab.png",Music Box
 
