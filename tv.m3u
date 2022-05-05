@@ -361,7 +361,7 @@ http://livecdn.fptplay.net/sdc/daklak_2000.stream/chunklist.m3u8
 
 #EXTINF:-1 group-title="TÂY NGUYÊN" tvg-logo="https://2.pik.vn/2021616ec42f-2e8a-41c1-9e92-0b8a4f377613.jpg", Đắk Nông
 
-https://htv-drm-live-cdn.fptplay.net/htvonline/daknong.480p.nimble.tms/chunks.m3u8
+https://16371213858134.vnns.net/daknong_abr/vtc130121/daknong-1080p/chunks.m3u8
 
 #EXTINF:-1 group-title="MIỀN BẮC" tvg-logo="https://2.pik.vn/2021759c455a-87d4-4392-b54c-cdea99e6af7a.jpg", Điện Biên
 
@@ -549,7 +549,7 @@ http://livecdn.fptplay.net/sdc/thainguyen_2000.stream/chunklist.m3u8
 
 #EXTINF:-1 group-title="MIỀN BẮC" tvg-logo="https://static.wikia.nocookie.net/logos/images/1/1a/TN2_logo_2017.png/revision/latest?cb=20201006101324&path-prefix=vi", Thái Nguyên 2
 
-https://mziyw7t0yhliv.vcdn.cloud/77f7ff0af21a9a808af8de3740738316/1650372394000/live/thainguyen2/chunklist_1.m3u8
+https://vthanh.net/live/nethub/5969/playlist.m3u8
 
 #EXTINF:-1 group-title="MIỀN TRUNG" tvg-logo="https://2.pik.vn/202189090b0d-f951-4869-9af0-df011f83d2ff.jpg", Thanh Hoá
 
@@ -591,9 +591,17 @@ http://media.kythuatvov.vn:7003/;stream/
 
 http://media.kythuatvov.vn:7005/;stream/
 
-#EXTINF:-1 group-title="PHÁT THANH" tvg-logo="https://i.ibb.co/KXT1YCb/icon-1-01.jpg", VOV4
+#EXTINF:-1 group-title="PHÁT THANH" tvg-logo="https://i.ibb.co/KXT1YCb/icon-1-01.jpg", VOV4 Tây Bắc
 
 http://media.kythuatvov.vn:7035/;stream/
+
+#EXTINF:-1 group-title="PHÁT THANH" tvg-logo="https://i.ibb.co/KXT1YCb/icon-1-01.jpg", VOV4 Tây Nguyên
+
+http://media.kythuatvov.vn:1936/live/VOV4_TN.sdp/chunklist.m3u8
+
+#EXTINF:-1 group-title="PHÁT THANH" tvg-logo="https://i.ibb.co/KXT1YCb/icon-1-01.jpg", VOV4 Cần Thơ
+
+http://media.kythuatvov.vn:1936/live/VOV4_CT.sdp/chunklist.m3u8
 
 #EXTINF:-1 group-title="PHÁT THANH" tvg-logo="https://i.ibb.co/KXT1YCb/icon-1-01.jpg", VOV5
 
@@ -740,6 +748,7 @@ https://live.thhp.vn/radio/102/index.m3u8?1
 #EXTINF:-1 group-title="PHÁT THANH" tvg-logo="https://i.ibb.co/KXT1YCb/icon-1-01.jpg", Hậu Giang
 
 https://api.vthanhtivii.xyz/v1/getlink/dp/hgtvradio
+
 #EXTINF:-1 group-title="PHÁT THANH" tvg-logo="https://i.ibb.co/KXT1YCb/icon-1-01.jpg", Hưng Yên
 
 https://live.hungyentv.vn/hytvlive/radio.m3u8
@@ -787,6 +796,7 @@ http://202.43.109.142:1935/NTVR/ntvradio/playlist.m3u8
 #EXTINF:-1 group-title="PHÁT THANH" tvg-logo="https://i.ibb.co/KXT1YCb/icon-1-01.jpg", Phú Yên
 
 http://113.161.4.48:8080/phuyen/radio/index.m3u8
+
 
 #EXTINF:-1 group-title="PHÁT THANH" tvg-logo="https://i.ibb.co/KXT1YCb/icon-1-01.jpg", Quảng Nam
 
