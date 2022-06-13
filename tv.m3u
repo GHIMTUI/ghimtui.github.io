@@ -357,7 +357,7 @@ http://livecdn.fptplay.net/sdc/daklak_2000.stream/chunklist.m3u8
 
 #EXTINF:-1 group-title="TÂY NGUYÊN" tvg-logo="https://2.pik.vn/2021616ec42f-2e8a-41c1-9e92-0b8a4f377613.jpg", Đắk Nông
 
-https://16371213858134.vnns.net/daknong_abr/vtc130121/daknong-1080p/chunks.m3u8
+https://16371213858134.vnns.net/daknong_abr/playlist.m3u8
 
 #EXTINF:-1 group-title="MIỀN BẮC" tvg-logo="https://2.pik.vn/2021759c455a-87d4-4392-b54c-cdea99e6af7a.jpg", Điện Biên
 
@@ -574,8 +574,3 @@ http://livecdn.fptplay.net/sdc/vinhphuc_2000.stream/chunklist.m3u8
 #EXTINF:-1 group-title="MIỀN BẮC" tvg-logo="https://2.pik.vn/202153be6c82-ac0d-4f86-acd5-9d2eb4652ce1.jpg", Yên Bái
 
 http://livecdn.fptplay.net/sdc/yenbai_2000.stream/chunklist.m3u8
-
-#EXTINF:-1 group-title="MIỀN BẮC" tvg-logo="https://scontent.fsgn5-9.fna.fbcdn.net/v/t39.30808-6/264012693_264594455749665_6071450223215329320_n.jpg?stp=cp0_dst-jpg_e15_fr_q65&_nc_cat=105&ccb=1-6&_nc_sid=85a577&efg=eyJpIjoidCJ9&_nc_ohc=afgNq6l6YXQAX_pK2Vs&_nc_ht=scontent.fsgn5-9.fna&oh=00_AT_bFkntkxbS-UhOUiSlkGRY3n9abLsJA47E2A_MwwJhKw&oe=627B5030", SVAM TV Chicago
-
-
-https://59d39900ebfb8.streamlock.net/Vsamchicagotv/Vsamchicagotv/playlist.m3u8
