@@ -543,10 +543,6 @@ http://cdn.tbtv.mediatech.vn/tbtvlive/tv1live.m3u8
 
 http://livecdn.fptplay.net/sdc/thainguyen_2000.stream/chunklist.m3u8
 
-#EXTINF:-1 group-title="MIỀN BẮC" tvg-logo="https://static.wikia.nocookie.net/logos/images/1/1a/TN2_logo_2017.png/revision/latest?cb=20201006101324&path-prefix=vi", Thái Nguyên 2
-
-https://vthanh.net/live/nethub/5969/playlist.m3u8
-
 #EXTINF:-1 group-title="MIỀN TRUNG" tvg-logo="https://2.pik.vn/202189090b0d-f951-4869-9af0-df011f83d2ff.jpg", Thanh Hoá
 
 http://livecdn.fptplay.net/sda/thanhhoa_2000.stream/chunklist.m3u8
