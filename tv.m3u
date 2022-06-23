@@ -563,7 +563,7 @@ http://thtg.vn:8001/stream_hi.m3u8
 
 http://livecdn.fptplay.net/sdc/travinh_1000.stream/chunklist.m3u8
 
-#EXTINF:-1 group-title="MIỀN NAM" tvg-logo="https://2.pik.vn/2021dd6c0d6a-faba-4a70-ae8b-6c150e750b9c.jpg", Trà Vinh 2
+#EXTINF:-1 group-title="MIỀN NAM" tvg-logo="https://static.wikia.nocookie.net/logos/images/a/a5/THTV2_20-06-2022.png/revision/latest?cb=20220621011751&path-prefix=vi", Trà Vinh 2
 
 http://118.69.169.42:1935/THTV2/mystream/playlist.m3u8
 
