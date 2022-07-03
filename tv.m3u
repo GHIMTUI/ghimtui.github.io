@@ -323,13 +323,13 @@ https://live.baobinhphuoc.com.vn/bptvlive/tv1live.m3u8
 
 https://live.baobinhphuoc.com.vn/bptvlive/tv2live.m3u8
 
-#EXTINF:-1 group-title="MIỀN NAM" tvg-logo="https://static.wikia.nocookie.net/logos/images/b/b6/ANT_BPTV3-0.png/revision/latest?cb=20211004001335&path-prefix=vi",Bình Phước 3
-
-https://livecdn.fptplay.net/sda/ant_hls.smil/chunklist_b2500000.m3u8
-
 #EXTINF:-1 group-title="MIỀN TRUNG" tvg-logo="https://2.pik.vn/202199b93761-639a-463e-a007-c942ef30d697.jpg", Bình Thuận
 
 http://livecdn.fptplay.net/sdc/binhthuan_2000.stream/chunklist.m3u8
+
+#EXTINF:-1 group-title="MIỀN TRUNG" tvg-logo="https://logos.fandom.com/vi/wiki/BTV6_-_Qu%C3%AA_H%C6%B0%C6%A1ng_Homeshopping?file=BTV6.png", Bình Thuận 6
+
+https://livecdn.fptplay.net/sdb/quehuongshop_hls.smil/chunklist_b1200000.m3u8
 
 #EXTINF:-1 group-title="MIỀN NAM"  tvg-logo="https://2.pik.vn/20210c80ffc4-fba7-449c-88f0-9c455aa92a2d.jpg", Cà Mau
 
@@ -385,7 +385,7 @@ http://livecdn.fptplay.net/sdc/dongthap_2000.stream/chunklist.m3u8
 
 #EXTINF:-1 group-title="MIỀN NAM" tvg-logo="https://2.pik.vn/2021d17de142-7069-4742-9df8-19796c3e33dd.jpg", Đồng Tháp 2
 
-http://202.43.109.145:1935/thdt2/thdt2/chunklist.m3u8
+https://livecdn.fptplay.net/sdc/dongthaphd_hls.smil/chunklist_b1200000.m3u8
 
 #EXTINF:-1 group-title="TÂY NGUYÊN" tvg-logo="https://2.pik.vn/20210589d1c1-9049-4302-a43b-77c374c078bf.jpg", Gia Lai
 
@@ -441,7 +441,7 @@ http://livecdn.fptplay.net/sda/khanhhoa_2000.stream/chunklist.m3u8
 
 #EXTINF:-1 group-title="MIỀN NAM" tvg-logo="https://2.pik.vn/2021fe9ff2af-8a62-4229-89df-31f062380738.jpg", Kiên Giang
 
-http://tv.kgtv.vn/live/kgtv/kgtv.m3u8
+http://livecdn.fptplay.net/sda/kiengiang_2000.stream/chunklist.m3u8
 
 #EXTINF:-1 group-title="MIỀN NAM" tvg-logo="https://2.pik.vn/2021fd057400-c4e6-406e-96eb-1fc6951535bd.jpg", Kiên Giang 1
 
@@ -461,7 +461,7 @@ http://livecdn.fptplay.net/sdc/lamdong_2000.stream/chunklist.m3u8
 
 #EXTINF:-1 group-title="MIỀN BẮC" tvg-logo="https://2.pik.vn/20211908611a-de79-4c2e-a266-35fba62ba6c6.jpg", Lạng Sơn
 
-http://cdn.lstv.mediatech.vn/lstvlive/tv1live.m3u8
+http://livecdn.fptplay.net/sdc/langson_2000.stream/chunklist.m3u8
 
 #EXTINF:-1 group-title="MIỀN BẮC" tvg-logo="https://2.pik.vn/20219391498f-c63a-42c0-b72b-3aa03c131a43.jpg", Lào Cai
 
@@ -481,9 +481,9 @@ http://livecdn.fptplay.net/sda/nghean_2000.stream/chunklist.m3u8
 
 #EXTINF:-1 group-title="MIỀN BẮC" tvg-logo="https://2.pik.vn/20210cb2d35d-d09d-41ad-a25d-c41e0c8d07b4.jpg", Ninh Bình
 
-http://nbtv.vncdn.vn/nbtvlive/tv1live.m3u8
+http://livecdn.fptplay.net/sda/ninhbinh_2000.stream/chunklist.m3u8
 
-#EXTINF:-1 group-title="MIỀN TRUNG" tvg-logo="https://2.pik.vn/2021279eb37f-7a34-48ee-ad13-81a8d344ca09.jpg", Ninh Thuận
+#EXTINF:-1 group-title="MIỀN TRUNG" tvg-logo=https://2.pik.vn/2021279eb37f-7a34-48ee-ad13-81a8d344ca09.jpg", Ninh Thuận
 
 http://livecdn.fptplay.net/sda/ninhthuan_2000.stream/chunklist.m3u8
 
@@ -521,7 +521,7 @@ http://livecdn.fptplay.net/sdc/quangtri_2000.stream/chunklist.m3u8
 
 #EXTINF:-1 group-title="MIỀN NAM" tvg-logo="https://2.pik.vn/2021ad835c79-500c-4b60-8461-90b69cefaa58.jpg", Sóc Trăng 1
 
-http://113.163.189.104:8135/liveevent.m3u8
+http://livecdn.fptplay.net/sda/soctrang_2000.stream/chunklist.m3u8
 
 #EXTINF:-1 group-title="MIỀN NAM" tvg-logo="https://2.pik.vn/2021c261cec6-c1d5-40f1-bf47-251d27512730.jpg", Sóc Trăng 2
 
@@ -553,7 +553,7 @@ http://livecdn.fptplay.net/sdc/hue_2000.stream/chunklist.m3u8
 
 #EXTINF:-1 group-title="MIỀN NAM" tvg-logo="https://2.pik.vn/202120a222aa-785b-4e07-a857-b7328e414a09.jpg", Tiền Giang
 
-http://thtg.vn:8001/stream_hi.m3u8
+http://livecdn.fptplay.net/sda/tiengiang_2000.stream/chunklist.m3u8
 
 #EXTINF:-1 group-title="MIỀN NAM" tvg-logo="https://2.pik.vn/2021dd6c0d6a-faba-4a70-ae8b-6c150e750b9c.jpg", Trà Vinh
 
