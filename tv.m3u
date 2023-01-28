@@ -44,7 +44,7 @@ https://mediatech.vncdn.vn/vovlive/tv1live.m3u8
 
 http://livecdn.fptplay.net/hda2/anninhtv_4000.stream/chunklist.m3u8
 
-#EXTINF:-1 group-title="VTV" tvg-logo="https://static.wikia.nocookie.net/logos/images/1/19/Logo_Nh%C3%A2n_D%C3%A2n_TV_%28Logo_m%C3%A0n_h%C3%ACnh%2C_B%E1%BA%A3n_2%29.png/revision/latest?cb=20220420142237&path-prefix=vi", Nhân Dân
+#EXTINF:-1 group-title="VTV" tvg-logo="https://yt3.googleusercontent.com/ytc/AMLnZu_VTd8jZxs-wN33t8Ozj8D1gElV8mWI9MT2ZxgKrg=s900-c-k-c0x00ffffff-no-rj", Nhân Dân
 
 http://livecdn.fptplay.net/sdc/truyenhinhnhandan_2000.stream/chunklist.m3u8
 
@@ -176,146 +176,6 @@ http://livecdn.fptplay.net/hda3/htvcphunu_vhls.smil/chunklist_b5000000.m3u8
 
 http://livecdn.fptplay.net/hda3/htvcthuanviet_vhls.smil/chunklist_b5000000.m3u8
 
-#EXTINF:-1 group-title="HTVC" tvg-logo="https://2.pik.vn/2021c32be819-0371-4b84-82b4-f0be5e4d4738.jpg", Thuần Việt HD
-
-http://livecdn.fptplay.net/hda1/htvcthuanviethd_4000.stream/chunklist.m3u8
-
-#EXTINF:-1 group-title="QUỐC TẾ" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/2/21/LogoBabyTV-2021-MAIN_logo.png/revision/latest/scale-to-width-down/2000?cb=20210422144418",BabyTV
-
-http://livecdn.fptplay.net/hda3/babytvhd_4000.stream/chunklist.m3u8
-
-#EXTINF:-1 group-title="QUỐC TẾ" tvg-logo="https://2.pik.vn/2021473b7043-91ed-4907-adcb-ba00f3862c71.jpg", Babyfirst
-
-http://livecdn.fptplay.net/hda1/babyfirst_4000.stream/chunklist.m3u8
-
-#EXTINF:-1 group-title="QUỐC TẾ" tvg-logo="https://2.pik.vn/202190b0532a-6a79-48ec-a402-e6599b866b2f.jpg", CBeebies
-
-http://livecdn.fptplay.net/hda3/cbeebies_4000.stream/chunklist.m3u8
-
-#EXTINF:-1 group-title="QUỐC TẾ" tvg-logo="https://2.pik.vn/20218e10db8f-e204-4c08-89e6-2a6979051732.jpg", Boomerang
-
-http://livecdn.fptplay.net/hda3/boomerang_4000.stream/chunklist.m3u8
-
-#EXTINF:-1 group-title="QUỐC TẾ" tvg-logo="https://2.pik.vn/2021a6d0cebe-3465-4c90-a549-b800cc4f39e7.jpg", Cartoon Network
-
-http://livecdn.fptplay.net/hda3/cartoonnetworkhd_vhls.smil/chunklist_b5000000.m3u8
-
-#EXTINF:-1 group-title="QUỐC TẾ" tvg-logo="https://pbs.twimg.com/profile_images/1173731533254905857/nQzMqfHo_400x400.jpg",Dream Works
-
-http://livecdn.fptplay.net/hda3/dreamworks_4000.stream/chunklist.m3u8
-
-#EXTINF:-1 group-title="QUỐC TẾ" tvg-logo="https://upload.wikimedia.org/wikipedia/id/7/7f/Kids_TV_%282020%29.png", KIDS
-
-https://vtsstr7.tv24.vn/live/smil:Happy_Kids.smil/chunklist.m3u8
-
-#EXTINF:-1 group-title="QUỐC TẾ" tvg-logo="https://static.wikia.nocookie.net/logos/images/e/e1/Warner_TV_Asia.png/revision/latest?cb=20221115050431&path-prefix=vi", WarnerTV
-
-http://livecdn.fptplay.net/hda3/warnertv_vhls.smil/chunklist_b5000000.m3u8
-
-#EXTINF:-1 group-title="QUỐC TẾ" tvg-logo="https://1.bp.blogspot.com/-oSriZPbSiVA/YP65RjiVtRI/AAAAAAAAMqQ/pzi_wTKN9uU-gna7I3OfTCy8xsXdNTkQwCNcBGAsYHQ/s0/kenh-music-box-vtvcab.png",Music Box
-
-https://api.vthanhtivi.pw/v2/getlink/mytv/69/hd.m3u8
-
-#EXTINF:-1 group-title="QUỐC TẾ" tvg-logo="https://2.pik.vn/20216467553b-ae5e-4950-8344-d07363367aab.jpg", Animal Plannet
-
-http://livecdn.fptplay.net/hda2/animalplanet_4000.stream/chunklist.m3u8
-
-#EXTINF:-1 group-title="QUỐC TẾ" tvg-logo="https://2.pik.vn/2021bb036c73-5214-4847-a9f6-bafeeb8bb9e5.jpg", BBC Earth
-
-https://livecdn.fptplay.net/hda2/bbcearth_4000.stream/chunklist.m3u8
-
-#EXTINF:-1 group-title="QUỐC TẾ" tvg-logo="https://2.pik.vn/20218117b28e-b284-4c65-b0c4-0fbc6d7c0628.jpg", Discovery Asia
-
-http://livecdn.fptplay.net/hda2/discoveryasia_vhls.smil/chunklist_b5000000.m3u8
-
-#EXTINF:-1 group-title="QUỐC TẾ" tvg-logo="https://2.pik.vn/20216fe1cedf-3d65-4c15-bd3a-df32019b97e9.jpg", WILD
-
-https://vips-livecdn.fptplay.net/hda3/natgeowild_vhls.smil/chunklist_b5000000.m3u8
-
-#EXTINF:-1 group-title="QUỐC TẾ" tvg-logo="https://2.pik.vn/2021775f13ae-840c-42b6-9afb-80adf34cbce5.jpg",Cinema World
-
-http://livecdn.fptplay.net/hda2/cinemawork_4000.stream/chunklist.m3u8
-
-#EXTINF:-1 group-title="QUỐC TẾ" tvg-logo="", FashionTV
-
-https://livecdn.fptplay.net/hda2/fashiontvhd_vhls.smil/chunklist_b5000000.m3u8
-
-#EXTINF:-1 group-title="SCTV" tvg-logo="", SCTV1
-
-https://vtsstr7.tv24.vn/live/SCTV_HD_Hai_new.smil/playlist.m3u8
-
-#EXTINF:-1 group-title="SCTV" tvg-logo="", SCTV2
-
-https://vtsstr6.tv24.vn/live/sctv2_HD_new.smil/playlist.m3u8
-
-#EXTINF:-1 group-title="SCTV" tvg-logo="", SCTV3
-
-https://vtsstr4.tv24.vn/live/SCTVHDThieunhi_new.smil/playlist.m3u8
-
-#EXTINF:-1 group-title="SCTV" tvg-logo="", SCTV4
-
-https://vtsstr4.tv24.vn/live/SCTV_HD_GiaiTri_new.smil/playlist.m3u8
-
-#EXTINF:-1 group-title="SCTV" tvg-logo="https://yt3.ggpht.com/v2NqZMd35lt0_CodMYhGa399Xe7c9P8UyDqMr8Mj6ucB067VCprvFkQGuPtPZgMeqPpQpFnADxQ=s900-c-k-c0x00ffffff-no-rj", FIM360
-
-http://livecdn.fptplay.net/hda3/film360_4000.stream/chunklist.m3u8
-
-#EXTINF:-1 group-title="SCTV" tvg-logo="", SCTV7
-
-https://vtsstr4.tv24.vn/live/SCTV_HD_SanKhau_new.smil/playlist.m3u8
-
-#EXTINF:-1 group-title="SCTV" tvg-logo="", SCTV9
-
-https://vtsstr4.tv24.vn/live/SCTV_HD_PhimChauA_new.smil/playlist.m3u8
-
-#EXTINF:-1 group-title="SCTV" tvg-logo="", SCTV11
-
-https://vtsstr4.tv24.vn/live/SCTVVHNT_HD_new.smil/playlist.m3u8
-
-#EXTINF:-1 group-title="SCTV" tvg-logo="", SCTV12
-
-https://vtsstr4.tv24.vn/live/SCTV12_HD_new.smil/playlist.m3u8
-
-#EXTINF:-1 group-title="SCTV" tvg-logo="", SCTV13
-
-https://vtsstr7.tv24.vn/live/SCTVHDPhunuGiadinh_new.smil/playlist.m3u8
-
-#EXTINF:-1 group-title="SCTV" tvg-logo="", SCTV16
-
-https://vtsstr4.tv24.vn/live/SCTV_HD_phimnuocngoaidacsac_new.smil/playlist.m3u8
-
-#EXTINF:-1 group-title="SCTV" tvg-logo="", SCTV17
-
-https://vtsstr4.tv24.vn/live/SCTV17_HD_new.smil/playlist.m3u8
-
-#EXTINF:-1 group-title="SCTV" tvg-logo="", SCTV18
-
-https://vtsstr4.tv24.vn/live/SCTV18_HD_new.smil/playlist.m3u8
-
-#EXTINF:-1 group-title="SCTV" tvg-logo="", SCTV19
-
-https://vtsstr4.tv24.vn/live/SCTV19_HD_new.smil/playlist.m3u8
-
-#EXTINF:-1 group-title="SCTV" tvg-logo="", SCTV20
-
-https://vtsstr4.tv24.vn/live/SCTV20_HD_new.smil/playlist.m3u8
-
-#EXTINF:-1 group-title="SCTV" tvg-logo="", SCTV22
-
-https://vtsstr4.tv24.vn/live/SCTV22_HD_new.smil/playlist.m3u8
-
-#EXTINF:-1 group-title="SCTV" tvg-logo="", SCTV Phim
-
-https://vtsstr7.tv24.vn/live/SCTVHD_PhimTongHop.smil/playlist.m3u8
-
-#EXTINF:-1 group-title="SCTV" tvg-logo="", Bóng Đá Việt
-
-https://livevlive.vtvcab.vn/hls/OS_ONVFFTV/sc-gaFEAA/m30_index.m3u8
-
-#EXTINF:-1 group-title="SCTV" tvg-logo="", Thể Thao Việt
-
-https://livevlive.vtvcab.vn/hls/OS_ONVOLLEYBALL/sc-gaFEAA/m30_index.m3u8
-
 #EXTINF:-1 group-title="MIỀN NAM" tvg-logo="https://2.pik.vn/20217154d4cf-ca78-4751-8a66-f6af3f3976b9.jpg", Vĩnh Long 1
 
 http://livecdn.fptplay.net/hda1/vinhlong1_4000.stream/chunklist.m3u8
@@ -428,7 +288,7 @@ http://livecdn.fptplay.net/sdc/danang1_2000.stream/chunklist.m3u8
 
 http://livecdn.fptplay.net/sdc/danang2_2000.stream/chunklist.m3u8
 
-#EXTINF:-1 group-title="TÂY NGUYÊN" tvg-logo="https://i.ibb.co/2yxxNdM/DRT-Dak-Lak.png", Đắk Lắk
+#EXTINF:-1 group-title="TÂY NGUYÊN" tvg-logo="https://static.wikia.nocookie.net/logos/images/f/f9/DRT_%C4%90%E1%BA%AFk_L%E1%BA%AFk_2021.png/revision/latest?cb=20230108145830&path-prefix=vi", Đắk Lắk
 
 http://livecdn.fptplay.net/sdc/daklak_2000.stream/chunklist.m3u8
 
@@ -519,7 +379,7 @@ http://tv.kgtv.vn/live/kgtv1/kgtv1.m3u8
 
 http://tv.kontumtv.vn/live/kontumtv/kontumtv.m3u8
 
-#EXTINF:-1 group-title="MIỀN BẮC"  tvg-logo="https://i.ibb.co/9ndTQ64/Logo-LTV-Lai-Ch-u-2022-Logo-m-n-h-nh-th-nghi-m.png", Lai Châu
+#EXTINF:-1 group-title="MIỀN BẮC"  tvg-logo="https://static.wikia.nocookie.net/logos/images/4/4b/Logo_LTV_Lai_Ch%C3%A2u_2022_%28Logo_ch%C3%ADnh%2C_B%E1%BA%A3n_2%29.png/revision/latest?cb=20220120155339&path-prefix=vi", Lai Châu
 
 http://livecdn.fptplay.net/sdc/laichau_2000.stream/chunklist.m3u8
 
@@ -563,7 +423,7 @@ http://livecdn.fptplay.net/sda/phutho_2000.stream/chunklist.m3u8
 
 http://livecdn.fptplay.net/sda/phuyen_2000.stream/chunklist.m3u8
 
-#EXTINF:-1 group-title="MIỀN TRUNG" tvg-logo="https://i.ibb.co/7tLsj3K/QBTV-logo-2019-B-n-2.png", Quảng Bình
+#EXTINF:-1 group-title="MIỀN TRUNG" tvg-logo="https://static.wikia.nocookie.net/logos/images/c/ca/QBTV_logo_2017_%28B%E1%BA%A3n_1%29.png/revision/latest?cb=20211013011229&path-prefix=vi", Quảng Bình
 
 http://livecdn.fptplay.net/sda/quangbinh_2000.stream/chunklist.m3u8
 
