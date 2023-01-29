@@ -293,7 +293,8 @@ http://livecdn.fptplay.net/sdc/danang2_2000.stream/chunklist.m3u8
 http://livecdn.fptplay.net/sdc/daklak_2000.stream/chunklist.m3u8
 
 #EXTINF:-1 group-title="TÂY NGUYÊN" tvg-logo="https://2.pik.vn/2021616ec42f-2e8a-41c1-9e92-0b8a4f377613.jpg", Đắk Nông
- https://16371213858134.vnns.net/daknong_abr/vtc130121/daknong-1080p/chunks.m3u8
+
+https://16371213858134.vnns.net/daknong_abr/playlist.m3u8
 
 #EXTINF:-1 group-title="MIỀN BẮC" tvg-logo="https://2.pik.vn/2021759c455a-87d4-4392-b54c-cdea99e6af7a.jpg", Điện Biên
 
