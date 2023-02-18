@@ -176,21 +176,105 @@ http://livecdn.fptplay.net/hda3/htvcphunu_vhls.smil/chunklist_b5000000.m3u8
 
 http://livecdn.fptplay.net/hda3/htvcthuanviet_vhls.smil/chunklist_b5000000.m3u8
 
-#EXTINF:-1 group-title="MIỀN NAM" tvg-logo="https://2.pik.vn/20217154d4cf-ca78-4751-8a66-f6af3f3976b9.jpg", Vĩnh Long 1
+#EXTINF:-1 group-title="SCTV" tvg-logo="https://raw.githubusercontent.com/GHIMTUI/ghimtui.github.io/main/Pic/sctv1.jpg", SCTV1
+#EXTVLCOPT:http-user-agent=ReactNativeVideo/3.4.4 (Linux;Android 9) ExoPlayerLib/2.13.3
 
-http://livecdn.fptplay.net/hda1/vinhlong1_4000.stream/chunklist.m3u8
+https://e1.endpoint.cdn.sctvonline.vn/channel/sctv1/s1/index.m3u8
 
-#EXTINF:-1 group-title="MIỀN NAM" tvg-logo="https://2.pik.vn/2021738e5669-74d3-4901-867c-35eddba9644e.jpg", Vĩnh Long 2
+#EXTINF:-1 group-title="SCTV" tvg-logo="https://raw.githubusercontent.com/GHIMTUI/ghimtui.github.io/main/Pic/sctv2.jpg", SCTV2
+#EXTVLCOPT:http-user-agent=ReactNativeVideo/3.4.4 (Linux;Android 9) ExoPlayerLib/2.13.3  
 
-http://livecdn.fptplay.net/hda2/vinhlong2_4000.stream/chunklist.m3u8
+https://e1.endpoint.cdn.sctvonline.vn/channel/sctv2/s1/index.m3u8
 
-#EXTINF:-1 group-title="MIỀN NAM" tvg-logo="https://2.pik.vn/2021a2ee269a-c130-45ce-89ba-5ac30448c1c3.jpg", Vĩnh Long 3
+#EXTINF:-1 group-title="SCTV" tvg-logo="https://raw.githubusercontent.com/GHIMTUI/ghimtui.github.io/main/Pic/sctv3.jpg", SCTV3
+#EXTVLCOPT:http-user-agent=ReactNativeVideo/3.4.4 (Linux;Android 9) ExoPlayerLib/2.13.3  
 
-http://livecdn.fptplay.net/hda2/vinhlong3_4000.stream/chunklist.m3u8
+https://e1.endpoint.cdn.sctvonline.vn/channel/sctv3/s1/index.m3u8
 
-#EXTINF:-1 group-title="MIỀN NAM" tvg-logo="https://2.pik.vn/2021adc1c005-b910-4a92-886e-b9e7f06d558e.jpg", Vĩnh Long 4
+#EXTINF:-1 group-title="SCTV" tvg-logo="https://raw.githubusercontent.com/GHIMTUI/ghimtui.github.io/main/Pic/sctv4.jpg", SCTV4
+#EXTVLCOPT:http-user-agent=ReactNativeVideo/3.4.4 (Linux;Android 9) ExoPlayerLib/2.13.3  
 
-http://livecdn.fptplay.net/hda3/vinhlong4hd_hls.smil/chunklist_b2500000.m3u8
+https://e1.endpoint.cdn.sctvonline.vn/channel/sctv4_s2/index.m3u8
+
+#EXTINF:-1 group-title="SCTV" tvg-logo="https://raw.githubusercontent.com/GHIMTUI/ghimtui.github.io/main/Pic/sctv6.jpg", SCTV6
+#EXTVLCOPT:http-user-agent=ReactNativeVideo/3.4.4 (Linux;Android 9) ExoPlayerLib/2.13.3  
+
+https://vips-livecdn.fptplay.net/hda3/film360_vhls.smil/chunklist_b5000000.m3u8
+
+#EXTINF:-1 group-title="SCTV" tvg-logo="https://raw.githubusercontent.com/GHIMTUI/ghimtui.github.io/main/Pic/sctv7.jpg", SCTV7
+#EXTVLCOPT:http-user-agent=ReactNativeVideo/3.4.4 (Linux;Android 9) ExoPlayerLib/2.13.3  
+
+https://e1.endpoint.cdn.sctvonline.vn/channel/sctv7/s1/index.m3u8
+
+#EXTINF:-1 group-title="SCTV" tvg-logo="https://raw.githubusercontent.com/GHIMTUI/ghimtui.github.io/main/Pic/sctv8.jpg", SCTV8
+#EXTVLCOPT:http-user-agent=ReactNativeVideo/3.4.4 (Linux;Android 9) ExoPlayerLib/2.13.3  
+
+https://e1.endpoint.cdn.sctvonline.vn/channel/sctv8/s1/index.m3u8
+
+#EXTINF:-1 group-title="SCTV" tvg-logo="https://raw.githubusercontent.com/GHIMTUI/ghimtui.github.io/main/Pic/sctv9.jpg", SCTV9
+#EXTVLCOPT:http-user-agent=ReactNativeVideo/3.4.4 (Linux;Android 9) ExoPlayerLib/2.13.3  
+
+https://e1.endpoint.cdn.sctvonline.vn/channel/sctv9_s2/index.m3u8
+
+#EXTINF:-1 group-title="SCTV" tvg-logo="https://raw.githubusercontent.com/GHIMTUI/ghimtui.github.io/main/Pic/sctv11.jpg", SCTV11
+#EXTVLCOPT:http-user-agent=ReactNativeVideo/3.4.4 (Linux;Android 9) ExoPlayerLib/2.13.3  
+
+https://e1.endpoint.cdn.sctvonline.vn/channel/sctv11_s2/index.m3u8
+
+#EXTINF:-1 group-title="SCTV" tvg-logo="https://raw.githubusercontent.com/GHIMTUI/ghimtui.github.io/main/Pic/sctv12.jpg", SCTV12
+#EXTVLCOPT:http-user-agent=ReactNativeVideo/3.4.4 (Linux;Android 9) ExoPlayerLib/2.13.3  
+
+https://e1.endpoint.cdn.sctvonline.vn/channel/sctv12/s1/index.m3u8
+
+#EXTINF:-1 group-title="SCTV" tvg-logo="https://raw.githubusercontent.com/GHIMTUI/ghimtui.github.io/main/Pic/sctv13.jpg", SCTV13
+#EXTVLCOPT:http-user-agent=ReactNativeVideo/3.4.4 (Linux;Android 9) ExoPlayerLib/2.13.3  
+
+https://e1.endpoint.cdn.sctvonline.vn/channel/sctv13_s2/index.m3u8
+
+#EXTINF:-1 group-title="SCTV" tvg-logo="https://raw.githubusercontent.com/GHIMTUI/ghimtui.github.io/main/Pic/sctv14.jpg", SCTV14
+#EXTVLCOPT:http-user-agent=ReactNativeVideo/3.4.4 (Linux;Android 9) ExoPlayerLib/2.13.3  
+
+https://e1.endpoint.cdn.sctvonline.vn/channel/sctv14_s2/index.m3u8
+
+#EXTINF:-1 group-title="SCTV" tvg-logo="https://raw.githubusercontent.com/GHIMTUI/ghimtui.github.io/main/Pic/sctv15.jpg", SCTV15
+#EXTVLCOPT:http-user-agent=ReactNativeVideo/3.4.4 (Linux;Android 9) ExoPlayerLib/2.13.3  
+
+https://e1.endpoint.cdn.sctvonline.vn/channel/sctv15/s1/index.m3u8
+
+#EXTINF:-1 group-title="SCTV" tvg-logo="https://raw.githubusercontent.com/GHIMTUI/ghimtui.github.io/main/Pic/sctv16.jpg", SCTV16
+#EXTVLCOPT:http-user-agent=ReactNativeVideo/3.4.4 (Linux;Android 9) ExoPlayerLib/2.13.3  
+
+https://e1.endpoint.cdn.sctvonline.vn/channel/sctv16/s1/index.m3u8
+
+#EXTINF:-1 group-title="SCTV" tvg-logo="https://raw.githubusercontent.com/GHIMTUI/ghimtui.github.io/main/Pic/sctv17.jpg", SCTV17
+#EXTVLCOPT:http-user-agent=ReactNativeVideo/3.4.4 (Linux;Android 9) ExoPlayerLib/2.13.3  
+
+https://e1.endpoint.cdn.sctvonline.vn/channel/sctv17_s2/index.m3u8
+
+#EXTINF:-1 group-title="SCTV" tvg-logo="https://raw.githubusercontent.com/GHIMTUI/ghimtui.github.io/main/Pic/sctv19.jpg", SCTV19
+#EXTVLCOPT:http-user-agent=ReactNativeVideo/3.4.4 (Linux;Android 9) ExoPlayerLib/2.13.3  
+
+https://e1.endpoint.cdn.sctvonline.vn/channel/sctv19/s1/index.m3u8
+
+#EXTINF:-1 group-title="SCTV" tvg-logo="https://raw.githubusercontent.com/GHIMTUI/ghimtui.github.io/main/Pic/sctv20.jpg", SCTV20
+#EXTVLCOPT:http-user-agent=ReactNativeVideo/3.4.4 (Linux;Android 9) ExoPlayerLib/2.13.3  
+
+https://e1.endpoint.cdn.sctvonline.vn/channel/sctv20/s1/index.m3u8
+
+#EXTINF:-1 group-title="SCTV" tvg-logo="https://raw.githubusercontent.com/GHIMTUI/ghimtui.github.io/main/Pic/sctv21.jpg", SCTV21
+#EXTVLCOPT:http-user-agent=ReactNativeVideo/3.4.4 (Linux;Android 9) ExoPlayerLib/2.13.3  
+
+https://e1.endpoint.cdn.sctvonline.vn/channel/sctv21/s1/index.m3u8
+
+#EXTINF:-1 group-title="SCTV" tvg-logo="https://raw.githubusercontent.com/GHIMTUI/ghimtui.github.io/main/Pic/sctv22.jpg", SCTV22
+#EXTVLCOPT:http-user-agent=ReactNativeVideo/3.4.4 (Linux;Android 9) ExoPlayerLib/2.13.3  
+
+https://e1.endpoint.cdn.sctvonline.vn/channel/sctv22/s1/index.m3u8
+ 
+#EXTINF:-1 group-title="SCTV" tvg-logo="https://raw.githubusercontent.com/GHIMTUI/ghimtui.github.io/main/Pic/sctv23.jpg", SCTV23
+#EXTVLCOPT:http-user-agent=ReactNativeVideo/3.4.4 (Linux;Android 9) ExoPlayerLib/2.13.3  
+
+https://e1.endpoint.cdn.sctvonline.vn/channel/sctvphimtonghop/s1/index.m3u8
 
 #EXTINF:-1 group-title="MIỀN NAM" tvg-logo="https://2.pik.vn/2021b15ddfb5-8e2b-4b4c-a3b8-95baf82fdab8.jpg", An Giang
 
@@ -222,7 +306,7 @@ http://livecdn.fptplay.net/sdc/bentre_2000.stream/chunklist.m3u8
 
 #EXTINF:-1 group-title="MIỀN TRUNG" tvg-logo="https://2.pik.vn/2021d7c65ebf-47b9-4547-b68c-80b641eefd13.jpg", Bình Định
 
-http://livecdn.fptplay.net/sda/binhdinh_2000.stream/chunklist.m3u8
+http://truyenhinhbinhdinhonline.dynns.com:8086/live.m3u8
 
 #EXTINF:-1 group-title="MIỀN NAM" tvg-logo="https://2.pik.vn/20215a90c5d3-f83f-46ab-a927-85a9f588b36c.jpg", Bình Dương 1
 
@@ -266,7 +350,7 @@ https://live.baobinhphuoc.com.vn/bptvlive/tv2live.m3u8
 
 #EXTINF:-1 group-title="MIỀN TRUNG" tvg-logo="https://2.pik.vn/202199b93761-639a-463e-a007-c942ef30d697.jpg", Bình Thuận
 
-http://livecdn.fptplay.net/sdc/binhthuan_2000.stream/chunklist.m3u8
+http://202.43.109.144:1935/thbttv/bttv/chunklist.m3u8
 
 #EXTINF:-1 group-title="MIỀN NAM"  tvg-logo="https://2.pik.vn/20210c80ffc4-fba7-449c-88f0-9c455aa92a2d.jpg", Cà Mau
 
@@ -495,6 +579,22 @@ https://618b88f69e53b.streamlock.net/THTV2/travinhtv2/chunklist_w1442849283.m3u8
 #EXTINF:-1 group-title="MIỀN BẮC" tvg-logo="https://2.pik.vn/20216baa916a-c8b4-4df3-af46-03752e73453c.jpg", Tuyên Quang
 
 http://livecdn.fptplay.net/sda/tuyenquang_2000.stream/chunklist.m3u8
+
+#EXTINF:-1 group-title="MIỀN NAM" tvg-logo="https://2.pik.vn/20217154d4cf-ca78-4751-8a66-f6af3f3976b9.jpg", Vĩnh Long 1
+
+http://livecdn.fptplay.net/hda1/vinhlong1_4000.stream/chunklist.m3u8
+
+#EXTINF:-1 group-title="MIỀN NAM" tvg-logo="https://2.pik.vn/2021738e5669-74d3-4901-867c-35eddba9644e.jpg", Vĩnh Long 2
+
+http://livecdn.fptplay.net/hda2/vinhlong2_4000.stream/chunklist.m3u8
+
+#EXTINF:-1 group-title="MIỀN NAM" tvg-logo="https://2.pik.vn/2021a2ee269a-c130-45ce-89ba-5ac30448c1c3.jpg", Vĩnh Long 3
+
+http://livecdn.fptplay.net/hda2/vinhlong3_4000.stream/chunklist.m3u8
+
+#EXTINF:-1 group-title="MIỀN NAM" tvg-logo="https://2.pik.vn/2021adc1c005-b910-4a92-886e-b9e7f06d558e.jpg", Vĩnh Long 4
+
+http://livecdn.fptplay.net/hda3/vinhlong4hd_hls.smil/chunklist_b2500000.m3u8
 
 #EXTINF:-1 group-title="MIỀN BẮC" tvg-logo="https://2.pik.vn/2021c3e7f743-1c71-4e34-b15d-6aec2a29ce0c.jpg", Vĩnh Phúc
 
