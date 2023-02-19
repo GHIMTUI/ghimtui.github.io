@@ -1,6 +1,7 @@
 #EXTM3U url-tvg="http://lichphatsong.xyz/schedule/beartv_epg.xml" tvg-shift=0 m3uautoload=1
 
 #EXTINF:-1 group-title="VTV" tvg-logo="https://2.pik.vn/20216081f237-e315-4c0d-bdaf-bd2dc613d384.jpg", VTV1
+#EXTVLCOPT:http-user-agent=ReactNativeVideo/3.4.4 (Linux;Android 9) ExoPlayerLib/2.13.3  
 
 http://livecdn.fptplay.net/hda1/vtv1hd_4000.stream/chunklist.m3u8
 
@@ -44,19 +45,19 @@ https://mediatech.vncdn.vn/vovlive/tv1live.m3u8
 
 http://livecdn.fptplay.net/hda2/anninhtv_4000.stream/chunklist.m3u8
 
-#EXTINF:-1 group-title="VTV" tvg-logo="https://yt3.googleusercontent.com/ytc/AMLnZu_VTd8jZxs-wN33t8Ozj8D1gElV8mWI9MT2ZxgKrg=s900-c-k-c0x00ffffff-no-rj", Nhân Dân
+#EXTINF:-1 group-title="VTV" tvg-logo="https://raw.githubusercontent.com/GHIMTUI/ghimtui.github.io/main/Pic/nhandan.jpg", Nhân Dân
 
 http://livecdn.fptplay.net/sdc/truyenhinhnhandan_2000.stream/chunklist.m3u8
 
-#EXTINF:-1 group-title="VTV" tvg-logo="https://static.wikia.nocookie.net/logos/images/f/f9/KenhQuocHoi_logo_2022.png/revision/latest?cb=20220608125743&path-prefix=vi", Quốc Hội
+#EXTINF:-1 group-title="VTV" tvg-logo="https://raw.githubusercontent.com/GHIMTUI/ghimtui.github.io/main/Pic/quochoi.jpg", Quốc Hội
 
 http://livecdn.fptplay.net/hda1/quochoivn_4000.stream/chunklist.m3u8
 
-#EXTINF:-1 group-title="VTV" tvg-logo="https://2.pik.vn/202194de7cc6-694a-4189-b638-f4f99d53e687.jpg", Quốc Phòng
+#EXTINF:-1 group-title="VTV" tvg-logo="https://raw.githubusercontent.com/GHIMTUI/ghimtui.github.io/main/Pic/qpvn.jpg", Quốc Phòng
 
 https://vips-livecdn.fptplay.net/hda1/quocphongvnhd_4000.stream/chunklist.m3u8
 
-#EXTINF:-1 group-title="VTV" tvg-logo="https://2.pik.vn/202139be8b11-c480-4559-b4e3-20c594e21896.jpg", Thông Tấn
+#EXTINF:-1 group-title="VTV" tvg-logo="https://raw.githubusercontent.com/GHIMTUI/ghimtui.github.io/main/Pic/ttxvn.jpg", Thông Tấn
 
 https://vips-livecdn.fptplay.net/hda2/ttxvn_4000.stream/chunklist.m3u8
 
@@ -377,8 +378,9 @@ http://livecdn.fptplay.net/sdc/danang2_2000.stream/chunklist.m3u8
 http://livecdn.fptplay.net/sdc/daklak_2000.stream/chunklist.m3u8
 
 #EXTINF:-1 group-title="TÂY NGUYÊN" tvg-logo="https://2.pik.vn/2021616ec42f-2e8a-41c1-9e92-0b8a4f377613.jpg", Đắk Nông
+#EXTVLCOPT:http-user-agent=ReactNativeVideo/3.4.4 (Linux;Android 9) ExoPlayerLib/2.13.3  
 
-https://16371213858134.vnns.net/daknong_abr/playlist.m3u8
+https://16371213858134.vnns.net/daknong_abr/vtc130121/daknong-1080p/chunks.m3u8?cc
 
 #EXTINF:-1 group-title="MIỀN BẮC" tvg-logo="https://2.pik.vn/2021759c455a-87d4-4392-b54c-cdea99e6af7a.jpg", Điện Biên
 
@@ -436,7 +438,7 @@ http://livecdn.fptplay.net/sdc/haiphong_2000.stream/chunklist.m3u8
 
 https://live.thhp.vn/hls/thpplus/index.m3u8
 
-#EXTINF:-1 group-title="MIỀN NAM" tvg-logo="https://2.pik.vn/2021e504bbda-238f-4a6a-b9e4-0c9dd1641c84.jpg", Hậu Giang
+#EXTINF:-1 group-title="MIỀN NAM" tvg-logo="https://raw.githubusercontent.com/GHIMTUI/ghimtui.github.io/main/Pic/haugiang.jpg", Hậu Giang
 
 http://livecdn.fptplay.net/sda/haugiang_2000.stream/chunklist.m3u8
 
@@ -528,7 +530,7 @@ http://qtv.vncdn.vn/qtvlive/tv1live.m3u8
 
 http://qtv.vncdn.vn/qtvlive/tv3live.m3u8
 
-#EXTINF:-1 group-title="MIỀN TRUNG" tvg-logo="https://2.pik.vn/2021fd6e3498-4f0a-444e-8402-0561802bbf70.jpg", Quảng Trị
+#EXTINF:-1 group-title="MIỀN TRUNG" tvg-logo="https://raw.githubusercontent.com/GHIMTUI/ghimtui.github.io/main/Pic/quangtri.jpg", Quảng Trị
 
 http://livecdn.fptplay.net/sdc/quangtri_2000.stream/chunklist.m3u8
 
