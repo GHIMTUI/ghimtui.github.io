@@ -149,6 +149,51 @@ http://livecdn.fptplay.net/hda1/vtc14_4000.stream/chunklist.m3u8
 
 http://livecdn.fptplay.net/sdb/vtc16_2000.stream/chunklist.m3u8
 
+#EXTINF:-1 group-title="HTVC" tvg-logo="https://raw.githubusercontent.com/GHIMTUI/ghimtui.github.io/main/img/htvcplus.jpg", HTVC+
+#EXTVLCOPT:http-user-agent=ReactNativeVideo/3.4.4 (Linux;Android 11) ExoPlayerLib/2.13.3  
+
+http://livecdn.fptplay.net/hda3/htvcplus_vhls.smil/chunklist_b5000000.m3u8
+
+#EXTINF:-1 group-title="HTVC" tvg-logo="https://raw.githubusercontent.com/GHIMTUI/ghimtui.github.io/main/img/giadinh.jpg", Gia Đình
+#EXTVLCOPT:http-user-agent=ReactNativeVideo/3.4.4 (Linux;Android 11) ExoPlayerLib/2.13.3  
+
+http://livecdn.fptplay.net/hda3/htvcgiadinh_vhls.smil/chunklist_b5000000.m3u8
+
+#EXTINF:-1 group-title="HTVC" tvg-logo="https://raw.githubusercontent.com/GHIMTUI/ghimtui.github.io/main/img/phunu.jpg", Phụ Nữ
+#EXTVLCOPT:http-user-agent=ReactNativeVideo/3.4.4 (Linux;Android 11) ExoPlayerLib/2.13.3  
+
+http://livecdn.fptplay.net/hda3/htvcphunu_vhls.smil/chunklist_b5000000.m3u8
+
+#EXTINF:-1 group-title="HTVC" tvg-logo="https://raw.githubusercontent.com/GHIMTUI/ghimtui.github.io/main/img/canhac.jpg", Ca Nhạc
+#EXTVLCOPT:http-user-agent=ReactNativeVideo/3.4.4 (Linux;Android 11) ExoPlayerLib/2.13.3  
+
+http://livecdn.fptplay.net/hda3/htvcmusic_vhls.smil/chunklist_b5000000.m3u8
+
+#EXTINF:-1 group-title="HTVC" tvg-logo="https://raw.githubusercontent.com/GHIMTUI/ghimtui.github.io/main/img/thuanviet.jpg", Thuần Việt
+#EXTVLCOPT:http-user-agent=ReactNativeVideo/3.4.4 (Linux;Android 11) ExoPlayerLib/2.13.3  
+
+http://livecdn.fptplay.net/hda3/htvcthuanviet_vhls.smil/chunklist_b5000000.m3u8
+
+#EXTINF:-1 group-title="HTVC" tvg-logo="https://raw.githubusercontent.com/GHIMTUI/ghimtui.github.io/main/img/dulichvacuocsong.jpg", Du Lịch và Cuộc Sống
+#EXTVLCOPT:http-user-agent=ReactNativeVideo/3.4.4 (Linux;Android 11) ExoPlayerLib/2.13.3  
+
+http://livecdn.fptplay.net/hda3/htvcdulich_vhls.smil/chunklist_b5000000.m3u8
+
+#EXTINF:-1 group-title="HTVC" tvg-logo="https://static.wikia.nocookie.net/logos/images/5/56/BBC_Earth_logo_2015.png/revision/latest?cb=20220205120724&path-prefix=vi", BBC Earth
+#EXTVLCOPT:http-user-agent=ReactNativeVideo/3.4.4 (Linux;Android 11) ExoPlayerLib/2.13.3  
+
+https://livecdn.fptplay.net/hda2/bbcearth_vhls.smil/chunklist_b5000000.m3u8
+
+#EXTINF:-1 group-title="HTVC" tvg-logo="https://raw.githubusercontent.com/GHIMTUI/ghimtui.github.io/main/img/phim.jpg", Phim
+#EXTVLCOPT:http-user-agent=ReactNativeVideo/3.4.4 (Linux;Android 11) ExoPlayerLib/2.13.3  
+
+http://livecdn.fptplay.net/hda2/htvcmoviehd_4000.stream/chunklist.m3u8
+
+#EXTINF:-1 group-title="HTVC" tvg-logo="https://raw.githubusercontent.com/GHIMTUI/ghimtui.github.io/main/img/htvthethao.jpg", Thể Thao
+#EXTVLCOPT:http-user-agent=ReactNativeVideo/3.4.4 (Linux;Android 11) ExoPlayerLib/2.13.3  
+
+http://livecdn.fptplay.net/hda3/htvcthethao_vhls.smil/chunklist_b5000000.m3u8
+
 #EXTINF:-1 group-title="HTVC" tvg-logo="https://raw.githubusercontent.com/GHIMTUI/ghimtui.github.io/main/img/htv1.jpg", HTV1
 #EXTVLCOPT:http-user-agent=ReactNativeVideo/3.4.4 (Linux;Android 11) ExoPlayerLib/2.13.3  
 
@@ -179,45 +224,25 @@ http://livecdn.fptplay.net/hda1/htv7hd_4000.stream/chunklist.m3u8
 
 http://livecdn.fptplay.net/hda1/htv9hd_4000.stream/chunklist.m3u8
 
-#EXTINF:-1 group-title="HTVC" tvg-logo="https://raw.githubusercontent.com/GHIMTUI/ghimtui.github.io/main/img/htvthethao.jpg", Thể Thao
+#EXTINF:-1 group-title="MIỀN NAM" tvg-logo="https://raw.githubusercontent.com/GHIMTUI/ghimtui.github.io/main/img/vinhlong1.jpg", Vĩnh Long 1
 #EXTVLCOPT:http-user-agent=ReactNativeVideo/3.4.4 (Linux;Android 11) ExoPlayerLib/2.13.3  
 
-http://livecdn.fptplay.net/hda3/htvcthethao_vhls.smil/chunklist_b5000000.m3u8
+http://livecdn.fptplay.net/hda1/vinhlong1_4000.stream/chunklist.m3u8
 
-#EXTINF:-1 group-title="HTVC" tvg-logo="https://raw.githubusercontent.com/GHIMTUI/ghimtui.github.io/main/img/canhac.jpg", Ca Nhạc
+#EXTINF:-1 group-title="MIỀN NAM" tvg-logo="https://raw.githubusercontent.com/GHIMTUI/ghimtui.github.io/main/img/vinhlong2.jpg", Vĩnh Long 2
 #EXTVLCOPT:http-user-agent=ReactNativeVideo/3.4.4 (Linux;Android 11) ExoPlayerLib/2.13.3  
 
-http://livecdn.fptplay.net/hda3/htvcmusic_vhls.smil/chunklist_b5000000.m3u8
+http://livecdn.fptplay.net/hda2/vinhlong2_4000.stream/chunklist.m3u8
 
-#EXTINF:-1 group-title="HTVC" tvg-logo="https://raw.githubusercontent.com/GHIMTUI/ghimtui.github.io/main/img/dulichvacuocsong.jpg", Du Lịch và Cuộc Sống
+#EXTINF:-1 group-title="MIỀN NAM" tvg-logo="https://raw.githubusercontent.com/GHIMTUI/ghimtui.github.io/main/img/vinhlong3.jpg", Vĩnh Long 3
 #EXTVLCOPT:http-user-agent=ReactNativeVideo/3.4.4 (Linux;Android 11) ExoPlayerLib/2.13.3  
 
-http://livecdn.fptplay.net/hda3/htvcdulich_vhls.smil/chunklist_b5000000.m3u8
+http://livecdn.fptplay.net/hda2/vinhlong3_4000.stream/chunklist.m3u8
 
-#EXTINF:-1 group-title="HTVC" tvg-logo="https://raw.githubusercontent.com/GHIMTUI/ghimtui.github.io/main/img/phim.jpg", Phim
+#EXTINF:-1 group-title="MIỀN NAM" tvg-logo="https://raw.githubusercontent.com/GHIMTUI/ghimtui.github.io/main/img/vinhlong4.jpg", Vĩnh Long 4
 #EXTVLCOPT:http-user-agent=ReactNativeVideo/3.4.4 (Linux;Android 11) ExoPlayerLib/2.13.3  
 
-http://livecdn.fptplay.net/hda2/htvcmoviehd_4000.stream/chunklist.m3u8
-
-#EXTINF:-1 group-title="HTVC" tvg-logo="https://raw.githubusercontent.com/GHIMTUI/ghimtui.github.io/main/img/htvcplus.jpg", HTVC+
-#EXTVLCOPT:http-user-agent=ReactNativeVideo/3.4.4 (Linux;Android 11) ExoPlayerLib/2.13.3  
-
-http://livecdn.fptplay.net/hda3/htvcplus_vhls.smil/chunklist_b5000000.m3u8
-
-#EXTINF:-1 group-title="HTVC" tvg-logo="https://raw.githubusercontent.com/GHIMTUI/ghimtui.github.io/main/img/giadinh.jpg", Gia Đình
-#EXTVLCOPT:http-user-agent=ReactNativeVideo/3.4.4 (Linux;Android 11) ExoPlayerLib/2.13.3  
-
-http://livecdn.fptplay.net/hda3/htvcgiadinh_vhls.smil/chunklist_b5000000.m3u8
-
-#EXTINF:-1 group-title="HTVC" tvg-logo="https://raw.githubusercontent.com/GHIMTUI/ghimtui.github.io/main/img/phunu.jpg", Phụ Nữ
-#EXTVLCOPT:http-user-agent=ReactNativeVideo/3.4.4 (Linux;Android 11) ExoPlayerLib/2.13.3  
-
-http://livecdn.fptplay.net/hda3/htvcphunu_vhls.smil/chunklist_b5000000.m3u8
-
-#EXTINF:-1 group-title="HTVC" tvg-logo="https://raw.githubusercontent.com/GHIMTUI/ghimtui.github.io/main/img/thuanviet.jpg", Thuần Việt
-#EXTVLCOPT:http-user-agent=ReactNativeVideo/3.4.4 (Linux;Android 11) ExoPlayerLib/2.13.3  
-
-http://livecdn.fptplay.net/hda3/htvcthuanviet_vhls.smil/chunklist_b5000000.m3u8
+http://livecdn.fptplay.net/hda3/vinhlong4hd_hls.smil/chunklist_b2500000.m3u8
 
 #EXTINF:-1 group-title="MIỀN NAM" tvg-logo="https://raw.githubusercontent.com/GHIMTUI/ghimtui.github.io/main/img/angiang.jpg", An Giang
 #EXTVLCOPT:http-user-agent=ReactNativeVideo/3.4.4 (Linux;Android 11) ExoPlayerLib/2.13.3  
@@ -229,6 +254,11 @@ http://livecdn.fptplay.net/sda/angiang_2000.stream/chunklist.m3u8
 
 http://livecdn.fptplay.net/sdc/bariavungtau_2000.stream/chunklist.m3u8
 
+#EXTINF:-1 group-title="MIỀN NAM" tvg-logo="https://raw.githubusercontent.com/GHIMTUI/ghimtui.github.io/main/img/baclieu.jpg", Bạc Liêu
+#EXTVLCOPT:http-user-agent=ReactNativeVideo/3.4.4 (Linux;Android 11) ExoPlayerLib/2.13.3  
+
+http://livecdn.fptplay.net/sdc/baclieu_2000.stream/chunklist.m3u8
+
 #EXTINF:-1 group-title="MIỀN BẮC" tvg-logo="https://raw.githubusercontent.com/GHIMTUI/ghimtui.github.io/main/img/bacgiang.jpg", Bắc Giang
 #EXTVLCOPT:http-user-agent=ReactNativeVideo/3.4.4 (Linux;Android 11) ExoPlayerLib/2.13.3  
 
@@ -238,11 +268,6 @@ http://livecdn.fptplay.net/sdc/bacgiang_2000.stream/chunklist.m3u8
 #EXTVLCOPT:http-user-agent=ReactNativeVideo/3.4.4 (Linux;Android 11) ExoPlayerLib/2.13.3  
 
 http://livecdn.fptplay.net/sdb/backan_hls.smil/chunklist_b2500000.m3u8
-
-#EXTINF:-1 group-title="MIỀN NAM" tvg-logo="https://raw.githubusercontent.com/GHIMTUI/ghimtui.github.io/main/img/baclieu.jpg", Bạc Liêu
-#EXTVLCOPT:http-user-agent=ReactNativeVideo/3.4.4 (Linux;Android 11) ExoPlayerLib/2.13.3  
-
-http://livecdn.fptplay.net/sdc/baclieu_2000.stream/chunklist.m3u8
 
 #EXTINF:-1 group-title="MIỀN BẮC" tvg-logo="https://raw.githubusercontent.com/GHIMTUI/ghimtui.github.io/main/img/bacninh.jpg", Bắc Ninh
 #EXTVLCOPT:http-user-agent=ReactNativeVideo/3.4.4 (Linux;Android 11) ExoPlayerLib/2.13.3  
@@ -258,6 +283,21 @@ http://livecdn.fptplay.net/sdc/bentre_2000.stream/chunklist.m3u8
 #EXTVLCOPT:http-user-agent=ReactNativeVideo/3.4.4 (Linux;Android 11) ExoPlayerLib/2.13.3  
 
 http://truyenhinhbinhdinhonline.dynns.com:8086/live.m3u8
+
+#EXTINF:-1 group-title="MIỀN TRUNG" tvg-logo="https://raw.githubusercontent.com/GHIMTUI/ghimtui.github.io/main/img/binhthuan.jpg", Bình Thuận
+#EXTVLCOPT:http-user-agent=ReactNativeVideo/3.4.4 (Linux;Android 11) ExoPlayerLib/2.13.3  
+
+http://202.43.109.144:1935/thbttv/bttv/chunklist.m3u8
+
+#EXTINF:-1 group-title="MIỀN NAM"tvg-logo="https://raw.githubusercontent.com/GHIMTUI/ghimtui.github.io/main/img/binhphuoc1.jpg ", Bình Phước 1
+#EXTVLCOPT:http-user-agent=ReactNativeVideo/3.4.4 (Linux;Android 11) ExoPlayerLib/2.13.3  
+
+https://live.baobinhphuoc.com.vn/bptvlive/tv1live.m3u8
+
+#EXTINF:-1 group-title="MIỀN NAM" tvg-logo="https://raw.githubusercontent.com/GHIMTUI/ghimtui.github.io/main/img/binhphuoc2.jpg", Bình Phước 2
+#EXTVLCOPT:http-user-agent=ReactNativeVideo/3.4.4 (Linux;Android 11) ExoPlayerLib/2.13.3  
+
+https://live.baobinhphuoc.com.vn/bptvlive/tv2live.m3u8
 
 #EXTINF:-1 group-title="MIỀN NAM" tvg-logo="https://raw.githubusercontent.com/GHIMTUI/ghimtui.github.io/main/img/binhduong1.jpg", Bình Dương 1
 #EXTVLCOPT:http-user-agent=ReactNativeVideo/3.4.4 (Linux;Android 11) ExoPlayerLib/2.13.3  
@@ -298,21 +338,6 @@ http://livecdn.fptplay.net/sdc/btv9_2000.stream/chunklist.m3u8
 #EXTVLCOPT:http-user-agent=ReactNativeVideo/3.4.4 (Linux;Android 11) ExoPlayerLib/2.13.3  
 
 http://livecdn.fptplay.net/sda/btv11_2000.stream/playlist.m3u8
-
-#EXTINF:-1 group-title="MIỀN NAM"tvg-logo="https://raw.githubusercontent.com/GHIMTUI/ghimtui.github.io/main/img/binhphuoc1.jpg ", Bình Phước 1
-#EXTVLCOPT:http-user-agent=ReactNativeVideo/3.4.4 (Linux;Android 11) ExoPlayerLib/2.13.3  
-
-https://live.baobinhphuoc.com.vn/bptvlive/tv1live.m3u8
-
-#EXTINF:-1 group-title="MIỀN NAM" tvg-logo="https://raw.githubusercontent.com/GHIMTUI/ghimtui.github.io/main/img/binhphuoc2.jpg", Bình Phước 2
-#EXTVLCOPT:http-user-agent=ReactNativeVideo/3.4.4 (Linux;Android 11) ExoPlayerLib/2.13.3  
-
-https://live.baobinhphuoc.com.vn/bptvlive/tv2live.m3u8
-
-#EXTINF:-1 group-title="MIỀN TRUNG" tvg-logo="https://raw.githubusercontent.com/GHIMTUI/ghimtui.github.io/main/img/binhthuan.jpg", Bình Thuận
-#EXTVLCOPT:http-user-agent=ReactNativeVideo/3.4.4 (Linux;Android 11) ExoPlayerLib/2.13.3  
-
-http://202.43.109.144:1935/thbttv/bttv/chunklist.m3u8
 
 #EXTINF:-1 group-title="MIỀN NAM"  tvg-logo="https://raw.githubusercontent.com/GHIMTUI/ghimtui.github.io/main/img/camau.jpg", Cà Mau
 #EXTVLCOPT:http-user-agent=ReactNativeVideo/3.4.4 (Linux;Android 11) ExoPlayerLib/2.13.3  
@@ -365,11 +390,6 @@ http://livecdn.fptplay.net/sda/dongnai1_2000.stream/chunklist.m3u8
 
 http://livecdn.fptplay.net/sda/dongnai2_2000.stream/chunklist.m3u8
 
-#EXTINF:-1 group-title="MIỀN NAM" tvg-logo="https://raw.githubusercontent.com/GHIMTUI/ghimtui.github.io/main/img/dongnai3.jpg", Đồng Nai 3
-#EXTVLCOPT:http-user-agent=ReactNativeVideo/3.4.4 (Linux;Android 11) ExoPlayerLib/2.13.3  
-
-https://code.vthanhtivi.pw/getlink/dnlive/dnrtv3/playlist.m3u8
-
 #EXTINF:-1 group-title="MIỀN NAM" tvg-logo="https://raw.githubusercontent.com/GHIMTUI/ghimtui.github.io/main/img/dongthap1.jpg", Đồng Tháp 1
 #EXTVLCOPT:http-user-agent=ReactNativeVideo/3.4.4 (Linux;Android 11) ExoPlayerLib/2.13.3  
 
@@ -385,16 +405,6 @@ https://livecdn.fptplay.net/sdc/dongthaphd_hls.smil/chunklist_b1200000.m3u8
 
 http://livecdn.fptplay.net/sda/gialai_2000.stream/chunklist.m3u8
 
-#EXTINF:-1 group-title="MIỀN BẮC" tvg-logo="https://raw.githubusercontent.com/GHIMTUI/ghimtui.github.io/main/img/hanoi1.jpg", Hà Nội 1
-#EXTVLCOPT:http-user-agent=ReactNativeVideo/3.4.4 (Linux;Android 11) ExoPlayerLib/2.13.3  
-
-https://1028513096.vnns.net/tv1-abr/hntvlive/tv1_1080p/chunks.m3u8
-
-#EXTINF:-1 group-title="MIỀN BẮC" tvg-logo="https://raw.githubusercontent.com/GHIMTUI/ghimtui.github.io/main/img/hanoi2.jpg", Hà Nội 2
-#EXTVLCOPT:http-user-agent=ReactNativeVideo/3.4.4 (Linux;Android 11) ExoPlayerLib/2.13.3  
-
-https://1028513096.vnns.net/tv2-abr/hntvlive/tv2_1080p/chunks.m3u8
-
 #EXTINF:-1 group-title="MIỀN BẮC" tvg-logo="https://raw.githubusercontent.com/GHIMTUI/ghimtui.github.io/main/img/hagiang.jpg", Hà Giang
 #EXTVLCOPT:http-user-agent=ReactNativeVideo/3.4.4 (Linux;Android 11) ExoPlayerLib/2.13.3  
 
@@ -404,6 +414,16 @@ http://livecdn.fptplay.net/sda/hagiang_2000.stream/chunklist.m3u8
 #EXTVLCOPT:http-user-agent=ReactNativeVideo/3.4.4 (Linux;Android 11) ExoPlayerLib/2.13.3  
 
 http://livecdn.fptplay.net/sda/hanam_2000.stream/chunklist.m3u8
+
+#EXTINF:-1 group-title="MIỀN BẮC" tvg-logo="https://raw.githubusercontent.com/GHIMTUI/ghimtui.github.io/main/img/hanoi1.jpg", Hà Nội 1
+#EXTVLCOPT:http-user-agent=ReactNativeVideo/3.4.4 (Linux;Android 11) ExoPlayerLib/2.13.3  
+
+https://1028513096.vnns.net/tv1-abr/hntvlive/tv1_1080p/chunks.m3u8
+
+#EXTINF:-1 group-title="MIỀN BẮC" tvg-logo="https://raw.githubusercontent.com/GHIMTUI/ghimtui.github.io/main/img/hanoi2.jpg", Hà Nội 2
+#EXTVLCOPT:http-user-agent=ReactNativeVideo/3.4.4 (Linux;Android 11) ExoPlayerLib/2.13.3  
+
+https://1028513096.vnns.net/tv2-abr/hntvlive/tv2_1080p/chunks.m3u8
 
 #EXTINF:-1 group-title="MIỀN TRUNG" tvg-logo="https://raw.githubusercontent.com/GHIMTUI/ghimtui.github.io/main/img/hatinh.jpg", Hà Tĩnh
 #EXTVLCOPT:http-user-agent=ReactNativeVideo/3.4.4 (Linux;Android 11) ExoPlayerLib/2.13.3  
@@ -465,11 +485,6 @@ http://tv.kontumtv.vn/live/kontumtv/kontumtv.m3u8
 
 http://livecdn.fptplay.net/sdc/laichau_2000.stream/chunklist.m3u8
 
-#EXTINF:-1 group-title="TÂY NGUYÊN" tvg-logo="https://raw.githubusercontent.com/GHIMTUI/ghimtui.github.io/main/img/lamdong.jpg", Lâm Đồng
-#EXTVLCOPT:http-user-agent=ReactNativeVideo/3.4.4 (Linux;Android 11) ExoPlayerLib/2.13.3  
-
-http://livecdn.fptplay.net/sdc/lamdong_2000.stream/chunklist.m3u8
-
 #EXTINF:-1 group-title="MIỀN BẮC" tvg-logo="https://raw.githubusercontent.com/GHIMTUI/ghimtui.github.io/main/img/langson.jpg", Lạng Sơn
 #EXTVLCOPT:http-user-agent=ReactNativeVideo/3.4.4 (Linux;Android 11) ExoPlayerLib/2.13.3  
 
@@ -479,6 +494,11 @@ http://live.langsontv.vn/lstvlive/tv1live.m3u8
 #EXTVLCOPT:http-user-agent=ReactNativeVideo/3.4.4 (Linux;Android 11) ExoPlayerLib/2.13.3  
 
 https://cdn.3ssoft.vn/livetv/laocaitv/laocaitv/index.m3u8
+
+#EXTINF:-1 group-title="TÂY NGUYÊN" tvg-logo="https://raw.githubusercontent.com/GHIMTUI/ghimtui.github.io/main/img/lamdong.jpg", Lâm Đồng
+#EXTVLCOPT:http-user-agent=ReactNativeVideo/3.4.4 (Linux;Android 11) ExoPlayerLib/2.13.3  
+
+http://livecdn.fptplay.net/sdc/lamdong_2000.stream/chunklist.m3u8
 
 #EXTINF:-1 group-title="MIỀN NAM" tvg-logo="https://raw.githubusercontent.com/GHIMTUI/ghimtui.github.io/main/img/longan.jpg", Long An
 #EXTVLCOPT:http-user-agent=ReactNativeVideo/3.4.4 (Linux;Android 11) ExoPlayerLib/2.13.3  
@@ -604,26 +624,6 @@ https://618b88f69e53b.streamlock.net/THTV2/travinhtv2/chunklist_w1442849283.m3u8
 #EXTVLCOPT:http-user-agent=ReactNativeVideo/3.4.4 (Linux;Android 11) ExoPlayerLib/2.13.3  
 
 http://livecdn.fptplay.net/sda/tuyenquang_2000.stream/chunklist.m3u8
-
-#EXTINF:-1 group-title="MIỀN NAM" tvg-logo="https://raw.githubusercontent.com/GHIMTUI/ghimtui.github.io/main/img/vinhlong1.jpg", Vĩnh Long 1
-#EXTVLCOPT:http-user-agent=ReactNativeVideo/3.4.4 (Linux;Android 11) ExoPlayerLib/2.13.3  
-
-http://livecdn.fptplay.net/hda1/vinhlong1_4000.stream/chunklist.m3u8
-
-#EXTINF:-1 group-title="MIỀN NAM" tvg-logo="https://raw.githubusercontent.com/GHIMTUI/ghimtui.github.io/main/img/vinhlong2.jpg", Vĩnh Long 2
-#EXTVLCOPT:http-user-agent=ReactNativeVideo/3.4.4 (Linux;Android 11) ExoPlayerLib/2.13.3  
-
-http://livecdn.fptplay.net/hda2/vinhlong2_4000.stream/chunklist.m3u8
-
-#EXTINF:-1 group-title="MIỀN NAM" tvg-logo="https://raw.githubusercontent.com/GHIMTUI/ghimtui.github.io/main/img/vinhlong3.jpg", Vĩnh Long 3
-#EXTVLCOPT:http-user-agent=ReactNativeVideo/3.4.4 (Linux;Android 11) ExoPlayerLib/2.13.3  
-
-http://livecdn.fptplay.net/hda2/vinhlong3_4000.stream/chunklist.m3u8
-
-#EXTINF:-1 group-title="MIỀN NAM" tvg-logo="https://raw.githubusercontent.com/GHIMTUI/ghimtui.github.io/main/img/vinhlong4.jpg", Vĩnh Long 4
-#EXTVLCOPT:http-user-agent=ReactNativeVideo/3.4.4 (Linux;Android 11) ExoPlayerLib/2.13.3  
-
-http://livecdn.fptplay.net/hda3/vinhlong4hd_hls.smil/chunklist_b2500000.m3u8
 
 #EXTINF:-1 group-title="MIỀN BẮC" tvg-logo="https://raw.githubusercontent.com/GHIMTUI/ghimtui.github.io/main/img/vinhphuc.jpg", Vĩnh Phúc
 #EXTVLCOPT:http-user-agent=ReactNativeVideo/3.4.4 (Linux;Android 11) ExoPlayerLib/2.13.3  
