@@ -1,2 +1,1 @@
-# https://ghimtui.github.io
-<i>Trang tin tức đời sống<i>
+GHIMTUI STORAGE DATA FOR THE FUTURE
