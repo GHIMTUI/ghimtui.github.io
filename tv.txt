@@ -3,55 +3,51 @@
 #EXTGRP: VTV
 #EXTINF:-1, VTV1
 #EXTLOGO:
-http://171.238.181.52:18080/154.m3u8
+http://118.107.85.4:1935/live/smil:VTV1.smil/chunklist_w592799541_b584000.m3u8
 
 #EXTINF:-1, VTV2
 #EXTLOGO:
-http://171.238.180.25:18080/192.m3u8
+http://118.107.85.4:1935/live/smil:VTV2.smil/chunklist.m3u8
 
 #EXTINF:-1, VTV3
 #EXTLOGO:
-http://171.238.180.25:18080/155.m3u8
+http://118.107.85.4:1935/live/smil:VTV3.smil/chunklist.m3u8
 
 #EXTINF:-1, VTV4
 #EXTLOGO:
-http://s4.nihontv.net:21585/vtv4/index.m3u8
+http://123.21.223.9:8081/sctv/s10.edge.cdn.sctvonline.vn/cdn-cgi/edge/v2/e3.endpoint.cdn.sctvonline.vn/nginx.s12.edge.cdn.sctvonline.vn/hls/vtv4/index.m3u8
 
 #EXTINF:-1, VTV5
 #EXTLOGO:
 http://171.238.181.52:18080/194.m3u8
 
-#EXTINF:-1, VTV7
-#EXTLOGO:
-http://123.21.223.9:8081/sctv/s1.edge.cdn.sctvonline.vn/cdn-cgi/edge/v2/e2.endpoint.cdn.sctvonline.vn/nginx.s1.edge.cdn.sctvonline.vn/hls/vtv7/index.m3u8
-
-#EXTINF:-1, VTV8
-#EXTLOGO:
-http://123.21.223.9:8081/sctv/s1.edge.cdn.sctvonline.vn/cdn-cgi/edge/v2/e3.endpoint.cdn.sctvonline.vn/nginx.s1.edge.cdn.sctvonline.vn/hls/vtv8/index.m3u8
-
-#EXTINF:-1, VTV9
-#EXTLOGO:
-http://123.21.223.9:8081/sctv/s1.edge.cdn.sctvonline.vn/cdn-cgi/edge/v2/e2.endpoint.cdn.sctvonline.vn/nginx.s1.edge.cdn.sctvonline.vn/hls/vtv9/index.m3u8
-
-#EXTINF:-1, VTV TN
-#EXTLOGO:
-http://171.238.181.52:18080/308.m3u8
-
-#EXTINF:-1, VTV TNB
+#EXTINF:-1, VTV5 TNB
 #EXTLOGO:
 http://171.238.181.52:18080/307.m3u8
 
-#EXTINF:-1, VTV CT
+#EXTINF:-1, VTV5 TN
+#EXTLOGO:
+http://171.238.181.52:18080/308.m3u8
+
+#EXTINF:-1, VTVCT
 #EXTLOGO:
 http://171.238.181.52:18080/156.m3u8
 
-#EXTINF:-1, VOVTV
+#EXTINF:-1, VTV7
 #EXTLOGO:
-https://live.mediatech.vn/live/285fbc845578c6641d5a4c40534a0d1864b/chunklist.m3u8
+http://123.21.223.9:8081/sctv/s12.edge.cdn.sctvonline.vn/cdn-cgi/edge/v2/e2.endpoint.cdn.sctvonline.vn/nginx.s12.edge.cdn.sctvonline.vn/hls/vtv7/index.m3u8
+
+#EXTINF:-1, VTV8
+#EXTLOGO:
+http://123.21.223.9:8081/sctv/s9.edge.cdn.sctvonline.vn/cdn-cgi/edge/v2/e3.endpoint.cdn.sctvonline.vn/nginx.s12.edge.cdn.sctvonline.vn/hls/vtv8/index.m3u8
+
+#EXTINF:-1, VTV9
+#EXTLOGO:
+http://123.21.223.9:8081/sctv/s8.edge.cdn.sctvonline.vn/cdn-cgi/edge/v2/e2.endpoint.cdn.sctvonline.vn/nginx.s12.edge.cdn.sctvonline.vn/hls/vtv9/index.m3u8
 
 #EXTINF:-1, An Ninh
 #EXTLOGO:
-https://liveh34.vtvcab.vn/hls/ONANTV_CL/index.m3u8
+https://liveh34.vtvcab.vn/hls/ONANTV_CL/04.m3u8
 
 #EXTINF:-1, Nhân Dân
 #EXTLOGO:
@@ -59,15 +55,19 @@ https://liveh34.vtvcab.vn/hls/ONNHANDAN_CL/03.m3u8
 
 #EXTINF:-1, Quốc Hội
 #EXTLOGO:
-https://liveh12.vtvcab.vn/hls/ONQUOCHOI_CL/index.m3u8
+https://liveh12.vtvcab.vn/hls/ONQUOCHOI_CL/04.m3u8
 
 #EXTINF:-1, Quốc Phòng
 #EXTLOGO:
-https://liveh34.vtvcab.vn/hls/ONQUOCPHONG_CL/index.m3u8
+https://liveh34.vtvcab.vn/hls/ONQUOCPHONG_CL/03.m3u8
 
 #EXTINF:-1, Thông Tấn
 #EXTLOGO:
-https://liveh34.vtvcab.vn/hls/TTXVN_VNEWS/index.m3u8
+https://liveh34.vtvcab.vn/hls/TTXVN_VNEWS/01.m3u8
+
+#EXTINF:-1, VOVTV
+#EXTLOGO:
+https://live.mediatech.vn/live/285fbc845578c6641d5a4c40534a0d1864b/chunklist.m3u8
 
 #EXTGRP: SCTV
 #EXTINF:-1, SCTV1
@@ -189,7 +189,7 @@ https://tv.thbl.vn/live/tv/tv.m3u8
 
 #EXTINF:-1, Bến Tre
 #EXTLOGO:
-https://ott3.nethubtv.vn/live/bentretv/playlist.m3u8
+https://ott3.nethubtv.vn/live/bentretv/chunklist_2.m3u8
 
 #EXTINF:-1, Bình Định
 #EXTLOGO:
@@ -333,7 +333,7 @@ https://truyenhinh.vnptvas.vn/live.m3u8?c=vstv361&q=high&pkg=pkg11.hni
 
 #EXTINF:-1, Lâm Đồng
 #EXTLOGO:
-http://118.107.85.5:1935/live/smil:LTV.smil/chunklist_b1384000.m3u8
+https://ott4.nethubtv.vn/live/lamdongtv/chunklist_2.m3u8
 
 #EXTINF:-1, Lạng Sơn
 #EXTLOGO:
@@ -365,15 +365,15 @@ https://60acee235f4d5.streamlock.net/live/mystream/chunklist_w1911661624.m3u8
 
 #EXTINF:-1, Phú Thọ
 #EXTLOGO:
-https://ott3.nethubtv.vn/live/phuthotv/playlist.m3u8
+http://cdn.3ssoft.vn/livetv/phuthotv/phuthotv/index.m3u8
 
 #EXTINF:-1, Phú Yên
 #EXTLOGO:
-http://113.161.4.48:8080/phuyen/tv/index.m3u8
+https://ott3.nethubtv.vn/live/phuyentv/chunklist_1.m3u8
 
 #EXTINF:-1, Quảng Bình
 #EXTLOGO:
-https://ott4.nethubtv.vn/live/quangbinhtv/playlist.m3u8
+https://ott4.nethubtv.vn/live/quangbinhtv/chunklist_1.m3u8
 
 #EXTINF:-1, Quảng Nam
 #EXTLOGO:
