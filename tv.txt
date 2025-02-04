@@ -1,6 +1,2 @@
-#EXTM3U
-
-#EXTGRP: VTV
-#EXTINF:-1, VTV1
-#EXTLOGO:
+#EXTINF:-1 tvg-id="VTV1" tvg-name="VTV1" tvg-logo="" group-title="VTV", VTV1
 http://118.107.85.4:1935/live/smil:VTV1.smil/chunklist_w592799541_b584000.m3u8
