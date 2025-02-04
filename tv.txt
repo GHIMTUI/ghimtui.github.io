@@ -15,152 +15,43 @@ http://118.107.85.4:1935/live/smil:VTV3.smil/chunklist.m3u8
 
 #EXTINF:-1, VTV4
 #EXTLOGO:
-http://123.21.223.9:8081/sctv/s10.edge.cdn.sctvonline.vn/cdn-cgi/edge/v2/e3.endpoint.cdn.sctvonline.vn/nginx.s12.edge.cdn.sctvonline.vn/hls/vtv4/index.m3u8
+https://live.fptplay53.net/fnxch2/vtv4hd_abr.smil/chunklist_b4200000.m3u8
 
 #EXTINF:-1, VTV5
 #EXTLOGO:
-http://171.238.181.52:18080/194.m3u8
+https://live.fptplay53.net/epzhd1/vtv5hd_vhls.smil/chunklist_b5000000.m3u8
 
 #EXTINF:-1, VTV5 TNB
 #EXTLOGO:
-http://171.238.181.52:18080/307.m3u8
+https://live.fptplay53.net/fnxhd1/vtv5tnb_vhls.smil/chunklist_b5000000.m3u8
 
 #EXTINF:-1, VTV5 TN
 #EXTLOGO:
-http://171.238.181.52:18080/308.m3u8
+https://live.fptplay53.net/fnxhd1/vtv5taynguyen_vhls.smil/chunklist_b5000000.m3u8
 
 #EXTINF:-1, VTVCT
 #EXTLOGO:
-http://171.238.181.52:18080/156.m3u8
+https://live.fptplay53.net/fnxhd1/vtvcantho_vhls.smil/chunklist_b5000000.m3u8
 
 #EXTINF:-1, VTV7
 #EXTLOGO:
-http://123.21.223.9:8081/sctv/s12.edge.cdn.sctvonline.vn/cdn-cgi/edge/v2/e2.endpoint.cdn.sctvonline.vn/nginx.s12.edge.cdn.sctvonline.vn/hls/vtv7/index.m3u8
+https://live.fptplay53.net/fnxhd1/vtv7hd_vhls.smil/chunklist_b5000000.m3u8
 
 #EXTINF:-1, VTV8
 #EXTLOGO:
-http://123.21.223.9:8081/sctv/s9.edge.cdn.sctvonline.vn/cdn-cgi/edge/v2/e3.endpoint.cdn.sctvonline.vn/nginx.s12.edge.cdn.sctvonline.vn/hls/vtv8/index.m3u8
+https://live.fptplay53.net/epzhd1/vtv8hd_vhls.smil/chunklist_b5000000.m3u8
 
 #EXTINF:-1, VTV9
 #EXTLOGO:
-http://123.21.223.9:8081/sctv/s8.edge.cdn.sctvonline.vn/cdn-cgi/edge/v2/e2.endpoint.cdn.sctvonline.vn/nginx.s12.edge.cdn.sctvonline.vn/hls/vtv9/index.m3u8
+https://live.fptplay53.net/fnxhd1/vtv9_vhls.smil/chunklist_b5000000.m3u8
 
 #EXTINF:-1, An Ninh
 #EXTLOGO:
 https://liveh34.vtvcab.vn/hls/ONANTV_CL/04.m3u8
 
-#EXTINF:-1, Nhân Dân
-#EXTLOGO:
-https://liveh34.vtvcab.vn/hls/ONNHANDAN_CL/03.m3u8
-
-#EXTINF:-1, Quốc Hội
-#EXTLOGO:
-https://liveh12.vtvcab.vn/hls/ONQUOCHOI_CL/04.m3u8
-
 #EXTINF:-1, Quốc Phòng
 #EXTLOGO:
 https://liveh34.vtvcab.vn/hls/ONQUOCPHONG_CL/03.m3u8
-
-#EXTINF:-1, Thông Tấn
-#EXTLOGO:
-https://liveh34.vtvcab.vn/hls/TTXVN_VNEWS/01.m3u8
-
-#EXTINF:-1, VOVTV
-#EXTLOGO:
-https://live.mediatech.vn/live/285fbc845578c6641d5a4c40534a0d1864b/chunklist.m3u8
-
-#EXTGRP: SCTV
-#EXTINF:-1, SCTV1
-#EXTLOGO:
-http://123.21.223.9:8081/sctv/s5.edge.cdn.sctvonline.vn/cdn-cgi/edge/v2/e8.endpoint.cdn.sctvonline.vn/nginx.s5.edge.cdn.sctvonline.vn/hls/sctv1/index.m3u8
-
-#EXTINF:-1, SCTV2
-#EXTLOGO:
-http://123.21.223.9:8081/sctv/s5.edge.cdn.sctvonline.vn/cdn-cgi/edge/v2/e8.endpoint.cdn.sctvonline.vn/nginx.s5.edge.cdn.sctvonline.vn/hls/sctv2/index.m3u8
-
-#EXTINF:-1, SCTV3
-#EXTLOGO:
-http://123.21.223.9:8081/sctv/s5.edge.cdn.sctvonline.vn/cdn-cgi/edge/v2/e8.endpoint.cdn.sctvonline.vn/nginx.s5.edge.cdn.sctvonline.vn/hls/sctv3/index.m3u8
-
-#EXTINF:-1, SCTV4
-#EXTLOGO:
-http://123.21.223.9:8081/sctv/s5.edge.cdn.sctvonline.vn/cdn-cgi/edge/v2/e8.endpoint.cdn.sctvonline.vn/nginx.s5.edge.cdn.sctvonline.vn/hls/sctv4/index.m3u8
-
-#EXTINF:-1, SCTV5
-#EXTLOGO:
-http://123.21.223.9:8081/sctv/s5.edge.cdn.sctvonline.vn/cdn-cgi/edge/v2/e8.endpoint.cdn.sctvonline.vn/nginx.s5.edge.cdn.sctvonline.vn/hls/sctv5/index.m3u8
-
-#EXTINF:-1, SCTV6
-#EXTLOGO:
-http://123.21.223.9:8081/sctv/s5.edge.cdn.sctvonline.vn/cdn-cgi/edge/v2/e1.endpoint.cdn.sctvonline.vn/nginx.s8.edge.cdn.sctvonline.vn/hls/sctv6/index.m3u8
-
-#EXTINF:-1, SCTV7
-#EXTLOGO:
-http://123.21.223.9:8081/sctv/s5.edge.cdn.sctvonline.vn/cdn-cgi/edge/v2/e1.endpoint.cdn.sctvonline.vn/nginx.s8.edge.cdn.sctvonline.vn/hls/sctv7/index.m3u8
-
-#EXTINF:-1, SCTV8
-#EXTLOGO:
-http://123.21.223.9:8081/sctv/s5.edge.cdn.sctvonline.vn/cdn-cgi/edge/v2/e1.endpoint.cdn.sctvonline.vn/nginx.s8.edge.cdn.sctvonline.vn/hls/sctv8/index.m3u8
-
-#EXTINF:-1, SCTV9
-#EXTLOGO:
-http://123.21.223.9:8081/sctv/s5.edge.cdn.sctvonline.vn/cdn-cgi/edge/v2/e1.endpoint.cdn.sctvonline.vn/nginx.s8.edge.cdn.sctvonline.vn/hls/sctv9/index.m3u8
-
-#EXTINF:-1, SCTV10
-#EXTLOGO:
-http://123.21.223.9:8081/sctv/s5.edge.cdn.sctvonline.vn/cdn-cgi/edge/v2/e1.endpoint.cdn.sctvonline.vn/nginx.s8.edge.cdn.sctvonline.vn/hls/sctv10/index.m3u8
-
-#EXTINF:-1, SCTV11
-#EXTLOGO:
-http://123.21.223.9:8081/sctv/s5.edge.cdn.sctvonline.vn/cdn-cgi/edge/v2/e1.endpoint.cdn.sctvonline.vn/nginx.s8.edge.cdn.sctvonline.vn/hls/sctv11/index.m3u8
-
-#EXTINF:-1, SCTV12
-#EXTLOGO:
-http://123.21.223.9:8081/sctv/s5.edge.cdn.sctvonline.vn/cdn-cgi/edge/v2/e1.endpoint.cdn.sctvonline.vn/nginx.s8.edge.cdn.sctvonline.vn/hls/sctv12/index.m3u8
-
-#EXTINF:-1, SCTV13
-#EXTLOGO:
-http://123.21.223.9:8081/sctv/s5.edge.cdn.sctvonline.vn/cdn-cgi/edge/v2/e1.endpoint.cdn.sctvonline.vn/nginx.s8.edge.cdn.sctvonline.vn/hls/sctv13/index.m3u8
-
-#EXTINF:-1, SCTV14
-#EXTLOGO:
-http://123.21.223.9:8081/sctv/s10.edge.cdn.sctvonline.vn/cdn-cgi/edge/v2/e7.endpoint.cdn.sctvonline.vn/nginx.s10.edge.cdn.sctvonline.vn/live/smil:SCTV14.smil/playlist.m3u8
-
-#EXTINF:-1, SCTV15
-#EXTLOGO:
-http://123.21.223.9:8081/sctv/s5.edge.cdn.sctvonline.vn/cdn-cgi/edge/v2/e8.endpoint.cdn.sctvonline.vn/nginx.s5.edge.cdn.sctvonline.vn/hls/sctv15/index.m3u8
-
-#EXTINF:-1, SCTV16
-#EXTLOGO:
-http://123.21.223.9:8081/sctv/s5.edge.cdn.sctvonline.vn/cdn-cgi/edge/v2/e1.endpoint.cdn.sctvonline.vn/nginx.s8.edge.cdn.sctvonline.vn/hls/sctv16/index.m3u8
-
-#EXTINF:-1, SCTV17
-#EXTLOGO:
-http://123.21.223.9:8081/sctv/s5.edge.cdn.sctvonline.vn/cdn-cgi/edge/v2/e1.endpoint.cdn.sctvonline.vn/nginx.s8.edge.cdn.sctvonline.vn/hls/sctv17/index.m3u8
-
-#EXTINF:-1, SCTV18
-#EXTLOGO:
-http://123.21.223.9:8081/sctv/s5.edge.cdn.sctvonline.vn/cdn-cgi/edge/v2/e1.endpoint.cdn.sctvonline.vn/nginx.s8.edge.cdn.sctvonline.vn/hls/sctv18/index.m3u8
-
-#EXTINF:-1, SCTV19
-#EXTLOGO:
-http://123.21.223.9:8081/sctv/s5.edge.cdn.sctvonline.vn/cdn-cgi/edge/v2/e8.endpoint.cdn.sctvonline.vn/nginx.s5.edge.cdn.sctvonline.vn/hls/sctv19/index.m3u8
-
-#EXTINF:-1, SCTV20
-#EXTLOGO:
-http://123.21.223.9:8081/sctv/s5.edge.cdn.sctvonline.vn/cdn-cgi/edge/v2/e1.endpoint.cdn.sctvonline.vn/nginx.s8.edge.cdn.sctvonline.vn/hls/sctv20/index.m3u8
-
-#EXTINF:-1, SCTV21
-#EXTLOGO:
-http://123.21.223.9:8081/sctv/s5.edge.cdn.sctvonline.vn/cdn-cgi/edge/v2/e1.endpoint.cdn.sctvonline.vn/nginx.s8.edge.cdn.sctvonline.vn/hls/sctv21/index.m3u8
-
-#EXTINF:-1, SCTV22
-#EXTLOGO:
-http://123.21.223.9:8081/sctv/s5.edge.cdn.sctvonline.vn/cdn-cgi/edge/v2/e1.endpoint.cdn.sctvonline.vn/nginx.s8.edge.cdn.sctvonline.vn/hls/sctv22/index.m3u8
-
-#EXTINF:-1, SCTV23
-#EXTLOGO:
-http://123.21.223.9:8081/sctv/s5.edge.cdn.sctvonline.vn/cdn-cgi/edge/v2/e8.endpoint.cdn.sctvonline.vn/nginx.s5.edge.cdn.sctvonline.vn/hls/sctvphimtonghop/index.m3u8
 
 #EXTGRP: ĐỊA PHƯƠNG
 #EXTINF:-1, An Giang
@@ -169,7 +60,7 @@ https://oipf0znpmnliv.vcdn.cloud/hls/thangiang/index.m3u8
 
 #EXTINF:-1, Bà Rịa Vũng Tàu
 #EXTLOGO:
-https://stream.brt.vn:8081/live/tv2.stream/playlist.m3u8
+https://live.fptplay53.net/epzsd1/bariavungtau_hls.smil/chunklist_b2500000.m3u8
 
 #EXTINF:-1, Bắc Giang
 #EXTLOGO:
@@ -197,11 +88,15 @@ http://truyenhinhbinhdinhonline.dynns.com:8086/live.m3u8
 
 #EXTINF:-1, Bình Dương 1
 #EXTLOGO:
-https://oipf0znpmnliv.vcdn.cloud/hls/btv1/index.m3u8
+https://live.fptplay53.net/epzhd2/btv1_hls.smil/chunklist.m3u8
 
 #EXTINF:-1, Bình Dương 2
 #EXTLOGO:
-https://oipf0znpmnliv.vcdn.cloud/hls/btv2/index.m3u8
+https://live.fptplay53.net/epzhd2/btv2_hls.smil/chunklist.m3u8
+
+#EXTINF:-1, Bình Dương 9
+#EXTLOGO:
+https://live.fptplay53.net/fnxsd1/btv9_hls.smil/chunklist.m3u8
 
 #EXTINF:-1, Bình Phước 1
 #EXTLOGO:
@@ -269,7 +164,7 @@ https://tv.gialaitv.vn:8134/hls/gialaitv/gialaitv.m3u8
 
 #EXTINF:-1, Hà Giang
 #EXTLOGO:
-https://truyenhinh.vnptvas.vn/live.m3u8?c=vstv365&q=high&pkg=pkg11.hni
+http://live.fptplay53.net/fnxsd1/hagiang_hls.smil/chunklist_b2500000.m3u8
 
 #EXTINF:-1, Hà Nam
 #EXTLOGO:
@@ -393,7 +288,7 @@ https://live.baoquangninh.vn/qtvlive/tv3live.m3u8
 
 #EXTINF:-1, Quảng Trị
 #EXTLOGO:
-http://mediatech.vncdn.vn/qrtvlive/tv1live.m3u8
+http://quangtritv.vn/tv/tvvnpt2024.m3u8
 
 #EXTINF:-1, Sóc Trăng 1
 #EXTLOGO:
@@ -423,7 +318,7 @@ https://streaming.thainguyentv.vn/hls/livestream.m3u8
 #EXTLOGO:
 https://truyenhinh.vnptvas.vn/live.m3u8?c=vstv525&q=sd&pkg=pkg12.hni
 
-#EXTINF:-1, Thừa Thiên Huế
+#EXTINF:-1, Huế
 #EXTLOGO:
 https://live.trt.com.vn/TRT-Online/chunklist.m3u8
 
@@ -450,3 +345,18 @@ http://vinhphuctv.vn:8090/vinhphuclive/web.stream/playlist.m3u8
 #EXTINF:-1, Yên Bái
 #EXTLOGO:
 https://live.yenbaitv.org.vn/hls/livestream.m3u8
+
+#EXTINF:-1, Vĩnh Long 1
+#EXTLOGO:
+https://live.fptplay53.net/epzch2/vinhlong1_vhls.smil/chunklist_b1000000.m3u8
+
+#EXTINF:-1, Vĩnh Long 2
+#EXTLOGO:
+
+#EXTINF:-1, Vĩnh Long 3
+#EXTLOGO:
+https://live.fptplay53.net/epzch2/vinhlong3_abr.smil/chunklist.m3u8
+
+#EXTINF:-1, Vĩnh Long 4
+#EXTLOGO:
+https://live.fptplay53.net/epzhd2/vinhlong4hd_vhls.smil/chunklist.m3u8
