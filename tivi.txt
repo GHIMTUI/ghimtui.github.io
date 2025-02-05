@@ -1,15 +1,17 @@
 #EXTM3U
 
-#EXTINF:-1 tvg-id="VTV1" tvg-name="VTV1" tvg-logo="" group-title="VTV", VTV1
-http://118.107.85.4:1935/live/smil:VTV1.smil/chunklist_w592799541_b584000.m3u8
+#EXTGRP: VTV
+#EXTINF:-1, VTV1
+#EXTLOGO:
+https://live.fptplay53.net/fnxhd1/vtv1hd_vhls.smil/chunklist_b5000000.m3u8
 
 #EXTINF:-1, VTV2
 #EXTLOGO:
-http://118.107.85.4:1935/live/smil:VTV2.smil/chunklist.m3u8
+https://live.fptplay53.net/fnxch2/vtv2hd_abr.smil/chunklist_b4200000.m3u8
 
 #EXTINF:-1, VTV3
 #EXTLOGO:
-http://118.107.85.4:1935/live/smil:VTV3.smil/chunklist.m3u8
+https://live.fptplay53.net/fnxhd1/vtv3hd_vhls.smil/chunklist_b5000000.m3u8
 
 #EXTINF:-1, VTV4
 #EXTLOGO:
@@ -19,13 +21,13 @@ https://live.fptplay53.net/fnxch2/vtv4hd_abr.smil/chunklist_b4200000.m3u8
 #EXTLOGO:
 https://live.fptplay53.net/epzhd1/vtv5hd_vhls.smil/chunklist_b5000000.m3u8
 
-#EXTINF:-1, VTV5 TNB
-#EXTLOGO:
-https://live.fptplay53.net/fnxhd1/vtv5tnb_vhls.smil/chunklist_b5000000.m3u8
-
 #EXTINF:-1, VTV5 TN
 #EXTLOGO:
 https://live.fptplay53.net/fnxhd1/vtv5taynguyen_vhls.smil/chunklist_b5000000.m3u8
+
+#EXTINF:-1, VTV5 TNB
+#EXTLOGO:
+https://live.fptplay53.net/fnxhd1/vtv5tnb_vhls.smil/chunklist_b5000000.m3u8
 
 #EXTINF:-1, VTVCT
 #EXTLOGO:
@@ -54,7 +56,7 @@ https://liveh34.vtvcab.vn/hls/ONQUOCPHONG_CL/03.m3u8
 #EXTGRP: ĐỊA PHƯƠNG
 #EXTINF:-1, An Giang
 #EXTLOGO:
-https://oipf0znpmnliv.vcdn.cloud/hls/thangiang/index.m3u8
+https://live.fptplay53.net/epzsd1/angiang_hls.smil/chunklist.m3u8
 
 #EXTINF:-1, Bà Rịa Vũng Tàu
 #EXTLOGO:
@@ -122,15 +124,15 @@ http://118.107.85.4:1935/live/smil:CRTV.smil/chunklist_w730649992_b1384000.m3u8
 
 #EXTINF:-1, Đà Nẵng 1
 #EXTLOGO:
-http://drtdnglive.e49a7c38.cdnviet.com/livedrt1/chunklist.m3u8
+https://live.mediatech.vn/live/285b59a111d76974225a8e3004bfc31a509/chunklist.m3u8
 
 #EXTINF:-1, Đà Nẵng 2
 #EXTLOGO:
-http://drtdnglive.e49a7c38.cdnviet.com/livestream/chunklist.m3u8
+https://live.mediatech.vn/live/2859145290d0d7947ef88b6240123b62474/chunklist.m3u8
 
 #EXTINF:-1, Đắk Lắk
 #EXTLOGO:
-https://live.mediatech.vn/live/285a27750861b964c27af22091662a74f2f/playlist.m3u8
+https://live.fptplay53.net/epzsd1/daklak_hls.smil/chunklist.m3u8
 
 #EXTINF:-1, Đắk Nông
 #EXTLOGO:
@@ -142,11 +144,11 @@ https://truyenhinh.vnptvas.vn/live.m3u8?c=vstv362&q=high&pkg=pkg11.hni
 
 #EXTINF:-1, Đồng Nai 1
 #EXTLOGO:
-http://118.107.85.4:1935/live/smil:DNTV1.smil/playlist.m3u8
+https://live.fptplay53.net/epzsd1/dongnai1_hls.smil/chunklist.m3u8
 
 #EXTINF:-1, Đồng Nai 2
 #EXTLOGO:
-http://118.107.85.4:1935/live/smil:DNTV2.smil/playlist.m3u8
+https://live.fptplay53.net/epzsd1/dongnai2_hls.smil/chunklist.m3u8
 
 #EXTINF:-1, Đồng Tháp 1
 #EXTLOGO:
@@ -158,7 +160,7 @@ https://64d0d74b76158.streamlock.net/THDT2/thdttv2/playlist.m3u8
 
 #EXTINF:-1, Gia Lai
 #EXTLOGO:
-https://tv.gialaitv.vn:8134/hls/gialaitv/gialaitv.m3u8
+https://live.fptplay53.net/epzsd1/gialai_hls.smil/chunklist.m3u8
 
 #EXTINF:-1, Hà Giang
 #EXTLOGO:
@@ -206,7 +208,7 @@ https://live.mediatech.vn/live/285f5449d7d7d2946e0bd2d54b7e60f25a4/chunklist.m3u
 
 #EXTINF:-1, Khánh Hòa
 #EXTLOGO:
-https://tv.ktv.org.vn/hls/ktv1.m3u8
+https://live.fptplay53.net/epzsd1/khanhhoa_hls.smil/chunklist.m3u8
 
 #EXTINF:-1, Kiên Giang
 #EXTLOGO:
@@ -218,7 +220,7 @@ http://tv.kgtv.vn/live/kgtv1/kgtv1.m3u8
 
 #EXTINF:-1, Kon Tum
 #EXTLOGO:
-https://tv.kontumtv.vn/live/kontumtv/kontumtv.m3u8
+https://live.fptplay53.net/epzsd1/kontum_hls.smil/chunklist.m3u8
 
 #EXTINF:-1, Lai Châu
 #EXTLOGO:
@@ -226,7 +228,7 @@ https://truyenhinh.vnptvas.vn/live.m3u8?c=vstv361&q=high&pkg=pkg11.hni
 
 #EXTINF:-1, Lâm Đồng
 #EXTLOGO:
-https://ott4.nethubtv.vn/live/lamdongtv/chunklist_2.m3u8
+https://live.fptplay53.net/epzsd1/lamdong_hls.smil/chunklist.m3u8
 
 #EXTINF:-1, Lạng Sơn
 #EXTLOGO:
@@ -242,7 +244,7 @@ https://cdn.la34.com.vn/live/2851dc2c9af68834814a89e61db0faee561/playlist.m3u8
 
 #EXTINF:-1, Nam Định
 #EXTLOGO:
-https://1011154949.vnns.net/htvc/namdinh.480p.fpt.tms/playlist.m3u8
+https://live.fptplay53.net/epzsd1/namdinh_hls.smil/chunklist.m3u8
 
 #EXTINF:-1, Nghệ An
 #EXTLOGO:
@@ -262,19 +264,19 @@ http://cdn.3ssoft.vn/livetv/phuthotv/phuthotv/index.m3u8
 
 #EXTINF:-1, Phú Yên
 #EXTLOGO:
-https://ott3.nethubtv.vn/live/phuyentv/chunklist_1.m3u8
+https://live.fptplay53.net/epzsd1/phuyen_hls.smil/chunklist.m3u8
 
 #EXTINF:-1, Quảng Bình
 #EXTLOGO:
-https://ott4.nethubtv.vn/live/quangbinhtv/chunklist_1.m3u8
+https://live.fptplay53.net/epzsd1/quangbinh_hls.smil/chunklist.m3u8
 
 #EXTINF:-1, Quảng Nam
 #EXTLOGO:
-https://beta.qrt.vn/hls-live/livepkgr/_definst_/liveevent/livestream.m3u8
+https://live.fptplay53.net/epzsd1/quangnam_hls.smil/chunklist.m3u8
 
 #EXTINF:-1, Quảng Ngãi
 #EXTLOGO:
-https://stream.thingnet.vn/live/smil:PTQ.smil/playlist.m3u8
+https://live.fptplay53.net/epzsd1/quangngai_hls.smil/chunklist.m3u8
 
 #EXTINF:-1, Quảng Ninh 1
 #EXTLOGO:
@@ -318,7 +320,7 @@ https://truyenhinh.vnptvas.vn/live.m3u8?c=vstv525&q=sd&pkg=pkg12.hni
 
 #EXTINF:-1, Huế
 #EXTLOGO:
-https://live.trt.com.vn/TRT-Online/chunklist.m3u8
+https://live.fptplay53.net/epzsd1/hue_hls.smil/chunklist.m3u8
 
 #EXTINF:-1, Tiền Giang
 #EXTLOGO:
@@ -334,11 +336,11 @@ https://618b88f69e53b.streamlock.net/THTV2/travinhtv2/chunklist_w517483768.m3u8
 
 #EXTINF:-1, Tuyên Quang
 #EXTLOGO:
-https://live.tuyenquangtv.vn/hls/ttv.m3u8
+https://streaming.tuyenquangtv.vn/channel/tuyenquang/playlist.m3u8
 
 #EXTINF:-1, Vĩnh Phúc
 #EXTLOGO:
-http://vinhphuctv.vn:8090/vinhphuclive/web.stream/playlist.m3u8
+https://live.fptplay53.net/fnxsd1/vinhphuc_hls.smil/chunklist.m3u8
 
 #EXTINF:-1, Yên Bái
 #EXTLOGO:
@@ -350,6 +352,7 @@ https://live.fptplay53.net/epzch2/vinhlong1_vhls.smil/chunklist_b1000000.m3u8
 
 #EXTINF:-1, Vĩnh Long 2
 #EXTLOGO:
+https://live.fptplay53.net/epzhd2/vinhlong2_vhls.smil/chunklist_b5000000.m3u8
 
 #EXTINF:-1, Vĩnh Long 3
 #EXTLOGO:
