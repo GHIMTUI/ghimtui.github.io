@@ -1,0 +1,318 @@
+#EXTM3U url-tvg="http://lichphatsong.xyz/schedule/epg.xml" tvg-shift=0 cache=500 deinterlace=1 aspect-ratio=16:9 m3uautoload=1
+
+#EXTGRP: VTV
+#EXTINF:-1 tvg-id="vtv1hd"  tvg-logo="http://upload.wikimedia.org/wikipedia/commons/thumb/6/66/VTV1_logo_2013_final.svg/1024px-VTV1_logo_2013_final.svg.png",  VTV1
+
+http://live.fptplay53.net/fnxhd1/vtv1hd_vhls.smil/chunklist_b5000000.m3u8
+
+#EXTINF:-1  tvg-logo="http://upload.wikimedia.org/wikipedia/commons/9/91/VTV2%281%29.png",  VTV2
+
+http://live.fptplay53.net/fnxch2/vtv2hd_abr.smil/chunklist_b4200000.m3u8
+
+#EXTINF:-1 tvg-logo="http://upload.wikimedia.org/wikipedia/commons/thumb/4/48/VTV3_logo_2013_final.svg/1024px-VTV3_logo_2013_final.svg.png", VTV3
+
+http://live.fptplay53.net/fnxhd1/vtv3hd_vhls.smil/chunklist_b5000000.m3u8
+
+#EXTINF:-1, VTV4
+
+http://live.fptplay53.net/fnxch2/vtv4hd_abr.smil/chunklist_b4200000.m3u8
+
+#EXTINF:-1, VTV5
+
+http://live.fptplay53.net/epzhd1/vtv5hd_vhls.smil/chunklist_b5000000.m3u8
+
+#EXTINF:-1, VTV5 Tây Nguyên
+
+http://live.fptplay53.net/fnxhd1/vtv5taynguyen_vhls.smil/chunklist_b5000000.m3u8
+
+#EXTINF:-1, VTV5 Tây Nam Bộ
+http://live.fptplay53.net/fnxhd1/vtv5tnb_vhls.smil/chunklist_b5000000.m3u8
+
+#EXTINF:-1, VTV Cần Thơ
+http://live.fptplay53.net/fnxhd1/vtvcantho_vhls.smil/chunklist_b5000000.m3u8
+
+#EXTINF:-1, VTV7
+http://live.fptplay53.net/fnxhd1/vtv7hd_vhls.smil/chunklist_b5000000.m3u8
+
+#EXTINF:-1, VTV8
+http://live.fptplay53.net/epzhd1/vtv8hd_vhls.smil/chunklist_b5000000.m3u8
+
+#EXTINF:-1, VTV9
+http://live.fptplay53.net/fnxhd1/vtv9_vhls.smil/chunklist_b5000000.m3u8
+
+#EXTGRP: HTV
+#EXTINF:-1, HTV1
+http://live.fptplay53.net/epzhd1/htv1_vhls.smil/chunklist.m3u8
+
+#EXTINF:-1, HTV2
+http://live.fptplay53.net/epzhd1/htv2hd_vhls.smil/chunklist.m3u8
+
+#EXTINF:-1, HTV3
+http://live.fptplay53.net/epzhd1/htv3_vhls.smil/chunklist.m3u8
+
+#EXTINF:-1, HTV4
+http://live.fptplay53.net/epzhd1/htv4_vhls.smil/chunklist.m3u8
+
+#EXTINF:-1, HTV7
+http://live.fptplay53.net/epzhd1/htv7hd_vhls.smil/chunklist.m3u8
+
+#EXTINF:-1, HTV9
+http://live.fptplay53.net/epzhd1/htv9hd_vhls.smil/chunklist.m3u8
+
+#EXTINF:-1, Thể Thao
+http://live.fptplay53.net/epzhd1/htvcthethao_vhls.smil/chunklist.m3u8
+
+#EXTINF:-1, Thuần Việt
+http://live.fptplay53.net/epzhd1/htvcthuanviethd_vhls.smil/chunklist.m3u8
+
+#EXTINF:-1, Gia Đình
+http://live.fptplay53.net/epzhd1/htvcgiadinh_vhls.smil/chunklist.m3u8
+
+#EXTINF:-1, Phụ Nữ
+http://live.fptplay53.net/epzhd1/htvcphunu_vhls.smil/chunklist.m3u8
+
+#EXTINF:-1, Du Lịch
+http://live.fptplay53.net/epzhd1/htvcdulich_vhls.smil/chunklist.m3u8
+
+#EXTINF:-1, Ca Nhạc
+http://live.fptplay53.net/epzhd1/htvcmusic_vhls.smil/chunklist.m3u8
+
+#EXTINF:-1, Phim
+http://live.fptplay53.net/epzhd1/htvcmovieshd_vhls.smil/chunklist.m3u8
+
+#EXTINF:-1, HTVC+
+http://live.fptplay53.net/epzhd1/htvcplus_vhls.smil/chunklist.m3u8
+
+#EXTGRP: ĐỊA PHƯƠNG
+#EXTINF:-1, An Giang
+http://live.fptplay53.net/epzsd1/angiang_hls.smil/chunklist.m3u8
+
+#EXTINF:-1 tvg-id="baria" , Bà Rịa Vũng Tàu
+http://live.fptplay53.net/epzsd1/bariavungtau_hls.smil/chunklist_b2500000.m3u8
+
+#EXTINF:-1 tvg-id="bacgiang" , Bắc Giang
+http://live.fptplay53.net/fnxsd1/bacgiang_hls.smil/chunklist.m3u8
+
+#EXTINF:-1, Bắc Ninh
+http://live.fptplay53.net/fnxsd1/bacninh_hls.smil/chunklist.m3u8
+
+#EXTINF:-1 tvg-id="backan" , Bắc Kạn
+http://live.fptplay53.net/fnxsd1/backan_hls.smil/chunklist.m3u8
+
+#EXTINF:-1, Bạc Liêu
+http://live.fptplay53.net/epzsd1/baclieu_hls.smil/chunklist.m3u8
+
+#EXTINF:-1, Bến Tre
+http://live.fptplay53.net/epzsd1/bentre_hls.smil/chunklist.m3u8
+
+#EXTINF:-1, Bình Định
+http://live.fptplay53.net/epzsd1/binhdinh_hls.smil/chunklist.m3u8
+
+#EXTINF:-1, Bình Dương 1
+http://live.fptplay53.net/epzhd2/btv1_hls.smil/chunklist.m3u8
+
+#EXTINF:-1, Bình Dương 2
+http://live.fptplay53.net/epzhd2/btv2_hls.smil/chunklist.m3u8
+
+#EXTINF:-1, Bình Dương 9
+http://live.fptplay53.net/fnxsd1/btv9_hls.smil/chunklist.m3u8
+
+#EXTINF:-1, Bình Phước 1
+http://vncdn.mediatech.vn/bptvlive/tv1live.m3u8
+
+#EXTINF:-1, Bình Phước 2
+http://cdn.baobinhphuoc.com.vn/live/28550d6213460634105b0bae21016f68bce/playlist.m3u8
+
+#EXTINF:-1, Bình Thuận
+http://live.fptplay53.net/epzsd1/binhthuan_hls.smil/chunklist.m3u8
+
+#EXTINF:-1, Cà Mau
+http://tv.ctvcamau.vn/live/tv/tv.m3u8
+
+#EXTINF:-1, Cần Thơ
+https://live.fptplay53.net/epzsd1/cantho_hls.smil/chunklist.m3u8
+
+#EXTINF:-1, Cao Bằng
+http://live.fptplay53.net/fnxsd1/caobang_hls.smil/chunklist.m3u8
+
+#EXTINF:-1, Đà Nẵng 1
+http://live.fptplay53.net/epzsd1/danang1_hls.smil/chunklist.m3u8
+
+#EXTINF:-1, Đà Nẵng 2
+http://live.fptplay53.net/epzsd1/danang2_hls.smil/chunklist.m3u8
+
+#EXTINF:-1, Đắk Lắk
+http://live.fptplay53.net/epzsd1/daklak_hls.smil/chunklist.m3u8
+
+#EXTINF:-1, Đắk Nông
+http://cloudstreamthdn.tek4tv.vn/live/smil:daknong.smil/chunklist_b3128000_sleng.m3u8
+
+#EXTINF:-1, Điện Biên
+http://live.fptplay53.net/fnxsd1/dienbien_hls.smil/chunklist.m3u8
+
+#EXTINF:-1, Đồng Nai 1
+http://live.fptplay53.net/epzsd1/dongnai1_hls.smil/chunklist.m3u8
+
+#EXTINF:-1, Đồng Nai 2
+http://live.fptplay53.net/epzsd1/dongnai2_hls.smil/chunklist.m3u8
+
+#EXTINF:-1, Đồng Tháp 1
+
+https://live.fptplay53.net/epzsd1/dongthap_vhls.smil/chunklist.m3u8
+
+#EXTINF:-1, Đồng Tháp 2
+
+https://live.fptplay53.net/epzsd1/dongthaphd_vhls.smil/chunklist.m3u8
+
+#EXTINF:-1, Gia Lai
+http://live.fptplay53.net/epzsd1/gialai_hls.smil/chunklist.m3u8
+
+#EXTINF:-1, Hà Giang
+http://live.fptplay53.net/fnxsd1/hagiang_hls.smil/chunklist_b2500000.m3u8
+
+#EXTINF:-1, Hà Nam
+http://cdn.hanamtv.vn/live/285361fcafcd0ec47bba2fa3f5870f8dc72/playlist.m3u8
+
+#EXTINF:-1, Hà Nội 1
+http://live.fptplay53.net/fnxhd2/hanoitv1_vhls.smil/chunklist.m3u8
+
+#EXTINF:-1, Hà Nội 2
+http://live.fptplay53.net/fnxhd2/hanoitv2_hls.smil/chunklist.m3u8
+
+#EXTINF:-1, Hà Tĩnh
+http://live.fptplay53.net/fnxsd1/hatinh_hls.smil/chunklist.m3u8
+
+#EXTINF:-1, Hải Dương
+http://live.fptplay53.net/fnxsd1/haiduong_hls.smil/chunklist.m3u8
+
+#EXTINF:-1, Hải Phòng
+http://live.mediatech.vn/live/285a4c99665fdf84e94956c66bc7dc7eb5d/chunklist.m3u8
+
+#EXTINF:-1, Hải Phòng +
+http://live.mediatech.vn/live/28548ca35823d41426d8b3da7ed82bdab13/chunklist.m3u8
+
+#EXTINF:-1, Hậu Giang
+https://live.fptplay53.net/epzsd1/haugiang_vhls.smil/chunklist.m3u8
+
+#EXTINF:-1, Hoà Bình
+http://live.fptplay53.net/fnxsd1/hoabinh_hls.smil/chunklist.m3u8
+
+#EXTINF:-1, Huế
+http://live.fptplay53.net/epzsd1/hue_hls.smil/chunklist.m3u8
+
+#EXTINF:-1, Hưng Yên
+http://live.mediatech.vn/live/285f5449d7d7d2946e0bd2d54b7e60f25a4/chunklist.m3u8
+
+#EXTINF:-1, Khánh Hòa
+http://live.fptplay53.net/epzsd1/khanhhoa_hls.smil/chunklist.m3u8
+
+#EXTINF:-1, Kiên Giang
+http://tv.kgtv.vn/live/kgtv/kgtv.m3u8
+
+#EXTINF:-1, Kiên Giang 1
+http://tv.kgtv.vn/live/kgtv1/kgtv1.m3u8
+
+#EXTINF:-1, Kon Tum
+http://live.fptplay53.net/epzsd1/kontum_hls.smil/chunklist.m3u8
+
+#EXTINF:-1, Lai Châu
+http://live.fptplay53.net/fnxsd1/laichau_hls.smil/chunklist.m3u8
+
+#EXTINF:-1, Lâm Đồng
+http://live.fptplay53.net/epzsd1/lamdong_hls.smil/chunklist.m3u8
+
+#EXTINF:-1, Lạng Sơn
+http://live.mediatech.vn/live/285c78da0c246524c90917842f8de03bd21/chunklist.m3u8
+
+#EXTINF:-1, Lào Cai
+http://live.fptplay53.net/fnxsd1/laocai_hls.smil/chunklist.m3u8
+
+#EXTINF:-1, Long An
+http://cdn.la34.com.vn/live/2851dc2c9af68834814a89e61db0faee561/playlist.m3u8
+
+#EXTINF:-1, Nam Định
+http://live.fptplay53.net/epzsd1/namdinh_hls.smil/chunklist.m3u8
+
+#EXTINF:-1, Nghệ An
+http://live.fptplay53.net/fnxsd1/nghean_hls.smil/chunklist.m3u8
+
+#EXTINF:-1, Ninh Bình
+http://live.fptplay53.net/fnxsd1/ninhbinh_hls.smil/chunklist.m3u8
+
+#EXTINF:-1, Ninh Thuận
+http://live.fptplay53.net/epzsd1/ninhthuan_hls.smil/chunklist.m3u8
+
+#EXTINF:-1, Phú Thọ
+http://live.fptplay53.net/fnxsd1/phutho_hls.smil/chunklist.m3u8
+
+#EXTINF:-1, Phú Yên
+http://live.fptplay53.net/epzsd1/phuyen_hls.smil/chunklist.m3u8
+
+#EXTINF:-1, Quảng Bình
+http://live.fptplay53.net/epzsd1/quangbinh_hls.smil/chunklist.m3u8
+
+#EXTINF:-1, Quảng Nam
+http://live.fptplay53.net/epzsd1/quangnam_hls.smil/chunklist.m3u8
+
+#EXTINF:-1, Quảng Ngãi
+http://live.fptplay53.net/epzsd1/quangngai_hls.smil/chunklist.m3u8
+
+#EXTINF:-1, Quảng Ninh 1
+http://live.baoquangninh.vn/qtvlive/tv1live.m3u8
+
+#EXTINF:-1, Quảng Ninh 3
+http://live.baoquangninh.vn/qtvlive/tv3live.m3u8
+
+#EXTINF:-1, Quảng Trị
+http://live.fptplay53.net/epzsd1/quangtri_hls.smil/chunklist.m3u8
+
+#EXTINF:-1, Sóc Trăng 1
+http://pa.thst.vn/hls-live/livepkgr/_definst_/liveevent/livestream.m3u8
+
+#EXTINF:-1, Sóc Trăng 2
+http://pa.thst.vn/hls-live/livepkgr/_definst_/liveevent/livestreamstv2.m3u8
+
+#EXTINF:-1, Sơn La
+http://live.fptplay53.net/fnxsd1/sonla_hls.smil/chunklist.m3u8
+
+#EXTINF:-1, Tây Ninh
+http://live.fptplay53.net/epzsd1/tayninhhd_hls.smil/chunklist.m3u8
+
+#EXTINF:-1, Thái Bình
+http://live.fptplay53.net/fnxsd1/thaibinh_hls.smil/chunklist.m3u8
+
+#EXTINF:-1, Thái Nguyên
+http://live.fptplay53.net/fnxsd1/thainguyen_hls.smil/chunklist.m3u8
+
+#EXTINF:-1, Thanh Hóa
+http://live.fptplay53.net/fnxsd1/thanhhoa_hls.smil/chunklist.m3u8
+
+#EXTINF:-1, Tiền Giang
+http://123.25.238.45:1935/live/thtg/chunklist_w578727218.m3u8
+
+#EXTINF:-1, Trà Vinh
+http://60acee235f4d5.streamlock.net/THTV/travinhtv/chunklist_w1911186192.m3u8
+
+#EXTINF:-1, Trà Vinh 2
+http://618b88f69e53b.streamlock.net/THTV2/travinhtv2/chunklist_w517483768.m3u8
+
+#EXTINF:-1, Tuyên Quang
+http://live.fptplay53.net/fnxsd1/tuyenquang_hls.smil/chunklist.m3u8
+
+#EXTINF:-1, Vĩnh Phúc
+http://live.fptplay53.net/fnxsd1/vinhphuc_hls.smil/chunklist.m3u8
+
+#EXTINF:-1, Yên Bái
+http://live.fptplay53.net/fnxsd1/yenbai_hls.smil/chunklist.m3u8
+
+#EXTINF:-1, Vĩnh Long 1
+http://live.fptplay53.net/epzch2/vinhlong1_vhls.smil/chunklist_b1000000.m3u8
+
+#EXTINF:-1, Vĩnh Long 2
+http://live.fptplay53.net/epzhd2/vinhlong2_vhls.smil/chunklist_b5000000.m3u8
+
+#EXTINF:-1, Vĩnh Long 3
+https://live.fptplay53.net/epzhd2/vinhlong3_vhls.smil/chunklist.m3u8
+
+#EXTINF:-1 tvg-id="vinhlong4hd", Vĩnh Long 4
+http://live.fptplay53.net/epzhd2/vinhlong4hd_vhls.smil/chunklist.m3u8
