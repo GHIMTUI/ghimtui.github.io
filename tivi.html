@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, orientation=landscape">
+ <title>Truyền hình Online</title>
+  <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 10px;
+      background: #f5f5f5;
+    }
+
+#player {
+aspect-ratio: 16 / 9;
+  width: 100%;
+  height: 100%; 
+}
+
+.plyr {
+  height: auto; /* Chỉnh khung plyr ở đây */
+  width: 100%;
+  margin: auto;
+aspect-ratio: 16 / 9;
+}
+
+.channel-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.channel-button {
+  flex: 0 0 calc((100% - 30px) / 4); /* 3 khoảng cách giữa 4 nút = 30px */
+  box-sizing: border-box;
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 3px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.channel-logo {
+  max-height: 100%; 
+  max-width: 100%; 
+  object-fit: contain;
+ pointer-events: none;      /* Ngăn mọi tương tác */
+  user-select: none;         /* Không cho chọn */
+  -webkit-user-drag: none;   /* Chặn kéo ảnh trên Safari */
+aspect-ratio: 16 / 9;
+
+}
+    .channel-button:hover {
+      background: #e0e0e0;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="player-wrapper">
+    <video id="player" playsinline controls>
+  </video>
+
+    <div class="channel-list">
+      <div class="channel-button" data-src="http://live.fptplay53.net/epzsd1/kiengiang_hls.smil/chunklist_b2500000.m3u8">
+<img class="channel-logo" src="https://static.wikia.nocookie.net/logos/images/5/5f/ATV1_2025.png/revision/latest?cb=20250630094514&path-prefix=vi"/></div>
+      
+<div class="channel-button" data-src="http://live.fptplay53.net/epzsd1/angiang_hls.smil/chunklist_b2500000.m3u8">
+<img class="channel-logo" src="https://static.wikia.nocookie.net/logos/images/1/11/ATV_2024.png/revision/latest?cb=20240406070331&path-prefix=vi"/>
+</div>
+
+      <div class="channel-button" data-src="http://tv.angiangtv.vn/live/kgtv1/kgtv1.m3u8">
+<img class="channel-logo" src="https://static.wikia.nocookie.net/logos/images/c/c3/ATV3_2025.png/revision/latest?cb=20250630094742&path-prefix=vi"/>
+</div>
+
+      <div class="channel-button" data-src="http://live.fptplay53.net/fnxsd1/bacninh_hls.smil/chunklist_b2500000.m3u8">
+<img class="channel-logo" src="https://static.wikia.nocookie.net/logos/images/c/c8/BTV_Bac_Ninh_logo_2025.png/revision/latest?cb=20250701090055&path-prefix=vi"/>
+    </div>
+
+    <div class="channel-button" data-src="http://live.fptplay53.net/epzsd1/camau_hls.smil/chunklist_b2500000.m3u8">
+<img class="channel-logo" src="https://static.wikia.nocookie.net/logos/images/5/57/CTV_Ca_Mau_2010.png/revision/latest?cb=20230217065134&path-prefix=vi"/>
+    </div>
+
+
+   <div class="channel-button" data-src="http://live.fptplay53.net/epzsd1/cantho_hls.smil/chunklist_b2500000.m3u8">
+<img class="channel-logo" src="https://m.thst.vn/img/logo.png"/>
+    </div>
+
+    <div class="channel-button" data-src="http://live.fptplay53.net/fnxsd1/caobang_hls.smil/chunklist_b2500000.m3u8">
+<img class="channel-logo" src="https://static.wikia.nocookie.net/logos/images/f/f1/CRTV_logo_2020_b%E1%BA%A3n_2.png/revision/latest?cb=20250211035042&path-prefix=vi"/>
+    </div>
+
+<div class="channel-button" data-src="http://live.fptplay53.net/epzsd1/danang1_hls.smil/chunklist_b2500000.m3u8">
+  <img class="channel-logo" src="https://danangtv.vn/images/drt1new.png"/>
+</div>
+<div class="channel-button" data-src="http://live.fptplay53.net/epzsd1/danang2_hls.smil/chunklist_b2500000.m3u8">
+  <img class="channel-logo" src="https://danangtv.vn/images/drt2new.png"/>
+</div>
+<div class="channel-button" data-src="http://live.fptplay53.net/epzsd1/daklak_hls.smil/chunklist_b2500000.m3u8">
+  <img class="channel-logo" src="https://static.wikia.nocookie.net/logos/images/a/a9/DRT_%C4%90%E1%BA%AFk_L%E1%BA%AFk_logo_2021.png/revision/latest?cb=20240624070618&path-prefix=vi"/>
+</div>
+<div class="channel-button" data-src="http://live.fptplay53.net/fnxsd1/dienbien_hls.smil/chunklist_b2500000.m3u8">
+  <img class="channel-logo" src="https://static.wikia.nocookie.net/logos/images/9/9d/%C4%90TV_logo_2020.png/revision/latest?cb=20230203120213&path-prefix=vi"/>
+</div>
+<div class="channel-button" data-src="http://live.fptplay53.net/epzsd1/dongnai1_hls.smil/chunklist_b2500000.m3u8">
+  <img class="channel-logo" src="https://static.wikia.nocookie.net/logos/images/c/c2/%C4%90N-RTV_logo_2018-nay.png/revision/latest?cb=20211027021400&path-prefix=vi"/>
+</div>
+<div class="channel-button" data-src="http://live.fptplay53.net/epzsd1/dongnai2_hls.smil/chunklist_b2500000.m3u8">
+  <img class="channel-logo" src="https://static.wikia.nocookie.net/logos/images/c/c2/%C4%90N-RTV_logo_2018-nay.png/revision/latest?cb=20211027021400&path-prefix=vi"/>
+</div>
+<div class="channel-button" data-src="http://live.fptplay53.net/epzsd1/dongthap_vhls.smil/chunklist_b5000000.m3u8">
+  <img class="channel-logo" src="https://static.wikia.nocookie.net/logos/images/1/1e/TH%C4%90T_logo_2004-nay.png/revision/latest?cb=20231019001720&path-prefix=vi"/>
+</div>
+<div class="channel-button" data-src="http://live.fptplay53.net/epzsd1/dongthaphd_vhls.smil/chunklist_b5000000.m3u8">
+  <img class="channel-logo" src="https://static.wikia.nocookie.net/logos/images/6/6f/Mi%E1%BB%81n_T%C3%A2y_TH%C4%90T2_logo_2019-nay.png/revision/latest?cb=20240829025729&path-prefix=vi"/>
+</div>
+<div class="channel-button" data-src="http://live.fptplay53.net/epzsd1/gialai_hls.smil/chunklist_b2500000.m3u8">
+  <img class="channel-logo" src="https://binhdinhtv.vn/uploads/logoBTV.png"/>
+</div>
+<div class="channel-button" data-src="http://live.fptplay53.net/fnxhd2/hanoitv1_vhls.smil/chunklist_b5000000.m3u8">
+  <img class="channel-logo" src="https://static.wikia.nocookie.net/logos/images/8/89/HanoiTV1.png/revision/latest?cb=20220110035258&path-prefix=vi"/>
+</div>
+<div class="channel-button" data-src="http://live.fptplay53.net/fnxhd2/hanoitv2_hls.smil/chunklist_b2500000.m3u8">
+  <img class="channel-logo" src="https://static.wikia.nocookie.net/logos/images/2/24/HanoiTV2.png/revision/latest?cb=20220110150159&path-prefix=vi"/>
+</div>
+<div class="channel-button" data-src="http://live.fptplay53.net/fnxsd1/hatinh_hls.smil/chunklist_b2500000.m3u8">
+  <img class="channel-logo" src="https://static.wikia.nocookie.net/logos/images/6/63/B%C3%A1o_H%C3%A0_T%C4%A9nh.png/revision/latest?cb=20250402043538&path-prefix=vi"/>
+</div>
+<div class="channel-button" data-src="http://live.fptplay53.net/fnxsd1/haiphong_hls.smil/chunklist_b2500000.m3u8">
+  <img class="channel-logo" src="https://static.wikia.nocookie.net/logos/images/b/b6/THP_logo_2024_%28THP%2B%29.png/revision/latest?cb=20240824151119&path-prefix=vi"/>
+</div>
+<div class="channel-button" data-src="http://live.mediatech.vn/live/28548ca35823d41426d8b3da7ed82bdab13/chunklist.m3u8">
+  <img class="channel-logo" src="https://static.wikia.nocookie.net/logos/images/1/16/THP%2B_logo_2024.png/revision/latest?cb=20240824144314&path-prefix=vi"/>
+</div>
+<div class="channel-button" data-src="https://live.fptplay53.net/fnxsd1/haiduong_hls.smil/chunklist_b2500000.m3u8">
+  <img class="channel-logo" src="https://static.wikia.nocookie.net/logos/images/0/00/THP3.png/revision/latest?cb=20250630015821&path-prefix=vi"/>
+</div>
+<div class="channel-button" data-src="http://live.fptplay53.net/epzsd1/hue_hls.smil/chunklist_b2500000.m3u8">
+  <img class="channel-logo" src="https://static.wikia.nocookie.net/logos/images/d/d8/HUETV_logo_03-2025.png/revision/latest?cb=20250514084445&path-prefix=vi"/>
+</div>
+<div class="channel-button" data-src="http://live.mediatech.vn/live/285f5449d7d7d2946e0bd2d54b7e60f25a4/chunklist.m3u8">
+  <img class="channel-logo" src="https://mediabhy.mediatech.vn/upload/files/image/logo/logo.png"/>
+</div>
+<div class="channel-button" data-src="http://live.fptplay53.net/epzsd1/khanhhoa_hls.smil/chunklist_b2500000.m3u8">
+  <img class="channel-logo" src="https://static.wikia.nocookie.net/logos/images/f/fd/KTV_logo_2018_%28Khanh_Hoa%29.png/revision/latest?cb=20231226142649&path-prefix=vi"/>
+</div>
+<div class="channel-button" data-src="http://live.fptplay53.net/epzsd1/ninhthuan_hls.smil/chunklist_b2500000.m3u8">
+  <img class="channel-logo" src="https://static.wikia.nocookie.net/logos/images/9/9c/BKH.png/revision/latest?cb=20250623090635&path-prefix=vi"/>
+</div>
+<div class="channel-button" data-src="http://live.fptplay53.net/fnxsd1/laichau_hls.smil/chunklist_b2500000.m3u8">
+  <img class="channel-logo" src="https://static.wikia.nocookie.net/logos/images/8/8f/Logo_LTV_Lai_Ch%C3%A2u_2022_%28Logo_m%C3%A0n_h%C3%ACnh%29.png/revision/latest?cb=20220120003433&path-prefix=vi"/>
+</div>
+<div class="channel-button" data-src="http://live.fptplay53.net/epzsd1/lamdong_hls.smil/chunklist_b2500000.m3u8">
+  <img class="channel-logo" src="https://static.wikia.nocookie.net/logos/images/2/24/LTV_Lam_Dong.png/revision/latest?cb=20241012153801&path-prefix=vi"/>
+</div>
+<div class="channel-button" data-src="http://live.fptplay53.net/fnxsd1/langson_hls.smil/chunklist_b2500000.m3u8">
+  <img class="channel-logo" src="https://static.wikia.nocookie.net/logos/images/2/21/LSTV_2024.png/revision/latest?cb=20240211035805&path-prefix=vi"/>
+</div>
+<div class="channel-button" data-src="http://live.fptplay53.net/fnxsd1/laocai_hls.smil/chunklist_b2500000.m3u8">
+  <img class="channel-logo" src="https://static.wikia.nocookie.net/logos/images/b/bc/THLC_2016-2017.png/revision/latest?cb=20230715010515&path-prefix=vi"/>
+</div>
+<div class="channel-button" data-src="http://live.fptplay53.net/fnxsd1/nghean_hls.smil/chunklist_b2500000.m3u8">
+  <img class="channel-logo" src="https://static.wikia.nocookie.net/logos/images/2/26/NTV_Ngh%E1%BB%87_An_2019.png/revision/latest?cb=20250313095341&path-prefix=vi"/>
+</div>
+<div class="channel-button" data-src="http://live.fptplay53.net/fnxsd1/ninhbinh_hls.smil/chunklist_b2500000.m3u8">
+  <img class="channel-logo" src="https://static.wikia.nocookie.net/logos/images/d/d2/Logo_NTV_Ninh_B%C3%ACnh.png/revision/latest?cb=20211204172020&path-prefix=vi"/>
+</div>
+<div class="channel-button" data-src="http://live.fptplay53.net/fnxsd1/phutho_hls.smil/chunklist_b2500000.m3u8">
+  <img class="channel-logo" src="https://static.wikia.nocookie.net/logos/images/f/fe/PTV_logo_2018.png/revision/latest?cb=20230303144531&path-prefix=vi"/>
+</div>
+<div class="channel-button" data-src="http://live.fptplay53.net/epzsd1/quangngai_hls.smil/chunklist_b2500000.m3u8">
+  <img class="channel-logo" src="https://mediaptq.mediatech.vn/upload//files/logo/28_6_2025_logo_png.png"/>
+</div>
+<div class="channel-button" data-src="http://live.baoquangninh.vn/qtvlive/tv1live.m3u8">
+  <img class="channel-logo" src="https://static.wikia.nocookie.net/logos/images/a/a9/QTV1.png/revision/latest?cb=20230527102010&path-prefix=vi"/>
+</div>
+<div class="channel-button" data-src="http://live.baoquangninh.vn/qtvlive/tv3live.m3u8">
+  <img class="channel-logo" src="https://static.wikia.nocookie.net/logos/images/f/fb/QTV3_logo.png/revision/latest?cb=20241211061544&path-prefix=vi"/>
+</div>
+<div class="channel-button" data-src="http://live.fptplay53.net/epzsd1/quangtri_hls.smil/chunklist_b2500000.m3u8">
+  <img class="channel-logo" src="https://static.wikia.nocookie.net/logos/images/8/89/QTTV.png/revision/latest?cb=20250701052854&path-prefix=vi"/>
+</div>
+<div class="channel-button" data-src="https://cdn.sonlatv.vn/live/28595222e707a364251b8724717894baa46/playlist.m3u8">
+  <img class="channel-logo" src="https://static.wikia.nocookie.net/logos/images/a/ab/STV_Son_La_2020.png/revision/latest?cb=20220415024807&path-prefix=vi"/>
+</div>
+<div class="channel-button" data-src="http://live.fptplay53.net/epzsd1/tayninhhd_hls.smil/chunklist_b2500000.m3u8">
+  <img class="channel-logo" src="https://static.wikia.nocookie.net/logos/images/8/88/THTN_1996-1998.png/revision/latest?cb=20250320035720&path-prefix=vi"/>
+</div>
+<div class="channel-button" data-src="https://cdn.la34.com.vn/live/2851dc2c9af68834814a89e61db0faee561/playlist.m3u8">
+  <img class="channel-logo" src="https://static.wikia.nocookie.net/logos/images/5/52/THLA_logo.png/revision/latest?cb=20220601001931&path-prefix=vi"/>
+</div>
+<div class="channel-button" data-src="http://live.fptplay53.net/fnxsd1/thaibinh_hls.smil/chunklist_b2500000.m3u8">
+  <img class="channel-logo" src="https://static.wikia.nocookie.net/logos/images/d/da/TBTV_logo_17-06-2017_b%E1%BA%A3n_2.png/revision/latest?cb=20230102100726&path-prefix=vi"/>
+</div>
+<div class="channel-button" data-src="http://live.fptplay53.net/fnxsd1/thainguyen_hls.smil/chunklist_b2500000.m3u8">
+  <img class="channel-logo" src="https://thainguyentv.vn/modules/frontend/themes/ptthtn/images/pc/logo.png?v=2.620250701080027"/>
+</div>
+<div class="channel-button" data-src="http://live.fptplay53.net/fnxsd1/thanhhoa_hls.smil/chunklist_b2500000.m3u8">
+  <img class="channel-logo" src="https://static.wikia.nocookie.net/logos/images/1/17/B%C3%A1o_Thanh_H%C3%B3a.png/revision/latest?cb=20250510041453&path-prefix=vi"/>
+</div>
+<div class="channel-button" data-src="https://live.fptplay53.net/fnxsd1/tuyenquang_hls.smil/chunklist_b2500000.m3u8">
+  <img class="channel-logo" src="https://static.wikia.nocookie.net/logos/images/f/f0/B%C3%A1o_Tuy%C3%AAn_Quang.png/revision/latest?cb=20250501044650&path-prefix=vi"/>
+</div>
+<div class="channel-button" data-src="http://live.fptplay53.net/epzhd2/vinhlong1_vhls.smil/chunklist_b5000000.m3u8">
+  <img class="channel-logo" src="https://static.wikia.nocookie.net/logos/images/a/a3/THVL1_SD_2023.png/revision/latest?cb=20250128005203&path-prefix=vi"/>
+</div>
+<div class="channel-button" data-src="http://live.fptplay53.net/epzhd2/vinhlong2_vhls.smil/chunklist_b5000000.m3u8">
+  <img class="channel-logo" src="https://static.wikia.nocookie.net/logos/images/7/79/THVL2_SD_2023.png/revision/latest?cb=20250128005205&path-prefix=vi"/>
+</div>
+<div class="channel-button" data-src="http://live.fptplay53.net/epzhd2/vinhlong3_vhls.smil/chunklist_b5000000.m3u8">
+  <img class="channel-logo" src="https://static.wikia.nocookie.net/logos/images/3/38/THVL3_SD_logo_2024%2C_2025.png/revision/latest?cb=20240207081313&path-prefix=vi"/>
+</div>
+<div class="channel-button" data-src="http://live.fptplay53.net/epzhd2/vinhlong4hd_vhls.smil/chunklist_b5000000.m3u8">
+  <img class="channel-logo" src="https://static.wikia.nocookie.net/logos/images/1/17/THVL4_SD_logo_2023.png/revision/latest?cb=20240207033553&path-prefix=vi"/>
+</div>
+
+  </div>
+
+  <script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
+  <script>
+    const player = new Plyr('#player');
+
+    const buttons = document.querySelectorAll('.channel-button');
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        const newSrc = button.getAttribute('data-src');
+        player.source = {
+          type: 'video',
+          sources: [
+            {
+              src: newSrc,
+              type: 'application/x-mpegURL'
+            }
+          ]
+        };
+        player.play();
+      });
+    });
+player.on('enterfullscreen', () => {
+  // Chỉ hoạt động nếu trình duyệt hỗ trợ
+  if (screen.orientation && screen.orientation.lock) {
+    screen.orientation.lock('landscape').catch(err => {
+      console.warn('Không thể xoay ngang:', err);
+    });
+  }
+});
+
+player.on('exitfullscreen', () => {
+  // Trả lại chiều dọc khi thoát fullscreen (tùy chọn)
+  if (screen.orientation && screen.orientation.lock) {
+    screen.orientation.lock('portrait').catch(err => {
+      console.warn('Không thể xoay dọc lại:', err);
+    });
+  }
+});
+
+
+  </script>
+</body>
+</html>
