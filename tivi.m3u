@@ -9,18 +9,17 @@ http://live.fptplay53.net/epzsd1/kiengiang_hls.smil/chunklist_b2500000.m3u8
 http://live.fptplay53.net/epzsd1/angiang_hls.smil/chunklist_b2500000.m3u8
 
 #EXTINF:-1 tvg-logo="https://i.imgur.com/rsu0e8x.png", An Giang 3
-http://tv.kgtv.vn/live/kgtv1/kgtv1.m3u8
-
+https://tv.angiangtv.vn/live/kgtv1/kgtv1.m3u8
 #EXTINF:-1 tvg-logo="https://bacgiangtv.vn/upload/files/logo_btv.png", Bắc Ninh
 http://live.fptplay53.net/fnxsd1/bacninh_hls.smil/chunklist_b2500000.m3u8
 
 #EXTINF:-1 tvg-logo="https://i.imgur.com/OIGlNgx.png" , Cà Mau
 http://live.fptplay53.net/epzsd1/camau_hls.smil/chunklist_b2500000.m3u8
 
-#EXTINF:-1 tvg-logo="https://i.imgur.com/9r97P5G.png" ,Cần Thơ 1
+#EXTINF:-1 tvg-logo="https://i.imgur.com/9r97P5G.png" ,Cần Thơ
 http://live.fptplay53.net/epzsd1/cantho_hls.smil/chunklist_b2500000.m3u8
 
-#EXTINF:-1 tvg-logo="https://i.imgur.com/9r97P5G.png" ,Cần Thơ 2
+#EXTINF:-1 tvg-logo="https://i.imgur.com/9r97P5G.png" ,Cần Thơ 3
 https://pa.thst.vn/hls-live/livepkgr/_definst_/liveevent/livestreamstv2.m3u8
 
 #EXTINF:-1 tvg-logo="https://i.imgur.com/SWtacIa.png" ,Cao Bằng
@@ -44,7 +43,10 @@ http://live.fptplay53.net/epzsd1/dongnai1_hls.smil/chunklist_b2500000.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/gwkKyIQ.png ",Đồng Nai 2
 http://live.fptplay53.net/epzsd1/dongnai2_hls.smil/chunklist_b2500000.m3u8
 
-#EXTINF:-1 tvg-logo="https://i.imgur.com/DtW3s3t.png" , Đồng Tháp 1
+#EXTINF:-1 tvg-logo="https://i.imgur.com/DtW3s3t.png" , Đồng Tháp
+http://123.25.238.45:1935/live/thtg/chunklist_w1678431947.m3u8
+
+#EXTINF:-1 tvg-logo="https://i.imgur.com/4il5PGP.png" , Đồng Tháp 1
 http://live.fptplay53.net/epzsd1/dongthap_vhls.smil/chunklist_b5000000.m3u8
 
 #EXTINF:-1 tvg-logo="https://i.imgur.com/1uMx7XW.png", Đồng Tháp 2
@@ -72,7 +74,7 @@ http://live.mediatech.vn/live/28548ca35823d41426d8b3da7ed82bdab13/chunklist.m3u8
 https://live.fptplay53.net/fnxsd1/haiduong_hls.smil/chunklist_b2500000.m3u8
 
 #EXTINF:-1 tvg-logo="https://i.imgur.com/Nl0BPsB.png" ,Huế
-http://live.fptplay53.net/epzsd1/hue_hls.smil/chunklist_b2500000.m3u8
+https://live.huetv.com.vn/TRT-Online/chunklist.m3u8
 
 #EXTINF:-1 tvg-logo="https://i.imgur.com/aNsAQdp.png" ,Hưng Yên
 http://live.mediatech.vn/live/285f5449d7d7d2946e0bd2d54b7e60f25a4/chunklist.m3u8
@@ -86,8 +88,15 @@ http://live.fptplay53.net/epzsd1/ninhthuan_hls.smil/chunklist_b2500000.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/mDk1Ccp.png" ,Lai Châu
 http://live.fptplay53.net/fnxsd1/laichau_hls.smil/chunklist_b2500000.m3u8
 
-#EXTINF:-1 tvg-logo="https://i.imgur.com/aEYbOcW.png" ,Lâm Đồng
+#EXTINF:-1 tvg-logo="https://i.imgur.com/aEYbOcW.png" ,Lâm Đồng 1
 http://live.fptplay53.net/epzsd1/lamdong_hls.smil/chunklist_b2500000.m3u8
+
+#EXTINF:-1 tvg-logo="https://i.imgur.com/aEYbOcW.png" ,Lâm Đồng 2
+http://live.fptplay53.net/epzsd1/binhthuan_hls.smil/chunklist_b2500000.m3u8
+
+
+#EXTINF:-1 tvg-logo="https://i.imgur.com/aEYbOcW.png" ,Lâm Đồng 3
+https://cloudstreamthdn.tek4tv.vn/live/smil:daknong.smil/playlist.m3u8
 
 #EXTINF:-1 tvg-logo="https://i.imgur.com/S1vbQir.png" ,Lạng Sơn
 http://live.fptplay53.net/fnxsd1/langson_hls.smil/chunklist_b2500000.m3u8
@@ -116,7 +125,7 @@ http://live.baoquangninh.vn/qtvlive/tv3live.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/Rt1dzIy.png",Quảng Trị
 http://live.fptplay53.net/epzsd1/quangtri_hls.smil/chunklist_b2500000.m3u8
 
-#EXTINF:-1 tvg-logo="https://i.imgur.com/a7mlcNZ.png" ,Sơn La
+#EXTINF:-1 tvg-logo="https://i.imgur.com/8c0sGXr.png" ,Sơn La
 https://cdn.sonlatv.vn/live/28595222e707a364251b8724717894baa46/playlist.m3u8
 
 #EXTINF:-1 tvg-logo="https://i.imgur.com/VeOwT5w.png" ,Tây Ninh 1
