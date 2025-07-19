@@ -14,9 +14,8 @@ https://tv.angiangtv.vn/live/kgtv1/kgtv1.m3u8
 #EXTINF:-1 tvg-logo="https://bacgiangtv.vn/upload/files/logo_btv.png", Bắc Ninh
 http://live.fptplay53.net/fnxsd1/bacninh_hls.smil/chunklist_b2500000.m3u8
 
-#EXTINF:-1 tvg-logo="https://bacgiangtv.vn/upload/files/logo_btv.png", Bắc Ninh 2
+#EXTINF:-1 tvg-logo="https://i.imgur.com/xewcocD.png", Bắc Ninh 2
 http://live.fptplay53.net/fnxsd1/bacgiang_hls.smil/chunklist_b2500000.m3u8
-
 
 #EXTINF:-1 tvg-logo="https://i.imgur.com/OIGlNgx.png" , Cà Mau
 http://live.fptplay53.net/epzsd1/camau_hls.smil/chunklist_b2500000.m3u8
@@ -58,7 +57,7 @@ http://live.fptplay53.net/epzsd1/dongthap_vhls.smil/chunklist_b5000000.m3u8
 http://live.fptplay53.net/epzsd1/dongthaphd_vhls.smil/chunklist_b5000000.m3u8
 
 #EXTINF:-1 tvg-logo="https://i.imgur.com/xRjtvNK.png" ,Gia Lai
-http://live.fptplay53.net/epzsd1/gialai_hls.smil/chunklist_b2500000.m3u8
+http://live.fptplay53.net/epzsd1/binhdinh_hls.smil/chunklist_b2500000.m3u8
 
 #EXTINF:-1 tvg-logo="https://i.imgur.com/DuB7pN3.png" ,Hà Nội 1
 http://live.fptplay53.net/fnxhd2/hanoitv1_vhls.smil/chunklist_b5000000.m3u8
@@ -119,7 +118,8 @@ http://live.fptplay53.net/fnxsd1/ninhbinh_hls.smil/chunklist_b2500000.m3u8
 http://live.fptplay53.net/fnxsd1/phutho_hls.smil/chunklist_b2500000.m3u8
 
 #EXTINF:-1 tvg-logo="https://i.imgur.com/78zYkXs.png" ,Quảng Ngãi
-http://live.fptplay53.net/epzsd1/quangngai_hls.smil/chunklist_b2500000.m3u8
+#http://live.fptplay53.net/epzsd1/quangngai_hls.smil/chunklist_b2500000.m3u8
+https://live.mediatech.vn/live/285aaa79b4b265a457d81bb72bc32e2c114/playlist.m3u8
 
 #EXTINF:-1 tvg-logo="https://i.imgur.com/YVhb8Up.png" ,Quảng Ninh 1
 http://live.baoquangninh.vn/qtvlive/tv1live.m3u8
@@ -229,5 +229,5 @@ http://live.fptplay53.net/epzhd1/htvcthethao_vhls.smil/chunklist_b5000000.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/Tr5aGaO.png", SCTV4K
 https://z215ymcm4tliv.vcdn.cloud/s97/hls/sctv4k/index.m3u8
 
-#EXTINF:-1 tvg-logo="https://i.imgur.com/eitWlGH.png", SCTV6
+#EXTINF:-1 tvg-logo="https://i.imgur.com/mIKEyfO.png", SCTV6
 http://live.fptplay53.net/epzhd2/film360_vhls.smil/chunklist_b5000000.m3u8
