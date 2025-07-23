@@ -63,7 +63,7 @@ http://live.fptplay53.net/epzsd1/binhdinh_hls.smil/chunklist_b2500000.m3u8
 http://live.fptplay53.net/fnxhd2/hanoitv1_vhls.smil/chunklist_b5000000.m3u8
 
 #EXTINF:-1  tvg-logo="https://i.imgur.com/LJztMFd.png" ,Hà Nội 2
-http://live.fptplay53.net/fnxhd2/hanoitv2_hls.smil/chunklist_b2500000.m3u8
+http://live.fptplay53.net/fnxch2/hntv2_abr.smil/chunklist.m3u8
 
 #EXTINF:-1 tvg-logo="https://i.imgur.com/JwrI9ry.png" ,Hà Tĩnh
 http://live.fptplay53.net/fnxsd1/hatinh_hls.smil/chunklist_b2500000.m3u8
@@ -97,7 +97,6 @@ http://live.fptplay53.net/epzsd1/lamdong_hls.smil/chunklist_b2500000.m3u8
 
 #EXTINF:-1 tvg-logo="https://i.imgur.com/aEYbOcW.png" ,Lâm Đồng 2
 http://live.fptplay53.net/epzsd1/binhthuan_hls.smil/chunklist_b2500000.m3u8
-
 
 #EXTINF:-1 tvg-logo="https://i.imgur.com/aEYbOcW.png" ,Lâm Đồng 3
 https://cloudstreamthdn.tek4tv.vn/live/smil:daknong.smil/playlist.m3u8
@@ -134,7 +133,7 @@ http://live.fptplay53.net/epzsd1/quangtri_hls.smil/chunklist_b2500000.m3u8
 https://cdn.sonlatv.vn/live/28595222e707a364251b8724717894baa46/playlist.m3u8
 
 #EXTINF:-1 tvg-logo="https://i.imgur.com/VeOwT5w.png" ,Tây Ninh 1
-https://cdn.la34.com.vn/live/2851dc2c9af68834814a89e61db0faee561/playlist.m3u8
+http://live.fptplay53.net/epzsd1/longan_hls.smil/chunklist_b2500000.m3u8
 
 #EXTINF:-1 tvg-logo="https://i.imgur.com/VeOwT5w.png",Tây Ninh 2
 http://live.fptplay53.net/epzsd1/tayninhhd_hls.smil/chunklist_b2500000.m3u8
@@ -231,3 +230,24 @@ https://z215ymcm4tliv.vcdn.cloud/s97/hls/sctv4k/index.m3u8
 
 #EXTINF:-1 tvg-logo="https://i.imgur.com/mIKEyfO.png", SCTV6
 http://live.fptplay53.net/epzhd2/film360_vhls.smil/chunklist_b5000000.m3u8
+
+#EXTINF:-1 tvg-logo="", SCTV1
+https://liveh12.seenow.vn/hls/SCTV1/03.m3u8
+#EXTINF:-1 tvg-logo="", SCTV2
+https://liveh12.seenow.vn/hls/SCTV2/03.m3u8
+#EXTINF:-1 tvg-logo="", SCTV3
+https://liveh12.seenow.vn/hls/SCTV3/03.m3u8
+#EXTINF:-1 tvg-logo="", SCTV4
+https://liveh12.seenow.vn/hls/SCTV4/03.m3u8
+#EXTINF:-1 tvg-logo="", SCTV7
+https://liveh12.seenow.vn/hls/SCTV7/03.m3u8
+#EXTINF:-1 tvg-logo="", SCTV11
+https://liveh12.seenow.vn/hls/SCTV11/03.m3u8
+#EXTINF:-1 tvg-logo="", SCTV12
+https://liveh12.seenow.vn/hls/SCTV12/03.m3u8
+#EXTINF:-1 tvg-logo="", SCTV13
+https://liveh12.seenow.vn/hls/SCTV13/03.m3u8
+#EXTINF:-1 tvg-logo="", SCTV14
+https://liveh12.seenow.vn/hls/SCTV14/03.m3u8
+#EXTINF:-1 tvg-logo="", SCTV18
+https://liveh12.seenow.vn/hls/SCTV18/03.m3u8
