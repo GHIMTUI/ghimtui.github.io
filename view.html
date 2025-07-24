@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Xem mã nguồn</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+      background-color: #f0f0f0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      width: 90%;
+      max-width: 400px;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #0056b3;
+    }
+
+    small {
+      display: block;
+      margin-top: 10px;
+      color: gray;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Xem mã nguồn</h2>
+    <input type="text" id="urlInput" placeholder="Nhập URL (ví dụ: google.com)">
+    <button onclick="viewSource()">Xem mã nguồn</button>
+    <small>* Nếu không mở được, hãy copy link và dán vào thanh địa chỉ trình duyệt</small>
+  </div>
+
+  <script>
+    function viewSource() {
+      let url = document.getElementById('urlInput').value.trim();
+
+      if (!url) {
+        alert("Vui lòng nhập URL.");
+        return;
+      }
+
+      // Nếu chưa có http:// hoặc https:// thì thêm http:// vào
+      if (!/^https?:\/\//i.test(url)) {
+        url = "http://" + url;
+      }
+
+      const viewSourceUrl = "view-source:" + url;
+
+      try {
+        const win = window.open(viewSourceUrl, '_blank');
+        if (!win) {
+          alert("Trình duyệt chặn hoặc không hỗ trợ view-source từ JavaScript.");
+        }
+      } catch (e) {
+        alert("Trình duyệt không hỗ trợ mở view-source từ JavaScript.");
+      }
+    }
+  </script>
+</body>
+</html>
