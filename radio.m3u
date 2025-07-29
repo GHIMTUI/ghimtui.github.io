@@ -1,5 +1,5 @@
 #EXTM3U
-#EXT-X-VERSION:3
+
 #EXTINF:-1, VOV1
 http://stream-cdn.vov.vn/live/vov1-audio_only.m3u8
 
