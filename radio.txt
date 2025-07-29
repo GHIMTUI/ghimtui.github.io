@@ -1,0 +1,154 @@
+#EXTM3U
+#EXT-X-VERSION:3
+#EXTINF:-1, VOV1
+http://stream-cdn.vov.vn/live/vov1-audio_only.m3u8
+
+#EXTINF:-1, VOV2
+http://stream-cdn.vov.vn/live/vov2-audio_only.m3u8
+
+#EXTINF:-1, VOV3
+http://stream-cdn.vov.vn/live/vov3-audio_only.m3u8
+
+#EXTINF:-1, VOV4
+http://stream-cdn.vov.vn/live/vov4-audio_only.m3u8
+
+#EXTINF:-1, VOV5
+http://stream-cdn.vov.vn/live/vov5-audio_only.m3u8
+
+#EXTINF:-1, Giao thông Hà Nội
+https://str.vov.gov.vn/vovlive/vovGTHN.sdp_aac/chunklist_w1337284168.m3u8 
+
+#EXTINF:-1, Giao thông TPHCM
+https://str.vov.gov.vn/vovlive/vovGTHCM.sdp_aac/chunklist_w843014247.m3u8
+
+#EXTINF:-1, Giao thông Mekong
+https://str.vov.gov.vn/vovlive/vovgtMeKong.sdp_aac/chunklist_w1641559259.m3u8
+
+#EXTINF:-1, VOH1
+https://strm.voh.com.vn/radio/channel1/playlist.m3u8
+
+#EXTINF:-1, VOH2
+https://strm.voh.com.vn/radio/channel2/playlist.m3u8
+
+#EXTINF:-1, VOH3
+https://strm.voh.com.vn/radio/channel3/playlist.m3u8
+
+#EXTINF:-1, VOH4
+https://strm.voh.com.vn/radio/channel5/playlist.m3u8
+
+#EXTINF:-1, An Giang R1
+http://tv.angiangtv.vn/live/kgaudio/kgaudio.m3u8
+
+#EXTINF:-1, An Giang R2
+http://tv.angiangtv.vn/live/kgtv3/kgtv3.m3u8
+
+#EXTINF:-1, Bắc Ninh
+https://live.mediatech.vn/live/28584e20827396945f5a4fd57fadd4be21a/chunklist.m3u8
+
+#EXTINF:-1, Cà Mau
+http://tv.ctvcamau.vn/live/radio/radio.m3u8
+
+#EXTINF:-1, Cần Thơ
+https://live.canthotv.vn/live/radio/playlist.m3u8
+
+#EXTINF:-1, Đà Nẵng
+https://live.mediatech.vn/live/2858a998b1c7fbf4522accd5554588ceae3/playlist.m3u8
+
+#EXTINF:-1, Đắk Lắk
+https://cdn.drt.vn/live/285054c4567dea54b3fb14bfd60d61230b5/playlist.m3u8
+
+#EXTINF:-1, Đồng Nai
+https://live.baobinhphuoc.com.vn/bptvlive/radio.m3u8
+
+#EXTINF:-1, Đồng Tháp 1
+http://123.25.238.45:1935/live/radio/chunklist_w1917697281.m3u8
+
+#EXTINF:-1, Đồng Tháp 2
+https://64d0d74b76158.streamlock.net/THDTR/thdtradio/chunklist_w229737994.m3u8
+
+#EXTINF:-1, Gia Lai
+https://tv.gialaitv.vn/radio.m3u8
+
+#EXTINF:-1, Hà Nội FM1
+https://cloudcdnfm90.tek4tv.vn/HANOIFM90/stream.m3u8
+
+#EXTINF:-1, Hà Nội FM2
+https://cloudcdnfm90.tek4tv.vn/HANOI96/stream.m3u8
+
+#EXTINF:-1, Hà Tĩnh
+https://wse.hatinhtv.net/radio/voht/chunklist_w237007347.m3u8
+
+#EXTINF:-1, Hải Phòng 1
+https://1253562137.e.cdneverest.net/EAn184vXBCMqv5laa3xrFg/1753758963/live/2853ef29ebf29c64155acb32d102dd69a4a/playlist.m3u8
+
+#EXTINF:-1, Hải Phòng 2
+https://1253562137.e.cdneverest.net/XnTRkZFqXG8zN1V7eV20dA/1753758963/live/285c1421f29d05045909836b37313898e2f/playlist.m3u8
+
+#EXTINF:-1, Hải Phòng 3
+https://live.haiduongtv.vn/live/2858f932f24fa494996afb93ae0a7896ef9/playlist.m3u8
+
+#EXTINF:-1, Huế FM
+https://live.huetv.com.vn/Radio-online/playlist.m3u8
+
+#EXTINF:-1, Hưng Yên
+https://1253218859.e.cdneverest.net/oi56_ekLvaPmRJL4wz2iIg/1753760024/live/285b6e443bc30734725a940da8b0629655b/chunklist.m3u8
+
+#EXTINF:-1, Khánh Hòa
+https://tv.ktv.org.vn/hls/radio.m3u8
+
+#EXTINF:-1, Khánh Hòa 1
+https://618b88f69e53b.streamlock.net/NTVR/ntvradio/chunklist_w2018797274.m3u8
+
+#EXTINF:-1, Lai Châu
+https://cloudstreamhntv.tek4tv.vn/events/laichau_radio/playlist.m3u8
+
+#EXTINF:-1, Lâm Đồng 1
+http://118.107.85.4:1935/radio/lamdong_aac/playlist.m3u8
+
+#EXTINF:-1, Lâm Đồng 2
+https://64d0d74b76158.streamlock.net/BTVR/binhthuanradio/chunklist_w1065819410.m3u8
+
+#EXTINF:-1, Lâm Đồng 3
+https://cloudstreamthdn.tek4tv.vn/audio/daknong_radio/playlist.m3u8
+
+#EXTINF:-1, Lang Sơn
+https://media.bacgiangtv.vn/live/langsonradio_aac/chunklist_w1602809032.m3u8
+
+#EXTINF:-1, Lào Cai
+https://bk.yenbaitv.org.vn/hls/audio/livestream.m3u8
+
+#EXTINF:-1, Nghệ An
+https://live.truyenhinhnghean.vn/hls/na1/index.m3u8
+
+#EXTINF:-1, Ninh Bình
+https://live.mediatech.vn/live/285391a08f01f83458793b293c5e9517265/playlist.m3u8
+
+#EXTINF:-1, Phú Thọ
+https://cdn.3ssoft.vn/audio/phuthotv/phuthotv/index.m3u8
+
+#EXTINF:-1, Quảng Ngãi
+https://live.mediatech.vn/live/2853bb18b89d074498c81d7a0deb32a3755/playlist.m3u8
+
+#EXTINF:-1, Quảng Ninh 1
+https://live.baoquangninh.vn/qtvlive/qnr1.m3u8
+
+#EXTINF:-1, Quảng Ninh 2
+https://live.baoquangninh.vn/qtvlive/qnr2.m3u8
+
+#EXTINF:-1, Quảng Trị
+https://quangtritv.vn/audios/audiovnpt2024.m3u8
+
+#EXTINF:-1, Sơn La
+https://cdn.sonlatv.vn/live/285bfb76d0d7a3c4615b853fe7a698e150c/playlist.m3u8
+
+#EXTINF:-1, Tây Ninh
+https://live.la34.com.vn/la34/radio-transmux.m3u8
+
+#EXTINF:-1, Thái Nguyên
+https://radio.thainguyentv.vn/hls/livestream.m3u8
+
+#EXTINF:-1, Tuyên Quang
+https://streaming.tuyenquangtv.vn/channel/tuyenquang_radio/chunks.m3u8
+
+#EXTINF:-1, Vĩnh Long
+https://60acee235f4d5.streamlock.net/THTVR/travinhradio/chunklist_w1376325823.m3u8
