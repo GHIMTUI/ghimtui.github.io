@@ -15,23 +15,19 @@ http://tv.angiangtv.vn/live/kgtv2/kgtv2.m3u8
 http://tv.angiangtv.vn/live/kgtv1/kgtv1.m3u8
 
 #EXTINF:-1 tvg-logo="https://bacgiangtv.vn/upload/files/logo_btv.png", Bắc Ninh
-http://live.fptplay53.net/fnxsd1/bacninh_hls.smil/chunklist_b2500000.m3u8
-
-#EXTINF:-1 tvg-logo="https://i.imgur.com/xewcocD.png", Bắc Ninh 2
 http://live.fptplay53.net/fnxsd1/bacgiang_hls.smil/chunklist_b2500000.m3u8
 
 #EXTINF:-1 tvg-logo="https://i.imgur.com/OIGlNgx.png" , Cà Mau
 http://live.fptplay53.net/epzsd1/camau_hls.smil/chunklist_b2500000.m3u8
 
-#EXTINF:-1 tvg-logo="https://i.imgur.com/9r97P5G.png" ,Cần Thơ
+#EXTINF:-1 tvg-logo="https://i.imgur.com/9r97P5G.png" ,Cần Thơ 1
 http://live.fptplay53.net/epzsd1/cantho_hls.smil/chunklist_b2500000.m3u8
 
 #EXTINF:-1 tvg-logo="https://i.imgur.com/9r97P5G.png" ,Cần Thơ 2
 http://live.fptplay53.net/epzsd1/haugiang_hls.smil/chunklist_b2500000.m3u8
 
-
 #EXTINF:-1 tvg-logo="https://i.imgur.com/9r97P5G.png" ,Cần Thơ 3
-http://pa.thst.vn/hls-live/livepkgr/_definst_/liveevent/livestreamstv2.m3u8
+https://pa.thst.vn/hls-live/livepkgr/_definst_/liveevent/livestreamstv2.m3u8
 
 #EXTINF:-1 tvg-logo="https://i.imgur.com/SWtacIa.png" ,Cao Bằng
 http://live.fptplay53.net/fnxsd1/caobang_hls.smil/chunklist_b2500000.m3u8
@@ -55,9 +51,6 @@ http://live.fptplay53.net/epzsd1/dongnai1_hls.smil/chunklist_b2500000.m3u8
 
 #EXTINF:-1 tvg-logo="https://i.imgur.com/gwkKyIQ.png ",Đồng Nai 2
 http://live.fptplay53.net/epzsd1/dongnai2_hls.smil/chunklist_b2500000.m3u8
-
-#EXTINF:-1 tvg-logo="https://i.imgur.com/DtW3s3t.png" , Đồng Tháp
-http://123.25.238.45:1935/live/thtg/chunklist_w1252563444.m3u8
  
 #EXTINF:-1 tvg-logo="https://i.imgur.com/4il5PGP.png" , Đồng Tháp 1
 http://live.fptplay53.net/epzsd1/dongthap_vhls.smil/chunklist_b5000000.m3u8
@@ -231,6 +224,13 @@ http://live.fptplay53.net/epzhd1/htv9hd_vhls.smil/chunklist_b5000000.m3u8
 
 #EXTINF:-1 tvg-logo="https://i.imgur.com/5IOZatX.png" , Thể Thao
 http://live.fptplay53.net/epzhd1/htvcthethao_vhls.smil/chunklist_b5000000.m3u8
+
+
+#EXTINF:-1 tvg-logo="" , Bà Rịa Vũng Tàu
+http://live.fptplay53.net/epzsd1/bariavungtau_hls.smil/chunklist_b2500000.m3u8
+
+#EXTINF:-1 tvg-logo="" , Bình Dương
+https://live.fptplay53.net/epzhd2/btv1_hls.smil/chunklist_b2500000.m3u8
 
 #EXTINF:-1 tvg-logo="https://i.imgur.com/TeOEu8Q.png", ANTV
 http://live.fptplay53.net/fnxhd2/anninhtv_vhls.smil/chunklist_b5000000.m3u8
