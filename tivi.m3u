@@ -1,6 +1,6 @@
 #EXTM3U
 #EXT-X-VERSION:3
-
+#EXT-X-TARGETDURATION:7
 #EXTGRP: ĐỊA PHƯƠNG
 
 #EXTINF:-1 tvg-logo="https://i.imgur.com/lWhT6rZ.png" , An Giang 1
@@ -52,7 +52,7 @@ http://live.fptplay53.net/epzsd1/dongnai1_hls.smil/chunklist_b2500000.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/gwkKyIQ.png ",Đồng Nai 2
 http://live.fptplay53.net/epzsd1/dongnai2_hls.smil/chunklist_b2500000.m3u8
  
-#EXTINF:-1 tvg-logo="https://i.imgur.com/4il5PGP.png" , Đồng Tháp 1
+#EXTINF:-1 tvg-logo="https://i.imgur.com/O5I6tcI.png" , Đồng Tháp 1
 http://live.fptplay53.net/epzsd1/dongthap_vhls.smil/chunklist_b5000000.m3u8
 
 #EXTINF:-1 tvg-logo="https://i.imgur.com/1uMx7XW.png", Đồng Tháp 2
@@ -226,11 +226,11 @@ http://live.fptplay53.net/epzhd1/htv9hd_vhls.smil/chunklist_b5000000.m3u8
 http://live.fptplay53.net/epzhd1/htvcthethao_vhls.smil/chunklist_b5000000.m3u8
 
 
-#EXTINF:-1 tvg-logo="" , Bà Rịa Vũng Tàu
+#EXTINF:-1 tvg-logo="https://i.imgur.com/9m4vewH.png" , Bà Rịa Vũng Tàu
 http://live.fptplay53.net/epzsd1/bariavungtau_hls.smil/chunklist_b2500000.m3u8
 
-#EXTINF:-1 tvg-logo="" , Bình Dương
-https://live.fptplay53.net/epzhd2/btv1_hls.smil/chunklist_b2500000.m3u8
+#EXTINF:-1 tvg-logo="https://i.imgur.com/9m4vewH.png" , Bình Dương
+http://live.fptplay53.net/epzhd2/btv2_hls.smil/chunklist_b2500000.m3u8
 
 #EXTINF:-1 tvg-logo="https://i.imgur.com/TeOEu8Q.png", ANTV
 http://live.fptplay53.net/fnxhd2/anninhtv_vhls.smil/chunklist_b5000000.m3u8
