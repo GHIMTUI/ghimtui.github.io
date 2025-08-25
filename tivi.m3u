@@ -130,7 +130,7 @@ http://live.fptplay53.net/epzsd1/quangtri_hls.smil/chunklist_b2500000.m3u8
 http://cdn.sonlatv.vn/live/28595222e707a364251b8724717894baa46/chunklist.m3u8
 
 #EXTINF:-1 tvg-logo="https://i.imgur.com/VeOwT5w.png" ,Tây Ninh 1
-http://live.la34.com.vn/la34/tv-transmux.m3u8
+https://cdn.la34.com.vn/live/2851dc2c9af68834814a89e61db0faee561/chunklist.m3u8
 
 #EXTINF:-1 tvg-logo="https://i.imgur.com/VeOwT5w.png",Tây Ninh 2
 http://live.fptplay53.net/epzsd1/tayninhhd_hls.smil/chunklist_b2500000.m3u8
@@ -207,7 +207,6 @@ http://live.fptplay53.net/epzhd1/htv3_vhls.smil/chunklist_b5000000.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/mR72rm1.png", HTV4
 http://live.fptplay53.net/epzhd1/htv4_vhls.smil/chunklist_b5000000.m3u8
 
-
 #EXTINF:-1 tvg-logo="https://i.imgur.com/7fWS7Zo.png" , HTV7
 http://live.fptplay53.net/epzhd1/htv7hd_vhls.smil/chunklist_b5000000.m3u8
 
@@ -233,8 +232,17 @@ http://live.fptplay53.net/fnxhd2/quocphongvnhd_vhls.smil/chunklist_b5000000.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/Tr5aGaO.png", SCTV4K
 http://z215ymcm4tliv.vcdn.cloud/s97/hls/sctv4k/index.m3u8
 
+#EXTINF:-1 tvg-logo="https://i.imgur.com/5fYgdUn.png", SCTV1
+https://liveh12.seenow.vn/hls/SCTV1/03.m3u8
+
+#EXTINF:-1 tvg-logo="https://i.imgur.com/G5OLIr9.png", SCTV2
+https://liveh12.seenow.vn/hls/SCTV2/03.m3u8
+
 #EXTINF:-1 tvg-logo="https://i.imgur.com/mIKEyfO.png", SCTV6
 https://live.fptplay53.net/epzhd2/film360_vhls.smil/chunklist_b5000000.m3u8
+
+#EXTINF:-1 tvg-logo="https://i.imgur.com/o98hjaT.png", TVB
+https://amg01868-amg01868c3-tvbanywhere-us-4491.playouts.now.amagi.tv/playlist1080p.m3u8
 
 #EXTINF:-1 tvg-logo="https://i.imgur.com/EdVgVNq.png", HTVC+
 http://live.fptplay53.net/epzhd1/htvcplus_vhls.smil/chunklist_b5000000.m3u8
