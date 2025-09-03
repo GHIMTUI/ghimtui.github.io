@@ -18,13 +18,13 @@ http://live.fptplay53.net/fnxsd1/bacninh01_hls.smil/chunklist_b2500000.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/OIGlNgx.png" , Cà Mau
 http://live.fptplay53.net/epzsd1/camau_hls.smil/chunklist_b2500000.m3u8
 
-#EXTINF:-1 tvg-logo="https://i.imgur.com/9r97P5G.png" ,Cần Thơ 1
+#EXTINF:-1 tvg-logo="https://i.imgur.com/1s9u7eQ.png" ,Cần Thơ 1
 http://live.fptplay53.net/epzsd1/cantho_hls.smil/chunklist_b2500000.m3u8
 
-#EXTINF:-1 tvg-logo="https://i.imgur.com/9r97P5G.png" ,Cần Thơ 2
+#EXTINF:-1 tvg-logo="https://i.imgur.com/1s9u7eQ.png" ,Cần Thơ 2
 http://live.fptplay53.net/epzsd1/cantho02_vhls.smil/chunklist_b5000000.m3u8 
 
-#EXTINF:-1 tvg-logo="https://i.imgur.com/9r97P5G.png" ,Cần Thơ 3
+#EXTINF:-1 tvg-logo="https://i.imgur.com/1s9u7eQ.png" ,Cần Thơ 3
 http://live.fptplay53.net/epzsd1/cantho03_hls.smil/chunklist_b2500000.m3u8
 
 #EXTINF:-1 tvg-logo="https://i.imgur.com/SWtacIa.png" ,Cao Bằng
@@ -157,6 +157,9 @@ http://live.fptplay53.net/epzhd2/vinhlong3_vhls.smil/chunklist_b5000000.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/vZ13WeB.png", Vĩnh Long 4
 http://live.fptplay53.net/epzhd2/vinhlong4hd_vhls.smil/chunklist_b5000000.m3u8
 
+#EXTINF:-1 tvg-logo="https://i.imgur.com/vZ13WeB.png", Vĩnh Long 5
+http://live.fptplay53.net/epzsd1/vinhlong22_vhls.smil/chunklist_b5000000.m3u8
+
 #EXTGRP: VTV
 #EXTINF:-1 tvg-logo="https://i.imgur.com/OnCFv95.png",  VTV1
 http://live.fptplay53.net/fnxhd1/vtv1hd_vhls.smil/chunklist_b5000000.m3u8
@@ -240,9 +243,6 @@ https://liveh12.seenow.vn/hls/SCTV2/03.m3u8
 
 #EXTINF:-1 tvg-logo="https://i.imgur.com/mIKEyfO.png", SCTV6
 https://live.fptplay53.net/epzhd2/film360_vhls.smil/chunklist_b5000000.m3u8
-
-#EXTINF:-1 tvg-logo="https://i.imgur.com/o98hjaT.png", TVB
-https://amg01868-amg01868c3-tvbanywhere-us-4491.playouts.now.amagi.tv/playlist1080p.m3u8
 
 #EXTINF:-1 tvg-logo="https://i.imgur.com/EdVgVNq.png", HTVC+
 http://live.fptplay53.net/epzhd1/htvcplus_vhls.smil/chunklist_b5000000.m3u8
