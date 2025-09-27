@@ -1,251 +1,252 @@
 #EXTM3U url-tvg="https://vnepg.site/epg.xml.gz"
+#EXT-X-ALLOW-CACHE:YES
 
-#EXTINF:-1 tvg-id="angiang1"  tvg-logo="https://i.imgur.com/3woiD8o.png" , An Giang 1
+#EXTINF:-1 catchup="shift" tvg-id="angiang1" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/angiang1.png" , An Giang 1
 http://tv.angiangtv.vn/live/kgtv/kgtv.m3u8
 
-#EXTINF:-1 tvg-id="angiang2"  tvg-logo="https://i.imgur.com/JujhMb1.png" , An Giang 2
+#EXTINF:-1 catchup="shift" tvg-id="angiang2"  tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/angiang2.png" , An Giang 2
 http://live.fptplay53.net/epzsd1/angiang_hls.smil/chunklist_b2500000.m3u8
 
-#EXTINF:-1 tvg-id="angiang3"  tvg-logo="https://i.imgur.com/9VNc1dy.png", An Giang 3
+#EXTINF:-1 catchup="shift" tvg-id="angiang3" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/angiang3.png", An Giang 3
 http://tv.angiangtv.vn/live/kgtv1/kgtv1.m3u8
 
-#EXTINF:-1 tvg-id="camau"  tvg-logo="https://i.imgur.com/OIGlNgx.png" , Cà Mau
+#EXTINF:-1 catchup="shift" tvg-id="camau" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/camau.png", Cà Mau
 http://live.fptplay53.net/epzsd1/camau_hls.smil/chunklist_b2500000.m3u8
 
-#EXTINF:-1 tvg-id="cantho1"  tvg-logo="https://i.imgur.com/QYMJ5jo.png" ,Cần Thơ 1
+#EXTINF:-1 catchup="shift" tvg-id="cantho1" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/cantho1.png", Cần Thơ 1
 http://live.fptplay53.net/epzsd1/cantho_hls.smil/chunklist_b2500000.m3u8
 
-#EXTINF:-1 tvg-id="cantho2"  tvg-logo="https://i.imgur.com/KzRyRPQ.png" ,Cần Thơ 2
+#EXTINF:-1 catchup="shift" tvg-id="cantho2" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/cantho2.png", Cần Thơ 2
 http://live.fptplay53.net/epzsd1/cantho02_vhls.smil/chunklist_b5000000.m3u8 
 
-#EXTINF:-1 tvg-id="cantho3"  tvg-logo="https://i.imgur.com/g8D12eo.png" ,Cần Thơ 3
+#EXTINF:-1 catchup="shift" tvg-id="cantho3" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/cantho3.png", Cần Thơ 3
 http://live.fptplay53.net/epzsd1/cantho03_hls.smil/chunklist_b2500000.m3u8
 
-#EXTINF:-1 tvg-id="dongnai1"  tvg-logo="https://i.imgur.com/dJNkiwG.png" ,Đồng Nai 1
+#EXTINF:-1 catchup="shift" tvg-id="dongnai1" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/dongnai1.png", Đồng Nai 1
 http://live.fptplay53.net/epzsd1/dongnai1_hls.smil/chunklist_b2500000.m3u8
 
-#EXTINF:-1 tvg-id="dongnai2"  tvg-logo="https://i.imgur.com/qFkSJSD.png",Đồng Nai 2
+#EXTINF:-1 catchup="shift" tvg-id="dongnai2" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/dongnai2.png", Đồng Nai 2
 http://live.fptplay53.net/epzsd1/dongnai2_hls.smil/chunklist_b2500000.m3u8
 
-#EXTINF:-1 tvg-id="dongthap1"  tvg-logo="https://i.imgur.com/O5I6tcI.png" , Đồng Tháp 1
+#EXTINF:-1 catchup="shift" tvg-id="dongthap1" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/dongthap1.png", Đồng Tháp 1
 http://live.fptplay53.net/epzsd1/dongthap_vhls.smil/chunklist_b5000000.m3u8
 
-#EXTINF:-1 tvg-id="dongthap2" tvg-logo="https://i.imgur.com/1uMx7XW.png", Đồng Tháp 2
+#EXTINF:-1 catchup="shift" tvg-id="dongthap2" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/dongthap2.png", Đồng Tháp 2
 http://live.fptplay53.net/epzsd1/dongthaphd_vhls.smil/chunklist_b5000000.m3u8
 
-#EXTINF:-1 tvg-id="tayninh1"  tvg-logo="https://i.imgur.com/UKVfag8.png" ,Tây Ninh 1
+#EXTINF:-1 catchup="shift" tvg-id="tayninh1" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/tayninh1.png", Tây Ninh 1
 https://cdn.la34.com.vn/live/2851dc2c9af68834814a89e61db0faee561/chunklist.m3u8
 
-#EXTINF:-1 tvg-id="tayninh2"  tvg-logo="https://i.imgur.com/jRA0rml.png",Tây Ninh 2
+#EXTINF:-1 catchup="shift" tvg-id="tayninh2" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/tayninh2.png", Tây Ninh 2
 http://live.fptplay53.net/epzsd1/tayninhhd_hls.smil/chunklist_b2500000.m3u8
 
-#EXTINF:-1 tvg-id="vinhlong1hd"  tvg-logo="https://i.imgur.com/45URlrh.png", Vĩnh Long 1
+#EXTINF:-1 catchup="shift" tvg-id="vinhlong1hd" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/vinhlong1.png", Vĩnh Long 1
 http://live.fptplay53.net/epzhd2/vinhlong1_vhls.smil/chunklist_b5000000.m3u8
 
-#EXTINF:-1 tvg-id="vinhlong2hd"  tvg-logo="https://i.imgur.com/Qm69Bzo.png", Vĩnh Long 2
+#EXTINF:-1 catchup="shift" tvg-id="vinhlong2hd" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/vinhlong2.png", Vĩnh Long 2
 http://live.fptplay53.net/epzhd2/vinhlong2_vhls.smil/chunklist_b5000000.m3u8
 
-#EXTINF:-1 tvg-id="vinhlong3hd"  tvg-logo="https://i.imgur.com/sEl98BF.png", Vĩnh Long 3
+#EXTINF:-1 catchup="shift" tvg-id="vinhlong3hd" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/vinhlong3.png", Vĩnh Long 3
 http://live.fptplay53.net/epzhd2/vinhlong3_vhls.smil/chunklist_b5000000.m3u8
 
-#EXTINF:-1 tvg-id="vinhlong4hd"  tvg-logo="https://i.imgur.com/qatdjyj.png", Vĩnh Long 4
+#EXTINF:-1 catchup="shift" tvg-id="vinhlong4hd" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/vinhlong4.png", Vĩnh Long 4
 http://live.fptplay53.net/epzhd2/vinhlong4hd_vhls.smil/chunklist_b5000000.m3u8
 
-#EXTINF:-1 tvg-id="vinhlong5hd"  tvg-logo="https://i.imgur.com/3jh1Z11.png", Vĩnh Long 5
+#EXTINF:-1 catchup="shift" tvg-id="vinhlong5hd" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/vinhlong5.png", Vĩnh Long 5
 http://live.fptplay53.net/epzsd1/vinhlong22_vhls.smil/chunklist_b5000000.m3u8
 
-#EXTINF:-1 tvg-id="danang1"  tvg-logo="https://i.imgur.com/jtoH3OR.png" ,Đà Nẵng 1
+#EXTINF:-1 catchup="shift" tvg-id="danang1" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/danang1.png", Đà Nẵng 1
 http://live.mediatech.vn/live/285b59a111d76974225a8e3004bfc31a509/chunklist.m3u8
 
-#EXTINF:-1 tvg-id="danang2"  tvg-logo="https://i.imgur.com/9rrQyRv.png" ,Đà Nẵng 2
+#EXTINF:-1 catchup="shift" tvg-id="danang2" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/danang2.png", Đà Nẵng 2
 http://live.mediatech.vn/live/2859145290d0d7947ef88b6240123b62474/chunklist.m3u8
 
-#EXTINF:-1 tvg-id="daklak"  tvg-logo="https://i.imgur.com/wntez0G.png" ,Đắk Lắk
+#EXTINF:-1 catchup="shift" tvg-id="daklak" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/daklak.png", Đắk Lắk
 http://live.fptplay53.net/epzsd1/daklak_hls.smil/chunklist_b2500000.m3u8
 
-#EXTINF:-1 tvg-id="gialai"  tvg-logo="https://i.imgur.com/xRjtvNK.png" ,Gia Lai
+#EXTINF:-1 catchup="shift" tvg-id="gialai" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/gialai.png", Gia Lai
 http://live.fptplay53.net/epzsd1/gialai01_hls.smil/chunklist_b2500000.m3u8
 
-#EXTINF:-1 tvg-id="hatinh"  tvg-logo="https://i.imgur.com/JwrI9ry.png" ,Hà Tĩnh
+#EXTINF:-1 catchup="shift" tvg-id="hatinh" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/hatinh.png", Hà Tĩnh
 http://live.fptplay53.net/fnxsd1/hatinh_hls.smil/chunklist_b2500000.m3u8
 
-#EXTINF:-1 tvg-id="hue"  tvg-logo="https://i.imgur.com/Nl0BPsB.png" ,Huế
+#EXTINF:-1 catchup="shift" tvg-id="hue" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/hue.png", Huế
 http://live.fptplay53.net/epzsd1/hue_hls.smil/chunklist_b2500000.m3u8
 
-#EXTINF:-1 tvg-id="khanhhoa"  tvg-logo="https://i.imgur.com/88GfScf.png" ,Khánh Hòa
+#EXTINF:-1 catchup="shift" tvg-id="khanhhoa" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/khanhhoa.png", Khánh Hòa
 http://live.fptplay53.net/epzsd1/khanhhoa_hls.smil/chunklist_b2500000.m3u8
 
-#EXTINF:-1 tvg-id="khanhhoa1"  tvg-logo="https://i.imgur.com/cCPGOQ5.png" ,Khánh Hòa 1
+#EXTINF:-1 catchup="shift" tvg-id="khanhhoa1" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/khanhhoa1.png", Khánh Hòa 1
 https://618b88f69e53b.streamlock.net/NTV/ntvtv/chunklist_w458637195.m3u8
 
-#EXTINF:-1 tvg-id="lamdong1"  tvg-logo="https://i.imgur.com/M3y8wlo.png" ,Lâm Đồng 1
+#EXTINF:-1 catchup="shift" tvg-id="lamdong1" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/lamdong1.png", Lâm Đồng 1
 http://live.fptplay53.net/epzsd1/lamdong_hls.smil/chunklist_b2500000.m3u8
 
-#EXTINF:-1 tvg-id="lamdong2"  tvg-logo="https://i.imgur.com/7922BlJ.png" ,Lâm Đồng 2
+#EXTINF:-1 catchup="shift" tvg-id="lamdong2" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/lamdong2.png", Lâm Đồng 2
 http://live.fptplay53.net/epzsd1/lamdong02_hls.smil/chunklist_b2500000.m3u8
 
-#EXTINF:-1 tvg-id="lamdong3"  tvg-logo="https://i.imgur.com/L6HTjUk.png" ,Lâm Đồng 3
+#EXTINF:-1 catchup="shift" tvg-id="lamdong3" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/lamdong3.png", Lâm Đồng 3
 http://cloudstreamthdn.tek4tv.vn/live/smil:daknong.smil/chunklist_w1037957151_b3128000_sleng.m3u8 
 
-#EXTINF:-1 tvg-id="nghean"  tvg-logo="https://i.imgur.com/t5D70X3.png" ,Nghệ An
+#EXTINF:-1 catchup="shift" tvg-id="nghean" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/nghean.png", Nghệ An
 http://live.mediatech.vn/live/2859591eef2e92249b682db021f4247c364/chunklist.m3u8
 
-#EXTINF:-1 tvg-id="quangngai"  tvg-logo="https://i.imgur.com/78zYkXs.png" ,Quảng Ngãi
+#EXTINF:-1 catchup="shift" tvg-id="quangngai" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/quangngai.png", Quảng Ngãi
 https://live.mediatech.vn/live/285aaa79b4b265a457d81bb72bc32e2c114/chunklist.m3u8
 
-#EXTINF:-1 tvg-id="quangtrị"  tvg-logo="https://i.imgur.com/Rt1dzIy.png",Quảng Trị
+#EXTINF:-1 catchup="shift" tvg-id="quangtri" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/quangtri.png", Quảng Trị
 http://live.fptplay53.net/epzsd1/quangtri_hls.smil/chunklist_b2500000.m3u8
 
-#EXTINF:-1 tvg-id="thanhhoa"  tvg-logo="https://i.imgur.com/0dWDwWX.png", Thanh Hóa
+#EXTINF:-1 catchup="shift" tvg-id="thanhhoa" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/thanhhoa.png", Thanh Hóa
 http://live.fptplay53.net/fnxsd1/thanhhoa_hls.smil/chunklist_b2500000.m3u8
 
-#EXTINF:-1 tvg-id="bacninh"  tvg-logo="https://i.imgur.com/LtLQ70j.png", Bắc Ninh
+#EXTINF:-1 catchup="shift" tvg-id="bacninh" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/bacninh.png", Bắc Ninh
 http://live.fptplay53.net/fnxsd1/bacninh01_hls.smil/chunklist_b2500000.m3u8
 
-#EXTINF:-1 tvg-id="caobang"  tvg-logo="https://i.imgur.com/SWtacIa.png" ,Cao Bằng
+#EXTINF:-1 catchup="shift" tvg-id="caobang" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/caobang.png", Cao Bằng
 http://live.fptplay53.net/fnxsd1/caobang_hls.smil/chunklist_b2500000.m3u8
 
-#EXTINF:-1 tvg-id="dienbien"  tvg-logo="https://i.imgur.com/svj5c2p.png" ,Điện Biên
+#EXTINF:-1 catchup="shift" tvg-id="dienbien" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/dienbien.png", Điện Biên
 http://live.fptplay53.net/fnxsd1/dienbien_hls.smil/chunklist_b2500000.m3u8
 
-#EXTINF:-1 tvg-id="hanoi1"  tvg-logo="https://i.imgur.com/31AYkKm.png" ,Hà Nội 1
+#EXTINF:-1 catchup="shift" tvg-id="hanoi1" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/hanoi1.png", Hà Nội 1
 http://live.fptplay53.net/fnxhd2/hanoitv1_vhls.smil/chunklist_b5000000.m3u8
 
-#EXTINF:-1 tvg-id="hanoi2"  tvg-logo="https://i.imgur.com/n9OvDOa.png" ,Hà Nội 2
+#EXTINF:-1 catchup="shift" tvg-id="hanoi2" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/hanoi2.png", Hà Nội 2
 http://live.fptplay53.net/fnxch2/hntv2_abr.smil/chunklist_b3600000.m3u8
 
-#EXTINF:-1 tvg-id="haiphong"  tvg-logo="https://i.imgur.com/040H0iL.png" ,Hải Phòng
+#EXTINF:-1 catchup="shift" tvg-id="haiphong" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/haiphong.png", Hải Phòng
 http://live.fptplay53.net/fnxsd1/haiphong_hls.smil/chunklist_b2500000.m3u8
 
-#EXTINF:-1 tvg-id="haiphongplus"  tvg-logo="https://i.imgur.com/6loxH0p.png" ,Hải Phòng +
-http://live.mediatech.vn/live/28548ca35823d41426d8b3da7ed82bdab13/chunklist.m3u8
+#EXTINF:-1 catchup="shift" tvg-id="haiphongplus" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/haiphongplus.png", Hải Phòng +
+http://live.fptplay53.net/fnxsd1/haiphongplus_hls.smil/chunklist_b2500000.m3u8
 
-#EXTINF:-1 tvg-id="haiphong3"  tvg-logo="https://i.imgur.com/AYJOktd.png" ,Hải Phòng 3
+#EXTINF:-1 catchup="shift" tvg-id="haiphong3" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/haiphong3.png", Hải Phòng 3
 https://live.fptplay53.net/fnxsd1/haiphong03_hls.smil/chunklist_b2500000.m3u8
 
-#EXTINF:-1 tvg-id="hungyen"  tvg-logo="https://i.imgur.com/aNsAQdp.png" ,Hưng Yên
+#EXTINF:-1 catchup="shift" tvg-id="hungyen" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/hungyen.png", Hưng Yên
 http://live.mediatech.vn/live/285f5449d7d7d2946e0bd2d54b7e60f25a4/chunklist.m3u8
 
-#EXTINF:-1 tvg-id="laichau"  tvg-logo="https://i.imgur.com/mDk1Ccp.png" ,Lai Châu
+#EXTINF:-1 catchup="shift" tvg-id="laichau" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/laichau.png", Lai Châu
 http://live.fptplay53.net/fnxsd1/laichau_hls.smil/chunklist_b2500000.m3u8
 
-#EXTINF:-1 tvg-id="langson"  tvg-logo="https://i.imgur.com/S1vbQir.png" ,Lạng Sơn
+#EXTINF:-1 catchup="shift" tvg-id="langson" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/langson.png", Lạng Sơn
 http://stream.langsontv.vn/live/285c78da0c246524c90917842f8de03bd21/chunklist.m3u8
 
-#EXTINF:-1 tvg-id="laocai"  tvg-logo="https://i.imgur.com/kFQPR1i.png" ,Lào Cai
+#EXTINF:-1 catchup="shift" tvg-id="laocai" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/laocai.png", Lào Cai
 http://live.fptplay53.net/fnxsd1/laocai_hls.smil/chunklist_b2500000.m3u8
 
-#EXTINF:-1 tvg-id="ninhbinh"  tvg-logo="https://i.imgur.com/K2qefiq.png" ,Ninh Bình
+#EXTINF:-1 catchup="shift" tvg-id="ninhbinh" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/ninhbinh.png", Ninh Bình
 http://live.mediatech.vn/live/28597f8fd7ea5064d0f84ab00b3699dfd86/chunklist.m3u8
 
-#EXTINF:-1 tvg-id="phutho"  tvg-logo="https://i.imgur.com/LauzYJl.png" ,Phú Thọ
+#EXTINF:-1 catchup="shift" tvg-id="phutho" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/phutho.png", Phú Thọ
 http://live.fptplay53.net/fnxsd1/phutho_hls.smil/chunklist_b2500000.m3u8
 
-#EXTINF:-1 tvg-id="quangninh1"  tvg-logo="https://i.imgur.com/YVhb8Up.png" ,Quảng Ninh 1
+#EXTINF:-1 catchup="shift" tvg-id="quangninh1" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/quangninh1.png", Quảng Ninh 1
 https://live.baoquangninh.vn/qtvlive/tv1live.m3u8
 
-#EXTINF:-1 tvg-id="quangninh3"  tvg-logo="https://i.imgur.com/SVBIqkU.png" ,Quảng Ninh 3
+#EXTINF:-1 catchup="shift" tvg-id="quangninh3" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/quangninh3.png", Quảng Ninh 3
 https://live.baoquangninh.vn/qtvlive/tv3live.m3u8
 
-#EXTINF:-1 tvg-id="sonla"  tvg-logo="https://i.imgur.com/8c0sGXr.png" ,Sơn La
+#EXTINF:-1 catchup="shift" tvg-id="sonla" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/sonla.png", Sơn La
 http://cdn.sonlatv.vn/live/28595222e707a364251b8724717894baa46/chunklist.m3u8
 
-#EXTINF:-1 tvg-id="thainguyen"  tvg-logo="https://i.imgur.com/vApNZLK.png" ,Thái Nguyên
+#EXTINF:-1 catchup="shift" tvg-id="thainguyen" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/thainguyen.png", Thái Nguyên
 http://live.fptplay53.net/fnxsd1/thainguyen_hls.smil/chunklist_b2500000.m3u8
 
-#EXTINF:-1 tvg-id="tuyenquang"  tvg-logo="https://i.imgur.com/Z6pawIT.png" ,Tuyên Quang
+#EXTINF:-1 catchup="shift" tvg-id="tuyenquang" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/tuyenquang.png", Tuyên Quang
 https://live.fptplay53.net/fnxsd1/tuyenquang_hls.smil/chunklist_b2500000.m3u8
 
-#EXTINF:-1 tvg-id="vtv1hd" tvg-logo="https://i.imgur.com/OnCFv95.png",  VTV1
+
+#EXTINF:-1 catchup="shift" tvg-id="vtv1hd" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/vtv1.png", VTV1
 http://live.fptplay53.net/fnxhd1/vtv1hd_vhls.smil/chunklist_b5000000.m3u8
 
-#EXTINF:-1 tvg-id="vtv2hd"  tvg-logo="https://i.imgur.com/CTV2Qev.png",  VTV2
+#EXTINF:-1 catchup="shift" tvg-id="vtv2hd" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/vtv2.png", VTV2
 http://live.fptplay53.net/fnxch2/vtv2hd_abr.smil/chunklist_b4200000.m3u8
 
-#EXTINF:-1 tvg-id="vtv3hd"  tvg-logo="https://i.imgur.com/w4oSQnE.png", VTV3
+#EXTINF:-1 catchup="shift" tvg-id="vtv3hd" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/vtv3.png", VTV3
 http://live.fptplay53.net/fnxhd1/vtv3hd_vhls.smil/chunklist_b5000000.m3u8
 
-#EXTINF:-1 tvg-id="vtv4hd"  tvg-logo="https://i.imgur.com/HaIhMXu.png", VTV4
-
+#EXTINF:-1 catchup="shift" tvg-id="vtv4hd" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/vtv4.png", VTV4
 http://live.fptplay53.net/fnxch2/vtv4hd_abr.smil/chunklist_b4200000.m3u8
 
-#EXTINF:-1 tvg-id="vtv5hd"  tvg-logo="https://i.imgur.com/fxr459f.png" , VTV5
+#EXTINF:-1 catchup="shift" tvg-id="vtv5hd" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/vtv5.png", VTV5
 http://live.fptplay53.net/epzhd1/vtv5hd_vhls.smil/chunklist_b5000000.m3u8
 
-#EXTINF:-1 tvg-id="vtv7hd"  tvg-logo="https://i.imgur.com/H7nvo4x.png" , VTV7
+#EXTINF:-1 catchup="shift" tvg-id="vtv7hd" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/vtv7.png", VTV7
 http://live.fptplay53.net/fnxhd1/vtv7hd_vhls.smil/chunklist_b5000000.m3u8
 
-#EXTINF:-1 tvg-id="vtv8hd"  tvg-logo="https://i.imgur.com/tdERm2C.png" , VTV8
+#EXTINF:-1 catchup="shift" tvg-id="vtv8hd" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/vtv8.png", VTV8
 http://live.fptplay53.net/epzhd1/vtv8hd_vhls.smil/chunklist_b5000000.m3u8
 
-#EXTINF:-1 tvg-id="vtv9hd"  tvg-logo="https://i.imgur.com/d3BS3Ok.png" , VTV9
+#EXTINF:-1 catchup="shift" tvg-id="vtv9hd" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/vtv9.png", VTV9
 http://live.fptplay53.net/fnxhd1/vtv9_vhls.smil/chunklist_b5000000.m3u8
 
-#EXTINF:-1 tvg-id="vtv5hdtn"  tvg-logo="https://i.imgur.com/HL9iiLs.png" , Tây Nguyên
+#EXTINF:-1 catchup="shift" tvg-id="vtv5hdtn" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/vtv5tn.png", Tây Nguyên
 http://live.fptplay53.net/fnxhd1/vtv5taynguyen_vhls.smil/chunklist_b5000000.m3u8
 
-#EXTINF:-1 tvg-id="vtv5hdtnb"  tvg-logo="https://i.imgur.com/UZo9Y3S.png" , Tây Nam Bộ
+#EXTINF:-1 catchup="shift" tvg-id="vtv5hdtnb" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/vtv5tnb.png", Tây Nam Bộ
 http://live.fptplay53.net/fnxhd1/vtv5tnb_vhls.smil/chunklist_b5000000.m3u8
 
-#EXTINF:-1 tvg-id="vtvct"  tvg-logo="https://i.imgur.com/N5PvVJU.png" , VTV Cần Thơ
+#EXTINF:-1 catchup="shift" tvg-id="vtvct" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/vtvct.png", VTV Cần Thơ
 http://live.fptplay53.net/fnxhd1/vtvcantho_vhls.smil/chunklist_b5000000.m3u8
 
-#EXTINF:-1 tvg-id="antvhd"  tvg-logo="https://i.imgur.com/TeOEu8Q.png", ANTV
+#EXTINF:-1 catchup="shift" tvg-id="antvhd" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/antv.png", ANTV
 http://live.fptplay53.net/fnxhd2/anninhtv_vhls.smil/chunklist_b5000000.m3u8
 
-#EXTINF:-1 tvg-id="qpvnhd"  tvg-logo="https://i.imgur.com/sbticUf.png", QPVN
+#EXTINF:-1 catchup="shift" tvg-id="qpvnhd" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/qpvn.png", QPVN
 http://live.fptplay53.net/fnxhd2/quocphongvnhd_vhls.smil/chunklist_b5000000.m3u8
 
-#EXTINF:-1 tvg-id="vietnamtoday"   tvg-logo="https://i.imgur.com/v3WUd7S.png", Vietnam Today
+#EXTINF:-1 catchup="shift" tvg-id="vietnamtoday" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/vietnamtoday.png", Vietnam Today
 https://live.fptplay53.net/fnxhd1/vntoday_vhls.smil/chunklist_b5000000.m3u8
 
-#EXTINF:-1 tvg-id="sctv1hd"  tvg-logo="https://i.imgur.com/5fYgdUn.png", SCTV1
+#EXTINF:-1 catchup="shift" tvg-id="sctv1hd"  tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/sctv1.png", SCTV1
 https://liveh12.seenow.vn/hls/SCTV1/03.m3u8
 
-#EXTINF:-1 tvg-id="sctv2hd"  tvg-logo="https://i.imgur.com/G5OLIr9.png", SCTV2
+#EXTINF:-1 catchup="shift" tvg-id="sctv2hd"  tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/sctv2.png", SCTV2
 https://liveh12.seenow.vn/hls/SCTV2/03.m3u8
 
-#EXTINF:-1 tvg-id="sctv6hd"  tvg-logo="https://i.imgur.com/mIKEyfO.png", SCTV6
+#EXTINF:-1 catchup="shift" tvg-id="sctv6hd"  tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/sctv6.png", SCTV6
 https://live.fptplay53.net/epzhd2/film360_vhls.smil/chunklist_b5000000.m3u8
 
-#EXTINF:-1 tvg-id="htv1"  tvg-logo="https://i.imgur.com/GUMdizI.png" , HTV1
+#EXTINF:-1 catchup="shift" tvg-id="htv1" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/htv1.png", HTV1
 http://live.fptplay53.net/epzhd1/htv1_vhls.smil/chunklist_b2500000.m3u8
 
-#EXTINF:-1 tvg-id="htv2hd"  tvg-logo="https://i.imgur.com/d8GhOWs.png" , HTV2
+#EXTINF:-1 catchup="shift" tvg-id="htv2hd" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/htv2.png", HTV2
 http://live.fptplay53.net/epzhd1/htv2hd_vhls.smil/chunklist_b5000000.m3u8
 
-#EXTINF:-1 tvg-id="htv3"  tvg-logo="https://i.imgur.com/vwV1AOT.png" , HTV3
+#EXTINF:-1 catchup="shift" tvg-id="htv3" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/htv3.png", HTV3
 http://live.fptplay53.net/epzhd1/htv3_vhls.smil/chunklist_b5000000.m3u8
 
-#EXTINF:-1 tvg-id="htvkey"  tvg-logo="https://i.imgur.com/mR72rm1.png", HTV4
+#EXTINF:-1 catchup="shift" tvg-id="htvkey" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/htv4.png", HTV4
 http://live.fptplay53.net/epzhd1/htv4_vhls.smil/chunklist_b5000000.m3u8
 
-#EXTINF:-1 tvg-id="htv7hd"  tvg-logo="https://i.imgur.com/7fWS7Zo.png" , HTV7
+#EXTINF:-1 catchup="shift" tvg-id="htv7hd" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/htv7.png", HTV7
 http://live.fptplay53.net/epzhd1/htv7hd_vhls.smil/chunklist_b5000000.m3u8
 
-#EXTINF:-1 tvg-id="htv9hd"  tvg-logo="https://i.imgur.com/SxV4OeU.png" , HTV9
+#EXTINF:-1 catchup="shift" tvg-id="htv9hd" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/htv9.png", HTV9
 http://live.fptplay53.net/epzhd1/htv9hd_vhls.smil/chunklist_b5000000.m3u8
 
-#EXTINF:-1 tvg-id="htvcplushd"  tvg-logo="https://i.imgur.com/EdVgVNq.png", HTVC+
+#EXTINF:-1 catchup="shift" tvg-id="htvcplushd" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/htvcplus.png", HTVC+
 http://live.fptplay53.net/epzhd1/htvcplus_vhls.smil/chunklist_b5000000.m3u8
 
-#EXTINF:-1 tvg-id="htvcthuanviet"  tvg-logo="https://i.imgur.com/cmUbRVk.png", Thuần Việt
+#EXTINF:-1 catchup="shift" tvg-id="htvcthuanviet" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/thuanviet.png", Thuần Việt
 http://live.fptplay53.net/epzhd1/htvcthuanviethd_vhls.smil/chunklist_b5000000.m3u8
 
-#EXTINF:-1 tvg-id="htvcphunuhd"  tvg-logo="https://i.imgur.com/YaNIoK6.png", Phụ Nữ
+#EXTINF:-1 catchup="shift" tvg-id="htvcphunuhd" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/phunu.png", Phụ Nữ
 http://live.fptplay53.net/epzhd1/htvcphunu_vhls.smil/chunklist_b5000000.m3u8
 
-#EXTINF:-1 tvg-id="htvcgiadinhhd"  tvg-logo="https://i.imgur.com/r2fxV30.png", Gia Đình
+#EXTINF:-1 catchup="shift" tvg-id="htvcgiadinhhd" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/giadinh.png", Gia Đình
 http://live.fptplay53.net/epzhd1/htvcgiadinh_vhls.smil/chunklist_b5000000.m3u8
 
-#EXTINF:-1 tvg-id="htvcdulichhd"  tvg-logo="https://i.imgur.com/CiHVKT0.png", Du Lịch 
+#EXTINF:-1 catchup="shift" tvg-id="htvcdulichhd" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/dulich.png", Du Lịch
 http://live.fptplay53.net/epzhd1/htvcdulich_vhls.smil/chunklist_b5000000.m3u8
 
-#EXTINF:-1 tvg-id="htvcphimhd" tvg-logo="https://i.imgur.com/fiK47Z1.png", Phim
+#EXTINF:-1 catchup="shift" tvg-id="htvcphimhd" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/phim.png", Phim
 http://live.fptplay53.net/epzhd1/htvcmovieshd_vhls.smil/chunklist_b5000000.m3u8
 
-#EXTINF:-1 tvg-id="htvccanhachd"  tvg-logo="https://i.imgur.com/8ZsZ4RU.png", Ca Nhạc
+#EXTINF:-1 catchup="shift" tvg-id="htvccanhachd" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/canhac.png", Ca Nhạc
 http://live.fptplay53.net/epzhd1/htvcmusic_vhls.smil/chunklist_b5000000.m3u8
 
-#EXTINF:-1 tvg-id="htvthethaohd" tvg-logo="https://i.imgur.com/5IOZatX.png" , Thể Thao
+#EXTINF:-1 catchup="shift" tvg-id="htvthethaohd" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/thethao.png", Thể Thao
 http://live.fptplay53.net/epzhd1/htvcthethao_vhls.smil/chunklist_b5000000.m3u8
