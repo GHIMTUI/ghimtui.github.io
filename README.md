@@ -1,1 +1,1 @@
-![Clock](https://media.giphy.com/media/QWvra259h4LCvdJnxP/giphy.gif)
+⏰ [Xem đồng hồ đang chạy](https://ghimtui.github.io/ten-repo/tools/clock.html)
