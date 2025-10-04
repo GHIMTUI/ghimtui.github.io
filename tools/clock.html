@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Đồng hồ — HH:MM:SS</title>
+
+  <style>
+    :root{
+      --bg: #0f1724;
+      --card: #0b1220;
+      --accent: linear-gradient(90deg, #ffd166, #ff6b6b);
+      --text: #e6eef8;
+    }
+
+    html,body{
+      height:100%;
+      margin:0;
+      font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background: radial-gradient(1200px 600px at 10% 10%, rgba(255,107,107,0.07), transparent),
+                  radial-gradient(900px 400px at 90% 90%, rgba(255,209,102,0.04), transparent),
+                  var(--bg);
+      color:var(--text);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+
+    .wrap{
+      min-height:100%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:24px;
+      box-sizing:border-box;
+    }
+
+    .card{
+      width:fit-content;
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border-radius:18px;
+      padding:36px 48px;
+      box-shadow: 0 10px 30px rgba(2,6,23,0.6), inset 0 1px 0 rgba(255,255,255,0.02);
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      gap:10px;
+      text-align:center;
+    }
+
+    .title{
+      font-size:14px;
+      letter-spacing:0.6px;
+      color:rgba(230,238,248,0.75);
+      margin-bottom:6px;
+    }
+
+    .clock{
+      font-family: "SF Mono", "Fira Code", "Roboto Mono", ui-monospace, monospace;
+      font-weight:700;
+      font-size:72px;
+      line-height:1;
+      padding: 12px 18px;
+      border-radius:12px;
+      background: linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      box-shadow: 0 6px 18px rgba(3,8,20,0.6);
+      color: #ffffff;
+      -webkit-text-stroke: 0.3px rgba(0,0,0,0.15);
+      letter-spacing:4px;
+      display:inline-block;
+      min-width:270px;
+    }
+
+    .meta{
+      font-size:13px;
+      color:rgba(230,238,248,0.6);
+    }
+
+    /* nhỏ cho mobile */
+    @media (max-width:420px){
+      .card{ padding:20px; border-radius:12px; }
+      .clock{ font-size:48px; min-width:200px; letter-spacing:3px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card" role="region" aria-label="Đồng hồ thời gian thực">
+      <div class="title">Đồng hồ (HH:MM:SS)</div>
+      <div id="clock" class="clock" aria-live="polite">--:--:--</div>
+      <div class="meta">Giờ cục bộ của trình duyệt</div>
+    </div>
+  </div>
+
+  <script>
+    // Hiển thị số có leading zero
+    function two(n){ return n < 10 ? '0' + n : String(n); }
+
+    // Cập nhật đồng hồ
+    function updateClock(){
+      const now = new Date();
+      const hh = two(now.getHours());
+      const mm = two(now.getMinutes());
+      const ss = two(now.getSeconds());
+      document.getElementById('clock').textContent = `${hh}:${mm}:${ss}`;
+    }
+
+    // Gọi ngay để tránh delay 1s, rồi setInterval mỗi 1s
+    updateClock();
+    setInterval(updateClock, 1000);
+  </script>
+</body>
+</html>
