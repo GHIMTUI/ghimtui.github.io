@@ -152,10 +152,6 @@ http://live.fptplay53.net/fnxsd1/quangninh3_hls.smil/chunklist_b2500000.m3u8
 #EXTINF:-1 tvg-id="thainguyen" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/thainguyen.png", Thái Nguyên
 http://live.fptplay53.net/fnxsd1/thainguyen_hls.smil/chunklist_b2500000.m3u8
 
-#--- 15. TUYÊN QUANG (MB) ---
-#EXTINF:-1 tvg-id="tuyenquang" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/tuyenquang.png", Tuyên Quang
-http://live.fptplay53.net/fnxsd1/tuyenquang_hls.smil/chunklist_b2500000.m3u8
-
 #--- 13. SƠN LA (MB) ---
 #EXTINF:-1 tvg-id="sonla" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/sonla.png", Sơn La
 http://live.fptplay53.net/fnxsd1/sonla_hls.smil/chunklist_b2500000.m3u8
@@ -179,6 +175,32 @@ http://live.fptplay53.net/fnxsd1/laichau_hls.smil/chunklist_b2500000.m3u8
 #--- 2. CAO BẰNG (MB) ---
 #EXTINF:-1 tvg-id="caobang" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/caobang.png", Cao Bằng
 http://live.fptplay53.net/fnxsd1/caobang_hls.smil/chunklist_b2500000.m3u8
+
+#--- 15. TUYÊN QUANG (MB) ---
+#EXTINF:-1 tvg-id="tuyenquang" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/tuyenquang.png", Tuyên Quang
+http://live.fptplay53.net/fnxsd1/tuyenquang_hls.smil/chunklist_b2500000.m3u8
+
+#EXTINF:-1 tvg-id="htvcplushd" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/htvcplus.png", HTVC+
+http://live.fptplay53.net/epzhd1/htvcplus_vhls.smil/chunklist_b5000000.m3u8
+
+#EXTINF:-1 tvg-id="htvcthuanviet" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/thuanviet.png", Thuần Việt
+http://live.fptplay53.net/epzhd1/htvcthuanviethd_vhls.smil/chunklist_b5000000.m3u8
+
+#EXTINF:-1 tvg-id="htvcphunuhd" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/phunu.png", Phụ Nữ
+http://live.fptplay53.net/epzhd1/htvcphunu_vhls.smil/chunklist_b5000000.m3u8
+
+#EXTINF:-1 tvg-id="htvcgiadinhhd" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/giadinh.png", Gia Đình
+http://live.fptplay53.net/epzhd1/htvcgiadinh_vhls.smil/chunklist_b5000000.m3u8
+
+#EXTINF:-1 tvg-id="htvcdulichhd" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/dulich.png", Du Lịch
+http://live.fptplay53.net/epzhd1/htvcdulich_vhls.smil/chunklist_b5000000.m3u8
+
+#EXTINF:-1 tvg-id="htvcphimhd" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/phim.png", Phim
+http://live.fptplay53.net/epzhd1/htvcmovieshd_vhls.smil/chunklist_b5000000.m3u8
+
+#EXTINF:-1 tvg-id="htvccanhachd" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/canhac.png", Ca Nhạc
+http://live.fptplay53.net/epzhd1/htvcmusic_vhls.smil/chunklist_b5000000.m3u8
+
 #EXTINF:-1 tvg-id="htv1" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/htv1.png", HTV1
 http://live.fptplay53.net/epzhd1/htv1_vhls.smil/chunklist_b2500000.m3u8
 
@@ -237,4 +259,7 @@ http://live.fptplay53.net/fnxhd2/anninhtv_vhls.smil/chunklist_b5000000.m3u8
 http://live.fptplay53.net/fnxhd2/quocphongvnhd_vhls.smil/chunklist_b5000000.m3u8
 
 #EXTINF:-1 tvg-id="sctv6hd"  tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/sctv6.png", SCTV6
-http://live.fptplay53.net/epzhd2/film360_vhls.smil/chunklist_b5000000.m3u8
+https://live.fptplay53.net/epzhd2/film360_vhls.smil/chunklist_b5000000.m3u8
+
+#EXTINF:-1, SCTV4K
+http://dvrfl05.bozztv.com/vch_vchannel1/index.m3u8
