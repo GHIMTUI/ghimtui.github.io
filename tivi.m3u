@@ -1,5 +1,4 @@
-#EXTM3U url-tvg="https://vnepg.site/epg.xml.gz" 
-
+#EXTM3U
 #EXT-X-ALLOW-CACHE:YES
 
 #--- 1. AN GIANG (MN) ---
@@ -143,6 +142,7 @@ http://live.fptplay53.net/fnxsd1/phutho_hls.smil/chunklist_b2500000.m3u8
 #--- 12. QUẢNG NINH (MB) ---
 #EXTINF:-1 tvg-id="quangninh1" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/quangninh1.png", Quảng Ninh 1
 http://live.fptplay53.net/fnxsd1/quangninh1_hls.smil/chunklist_b2500000.m3u8
+
 #EXTINF:-1 tvg-id="quangninh3" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/quangninh3.png", Quảng Ninh 3
 http://live.fptplay53.net/fnxsd1/quangninh3_hls.smil/chunklist_b2500000.m3u8
 
@@ -195,6 +195,18 @@ http://live.fptplay53.net/epzhd1/htv7hd_vhls.smil/chunklist_b5000000.m3u8
 #EXTINF:-1 tvg-id="htv9hd" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/htv9.png", HTV9
 http://live.fptplay53.net/epzhd1/htv9hd_vhls.smil/chunklist_b5000000.m3u8
 
+#EXTINF:-1 tvg-id="htvcplushd" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/htvcplus.png", HTVC+
+http://live.fptplay53.net/epzhd1/htvcplus_vhls.smil/chunklist_b5000000.m3u8
+
+#EXTINF:-1 tvg-id="htvcthuanviet" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/thuanviet.png", Thuần Việt
+http://live.fptplay53.net/epzhd1/htvcthuanviethd_vhls.smil/chunklist_b5000000.m3u8
+
+#EXTINF:-1 tvg-id="htvcphunuhd" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/phunu.png", Phụ Nữ
+http://live.fptplay53.net/epzhd1/htvcphunu_vhls.smil/chunklist_b5000000.m3u8
+
+#EXTINF:-1 tvg-id="htvcgiadinhhd" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/giadinh.png", Gia Đình
+http://live.fptplay53.net/epzhd1/htvcgiadinh_vhls.smil/chunklist_b5000000.m3u8
+
 #EXTINF:-1 tvg-id="vtv1hd" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/vtv1.png", VTV1
 http://live.fptplay53.net/fnxhd1/vtv1hd_vhls.smil/chunklist_b5000000.m3u8
 
@@ -235,4 +247,4 @@ http://live.fptplay53.net/fnxhd2/anninhtv_vhls.smil/chunklist_b5000000.m3u8
 http://live.fptplay53.net/fnxhd2/quocphongvnhd_vhls.smil/chunklist_b5000000.m3u8
 
 #EXTINF:-1 tvg-id="sctv6hd"  tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/sctv6.png", SCTV6
-https://live.fptplay53.net/epzhd2/film360_vhls.smil/chunklist_b5000000.m3u8
+http://live.fptplay53.net/epzhd2/film360_vhls.smil/chunklist_b5000000.m3u8
