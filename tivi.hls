@@ -64,8 +64,6 @@ http://live.fptplay53.net/epzsd1/tayninhhd_hls.smil/chunklist_b2500000.m3u8
 http://live.fptplay53.net/epzsd1/lamdong_hls.smil/chunklist_b2500000.m3u8
 #EXTINF:-1 tvg-id="lamdong2" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/lamdong2.png", Lâm Đồng 2
 http://live.fptplay53.net/epzsd1/lamdong02_hls.smil/chunklist_b2500000.m3u8
-#EXTINF:-1 tvg-id="lamdong3" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/lamdong3.png", Lâm Đồng 3
-https://cloudstreamthdn.tek4tv.vn/live/smil:daknong.smil/chunklist_w458673992_b3128000_sleng.m3u8
 
 #--- 6. KHÁNH HÒA (MT) ---
 #EXTINF:-1 tvg-id="khanhhoa" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/khanhhoa.png", Khánh Hòa
