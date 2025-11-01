@@ -259,9 +259,6 @@ http://freem3u.xyz/api/live/play.m3u8?vid=201
 #EXTINF:-2 tvg-id="sctv6hd"  tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/sctv6.png", SCTV6
 http://live.fptplay53.net/epzhd2/film360_vhls.smil/chunklist.m3u8
 
-#EXTINF:-2 tvg-id="sctv4k"  tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/sctv4k.png", SCTV4K
-http://z215ymcm4tliv.vcdn.cloud/s97/hls/sctv4k/index.m3u8
-
 #EXTINF:-2 tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/hitv.png", HiTV
 #EXTVLCOPT:http-user-agent=VLC/3.0.11 LibVLC
 https://freem3u.xyz/api/live/play.m3u8?vid=32
