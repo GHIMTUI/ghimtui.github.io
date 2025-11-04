@@ -47,20 +47,6 @@ http://live.fptplay53.net/epzhd2/vinhlong4hd_vhls.smil/chunklist_b5000000.m3u8
 #EXTINF:-1 tvg-id="vinhlong5hd" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/vinhlong5.png", Vĩnh Long 5
 http://live.fptplay53.net/epzsd1/vinhlong5_vhls.smil/chunklist_b5000000.m3u8
 
-#EXTINF:-1 tvg-id="vungtau" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/bariavungtau.png", Bà Rịa
-http://live.fptplay53.net/epzsd1/bariavungtau_hls.smil/chunklist_b2500000.m3u8
-
-#EXTINF:-1 tvg-id="binhduong1" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/binhduong.png", Bình Dương
-http://live.fptplay53.net/epzhd2/btv2_hls.smil/chunklist_b2500000.m3u8
-
-#EXTINF:-1 tvg-id="anvienhd" tvg-group-logo="" tvg-logo="https://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/ThietYeu/BTV9.png",BTV9
-#KODIPROP:inputstream=inputstream.adaptive
-#KODIPROP:inputstream.adaptive.manifest_type=dash
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=a7c942778e874d43be92b8d0a0cd11b4:6d54358306571658ffdb952c6560688b
-http://livevlisctcdnw.seenow.vn/mean/ANVIEN/manifest.mpd
-
-
 #--- 4. ĐỒNG NAI (MN) ---
 #EXTINF:-1 tvg-id="dongnai1" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/dongnai1.png", Đồng Nai 1
 http://live.fptplay53.net/epzsd1/dongnai1_hls.smil/chunklist_b2500000.m3u8
@@ -228,6 +214,12 @@ http://live.fptplay53.net/epzhd1/htv7hd_vhls.smil/chunklist_b5000000.m3u8
 
 #EXTINF:-1 tvg-id="htv9hd" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/htv9.png", HTV9
 http://live.fptplay53.net/epzhd1/htv9hd_vhls.smil/chunklist_b5000000.m3u8
+
+#EXTINF:-1 tvg-id="vungtau" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/bariavungtau.png", Bà Rịa
+http://live.fptplay53.net/epzsd1/bariavungtau_hls.smil/chunklist_b2500000.m3u8
+
+#EXTINF:-1 tvg-id="binhduong1" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/binhduong.png", Bình Dương
+http://live.fptplay53.net/epzhd2/btv2_hls.smil/chunklist_b2500000.m3u8
 
 #EXTINF:0 tvg-id="htvcplushd" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/htvcplus.png", HTVC+
 #KODIPROP:inputstream.adaptive.manifest_type=hls
@@ -434,7 +426,7 @@ http://livevlisctcdnw.seenow.vn/livesnv2/VFAMILY/manifest.mpd
 #KODIPROP:inputstream.adaptive.stream_headers=User-Agent=MXPlayer/1.26.7 (Linux; Android 7.0; vi-VN; Redmi Note 4 Build/AL1512-mido-build-20171113213139)
 http://livevlisctcdnw.seenow.vn/mean/K_LIFE_7777/manifest.mpd
 
-#EXTINF:0 tvg-id="kkidshd" group-title="K+" tvg-logo="https://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/K%2B/K%2BKIDS.png",K+ Kids
+#EXTINF:0 tvg-id="kkidshd" tvg-logo="https://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/K%2B/K%2BKIDS.png",K+ Kids
 #KODIPROP:inputstream=inputstream.adaptive
 #KODIPROP:inputstream.adaptive.manifest_type=dash
 #KODIPROP:inputstream.adaptive.license_type=clearkey
