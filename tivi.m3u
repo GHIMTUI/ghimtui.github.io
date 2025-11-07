@@ -248,26 +248,14 @@ http://live.fptplay53.net/epzhd1/htvcgiadinh_vhls.smil/chunklist_b5000000.m3u8
 #KODIPROP:inputstream.adapmpde.stream_headers=User-Agent=MXPlayer/1.26.7 (Linux; Android 7.0; vi-VN; Redmi Note 4 Build/AL1512-mido-build-20171113213139) 
 http://live.fptplay53.net/epzhd1/htvcmovieshd_vhls.smil/chunklist_b5000000.m3u8
 
-#EXTINF:-1 tvg-id="sctvphimtt"  tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/sctvphim.png", SCTV Phim
-http://liveh12.vtvprime.vn/hls/SCTVPHIM/index.m3u8
-
 #EXTINF:-1 tvg-id="sctv1hd"  tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/sctv1.png", SCTV1
 http://liveh12.vtvprime.vn/hls/SCTV1/index.m3u8
 
 #EXTINF:-1 tvg-id="sctv2hd"  tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/sctv2.png", SCTV2
 http://liveh12.vtvprime.vn/hls/SCTV2/index.m3u8
 
-#EXTINF:-1 tvg-id="sctv4hd"  tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/sctv4.png", SCTV4
-http://liveh12.vtvprime.vn/hls/SCTV4/index.m3u8
-
 #EXTINF:-1 tvg-id="sctv6hd"  tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/sctv6.png", SCTV6
 http://live.fptplay53.net/epzhd2/film360_vhls.smil/chunklist_b5000000.m3u8
-
-#EXTINF:-1 tvg-id="sctv7hd"  tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/sctv7.png", SCTV7
-http://liveh34.vtvprime.vn/hls/SCTV7/index.m3u8
-
-#EXTINF:-1 tvg-id="sctv14hd"  tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/sctv14.png", SCTV14
-http://liveh34.vtvprime.vn/hls/SCTV14/index.m3u8
 
 #EXTINF:-1 tvg-id="sctv4k"  tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/sctv4k.png", SCTV4K
 #KODIPROP:inputstream.adaptive.manifest_type=hls
