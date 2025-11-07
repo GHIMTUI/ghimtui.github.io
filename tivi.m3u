@@ -113,10 +113,18 @@ http://live.fptplay53.net/fnxsd1/hatinh_hls.smil/chunklist_b2500000.m3u8
 
 #--- 8. NGHỆ AN (MT) ---
 #EXTINF:-1 tvg-id="nghean" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/nghean.png", Nghệ An
-http://live.mediatech.vn/live/2859591eef2e92249b682db021f4247c364/chunklist.m3u8
+#KODIPROP:inputstream.adaptive.manifest_type=hls
+#KODIPROP:inputstream.adaptive.stream_selection_type=adaptive
+#KODIPROP:inputstreamaddon=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=MXPlayer/1.26.7 (Linux; Android 7.0; vi-VN; Redmi Note 4 Build/AL1512-mido-build-20171113213139)
+https://live.mediatech.vn/live/2859591eef2e92249b682db021f4247c364/chunklist.m3u8
 
 #--- 11. THANH HÓA (MT) ---
 #EXTINF:-1 tvg-id="thanhhoa" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/thanhhoa.png", Thanh Hóa
+#KODIPROP:inputstream.adaptive.manifest_type=hls
+#KODIPROP:inputstream.adaptive.stream_selection_type=adaptive
+#KODIPROP:inputstreamaddon=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=MXPlayer/1.26.7 (Linux; Android 7.0; vi-VN; Redmi Note 4 Build/AL1512-mido-build-20171113213139)
 http://liveh12.vtvprime.vn/hls/THANHHOATV/03.m3u8
 
 #--- 10. NINH BÌNH (MB) ---
@@ -218,35 +226,36 @@ http://live.fptplay53.net/epzhd1/htv9hd_vhls.smil/chunklist_b5000000.m3u8
 #KODIPROP:inputstream.adaptive.stream_selection_type=adaptive
 #KODIPROP:inputstreamaddon=inputstream.adaptive
 #KODIPROP:inputstream.adaptive.stream_headers=User-Agent=MXPlayer/1.26.7 (Linux; Android 7.0; vi-VN; Redmi Note 4 Build/AL1512-mido-build-20171113213139)
-http://live.fptplay53.net/epzhd1/htvcplus_vhls.smil/chunklist_b5000000.m3u8
+http://live.fptplay53.net/epzhd1/htvcplus_vhls.smil/chunklist.m3u8
 
 #EXTINF:-1 tvg-id="htvcthuanviet" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/thuanviet.png", Thuần Việt
 #KODIPROP:inputstream.adaptive.manifest_type=hls
 #KODIPROP:inputstream.adaptive.stream_selection_type=adaptive
 #KODIPROP:inputstreamaddon=inputstream.adaptive
 #KODIPROP:inputstream.adaptive.stream_headers=User-Agent=MXPlayer/1.26.7 (Linux; Android 7.0; vi-VN; Redmi Note 4 Build/AL1512-mido-build-20171113213139) 
-http://live.fptplay53.net/epzhd1/htvcthuanviethd_vhls.smil/chunklist_b5000000.m3u8
+http://live.fptplay53.net/epzhd1/htvcthuanviethd_vhls.smil/chunklist.m3u8
 
 #EXTINF:-1 tvg-id="htvcphunuhd" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/phunu.png", Phụ Nữ
 #KODIPROP:inputstream.adaptive.manifest_type=hls
 #KODIPROP:inputstream.adaptive.stream_selection_type=adaptive
 #KODIPROP:inputstreamaddon=inputstream.adaptive
 #KODIPROP:inputstream.adaptive.stream_headers=User-Agent=MXPlayer/1.26.7 (Linux; Android 7.0; vi-VN; Redmi Note 4 Build/AL1512-mido-build-20171113213139) 
-http://live.fptplay53.net/epzhd1/htvcphunu_vhls.smil/chunklist_b5000000.m3u8
+http://liveh34.vtvprime.vn/hls/HTVPHUNU/03.m3u8
 
 #EXTINF:-1 tvg-id="htvcgiadinhhd" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/giadinh.png", Gia Đình
 #KODIPROP:inputstream.adaptive.manifest_type=hls
 #KODIPROP:inputstream.adaptive.stream_selection_type=adaptive
 #KODIPROP:inputstreamaddon=inputstream.adaptive
 #KODIPROP:inputstream.adaptive.stream_headers=User-Agent=MXPlayer/1.26.7 (Linux; Android 7.0; vi-VN; Redmi Note 4 Build/AL1512-mido-build-20171113213139) 
-http://live.fptplay53.net/epzhd1/htvcgiadinh_vhls.smil/chunklist_b5000000.m3u8
+http://liveh34.vtvprime.vn/hls/HTVGIADINH/03.m3u8
+
 
 #EXTINF:-1 tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/phim.png", Phim
 #KODIPROP:inputstream.adaptive.manifest_type=hls
 #KODIPROP:inputstream.adaptive.stream_selection_type=adaptive
 #KODIPROP:inputstreamaddon=inputstream.adaptive
 #KODIPROP:inputstream.adapmpde.stream_headers=User-Agent=MXPlayer/1.26.7 (Linux; Android 7.0; vi-VN; Redmi Note 4 Build/AL1512-mido-build-20171113213139) 
-http://live.fptplay53.net/epzhd1/htvcmovieshd_vhls.smil/chunklist_b5000000.m3u8
+http://live.fptplay53.net/epzhd1/htvcmovieshd_vhls.smil/chunklist.m3u8
 
 #EXTINF:-1 tvg-id="sctv1hd"  tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/sctv1.png", SCTV1
 http://liveh12.vtvprime.vn/hls/SCTV1/index.m3u8
