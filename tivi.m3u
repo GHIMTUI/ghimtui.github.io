@@ -109,11 +109,12 @@ http://live.fptplay53.net/epzsd1/hue_hls.smil/chunklist_b2500000.m3u8
 
 #--- 10. QUẢNG TRỊ (MT) ---
 #EXTINF:-1 tvg-id="quangtri" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/quangtri.png", Quảng Trị
-http://live.fptplay53.net/epzsd1/quangtri_hls.smil/chunklist_b2500000.m3u8
+https://tructuyen.baoquangtri.vn:5443/LiveApp/streams/20VcR6dL2B9Krwob13486956694488871.m3u8
 
 #--- 4. HÀ TĨNH (MT) ---
 #EXTINF:-1 tvg-id="hatinh" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/hatinh.png", Hà Tĩnh
-http://live.fptplay53.net/fnxsd1/hatinh_hls.smil/chunklist_b2500000.m3u8
+#http://live.fptplay53.net/fnxsd1/hatinh_hls.smil/chunklist_b2500000.m3u8
+http://cmcdp.vtvdigital.vn/live/hatinhtv/chunklist_2.m3u8
 
 #--- 8. NGHỆ AN (MT) ---
 #EXTINF:-1 tvg-id="nghean" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/nghean.png", Nghệ An
@@ -128,8 +129,8 @@ http://live.mediatech.vn/live/2859591eef2e92249b682db021f4247c364/chunklist.m3u8
 #KODIPROP:inputstream.adaptive.manifest_type=hls
 #KODIPROP:inputstream.adaptive.stream_selection_type=adaptive
 #KODIPROP:inputstreamaddon=inputstream.adaptive
-#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=MXPlayer/1.26.7 (Linux; Android 7.0; vi-VN; Redmi Note 4 Build/AL1512-mido-build-20171113213139)
-http://liveh12.vtvprime.vn/hls/THANHHOATV/03.m3u8
+#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=MXPlayer/1.26.7 (Linux; Android 7.0; vi-VN; Redmi Note 4 Build/AL1512-mido-build-20171113213139) 
+http://cmcdp3.vtvdigital.vn/hls/THANHHOATV/03.m3u8
 
 #--- 10. NINH BÌNH (MB) ---
 #EXTINF:-1 tvg-id="ninhbinh" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/ninhbinh.png", Ninh Bình
@@ -278,6 +279,13 @@ http://liveh12.vtvprime.vn/hls/SCTV2/index.m3u8
 
 #EXTINF:-1 tvg-id="sctv6hd"  tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/sctv6.png", SCTV6
 http://live.fptplay53.net/epzhd2/film360_vhls.smil/chunklist_b5000000.m3u8
+
+#EXTINF:-1 tvg-id="sctv4k"  tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/sctv4k.png", SCTV4K
+#KODIPROP:inputstream.adaptive.manifest_type=hls
+#KODIPROP:inputstream.adaptive.stream_selection_type=adaptive
+#KODIPROP:inputstreamaddon=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=MXPlayer/1.26.7 (Linux; Android 7.0; vi-VN; Redmi Note 4 Build/AL1512-mido-build-20171113213139)
+http://z215ymcm4tliv.vcdn.cloud/s97/hls/sctv4k/index.m3u8
 
 #EXTINF:-1 tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/on_cine.png", ON Cine
 #KODIPROP:inputstream=inputstream.adaptive
