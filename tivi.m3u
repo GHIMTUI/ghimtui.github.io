@@ -89,12 +89,8 @@ http://live.fptplay53.net/epzsd1/lamdong_hls.smil/chunklist_b2500000.m3u8
 #EXTINF:-1 tvg-id="lamdong2" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/lamdong2.png", Lâm Đồng 2
 http://live.fptplay53.net/epzsd1/lamdong02_hls.smil/chunklist_b2500000.m3u8
 
-#EXTINF:-1 tvg-id="lamdong3" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/lamdong3.png" inputstreamaddon="inputstream.adaptive" inputstream="true" http-user-agent="Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Mobile Safari/537.36" http-referer="http://cloudstreamthdn.tek4tv.vn" mimetype="application/vnd.apple.mpegurl", Lâm Đồng 3
-#KODIPROP:inputstreamaddon=inputstream.adaptive
-#KODIPROP:inputstreamclass=inputstream.adaptive.HLS
-#KODIPROP:mastergroupid=Lâm Đồng 3
-http://cloudstreamthdn.tek4tv.vn/live/smil:daknong.smil/chunklist_w149497863_b3128000_sleng.m3u8.m3u8
-
+#EXTINF:-1 tvg-id="lamdong3" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/lamdong3.png", Lâm Đồng 3
+http://cloudstreamthdn.tek4tv.vn/live/smil:daknong.smil/chunklist_w149497863_b3128000_sleng.m3u8
 
 #--- 6. KHÁNH HÒA (MT) ---
 #EXTINF:-1 tvg-id="khanhhoa" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/khanhhoa.png", Khánh Hòa
@@ -136,7 +132,11 @@ http://live.fptplay53.net/epzsd1/hue_hls.smil/chunklist_b2500000.m3u8
 
 #--- 10. QUẢNG TRỊ (MT) ---
 #EXTINF:-1 tvg-id="quangtri" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/quangtri.png", Quảng Trị
-http://live.fptplay53.net/epzsd1/quangtri_hls.smil/chunklist_b2500000.m3u8
+#KODIPROP:inputstream.adaptive.manifest_type=hls
+#KODIPROP:inputstream.adaptive.stream_selection_type=adaptive
+#KODIPROP:inputstreamaddon=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=MXPlayer/1.26.7 (Linux; Android 7.0; vi-VN; Redmi Note 4 Build/AL1512-mido-build-20171113213139)
+https://live.fptplay53.net/epzsd1/quangtri_hls.smil/chunklist_b2500000.m3u8
 
 #--- 4. HÀ TĨNH (MT) ---
 #EXTINF:-1 tvg-id="hatinh" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/hatinh.png", Hà Tĩnh
@@ -190,7 +190,7 @@ http://live.fptplay53.net/fnxsd1/haiphong03_hls.smil/chunklist_b2500000.m3u8
 
 #--- 1. BẮC NINH (MB) ---
 #EXTINF:-1 tvg-id="bacninh" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/bacninh.png", Bắc Ninh
-http://live.fptplay53.net/fnxsd1/bacninh01_hls.smil/chunklist_b2500000.m3u8
+http://1253668792.e.cdneverest.net/Hfm9OtVhDwnVVTfu9LATMA/1763273860/live/285f5f227e988ab4445a2138091d3d62e8d/chunklist.m3u8
 
 #--- 11. PHÚ THỌ (MB) ---
 #EXTINF:-1 tvg-id="phutho" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/phutho.png", Phú Thọ
@@ -215,13 +215,12 @@ http://live.baoquangninh.vn/qtvlive/tv3live.m3u8
 #EXTINF:-1 tvg-id="thainguyen" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/thainguyen.png", Thái Nguyên
 http://live.fptplay53.net/fnxsd1/thainguyen_hls.smil/chunklist_b2500000.m3u8
 
-#--- 13. SƠN LA (MB) ---
-#EXTINF:-1 tvg-id="sonla" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/sonla.png", Sơn La
+#EXTINF:-1 tvg-id="sonla" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/sonla.png" , Sơn La
 http://live.fptplay53.net/fnxsd1/sonla_hls.smil/chunklist_b2500000.m3u8
 
 #--- 8. LẠNG SƠN (MB) ---
 #EXTINF:-1 tvg-id="langson" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/langson.png", Lạng Sơn
-http://live.fptplay53.net/fnxsd1/langson_hls.smil/chunklist_b2500000.m3u8
+http://stream.langsontv.vn/live/285c78da0c246524c90917842f8de03bd21/chunklist.m3u8
 
 #--- 9. LÀO CAI (MB) ---
 #EXTINF:-1 tvg-id="laocai" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/laocai.png", Lào Cai
@@ -463,3 +462,4 @@ http://s2129134.cdn.mytvnet.vn/pkg20/live_dzones/cn.smil/manifest.mpd
 #KODIPROP:inputstream.adaptive.license_key={"keys":[{"kty":"oct","k":"WTKPYh1WdnvF/5QEqJQGgw","kid":"Z9riBSfGPa2qrmCaqRV3yw"}],"type":"temporary"}
 #KODIPROP:inputstream.adaptive.stream_headers=User-Agent=MXPlayer/1.26.7 (Linux; Android 7.0; vi-VN; Redmi Note 4 Build/AL1512-mido-build-20171113213139)
 http://s2129134.cdn.mytvnet.vn/pkg20/live_dzones/dreamwork.smil/manifest.mpd
+
