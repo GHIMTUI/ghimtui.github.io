@@ -190,7 +190,7 @@ http://live.fptplay53.net/fnxsd1/haiphong03_hls.smil/chunklist_b2500000.m3u8
 
 #--- 1. BẮC NINH (MB) ---
 #EXTINF:-1 tvg-id="bacninh" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/bacninh.png", Bắc Ninh
-http://cmcdp2.vtvdigital.vn/hls/BACGIANGTV/01.m3u8
+http://live.fptplay53.net/fnxsd1/bacninh01_hls.smil/chunklist_b2500000.m3u8
 
 #--- 11. PHÚ THỌ (MB) ---
 #EXTINF:-1 tvg-id="phutho" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/phutho.png", Phú Thọ
