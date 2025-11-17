@@ -190,7 +190,7 @@ http://live.fptplay53.net/fnxsd1/haiphong03_hls.smil/chunklist_b2500000.m3u8
 
 #--- 1. BẮC NINH (MB) ---
 #EXTINF:-1 tvg-id="bacninh" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/bacninh.png", Bắc Ninh
-http://1253668792.e.cdneverest.net/Hfm9OtVhDwnVVTfu9LATMA/1763273860/live/285f5f227e988ab4445a2138091d3d62e8d/chunklist.m3u8
+http://cmcdp2.vtvdigital.vn/hls/BACGIANGTV/01.m3u8
 
 #--- 11. PHÚ THỌ (MB) ---
 #EXTINF:-1 tvg-id="phutho" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/phutho.png", Phú Thọ
@@ -462,4 +462,3 @@ http://s2129134.cdn.mytvnet.vn/pkg20/live_dzones/cn.smil/manifest.mpd
 #KODIPROP:inputstream.adaptive.license_key={"keys":[{"kty":"oct","k":"WTKPYh1WdnvF/5QEqJQGgw","kid":"Z9riBSfGPa2qrmCaqRV3yw"}],"type":"temporary"}
 #KODIPROP:inputstream.adaptive.stream_headers=User-Agent=MXPlayer/1.26.7 (Linux; Android 7.0; vi-VN; Redmi Note 4 Build/AL1512-mido-build-20171113213139)
 http://s2129134.cdn.mytvnet.vn/pkg20/live_dzones/dreamwork.smil/manifest.mpd
-
