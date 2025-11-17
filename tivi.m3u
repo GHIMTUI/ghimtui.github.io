@@ -89,6 +89,9 @@ http://live.fptplay53.net/epzsd1/lamdong_hls.smil/chunklist_b2500000.m3u8
 #EXTINF:-1 tvg-id="lamdong2" tvg-logo="http://ghimtui.github.io/logo/lamdong2.png", Lâm Đồng 2
 http://live.fptplay53.net/epzsd1/lamdong02_hls.smil/chunklist_b2500000.m3u8
 
+#EXTINF:-1 tvg-id="lamdong3" tvg-logo="http://ghimtui.github.io/logo/lamdong3.png", Lâm Đồng 3
+http://cloudstreamthdn.tek4tv.vn/live/smil:daknong.smil/chunklist_w149497863_b3128000_sleng.m3u8
+
 #--- 6. KHÁNH HÒA (MT) ---
 #EXTINF:-1 tvg-id="khanhhoa" tvg-logo="http://ghimtui.github.io/logo/khanhhoa.png", Khánh Hòa
 http://live.fptplay53.net/epzsd1/khanhhoa_hls.smil/chunklist_b2500000.m3u8
@@ -226,15 +229,12 @@ http://live.fptplay53.net/epzhd1/htvcplus_vhls.smil/chunklist_b5000000.m3u8
 http://live.fptplay53.net/epzhd1/htvcthuanviethd_vhls.smil/chunklist_b5000000.m3u8
 
 #EXTINF:-1 tvg-id="htvcphunuhd" tvg-logo="http://ghimtui.github.io/logo/phunu.png", Phụ Nữ
-#EXTVLCOPT:http-user-agent=Dalvik/2.1.0
-http://liveh34.vtvprime.vn/hls/HTVPHUNU/03.m3u8
+http://live.fptplay53.net/epzhd1/htvcphunu_vhls.smil/chunklist_b5000000.m3u8
 
 #EXTINF:-1 tvg-id="htvcgiadinhhd" tvg-logo="http://ghimtui.github.io/logo/giadinh.png", Gia Đình
-#EXTVLCOPT:http-user-agent=Dalvik/2.1.0
-http://liveh34.vtvprime.vn/hls/HTVGIADINH/03.m3u8
+http://live.fptplay53.net/epzhd1/htvcgiadinh_vhls.smil/chunklist_b5000000.m3u8
 
 #EXTINF:-1 tvg-logo="http://ghimtui.github.io/logo/phim.png", Phim
-#EXTVLCOPT:http-user-agent=Dalvik/2.1.0
 http://live.fptplay53.net/epzhd1/htvcmovieshd_vhls.smil/chunklist_b5000000.m3u8
 
 #EXTINF:-1 tvg-id="sctv6hd"  tvg-logo="http://ghimtui.github.io/logo/sctv6.png", SCTV6
