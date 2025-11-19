@@ -234,12 +234,6 @@ http://live.fptplay53.net/epzhd1/htvcgiadinh_vhls.smil/chunklist_b5000000.m3u8
 #EXTINF:-1 tvg-logo="http://ghimtui.github.io/logo/phim.png", Phim
 http://live.fptplay53.net/epzhd1/htvcmovieshd_vhls.smil/chunklist_b5000000.m3u8
 
-#EXTINF:-1 tvg-id="sctv1hd"  tvg-logo="http://ghimtui.github.io/logo/sctv1.png", SCTV1
-http://liveh12.vtvprime.vn/hls/SCTV1/03.m3u8
-
-#EXTINF:-1 tvg-id="sctv2hd"  tvg-logo="http://ghimtui.github.io/logo/sctv2.png", SCTV2
-http://liveh12.vtvprime.vn/hls/SCTV2/03.m3u8
-
 #EXTINF:-1 tvg-id="sctv6hd"  tvg-logo="http://ghimtui.github.io/logo/sctv6.png", SCTV6
 http://live.fptplay53.net/epzhd2/film360_vhls.smil/chunklist_b5000000.m3u8
 
