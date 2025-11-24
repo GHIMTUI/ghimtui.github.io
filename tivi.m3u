@@ -240,6 +240,13 @@ http://live.fptplay53.net/epzhd2/film360_vhls.smil/chunklist_b5000000.m3u8
 #EXTINF:-1 tvg-id="sctv16hd"  tvg-logo="http://ghimtui.github.io/logo/sctv16.png", SCTV16
 http://liveh34.vtvprime.vn/hls/SCTV16/04.m3u8
 
+#EXTINF:-1 tvg-id="kactionhd" tvg-logo="https://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/K%2B/K%2BACTION.png",K+ Action
+#KODIPROP:inputstream=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.manifest_type=dash
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=a7c942778e874d43be92b8d0a0cd11b4:6d54358306571658ffdb952c6560688b
+http://livevlisctcdnw.seenow.vn/mean/K_LIFE_7777/manifest.mpd
+
 #EXTINF:-1 tvg-logo="http://ghimtui.github.io/logo/on_cine.png", ON Cine
 #KODIPROP:inputstream=inputstream.adaptive
 #KODIPROP:inputstream.adaptive.manifest_type=dash
