@@ -89,6 +89,10 @@ http://live.fptplay53.net/epzsd1/lamdong_hls.smil/chunklist_b2500000.m3u8
 #EXTINF:-1 tvg-id="lamdong2" tvg-logo="http://ghimtui.github.io/logo/lamdong2.png", Lâm Đồng 2
 http://live.fptplay53.net/epzsd1/lamdong02_hls.smil/chunklist_b2500000.m3u8
 
+#EXTINF:-1 tvg-id="lamdong3" tvg-logo="http://ghimtui.github.io/logo/lamdong3.png", Lâm Đồng 3
+#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=MXPlayer/1.26.7 (Linux; Android 7.0; vi-VN; Redmi Note 4 Build/AL1512-mido-build-20171113213139)
+http://freem3u.xyz/api/live/play.m3u8?vid=50
+
 #--- 6. KHÁNH HÒA (MT) ---
 #EXTINF:-1 tvg-id="khanhhoa" tvg-logo="http://ghimtui.github.io/logo/khanhhoa.png", Khánh Hòa
 http://live.fptplay53.net/epzsd1/khanhhoa_hls.smil/chunklist_b2500000.m3u8
@@ -201,7 +205,8 @@ http://stream.langsontv.vn/live/285c78da0c246524c90917842f8de03bd21/chunklist.m3
 
 #--- 9. LÀO CAI (MB) ---
 #EXTINF:-1 tvg-id="laocai" tvg-logo="http://ghimtui.github.io/logo/laocai.png", Lào Cai
-http://live.fptplay53.net/fnxsd1/laocai_hls.smil/chunklist_b2500000.m3u8
+#http://live.fptplay53.net/fnxsd1/laocai_hls.smil/chunklist_b2500000.m3u8
+http://live.baolaocai.vn/channel2/stream.m3u8
 
 #--- 3. ĐIỆN BIÊN (MB) ---
 #EXTINF:-1 tvg-id="dienbien" tvg-logo="http://ghimtui.github.io/logo/dienbien.png", Điện Biên
