@@ -185,11 +185,9 @@ http://live.fptplay53.net/fnxsd1/phutho_hls.smil/chunklist_b2500000.m3u8
 
 #--- 12. QUẢNG NINH (MB) ---
 #EXTINF:-1 tvg-id="quangninh1" tvg-logo="http://ghimtui.github.io/logo/quangninh1.png", Quảng Ninh 1
-#EXTVLCOPT:http-user-agent=Dalvik/2.1.0
 http://live.baoquangninh.vn/qtvlive/tv1live.m3u8
 
 #EXTINF:-1 tvg-id="quangninh3" tvg-logo="http://ghimtui.github.io/logo/quangninh3.png", Quảng Ninh 3
-#EXTVLCOPT:http-user-agent=Dalvik/2.1.0
 http://live.baoquangninh.vn/qtvlive/tv3live.m3u8
 
 #--- 14. THÁI NGUYÊN (MB) ---
