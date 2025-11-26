@@ -110,7 +110,6 @@ http://live.fptplay53.net/epzsd1/gialai01_hls.smil/chunklist_b2500000.m3u8
 
 #--- 9. QUẢNG NGÃI (MT) ---
 #EXTINF:-1 tvg-id="quangngai" tvg-logo="http://ghimtui.github.io/logo/quangngai.png", Quảng Ngãi
-#EXTVLCOPT:http-user-agent=Dalvik/2.1.0
 #KODIPROP:inputstream.adaptive.manifest_type=hls
 #KODIPROP:inputstream.adaptive.stream_selection_type=adaptive
 #KODIPROP:inputstreamaddon=inputstream.adaptive
@@ -203,8 +202,7 @@ http://stream.langsontv.vn/live/285c78da0c246524c90917842f8de03bd21/chunklist.m3
 
 #--- 9. LÀO CAI (MB) ---
 #EXTINF:-1 tvg-id="laocai" tvg-logo="http://ghimtui.github.io/logo/laocai.png", Lào Cai
-#http://live.fptplay53.net/fnxsd1/laocai_hls.smil/chunklist_b2500000.m3u8
-http://live.baolaocai.vn/channel2/stream.m3u8
+http://live.fptplay53.net/fnxsd1/laocai_hls.smil/chunklist_b2500000.m3u8
 
 #--- 3. ĐIỆN BIÊN (MB) ---
 #EXTINF:-1 tvg-id="dienbien" tvg-logo="http://ghimtui.github.io/logo/dienbien.png", Điện Biên
@@ -307,7 +305,6 @@ http://livevlisctcdnw.seenow.vn/livesnv2/O2_TV/manifest.mpd
 http://livevlisctcdnw.seenow.vn/livesnv2/HAY_TV/manifest.mpd
 
 #EXTINF:-1 tvg-logo="http://ghimtui.github.io/logo/on_styletv.png", ON StyleTV
-#EXTVLCOPT:http-user-agent=Dalvik/2.1.0
 #KODIPROP:inputstream=inputstream.adaptive
 #KODIPROP:inputstream.adaptive.manifest_type=dash
 #KODIPROP:inputstream.adaptive.license_type=clearkey
