@@ -90,7 +90,7 @@ http://live.fptplay53.net/epzsd1/lamdong_hls.smil/chunklist_b2500000.m3u8
 http://live.fptplay53.net/epzsd1/lamdong02_hls.smil/chunklist_b2500000.m3u8
 
 #EXTINF:-1 tvg-id="lamdong3" tvg-logo="http://ghimtui.github.io/logo/lamdong3.png", Lâm Đồng 3
-#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=MXPlayer/1.26.7 (Linux; Android 7.0; vi-VN; Redmi Note 4 Build/AL1512-mido-build-20171113213139)
+#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Mobile Safari/537.36
 http://freem3u.xyz/api/live/play.m3u8?vid=50
 
 #--- 6. KHÁNH HÒA (MT) ---
@@ -202,6 +202,7 @@ http://stream.langsontv.vn/live/285c78da0c246524c90917842f8de03bd21/chunklist.m3
 
 #--- 9. LÀO CAI (MB) ---
 #EXTINF:-1 tvg-id="laocai" tvg-logo="http://ghimtui.github.io/logo/laocai.png", Lào Cai
+#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Mobile Safari/537.36
 http://live.fptplay53.net/fnxsd1/laocai_hls.smil/chunklist_b2500000.m3u8
 
 #--- 3. ĐIỆN BIÊN (MB) ---
@@ -234,19 +235,6 @@ http://live.fptplay53.net/epzhd1/htvcgiadinh_vhls.smil/chunklist_b5000000.m3u8
 
 #EXTINF:-1 tvg-logo="http://ghimtui.github.io/logo/phim.png", Phim
 http://live.fptplay53.net/epzhd1/htvcmovieshd_vhls.smil/chunklist_b5000000.m3u8
-
-#EXTINF:-1 tvg-id="sctv6hd"  tvg-logo="http://ghimtui.github.io/logo/sctv6.png", SCTV6
-http://live.fptplay53.net/epzhd2/film360_vhls.smil/chunklist_b5000000.m3u8
-
-#EXTINF:-1 tvg-id="sctv16hd"  tvg-logo="http://ghimtui.github.io/logo/sctv16.png", SCTV16
-http://liveh34.vtvprime.vn/hls/SCTV16/04.m3u8
-
-#EXTINF:-1 tvg-id="kactionhd" tvg-logo="https://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/K%2B/K%2BACTION.png",K+ Action
-#KODIPROP:inputstream=inputstream.adaptive
-#KODIPROP:inputstream.adaptive.manifest_type=dash
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=a7c942778e874d43be92b8d0a0cd11b4:6d54358306571658ffdb952c6560688b
-http://livevlisctcdnw.seenow.vn/mean/K_LIFE_7777/manifest.mpd
 
 #EXTINF:-1 tvg-logo="http://ghimtui.github.io/logo/on_cine.png", ON Cine
 #KODIPROP:inputstream=inputstream.adaptive
@@ -387,6 +375,25 @@ http://live.fptplay53.net/fnxhd2/anninhtv_vhls.smil/chunklist_b5000000.m3u8
 
 #EXTINF:-1 tvg-id="qpvnhd" tvg-logo="http://ghimtui.github.io/logo/qpvn.png", QPVN
 http://live.fptplay53.net/fnxhd2/quocphongvnhd_vhls.smil/chunklist_b5000000.m3u8
+
+#EXTINF:-1 tvg-id="sctv6hd"  tvg-logo="http://ghimtui.github.io/logo/sctv6.png", SCTV6
+http://live.fptplay53.net/epzhd2/film360_vhls.smil/chunklist_b5000000.m3u8
+
+#EXTINF:-1 tvg-id="sctv16hd"  tvg-logo="http://ghimtui.github.io/logo/sctv16.png", SCTV16
+http://liveh34.vtvprime.vn/hls/SCTV16/04.m3u8
+
+#EXTINF:-1 tvg-id="kactionhd" tvg-logo="https://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/K%2B/K%2BACTION.png",K+ Action
+#KODIPROP:inputstream=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.manifest_type=dash
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=a7c942778e874d43be92b8d0a0cd11b4:6d54358306571658ffdb952c6560688b
+http://livevlisctcdnw.seenow.vn/mean/K_LIFE_7777/manifest.mpd
+
+#EXTINF:-1 tvg-id="bbcearth" tvg-logo="https://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/MSky/BBCEarth.png", BBC Earth
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key={"keys":[{"kty":"oct","k":"8/oP4805pS9O79Nv9xYeiQ","kid":"UBSUGixCN5iAte33IwTBZQ"}],"type":"temporary"}
+http://s7770.cdn.mytvnet.vn/pkg20/live_dzones/bbcearth.smil/manifest.mpd
 
 #EXTINF:-1 tvg-id="kkidshd" tvg-logo="https://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/K%2B/K%2BKIDS.png",K+ Kids
 #KODIPROP:inputstream=inputstream.adaptive
