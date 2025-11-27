@@ -163,9 +163,7 @@ http://live.mediatech.vn/live/285f5449d7d7d2946e0bd2d54b7e60f25a4/chunklist.m3u8
 http://live.fptplay53.net/fnxhd2/hanoitv1_vhls.smil/chunklist_b5000000.m3u8
 
 #EXTINF:-1 tvg-id="hanoi2" tvg-logo="http://ghimtui.github.io/logo/hanoi2.png", Hà Nội 2
-#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (m3u-ip.tv 3.0.9) Android 
-#http://live.fptplay53.net/fnxch2/hntv2_abr.smil/chunklist_b3600000.m3u8
-http://cecex9g5cpliv.vcdn.cloud/events/HN2/chunklist_w360308437.m3u8
+http://live.fptplay53.net/fnxch2/hntv2_abr.smil/chunklist_b6000000.m3u8
 
 #--- 5. HẢI PHÒNG (MB) ---
 #EXTINF:-1 tvg-id="haiphong" tvg-logo="http://ghimtui.github.io/logo/haiphong.png", Hải Phòng
