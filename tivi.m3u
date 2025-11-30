@@ -3,6 +3,7 @@
 #--- 1. AN GIANG (MN) ---
 #EXTINF:-1 tvg-id="angiang1" tvg-logo="http://ghimtui.github.io/logo/angiang1.png", An Giang 1
 http://tv.angiangtv.vn/live/kgtv/kgtv.m3u8
+https://tv.kgtv.vn/live/kgtv/kgtv.m3u8
 
 #EXTINF:-1 tvg-id="angiang2" tvg-logo="http://ghimtui.github.io/logo/angiang2.png" , An Giang 2
 http://tv.angiangtv.vn/live/kgtv2/kgtv2.m3u8
@@ -375,34 +376,11 @@ http://live.fptplay53.net/fnxhd1/vtv5taynguyen_vhls.smil/chunklist_b5000000.m3u8
 #EXTINF:-1 tvg-id="vtv5hdtnb" tvg-logo="http://ghimtui.github.io/logo/vtv5tnb.png", Tây Nam Bộ
 http://live.fptplay53.net/fnxhd1/vtv5tnb_vhls.smil/chunklist_b5000000.m3u8
 
-
 #EXTINF:-1 tvg-id="sctv6hd"  tvg-logo="http://ghimtui.github.io/logo/sctv6.png", SCTV6
 http://live.fptplay53.net/epzhd2/film360_vhls.smil/chunklist_b5000000.m3u8
 
 #EXTINF:-1 tvg-id="sctv16hd"  tvg-logo="http://ghimtui.github.io/logo/sctv16.png", SCTV16
 http://liveh34.vtvprime.vn/hls/SCTV16/04.m3u8
-
-#EXTINF:-1 tvg-id="kactionhd" tvg-logo="https://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/K%2B/K%2BACTION.png",K+ Action
-#KODIPROP:inputstream=inputstream.adaptive
-#KODIPROP:inputstream.adaptive.manifest_type=dash
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=a7c942778e874d43be92b8d0a0cd11b4:6d54358306571658ffdb952c6560688b
-http://livevlisctcdnw.seenow.vn/mean/K_LIFE_7777/manifest.mpd
-
-#EXTINF:-1 tvg-id="cinemaworldhd" tvg-logo="https://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/MSky/CinemaWorld.png", Cinema World
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key={"keys":[{"kty":"oct","k":"s14Sp1pCpvkYRyOpD/QtnA","kid":"7nkVVk10OdCb01Vv/MyHpA"}],"type":"temporary"}
-http://s2129134.cdn.mytvnet.vn/pkg20/live_dzones/cinemaworld.smil/manifest.mpd
-
-#EXTINF:-1 tvg-logo="http://ghimtui.github.io/logo/phim.png", Phim
-http://live.fptplay53.net/epzhd1/htvcmovieshd_vhls.smil/chunklist_b5000000.m3u8
-
-#EXTINF:-1 tvg-id="bbcearth" tvg-logo="https://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/MSky/BBCEarth.png", BBC Earth
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key={"keys":[{"kty":"oct","k":"8/oP4805pS9O79Nv9xYeiQ","kid":"UBSUGixCN5iAte33IwTBZQ"}],"type":"temporary"}
-http://s7770.cdn.mytvnet.vn/pkg20/live_dzones/bbcearth.smil/manifest.mpd
 
 #EXTINF:-1 tvg-id="kkidshd" tvg-logo="https://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/K%2B/K%2BKIDS.png",K+ Kids
 #KODIPROP:inputstream=inputstream.adaptive
