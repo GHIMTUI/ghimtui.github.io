@@ -2,8 +2,8 @@
 
 #--- 1. AN GIANG (MN) ---
 #EXTINF:-1 tvg-id="angiang1" tvg-logo="http://ghimtui.github.io/logo/angiang1.png", An Giang 1
-http://tv.angiangtv.vn/live/kgtv/kgtv.m3u8
-https://tv.kgtv.vn/live/kgtv/kgtv.m3u8
+#http://tv.angiangtv.vn/live/kgtv/kgtv.m3u8
+http://tv.kgtv.vn/live/kgtv/kgtv.m3u8
 
 #EXTINF:-1 tvg-id="angiang2" tvg-logo="http://ghimtui.github.io/logo/angiang2.png" , An Giang 2
 http://tv.angiangtv.vn/live/kgtv2/kgtv2.m3u8
@@ -96,8 +96,8 @@ http://cloudstreamthdn.tek4tv.vn/live/smil:daknong.smil/playlist.m3u8
 
 #--- 6. KHÁNH HÒA (MT) ---
 #EXTINF:-1 tvg-id="khanhhoa" tvg-logo="http://ghimtui.github.io/logo/khanhhoa.png", Khánh Hòa
-#http://live.fptplay53.net/epzsd1/khanhhoa_hls.smil/chunklist_b2500000.m3u8
-http://tv.ktv.org.vn/hls/ktv1.m3u8
+http://live.fptplay53.net/epzsd1/khanhhoa_hls.smil/chunklist_b2500000.m3u8
+#http://tv.ktv.org.vn/hls/ktv1.m3u8
 
 #EXTINF:-1 tvg-id="khanhhoa1" tvg-logo="http://ghimtui.github.io/logo/khanhhoa1.png", Khánh Hòa 1
 http://live.fptplay53.net/epzsd1/khanhhoa01_hls.smil/chunklist_b2500000.m3u8
@@ -142,17 +142,14 @@ http://cmcdp.vtvdigital.vn/live/hatinhtv/chunklist_2.m3u8
 
 #--- 8. NGHỆ AN (MT) ---
 #EXTINF:-1 tvg-id="nghean" tvg-logo="http://ghimtui.github.io/logo/nghean.png", Nghệ An
-#EXTVLCOPT:http-user-agent=Dalvik/2.1.0
 http://live.mediatech.vn/live/2859591eef2e92249b682db021f4247c364/chunklist.m3u8
 
 #--- 11. THANH HÓA (MT) ---
 #EXTINF:-1 tvg-id="thanhhoa" tvg-logo="http://ghimtui.github.io/logo/thanhhoa.png", Thanh Hóa
-#EXTVLCOPT:http-user-agent=Dalvik/2.1.0
 http://cmcdp3.vtvdigital.vn/hls/THANHHOATV/03.m3u8
 
 #--- 10. NINH BÌNH (MB) ---
 #EXTINF:-1 tvg-id="ninhbinh" tvg-logo="http://ghimtui.github.io/logo/ninhbinh.png", Ninh Bình
-#EXTVLCOPT:http-user-agent=Dalvik/2.1.0
 http://live.mediatech.vn/live/28597f8fd7ea5064d0f84ab00b3699dfd86/chunklist.m3u8
 
 #--- 6. HƯNG YÊN (MB) ---
