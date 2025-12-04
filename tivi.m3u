@@ -160,9 +160,7 @@ http://live.mediatech.vn/live/285f5449d7d7d2946e0bd2d54b7e60f25a4/chunklist.m3u8
 http://live.fptplay53.net/fnxhd2/hanoitv1_vhls.smil/chunklist_b5000000.m3u8
 
 #EXTINF:-1 tvg-id="hanoi2" tvg-logo="http://ghimtui.github.io/logo/hanoi2.png", Hà Nội 2
-#http://live.fptplay53.net/fnxch2/hntv2_abr.smil/chunklist_b6000000.m3u8
-http://cecex9g5cpliv.vcdn.cloud/events/HN2/chunklist_w1686063256.m3u8
-
+http://live.fptplay53.net/fnxch2/hntv2_abr.smil/chunklist_b6000000.m3u8
 #--- 5. HẢI PHÒNG (MB) ---
 #EXTINF:-1 tvg-id="haiphong" tvg-logo="http://ghimtui.github.io/logo/haiphong.png", Hải Phòng
 http://live.fptplay53.net/fnxsd1/haiphong_hls.smil/chunklist_b2500000.m3u8
@@ -377,12 +375,6 @@ http://live.fptplay53.net/epzhd2/film360_vhls.smil/chunklist_b5000000.m3u8
 
 #EXTINF:-1 tvg-id="sctv16hd"  tvg-logo="http://ghimtui.github.io/logo/sctv16.png", SCTV16
 http://liveh34.vtvprime.vn/hls/SCTV16/04.m3u8
-
-#EXTINF:-1 tvg-id="bbcearth" tvg-logo="https://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/MSky/BBCEarth.png", BBC Earth
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key={"keys":[{"kty":"oct","k":"8/oP4805pS9O79Nv9xYeiQ","kid":"UBSUGixCN5iAte33IwTBZQ"}],"type":"temporary"}
-http://s7770.cdn.mytvnet.vn/pkg20/live_dzones/bbcearth.smil/manifest.mpd
 
 #EXTINF:-1 tvg-id="cartoonhd" tvg-logo="https://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/MSky/CartoonNetwork.png", Cartoon Network
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
