@@ -51,10 +51,7 @@ http://live.fptplay53.net/epzhd2/vinhlong4hd_vhls.smil/chunklist_b5000000.m3u8
 http://live.fptplay53.net/epzsd1/vinhlong5_vhls.smil/chunklist_b5000000.m3u8
 
 #--- 6. TÂY NINH (MN) ---
-#EXTINF:-1 tvg-id="tayninh1" tvg-logo="http://ghimtui.github.io/logo/tayninh1.png", Tây Ninh 1
-http://cdn.la34.com.vn/live/2851dc2c9af68834814a89e61db0faee561/chunklist.m3u8
-
-#EXTINF:-1 tvg-id="tayninh2" tvg-logo="http://ghimtui.github.io/logo/tayninh2.png", Tây Ninh 2
+#EXTINF:-1 tvg-id="tayninh1" tvg-logo="http://ghimtui.github.io/logo/tayninh.png", Tây Ninh
 http://live.fptplay53.net/epzsd1/tayninhhd_hls.smil/chunklist_b2500000.m3u8
 
 #EXTINF:-1 tvg-id="htv1" tvg-logo="http://ghimtui.github.io/logo/htv1.png", HTV1
