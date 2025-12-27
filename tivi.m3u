@@ -86,10 +86,6 @@ http://live.fptplay53.net/epzsd1/lamdong_hls.smil/chunklist_b2500000.m3u8
 #EXTINF:-1 tvg-id="lamdong2" tvg-logo="http://ghimtui.github.io/logo/lamdong2.png", Lâm Đồng 2
 http://live.fptplay53.net/epzsd1/lamdong02_hls.smil/chunklist_b2500000.m3u8
 
-#EXTINF:-1 tvg-id="lamdong3" tvg-logo="http://ghimtui.github.io/logo/lamdong3.png", Lâm Đồng 3
-#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (m3u-ip.tv 3.0.9) Android 
-http://cloudstreamthdn.tek4tv.vn/live/smil:daknong.smil/playlist.m3u8
-
 #--- 6. KHÁNH HÒA (MT) ---
 #EXTINF:-1 tvg-id="khanhhoa" tvg-logo="http://ghimtui.github.io/logo/khanhhoa.png", Khánh Hòa
 http://live.fptplay53.net/epzsd1/khanhhoa_hls.smil/chunklist_b2500000.m3u8
@@ -310,48 +306,6 @@ http://livevlisctcdnw.seenow.vn/livesnv2/GIAITRI_TV_HD/manifest.mpd
 #KODIPROP:inputstream.adaptive.license_key=f2abb744acd24369943a79635f4fa43a:f674652c13211536e0e21d9ea860ca90
 #KODIPROP:inputstream.adaptive.stream_headers=User-Agent=MXPlayer/1.26.7 (Linux; Android 7.0; vi-VN; Redmi Note 4 Build/AL1512-mido-build-20171113213139)
 http://livevlisctcdnw.seenow.vn/livesnv2/D_DRAMAS_HD/manifest.mpd
-
-#EXTINF:-1 tvg-id="qpvnhd" tvg-logo="http://ghimtui.github.io/logo/qpvn.png", QPVN
-http://live.fptplay53.net/fnxhd2/quocphongvnhd_vhls.smil/chunklist_b5000000.m3u8
-
-#EXTINF:-1 tvg-id="antvhd" tvg-logo="http://ghimtui.github.io/logo/antv.png", ANTV
-http://live.fptplay53.net/fnxhd2/anninhtv_vhls.smil/chunklist_b5000000.m3u8
-
-#EXTINF:-1 tvg-id="vtv1hd" tvg-logo="http://ghimtui.github.io/logo/vtv1.png", VTV1
-http://live.fptplay53.net/fnxhd1/vtv1hd_vhls.smil/chunklist_b5000000.m3u8
-
-#EXTINF:-1 tvg-id="vtv2hd" tvg-logo="http://ghimtui.github.io/logo/vtv2.png", VTV2
-http://live.fptplay53.net/fnxch2/vtv2hd_abr.smil/chunklist_b4200000.m3u8
-
-#EXTINF:-1 tvg-id="vtv3hd" tvg-logo="http://ghimtui.github.io/logo/vtv3.png", VTV3
-http://live.fptplay53.net/fnxhd1/vtv3hd_vhls.smil/chunklist_b5000000.m3u8
-
-#EXTINF:-1 tvg-id="vtv4hd" tvg-logo="http://ghimtui.github.io/logo/vtv4.png", VTV4
-http://live.fptplay53.net/fnxch2/vtv4hd_abr.smil/chunklist_b4200000.m3u8
-
-#EXTINF:-1 tvg-id="vtv5hd" tvg-logo="http://ghimtui.github.io/logo/vtv5.png", VTV5
-http://live.fptplay53.net/epzhd1/vtv5hd_vhls.smil/chunklist_b5000000.m3u8
-
-#EXTINF:-1 tvg-id="vtv7hd" tvg-logo="http://ghimtui.github.io/logo/vtv7.png", VTV7
-http://live.fptplay53.net/fnxhd1/vtv7hd_vhls.smil/chunklist_b5000000.m3u8
-
-#EXTINF:-1 tvg-id="vtv8hd" tvg-logo="http://ghimtui.github.io/logo/vtv8.png", VTV8
-http://live.fptplay53.net/epzhd1/vtv8hd_vhls.smil/chunklist_b5000000.m3u8
-
-#EXTINF:-1 tvg-id="vtv9hd" tvg-logo="http://ghimtui.github.io/logo/vtv9.png", VTV9
-http://live.fptplay53.net/fnxhd1/vtv9_vhls.smil/chunklist_b5000000.m3u8
-
-#EXTINF:-1 tvg-id="vtv5hdtn" tvg-logo="http://ghimtui.github.io/logo/vtv5tn.png", Tây Nguyên
-http://live.fptplay53.net/fnxhd1/vtv5taynguyen_vhls.smil/chunklist_b5000000.m3u8
-
-#EXTINF:-1 tvg-id="vtv5hdtnb" tvg-logo="http://ghimtui.github.io/logo/vtv5tnb.png", Tây Nam Bộ
-http://live.fptplay53.net/fnxhd1/vtv5tnb_vhls.smil/chunklist_b5000000.m3u8
-
-#EXTINF:-1 tvg-id="sctv6hd"  tvg-logo="http://ghimtui.github.io/logo/sctv6.png", SCTV6
-http://live.fptplay53.net/epzhd2/film360_vhls.smil/chunklist_b5000000.m3u8
-
-#EXTINF:-1 tvg-id="sctv16hd"  tvg-logo="http://ghimtui.github.io/logo/sctv16.png", SCTV16
-http://liveh34.vtvprime.vn/hls/SCTV16/04.m3u8
 
 #EXTINF:-1 tvg-id="cartoonhd" tvg-logo="https://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/MSky/CartoonNetwork.png", Cartoon Network
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
