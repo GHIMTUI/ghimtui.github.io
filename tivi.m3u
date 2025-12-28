@@ -92,8 +92,7 @@ http://live.fptplay53.net/epzsd1/khanhhoa_hls.smil/chunklist_b2500000.m3u8
 #http://tv.ktv.org.vn/hls/ktv1.m3u8
 
 #EXTINF:-1 tvg-id="khanhhoa1" tvg-logo="http://ghimtui.github.io/logo/khanhhoa1.png", Khánh Hòa 1
-#http://live.fptplay53.net/epzsd1/khanhhoa01_hls.smil/chunklist_b2500000.m3u8
-http://freem3u.xyz/api/live/play.m3u8?vid=76
+http://live.fptplay53.net/epzsd1/khanhhoa01_hls.smil/chunklist_b2500000.m3u8
 
 #--- 2. ĐẮK LẮK (MT) ---
 #EXTINF:-1 tvg-id="daklak" tvg-logo="http://ghimtui.github.io/logo/daklak.png", Đắk Lắk
@@ -211,6 +210,18 @@ http://live.fptplay53.net/fnxsd1/sonla_hls.smil/chunklist_b2500000.m3u8
 #--- 15. TUYÊN QUANG (MB) ---
 #EXTINF:-1 tvg-id="tuyenquang" tvg-logo="http://ghimtui.github.io/logo/tuyenquang.png", Tuyên Quang
 http://live.fptplay53.net/fnxsd1/tuyenquang_hls.smil/chunklist_b2500000.m3u8
+
+#EXTINF:-1 tvg-logo="http://ghimtui.github.io/logo/htvcplus.png", HTVC+
+http://freem3u.xyz/api/live/play.m3u8?vid=132
+
+#EXTINF:-1 tvg-logo="http://ghimtui.github.io/logo/giadinh.png", Gia Đình
+http://freem3u.xyz/api/live/play.m3u8?vid=11
+
+#EXTINF:-1 tvg-logo="http://ghimtui.github.io/logo/phunu.png", Phụ Nữ
+http://freem3u.xyz/api/live/play.m3u8?vid=12
+
+#EXTINF:-1 tvg-logo="http://ghimtui.github.io/logo/thuanviet.png", Thuần Việt
+http://freem3u.xyz/api/live/play.m3u8?vid=13
 
 #EXTINF:-1 tvg-logo="http://ghimtui.github.io/logo/on_phimviet.png", ON Phim Việt
 #KODIPROP:inputstream=inputstream.adaptive
