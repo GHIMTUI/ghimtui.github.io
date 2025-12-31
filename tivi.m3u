@@ -212,19 +212,6 @@ http://live.fptplay53.net/fnxsd1/sonla_hls.smil/chunklist_b2500000.m3u8
 #EXTINF:-1 tvg-id="tuyenquang" tvg-logo="http://ghimtui.github.io/logo/tuyenquang.png", Tuyên Quang (ʜᴀ̀ ɢɪᴀɴɢ)
 http://live.fptplay53.net/fnxsd1/tuyenquang_hls.smil/chunklist_b2500000.m3u8
 
-#EXTINF:-1 tvg-logo="http://ghimtui.github.io/logo/htvcplus.png", HTVC+
-http://freem3u.xyz/api/live/play.m3u8?vid=132
-
-#EXTINF:-1 tvg-logo="http://ghimtui.github.io/logo/giadinh.png", Gia Đình
-http://freem3u.xyz/api/live/play.m3u8?vid=11
-
-#EXTINF:-1 tvg-logo="http://ghimtui.github.io/logo/phunu.png", Phụ Nữ
-http://freem3u.xyz/api/live/play.m3u8?vid=12
-
-#EXTINF:-1 tvg-logo="http://ghimtui.github.io/logo/thuanviet.png", Thuần Việt
-http://freem3u.xyz/api/live/play.m3u8?vid=13
-
-
 #EXTINF:-1 tvg-logo="http://ghimtui.github.io/logo/on_phimviet.png", ON Phim Việt
 #KODIPROP:inputstream=inputstream.adaptive
 #KODIPROP:inputstream.adaptive.manifest_type=dash
