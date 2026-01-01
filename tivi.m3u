@@ -50,6 +50,9 @@ http://live.fptplay53.net/epzhd2/vinhlong4hd_vhls.smil/chunklist_b5000000.m3u8
 #EXTINF:-1 tvg-id="vinhlong5hd" tvg-logo="http://ghimtui.github.io/logo/vinhlong5.png", Vĩnh Long 5 (ᴛʀᴀ̀ ᴠɪɴʜ)
 http://live.fptplay53.net/epzsd1/vinhlong5_vhls.smil/chunklist_b5000000.m3u8
 
+#EXTINF:-1 tvg-logo="http://ghimtui.github.io/logo/vinhlong6.png", Vĩnh Long 6
+http://freem3u.xyz/api/live/play.m3u8?vid=9902
+
 #--- 6. TÂY NINH (MN) ---
 #EXTINF:-1 tvg-id="tayninh1" tvg-logo="http://ghimtui.github.io/logo/tayninh.png", Tây Ninh (ʟᴏɴɢ ᴀɴ)
 http://live.mediatech.vn/live/2851dc2c9af68834814a89e61db0faee561/playlist.m3u8
@@ -206,9 +209,6 @@ http://live.fptplay53.net/fnxsd1/sonla_hls.smil/chunklist_b2500000.m3u8
 #--- 15. TUYÊN QUANG (MB) ---
 #EXTINF:-1 tvg-id="tuyenquang" tvg-logo="http://ghimtui.github.io/logo/tuyenquang.png", Tuyên Quang (ʜᴀ̀ ɢɪᴀɴɢ)
 http://live.fptplay53.net/fnxsd1/tuyenquang_hls.smil/chunklist_b2500000.m3u8
-
-#EXTINF:-1 tvg-logo="http://ghimtui.github.io/logo/phimviet.png", Phim Việt
-http://freem3u.xyz/api/live/play.m3u8?vid=9902
 
 #EXTINF:-1 tvg-logo="http://ghimtui.github.io/logo/on_phimviet.png", ON Phim Việt
 #KODIPROP:inputstream=inputstream.adaptive
