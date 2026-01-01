@@ -1,5 +1,4 @@
 #EXTM3U
-#EXT-X-TARGETDURATION: 15
 
 #--- 1. AN GIANG (MN) ---
 #EXTINF:-1 tvg-id="angiang1" tvg-logo="http://ghimtui.github.io/logo/angiang1.png", An Giang 1
@@ -53,7 +52,7 @@ http://live.fptplay53.net/epzsd1/vinhlong5_vhls.smil/chunklist_b5000000.m3u8
 
 #--- 6. TÂY NINH (MN) ---
 #EXTINF:-1 tvg-id="tayninh1" tvg-logo="http://ghimtui.github.io/logo/tayninh.png", Tây Ninh (ʟᴏɴɢ ᴀɴ)
-http://live.fptplay53.net/epzsd1/tayninhhd_hls.smil/chunklist_b2500000.m3u8
+http://live.mediatech.vn/live/2851dc2c9af68834814a89e61db0faee561/playlist.m3u8
 
 #EXTINF:-1 tvg-id="htv1" tvg-logo="http://ghimtui.github.io/logo/htv1.png", HTV1 (ʙᴀ̀ ʀɪ̣ᴀ ᴠᴜ̃ɴɢ ᴛᴀ̀ᴜ)
 http://live.fptplay53.net/epzhd1/htv1_vhls.smil/chunklist_b2500000.m3u8
@@ -90,7 +89,6 @@ http://live.fptplay53.net/epzsd1/lamdong02_hls.smil/chunklist_b2500000.m3u8
 #--- 6. KHÁNH HÒA (MT) ---
 #EXTINF:-1 tvg-id="khanhhoa" tvg-logo="http://ghimtui.github.io/logo/khanhhoa.png", Khánh Hòa
 http://live.fptplay53.net/epzsd1/khanhhoa_hls.smil/chunklist_b2500000.m3u8
-#http://tv.ktv.org.vn/hls/ktv1.m3u8
 
 #EXTINF:-1 tvg-id="khanhhoa1" tvg-logo="http://ghimtui.github.io/logo/khanhhoa1.png", Khánh Hòa 1 (ɴɪɴʜ ᴛʜᴜᴀ̣̂ɴ)
 http://live.fptplay53.net/epzsd1/khanhhoa01_hls.smil/chunklist_b2500000.m3u8
@@ -104,7 +102,7 @@ http://live.fptplay53.net/epzsd1/daklak_hls.smil/chunklist_b2500000.m3u8
 http://live.fptplay53.net/epzsd1/gialai01_hls.smil/chunklist_b2500000.m3u8
 
 #--- 9. QUẢNG NGÃI (MT) ---
-#EXTINF:-1 tvg-id="quangngai" tvg-logo="http://ghimtui.github.io/logo/quangngai.png", Quảng Ngãi (ᴋᴏɴ ᴛᴜᴍ)
+#EXTINF:-1 tvg-id="quangngai" tvg-logo="http://ghimtui.github.io/logo/quangngai.png", Quảng Ngãi 1
 #KODIPROP:inputstream.adaptive.manifest_type=hls
 #KODIPROP:inputstream.adaptive.stream_selection_type=adaptive
 #KODIPROP:inputstreamaddon=inputstream.adaptive
@@ -153,11 +151,8 @@ http://live.mediatech.vn/live/285f5449d7d7d2946e0bd2d54b7e60f25a4/chunklist.m3u8
 #EXTINF:-1 tvg-id="haiphong" tvg-logo="http://ghimtui.github.io/logo/haiphong.png", Hải Phòng
 http://live.fptplay53.net/fnxsd1/haiphong_hls.smil/chunklist_b2500000.m3u8
 
-#EXTINF:-1 tvg-id="haiphongplus" tvg-logo="http://ghimtui.github.io/logo/haiphongplus.png", Hải Phòng +
-http://live.fptplay53.net/fnxsd1/haiphongplus_hls.smil/chunklist_b2500000.m3u8
-
 #EXTINF:-1 tvg-id="haiphong3" tvg-logo="http://ghimtui.github.io/logo/haiphong3.png", Hải Phòng 3 (ʜᴀ̉ɪ ᴅᴜ̛ᴏ̛ɴɢ)
-http://live.fptplay53.net/fnxsd1/haiphong03_hls.smil/chunklist_b2500000.m3u8
+http://live.fptplay53.net/fnxsd1/haiphongplus_hls.smil/chunklist_b2500000.m3u8
 
 #--- 12. QUẢNG NINH (MB) ---
 #EXTINF:-1 tvg-id="quangninh1" tvg-logo="http://ghimtui.github.io/logo/quangninh1.png", Quảng Ninh 1
@@ -211,6 +206,9 @@ http://live.fptplay53.net/fnxsd1/sonla_hls.smil/chunklist_b2500000.m3u8
 #--- 15. TUYÊN QUANG (MB) ---
 #EXTINF:-1 tvg-id="tuyenquang" tvg-logo="http://ghimtui.github.io/logo/tuyenquang.png", Tuyên Quang (ʜᴀ̀ ɢɪᴀɴɢ)
 http://live.fptplay53.net/fnxsd1/tuyenquang_hls.smil/chunklist_b2500000.m3u8
+
+#EXTINF:-1 tvg-logo="http://ghimtui.github.io/logo/phimviet.png", Phim Việt
+http://freem3u.xyz/api/live/play.m3u8?vid=9902
 
 #EXTINF:-1 tvg-logo="http://ghimtui.github.io/logo/on_phimviet.png", ON Phim Việt
 #KODIPROP:inputstream=inputstream.adaptive
@@ -307,6 +305,9 @@ http://livevlisctcdnw.seenow.vn/livesnv2/GIAITRI_TV_HD/manifest.mpd
 #KODIPROP:inputstream.adaptive.license_key=f2abb744acd24369943a79635f4fa43a:f674652c13211536e0e21d9ea860ca90
 #KODIPROP:inputstream.adaptive.stream_headers=User-Agent=MXPlayer/1.26.7 (Linux; Android 7.0; vi-VN; Redmi Note 4 Build/AL1512-mido-build-20171113213139)
 http://livevlisctcdnw.seenow.vn/livesnv2/D_DRAMAS_HD/manifest.mpd
+
+#EXTINF:-1 tvg-id="sctv6hd"  tvg-logo="http://ghimtui.github.io/logo/sctv6.png", SCTV6
+http://live.fptplay53.net/epzhd2/film360_vhls.smil/chunklist_b5000000.m3u8
 
 #EXTINF:-1 tvg-id="cartoonhd" tvg-logo="https://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/MSky/CartoonNetwork.png", Cartoon Network
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
