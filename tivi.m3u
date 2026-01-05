@@ -105,9 +105,6 @@ http://live.fptplay53.net/epzsd1/gialai01_hls.smil/chunklist_b2500000.m3u8
 #EXTINF:-1 tvg-id="quangngai" tvg-logo="http://ghimtui.github.io/logo/quangngai1.png", Quảng Ngãi 1
 http://live.mediatech.vn/live/285aaa79b4b265a457d81bb72bc32e2c114/playlist.m3u8
 
-#EXTINF:-1 tvg-id="quangngai" tvg-logo="http://ghimtui.github.io/logo/quangngai2.png", Quảng Ngãi 2
-http://ghimtui.github.io/logo/qngtv2_video.mp4
-
 #--- 1. ĐÀ NẴNG (MT) ---
 #EXTINF:-1 tvg-id="danang1" tvg-logo="http://ghimtui.github.io/logo/danang1.png", Đà Nẵng 1
 http://live.fptplay53.net/epzsd1/danang1_hls.smil/chunklist_b2500000.m3u8
