@@ -339,7 +339,7 @@ http://live.fptplay53.net/fnxhd1/vtv9_vhls.smil/chunklist_b5000000.m3u8
 #EXTINF:-1 tvg-logo="http://ghimtui.github.io/logo/phimaumy.png", Phim Âu Mỹ
 http://freem3u.xyz/api/live/play.m3u8?vid=9903
 
-#EXTINF:-1 tvg-logo="http://ghimtui.github.io/logo/hoathinh.png", Hoạt Hình
+#EXTINF:-1 tvg-logo="http://ghimtui.github.io/logo/phimhoathinh.png", Phim Hoạt Hình
 http://freem3u.xyz/api/live/play.m3u8?vid=9934
 
 #EXTINF:-1 tvg-id="cartoonhd" tvg-logo="http://ghimtui.github.io/logo/cartoonnetwork.png", Cartoon Network
