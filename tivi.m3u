@@ -197,7 +197,7 @@ http://live.fptplay53.net/fnxsd1/laichau_hls.smil/chunklist_b2500000.m3u8
 
 #--- 8. LẠNG SƠN (MB) ---
 #EXTINF:-1 tvg-id="langson" tvg-logo="http://ghimtui.github.io/logo/langson.png", Lạng Sơn
-http://stream.langsontv.vn/live/285c78da0c246524c90917842f8de03bd21/chunklist.m3u8
+https://stream.langsontv.vn/live/285c78da0c246524c90917842f8de03bd21/chunklist.m3u8
 
 #EXTINF:-1 tvg-id="sonla" tvg-logo="http://ghimtui.github.io/logo/sonla.png" , Sơn La
 http://live.fptplay53.net/fnxsd1/sonla_hls.smil/chunklist_b2500000.m3u8
@@ -207,16 +207,16 @@ http://live.fptplay53.net/fnxsd1/sonla_hls.smil/chunklist_b2500000.m3u8
 http://live.fptplay53.net/fnxsd1/tuyenquang_hls.smil/chunklist_b2500000.m3u8
 
 #EXTINF:-1 tvg-logo="http://ghimtui.github.io/logo/htvcplus.png", HTVC+
-http://freem3u.xyz/api/live/play.m3u8?vid=132
+http://live.fptplay53.net/epzhd1/htvcplus_vhls.smil/chunklist_b5000000.m3u8
 
 #EXTINF:-1 tvg-logo="http://ghimtui.github.io/logo/giadinh.png", Gia Đình
-http://freem3u.xyz/api/live/play.m3u8?vid=11
+http://live.fptplay53.net/epzhd1/htvcgiadinh_vhls.smil/chunklist_b5000000.m3u8
 
 #EXTINF:-1 tvg-logo="http://ghimtui.github.io/logo/phunu.png", Phụ Nữ
-http://freem3u.xyz/api/live/play.m3u8?vid=12
+http://live.fptplay53.net/epzhd1/htvcphunu_vhls.smil/chunklist_b5000000.m3u8
 
 #EXTINF:-1 tvg-logo="http://ghimtui.github.io/logo/thuanviet.png", Thuần Việt
-http://freem3u.xyz/api/live/play.m3u8?vid=13
+http://live.fptplay53.net/epzhd1/htvcthuanviethd_vhls.smil/chunklist_b5000000.m3u8
 
 #EXTINF:-1 tvg-logo="http://ghimtui.github.io/logo/phimviet.png", Phim Việt
 http://freem3u.xyz/api/live/play.m3u8?vid=9902
