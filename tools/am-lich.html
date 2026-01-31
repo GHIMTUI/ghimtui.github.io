@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lịch Âm Dương Đồng Bộ</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunar-javascript/1.6.12/lunar.js"></script>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { display: flex; justify-content: center; align-items: center; min-height: 100vh; background-color: #f0f2f5; font-family: 'Segoe UI', sans-serif; }
+        .container { width: 380px; display: flex; flex-direction: column; gap: 12px; padding: 20px; background: #fff; border-radius: 24px; box-shadow: 0 15px 35px rgba(0,0,0,0.1); }
+        .box { border-radius: 16px; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 18px; text-align: center; }
+        
+        .box-solar { background: #fff; color: #1a73e8; border: 2px solid #1a73e8; }
+        .box-clock { background: #202124; color: #00e676; border: 1px solid #333; }
+        .box-lunar { background: #fffefb; color: #d32f2f; border: 2px solid #d32f2f; }
+        
+        .label { font-size: 13px; text-transform: uppercase; font-weight: 800; opacity: 0.9; margin-bottom: 4px; letter-spacing: 1px; }
+        .main-date { font-size: 28px; font-weight: 800; margin-bottom: 5px; }
+        .clock-time { font-family: 'Courier New', monospace; font-size: 38px; font-weight: bold; }
+        .clock-detail { font-size: 13px; color: #00e676; margin-top: 6px; font-weight: 600; opacity: 0.8; }
+        
+        .extra-info { display: flex; flex-direction: column; gap: 6px; margin-top: 12px; width: 100%; }
+        .badge-item { 
+            width: 100%; font-size: 13px; font-weight: bold; padding: 8px 15px; border-radius: 10px; 
+            display: flex; justify-content: space-between; align-items: center;
+        }
+        
+        .box-solar .badge-item { background: #f0f7ff; border: 1px solid #c2e0ff; color: #1557b0; }
+        .box-lunar .badge-item { background: #fff5f5; border: 1px solid #ffcdd2; color: #b71c1c; }
+          
+        .badge-item span { font-weight: 800; }
+        .sub-label { font-size: 13px; font-weight: 700; text-transform: uppercase; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="box box-clock">
+            <div class="clock-time" id="clock-hms">00:00:00</div>
+            <div class="clock-detail" id="clock-full-info">Đang tính...</div>
+        </div>
+
+        <div class="box box-solar">
+            <div class="label" id="solar-label">---</div>
+            <div class="main-date" id="solar-main">00/00/0000</div>
+            
+            <div class="extra-info">
+                          <div class="badge-item">Mùa: <span id="solar-season">---</span></div>
+                <div class="badge-item">Cung: <span id="solar-zodiac">---</span></div>
+               <div class="badge-item">Hành: <span id="solar-celestial">---</span></div>
+                <div class="badge-item">Tuần: <span id="solar-week">---</span></div>
+                <div class="badge-item">Quý: <span id="solar-quarter">---</span></div>
+            </div>
+        </div>
+
+        <div class="box box-lunar">
+            <div class="sub-label" id="thu-can-chi">---</div>
+            <div class="main-date" id="lunar-main-full">00/00/0000</div>
+            <div style="font-size: 12px; font-weight: 700; text-transform: uppercase;" id="lunar-can-chi">---</div>
+            
+            <div class="extra-info">
+                <div class="badge-item">Tiết: <span id="lunar-tiet-khi">---</span></div>
+                <div class="badge-item">Nạp: <span id="lunar-nap-am">---</span></div>
+                <div class="badge-item">Trực: <span id="lunar-truc">---</span></div>
+                <div class="badge-item">Sao: <span id="lunar-sao">---</span></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const CAN = "Giáp Ất Bính Đinh Mậu Kỷ Canh Tân Nhâm Quý".split(" ");
+        const CHI = "Tý Sửu Dần Mão Thìn Tỵ Ngọ Mùi Thân Dậu Tuất Hợi".split(" ");
+        const TIET = {"立春":"Lập Xuân","雨水":"Vũ Thủy","惊蛰":"Kinh Trập","春分":"Xuân Phân","清明":"Thanh Minh","谷雨":"Cốc Vũ","立夏":"Lập Hạ","小满":"Tiểu Mãn","芒种":"Mang Chủng","夏至":"Hạ Chí","小暑":"Tiểu Thử","大暑":"Đại Thử","立秋":"Lập Thu","处暑":"Xử Thử","白露":"Bạch Lộ","秋分":"Thu Phân","寒露":"Hàn Lộ","霜降":"Sương Giáng","立冬":"Lập Đông","小雪":"Tiểu Tuyết","大雪":"Đại Thuyết","冬至":"Đông Chí","小寒":"Tiểu Hàn","大寒":"Đại Hàn"};
+        const TRUC = {"建":"Kiến","除":"Trừ","满":"Mãn","平":"Bình","定":"Định","执":"Chấp","破":"Phá","危":"Nguy","成":"Thành","收":"Thu","开":"Khai","闭":"Bế"};
+        const SAO = {"角":"Giác Mộc Giao","亢":"Cang Kim Long","氐":"Đê Thổ Lạc","房":"Phòng Nhật Thỏ","心":"Tâm Nguyệt Hồ","尾":"Vĩ Hỏa Hổ","箕":"箕 Thủy Báo","斗":"Đẩu Mộc Giải","牛":"Ngưu Kim Ngưu","女":"Nữ Thổ Bức","虚":"Hư Nhật Thử","危":"Nguy Nguyệt Yến","室":"Thất Hỏa Trư","壁":"Bích Thủy Du","奎":"Khuê Mộc Lang","娄":"Lâu Kim Cẩu","胃":"Vị Thổ Trĩ","昴":"Mão Nhật Kê","毕":"Tất Nguyệt Ô","觜":"Chủy Hỏa Hầu","参":"Sâm Thủy Viên","井":"Tỉnh Mộc Hãn","鬼":"Quỷ Kim Dương","柳":"Liễu Thổ Chương","星":"Tinh Nhật Mã","张":"Trương Nguyệt Lộc","翼":"Dực Hỏa Xà","轸":"Chẩn Thủy Dẫn"};
+        const NAP_AM = {"Giáp Tý": "Hải Trung Kim", "Ất Sửu": "Hải Trung Kim", "Bính Dần": "Lô Trung Hỏa", "Đinh Mão": "Lô Trung Hỏa", "Mậu Thìn": "Đại Lâm Mộc", "Kỷ Tỵ": "Đại Lâm Mộc", "Canh Ngọ": "Lộ Bàng Thổ", "Tân Mùi": "Lộ Bàng Thổ", "Nhâm Thân": "Kiếm Phong Kim", "Quý Dậu": "Kiếm Phong Kim", "Giáp Tuất": "Sơn Đầu Hỏa", "Ất Hợi": "Sơn Đầu Hỏa", "Bính Tý": "Giản Hạ Thủy", "Đinh Sửu": "Giản Hạ Thủy", "Mậu Dần": "Thành Đầu Thổ", "Kỷ Mão": "Thành Đầu Thổ", "Canh Thìn": "Bạch Lạp Kim", "Tân Tỵ": "Bạch Lạp Kim", "Nhâm Ngọ": "Dương Liễu Mộc", "Quý Mùi": "Dương Liễu Mộc", "Giáp Thân": "Tuyền Trung Thủy", "Ất Dậu": "Tuyền Trung Thủy", "Bính Tuất": "Ốc Thượng Thổ", "Đinh Hợi": "Ốc Thượng Thổ", "Mậu Tý": "Tích Lịch Hỏa", "Kỷ Sửu": "Tích Lịch Hỏa", "Canh Dần": "Tùng Bách Mộc", "Tân Mão": "Tùng Bách Mộc", "Nhâm Thìn": "Trường Lưu Thủy", "Quý Tỵ": "Trường Lưu Thủy", "Giáp Ngọ": "Sa Trung Kim", "Ất Mùi": "Sa Trung Kim", "Bính Thân": "Sơn Hạ Hỏa", "Đinh Dậu": "Sơn Hạ Hỏa", "Mậu Tuất": "Bình Địa Mộc", "Kỷ Hợi": "Bình Địa Mộc", "Canh Tý": "Bích Thượng Thổ", "Tân Sửu": "Bích Thượng Thổ", "Nhâm Dần": "Kim Bạch Kim", "Quý Mão": "Kim Bạch Kim", "Giáp Thìn": "Phú Đăng Hỏa", "Ất Tỵ": "Phú Đăng Hỏa", "Bính Ngọ": "Thiên Thượng Hỏa", "Đinh Mùi": "Thiên Thượng Hỏa", "Mậu Thân": "Đại Trạch Thổ", "Kỷ Dậu": "Đại Trạch Thổ", "Canh Tuất": "Thoa Xuyến Kim", "Tân Hợi": "Thoa Xuyến Kim", "Nhâm Tý": "Tang Đố Mộc", "Quý Sửu": "Tang Đố Mộc", "Giáp Dần": "Đại Khê Thủy", "Ất Mão": "Đại Khê Thủy", "Bính Thìn": "Sa Trung Thổ", "Đinh Tỵ": "Sa Trung Thổ", "Mậu Ngọ": "Thiên Thượng Hỏa", "Kỷ Mùi": "Thiên Thượng Hỏa", "Canh Thân": "Thạch Lựu Mộc", "Tân Dậu": "Thạch Lựu Mộc", "Nhâm Tuất": "Đại Hải Thủy", "Quý Hợi": "Đại Hải Thủy"};
+
+        const $ = id => document.getElementById(id);
+        const els = {
+            hms: $('clock-hms'), info: $('clock-full-info'), 
+            sLabel: $('solar-label'), sMain: $('solar-main'),
+            sCelestial: $('solar-celestial'), // Badge mới
+            sSeason: $('solar-season'), sZod: $('solar-zodiac'), sWeek: $('solar-week'), sQuart: $('solar-quarter'),
+            tCC: $('thu-can-chi'), lMain: $('lunar-main-full'), lCC: $('lunar-can-chi'), 
+            lTruc: $('lunar-truc'), lSao: $('lunar-sao'), lTiet: $('lunar-tiet-khi'), lNapAm: $('lunar-nap-am')
+        };
+
+        const transGZ = gz => {
+            if (!gz) return "---";
+            let res = "";
+            for (let c of gz) {
+                let idxCan = "甲乙丙丁戊己庚辛壬癸".indexOf(c);
+                let idxChi = "子丑寅卯辰巳午未申酉戌亥".indexOf(c);
+                if (idxCan !== -1) res += CAN[idxCan];
+                if (idxChi !== -1) res += " " + CHI[idxChi];
+            }
+            return res.trim();
+        };
+
+        const getWeekNumber = (d) => {
+            const date = new Date(d.getTime());
+            date.setHours(0, 0, 0, 0);
+            date.setDate(date.getDate() + 3 - (date.getDay() + 6) % 7);
+            const week1 = new Date(date.getFullYear(), 0, 4);
+            return 1 + Math.round(((date.getTime() - week1.getTime()) / 86400000 - 3 + (week1.getDay() + 6) % 7) / 7);
+        };
+
+        function update() {
+            const now = new Date();
+            const h = now.getHours(), d = now.getDate(), m = now.getMonth(), y = now.getFullYear();
+            const dayIdx = now.getDay();
+            
+            els.hms.innerText = now.toLocaleTimeString('vi-VN');
+            
+            const solar = Solar.fromDate(now);
+            const lunar = solar.getLunar();
+
+            // ĐỒNG HỒ DETAIL
+            let canh = (h >= 19 || h < 5) ? "Canh " + ["Một", "Hai", "Ba", "Tư", "Năm"][Math.floor(h >= 19 ? (h-19)/2 : (h+5)/2)] : "Ban ngày";
+            els.info.innerText = `Giờ ${transGZ(lunar.getTimeInGanZhi())} | ${canh} | ${["Một", "Hai", "Ba", "Bốn", "Năm", "Sáu", "Bảy", "Tám"][Math.floor(h/3)]} Khắc`;
+
+            // DƯƠNG LỊCH EXTRA
+            els.sLabel.innerText = ["Chủ Nhật", "Thứ Hai", "Thứ Ba", "Thứ Tư", "Thứ Năm", "Thứ Sáu", "Thứ Bảy"][dayIdx];
+            els.sMain.innerText = now.toLocaleDateString('en-GB');
+            
+            // Cập nhật Thất Diệu
+            const celestialNames = ["Mặt Trời", "Mặt Trăng", "Sao Hỏa", "Sao Thủy", "Sao Mộc", "Sao Kim", "Sao Thổ"];
+            els.sCelestial.innerText = celestialNames[dayIdx];
+
+            const currentJieQi = lunar.getJieQi() || lunar.getPrevJieQi().getName();
+            const seasons = {'Xuân': ["立春", "雨水", "惊蛰", "春分", "清明", "谷雨"], 'Hạ': ["立夏", "小满", "芒种", "夏至", "小暑", "大暑"], 'Thu': ["立秋", "处暑", "白露", "秋分", "寒露", "霜降"], 'Đông': ["立冬", "小雪", "大雪", "冬至", "小寒", "大寒"]};
+            let seasonName = "---";
+            for (let s in seasons) if (seasons[s].includes(currentJieQi)) seasonName = s;
+            els.sSeason.innerText = seasonName;
+
+            const zods = ["Ma Kết","Bảo Bình","Song Ngư","Bạch Dương","Kim Ngưu","Song Tử","Cự Giải","Sư Tử","Xử Nữ","Thiên Bình","Bọ Cạp","Nhân Mã","Ma Kết"];
+            els.sZod.innerText = d <= [19, 18, 20, 19, 20, 20, 22, 22, 22, 22, 21, 21][m] ? zods[m] : zods[m+1];
+            els.sWeek.innerText = getWeekNumber(now);
+            els.sQuart.innerText = Math.floor(m / 3) + 1;
+
+            // ÂM LỊCH EXTRA
+            els.tCC.innerText = ["Nhật", "Nguyệt", "Hỏa", "Thủy", "Mộc", "Kim", "Thổ"][dayIdx] + " Diệu";
+            els.lMain.innerText = `${lunar.getDay().toString().padStart(2,'0')}/${lunar.getMonth().toString().padStart(2,'0')}/${lunar.getYear()}`;
+            const yearGZ = transGZ(lunar.getYearInGanZhi());
+            els.lCC.innerText = `${transGZ(lunar.getDayInGanZhi())} - ${transGZ(lunar.getMonthInGanZhi())} - ${yearGZ}`;
+            
+            els.lNapAm.innerText = NAP_AM[yearGZ] || "---";
+            els.lTiet.innerText = TIET[currentJieQi] || "---";
+            els.lTruc.innerText = TRUC[lunar.getZhiXing()] || lunar.getZhiXing();
+            els.lSao.innerText = SAO[lunar.getXiu()] || lunar.getXiu();
+        }
+
+        setInterval(update, 1000);
+        update();
+    </script>
+</body>
+</html>
