@@ -40,6 +40,9 @@ http://live.fptplay53.net/epzhd1/htv3_vhls.smil/chunklist_b5000000.m3u8
 #EXTINF:-1 tvg-id="htvkey" tvg-logo="http://ghimtui.github.io/logo/htvkey.png", HTV4
 http://live.fptplay53.net/epzhd1/htv4_vhls.smil/chunklist_b5000000.m3u8
 
+#EXTINF:-1 tvg-id="htv5" tvg-logo="http://ghimtui.github.io/logo/htv5.png", HTV5
+http://live.fptplay53.net/fnxsd1/btv9_hls.smil/chunklist_b2500000.m3u8
+
 #EXTINF:-1 tvg-id="htv7hd" tvg-logo="http://ghimtui.github.io/logo/htv7.png", HTV7
 http://live.fptplay53.net/epzhd1/htv7hd_vhls.smil/chunklist_b5000000.m3u8
 
