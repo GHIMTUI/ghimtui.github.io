@@ -199,9 +199,6 @@ http://live.fptplay53.net/fnxsd1/phutho_hls.smil/chunklist_b2500000.m3u8
 #EXTINF:-1 tvg-id="quangngai" tvg-logo="http://ghimtui.github.io/logo/quangngai1.png", Quảng Ngãi 1 
 http://live.mediatech.vn/live/285aaa79b4b265a457d81bb72bc32e2c114/playlist.m3u8
 
-#EXTINF:-1 tvg-id="quangngai2" tvg-logo="http://ghimtui.github.io/logo/quangngai2.png", Quảng Ngãi 2 
-http://ace.hoiquan.click/module/IPTV/?id=QNgTV2&accKenh=vuminhthanh1
-
 #--- QUẢNG NINH (MB) ---
 
 #EXTINF:-1 tvg-id="quangninh1" tvg-logo="http://ghimtui.github.io/logo/quangninh1.png", Quảng Ninh 1 
