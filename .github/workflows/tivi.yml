@@ -1,63 +1,71 @@
-name: Tối ưu danh sách kênh
+name: Check IPTV Links
+
 on:
   schedule:
-    - cron: '0 */2 * * *' # Tự động chạy mỗi 2 tiếng
-  workflow_dispatch:      # Cho phép bạn bấm nút chạy ngay lập tức
+    # Chạy mỗi 5-10 phút (tùy vào độ trễ của GitHub)
+    - cron: '*/10 * * * *'
+  workflow_dispatch: # Cho phép nhấn nút chạy thủ công
 
 jobs:
-  update-list:
+  check-links:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
-      - name: Setup Python
+      - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.x'
 
-      - name: Run Script
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Run link checker script
         run: |
-          python <<EOF
+          python - <<EOF
           import requests
+          import re
 
-          # Cấu hình danh sách link cho An Giang 1
-          # Link nào đứng trước sẽ được ưu tiên kiểm tra trước
-          list_agiang1 = [
-              "http://tv.angiangtv.vn/live/kgtv/kgtv.m3u8",
-              "http://live.fptplay53.net/epzsd1/angiang01_hls.smil/chunklist_b2500000.m3u8"
-          ]
+          def check_link(url):
+              try:
+                  # Chỉ lấy header để tiết kiệm băng thông, timeout 5s
+                  response = requests.head(url, timeout=5, allow_redirects=True)
+                  return response.status_code == 200
+              except:
+                  return False
 
-          def check_link(urls):
-              for url in urls:
-                  try:
-                      # Kiểm tra phản hồi từ server trong 5 giây
-                      r = requests.head(url, timeout=5, allow_redirects=True)
-                      if r.status_code == 200:
-                          return url
-                  except:
-                      continue
-              return urls[0] # Nếu hỏng hết thì mặc định lấy link đầu tiên
+          with open('tivi.m3u', 'r', encoding='utf-8') as f:
+              lines = f.readlines()
 
-          # Chọn link tốt nhất
-          final_link = check_link(list_agiang1)
+          new_content = []
+          header = lines[0] if lines[0].startswith('#EXTM3U') else '#EXTM3U\n'
+          new_content.append(header)
 
-          # Nội dung file M3U (Chỉ có 1 kênh duy nhất)
-          content = f"""#EXTM3U
+          # Duyệt qua từng cặp dòng (thông tin kênh và link)
+          for i in range(len(lines)):
+              if lines[i].startswith('#EXTINF'):
+                  info = lines[i]
+                  url = lines[i+1].strip() if (i+1) < len(lines) else ""
+                  
+                  if url and check_link(url):
+                      new_content.append(info)
+                      new_content.append(url + '\n')
+                      print(f"✅ Live: {url}")
+                  else:
+                      print(f"❌ Dead/Skipped: {url}")
 
-#--- AN GIANG (MN) ---
-#EXTINF:-1 tvg-id="angiang1" tvg-logo="http://ghimtui.github.io/logo/angiang1.png", An Giang 1
-{final_link}
-"""
-          # Ghi vào file tivi.m3u
-          with open("tivi.m3u", "w", encoding="utf-8") as f:
-              f.write(content)
+          with open('tivi.m3u', 'w', encoding='utf-8') as f:
+              f.writelines(new_content)
           EOF
 
-      - name: Push update
+      - name: Commit and push changes
         run: |
-          git config --local user.email "bot@github.com"
-          git config --local user.name "IPTV-Bot"
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
           git add tivi.m3u
-          git commit -m "Cập nhật link An Giang 1 mới nhất" || exit 0
-          git push
+          if git commit -m "Auto-update: Clean dead links" ; then
+            git push
+          else
+            echo "No changes to commit"
+          fi
