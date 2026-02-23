@@ -92,3 +92,15 @@ www.tvbox.one##.google-aiuf
 www.tvbox.one##.homeadv
 www.tvbox.one##.homeadv>span
 www.xemlicham.com###adInstall
+vtcnews.vn##img[src="https://cdn-i.vtcnews.vn/resize/DPr7-92g-bRCzx_-n1qXvywXaVlcb5LF0/upload/2025/11/06/app-17544833.jpg"]
+vtcnews.vn##.top-ad
+vtcnews.vn##a[rel="noopener noreferrer nofollow"]>div
+vtcnews.vn##a[rel="noopener noreferrer nofollow"]
+vtcnews.vn##.aanetwork-ads-box
+vovgiaothong.vn##img[src="https://i.ex-cdn.com/vovgiaothong.vn/files/qc/2022/04/18/abb76d78-fe1c-4274-82ff-909512d1f628.jpeg"]
+www.baodongthap.vn##img[src="https://ads.baodongthap.vn/www/images/0149b6236ed2c2ce98c9eb787098875c.jpg"]
+www.baodongthap.vn##img[src="https://ads.baodongthap.vn/www/images/d864a0dbeda9ee44dec8ba9711be0dd5.jpg"]
+www.baodongthap.vn##img[src="https://ads.baodongthap.vn/www/images/d4e586bbe0220fff83b80e9d4057a316.jpg"]
+baogialai.com.vn##img[src="https://cdn.baogialai.com.vn/images/1d5bcac7f44e7d6a62b237529fada32a17e5407b4fab398cc9ab053379c53c005ec111f5b967fbac1bc633540816f2c7/dat-xanh-2025.jpg"]
+baotayninh.vn##img[src="https://media.baotayninh.vn/upload/image/202512/original/54f5f6cfb70ac830b53392a6dcf01d00.png"]
+baotayninh.vn##img[src="https://media.baotayninh.vn/upload/image/202512/original/1b9332ebcfd0dc1c4de4a4b2d766fa8e.png"]
