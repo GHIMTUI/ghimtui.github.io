@@ -1,39 +1,35 @@
-import os
+name: Auto Sort Ads List
+on:
+  push:
+    paths:
+      - 'z-ads/ads.txt'
 
-          file_path = "z-ads/ads.txt"
-          with open(file_path, 'r') as f:
-              lines = f.readlines()
+permissions:
+  contents: write
 
-          header = [line.strip() for line in lines if line.startswith(('!', '['))]
-          # Lọc nội dung, xóa khoảng trắng và loại bỏ trùng lặp
-          body = list(set([line.strip() for line in lines if line.strip() and not line.startswith(('!', '['))]))
+jobs:
+  sort-and-clean:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Process Ads File
+        id: count
+        run: |
+          FILE="z-ads/ads.txt"
+          BEFORE=$(wc -l < "$FILE")
           
-          # Sắp xếp theo alphabet
-          body.sort()
-
-          with open(file_path, 'w') as f:
-              # Ghi Header
-              for h in header:
-                  f.write(h + '\n')
-              if header: f.write('\n')
-              
-              last_section = ""
-              for line in body:
-                  first_char = line[0].upper()
-                  
-                  # Xác định phân mục (Section)
-                  if first_char.isdigit():
-                      current_section = "0-9"
-                  elif first_char.isalpha():
-                      current_section = first_char
-                  else:
-                      current_section = "OTHERS" # Cho các ký tự đặc biệt khác nếu có
-
-                  # Ghi tiêu đề phân mục nếu có sự thay đổi
-                  if current_section != last_section:
-                      f.write(f"\n# --- {current_section} ---\n")
-                      last_section = current_section
-                  
-                  f.write(line + '\n')
+          # Tách header, lọc trùng và sắp xếp body
+          grep -E "^!|^\[" "$FILE" > h.tmp || touch h.tmp
+          grep -vE "^!|^\[" "$FILE" | sed 's/[[:space:]]*$//' | grep . | sort -u > b.tmp
+          cat h.tmp b.tmp > "$FILE"
           
-          print(f"Processed: {len(body)} lines.")
+          AFTER=$(wc -l < "$FILE")
+          echo "diff=$((BEFORE - AFTER))" >> $GITHUB_OUTPUT
+          rm h.tmp b.tmp
+
+      - name: Commit and Push
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Sắp xếp & xoá ${{ steps.count.outputs.diff }} dòng!"
+          file_pattern: 'z-ads/ads.txt'
