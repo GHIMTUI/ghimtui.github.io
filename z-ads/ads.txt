@@ -44,3 +44,12 @@ www.accuweather.com##.adhesion-header
 www.speedtest.net###modal-overlay
 www.speedtest.net##.mobile-pretest-new
 www.speedtest.net##.modal-content
+vn.xemtv.net##div[data-widget-id="1771082"]
+vn.xemtv.net##img[src="/banner/F168-Sidebar.gif"]
+vn.xemtv.net##div[data-widget-id="1886588"]
+vn.xemtv.net##div[data-widget-id="1845723"]
+vn.xemtv.net##img[title="Xem Kênh VTV3 trực tiếp - Giải trí tổng hợp"]
+vn.xemtv.net###bottom650
+vn.xemtv.net##.d-block
+vn.xemtv.net##.d-inline-block
+m.tv360.vn##.css-1xdipk
