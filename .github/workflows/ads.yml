@@ -1,4 +1,4 @@
-name: Auto Sort Ads List
+name: Auto Sort & Categorize Ads List
 on:
   push:
     paths:
@@ -13,23 +13,42 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Process Ads File
-        id: count
+      - name: Process and Categorize Ads
+        id: process
+        shell: python
         run: |
-          FILE="z-ads/ads.txt"
-          BEFORE=$(wc -l < "$FILE")
+          import os
+
+          file_path = "z-ads/ads.txt"
+          with open(file_path, 'r') as f:
+              lines = f.readlines()
+
+          header = [line.strip() for line in lines if line.startswith(('!', '['))]
+          # Lọc các dòng nội dung, xóa khoảng trắng và loại bỏ trùng lặp
+          body = list(set([line.strip() for line in lines if line.strip() and not line.startswith(('!', '['))]))
           
-          # Tách header, lọc trùng và sắp xếp body
-          grep -E "^!|^\[" "$FILE" > h.tmp || touch h.tmp
-          grep -vE "^!|^\[" "$FILE" | sed 's/[[:space:]]*$//' | grep . | sort -u > b.tmp
-          cat h.tmp b.tmp > "$FILE"
+          # Sắp xếp theo alphabet
+          body.sort()
+
+          # Ghi lại vào file (Header trước, sau đó là nội dung đã sắp xếp)
+          with open(file_path, 'w') as f:
+              for h in header:
+                  f.write(h + '\n')
+              if header: f.write('\n') # Thêm dòng trống sau header cho đẹp
+              
+              last_char = ""
+              for line in body:
+                  # Tùy chọn: Thêm comment phân cách khi đổi chữ cái đầu (A, B, C...)
+                  current_char = line[0].upper()
+                  if current_char != last_char and current_char.isalpha():
+                      f.write(f"\n# --- {current_char} ---\n")
+                      last_char = current_char
+                  f.write(line + '\n')
           
-          AFTER=$(wc -l < "$FILE")
-          echo "diff=$((BEFORE - AFTER))" >> $GITHUB_OUTPUT
-          rm h.tmp b.tmp
+          print(f"diff={len(lines) - (len(header) + len(body))}")
 
       - name: Commit and Push
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "Sắp xếp & xoá ${{ steps.count.outputs.diff }} dòng!"
+          commit_message: "Auto-categorize & Clean ads list"
           file_pattern: 'z-ads/ads.txt'
