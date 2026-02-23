@@ -4,6 +4,9 @@
 ! Expires: 1s
 ! Version: 34.64.00
 ! ---------------
+laodong.vn##.notification-header__msg
+baoquangninh.vn##img[src="https://media.baoquangninh.vn/upload/image/202602/medium/2471521_nha_hang_cua_vang_14222307.jpg"]
+hanoimoi.vn##img[height="100"]
 51degrees.com##.b-img
 baodongnai.com.vn##img[src^="/file/adman/e7837c02876411cd0187645a2551379f/297e39ad979d28ca01979d2a94c6001d_20260216173010.jpg"]
 baodongnai.com.vn##img[src^="/file/adman/e7837c02876411cd0187645a2551379f/297e39ad979d28ca01979d2a94f00022_20260122111522.png"]
