@@ -1,21 +1,31 @@
-! Title: Custom Adblock Filters ! Description: Bộ lọc tùy chỉnh cho các trang web Việt Nam và quốc tế (Thanh Nien, Gmail, Hoang Ha Mobile, Vietnamnet, etc.) ! Expires: 7 days ! Version: 1.0.0
+! Title: GHIMTUI ADS
+! Description: Bộ lọc quảng cáo 
+! Expires: 7 days 
+! Version: 1.0.0
 
-! --- Thanh Niên --- thanhnien.vn##.box-category-link-with-avatar
+||thanhnien.vn##.box-category-link-with-avatar
 
-! --- Gmail --- mail.google.com##.MefFWe mail.google.com##.ObxnS
+||mail.google.com##.MefFWe 
+||mail.google.com##.ObxnS
 
-! --- Hoàng Hà Mobile --- hoanghamobile.com##img[src="/Uploads/2026/02/12/moi-03.png"] hoanghamobile.com##.jquery-modal
+||hoanghamobile.com##img[src="/Uploads/2026/02/12/moi-03.png"] 
+||hoanghamobile.com##.jquery-modal
 
-! --- QPVN --- qpvn.vn##.panel
+||qpvn.vn##.panel
 
-! --- Viettel --- viettel.vn##.popup-open-app viettel.vn##.contact-now viettel.vn##.banner-img viettel.vn##.banner-container viettel.vn##.slick-current > div viettel.vn##.slick-track
+||viettel.vn##.popup-open-app 
+||viettel.vn##.contact-now 
+||viettel.vn##.banner-img 
+||viettel.vn##.banner-container 
+||viettel.vn##.slick-current > div 
+||viettel.vn##.slick-track
 
-! --- 51Degrees --- 51degrees.com##.b-img
+||51degrees.com##.b-img
 
-! --- AccuWeather --- www.accuweather.com##.adhesion-header
+||www.accuweather.com##.adhesion-header
 
-! --- Báo Đồng Nai --- baodongnai.com.vn##img[src^="/file/adman/e7837c02876411cd0187645a2551379f/8a10a6948791f7260187925fc3b7000a_20240508161811.jpg"] baodongnai.com.vn##img[src^="/file/adman/e7837c02876411cd0187645a2551379f/297e39ad979d28ca01979d2a94f00022_20260122111522.png"] baodongnai.com.vn##img[src^="/file/adman/e7837c02876411cd0187645a2551379f/297e39ad979d28ca01979d2a94c6001d_20260216173010.jpg"] baodongnai.com.vn##img[src^="/file/adman/e7837c02876411cd0187645a2551379f/8a10a6948791f7260187925fc3b7000a_20250523190157.jpeg"] baodongnai.com.vn##img[src^="/file/adman/e7837c02876411cd0187645a2551379f/297e39ad979d28ca01979d2a94f00022_20260205065952.jpg"]
-
-! --- Speedtest.vn --- speedtest.vn##.jconfirm-box speedtest.vn##.jconfirm-cell speedtest.vn##.jconfirm
-
-! --- Vietnamnet --- vietnamnet.vn###mashead-bn vietnamnet.vn###adzone39_
+||baodongnai.com.vn##img[src^="/file/adman/e7837c02876411cd0187645a2551379f/8a10a6948791f7260187925fc3b7000a_20240508161811.jpg"] 
+||baodongnai.com.vn##img[src^="/file/adman/e7837c02876411cd0187645a2551379f/297e39ad979d28ca01979d2a94f00022_20260122111522.png"] 
+||baodongnai.com.vn##img[src^="/file/adman/e7837c02876411cd0187645a2551379f/297e39ad979d28ca01979d2a94c6001d_20260216173010.jpg"] 
+||baodongnai.com.vn##img[src^="/file/adman/e7837c02876411cd0187645a2551379f/8a10a6948791f7260187925fc3b7000a_20250523190157.jpeg"] 
+||baodongnai.com.vn##img[src^="/file/adman/e7837c02876411cd0187645a2551379f/297e39ad979d28ca01979d2a94f00022_20260205065952.jpg"]
