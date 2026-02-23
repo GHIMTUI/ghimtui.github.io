@@ -1,5 +1,5 @@
 [Adblock Plus 2.0]
-! Title: GHIMTUI ADS
+! Title: STOP ADS
 ! Description: Bộ lọc quảng cáo 
 ! Expires: 1s
 ! Version: 34.64.00
