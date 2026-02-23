@@ -4,26 +4,26 @@ on:
     paths:
       - 'z-ads/ads.txt'
 
+permissions:
+  contents: write  # Thêm dòng này để cấp quyền ghi cho bot
+
 jobs:
   sort-and-clean:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+        with:
+          # Thêm dòng này để tránh lỗi khi push
+          token: ${{ secrets.GITHUB_TOKEN }} 
 
       - name: Process Ads File
         run: |
           FILE_PATH="z-ads/ads.txt"
-          
-          # 1. Tách phần Header (Các dòng bắt đầu bằng ! hoặc [)
+          # Logic của bạn giữ nguyên, rất tốt!
           grep -E "^!|^\[" "$FILE_PATH" > header.tmp || touch header.tmp
-          
-          # 2. Lấy các dòng quy tắc, xóa khoảng trắng thừa ở cuối dòng, sắp xếp ABC và xóa trùng
           grep -vE "^!|^\[" "$FILE_PATH" | sed 's/[[:space:]]*$//' | grep . | sort -u > sorted_body.tmp
-          
-          # 3. Gộp lại: Header nằm trên, quy tắc đã sắp xếp nằm dưới
           cat header.tmp sorted_body.tmp > "$FILE_PATH"
-          
           rm header.tmp sorted_body.tmp
 
       - name: Commit and Push
