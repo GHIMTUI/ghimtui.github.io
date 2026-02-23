@@ -5,9 +5,6 @@
 #EXTINF:-1 tvg-id="angiang1" tvg-logo="http://ghimtui.github.io/logo/angiang1.png", An Giang 1 
 http://tv.angiangtv.vn/live/kgtv/kgtv.m3u8
 
-#EXTINF:-1 tvg-id="angiang1" tvg-logo="http://ghimtui.github.io/logo/angiang1.png", An Giang 1
-http://live.fptplay53.net/epzsd1/angiang01_hls.smil/chunklist_b2500000.m3u8
-
 #EXTINF:-1 tvg-id="angiang2" tvg-logo="http://ghimtui.github.io/logo/angiang2.png" , An Giang 2 
 http://tv.angiangtv.vn/live/kgtv2/kgtv2.m3u8
 
