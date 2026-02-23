@@ -2,7 +2,7 @@ name: Check M3U Links
 
 on:
   schedule:
-    - cron: '0 */0.4 * * *' # Kiểm tra định kỳ mỗi 6 tiếng
+    - cron: '0 */1 * * *' # Kiểm tra định kỳ mỗi 6 tiếng
   workflow_dispatch: # Cho phép bạn bấm nút chạy thủ công bất cứ lúc nào
 
 jobs:
