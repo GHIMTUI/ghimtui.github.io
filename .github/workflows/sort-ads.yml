@@ -1,0 +1,34 @@
+name: Auto Sort Ads List
+on:
+  push:
+    paths:
+      - 'z-ads/ads.txt' # Chỉ chạy khi file này có thay đổi
+
+jobs:
+  sort-and-clean:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Process Ads File
+        run: |
+          FILE_PATH="z-ads/ads.txt"
+          
+          # 1. Tách phần Header (các dòng bắt đầu bằng !)
+          grep "^!" "$FILE_PATH" > header.tmp || touch header.tmp
+          
+          # 2. Lấy các dòng nội dung (không bắt đầu bằng !), sắp xếp và xóa trùng
+          grep -v "^!" "$FILE_PATH" | grep . | sort -u > sorted_body.tmp
+          
+          # 3. Gộp lại thành file hoàn chỉnh
+          cat header.tmp sorted_body.tmp > "$FILE_PATH"
+          
+          # Xóa file tạm
+          rm header.tmp sorted_body.tmp
+
+      - name: Commit and Push
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Bot: Tự động sắp xếp ABC và xóa trùng trong ads.txt"
+          file_pattern: 'z-ads/ads.txt'
