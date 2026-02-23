@@ -6,6 +6,31 @@
 ! ---------------
 51degrees.com##.b-img
 baodongnai.com.vn##img[src^="/file/adman/e7837c02876411cd0187645a2551379f/297e39ad979d28ca01979d2a94c6001d_20260216173010.jpg"]
+exokit.org##.w-fit
+exokit.org##.max-w-full
+exokit.org##.z-[9999]
+znews.vn##.show
+znews.vn###Zingnews_SiteHeader
+znews.vn###follow_oa
+anninhthudo.vn##a[href="https://s.shopee.vn/7KrZ0kcf4D"]>div
+anninhthudo.vn##.aanetwork-ads-box
+anninhthudo.vn##.aanetwork-flyicon-1013
+m.cafebiz.vn###adm-slot-7244
+m.cafebiz.vn###hook-eye-ban
+m.cafebiz.vn###admbackground
+m.cafebiz.vn##img[src="https://static-cmsads.admicro.vn/cmsads/2022/08/bann-1661393353882.jpeg"]
+m.cafebiz.vn###zone-7245
+eva.vn##figure[style="margin:15px 0"]
+www.saostar.vn###mobi-top
+www.saostar.vn##img[src="http://libs.saostar.vn/ads/tet2026.gif"]
+www.saostar.vn###pvoucher-live-container
+www.saostar.vn##a[style="width: 100%; height: 100%;"]>div
+www.saostar.vn###sp-wrapper-hovering-format
+exokit.org##.bg-orange-500
+m.cafef.vn###adm-slot-7249
+m.cafef.vn##.ads-detail-mob
+m.cafef.vn###adm-slot-7251
+m.youtube.com##.player-controls-background-action-items
 baodongnai.com.vn##img[src^="/file/adman/e7837c02876411cd0187645a2551379f/297e39ad979d28ca01979d2a94f00022_20260122111522.png"]
 baodongnai.com.vn##img[src^="/file/adman/e7837c02876411cd0187645a2551379f/297e39ad979d28ca01979d2a94f00022_20260205065952.jpg"]
 baodongnai.com.vn##img[src^="/file/adman/e7837c02876411cd0187645a2551379f/8a10a6948791f7260187925fc3b7000a_20240508161811.jpg"]
