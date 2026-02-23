@@ -4,6 +4,8 @@
 ! Expires: 1s
 ! Version: 1.1.0
 ! ---------------
+plo.vn###adsMobile_AdsBalloon
+plo.vn##.top-banner
 51degrees.com##.b-img
 anninhthudo.vn##.aanetwork-ads-box
 anninhthudo.vn##.aanetwork-flyicon-1013
