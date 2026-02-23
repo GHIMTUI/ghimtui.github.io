@@ -4,8 +4,6 @@
 ! Expires: 1s
 ! Version: 1.1.0
 ! ---------------
-plo.vn###adsMobile_AdsBalloon
-plo.vn##.top-banner
 51degrees.com##.b-img
 anninhthudo.vn##.aanetwork-ads-box
 anninhthudo.vn##.aanetwork-flyicon-1013
@@ -68,6 +66,8 @@ nld.com.vn###adm_zone510009
 nld.com.vn###ban-top-site
 nld.com.vn##.ads-top
 playmobile.vn##.modal-dialog
+plo.vn###adsMobile_AdsBalloon
+plo.vn##.top-banner
 qpvn.vn##.panel
 quantrimang.com###adindexcenter
 speedtest.vn##.jconfirm
