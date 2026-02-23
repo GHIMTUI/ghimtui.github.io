@@ -1,9 +1,10 @@
+[Adblock Plus 2.0]
 ! Title: GHIMTUI ADS
 ! Description: Bộ lọc quảng cáo 
 ! Expires: 7 days 
 ! Version: 1.0.0
+! ---------------
 51degrees.com##.b-img
-[Adblock Plus 2.0]
 baodongnai.com.vn##img[src^="/file/adman/e7837c02876411cd0187645a2551379f/297e39ad979d28ca01979d2a94c6001d_20260216173010.jpg"] 
 baodongnai.com.vn##img[src^="/file/adman/e7837c02876411cd0187645a2551379f/297e39ad979d28ca01979d2a94f00022_20260122111522.png"]
 baodongnai.com.vn##img[src^="/file/adman/e7837c02876411cd0187645a2551379f/297e39ad979d28ca01979d2a94f00022_20260122111522.png"] 
