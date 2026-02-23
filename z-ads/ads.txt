@@ -153,7 +153,16 @@ www.tvbox.one##.google-aiuf
 www.tvbox.one##.homeadv
 www.tvbox.one##.homeadv>span
 www.xemlicham.com###adInstall
+www.91mobiles.com##.w-100
+playmobile.vn##.modal-dialog
+www.xtmobile.vn##.mfp-container
+www.xtmobile.vn##.mfp-wrap
 
+www.24h.com.vn###apm-interstitial_anchor
+www.24h.com.vn###ADS_160_15s
+www.24h.com.vn###ADS_160_15s_container
+www.24h.com.vn###ADS_170_15s_container
+baolangson.vn##img[src="https://mediabls.mediatech.vn/upload/image/202504/medium/548840_ngang_0_5_18_4_25_16430518.jpg"]
 # --- Z ---
 znews.vn###Zingnews_SiteHeader
 znews.vn###follow_oa
