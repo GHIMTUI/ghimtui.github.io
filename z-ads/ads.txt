@@ -38,3 +38,6 @@ baodongnai.com.vn##img[src^="/file/adman/e7837c02876411cd0187645a2551379f/8a10a6
 speedtest.vn##.jconfirm-row
 speedtest.vn##.jconfirm-scrollpane
 speedtest.vn##.jconfirm
+www.speedtest.net##.mobile-pretest-new
+www.speedtest.net##.modal-content
+www.speedtest.net###modal-overlay
