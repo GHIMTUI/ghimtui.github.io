@@ -41,3 +41,19 @@ speedtest.vn##.jconfirm
 www.speedtest.net##.mobile-pretest-new
 www.speedtest.net##.modal-content
 www.speedtest.net###modal-overlay
+
+tuoitre.vn##img[src="https://static-cmsads.admicro.vn/cmsads/2026/02/640x-1770385181123.jpeg"]
+tuoitre.vn###LeaderBoardTop
+danviet.vn##a[onclick="gtag(`event`, `ads_click_88`)"]
+danviet.vn##.e
+danviet.vn###ads_37
+danviet.vn###zone-37
+danviet.vn##.main-top
+danviet.vn##video[style="width: 100%; cursor: pointer; display: block;"]
+danviet.vn##video[style="width: 100%; cursor: pointer;display: block;"]
+tintuconline.com.vn###mashead-bn
+tintuconline.com.vn###adzone39
+tintuconline.com.vn##a[style="width: 100%; height: 100%;"]>div
+tintuconline.com.vn###sp-wrapper-hovering-img
+tintuconline.com.vn###sp-wrapper-hovering
+tintuconline.com.vn##.adsbygoogle
