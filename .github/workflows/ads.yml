@@ -1,4 +1,4 @@
-name: Auto Sort Ads List
+ename: Auto Sort Ads List
 on:
   push:
     paths:
