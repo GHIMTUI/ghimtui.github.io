@@ -4,48 +4,14 @@
 ! Expires: 1s
 ! Version: 34.64.00
 ! ---------------
-truyenhinhthanhhoa.vn##img[src="https://static-cmsads.admicro.vn/cmsads/2026/02/600x-1770190451422.jpeg"]
-truyenhinhthanhhoa.vn##.ad-top
-truyenhinhthanhhoa.vn##img[src="https://static-cmsads.admicro.vn/cmsads/2025/03/Xi-m-1741921838816.jpeg"]
-truyenhinhthanhhoa.vn##img[src="https://static-cmsads.admicro.vn/cmsads/2024/11/Phan-1730449766651.jpeg"]
-truyenhinhthanhhoa.vn##img[src="https://static-cmsads.admicro.vn/cmsads/2025/11/VNPT-1764127034073.jpeg"]
-truyenhinhthanhhoa.vn##img[src="https://static-cmsads.admicro.vn/cmsads/2025/06/Bann-1748834782789.jpeg"]
-hanoionline.vn##.user
-voh.com.vn##.adstop
-logos.fandom.com##.top_leaderboard-odyssey-wrapper
-www.fandom.com##.top-ads-container
-m.zingmp3.vn##.z-btn-open-app
-baomoi.com##.slick-slide>div
-baomoi.com##.bm-footer
-m.genk.vn###zone-7271
-thegioikinhdoanh.vn##.full-width
-www.tvbox.one##.google-aiuf
-www.tvbox.one##.adsbygoogle
-www.tvbox.one##.homeadv>span
-www.tvbox.one##.homeadv
-m.apkpure.com##.js-ad-slot
-m.kenh14.vn###adm-slot-7279
-m.kenh14.vn###zone-7280
-m.kenh14.vn###zone-473670
-m.kenh14.vn###adm_zone472736
-m.kenh14.vn###adm_zone538502
-www.xemlicham.com###adInstall
-quantrimang.com###adindexcenter
-lichviet.app###smart-app-banner
-maytinhdaiviet.com###dv-mobile-bottom-ad
-m.soha.vn###adm-slot-7299
-lichngaytot.com##div[style="min-height:300px; float:left; width:100%;"]
-suckhoedoisong.vn##.top-ads
-nld.com.vn###adm_zone510009
-nld.com.vn###ban-top-site
-nld.com.vn##.ads-top
-vansu.net##center[style="padding-top: 15px;height: 280px;"]
 51degrees.com##.b-img
 baodongnai.com.vn##img[src^="/file/adman/e7837c02876411cd0187645a2551379f/297e39ad979d28ca01979d2a94c6001d_20260216173010.jpg"]
 baodongnai.com.vn##img[src^="/file/adman/e7837c02876411cd0187645a2551379f/297e39ad979d28ca01979d2a94f00022_20260122111522.png"]
 baodongnai.com.vn##img[src^="/file/adman/e7837c02876411cd0187645a2551379f/297e39ad979d28ca01979d2a94f00022_20260205065952.jpg"]
 baodongnai.com.vn##img[src^="/file/adman/e7837c02876411cd0187645a2551379f/8a10a6948791f7260187925fc3b7000a_20240508161811.jpg"]
 baodongnai.com.vn##img[src^="/file/adman/e7837c02876411cd0187645a2551379f/8a10a6948791f7260187925fc3b7000a_20250523190157.jpeg"]
+baomoi.com##.bm-footer
+baomoi.com##.slick-slide>div
 danviet.vn###ads_37
 danviet.vn###zone-37
 danviet.vn##.e
@@ -53,24 +19,51 @@ danviet.vn##.main-top
 danviet.vn##a[onclick="gtag(`event`, `ads_click_88`)"]
 danviet.vn##video[style="width: 100%; cursor: pointer; display: block;"]
 danviet.vn##video[style="width: 100%; cursor: pointer;display: block;"]
+hanoionline.vn##.user
 hoanghamobile.com##.jquery-modal
 hoanghamobile.com##img[src="/Uploads/2026/02/12/moi-03.png"]
+lichngaytot.com##div[style="min-height:300px; float:left; width:100%;"]
+lichviet.app###smart-app-banner
+logos.fandom.com##.top_leaderboard-odyssey-wrapper
+m.apkpure.com##.js-ad-slot
+m.genk.vn###zone-7271
+m.kenh14.vn###adm-slot-7279
+m.kenh14.vn###adm_zone472736
+m.kenh14.vn###adm_zone538502
+m.kenh14.vn###zone-473670
+m.kenh14.vn###zone-7280
+m.soha.vn###adm-slot-7299
 m.tv360.vn##.css-1xdipk
+m.zingmp3.vn##.z-btn-open-app
 mail.google.com##.MefFWe
 mail.google.com##.ObxnS
+maytinhdaiviet.com###dv-mobile-bottom-ad
+nld.com.vn###adm_zone510009
+nld.com.vn###ban-top-site
+nld.com.vn##.ads-top
 qpvn.vn##.panel
+quantrimang.com###adindexcenter
 speedtest.vn##.jconfirm
 speedtest.vn##.jconfirm-row
 speedtest.vn##.jconfirm-scrollpane
+suckhoedoisong.vn##.top-ads
 thanhnien.vn##.box-category-link-with-avatar
+thegioikinhdoanh.vn##.full-width
 tintuconline.com.vn###adzone39
 tintuconline.com.vn###mashead-bn
 tintuconline.com.vn###sp-wrapper-hovering
 tintuconline.com.vn###sp-wrapper-hovering-img
 tintuconline.com.vn##.adsbygoogle
 tintuconline.com.vn##a[style="width: 100%; height: 100%;"]>div
+truyenhinhthanhhoa.vn##.ad-top
+truyenhinhthanhhoa.vn##img[src="https://static-cmsads.admicro.vn/cmsads/2024/11/Phan-1730449766651.jpeg"]
+truyenhinhthanhhoa.vn##img[src="https://static-cmsads.admicro.vn/cmsads/2025/03/Xi-m-1741921838816.jpeg"]
+truyenhinhthanhhoa.vn##img[src="https://static-cmsads.admicro.vn/cmsads/2025/06/Bann-1748834782789.jpeg"]
+truyenhinhthanhhoa.vn##img[src="https://static-cmsads.admicro.vn/cmsads/2025/11/VNPT-1764127034073.jpeg"]
+truyenhinhthanhhoa.vn##img[src="https://static-cmsads.admicro.vn/cmsads/2026/02/600x-1770190451422.jpeg"]
 tuoitre.vn###LeaderBoardTop
 tuoitre.vn##img[src="https://static-cmsads.admicro.vn/cmsads/2026/02/640x-1770385181123.jpeg"]
+vansu.net##center[style="padding-top: 15px;height: 280px;"]
 viettel.vn##.banner-container
 viettel.vn##.banner-img
 viettel.vn##.contact-now
@@ -85,7 +78,14 @@ vn.xemtv.net##div[data-widget-id="1845723"]
 vn.xemtv.net##div[data-widget-id="1886588"]
 vn.xemtv.net##img[src="/banner/F168-Sidebar.gif"]
 vn.xemtv.net##img[title="Xem Kênh VTV3 trực tiếp - Giải trí tổng hợp"]
+voh.com.vn##.adstop
 www.accuweather.com##.adhesion-header
+www.fandom.com##.top-ads-container
 www.speedtest.net###modal-overlay
 www.speedtest.net##.mobile-pretest-new
 www.speedtest.net##.modal-content
+www.tvbox.one##.adsbygoogle
+www.tvbox.one##.google-aiuf
+www.tvbox.one##.homeadv
+www.tvbox.one##.homeadv>span
+www.xemlicham.com###adInstall
