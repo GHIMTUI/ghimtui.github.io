@@ -2,8 +2,8 @@ name: Check M3U Links
 
 on:
   schedule:
-    - cron: '0 */0.5 * * *'
-  workflow_dispatch:
+    - cron: '0 */6 * * *' # Kiểm tra định kỳ mỗi 6 tiếng
+  workflow_dispatch: # Cho phép bạn bấm nút chạy thủ công bất cứ lúc nào
 
 jobs:
   check-links:
@@ -12,36 +12,40 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Check M3U links and Update Summary
+      - name: Rà soát danh sách kênh
         run: |
-          failed_channels=""
+          failed_list=""
           count=0
           
-          # Đọc file tivi.m3u
+          # Đọc file tivi.m3u (chỉ đọc, không ghi)
           while IFS= read -r line; do
             if [[ $line == "#EXTINF"* ]]; then
               channel_name=$(echo "$line" | sed 's/.*,//' | tr -d '\r')
               read -r url
               url=$(echo "$url" | tr -d '\r')
               
-              # Kiểm tra link (timeout 5s)
+              # Thử kết nối tới link (chờ tối đa 5 giây)
               status_code=$(curl -o /dev/null -s -w "%{http_code}" --max-time 5 "$url")
               
               if [ "$status_code" -ne 200 ]; then
-                failed_channels="${failed_channels}\n- **${channel_name}** (Mã lỗi: ${status_code})"
+                # Nếu lỗi, thêm tên kênh vào danh sách tạm
+                if [ $count -eq 0 ]; then
+                  failed_list="$channel_name"
+                else
+                  failed_list="$failed_list, $channel_name"
+                fi
                 count=$((count+1))
               fi
             fi
           done < tivi.m3u
 
-          # Ghi kết quả trực tiếp vào GitHub Summary (Markdown hỗ trợ)
-          echo "## 📺 Kết quả kiểm tra IPTV" >> $GITHUB_STEP_SUMMARY
-          echo "Cập nhật lúc: $(date +'%H:%M - %d/%m/%Y')" >> $GITHUB_STEP_SUMMARY
-          echo "---" >> $GITHUB_STEP_SUMMARY
+          # Xuất báo cáo ra GitHub Summary
+          echo "### 📊 Báo cáo rà soát kênh" >> $GITHUB_STEP_SUMMARY
           
           if [ $count -eq 0 ]; then
             echo "✅ **Kênh tivi ổn định!**" >> $GITHUB_STEP_SUMMARY
           else
-            echo "❌ **Kênh $count không hoạt động!**" >> $GITHUB_STEP_SUMMARY
-            echo -e "$failed_channels" >> $GITHUB_STEP_SUMMARY
+            echo "❌ **Kênh $failed_list không hoạt động!**" >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "> Tổng cộng phát hiện $count kênh gặp sự cố." >> $GITHUB_STEP_SUMMARY
           fi
