@@ -1,36 +1,19 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
-! Description: Bộ lọc quảng cáo 
+! Description: Bộ lọc quảng cáo
 ! Expires: 1s
 ! Version: 1.1.0
 ! ---------------
+
 51degrees.com##.b-img
-baodongnai.com.vn##img[src^="/file/adman/e7837c02876411cd0187645a2551379f/297e39ad979d28ca01979d2a94c6001d_20260216173010.jpg"]
-exokit.org##.w-fit
-exokit.org##.max-w-full
-exokit.org##.z-[9999]
-znews.vn##.show
-znews.vn###Zingnews_SiteHeader
-znews.vn###follow_oa
-anninhthudo.vn##a[href="https://s.shopee.vn/7KrZ0kcf4D"]>div
+
+# --- A ---
 anninhthudo.vn##.aanetwork-ads-box
 anninhthudo.vn##.aanetwork-flyicon-1013
-m.cafebiz.vn###adm-slot-7244
-m.cafebiz.vn###hook-eye-ban
-m.cafebiz.vn###admbackground
-m.cafebiz.vn##img[src="https://static-cmsads.admicro.vn/cmsads/2022/08/bann-1661393353882.jpeg"]
-m.cafebiz.vn###zone-7245
-eva.vn##figure[style="margin:15px 0"]
-www.saostar.vn###mobi-top
-www.saostar.vn##img[src="http://libs.saostar.vn/ads/tet2026.gif"]
-www.saostar.vn###pvoucher-live-container
-www.saostar.vn##a[style="width: 100%; height: 100%;"]>div
-www.saostar.vn###sp-wrapper-hovering-format
-exokit.org##.bg-orange-500
-m.cafef.vn###adm-slot-7249
-m.cafef.vn##.ads-detail-mob
-m.cafef.vn###adm-slot-7251
-m.youtube.com##.player-controls-background-action-items
+anninhthudo.vn##a[href="https://s.shopee.vn/7KrZ0kcf4D"]>div
+
+# --- B ---
+baodongnai.com.vn##img[src^="/file/adman/e7837c02876411cd0187645a2551379f/297e39ad979d28ca01979d2a94c6001d_20260216173010.jpg"]
 baodongnai.com.vn##img[src^="/file/adman/e7837c02876411cd0187645a2551379f/297e39ad979d28ca01979d2a94f00022_20260122111522.png"]
 baodongnai.com.vn##img[src^="/file/adman/e7837c02876411cd0187645a2551379f/297e39ad979d28ca01979d2a94f00022_20260205065952.jpg"]
 baodongnai.com.vn##img[src^="/file/adman/e7837c02876411cd0187645a2551379f/8a10a6948791f7260187925fc3b7000a_20240508161811.jpg"]
@@ -41,6 +24,8 @@ baomoi.com##.slick-slide>div
 baoquangninh.vn##img[src="https://media.baoquangninh.vn/upload/image/202602/medium/2471521_nha_hang_cua_vang_14222307.jpg"]
 baotayninh.vn##img[src="https://media.baotayninh.vn/upload/image/202512/original/1b9332ebcfd0dc1c4de4a4b2d766fa8e.png"]
 baotayninh.vn##img[src="https://media.baotayninh.vn/upload/image/202512/original/54f5f6cfb70ac830b53392a6dcf01d00.png"]
+
+# --- D ---
 danviet.vn###ads_37
 danviet.vn###zone-37
 danviet.vn##.e
@@ -48,15 +33,36 @@ danviet.vn##.main-top
 danviet.vn##a[onclick="gtag(`event`, `ads_click_88`)"]
 danviet.vn##video[style="width: 100%; cursor: pointer; display: block;"]
 danviet.vn##video[style="width: 100%; cursor: pointer;display: block;"]
+
+# --- E ---
+eva.vn##figure[style="margin:15px 0"]
+exokit.org##.bg-orange-500
+exokit.org##.max-w-full
+exokit.org##.w-fit
+exokit.org##.z-[9999]
+
+# --- H ---
 hanoimoi.vn##img[height="100"]
 hanoionline.vn##.user
 hoanghamobile.com##.jquery-modal
 hoanghamobile.com##img[src="/Uploads/2026/02/12/moi-03.png"]
+
+# --- L ---
 laodong.vn##.notification-header__msg
 lichngaytot.com##div[style="min-height:300px; float:left; width:100%;"]
 lichviet.app###smart-app-banner
 logos.fandom.com##.top_leaderboard-odyssey-wrapper
+
+# --- M ---
 m.apkpure.com##.js-ad-slot
+m.cafebiz.vn###adm-slot-7244
+m.cafebiz.vn###admbackground
+m.cafebiz.vn###hook-eye-ban
+m.cafebiz.vn###zone-7245
+m.cafebiz.vn##img[src="https://static-cmsads.admicro.vn/cmsads/2022/08/bann-1661393353882.jpeg"]
+m.cafef.vn###adm-slot-7249
+m.cafef.vn###adm-slot-7251
+m.cafef.vn##.ads-detail-mob
 m.genk.vn###zone-7271
 m.kenh14.vn###adm-slot-7279
 m.kenh14.vn###adm_zone472736
@@ -65,19 +71,28 @@ m.kenh14.vn###zone-473670
 m.kenh14.vn###zone-7280
 m.soha.vn###adm-slot-7299
 m.tv360.vn##.css-1xdipk
+m.youtube.com##.player-controls-background-action-items
 m.zingmp3.vn##.z-btn-open-app
 mail.google.com##.MefFWe
 mail.google.com##.ObxnS
 maytinhdaiviet.com###dv-mobile-bottom-ad
+
+# --- N ---
 nld.com.vn###adm_zone510009
 nld.com.vn###ban-top-site
 nld.com.vn##.ads-top
+
+# --- Q ---
 qpvn.vn##.panel
 quantrimang.com###adindexcenter
+
+# --- S ---
 speedtest.vn##.jconfirm
 speedtest.vn##.jconfirm-row
 speedtest.vn##.jconfirm-scrollpane
 suckhoedoisong.vn##.top-ads
+
+# --- T ---
 thanhnien.vn##.box-category-link-with-avatar
 thegioikinhdoanh.vn##.full-width
 tintuconline.com.vn###adzone39
@@ -94,6 +109,8 @@ truyenhinhthanhhoa.vn##img[src="https://static-cmsads.admicro.vn/cmsads/2025/11/
 truyenhinhthanhhoa.vn##img[src="https://static-cmsads.admicro.vn/cmsads/2026/02/600x-1770190451422.jpeg"]
 tuoitre.vn###LeaderBoardTop
 tuoitre.vn##img[src="https://static-cmsads.admicro.vn/cmsads/2026/02/640x-1770385181123.jpeg"]
+
+# --- V ---
 vansu.net##center[style="padding-top: 15px;height: 280px;"]
 viettel.vn##.banner-container
 viettel.vn##.banner-img
@@ -116,11 +133,18 @@ vtcnews.vn##.top-ad
 vtcnews.vn##a[rel="noopener noreferrer nofollow"]
 vtcnews.vn##a[rel="noopener noreferrer nofollow"]>div
 vtcnews.vn##img[src="https://cdn-i.vtcnews.vn/resize/DPr7-92g-bRCzx_-n1qXvywXaVlcb5LF0/upload/2025/11/06/app-17544833.jpg"]
+
+# --- W ---
 www.accuweather.com##.adhesion-header
 www.baodongthap.vn##img[src="https://ads.baodongthap.vn/www/images/0149b6236ed2c2ce98c9eb787098875c.jpg"]
 www.baodongthap.vn##img[src="https://ads.baodongthap.vn/www/images/d4e586bbe0220fff83b80e9d4057a316.jpg"]
 www.baodongthap.vn##img[src="https://ads.baodongthap.vn/www/images/d864a0dbeda9ee44dec8ba9711be0dd5.jpg"]
 www.fandom.com##.top-ads-container
+www.saostar.vn###mobi-top
+www.saostar.vn###pvoucher-live-container
+www.saostar.vn###sp-wrapper-hovering-format
+www.saostar.vn##a[style="width: 100%; height: 100%;"]>div
+www.saostar.vn##img[src="http://libs.saostar.vn/ads/tet2026.gif"]
 www.speedtest.net###modal-overlay
 www.speedtest.net##.mobile-pretest-new
 www.speedtest.net##.modal-content
@@ -129,3 +153,8 @@ www.tvbox.one##.google-aiuf
 www.tvbox.one##.homeadv
 www.tvbox.one##.homeadv>span
 www.xemlicham.com###adInstall
+
+# --- Z ---
+znews.vn###Zingnews_SiteHeader
+znews.vn###follow_oa
+znews.vn##.show
