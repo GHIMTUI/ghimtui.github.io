@@ -11,25 +11,36 @@ jobs:
   sort-and-clean:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Process Ads File
-        id: count
+        id: process_step
         run: |
-          FILE="z-ads/ads.txt"
-          BEFORE=$(wc -l < "$FILE")
+          FILE_PATH="z-ads/ads.txt"
           
-          # Tách header, lọc trùng và sắp xếp body
-          grep -E "^!|^\[" "$FILE" > h.tmp || touch h.tmp
-          grep -vE "^!|^\[" "$FILE" | sed 's/[[:space:]]*$//' | grep . | sort -u > b.tmp
-          cat h.tmp b.tmp > "$FILE"
+          # Đếm số dòng ban đầu
+          ORIGINAL_COUNT=$(wc -l < "$FILE_PATH")
           
-          AFTER=$(wc -l < "$FILE")
-          echo "diff=$((BEFORE - AFTER))" >> $GITHUB_OUTPUT
-          rm h.tmp b.tmp
+          # Tách Header và xử lý Body
+          grep -E "^!|^\[" "$FILE_PATH" > header.tmp || touch header.tmp
+          grep -vE "^!|^\[" "$FILE_PATH" | sed 's/[[:space:]]*$//' | grep . | sort -u > sorted_body.tmp
+          
+          # Gộp lại
+          cat header.tmp sorted_body.tmp > "$FILE_PATH"
+          
+          # Đếm số dòng sau khi xử lý
+          FINAL_COUNT=$(wc -l < "$FILE_PATH")
+          REMOVED_COUNT=$((ORIGINAL_COUNT - FINAL_COUNT))
+          
+          # Lưu giá trị vào biến môi trường của GHA để dùng cho bước commit
+          echo "removed_count=$REMOVED_COUNT" >> $GITHUB_OUTPUT
+          rm header.tmp sorted_body.tmp
 
       - name: Commit and Push
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "Sắp xếp & xoá ${{ steps.count.outputs.diff }} dòng!"
+          commit_message: "Bot: sắp xếp và xoá ${{ steps.process_step.outputs.removed_count }} trùng lặp"
           file_pattern: 'z-ads/ads.txt'
