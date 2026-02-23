@@ -2,7 +2,7 @@
 ! Title: STOP ADS
 ! Description: Bộ lọc quảng cáo 
 ! Expires: 1s
-! Version: 34.64.00
+! Version: 1.1.0
 ! ---------------
 51degrees.com##.b-img
 baodongnai.com.vn##img[src^="/file/adman/e7837c02876411cd0187645a2551379f/297e39ad979d28ca01979d2a94c6001d_20260216173010.jpg"]
