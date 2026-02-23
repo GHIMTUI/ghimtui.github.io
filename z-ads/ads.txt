@@ -19,6 +19,7 @@ danviet.vn##video[style="width: 100%; cursor: pointer; display: block;"]
 danviet.vn##video[style="width: 100%; cursor: pointer;display: block;"]
 hoanghamobile.com##.jquery-modal
 hoanghamobile.com##img[src="/Uploads/2026/02/12/moi-03.png"]
+m.tv360.vn##.css-1xdipk
 mail.google.com##.MefFWe
 mail.google.com##.ObxnS
 qpvn.vn##.panel
@@ -40,16 +41,15 @@ viettel.vn##.contact-now
 viettel.vn##.popup-open-app
 viettel.vn##.slick-current > div
 viettel.vn##.slick-track
+vn.xemtv.net###bottom650
+vn.xemtv.net##.d-block
+vn.xemtv.net##.d-inline-block
+vn.xemtv.net##div[data-widget-id="1771082"]
+vn.xemtv.net##div[data-widget-id="1845723"]
+vn.xemtv.net##div[data-widget-id="1886588"]
+vn.xemtv.net##img[src="/banner/F168-Sidebar.gif"]
+vn.xemtv.net##img[title="Xem Kênh VTV3 trực tiếp - Giải trí tổng hợp"]
 www.accuweather.com##.adhesion-header
 www.speedtest.net###modal-overlay
 www.speedtest.net##.mobile-pretest-new
 www.speedtest.net##.modal-content
-vn.xemtv.net##div[data-widget-id="1771082"]
-vn.xemtv.net##img[src="/banner/F168-Sidebar.gif"]
-vn.xemtv.net##div[data-widget-id="1886588"]
-vn.xemtv.net##div[data-widget-id="1845723"]
-vn.xemtv.net##img[title="Xem Kênh VTV3 trực tiếp - Giải trí tổng hợp"]
-vn.xemtv.net###bottom650
-vn.xemtv.net##.d-block
-vn.xemtv.net##.d-inline-block
-m.tv360.vn##.css-1xdipk
