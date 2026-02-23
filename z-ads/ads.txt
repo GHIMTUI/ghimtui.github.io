@@ -4,9 +4,6 @@
 ! Expires: 1s
 ! Version: 34.64.00
 ! ---------------
-laodong.vn##.notification-header__msg
-baoquangninh.vn##img[src="https://media.baoquangninh.vn/upload/image/202602/medium/2471521_nha_hang_cua_vang_14222307.jpg"]
-hanoimoi.vn##img[height="100"]
 51degrees.com##.b-img
 baodongnai.com.vn##img[src^="/file/adman/e7837c02876411cd0187645a2551379f/297e39ad979d28ca01979d2a94c6001d_20260216173010.jpg"]
 baodongnai.com.vn##img[src^="/file/adman/e7837c02876411cd0187645a2551379f/297e39ad979d28ca01979d2a94f00022_20260122111522.png"]
@@ -15,6 +12,7 @@ baodongnai.com.vn##img[src^="/file/adman/e7837c02876411cd0187645a2551379f/8a10a6
 baodongnai.com.vn##img[src^="/file/adman/e7837c02876411cd0187645a2551379f/8a10a6948791f7260187925fc3b7000a_20250523190157.jpeg"]
 baomoi.com##.bm-footer
 baomoi.com##.slick-slide>div
+baoquangninh.vn##img[src="https://media.baoquangninh.vn/upload/image/202602/medium/2471521_nha_hang_cua_vang_14222307.jpg"]
 danviet.vn###ads_37
 danviet.vn###zone-37
 danviet.vn##.e
@@ -22,9 +20,11 @@ danviet.vn##.main-top
 danviet.vn##a[onclick="gtag(`event`, `ads_click_88`)"]
 danviet.vn##video[style="width: 100%; cursor: pointer; display: block;"]
 danviet.vn##video[style="width: 100%; cursor: pointer;display: block;"]
+hanoimoi.vn##img[height="100"]
 hanoionline.vn##.user
 hoanghamobile.com##.jquery-modal
 hoanghamobile.com##img[src="/Uploads/2026/02/12/moi-03.png"]
+laodong.vn##.notification-header__msg
 lichngaytot.com##div[style="min-height:300px; float:left; width:100%;"]
 lichviet.app###smart-app-banner
 logos.fandom.com##.top_leaderboard-odyssey-wrapper
