@@ -1,0 +1,61 @@
+name: IPTV Auto Link Selector
+on:
+  schedule:
+    - cron: '0 */2 * * *' # Cứ 2 tiếng Bot tự kiểm tra 1 lần
+  workflow_dispatch:      # Nút bấm để bạn chạy tay khi cần
+
+jobs:
+  update-m3u:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Run Filter Script
+        run: |
+          python <<EOF
+          import requests
+
+          # Danh sách link dự phòng (Link 1 là ưu tiên cao nhất)
+          links_angiang = [
+              "http://tv.angiangtv.vn/live/kgtv/kgtv.m3u8",
+              "http://live.fptplay53.net/epzsd1/angiang01_hls.smil/chunklist_b2500000.m3u8"
+          ]
+
+          def get_active_link(urls):
+              for url in urls:
+                  try:
+                      # Kiểm tra xem link có phản hồi 200 OK không
+                      response = requests.head(url, timeout=5, allow_redirects=True)
+                      if response.status_code == 200:
+                          return url
+                  except:
+                      continue
+              return urls[0] # Nếu hỏng cả 2 thì mặc định lấy link 1
+
+          # Chọn link tốt nhất hiện tại
+          best_link = get_active_link(links_angiang)
+
+          # Ghi đè file tivi.m3u (CHỈ HIỂN THỊ 1 KÊNH)
+          m3u_content = f"""#EXTM3U
+
+#--- AN GIANG (MN) ---
+#EXTINF:-1 tvg-id="angiang1" tvg-logo="http://ghimtui.github.io/logo/angiang1.png", An Giang 1 
+{best_link}
+"""
+          with open("tivi.m3u", "w", encoding="utf-8") as f:
+              f.write(m3u_content)
+          EOF
+
+      - name: Commit and Push
+        run: |
+          git config --local user.email "bot@github.com"
+          git config --local user.name "IPTV-Bot"
+          git add tivi.m3u
+          git commit -m "Cập nhật link An Giang tốt nhất" || exit 0
+          git push
