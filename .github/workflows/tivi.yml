@@ -1,10 +1,9 @@
-name: Check IPTV Links
+name: Check M3U Links
 
 on:
   schedule:
-    # Chạy mỗi 5-10 phút (tùy vào độ trễ của GitHub)
-    - cron: '*/10 * * * *'
-  workflow_dispatch: # Cho phép nhấn nút chạy thủ công
+    - cron: '0 */1 * * *' # Chạy 1 tiếng một lần
+  workflow_dispatch: # Cho phép chạy thủ công bằng tay
 
 jobs:
   check-links:
@@ -13,59 +12,37 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Set up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.x'
-
       - name: Install dependencies
-        run: pip install requests
-
-      - name: Run link checker script
         run: |
-          python - <<EOF
-          import requests
-          import re
+          sudo apt-get install -y curl
 
-          def check_link(url):
-              try:
-                  # Chỉ lấy header để tiết kiệm băng thông, timeout 5s
-                  response = requests.head(url, timeout=5, allow_redirects=True)
-                  return response.status_code == 200
-              except:
-                  return False
-
-          with open('tivi.m3u', 'r', encoding='utf-8') as f:
-              lines = f.readlines()
-
-          new_content = []
-          header = lines[0] if lines[0].startswith('#EXTM3U') else '#EXTM3U\n'
-          new_content.append(header)
-
-          # Duyệt qua từng cặp dòng (thông tin kênh và link)
-          for i in range(len(lines)):
-              if lines[i].startswith('#EXTINF'):
-                  info = lines[i]
-                  url = lines[i+1].strip() if (i+1) < len(lines) else ""
-                  
-                  if url and check_link(url):
-                      new_content.append(info)
-                      new_content.append(url + '\n')
-                      print(f"✅ Live: {url}")
-                  else:
-                      print(f"❌ Dead/Skipped: {url}")
-
-          with open('tivi.m3u', 'w', encoding='utf-8') as f:
-              f.writelines(new_content)
-          EOF
-
-      - name: Commit and push changes
+      - name: Check M3U links and Notify
+        env:
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
-          git add tivi.m3u
-          if git commit -m "Auto-update: Clean dead links" ; then
-            git push
-          else
-            echo "No changes to commit"
-          fi
+          # Đọc file m3u, lấy tên kênh và link
+          # Giả định cấu hình: #EXTINF:-1,Kênh A [xuống dòng] link
+          
+          while IFS= read -r line; do
+            if [[ $line == "#EXTINF"* ]]; then
+              # Trích xuất tên kênh sau dấu phẩy
+              channel_name=$(echo "$line" | sed 's/.*,//')
+              
+              # Đọc dòng tiếp theo để lấy URL
+              read -r url
+              
+              # Kiểm tra link với curl (timeout 10s)
+              status_code=$(curl -o /dev/null -s -w "%{http_code}" --max-time 10 "$url")
+              
+              if [ "$status_code" -ne 200 ]; then
+                message="Kênh ${channel_name} không hoạt động! (Status: ${status_code})"
+                echo "Sending alert for $channel_name"
+                
+                # Gửi thông báo qua Telegram
+                curl -s -X POST "https://api.telegram.org/bot${TELEGRAM_TOKEN}/sendMessage" \
+                  -d "chat_id=${TELEGRAM_CHAT_ID}" \
+                  -d "text=${message}"
+              fi
+            fi
+          done < tivi.m3u
