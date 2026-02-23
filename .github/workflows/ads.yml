@@ -5,29 +5,31 @@ on:
       - 'z-ads/ads.txt'
 
 permissions:
-  contents: write  # Thêm dòng này để cấp quyền ghi cho bot
+  contents: write
 
 jobs:
   sort-and-clean:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-        with:
-          # Thêm dòng này để tránh lỗi khi push
-          token: ${{ secrets.GITHUB_TOKEN }} 
+      - uses: actions/checkout@v4
 
       - name: Process Ads File
+        id: count
         run: |
-          FILE_PATH="z-ads/ads.txt"
-          # Logic của bạn giữ nguyên, rất tốt!
-          grep -E "^!|^\[" "$FILE_PATH" > header.tmp || touch header.tmp
-          grep -vE "^!|^\[" "$FILE_PATH" | sed 's/[[:space:]]*$//' | grep . | sort -u > sorted_body.tmp
-          cat header.tmp sorted_body.tmp > "$FILE_PATH"
-          rm header.tmp sorted_body.tmp
+          FILE="z-ads/ads.txt"
+          BEFORE=$(wc -l < "$FILE")
+          
+          # Tách header, lọc trùng và sắp xếp body
+          grep -E "^!|^\[" "$FILE" > h.tmp || touch h.tmp
+          grep -vE "^!|^\[" "$FILE" | sed 's/[[:space:]]*$//' | grep . | sort -u > b.tmp
+          cat h.tmp b.tmp > "$FILE"
+          
+          AFTER=$(wc -l < "$FILE")
+          echo "diff=$((BEFORE - AFTER))" >> $GITHUB_OUTPUT
+          rm h.tmp b.tmp
 
       - name: Commit and Push
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "Bot: Giữ nguyên Header và sắp xếp ABC các quy tắc"
+          commit_message: "Sắp xếp & xoá ${{ steps.count.outputs.diff }} dòng!"
           file_pattern: 'z-ads/ads.txt'
