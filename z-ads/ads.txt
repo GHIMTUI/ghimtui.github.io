@@ -5,14 +5,11 @@
 ! Version: 1.0.0
 ! ---------------
 51degrees.com##.b-img
-baodongnai.com.vn##img[src^="/file/adman/e7837c02876411cd0187645a2551379f/297e39ad979d28ca01979d2a94c6001d_20260216173010.jpg"] 
+baodongnai.com.vn##img[src^="/file/adman/e7837c02876411cd0187645a2551379f/297e39ad979d28ca01979d2a94c6001d_20260216173010.jpg"]
 baodongnai.com.vn##img[src^="/file/adman/e7837c02876411cd0187645a2551379f/297e39ad979d28ca01979d2a94f00022_20260122111522.png"]
-baodongnai.com.vn##img[src^="/file/adman/e7837c02876411cd0187645a2551379f/297e39ad979d28ca01979d2a94f00022_20260122111522.png"] 
 baodongnai.com.vn##img[src^="/file/adman/e7837c02876411cd0187645a2551379f/297e39ad979d28ca01979d2a94f00022_20260205065952.jpg"]
 baodongnai.com.vn##img[src^="/file/adman/e7837c02876411cd0187645a2551379f/8a10a6948791f7260187925fc3b7000a_20240508161811.jpg"]
-baodongnai.com.vn##img[src^="/file/adman/e7837c02876411cd0187645a2551379f/8a10a6948791f7260187925fc3b7000a_20240508161811.jpg"] 
 baodongnai.com.vn##img[src^="/file/adman/e7837c02876411cd0187645a2551379f/8a10a6948791f7260187925fc3b7000a_20250523190157.jpeg"]
-baodongnai.com.vn##img[src^="/file/adman/e7837c02876411cd0187645a2551379f/8a10a6948791f7260187925fc3b7000a_20250523190157.jpeg"] 
 danviet.vn###ads_37
 danviet.vn###zone-37
 danviet.vn##.e
@@ -21,8 +18,8 @@ danviet.vn##a[onclick="gtag(`event`, `ads_click_88`)"]
 danviet.vn##video[style="width: 100%; cursor: pointer; display: block;"]
 danviet.vn##video[style="width: 100%; cursor: pointer;display: block;"]
 hoanghamobile.com##.jquery-modal
-hoanghamobile.com##img[src="/Uploads/2026/02/12/moi-03.png"] 
-mail.google.com##.MefFWe 
+hoanghamobile.com##img[src="/Uploads/2026/02/12/moi-03.png"]
+mail.google.com##.MefFWe
 mail.google.com##.ObxnS
 qpvn.vn##.panel
 speedtest.vn##.jconfirm
@@ -37,11 +34,11 @@ tintuconline.com.vn##.adsbygoogle
 tintuconline.com.vn##a[style="width: 100%; height: 100%;"]>div
 tuoitre.vn###LeaderBoardTop
 tuoitre.vn##img[src="https://static-cmsads.admicro.vn/cmsads/2026/02/640x-1770385181123.jpeg"]
-viettel.vn##.banner-container 
-viettel.vn##.banner-img 
-viettel.vn##.contact-now 
-viettel.vn##.popup-open-app 
-viettel.vn##.slick-current > div 
+viettel.vn##.banner-container
+viettel.vn##.banner-img
+viettel.vn##.contact-now
+viettel.vn##.popup-open-app
+viettel.vn##.slick-current > div
 viettel.vn##.slick-track
 www.accuweather.com##.adhesion-header
 www.speedtest.net###modal-overlay
