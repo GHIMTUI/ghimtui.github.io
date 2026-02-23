@@ -2,8 +2,8 @@ name: Check M3U Links
 
 on:
   schedule:
-    - cron: '0 */1 * * *' # Chạy 1 tiếng một lần
-  workflow_dispatch: # Cho phép chạy thủ công bằng tay
+    - cron: '0 */0.5 * * *'
+  workflow_dispatch:
 
 jobs:
   check-links:
@@ -12,37 +12,36 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Install dependencies
+      - name: Check M3U links and Update Summary
         run: |
-          sudo apt-get install -y curl
-
-      - name: Check M3U links and Notify
-        env:
-          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
-          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-        run: |
-          # Đọc file m3u, lấy tên kênh và link
-          # Giả định cấu hình: #EXTINF:-1,Kênh A [xuống dòng] link
+          failed_channels=""
+          count=0
           
+          # Đọc file tivi.m3u
           while IFS= read -r line; do
             if [[ $line == "#EXTINF"* ]]; then
-              # Trích xuất tên kênh sau dấu phẩy
-              channel_name=$(echo "$line" | sed 's/.*,//')
-              
-              # Đọc dòng tiếp theo để lấy URL
+              channel_name=$(echo "$line" | sed 's/.*,//' | tr -d '\r')
               read -r url
+              url=$(echo "$url" | tr -d '\r')
               
-              # Kiểm tra link với curl (timeout 10s)
-              status_code=$(curl -o /dev/null -s -w "%{http_code}" --max-time 10 "$url")
+              # Kiểm tra link (timeout 5s)
+              status_code=$(curl -o /dev/null -s -w "%{http_code}" --max-time 5 "$url")
               
               if [ "$status_code" -ne 200 ]; then
-                message="Kênh ${channel_name} không hoạt động! (Status: ${status_code})"
-                echo "Sending alert for $channel_name"
-                
-                # Gửi thông báo qua Telegram
-                curl -s -X POST "https://api.telegram.org/bot${TELEGRAM_TOKEN}/sendMessage" \
-                  -d "chat_id=${TELEGRAM_CHAT_ID}" \
-                  -d "text=${message}"
+                failed_channels="${failed_channels}\n- **${channel_name}** (Mã lỗi: ${status_code})"
+                count=$((count+1))
               fi
             fi
           done < tivi.m3u
+
+          # Ghi kết quả trực tiếp vào GitHub Summary (Markdown hỗ trợ)
+          echo "## 📺 Kết quả kiểm tra IPTV" >> $GITHUB_STEP_SUMMARY
+          echo "Cập nhật lúc: $(date +'%H:%M - %d/%m/%Y')" >> $GITHUB_STEP_SUMMARY
+          echo "---" >> $GITHUB_STEP_SUMMARY
+          
+          if [ $count -eq 0 ]; then
+            echo "✅ **Kênh tivi ổn định!**" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "❌ **Kênh $count không hoạt động!**" >> $GITHUB_STEP_SUMMARY
+            echo -e "$failed_channels" >> $GITHUB_STEP_SUMMARY
+          fi
