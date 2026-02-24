@@ -4,11 +4,6 @@
 ! Expires: 1s
 ! Version: 1.1.0
 ! ---------------
-vietnamnet.vn##[id^="adzone"]
-vietnamnet.vn###mashead-bn
-vietnamnet.vn###adzone39
-vietnamnet.vn###adzone40
-baolamdong.vn##img[width="722"]
 51degrees.com##.b-img
 anninhthudo.vn##.aanetwork-ads-box
 anninhthudo.vn##.aanetwork-flyicon-1013
@@ -19,6 +14,7 @@ baodongnai.com.vn##img[src^="/file/adman/e7837c02876411cd0187645a2551379f/297e39
 baodongnai.com.vn##img[src^="/file/adman/e7837c02876411cd0187645a2551379f/8a10a6948791f7260187925fc3b7000a_20240508161811.jpg"]
 baodongnai.com.vn##img[src^="/file/adman/e7837c02876411cd0187645a2551379f/8a10a6948791f7260187925fc3b7000a_20250523190157.jpeg"]
 baogialai.com.vn##img[src="https://cdn.baogialai.com.vn/images/1d5bcac7f44e7d6a62b237529fada32a17e5407b4fab398cc9ab053379c53c005ec111f5b967fbac1bc633540816f2c7/dat-xanh-2025.jpg"]
+baolamdong.vn##img[width="722"]
 baolangson.vn##img[src="https://mediabls.mediatech.vn/upload/image/202504/medium/548840_ngang_0_5_18_4_25_16430518.jpg"]
 baomoi.com##.bm-footer
 baomoi.com##.btn-report-ad
@@ -157,8 +153,10 @@ vansu.net##center[style="padding-top: 15px;height: 280px;"]
 vietnamnet.vn###Mobile_AdsArticleBodyInArticle
 vietnamnet.vn###adzone113
 vietnamnet.vn###adzone39
+vietnamnet.vn###adzone40
 vietnamnet.vn###adzone41
 vietnamnet.vn###adzone90
+vietnamnet.vn###mashead-bn
 vietnamnet.vn##[class^="adzone"]
 vietnamnet.vn##[id^="adzone"]
 viettel.vn##.banner-container
