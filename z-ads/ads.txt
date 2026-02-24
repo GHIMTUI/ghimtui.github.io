@@ -4,11 +4,6 @@
 ! Expires: 1s
 ! Version: 1.1.0
 ! ---------------
-luatvietnam.vn##.section-lvn
-luatvietnam.vn##.adv-footer-fixed
-laodong.vn##.lst-advs
-vietnamnet.vn###Mobile_AdsArticleBodyInArticle
-vietnamnet.vn##[id^="adzone"]
 51degrees.com##.b-img
 anninhthudo.vn##.aanetwork-ads-box
 anninhthudo.vn##.aanetwork-flyicon-1013
@@ -41,10 +36,13 @@ hanoimoi.vn##img[height="100"]
 hanoionline.vn##.user
 hoanghamobile.com##.jquery-modal
 hoanghamobile.com##img[src="/Uploads/2026/02/12/moi-03.png"]
+laodong.vn##.lst-advs
 laodong.vn##.notification-header__msg
 lichngaytot.com##div[style="min-height:300px; float:left; width:100%;"]
 lichviet.app###smart-app-banner
 logos.fandom.com##.top_leaderboard-odyssey-wrapper
+luatvietnam.vn##.adv-footer-fixed
+luatvietnam.vn##.section-lvn
 m.apkpure.com##.js-ad-slot
 m.cafebiz.vn###adm-slot-7244
 m.cafebiz.vn###admbackground
@@ -96,6 +94,8 @@ truyenhinhthanhhoa.vn##img[src="https://static-cmsads.admicro.vn/cmsads/2026/02/
 tuoitre.vn###LeaderBoardTop
 tuoitre.vn##img[src="https://static-cmsads.admicro.vn/cmsads/2026/02/640x-1770385181123.jpeg"]
 vansu.net##center[style="padding-top: 15px;height: 280px;"]
+vietnamnet.vn###Mobile_AdsArticleBodyInArticle
+vietnamnet.vn##[id^="adzone"]
 viettel.vn##.banner-container
 viettel.vn##.banner-img
 viettel.vn##.contact-now
