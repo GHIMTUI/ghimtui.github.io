@@ -11,36 +11,39 @@ jobs:
   sort-and-clean:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+      - uses: actions/checkout@v4
 
       - name: Process Ads File
         id: process_step
         run: |
-          FILE_PATH="z-ads/ads.txt"
+          FILE="z-ads/ads.txt"
           
-          # Đếm số dòng ban đầu
-          ORIGINAL_COUNT=$(wc -l < "$FILE_PATH")
+          # 1. Tách Header và Body (loại bỏ tiền tố http/www, chuyển chữ thường, sort duy nhất)
+          grep -E "^! \[|^\[" "$FILE" > header.tmp || true
+          grep -vE "^!|^\[" "$FILE" | sed -E 's|^(https?://)?(www\.)?||g' | tr '[:upper:]' '[:lower:]' | sort -u > body.tmp
           
-          # Tách Header và xử lý Body
-          grep -E "^!|^\[" "$FILE_PATH" > header.tmp || touch header.tmp
-          grep -vE "^!|^\[" "$FILE_PATH" | sed 's/[[:space:]]*$//' | grep . | sort -u > sorted_body.tmp
+          # 2. Dùng AWK để phân nhóm A-Z và chèn tiêu đề nhóm
+          awk '{
+            char = substr($0, 1, 1);
+            group = (char ~ /[0-9]/) ? "#" : toupper(char);
+            if (group != last) {
+              print "\n! " group;
+              last = group;
+            }
+            print $0;
+          }' body.tmp > final_body.tmp
+
+          # 3. Gộp lại và ghi đè file gốc
+          cat header.tmp final_body.tmp | sed '/./,/^$/!d' > "$FILE"
           
-          # Gộp lại
-          cat header.tmp sorted_body.tmp > "$FILE_PATH"
-          
-          # Đếm số dòng sau khi xử lý
-          FINAL_COUNT=$(wc -l < "$FILE_PATH")
-          REMOVED_COUNT=$((ORIGINAL_COUNT - FINAL_COUNT))
-          
-          # Lưu giá trị vào biến môi trường của GHA để dùng cho bước commit
-          echo "removed_count=$REMOVED_COUNT" >> $GITHUB_OUTPUT
-          rm header.tmp sorted_body.tmp
+          # 4. Tính toán thông số
+          ORIGINAL=$(grep -vE "^!|^\[" "$FILE" | wc -l)
+          FINAL=$(wc -l < body.tmp)
+          echo "msg=Dòng cũ: $ORIGINAL | Sau khi lọc: $FINAL | Đã xóa: $((ORIGINAL - FINAL))" >> $GITHUB_OUTPUT
+          rm *.tmp
 
       - name: Commit and Push
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "Bot: sắp xếp và xoá ${{ steps.process_step.outputs.removed_count }} trùng lặp"
+          commit_message: "Bot: ${{ steps.process_step.outputs.msg }}"
           file_pattern: 'z-ads/ads.txt'
