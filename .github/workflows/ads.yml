@@ -1,4 +1,4 @@
-name: Tự động sắp xếp
+name: Tự động sắp xếp bộ lọc
 on:
   push:
     paths:
@@ -13,62 +13,34 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Process Ads File
         id: process_step
         run: |
           FILE_PATH="z-ads/ads.txt"
           
-          # 1. Lưu Header gốc (các dòng bắt đầu bằng ! hoặc [ nhưng không phải là phân loại A-Z)
-          # Chúng ta sẽ tạm thời bỏ các ghi chú phân loại cũ để tạo mới hoàn toàn
-          grep -E "^! \[|^\[" "$FILE_PATH" > header_main.tmp || touch header_main.tmp
+          # Đếm số dòng ban đầu
+          ORIGINAL_COUNT=$(wc -l < "$FILE_PATH")
           
-          # 2. Làm sạch dữ liệu: Xóa http, www, khoảng trắng, chuyển về chữ thường để sort chuẩn
-          # Sau đó loại bỏ trùng lặp
-          ORIGINAL_COUNT=$(grep -vE "^!|^\[" "$FILE_PATH" | grep . | wc -l)
+          # Tách Header và xử lý Body
+          grep -E "^!|^\[" "$FILE_PATH" > header.tmp || touch header.tmp
+          grep -vE "^!|^\[" "$FILE_PATH" | sed 's/[[:space:]]*$//' | grep . | sort -u > sorted_body.tmp
           
-          grep -vE "^!|^\[" "$FILE_PATH" | \
-          sed -E 's|^(https?://)?(www\.)?||g' | \
-          tr '[:upper:]' '[:lower:]' | \
-          sed 's/[[:space:]]*$//' | \
-          grep . | sort -u > cleaned_body.tmp
+          # Gộp lại
+          cat header.tmp sorted_body.tmp > "$FILE_PATH"
           
-          FINAL_BODY_COUNT=$(wc -l < cleaned_body.tmp)
-          REMOVED_COUNT=$((ORIGINAL_COUNT - FINAL_BODY_COUNT))
+          # Đếm số dòng sau khi xử lý
+          FINAL_COUNT=$(wc -l < "$FILE_PATH")
+          REMOVED_COUNT=$((ORIGINAL_COUNT - FINAL_COUNT))
           
-          # 3. Phân loại theo 0-9 và a-z
-          > final_list.tmp
-          current_char=""
-          
-          while IFS= read -r line; do
-              # Lấy chữ cái đầu tiên
-              first_char=$(echo "${line:0:1}")
-              
-              # Nếu là số, quy về nhóm '#'
-              if [[ $first_char =~ [0-9] ]]; then
-                  group_char="#"
-              else
-                  group_char=$(echo "$first_char" | tr '[:lower:]' '[:upper:]')
-              fi
-              
-              # Nếu đổi sang nhóm chữ cái mới, chèn ghi chú phân loại
-              if [ "$group_char" != "$current_char" ]; then
-                  echo -e "\n! $group_char" >> final_list.tmp
-                  current_char=$group_char
-              fi
-              echo "$line" >> final_list.tmp
-          done < cleaned_body.tmp
-          
-          # 4. Gộp Header chính và nội dung đã phân loại
-          cat header_main.tmp final_list.tmp | sed '/^$/N;/^\n$/D' > "$FILE_PATH"
-          
-          # Xuất thông báo: Trùng & Gộp tính chung là số dòng bị giảm đi
-          echo "msg=Trùng: $REMOVED_COUNT | Xoá: $REMOVED_COUNT | Gộp: $FINAL_BODY_COUNT" >> $GITHUB_OUTPUT
-          
-          rm *.tmp
+          # Lưu giá trị vào biến môi trường của GHA để dùng cho bước commit
+          echo "removed_count=$REMOVED_COUNT" >> $GITHUB_OUTPUT
+          rm header.tmp sorted_body.tmp
 
       - name: Commit and Push
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "Bot: ${{ steps.process_step.outputs.msg }}"
+          commit_message: "Bot: sắp xếp và xoá ${{ steps.process_step.outputs.removed_count }} trùng lặp"
           file_pattern: 'z-ads/ads.txt'
