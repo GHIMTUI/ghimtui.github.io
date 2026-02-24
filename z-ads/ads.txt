@@ -95,8 +95,8 @@ tuoitre.vn###LeaderBoardTop
 tuoitre.vn##img[src="https://static-cmsads.admicro.vn/cmsads/2026/02/640x-1770385181123.jpeg"]
 vansu.net##center[style="padding-top: 15px;height: 280px;"]
 vietnamnet.vn###Mobile_AdsArticleBodyInArticle
-vietnamnet.vn##[id^="adzone"]
 vietnamnet.vn##[class^="adzone"]
+vietnamnet.vn##[id^="adzone"]
 viettel.vn##.banner-container
 viettel.vn##.banner-img
 viettel.vn##.contact-now
