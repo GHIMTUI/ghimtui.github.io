@@ -1,4 +1,4 @@
-name: Tạm Dừng Quảng Cáo
+name: Tự động sắp xếp
 on:
   push:
     paths:
@@ -11,35 +11,60 @@ jobs:
   sort-and-clean:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout code
+        uses: actions/checkout@v4
 
       - name: Process Ads File
         id: process_step
         run: |
-          FILE="z-ads/ads.txt"
+          FILE_PATH="z-ads/ads.txt"
           
-          # 1. Tách Header và Body (loại bỏ tiền tố http/www, chuyển chữ thường, sort duy nhất)
-          grep -E "^! \[|^\[" "$FILE" > header.tmp || true
-          grep -vE "^!|^\[" "$FILE" | sed -E 's|^(https?://)?(www\.)?||g' | tr '[:upper:]' '[:lower:]' | sort -u > body.tmp
+          # 1. Lưu Header gốc (các dòng bắt đầu bằng ! hoặc [ nhưng không phải là phân loại A-Z)
+          # Chúng ta sẽ tạm thời bỏ các ghi chú phân loại cũ để tạo mới hoàn toàn
+          grep -E "^! \[|^\[" "$FILE_PATH" > header_main.tmp || touch header_main.tmp
           
-          # 2. Dùng AWK để phân nhóm A-Z và chèn tiêu đề nhóm
-          awk '{
-            char = substr($0, 1, 1);
-            group = (char ~ /[0-9]/) ? "#" : toupper(char);
-            if (group != last) {
-              print "\n! " group;
-              last = group;
-            }
-            print $0;
-          }' body.tmp > final_body.tmp
-
-          # 3. Gộp lại và ghi đè file gốc
-          cat header.tmp final_body.tmp | sed '/./,/^$/!d' > "$FILE"
+          # 2. Làm sạch dữ liệu: Xóa http, www, khoảng trắng, chuyển về chữ thường để sort chuẩn
+          # Sau đó loại bỏ trùng lặp
+          ORIGINAL_COUNT=$(grep -vE "^!|^\[" "$FILE_PATH" | grep . | wc -l)
           
-          # 4. Tính toán thông số
-          ORIGINAL=$(grep -vE "^!|^\[" "$FILE" | wc -l)
-          FINAL=$(wc -l < body.tmp)
-          echo "msg=Dòng cũ: $ORIGINAL | Sau khi lọc: $FINAL | Đã xóa: $((ORIGINAL - FINAL))" >> $GITHUB_OUTPUT
+          grep -vE "^!|^\[" "$FILE_PATH" | \
+          sed -E 's|^(https?://)?(www\.)?||g' | \
+          tr '[:upper:]' '[:lower:]' | \
+          sed 's/[[:space:]]*$//' | \
+          grep . | sort -u > cleaned_body.tmp
+          
+          FINAL_BODY_COUNT=$(wc -l < cleaned_body.tmp)
+          REMOVED_COUNT=$((ORIGINAL_COUNT - FINAL_BODY_COUNT))
+          
+          # 3. Phân loại theo 0-9 và a-z
+          > final_list.tmp
+          current_char=""
+          
+          while IFS= read -r line; do
+              # Lấy chữ cái đầu tiên
+              first_char=$(echo "${line:0:1}")
+              
+              # Nếu là số, quy về nhóm '#'
+              if [[ $first_char =~ [0-9] ]]; then
+                  group_char="#"
+              else
+                  group_char=$(echo "$first_char" | tr '[:lower:]' '[:upper:]')
+              fi
+              
+              # Nếu đổi sang nhóm chữ cái mới, chèn ghi chú phân loại
+              if [ "$group_char" != "$current_char" ]; then
+                  echo -e "\n! $group_char" >> final_list.tmp
+                  current_char=$group_char
+              fi
+              echo "$line" >> final_list.tmp
+          done < cleaned_body.tmp
+          
+          # 4. Gộp Header chính và nội dung đã phân loại
+          cat header_main.tmp final_list.tmp | sed '/^$/N;/^\n$/D' > "$FILE_PATH"
+          
+          # Xuất thông báo: Trùng & Gộp tính chung là số dòng bị giảm đi
+          echo "msg=Trùng: $REMOVED_COUNT | Xoá: $REMOVED_COUNT | Gộp: $FINAL_BODY_COUNT" >> $GITHUB_OUTPUT
+          
           rm *.tmp
 
       - name: Commit and Push
