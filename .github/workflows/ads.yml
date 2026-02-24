@@ -1,4 +1,4 @@
-name: Auto Sort Ads List
+name: Tạm Dừng Quảng Cáo
 on:
   push:
     paths:
