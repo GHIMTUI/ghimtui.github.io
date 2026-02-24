@@ -4,6 +4,33 @@
 ! Expires: 1s
 ! Version: 1.1.0
 ! ---------------
+www.speedtest.net###zdcFloatingBtn
+www.24h.com.vn###div_inpage_banner
+www.24h.com.vn###div_inpage_banner_open
+www.24h.com.vn##.inpage_article_cont
+www.24h.com.vn##.inpage_article_rect
+www.24h.com.vn###div_inpage_banner_open2
+quantrimang.com###adsposttop1
+quantrimang.com###articleads
+quantrimang.com###articleads2
+quantrimang.com###articleads3
+quantrimang.com###adunderarticle
+quantrimang.com###mrc419
+quantrimang.com###adrighttoplinks
+quantrimang.com###adrighttop
+bongda24h.vn##div[style="height:250px"]
+m.thethao247.vn##a[rel="noopener noreferrer nofollow sponsored"]>div
+m.thethao247.vn###sp-wrapper-hovering-format
+m.thethao247.vn##div[as-id="20"]
+kqbd.mobi##.img-adsBanner-bdn
+kqbd.mobi###ads_banner_bdn_2
+kqbd.mobi###ads_banner_bdn_3
+kqbd.mobi###ads_banner_bdn_1
+kqbd.mobi###ads_banner_bdn_4
+kqbd.mobi###ads_banner_bdn_30
+kqbd.mobi##.width-ads
+webthethao.vn##div[style="min-height: 180px;"]
+suckhoedoisong.vn###sp-wrapper-hovering-format
 51degrees.com##.b-img
 anninhthudo.vn##.aanetwork-ads-box
 anninhthudo.vn##.aanetwork-flyicon-1013
