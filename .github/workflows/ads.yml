@@ -1,4 +1,4 @@
-name: Auto Sort and Merge Ads List
+name: Auto Sort Ads List
 on:
   push:
     paths:
@@ -13,66 +13,34 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Process Ads File (Sort & Merge)
+      - name: Process Ads File
         id: process_step
-        shell: python
         run: |
-          import re
-          import os
-
-          file_path = "z-ads/ads.txt"
-          if not os.path.exists(file_path):
-              print("File not found")
-              exit(0)
-
-          with open(file_path, 'r', encoding='utf-8') as f:
-              lines = f.readlines()
-
-          original_count = len(lines)
-          headers = [l for l in lines if l.startswith(('!', '['))]
-          body = [l.strip() for l in lines if l.strip() and not l.startswith(('!', '['))]
-
-          # 1. Loại bỏ trùng lặp tuyệt đối & Sắp xếp
-          body = sorted(list(set(body)))
-
-          # 2. Logic Gộp các bộ lọc có đuôi số/chữ hỗn hợp
-          # Quy tắc: Nếu nhiều dòng bắt đầu bằng "abc-" thì gộp thành "abc-*" hoặc giữ nguyên tùy mục đích.
-          # Ở đây ta sẽ dùng Regex để tìm phần gốc trước dấu gạch ngang cuối cùng
-          merged_body = []
-          seen_prefixes = {}
-
-          for line in body:
-              # Tìm phần gốc: ví dụ "a-1" -> "a-", "a-rrtt3rtt" -> "a-"
-              # Regex này cắt ở dấu gạch ngang cuối cùng nếu sau đó là hỗn hợp số/chữ
-              match = re.match(r'^(.+?)-[a-zA-Z0-9]+$', line)
-              if match:
-                  prefix = match.group(1)
-                  if prefix not in seen_prefixes:
-                      seen_prefixes[prefix] = []
-                  seen_prefixes[prefix].append(line)
-              else:
-                  merged_body.append(line)
-
-          # Xử lý các nhóm đã gộp
-          for prefix, variants in seen_prefixes.items():
-              if len(variants) > 3: # Nếu có hơn 3 biến thể thì gộp thành tiền tố chung
-                  merged_body.append(f"{prefix}-*")
-              else:
-                  merged_body.extend(variants)
-
-          # Sắp xếp lại lần cuối và ghi file
-          final_body = sorted(list(set(merged_body)))
-          with open(file_path, 'w', encoding='utf-8') as f:
-              f.writelines(headers)
-              f.write('\n'.join(final_body) + '\n')
-
-          removed_count = original_count - (len(headers) + len(final_body))
-          with open(os.environ['GITHUB_OUTPUT'], 'a') as a:
-              a.write(f"removed_count={removed_count}\n")
+          FILE_PATH="z-ads/ads.txt"
+          
+          # Đếm số dòng ban đầu
+          ORIGINAL_COUNT=$(wc -l < "$FILE_PATH")
+          
+          # Tách Header và xử lý Body
+          grep -E "^!|^\[" "$FILE_PATH" > header.tmp || touch header.tmp
+          grep -vE "^!|^\[" "$FILE_PATH" | sed 's/[[:space:]]*$//' | grep . | sort -u > sorted_body.tmp
+          
+          # Gộp lại
+          cat header.tmp sorted_body.tmp > "$FILE_PATH"
+          
+          # Đếm số dòng sau khi xử lý
+          FINAL_COUNT=$(wc -l < "$FILE_PATH")
+          REMOVED_COUNT=$((ORIGINAL_COUNT - FINAL_COUNT))
+          
+          # Lưu giá trị vào biến môi trường của GHA để dùng cho bước commit
+          echo "removed_count=$REMOVED_COUNT" >> $GITHUB_OUTPUT
+          rm header.tmp sorted_body.tmp
 
       - name: Commit and Push
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "Bot: Sắp xếp & Gộp bộ lọc (Xoá ${{ steps.process_step.outputs.removed_count }} dòng)"
+          commit_message: "Bot: sắp xếp và xoá ${{ steps.process_step.outputs.removed_count }} trùng lặp"
           file_pattern: 'z-ads/ads.txt'
