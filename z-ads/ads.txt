@@ -4,6 +4,11 @@
 ! Expires: 1s
 ! Version: 1.1.0
 ! ---------------
+luatvietnam.vn##.section-lvn
+luatvietnam.vn##.adv-footer-fixed
+laodong.vn##.lst-advs
+vietnamnet.vn###Mobile_AdsArticleBodyInArticle
+vietnamnet.vn##[id^="adzone"]
 51degrees.com##.b-img
 anninhthudo.vn##.aanetwork-ads-box
 anninhthudo.vn##.aanetwork-flyicon-1013
