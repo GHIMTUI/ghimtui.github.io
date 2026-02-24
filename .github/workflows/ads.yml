@@ -1,4 +1,4 @@
-name: Tự động sắp xếp bộ lọc
+name: Tự động sắp xếp
 on:
   push:
     paths:
