@@ -4,33 +4,6 @@
 ! Expires: 1s
 ! Version: 1.1.0
 ! ---------------
-www.speedtest.net###zdcFloatingBtn
-www.24h.com.vn###div_inpage_banner
-www.24h.com.vn###div_inpage_banner_open
-www.24h.com.vn##.inpage_article_cont
-www.24h.com.vn##.inpage_article_rect
-www.24h.com.vn###div_inpage_banner_open2
-quantrimang.com###adsposttop1
-quantrimang.com###articleads
-quantrimang.com###articleads2
-quantrimang.com###articleads3
-quantrimang.com###adunderarticle
-quantrimang.com###mrc419
-quantrimang.com###adrighttoplinks
-quantrimang.com###adrighttop
-bongda24h.vn##div[style="height:250px"]
-m.thethao247.vn##a[rel="noopener noreferrer nofollow sponsored"]>div
-m.thethao247.vn###sp-wrapper-hovering-format
-m.thethao247.vn##div[as-id="20"]
-kqbd.mobi##.img-adsBanner-bdn
-kqbd.mobi###ads_banner_bdn_2
-kqbd.mobi###ads_banner_bdn_3
-kqbd.mobi###ads_banner_bdn_1
-kqbd.mobi###ads_banner_bdn_4
-kqbd.mobi###ads_banner_bdn_30
-kqbd.mobi##.width-ads
-webthethao.vn##div[style="min-height: 180px;"]
-suckhoedoisong.vn###sp-wrapper-hovering-format
 51degrees.com##.b-img
 anninhthudo.vn##.aanetwork-ads-box
 anninhthudo.vn##.aanetwork-flyicon-1013
@@ -53,6 +26,7 @@ baophutho.vn##.dadv_m
 baoquangninh.vn##img[src="https://media.baoquangninh.vn/upload/image/202602/medium/2471521_nha_hang_cua_vang_14222307.jpg"]
 baotayninh.vn##img[src="https://media.baotayninh.vn/upload/image/202512/original/1b9332ebcfd0dc1c4de4a4b2d766fa8e.png"]
 baotayninh.vn##img[src="https://media.baotayninh.vn/upload/image/202512/original/54f5f6cfb70ac830b53392a6dcf01d00.png"]
+bongda24h.vn##div[style="height:250px"]
 bongdaplus.vn###ADMTOP
 bongdaplus.vn###ADWCET2
 bongdaplus.vn##div[style="position: fixed !important; top: 320px !important; right: 10px !important; z-index: 9999 !important;"]
@@ -89,6 +63,13 @@ hanoimoi.vn##img[height="100"]
 hanoionline.vn##.user
 hoanghamobile.com##.jquery-modal
 hoanghamobile.com##img[src="/Uploads/2026/02/12/moi-03.png"]
+kqbd.mobi###ads_banner_bdn_1
+kqbd.mobi###ads_banner_bdn_2
+kqbd.mobi###ads_banner_bdn_3
+kqbd.mobi###ads_banner_bdn_30
+kqbd.mobi###ads_banner_bdn_4
+kqbd.mobi##.img-adsBanner-bdn
+kqbd.mobi##.width-ads
 laodong.vn##.lst-advs
 laodong.vn##.notification-header__msg
 lichngaytot.com##div[style="min-height:300px; float:left; width:100%;"]
@@ -118,6 +99,9 @@ m.soha.vn###adm-slot-7300
 m.soha.vn###admbackground
 m.soha.vn###admbackground2
 m.soha.vn###zone-473873
+m.thethao247.vn###sp-wrapper-hovering-format
+m.thethao247.vn##a[rel="noopener noreferrer nofollow sponsored"]>div
+m.thethao247.vn##div[as-id="20"]
 m.tv360.vn##.css-1xdipk
 m.tv360.vn##.text-ellipsis
 m.youtube.com##.player-controls-background-action-items
@@ -136,10 +120,19 @@ plo.vn###adsMobile_AdsBalloon
 plo.vn##.top-banner
 qpvn.vn##.panel
 quantrimang.com###adindexcenter
+quantrimang.com###adrighttop
+quantrimang.com###adrighttoplinks
+quantrimang.com###adsposttop1
+quantrimang.com###adunderarticle
+quantrimang.com###articleads
+quantrimang.com###articleads2
+quantrimang.com###articleads3
+quantrimang.com###mrc419
 soha.vn###[class^="zone-"]
 speedtest.vn##.jconfirm
 speedtest.vn##.jconfirm-row
 speedtest.vn##.jconfirm-scrollpane
+suckhoedoisong.vn###sp-wrapper-hovering-format
 suckhoedoisong.vn##.top-ads
 thanhnien.vn##.asd-headt
 thanhnien.vn##.box-category-link-with-avatar
@@ -212,10 +205,16 @@ vtcnews.vn##a[rel="noopener noreferrer nofollow"]>div
 vtcnews.vn##img[src="https://cdn-i.vtcnews.vn/resize/DPr7-92g-bRCzx_-n1qXvywXaVlcb5LF0/upload/2025/11/06/app-17544833.jpg"]
 webnovel.vn###fly_wlPiM
 webnovel.vn##img[src="https://adflycode.com/fly_imgs/webnovel.jpg"]
+webthethao.vn##div[style="min-height: 180px;"]
 www.24h.com.vn###ADS_160_15s
 www.24h.com.vn###ADS_160_15s_container
 www.24h.com.vn###ADS_170_15s_container
 www.24h.com.vn###apm-interstitial_anchor
+www.24h.com.vn###div_inpage_banner
+www.24h.com.vn###div_inpage_banner_open
+www.24h.com.vn###div_inpage_banner_open2
+www.24h.com.vn##.inpage_article_cont
+www.24h.com.vn##.inpage_article_rect
 www.91mobiles.com##.w-100
 www.accuweather.com##.adhesion-header
 www.baodongthap.vn##img[src="https://ads.baodongthap.vn/www/images/0149b6236ed2c2ce98c9eb787098875c.jpg"]
@@ -228,6 +227,7 @@ www.saostar.vn###sp-wrapper-hovering-format
 www.saostar.vn##a[style="width: 100%; height: 100%;"]>div
 www.saostar.vn##img[src="http://libs.saostar.vn/ads/tet2026.gif"]
 www.speedtest.net###modal-overlay
+www.speedtest.net###zdcFloatingBtn
 www.speedtest.net##.mobile-pretest-new
 www.speedtest.net##.modal-content
 www.tvbox.one##.adsbygoogle
