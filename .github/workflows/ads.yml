@@ -24,9 +24,13 @@ jobs:
           # Đếm số dòng ban đầu
           ORIGINAL_COUNT=$(wc -l < "$FILE_PATH")
           
-          # Tách Header và xử lý Body
+          # Tách Header và xử lý Body:
+          # 1. Loại bỏ khoảng trắng thừa
+          # 2. Loại bỏ tiền tố www. ở đầu dòng
+          # 3. Loại bỏ dòng trống
+          # 4. Sắp xếp và loại bỏ trùng lặp (sort -u)
           grep -E "^!|^\[" "$FILE_PATH" > header.tmp || touch header.tmp
-          grep -vE "^!|^\[" "$FILE_PATH" | sed 's/[[:space:]]*$//' | grep . | sort -u > sorted_body.tmp
+          grep -vE "^!|^\[" "$FILE_PATH" | sed -e 's/[[:space:]]*$//' -e 's/^www\.//g' | grep . | sort -u > sorted_body.tmp
           
           # Gộp lại
           cat header.tmp sorted_body.tmp > "$FILE_PATH"
@@ -34,13 +38,16 @@ jobs:
           # Đếm số dòng sau khi xử lý
           FINAL_COUNT=$(wc -l < "$FILE_PATH")
           REMOVED_COUNT=$((ORIGINAL_COUNT - FINAL_COUNT))
-          
-          # Lưu giá trị vào biến môi trường của GHA để dùng cho bước commit
-          echo "removed_count=$REMOVED_COUNT" >> $GITHUB_OUTPUT
-          rm header.tmp sorted_body.tmp
+          echo "Đã loại bỏ $REMOVED_COUNT dòng (bao gồm trùng lặp và định dạng lại)."
 
-      - name: Commit and Push
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: "Bot: sắp xếp và xoá ${{ steps.process_step.outputs.removed_count }} trùng lặp"
-          file_pattern: 'z-ads/ads.txt'
+      - name: Commit and Push changes
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add "$FILE_PATH"
+          if git diff --staged --quiet; then
+            echo "Không có thay đổi nào để commit."
+          else
+            git commit -m "Chỉnh sửa tự động: Loại bỏ www, sắp xếp và xóa trùng lặp"
+            git push
+          fi
