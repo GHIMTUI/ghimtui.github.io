@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Ads Editor v3</title>
+    <style>
+        * { box-sizing: border-box; touch-action: manipulation; }
+        
+        body { 
+            font-family: Arial, Helvetica, sans-serif; 
+            background: #ffffff; 
+            color: #333333;
+            margin: 0; 
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            overflow: hidden; 
+        }
+
+        .header {
+            padding: 10px 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #eeeeee;
+            margin-bottom: 10px;
+        }
+
+        h2 { font-size: 18px; margin: 0; color: #000; }
+
+        #status { font-size: 12px; font-weight: bold; text-transform: uppercase; }
+        .success { color: #28a745; }
+        .error { color: #dc3545; }
+        .loading { color: #fd7e14; }
+
+        textarea { 
+            flex: 1;
+            width: 100%; 
+            background: #fdfdfd;
+            color: #000000;
+            border: 1px solid #cccccc;
+            border-radius: 8px;
+            padding: 12px;
+            font-family: Arial, sans-serif; 
+            font-size: 16px; 
+            line-height: 1.5;
+            outline: none;
+            margin-bottom: 10px;
+            -webkit-appearance: none;
+        }
+
+        .footer {
+            padding-bottom: env(safe-area-inset-bottom);
+        }
+
+        button { 
+            width: 100%;
+            background: #007bff; 
+            color: white; 
+            border: none; 
+            padding: 16px; 
+            border-radius: 10px; 
+            font-size: 18px; 
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:active { background: #0056b3; }
+        button:disabled { background: #cccccc; }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h2>ads.txt</h2>
+    <span id="status">Đang tải...</span>
+</div>
+
+<textarea id="adContent" spellcheck="false" placeholder="Đang tải dữ liệu..."></textarea>
+
+<div class="footer">
+    <button id="btnSave" onclick="updateFile()">XONG</button>
+</div>
+
+<script>
+    const TOKEN = "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";
+    const OWNER = "ghimtui";
+    const REPO = "ghimtui.github.io";
+    const PATH = "z-ads/ads.txt";
+    let currentSha = "";
+
+    window.onload = async () => {
+        const status = document.getElementById('status');
+        const textarea = document.getElementById('adContent');
+        
+        try {
+            const response = await fetch(`https://api.github.com/repos/${OWNER}/${REPO}/contents/${PATH}`, {
+                headers: { "Authorization": `token ${TOKEN}` }
+            });
+            
+            if (response.ok) {
+                const data = await response.json();
+                currentSha = data.sha;
+                textarea.value = decodeURIComponent(escape(atob(data.content)));
+                status.innerText = "● Sẵn sàng";
+                status.className = "success";
+            } else {
+                status.innerText = "● Lỗi tải";
+                status.className = "error";
+            }
+        } catch (e) {
+            status.innerText = "● Mất mạng";
+            status.className = "error";
+        }
+    };
+
+    async function updateFile() {
+        const content = document.getElementById('adContent').value;
+        const status = document.getElementById('status');
+        const btn = document.getElementById('btnSave');
+
+        status.innerText = "● Đang lưu...";
+        status.className = "loading";
+        btn.disabled = true;
+
+        try {
+            const b64Content = btoa(unescape(encodeURIComponent(content)));
+            const response = await fetch(`https://api.github.com/repos/${OWNER}/${REPO}/contents/${PATH}`, {
+                method: "PUT",
+                headers: {
+                    "Authorization": `token ${TOKEN}`,
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    message: "Update via Web",
+                    content: b64Content,
+                    sha: currentSha
+                })
+            });
+
+            if (response.ok) {
+                const result = await response.json();
+                currentSha = result.content.sha;
+                status.innerText = "● Đã lưu xong";
+                status.className = "success";
+            } else {
+                status.innerText = "● Thất bại";
+                status.className = "error";
+            }
+        } catch (e) {
+            status.innerText = "● Lỗi hệ thống";
+            status.className = "error";
+        } finally {
+            btn.disabled = false;
+        }
+    }
+</script>
+
+</body>
+</html>
