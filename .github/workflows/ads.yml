@@ -21,33 +21,43 @@ jobs:
         run: |
           FILE_PATH="z-ads/ads.txt"
           
+          # Kiểm tra nếu tệp tồn tại
+          if [ ! -f "$FILE_PATH" ]; then
+            echo "File not found!"
+            exit 0
+          fi
+          
           # Đếm số dòng ban đầu
           ORIGINAL_COUNT=$(wc -l < "$FILE_PATH")
           
-          # Tách Header và xử lý Body:
-          # 1. Loại bỏ khoảng trắng thừa
-          # 2. Loại bỏ tiền tố www. ở đầu dòng
-          # 3. Loại bỏ dòng trống
-          # 4. Sắp xếp và loại bỏ trùng lặp (sort -u)
+          # Tách Header (các dòng bắt đầu bằng ! hoặc [)
           grep -E "^!|^\[" "$FILE_PATH" > header.tmp || touch header.tmp
-          grep -vE "^!|^\[" "$FILE_PATH" | sed -e 's/[[:space:]]*$//' -e 's/^www\.//g' | grep . | sort -u > sorted_body.tmp
           
-          # Gộp lại
+          # Xử lý Body:
+          # 1. Loại bỏ các dòng header
+          # 2. Xóa khoảng trắng cuối dòng
+          # 3. Loại bỏ tiền tố 'www.' ở đầu dòng (nếu có)
+          # 4. Loại bỏ các dòng trống
+          # 5. Sắp xếp và loại bỏ trùng lặp (sort -u)
+          grep -vE "^!|^\[" "$FILE_PATH" | \
+          sed 's/[[:space:]]*$//' | \
+          sed 's/^www\.//g' | \
+          grep . | \
+          sort -u > sorted_body.tmp
+          
+          # Gộp lại Header và Body đã xử lý
           cat header.tmp sorted_body.tmp > "$FILE_PATH"
           
           # Đếm số dòng sau khi xử lý
           FINAL_COUNT=$(wc -l < "$FILE_PATH")
           REMOVED_COUNT=$((ORIGINAL_COUNT - FINAL_COUNT))
-          echo "Đã loại bỏ $REMOVED_COUNT dòng (bao gồm trùng lặp và định dạng lại)."
+          
+          echo "Original: $ORIGINAL_COUNT"
+          echo "Final: $FINAL_COUNT"
+          echo "Removed: $REMOVED_COUNT"
 
       - name: Commit and Push changes
-        run: |
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
-          git add "$FILE_PATH"
-          if git diff --staged --quiet; then
-            echo "Không có thay đổi nào để commit."
-          else
-            git commit -m "Chỉnh sửa tự động: Loại bỏ www, sắp xếp và xóa trùng lặp"
-            git push
-          fi
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Auto-clean: Remove www prefix, sort and deduplicate ads.txt"
+          file_pattern: 'z-ads/ads.txt'
