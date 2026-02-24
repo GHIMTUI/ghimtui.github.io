@@ -4,6 +4,11 @@
 ! Expires: 1s
 ! Version: 1.1.0
 ! ---------------
+vietnamnet.vn##[id^="adzone"]
+vietnamnet.vn###mashead-bn
+vietnamnet.vn###adzone39
+vietnamnet.vn###adzone40
+baolamdong.vn##img[width="722"]
 51degrees.com##.b-img
 anninhthudo.vn##.aanetwork-ads-box
 anninhthudo.vn##.aanetwork-flyicon-1013
