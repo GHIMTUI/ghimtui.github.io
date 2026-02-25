@@ -1,3 +1,5 @@
+[Adblock Plus 2.0]
+
 ! Description: chặn quảng cáo
 ! Title: STOP ADS
 ! Version: 1.0
@@ -8,9 +10,6 @@
 24h.com.vn##[id^="inpage_article"]
 24h.com.vn##[id^="inread_sis"]
 24h.com.vn##[id^="sis_inpage"]
-m.tv360.vn##.css-1xdipk
-m.tv360.vn##.text-ellipsis
-[Adblock Plus 2.0]
 
 dantri.com.vn##[id^="dta"]
 dantri.com.vn##[id^="dtad__backup-creative"]
@@ -27,10 +26,12 @@ m.kenh14.vn##[id^="adm-slot"]
 m.kenh14.vn##[id^="adm_zone"]
 m.kenh14.vn##[id^="admbackground"]
 m.kenh14.vn##[id^="zone"]
+m.tv360.vn##.css-1xdipk
+m.tv360.vn##.text-ellipsis
 
-plo.vn##[id^="Mobile"]
 plo.vn##[id^="adsMobile"]
 plo.vn##[id^="bn-zone"]
+plo.vn##[id^="Mobile"]
 plo.vn##[id^="zone"]
 plo.vn##div[style="margin: 10px 0px;"]
 
@@ -47,8 +48,8 @@ thanhnien.vn##.asd-headt
 thanhnien.vn##[id^="sp"]
 thanhnien.vn##[id^="zone"]
 thegioididong.com##.popup-banner
-tuoitre.vn###LeaderBoardTop
 tuoitre.vn###admbackground
+tuoitre.vn###LeaderBoardTop
 tuoitre.vn###pvoucher-live-container
 tuoitre.vn##[id^="sp_format-hovering"]
 tuoitre.vn##[id^="zone"]
