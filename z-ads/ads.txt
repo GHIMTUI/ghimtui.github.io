@@ -37,7 +37,7 @@ plo.vn##div[style="margin: 10px 0px;"]
 
 quantrimang.com##[class^="ads"]
 quantrimang.com##[id^="adindex"]
-quantrimang.com##[id^="adspost"]
+quantrimang.com##[id^="adsposttop"]
 quantrimang.com##[id^="adunderarticle"]
 quantrimang.com##[id^="articleads"]
 quantrimang.com##[id^="mrc"]
