@@ -8,7 +8,8 @@
 24h.com.vn##[id^="inpage_article"]
 24h.com.vn##[id^="inread_sis"]
 24h.com.vn##[id^="sis_inpage"]
-
+m.tv360.vn##.css-1xdipk
+m.tv360.vn##.text-ellipsis
 [Adblock Plus 2.0]
 
 dantri.com.vn##[id^="dta"]
