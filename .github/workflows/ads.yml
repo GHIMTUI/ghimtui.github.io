@@ -1,28 +1,37 @@
 name: Process Ads File
     id: process_step
-        run: |
-          FILE_PATH="z-ads/ads.txt"
-          
-          # Đếm số dòng ban đầu
-          ORIGINAL_COUNT=$(wc -l < "$FILE_PATH")
-          
-          # Tách Header
-          grep -E "^!|^\[" "$FILE_PATH" > header.tmp || touch header.tmp
-          
-          # Xử lý Body: 
-          # 1. Loại bỏ dòng trống/comment
-          # 2. Xóa 'www.' ở đầu mỗi dòng
-          # 3. Xóa khoảng trắng thừa cuối dòng
-          # 4. Sắp xếp và xóa trùng lặp
-          grep -vE "^!|^\[" "$FILE_PATH" | \
-          sed 's/^www\.//g' | \
-          sed 's/[[:space:]]*$//' | \
-          grep . | sort -u > sorted_body.tmp
-          
-          # Gộp lại
-          cat header.tmp sorted_body.tmp > "$FILE_PATH"
-          
-          # Đếm số dòng sau khi xử lý
-          FINAL_COUNT=$(wc -l < "$FILE_PATH")
-          REMOVED_COUNT=$((ORIGINAL_COUNT - FINAL_COUNT))
-          echo "BOT: Số dòng loại bỏ: $REMOVED_COUNT"
+    run: |
+      FILE_PATH="z-ads/ads.txt"
+      
+      # Đếm số dòng ban đầu
+      ORIGINAL_COUNT=$(wc -l < "$FILE_PATH")
+      
+      # Tách Header
+      grep -E "^!|^\[" "$FILE_PATH" > header.tmp || touch header.tmp
+      
+      # Xử lý Body: 
+      # 1. Loại bỏ dòng trống/comment, xóa www., xóa khoảng trắng, sắp xếp duy nhất
+      grep -vE "^!|^\[" "$FILE_PATH" | \
+      sed -e 's/^www\.//g' -e 's/[[:space:]]*$//' | \
+      grep . | sort -u > temp_body.tmp
+
+      # 2. Chèn khoảng trống giữa các nhóm ký tự đầu (0-9, a, b, c...)
+      awk '{
+        current_char = lc(substr($0, 1, 1));
+        if (NR > 1 && current_char != last_char) {
+          print ""; 
+        }
+        print $0;
+        last_char = current_char;
+      }
+      function lc(s) {
+        return tolower(s)
+      }' temp_body.tmp > sorted_body.tmp
+      
+      # Gộp lại (Header + Body đã phân nhóm)
+      cat header.tmp sorted_body.tmp > "$FILE_PATH"
+      
+      # Đếm số dòng sau khi xử lý (không tính dòng trống mới chèn vào thống kê nếu muốn chính xác)
+      FINAL_COUNT=$(grep . "$FILE_PATH" | wc -l)
+      REMOVED_COUNT=$((ORIGINAL_COUNT - FINAL_COUNT))
+      echo "BOT: Số dòng thực tế đã loại bỏ: $REMOVED_COUNT"
