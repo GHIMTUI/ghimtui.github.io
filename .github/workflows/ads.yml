@@ -4,7 +4,7 @@ on:
   push:
     paths:
       - 'z-ads/ads.txt'
-  workflow_dispatch: # Cho phép chạy thủ công khi cần
+  workflow_dispatch:
 
 jobs:
   format-ads:
@@ -17,45 +17,55 @@ jobs:
         run: |
           FILE_PATH="z-ads/ads.txt"
           
-          # 1. Loại bỏ tiền tố www. và các khoảng trắng thừa
-          sed -i 's/^www\.//g' $FILE_PATH
-          sed -i 's/, www\./, /g' $FILE_PATH
-          
-          # 2. Sắp xếp (Sort) và loại bỏ dòng trùng lặp (Unique)
-          # Lưu tạm vào file temp
-          sort -u $FILE_PATH -o $FILE_PATH.tmp
+          # Kiểm tra nếu file tồn tại
+          if [ ! -f "$FILE_PATH" ]; then
+            echo "File không tồn tại!"
+            exit 1
+          fi
 
-          # 3. Tạo khoảng trống giữa các nhóm 0-9 và a-z
-          # Script Python nhỏ để xử lý logic phân nhóm phức tạp hơn
           python3 -c "
 import re
 
-path = '$FILE_PATH.tmp'
+path = '$FILE_PATH'
 with open(path, 'r') as f:
-    lines = [l.strip() for l in f.readlines() if l.strip()]
+    # 1. Đọc file và loại bỏ khoảng trắng đầu/cuối mỗi dòng
+    raw_lines = f.readlines()
 
+processed_lines = []
+for line in raw_lines:
+    clean_line = line.strip()
+    if clean_line:
+        # 2. Loại bỏ tiền tố www. (ở đầu dòng hoặc sau dấu phẩy)
+        clean_line = re.sub(r'^www\.', '', clean_line)
+        clean_line = re.sub(r',\s*www\.', ', ', clean_line)
+        processed_lines.append(clean_line)
+
+# 3. Loại bỏ trùng lặp bằng set() và sắp xếp lại
+unique_lines = sorted(list(set(processed_lines)))
+
+# 4. Phân nhóm 0-9 và a-z kèm khoảng trống
 organized = []
 last_char = None
 
-for line in lines:
-    current_char = line[0].lower()
-    # Nếu ký tự đầu là số, gom vào nhóm '0-9'
-    if current_char.isdigit():
-        current_char = '0-9'
+for line in unique_lines:
+    # Lấy ký tự đầu tiên để định danh nhóm
+    first_char = line[0].lower()
+    current_group = '0-9' if first_char.isdigit() else first_char
     
-    if last_char is not None and last_char != current_char:
-        organized.append('') # Thêm dòng trống giữa các nhóm
+    # Nếu đổi nhóm thì chèn dòng trống
+    if last_char is not None and last_char != current_group:
+        organized.append('')
     
     organized.append(line)
-    last_char = current_char
+    last_char = current_group
 
-with open('$FILE_PATH', 'w') as f:
+# Ghi đè lại file ads.txt
+with open(path, 'w') as f:
     f.write('\n'.join(organized) + '\n')
 "
-          rm $FILE_PATH.tmp
 
       - name: Commit and Push changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "chore: tự động chuẩn hóa ads.txt [bot]"
+          commit_message: "chore: loại bỏ trùng lặp và sắp xếp ads.txt [bot]"
           file_pattern: 'z-ads/ads.txt'
