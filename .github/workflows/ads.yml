@@ -25,4 +25,4 @@ name: Process Ads File
           # Đếm số dòng sau khi xử lý
           FINAL_COUNT=$(wc -l < "$FILE_PATH")
           REMOVED_COUNT=$((ORIGINAL_COUNT - FINAL_COUNT))
-          echo "Đã xử lý xong. Số dòng đã loại bỏ: $REMOVED_COUNT"
+          echo "BOT: Số dòng loại bỏ: $REMOVED_COUNT"
