@@ -4,6 +4,93 @@
 ! Expires: 30s
 ! Version: 1.1.0
 ! ---------------
+vi.ldplayer.net##.adsbygoogle
+vi.ldplayer.net##.h-280px
+www.24h.com.vn###ADS_161_15s_container
+www.accuweather.com##script[src^="https://securepubads.g.doubleclick.net/gampad/adx"]
+
+www.accuweather.com###top
+www.accuweather.com###bottom
+www.windy.com###open-in-app
+m.youtube.com##.YtmCompanionAdRendererContainer
+m.tinnhanhchungkhoan.vn###adsMobile_AdsTop
+www.accuweather.com##.header-placeholder
+www.accuweather.com###middle
+baodanang.vn##img[src="https://bqn.1cdn.vn/2025/07/10/vietlotsms.jpg"]
+baodanang.vn##a[rel="noopener noreferrer nofollow"]>div
+baodanang.vn##.aanetwork-flyicon-btnclose-1012
+baodanang.vn##.adsbygoogle
+baodanang.vn##.c-banner-inpage
+nhanhoa.com###img_bf12_18
+nhanhoa.com##.shake_img_close
+youtube.com##.ad-container
+youtube.com###player-ads
+youtube.com##.ytp-ad-overlay-container
+youtube.com#@#.overlay-ads
+youtube.com#@#.ddb
+youtube.com###feed-pyv-container
+youtube.com###feedmodule-PRO
+youtube.com###homepage-chrome-side-promo
+youtube.com###merch-shelf
+youtube.com###pla-shelf
+youtube.com###premium-yva
+youtube.com###search-pva
+youtube.com###shelf-pyv-container
+youtube.com###video-masthead
+youtube.com###watch-branded-actions
+youtube.com###watch-buy-urls
+youtube.com###watch-channel-brand-div
+youtube.com##.carousel-offer-url-container
+youtube.com##.promoted-videos
+youtube.com##.searchView.list-view
+youtube.com##.watch-extra-info-column
+youtube.com##.watch-extra-info-right
+youtube.com##.ytd-merch-shelf-renderer
+youtube.com##.ytd-search-pyv-renderer
+youtube.com##YTM-PROMOTED-VIDEO-RENDERER
+youtube.com##.list-view[style="margin: 7px 0pt;"]
+youtube.com##.searchView.list-view
+youtube.com##a[href^="http://www.youtube.com/cthru?"]
+youtube.com##.ytp-ad-progress
+youtube.com##.ytp-ad-progress-list
+youtube.com###ad-image\:22
+youtube.com##.ytd-action-companion-ad-renderer
+youtube.com##.ytp-ad-text-overlay:nth-of-type(1)
+youtube.com##ytd-watch-next-secondary-results-renderer.ytd-watch-flexy.style-scope
+youtube.com##a.ytp-suggestion-set.ytp-videowall-still
+youtube.com##ytd-browse[page-subtype=home]
+youtube.com##.ytd-popup-container.style-scope > .yt-mealbar-promo-renderer.style-scope
+youtube.com##.ytp-suggestion-panel
+youtube.com##.ytp-autonav-endscreen-upnext-container
+youtube.com##.ytp-ce-video
+youtube.com##.ytp-ce-element
+youtube.com##.ytp-scroll-min.ytp-related-on-error-overlay
+youtube.com##related
+youtube.com##ytd-rich-grid-renderer.ytd-watch-grid.style-scope > .ytd-rich-grid-renderer.style-scope
+youtube.com##a.ytp-suggestion-set.ytp-modern-videowall-still
+youtube.com##.ytp-fullscreen-grid-stills-container
+youtube.com##.ytp-fullscreen-grid-main-content
+
+www.youtube.com##ytd-watch-next-secondary-results-renderer.ytd-watch-flexy.style-scope
+www.youtube.com##a.ytp-suggestion-set.ytp-videowall-still
+www.youtube.com##ytd-browse[page-subtype=home]
+www.youtube.com##.ytd-popup-container.style-scope > .yt-mealbar-promo-renderer.style-scope
+www.youtube.com##.ytp-suggestion-panel
+www.youtube.com##.ytp-autonav-endscreen-upnext-container
+www.youtube.com##.ytp-ce-video
+www.youtube.com##.ytp-ce-element
+www.youtube.com##.ytp-scroll-min.ytp-related-on-error-overlay
+www.youtube.com##related
+www.youtube.com##ytd-rich-grid-renderer.ytd-watch-grid.style-scope > .ytd-rich-grid-renderer.style-scope
+www.youtube.com##a.ytp-suggestion-set.ytp-modern-videowall-still
+www.youtube.com##.ytp-fullscreen-grid-stills-container
+www.youtube.com##.ytp-fullscreen-grid-main-content
+m.kenh14.vn###admbackground
+m.kenh14.vn###admbackground2
+galaxyplay.vn###balloon-ad-container
+galaxyplay.vn##.register__now
+logos.fandom.com##.bottom-ads-container
+www.thegioididong.com##.popup-banner
 24h.com.vn###ADS_160_15s
 24h.com.vn###ADS_160_15s_container
 24h.com.vn###ADS_170_15s_container
