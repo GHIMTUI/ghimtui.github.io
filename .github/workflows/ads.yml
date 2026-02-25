@@ -1,4 +1,4 @@
-name: Tự động sắp xếp và phân loại
+name: Tự động sắp xếp
 on:
   push:
     paths:
@@ -13,48 +13,24 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Xử lý tệp Ads
+      - name: Process Ads File
+        id: process_step
         run: |
           FILE_PATH="z-ads/ads.txt"
-          if [ ! -f "$FILE_PATH" ]; then exit 0; fi
           
-          # 1. Tách Header (Giữ lại các dòng chú thích bắt đầu bằng ! hoặc [)
+          # Đếm số dòng ban đầu
+          ORIGINAL_COUNT=$(wc -l < "$FILE_PATH")
+          
+          # Tách Header và xử lý Body
           grep -E "^!|^\[" "$FILE_PATH" > header.tmp || touch header.tmp
+          grep -vE "^!|^\[" "$FILE_PATH" | sed 's/[[:space:]]*$//' | grep . | sort -u > sorted_body.tmp
           
-          # 2. Làm sạch triệt để:
-          # - Xóa http://, https://, www. và các subdomain bất kỳ
-          # - Xóa khoảng trắng, dòng trống và lọc trùng
-          grep -vE "^!|^\[" "$FILE_PATH" | \
-          sed -E 's|^https?://||i' | \
-          sed -E 's|^[^./]+\.([^./]+\.[^./]+)|\1|' | \
-          sed -E 's|^www\.||i' | \
-          sed 's/[[:space:]]*$//' | \
-          grep . | sort -u > body_clean.tmp
-
-          # 3. Tạo file mới với phân loại tiếng Việt
-          echo "! Cập nhật lần cuối: $(date)" > final_ads.txt
-          cat header.tmp >> final_ads.txt
+          # Gộp lại
+          cat header.tmp sorted_body.tmp > "$FILE_PATH"
           
-          # Phân loại Nhóm Số (0-9)
-          if grep -qi "^[0-9]" body_clean.tmp; then
-            echo -e "\n\n---- 0-9 ----" >> final_ads.txt
-            grep -i "^[0-9]" body_clean.tmp >> final_ads.txt
-          fi
-          
-          # Phân loại Nhóm Chữ cái (A-Z)
-          for char in {A..Z}; do
-            if grep -qi "^$char" body_clean.tmp; then
-               echo -e "\n---- $char ----" >> final_ads.txt
-               grep -i "^$char" body_clean.tmp >> final_ads.txt
-            fi
-          done
-
-          mv final_ads.txt "$FILE_PATH"
-          rm *.tmp
-
-      - name: Commit và Push thay đổi
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: "Tự động: Xóa tiền tố, sắp xếp và phân loại ads.txt"
-          file_pattern: 'z-ads/ads.txt'
+          # Đếm số dòng sau khi xử lý
+          FINAL_COUNT=$(wc -l < "$FILE_PATH")
+          REMOVED_COUNT=$((ORIGINAL_COUNT - FINAL_COUNT))
