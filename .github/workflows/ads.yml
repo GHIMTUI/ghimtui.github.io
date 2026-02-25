@@ -1,32 +1,23 @@
-name: Tự động sắp xếp
-on:
-  push:
-    paths:
-      - 'z-ads/ads.txt'
-
-permissions:
-  contents: write
-
-jobs:
-  sort-and-clean:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Process Ads File
-        id: process_step
+name: Process Ads File
+    id: process_step
         run: |
           FILE_PATH="z-ads/ads.txt"
           
           # Đếm số dòng ban đầu
           ORIGINAL_COUNT=$(wc -l < "$FILE_PATH")
           
-          # Tách Header và xử lý Body
+          # Tách Header
           grep -E "^!|^\[" "$FILE_PATH" > header.tmp || touch header.tmp
-          grep -vE "^!|^\[" "$FILE_PATH" | sed 's/[[:space:]]*$//' | grep . | sort -u > sorted_body.tmp
+          
+          # Xử lý Body: 
+          # 1. Loại bỏ dòng trống/comment
+          # 2. Xóa 'www.' ở đầu mỗi dòng
+          # 3. Xóa khoảng trắng thừa cuối dòng
+          # 4. Sắp xếp và xóa trùng lặp
+          grep -vE "^!|^\[" "$FILE_PATH" | \
+          sed 's/^www\.//g' | \
+          sed 's/[[:space:]]*$//' | \
+          grep . | sort -u > sorted_body.tmp
           
           # Gộp lại
           cat header.tmp sorted_body.tmp > "$FILE_PATH"
@@ -34,3 +25,4 @@ jobs:
           # Đếm số dòng sau khi xử lý
           FINAL_COUNT=$(wc -l < "$FILE_PATH")
           REMOVED_COUNT=$((ORIGINAL_COUNT - FINAL_COUNT))
+          echo "Đã xử lý xong. Số dòng đã loại bỏ: $REMOVED_COUNT"
