@@ -1,31 +1,61 @@
-- name: Process Ads File
-      id: process_step
-      run: |
-        FILE_PATH="z-ads/ads.txt"
-        
-        # 1. Tách Header (giữ lại các dòng bắt đầu bằng ! hoặc [)
-        grep -E "^!|^\[" "$FILE_PATH" > header.tmp || touch header.tmp
-        
-        # 2. Xử lý nội dung chính:
-        # - Loại bỏ header cũ, xóa www., xóa khoảng trắng thừa
-        # - Sắp xếp duy nhất (sort -u)
-        # - Chèn dòng trống giữa các nhóm ký tự (0-9, a, b, c...)
-        grep -vE "^!|^\[" "$FILE_PATH" | \
-        sed -e 's/^www\.//g' -e 's/[[:space:]]*$//' | \
-        grep . | sort -u | \
-        awk '{
-          current_char = tolower(substr($0, 1, 1));
-          if (NR > 1 && current_char != last_char) {
-            print ""; 
-          }
-          print $0;
-          last_char = current_char;
-        }' > sorted_body.tmp
-        
-        # 3. Ghi đè lại file gốc
-        if cat header.tmp sorted_body.tmp > "$FILE_PATH"; then
-          echo "BOT: ✔ Xử lý file ads.txt thành công!"
-        else
-          echo "BOT: ✘ Xử lý file ads.txt thất bại!"
-          exit 1
-        fi
+name: Standardize ads.txt
+
+on:
+  push:
+    paths:
+      - 'z-ads/ads.txt'
+  workflow_dispatch: # Cho phép chạy thủ công khi cần
+
+jobs:
+  format-ads:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Process ads.txt
+        run: |
+          FILE_PATH="z-ads/ads.txt"
+          
+          # 1. Loại bỏ tiền tố www. và các khoảng trắng thừa
+          sed -i 's/^www\.//g' $FILE_PATH
+          sed -i 's/, www\./, /g' $FILE_PATH
+          
+          # 2. Sắp xếp (Sort) và loại bỏ dòng trùng lặp (Unique)
+          # Lưu tạm vào file temp
+          sort -u $FILE_PATH -o $FILE_PATH.tmp
+
+          # 3. Tạo khoảng trống giữa các nhóm 0-9 và a-z
+          # Script Python nhỏ để xử lý logic phân nhóm phức tạp hơn
+          python3 -c "
+import re
+
+path = '$FILE_PATH.tmp'
+with open(path, 'r') as f:
+    lines = [l.strip() for l in f.readlines() if l.strip()]
+
+organized = []
+last_char = None
+
+for line in lines:
+    current_char = line[0].lower()
+    # Nếu ký tự đầu là số, gom vào nhóm '0-9'
+    if current_char.isdigit():
+        current_char = '0-9'
+    
+    if last_char is not None and last_char != current_char:
+        organized.append('') # Thêm dòng trống giữa các nhóm
+    
+    organized.append(line)
+    last_char = current_char
+
+with open('$FILE_PATH', 'w') as f:
+    f.write('\n'.join(organized) + '\n')
+"
+          rm $FILE_PATH.tmp
+
+      - name: Commit and Push changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: tự động chuẩn hóa ads.txt [bot]"
+          file_pattern: 'z-ads/ads.txt'
