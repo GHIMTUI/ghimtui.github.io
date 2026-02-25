@@ -34,6 +34,7 @@ plo.vn##[id^="bn-zone"]
 plo.vn##[id^="Mobile"]
 plo.vn##[id^="zone"]
 plo.vn##div[style="margin: 10px 0px;"]
+
 quantrimang.com##[class^="ads"]
 quantrimang.com##[id^="adindex"]
 quantrimang.com##[id^="adspost"]
