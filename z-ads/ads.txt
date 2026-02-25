@@ -22,7 +22,7 @@ m.kenh14.vn##.adv
 vnexpress.net##.section_ads_300x250
 vnexpress.net##.banner_mobile_300x250
 dantri.com.vn##div[data-module="banner-open-install-app"]
-
+fptplay.vn##a[aria-label="Purchase packages"]
 tuoitre.vn###pvoucher-live-container
 tuoitre.vn###admbackground
 tuoitre.vn##[id^="zone"]
