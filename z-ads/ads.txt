@@ -1,3 +1,5 @@
-!===================
-! Bộ lọc quảng cáo
+[Adblock Plus 2.0]
+! Title: STOP AD
+! Description: chặn quảng cáo
+! Version: 1.0
 !===================
