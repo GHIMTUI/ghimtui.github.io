@@ -1,5 +1,51 @@
 [Adblock Plus 2.0]
-! Title: STOP AD
+! Title: STOP ADS
 ! Description: chặn quảng cáo
 ! Version: 1.0
 !===================
+
+www.thegioididong.com##.popup-banner
+www.24h.com.vn##[id^="ADS_"]
+www.24h.com.vn##[id^="div_inpage"]
+www.24h.com.vn##[id^="sis_inpage"]
+www.24h.com.vn##[id^="inpage_article"]
+www.24h.com.vn##[id^="inread_sis"]
+vnexpress.net###banner_top
+vnexpress.net###ads_large_detail
+m.kenh14.vn###admFullTop
+m.kenh14.vn###ban-top-site
+m.kenh14.vn##[id^="adm-slot"]
+m.kenh14.vn##[id^="adm_zone"]
+m.kenh14.vn##[id^="admbackground"]
+m.kenh14.vn##[id^="zone"]
+m.kenh14.vn##.adv
+vnexpress.net##.section_ads_300x250
+vnexpress.net##.banner_mobile_300x250
+dantri.com.vn##div[data-module="banner-open-install-app"]
+
+tuoitre.vn###pvoucher-live-container
+tuoitre.vn###admbackground
+tuoitre.vn##[id^="zone"]
+tuoitre.vn##[id^="sp_format-hovering"]
+tuoitre.vn###LeaderBoardTop
+
+dantri.com.vn##[id^="dta"]
+dantri.com.vn##[id^="mobile"]
+dantri.com.vn##[id^="dtad__backup-creative"]
+dantri.com.vn##[id^="tpmInpage"]
+thanhnien.vn##.asd-headt
+thanhnien.vn##[id^="sp"]
+thanhnien.vn##[id^="zone"]
+quantrimang.com##[id^="adspost"]
+quantrimang.com##[id^="articleads"]
+quantrimang.com##.adsense
+quantrimang.com##[id^="mrc"]
+quantrimang.com##.adsbygoogle
+quantrimang.com##[id^="adunderarticle"]
+quantrimang.com##.adswrapper
+quantrimang.com##[id^="adindex"]
+plo.vn##[id^="adsMobile"]
+plo.vn##[id^="Mobile"]
+plo.vn##[id^="bn-zone"]
+plo.vn##[id^="zone"]
+plo.vn##div[style="margin: 10px 0px;"]
