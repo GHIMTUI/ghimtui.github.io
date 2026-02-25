@@ -14,58 +14,54 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Process ads.txt
+        shell: python
         run: |
-          FILE_PATH="z-ads/ads.txt"
+          import re
+          import os
+
+          file_path = "z-ads/ads.txt"
           
-          # Kiểm tra nếu file tồn tại
-          if [ ! -f "$FILE_PATH" ]; then
-            echo "File không tồn tại!"
-            exit 1
-          fi
+          if not os.path.exists(file_path):
+              print("File không tồn tại!")
+              exit(0)
 
-          python3 -c "
-import re
+          # 1. Đọc và làm sạch dữ liệu ban đầu
+          with open(file_path, 'r') as f:
+              raw_lines = f.readlines()
 
-path = '$FILE_PATH'
-with open(path, 'r') as f:
-    # 1. Đọc file và loại bỏ khoảng trắng đầu/cuối mỗi dòng
-    raw_lines = f.readlines()
+          processed_set = set()
+          for line in raw_lines:
+              clean = line.strip()
+              if clean and not clean.startswith('#'):
+                  # Loại bỏ www. ở đầu hoặc sau dấu phẩy
+                  clean = re.sub(r'^www\.', '', clean)
+                  clean = re.sub(r',\s*www\.', ', ', clean)
+                  processed_set.add(clean)
 
-processed_lines = []
-for line in raw_lines:
-    clean_line = line.strip()
-    if clean_line:
-        # 2. Loại bỏ tiền tố www. (ở đầu dòng hoặc sau dấu phẩy)
-        clean_line = re.sub(r'^www\.', '', clean_line)
-        clean_line = re.sub(r',\s*www\.', ', ', clean_line)
-        processed_lines.append(clean_line)
+          # 2. Sắp xếp danh sách đã loại bỏ trùng lặp
+          unique_lines = sorted(list(processed_set))
 
-# 3. Loại bỏ trùng lặp bằng set() và sắp xếp lại
-unique_lines = sorted(list(set(processed_lines)))
+          # 3. Phân nhóm và tạo khoảng trống
+          organized = []
+          last_group = None
 
-# 4. Phân nhóm 0-9 và a-z kèm khoảng trống
-organized = []
-last_char = None
+          for line in unique_lines:
+              first_char = line[0].lower()
+              # Xác định nhóm: 0-9 hoặc a-z
+              current_group = '0-9' if first_char.isdigit() else first_char
+              
+              if last_group is not None and last_group != current_group:
+                  organized.append('') # Thêm dòng trống khi đổi nhóm
+              
+              organized.append(line)
+              last_group = current_group
 
-for line in unique_lines:
-    # Lấy ký tự đầu tiên để định danh nhóm
-    first_char = line[0].lower()
-    current_group = '0-9' if first_char.isdigit() else first_char
-    
-    # Nếu đổi nhóm thì chèn dòng trống
-    if last_char is not None and last_char != current_group:
-        organized.append('')
-    
-    organized.append(line)
-    last_char = current_group
-
-# Ghi đè lại file ads.txt
-with open(path, 'w') as f:
-    f.write('\n'.join(organized) + '\n')
-"
+          # 4. Ghi lại vào file
+          with open(file_path, 'w') as f:
+              f.write('\n'.join(organized) + '\n')
 
       - name: Commit and Push changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "chore: loại bỏ trùng lặp và sắp xếp ads.txt [bot]"
-          file_pattern: 'z-ads/ads.txt'
+          commit_message: "chore: chuẩn hóa, xóa trùng lặp ads.txt [bot]"
+          file_pattern: 'z-ads/ads.txt' 
