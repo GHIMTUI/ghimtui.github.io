@@ -4,7 +4,18 @@
 ! Expires: 30s
 ! Version: 1.1.0
 ! ---------------
+24h.com.vn###ADS_160_15s
+24h.com.vn###ADS_160_15s_container
+24h.com.vn###ADS_170_15s_container
+24h.com.vn###apm-interstitial_anchor
+24h.com.vn###div_inpage_banner
+24h.com.vn###div_inpage_banner_open
+24h.com.vn###div_inpage_banner_open2
+24h.com.vn##.inpage_article_cont
+24h.com.vn##.inpage_article_rect
 51degrees.com##.b-img
+91mobiles.com##.w-100
+accuweather.com##.adhesion-header
 anninhthudo.vn##.aanetwork-ads-box
 anninhthudo.vn##.aanetwork-flyicon-1013
 anninhthudo.vn##a[href="https://s.shopee.vn/7KrZ0kcf4D"]>div
@@ -13,6 +24,9 @@ baodongnai.com.vn##img[src^="/file/adman/e7837c02876411cd0187645a2551379f/297e39
 baodongnai.com.vn##img[src^="/file/adman/e7837c02876411cd0187645a2551379f/297e39ad979d28ca01979d2a94f00022_20260205065952.jpg"]
 baodongnai.com.vn##img[src^="/file/adman/e7837c02876411cd0187645a2551379f/8a10a6948791f7260187925fc3b7000a_20240508161811.jpg"]
 baodongnai.com.vn##img[src^="/file/adman/e7837c02876411cd0187645a2551379f/8a10a6948791f7260187925fc3b7000a_20250523190157.jpeg"]
+baodongthap.vn##img[src="https://ads.baodongthap.vn/www/images/0149b6236ed2c2ce98c9eb787098875c.jpg"]
+baodongthap.vn##img[src="https://ads.baodongthap.vn/www/images/d4e586bbe0220fff83b80e9d4057a316.jpg"]
+baodongthap.vn##img[src="https://ads.baodongthap.vn/www/images/d864a0dbeda9ee44dec8ba9711be0dd5.jpg"]
 baogialai.com.vn##img[src="https://cdn.baogialai.com.vn/images/1d5bcac7f44e7d6a62b237529fada32a17e5407b4fab398cc9ab053379c53c005ec111f5b967fbac1bc633540816f2c7/dat-xanh-2025.jpg"]
 baolamdong.vn##img[width="722"]
 baolangson.vn##img[src="https://mediabls.mediatech.vn/upload/image/202504/medium/548840_ngang_0_5_18_4_25_16430518.jpg"]
@@ -57,6 +71,7 @@ exokit.org##.max-w-full
 exokit.org##.w-fit
 exokit.org##.z-[9999]
 facebook.com##[class^="bg-"]
+fandom.com##.top-ads-container
 fptplay.vn##.flex-row
 fptplay.vn##a[aria-label="Purchase packages"]
 hanoimoi.vn##img[height="100"]
@@ -128,7 +143,16 @@ quantrimang.com###articleads
 quantrimang.com###articleads2
 quantrimang.com###articleads3
 quantrimang.com###mrc419
+saostar.vn###mobi-top
+saostar.vn###pvoucher-live-container
+saostar.vn###sp-wrapper-hovering-format
+saostar.vn##a[style="width: 100%; height: 100%;"]>div
+saostar.vn##img[src="http://libs.saostar.vn/ads/tet2026.gif"]
 soha.vn###[class^="zone-"]
+speedtest.net###modal-overlay
+speedtest.net###zdcFloatingBtn
+speedtest.net##.mobile-pretest-new
+speedtest.net##.modal-content
 speedtest.vn##.jconfirm
 speedtest.vn##.jconfirm-row
 speedtest.vn##.jconfirm-scrollpane
@@ -169,6 +193,11 @@ truyenhinhthanhhoa.vn##img[src="https://static-cmsads.admicro.vn/cmsads/2026/02/
 truyennet.vn##.sp-animate
 tuoitre.vn###LeaderBoardTop
 tuoitre.vn##img[src="https://static-cmsads.admicro.vn/cmsads/2026/02/640x-1770385181123.jpeg"]
+tvbox.one##.adsbygoogle
+tvbox.one##.entry-img-300
+tvbox.one##.google-aiuf
+tvbox.one##.homeadv
+tvbox.one##.homeadv>span
 vansu.net##center[style="padding-top: 15px;height: 280px;"]
 vietnamnet.vn###Mobile_AdsArticleBodyInArticle
 vietnamnet.vn###adzone113
@@ -206,41 +235,12 @@ vtcnews.vn##img[src="https://cdn-i.vtcnews.vn/resize/DPr7-92g-bRCzx_-n1qXvywXaVl
 webnovel.vn###fly_wlPiM
 webnovel.vn##img[src="https://adflycode.com/fly_imgs/webnovel.jpg"]
 webthethao.vn##div[style="min-height: 180px;"]
-www.24h.com.vn###ADS_160_15s
-www.24h.com.vn###ADS_160_15s_container
-www.24h.com.vn###ADS_170_15s_container
-www.24h.com.vn###apm-interstitial_anchor
-www.24h.com.vn###div_inpage_banner
-www.24h.com.vn###div_inpage_banner_open
-www.24h.com.vn###div_inpage_banner_open2
-www.24h.com.vn##.inpage_article_cont
-www.24h.com.vn##.inpage_article_rect
-www.91mobiles.com##.w-100
-www.accuweather.com##.adhesion-header
-www.baodongthap.vn##img[src="https://ads.baodongthap.vn/www/images/0149b6236ed2c2ce98c9eb787098875c.jpg"]
-www.baodongthap.vn##img[src="https://ads.baodongthap.vn/www/images/d4e586bbe0220fff83b80e9d4057a316.jpg"]
-www.baodongthap.vn##img[src="https://ads.baodongthap.vn/www/images/d864a0dbeda9ee44dec8ba9711be0dd5.jpg"]
-www.fandom.com##.top-ads-container
-www.saostar.vn###mobi-top
-www.saostar.vn###pvoucher-live-container
-www.saostar.vn###sp-wrapper-hovering-format
-www.saostar.vn##a[style="width: 100%; height: 100%;"]>div
-www.saostar.vn##img[src="http://libs.saostar.vn/ads/tet2026.gif"]
-www.speedtest.net###modal-overlay
-www.speedtest.net###zdcFloatingBtn
-www.speedtest.net##.mobile-pretest-new
-www.speedtest.net##.modal-content
-www.tvbox.one##.adsbygoogle
-www.tvbox.one##.entry-img-300
-www.tvbox.one##.google-aiuf
-www.tvbox.one##.homeadv
-www.tvbox.one##.homeadv>span
-www.xemlicham.com###adInstall
-www.xemtivitop.com##img[src="https://i.imgur.com/0LJbQRO.gif"]
-www.xtmobile.vn##.mfp-container
-www.xtmobile.vn##.mfp-wrap
+xemlicham.com###adInstall
 xemtivi4k.com##img[alt="daftar m88"]
+xemtivitop.com##img[src="https://i.imgur.com/0LJbQRO.gif"]
 xemtvtructuyen.com##.bottom_qc
+xtmobile.vn##.mfp-container
+xtmobile.vn##.mfp-wrap
 znews.vn###Zingnews_SiteHeader
 znews.vn###follow_oa
 znews.vn##.show
