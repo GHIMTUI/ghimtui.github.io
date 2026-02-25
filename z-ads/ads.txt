@@ -6,7 +6,9 @@
 ! Version: 1.1.0
 ! ---------------
 
-
+quantrimang.com###adsinfeed
+m.youtube.com##.yt-spec-touch-feedback-shape__fill
+m.youtube.com##.yt-spec-touch-feedback-shape--touch-response
 ---- 0-9 ----
 24h.com.vn###ADS_161_15s_container
 
