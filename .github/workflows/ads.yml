@@ -30,34 +30,23 @@ jobs:
 
           header_lines = []
           ad_records = set()
+          # Danh sách các tiền tố rác cần loại bỏ
+          bad_prefixes = r'^(www\.|m\.|dev\.|staging\.|api\.)'
 
           for line in raw_lines:
               clean = line.strip()
-              if not clean:
-                  continue
+              if not clean: continue
               
               if clean.startswith('[') or clean.startswith('#'):
                   header_lines.append(clean)
               else:
-                  # --- PHẦN THAY ĐỔI CHÍNH ---
-                  # Regex này sẽ tìm các tiền tố như m., dev., www. và loại bỏ chúng
-                  # Nó giữ lại phần domain chính (ví dụ: google.com, doubleclick.net)
-                  
-                  # 1. Xử lý đầu dòng: Loại bỏ tiền tố đứng trước domain chính
-                  # Tìm các chuỗi kết thúc bằng dấu chấm nhưng không phải phần mở rộng cuối cùng
-                  # Ví dụ: m.google.com -> google.com
-                  record = re.sub(r'^(?:[a-zA-Z0-9-]+\.)+(?=[a-zA-Z0-9-]+\.[a-z]{2,})', '', clean)
-                  
-                  # 2. Xử lý sau dấu phẩy (nếu có trường hợp ghi domain ở vị trí khác - hiếm gặp trong ads.txt tiêu chuẩn)
-                  record = re.sub(r',\s*(?:[a-zA-Z0-9-]+\.)+(?=[a-zA-Z0-9-]+\.[a-z]{2,})', ', ', record)
-                  # ---------------------------
-                  
+                  # Xóa tiền tố ở đầu dòng
+                  record = re.sub(bad_prefixes, '', clean)
+                  # Xóa tiền tố sau dấu phẩy (nếu có)
+                  record = re.sub(r',\s*' + bad_prefixes, ', ', record)
                   ad_records.add(record)
 
-          # Sắp xếp
           unique_ads = sorted(list(ad_records), key=lambda s: s.lower())
-
-          # Phân nhóm
           organized_ads = []
           last_group = None
 
@@ -65,10 +54,8 @@ jobs:
               if not line: continue
               first_char = line[0].lower()
               current_group = '0-9' if first_char.isdigit() else first_char
-              
               if last_group is not None and last_group != current_group:
                   organized_ads.append('')
-              
               organized_ads.append(line)
               last_group = current_group
 
@@ -80,5 +67,5 @@ jobs:
       - name: Commit and Push changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "😊 Đang sắp xếp!"
+          commit_message: "Fixed: Safely removed prefixes while keeping .com.vn domains"
           file_pattern: 'z-ads/ads.txt'
