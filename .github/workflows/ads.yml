@@ -25,7 +25,6 @@ jobs:
               print("File không tồn tại!")
               exit(0)
 
-          # 1. Đọc dữ liệu
           with open(file_path, 'r', encoding='utf-8') as f:
               raw_lines = f.readlines()
 
@@ -37,45 +36,49 @@ jobs:
               if not clean:
                   continue
               
-              # Tách các dòng Header đặc biệt (ví dụ: [Adblock Plus 2.0] hoặc dòng bắt đầu bằng #)
               if clean.startswith('[') or clean.startswith('#'):
-                  # Nếu là header, lưu vào danh sách header để giữ ở đầu file
                   header_lines.append(clean)
               else:
-                  # Xử lý chuẩn hóa bản ghi ads
-                  # Loại bỏ www. ở đầu hoặc sau dấu phẩy
-                  record = re.sub(r'^www\.', '', clean)
-                  record = re.sub(r',\s*www\.', ', ', record)
+                  # --- PHẦN THAY ĐỔI CHÍNH ---
+                  # Regex này sẽ tìm các tiền tố như m., dev., www. và loại bỏ chúng
+                  # Nó giữ lại phần domain chính (ví dụ: google.com, doubleclick.net)
+                  
+                  # 1. Xử lý đầu dòng: Loại bỏ tiền tố đứng trước domain chính
+                  # Tìm các chuỗi kết thúc bằng dấu chấm nhưng không phải phần mở rộng cuối cùng
+                  # Ví dụ: m.google.com -> google.com
+                  record = re.sub(r'^(?:[a-zA-Z0-9-]+\.)+(?=[a-zA-Z0-9-]+\.[a-z]{2,})', '', clean)
+                  
+                  # 2. Xử lý sau dấu phẩy (nếu có trường hợp ghi domain ở vị trí khác - hiếm gặp trong ads.txt tiêu chuẩn)
+                  record = re.sub(r',\s*(?:[a-zA-Z0-9-]+\.)+(?=[a-zA-Z0-9-]+\.[a-z]{2,})', ', ', record)
+                  # ---------------------------
+                  
                   ad_records.add(record)
 
-          # 2. Sắp xếp danh sách bản ghi ads
+          # Sắp xếp
           unique_ads = sorted(list(ad_records), key=lambda s: s.lower())
 
-          # 3. Phân nhóm và tạo khoảng trống cho phần ads
+          # Phân nhóm
           organized_ads = []
           last_group = None
 
           for line in unique_ads:
-              # Lấy ký tự đầu để phân nhóm (0-9 hoặc a-z)
+              if not line: continue
               first_char = line[0].lower()
               current_group = '0-9' if first_char.isdigit() else first_char
               
               if last_group is not None and last_group != current_group:
-                  organized_ads.append('') # Thêm dòng trống khi đổi nhóm
+                  organized_ads.append('')
               
               organized_ads.append(line)
               last_group = current_group
 
-          # 4. Gộp Header và Ads đã sắp xếp
-          # Đảm bảo header nằm trên cùng, sau đó là 1 dòng trống, rồi đến ads
           final_content = header_lines + ([''] if header_lines and organized_ads else []) + organized_ads
 
-          # 5. Ghi lại vào file
           with open(file_path, 'w', encoding='utf-8') as f:
               f.write('\n'.join(final_content).strip() + '\n')
 
       - name: Commit and Push changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "😊 sắp xếp bộ lọc thành công!"
+          commit_message: "😊 Đang sắp xếp!"
           file_pattern: 'z-ads/ads.txt'
