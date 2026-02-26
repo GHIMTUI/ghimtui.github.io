@@ -10,36 +10,7 @@
 24h.com.vn##[id^="inpage_article"]
 24h.com.vn##[id^="inread_sis"]
 24h.com.vn##[id^="sis_inpage"]
-dantri.com.vn##[id^="dtad__"]
-dantri.com.vn##[id^="dat-"]
-dantri.com.vn##[id^="dt"]
-dantri.com.vn##[id^="tpm"]
-dantri.com.vn##[id^="mobile-"]
-m.soha.vn##[id^="admFull"]
-m.soha.vn##[id^="adm-"]
-m.soha.vn##[id^="ban-"]
-m.soha.vn##[id^="zone-"]
-m.soha.vn##[class^="div-"]
-saostar.vn##[id^="pvoucher-"]
-saostar.vn##[id^="sp-"]
-saostar.vn##[id^="mobi-"]
-saostar.vn##[id^="div-"]
-saostar.vn##[id^="mid-"]
-saostar.vn##[class^="txt-"]
-thethao.sggp.org.vn##[id^="top-"] thethao.sggp.org.vn##[id^="admFull"] thethao.sggp.org.vn##[id^="adm_"] thethao.sggp.org.vn##[id^="ban-"] thethao.sggp.org.vn##[id^="zone-"] thethao.sggp.org.vn##[id^="Mobile_"]
-thethao.sggp.org.vn##[id^="sdaMobile_"]
-thethao.sggp.org.vn##a[rel="noopener"]
-thethao.sggp.org.vn##[id^="oa"]
-thethao.sggp.org.vn##.lazyloaded
-thethao.sggp.org.vn##.ls-is-cached
-www.sggp.org.vn##.ls-is-cached
-vietgiaitri.com##[class^="inview-"]
-vietgiaitri.com##[class^="avgt-"]
-vietgiaitri.com##[id^="Balloon"]
-vietgiaitri.com###header
-vietgiaitri.com##.cover_header
 
-||kgvn.work/
 baocaobang.vn##[class^="mt-"]
 baogialai.com.vn###top-logo
 baogialai.com.vn##.sad_viewed
@@ -65,6 +36,11 @@ coccoc.com##[class^="adsItem-"]
 coccoc.com##[class^="default-"]
 coccoc.com##[class^="top-"]
 
+dantri.com.vn##[id^="dat-"]
+dantri.com.vn##[id^="dt"]
+dantri.com.vn##[id^="dtad__"]
+dantri.com.vn##[id^="mobile-"]
+dantri.com.vn##[id^="tpm"]
 duckduckgo.com##[class^="js-"]
 
 fptplay.vn##.flex-row
@@ -77,6 +53,11 @@ m.kenh14.vn##[id^="adm-slot"]
 m.kenh14.vn##[id^="adm_zone"]
 m.kenh14.vn##[id^="admbackground"]
 m.kenh14.vn##[id^="zone"]
+m.soha.vn##[class^="div-"]
+m.soha.vn##[id^="adm-"]
+m.soha.vn##[id^="admFull"]
+m.soha.vn##[id^="ban-"]
+m.soha.vn##[id^="zone-"]
 m.thethao247.vn##.as
 m.thethao247.vn##.main-content>section
 m.thethao247.vn##[class^="sp-"]
@@ -123,10 +104,24 @@ quantrimang.com##[id^="adunderarticle"]
 quantrimang.com##[id^="articleads"]
 quantrimang.com##[id^="mrc"]
 
+saostar.vn##[class^="txt-"]
+saostar.vn##[id^="div-"]
+saostar.vn##[id^="mid-"]
+saostar.vn##[id^="mobi-"]
+saostar.vn##[id^="pvoucher-"]
+saostar.vn##[id^="sp-"]
+sggp.org.vn##.ls-is-cached
+
 thanhnien.vn##.asd-headt
 thanhnien.vn##[id^="sp"]
 thanhnien.vn##[id^="zone"]
 thegioididong.com##.popup-banner
+thethao.sggp.org.vn##.lazyloaded
+thethao.sggp.org.vn##.ls-is-cached
+thethao.sggp.org.vn##[id^="oa"]
+thethao.sggp.org.vn##[id^="sdaMobile_"]
+thethao.sggp.org.vn##[id^="top-"] thethao.sggp.org.vn##[id^="admFull"] thethao.sggp.org.vn##[id^="adm_"] thethao.sggp.org.vn##[id^="ban-"] thethao.sggp.org.vn##[id^="zone-"] thethao.sggp.org.vn##[id^="Mobile_"]
+thethao.sggp.org.vn##a[rel="noopener"]
 thuvienphapluat.vn##[id^="sp-"]
 truyenhinhthanhhoa.vn##[class^="ad-"]
 truyenhinhthanhhoa.vn##[id^="banner-"]
@@ -140,6 +135,11 @@ tuoitre.vn###pvoucher-live-container
 tuoitre.vn##[id^="sp_format-hovering"]
 tuoitre.vn##[id^="zone"]
 
+vietgiaitri.com###header
+vietgiaitri.com##.cover_header
+vietgiaitri.com##[class^="avgt-"]
+vietgiaitri.com##[class^="inview-"]
+vietgiaitri.com##[id^="Balloon"]
 viettelstore.vn##.icon-neo
 viettelstore.vn##.icon-zalo
 viettelstore.vn##[id^="img-"]
@@ -157,3 +157,5 @@ znews.vn##[id^="follow"]
 znews.vn##[id^="Okv"]
 znews.vn##[id^="ZingNews"]
 znews.vn##[id^="Zingnews"]
+
+||kgvn.work/
