@@ -77,5 +77,5 @@ jobs:
       - name: Commit and Push changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "😊: chuẩn hóa dữ liệu [bot]"
+          commit_message: "😊 sắp xếp bộ lọc thành công!"
           file_pattern: 'z-ads/ads.txt'
