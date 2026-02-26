@@ -5,24 +5,10 @@
 ! Version: 1.0
 !===================
 
-24h.com.vn##[id^="ADS_"]
-24h.com.vn##[id^="div_inpage"]
-24h.com.vn##[id^="inpage_article"]
-24h.com.vn##[id^="inread_sis"]
-24h.com.vn##[id^="sis_inpage"]
+apkpure.com##[class^="ad-"]
+apkpure.com##[class^="js-"]
 
 baocaobang.vn##[class^="mt-"]
-baogialai.com.vn###top-logo
-baogialai.com.vn##.sad_viewed
-baogialai.com.vn##[class^="adv"]
-baogialai.com.vn##[id^="adm-zone"]
-baogialai.com.vn##[id^="adm_zone"]
-baogialai.com.vn##[id^="admFull"]
-baogialai.com.vn##[id^="ban-"]
-baogialai.com.vn##[id^="logo-"]
-baogialai.com.vn##[id^="sadMobile_"]
-baogialai.com.vn##[id^="zone"]
-baogialai.com.vn##img[src="https://adi.admicro.vn/adx/adxlogo-1.png"]
 baomoi.com###slide-footer
 baomoi.com##.ad-wrapper
 baomoi.com##.is-show
@@ -30,51 +16,58 @@ baomoi.com##.section-ad-native
 baomoi.com##[id^="BaoMoi_Mobile"]
 baomoi.com##[id^="Kql_Zone"]
 
+cafef.vn##[id^="adm-"]
+cafef.vn##[id^="adm_"]
+cafef.vn##[id^="admFull"]
+cafef.vn##[id^="ban-"]
+cafef.vn##[id^="top-"]
+cafef.vn##[id^="zone-"]
+cafef.vn##img[src="https://adi.admicro.vn/adx/adxlogo-1.png"]
 chatgpt.com##.block
 coccoc.com##.useLogin-jCTvg
 coccoc.com##[class^="adsItem-"]
 coccoc.com##[class^="default-"]
 coccoc.com##[class^="top-"]
+com.vn###top-logo
+com.vn##.ads-top
+com.vn##.sad_viewed
+com.vn##[class^="adv"]
+com.vn##[id^="adm-zone"]
+com.vn##[id^="adm_zone"]
+com.vn##[id^="admbackground"]
+com.vn##[id^="admFull"]
+com.vn##[id^="ADS_"]
+com.vn##[id^="ban-"]
+com.vn##[id^="ban-top-site"]
+com.vn##[id^="dat-"]
+com.vn##[id^="div_inpage"]
+com.vn##[id^="dt"]
+com.vn##[id^="dtad__"]
+com.vn##[id^="inpage_article"]
+com.vn##[id^="inread_sis"]
+com.vn##[id^="logo-"]
+com.vn##[id^="mobile-"]
+com.vn##[id^="sadMobile_"]
+com.vn##[id^="sis_inpage"]
+com.vn##[id^="sp-"]
+com.vn##[id^="tpm"]
+com.vn##[id^="zone"]
+com.vn##img[src="https://adi.admicro.vn/adx/adxlogo-1.png"]
 
-dantri.com.vn##[id^="dat-"]
-dantri.com.vn##[id^="dt"]
-dantri.com.vn##[id^="dtad__"]
-dantri.com.vn##[id^="mobile-"]
-dantri.com.vn##[id^="tpm"]
 duckduckgo.com##[class^="js-"]
 
 fptplay.vn##.flex-row
 fptplay.vn##a[aria-label="Purchase packages"]
 
-m.kenh14.vn###admFullTop
-m.kenh14.vn###ban-top-site
-m.kenh14.vn##.adv
-m.kenh14.vn##[id^="adm-slot"]
-m.kenh14.vn##[id^="adm_zone"]
-m.kenh14.vn##[id^="admbackground"]
-m.kenh14.vn##[id^="zone"]
-m.soha.vn##[class^="div-"]
-m.soha.vn##[id^="adm-"]
-m.soha.vn##[id^="admFull"]
-m.soha.vn##[id^="ban-"]
-m.soha.vn##[id^="zone-"]
-m.thethao247.vn##.as
-m.thethao247.vn##.main-content>section
-m.thethao247.vn##[class^="sp-"]
-m.thethao247.vn##[class^="text-"]
-m.thethao247.vn##[id^="nl-"]
-m.thethao247.vn##[id^="sp-"]
-m.thethao247.vn##[id^="zone-"]
-m.thethao247.vn##div[as-id]
-m.thethao247.vn##div[style*="min-height: 250px"]
-m.tv360.vn###ads-player-base-wrapper
-m.tv360.vn##.css-1jzjo52
-m.tv360.vn##.css-1u6gwec
-m.tv360.vn##.css-1xdipk
-m.tv360.vn##.css-csxyfn
-m.tv360.vn##.text-ellipsis
-m.tv360.vn##.Toastify
-mail.google.com##[id^="nav"]
+google.com##[id^="nav"]
+
+kenh14.vn###admFullTop
+kenh14.vn###ban-top-site
+kenh14.vn##.adv
+kenh14.vn##[id^="adm-slot"]
+kenh14.vn##[id^="adm_zone"]
+kenh14.vn##[id^="admbackground"]
+kenh14.vn##[id^="zone"]
 
 nhipsongkinhdoanh.vn###top-logo
 nhipsongkinhdoanh.vn##.container-fluid
@@ -82,14 +75,13 @@ nhipsongkinhdoanh.vn##[id^="admFull"]
 nhipsongkinhdoanh.vn##[id^="adsWeb"]
 nhipsongkinhdoanh.vn##[id^="ban-"]
 nhipsongkinhdoanh.vn##[id^="zone"]
-nld.com.vn###top-logo
-nld.com.vn##.ads-top
-nld.com.vn##[id^="adm-zone"]
-nld.com.vn##[id^="admbackground"]
-nld.com.vn##[id^="admFull"]
-nld.com.vn##[id^="ban-top-site"]
-nld.com.vn##[id^="sp-"]
-nld.com.vn##[id^="zone"]
+
+org.vn##.lazyloaded
+org.vn##.ls-is-cached
+org.vn##[id^="oa"]
+org.vn##[id^="sdaMobile_"]
+org.vn##[id^="top-"] thethao.sggp.org.vn##[id^="admFull"] thethao.sggp.org.vn##[id^="adm_"] thethao.sggp.org.vn##[id^="ban-"] thethao.sggp.org.vn##[id^="zone-"] thethao.sggp.org.vn##[id^="Mobile_"]
+org.vn##a[rel="noopener"]
 
 plo.vn##[id^="adsMobile"]
 plo.vn##[id^="bn-zone"]
@@ -110,18 +102,25 @@ saostar.vn##[id^="mid-"]
 saostar.vn##[id^="mobi-"]
 saostar.vn##[id^="pvoucher-"]
 saostar.vn##[id^="sp-"]
-sggp.org.vn##.ls-is-cached
+soha.vn##[class^="div-"]
+soha.vn##[id^="adm-"]
+soha.vn##[id^="admFull"]
+soha.vn##[id^="ban-"]
+soha.vn##[id^="zone-"]
 
 thanhnien.vn##.asd-headt
 thanhnien.vn##[id^="sp"]
 thanhnien.vn##[id^="zone"]
 thegioididong.com##.popup-banner
-thethao.sggp.org.vn##.lazyloaded
-thethao.sggp.org.vn##.ls-is-cached
-thethao.sggp.org.vn##[id^="oa"]
-thethao.sggp.org.vn##[id^="sdaMobile_"]
-thethao.sggp.org.vn##[id^="top-"] thethao.sggp.org.vn##[id^="admFull"] thethao.sggp.org.vn##[id^="adm_"] thethao.sggp.org.vn##[id^="ban-"] thethao.sggp.org.vn##[id^="zone-"] thethao.sggp.org.vn##[id^="Mobile_"]
-thethao.sggp.org.vn##a[rel="noopener"]
+thethao247.vn##.as
+thethao247.vn##.main-content>section
+thethao247.vn##[class^="sp-"]
+thethao247.vn##[class^="text-"]
+thethao247.vn##[id^="nl-"]
+thethao247.vn##[id^="sp-"]
+thethao247.vn##[id^="zone-"]
+thethao247.vn##div[as-id]
+thethao247.vn##div[style*="min-height: 250px"]
 thuvienphapluat.vn##[id^="sp-"]
 truyenhinhthanhhoa.vn##[class^="ad-"]
 truyenhinhthanhhoa.vn##[id^="banner-"]
@@ -134,6 +133,17 @@ tuoitre.vn###LeaderBoardTop
 tuoitre.vn###pvoucher-live-container
 tuoitre.vn##[id^="sp_format-hovering"]
 tuoitre.vn##[id^="zone"]
+tv360.vn###ads-player-base-wrapper
+tv360.vn##.css-1jzjo52
+tv360.vn##.css-1u6gwec
+tv360.vn##.css-1xdipk
+tv360.vn##.css-csxyfn
+tv360.vn##.text-ellipsis
+tv360.vn##.Toastify
+tvbox.one##.adsbygoogle
+tvbox.one##.entry-img-300
+tvbox.one##.homeadv
+tvbox.one##.homeadv>span
 
 vietgiaitri.com###header
 vietgiaitri.com##.cover_header
@@ -155,20 +165,7 @@ znews.vn##[class^="follow"]
 znews.vn##[class^="Okv"]
 znews.vn##[id^="follow"]
 znews.vn##[id^="Okv"]
-znews.vn##[id^="ZingNews"]
 znews.vn##[id^="Zingnews"]
-m.apkpure.com##[class^="ad-"]
-m.apkpure.com##[class^="js-"]
-m.cafef.vn##img[src="https://adi.admicro.vn/adx/adxlogo-1.png"]
-m.cafef.vn##[id^="adm-"]
-m.cafef.vn##[id^="zone-"]
-m.cafef.vn##[id^="ban-"]
-m.cafef.vn##[id^="top-"]
-m.cafef.vn##[id^="adm_"]
-m.cafef.vn##[id^="admFull"]
+znews.vn##[id^="ZingNews"]
 
-www.tvbox.one##.homeadv>span
-www.tvbox.one##.homeadv
-www.tvbox.one##.entry-img-300
-www.tvbox.one##.adsbygoogle
 ||kgvn.work/
