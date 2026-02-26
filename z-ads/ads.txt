@@ -157,5 +157,18 @@ znews.vn##[id^="follow"]
 znews.vn##[id^="Okv"]
 znews.vn##[id^="ZingNews"]
 znews.vn##[id^="Zingnews"]
+m.apkpure.com##[class^="ad-"]
+m.apkpure.com##[class^="js-"]
+m.cafef.vn##img[src="https://adi.admicro.vn/adx/adxlogo-1.png"]
+m.cafef.vn##[id^="adm-"]
+m.cafef.vn##[id^="zone-"]
+m.cafef.vn##[id^="ban-"]
+m.cafef.vn##[id^="top-"]
+m.cafef.vn##[id^="adm_"]
+m.cafef.vn##[id^="admFull"]
 
+www.tvbox.one##.homeadv>span
+www.tvbox.one##.homeadv
+www.tvbox.one##.entry-img-300
+www.tvbox.one##.adsbygoogle
 ||kgvn.work/
