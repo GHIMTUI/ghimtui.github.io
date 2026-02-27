@@ -4,231 +4,77 @@
 ! Title: STOP ADS
 ! Version: 1.0.0
 !===================
-m.genk.vn##[id^="top-"], [id^="admFull"], [id^="adm_"], [id^="adm-"], [id^="admbackground"], [id^="ban-"], [id^="zone-"]
 
-baophapluat.vn##[class^="ad"]
-baotayninh.vn##[class^="ads-"]
+24h.com.vn##[id^="ADS_"], [id^="div_inpage"], [id^="inpage_article"], [id^="inread_sis"], [id^="sis_inpage"]
+
+apkpure.com##[class^="ad-"], [class^="js-"]
+
+baocamau.vn##[class^="box-"], [class^="box_"], [class^="padding-"], [id^="revive-"], [id^="slick-"]
+baocaobang.vn##[class^="mt-"]
+baodanang.vn##[class^="ads_"], [id^="zone-"]
 baodongnai.com.vn##[class^="ff"]
-
+baodongthap.vn##.box-link-social-home, .image-item, .slide>div, .slider, .slider-container-top-adv, .slides, .social-items, [class*="-adv"], [class^="adv-"]
+baogialai.com.vn###top-logo, .sad_viewed, [class^="adv"], [id^="adm-zone"], [id^="admFull"], [id^="adm_zone"], [id^="ban-"], [id^="logo-"], [id^="sadMobile_"], [id^="zone"], img[src="https://adi.admicro.vn/adx/adxlogo-1.png"]
+baolamdong.vn##[class^="ads_"], [id^="zone-"]
+baomoi.com###slide-footer, .ad-wrapper, .is-show, .section-ad-native, [id^="BaoMoi_Mobile"], [id^="Kql_Zone"]
+baophapluat.vn##[class^="ad"]
+baophutho.vn##[class^="dadv_"]
 baoquangngai.vn##[class^="banner-"]
 baoquangtri.vn##[class^="ff"]
-huengaynay.vn##img[src="https://file.huengaynay.vn/data/0/images/2026/02/27/upload_3836/dh-dang-cac-cap.gif"]
-huengaynay.vn##img[src="https://file.huengaynay.vn/data/0/images/2026/01/19/upload_3836/bau-cu.gif"]
-huengaynay.vn##[class^="adv"], [class^="huetv-"]
-www.thegioididong.com##.lazyloaded
-
-24h.com.vn##[id^="ADS_"]
-24h.com.vn##[id^="div_inpage"]
-24h.com.vn##[id^="inpage_article"]
-24h.com.vn##[id^="inread_sis"]
-24h.com.vn##[id^="sis_inpage"]
-
-apkpure.com##[class^="ad-"]
-apkpure.com##[class^="js-"]
-
-baocamau.vn##[class^="box-"]
-baocamau.vn##[class^="box_"]
-baocamau.vn##[class^="padding-"]
-baocamau.vn##[id^="revive-"]
-baocamau.vn##[id^="slick-"]
-baocaobang.vn##[class^="mt-"]
-baodanang.vn##[class^="ads_"]
-baodanang.vn##[id^="zone-"]
-baodongthap.vn##.box-link-social-home
-baodongthap.vn##.image-item
-baodongthap.vn##.slide>div
-baodongthap.vn##.slider
-baodongthap.vn##.slider-container-top-adv
-baodongthap.vn##.slides
-baodongthap.vn##.social-items
-baodongthap.vn##[class*="-adv"], [class^="adv-"]
-baogialai.com.vn###top-logo
-baogialai.com.vn##.sad_viewed
-baogialai.com.vn##[class^="adv"]
-baogialai.com.vn##[id^="adm-zone"]
-baogialai.com.vn##[id^="adm_zone"]
-baogialai.com.vn##[id^="admFull"]
-baogialai.com.vn##[id^="ban-"]
-baogialai.com.vn##[id^="logo-"]
-baogialai.com.vn##[id^="sadMobile_"]
-baogialai.com.vn##[id^="zone"]
-baogialai.com.vn##img[src="https://adi.admicro.vn/adx/adxlogo-1.png"]
-baolamdong.vn##[class^="ads_"]
-baolamdong.vn##[id^="zone-"]
-baomoi.com###slide-footer
-baomoi.com##.ad-wrapper
-baomoi.com##.is-show
-baomoi.com##.section-ad-native
-baomoi.com##[id^="BaoMoi_Mobile"]
-baomoi.com##[id^="Kql_Zone"]
-baophutho.vn##[class^="dadv_"]
+baotayninh.vn##[class^="ads-"]
 baovinhlong.com.vn##[class^="ad"]
 
-cafef.vn##[id^="adm-"]
-cafef.vn##[id^="adm_"]
-cafef.vn##[id^="admFull"]
-cafef.vn##[id^="ban-"]
-cafef.vn##[id^="top-"]
-cafef.vn##[id^="zone-"]
-cafef.vn##img[src="https://adi.admicro.vn/adx/adxlogo-1.png"]
+cafef.vn##[id^="adm-"], [id^="admFull"], [id^="adm_"], [id^="ban-"], [id^="top-"], [id^="zone-"], img[src="https://adi.admicro.vn/adx/adxlogo-1.png"]
 chatgpt.com##.block
-coccoc.com##.useLogin-jCTvg
-coccoc.com##[class^="adsItem-"]
-coccoc.com##[class^="default-"]
-coccoc.com##[class^="top-"]
+coccoc.com##.useLogin-jCTvg, [class^="adsItem-"], [class^="default-"], [class^="top-"]
 
-dantri.com.vn##[id^="banner"]
-dantri.com.vn##[id^="dat-"]
-dantri.com.vn##[id^="dt"]
-dantri.com.vn##[id^="dtad__"]
-dantri.com.vn##[id^="mobile-"]
-dantri.com.vn##[id^="tpm"]
-duckduckgo.com##[class^="js-"]
-duckduckgo.com##[class^="set-browser-"]
+dantri.com.vn##[id^="banner"], [id^="dat-"], [id^="dt"], [id^="dtad__"], [id^="mobile-"], [id^="tpm"]
+duckduckgo.com##[class^="js-"], [class^="set-browser-"]
 
-fptplay.vn##.flex-row
-fptplay.vn##a[aria-label="Purchase packages"]
+fptplay.vn##.flex-row, a[aria-label="Purchase packages"]
 
+genk.vn##[id^="adm-"], [id^="admFull"], [id^="adm_"], [id^="admbackground"], [id^="ban-"], [id^="top-"], [id^="zone-"]
 google.com##[id^="nav"]
 
-kenh14.vn###admFullTop
-kenh14.vn###ban-top-site
-kenh14.vn##.adv
-kenh14.vn##[id^="adm-slot"]
-kenh14.vn##[id^="adm_zone"]
-kenh14.vn##[id^="admbackground"]
-kenh14.vn##[id^="zone"]
+huengaynay.vn##[class^="adv"], [class^="huetv-"], img[src="https://file.huengaynay.vn/data/0/images/2026/01/19/upload_3836/bau-cu.gif"], img[src="https://file.huengaynay.vn/data/0/images/2026/02/27/upload_3836/dh-dang-cac-cap.gif"]
 
-logos.fandom.com##[class^="top-"]
-logos.fandom.com##[class^="top_"]
-logos.fandom.com##[id^="top_"]
+kenh14.vn###admFullTop, #ban-top-site, .adv, [id^="adm-slot"], [id^="adm_zone"], [id^="admbackground"], [id^="zone"]
+
+logos.fandom.com##[class^="top-"], [class^="top_"], [id^="top_"]
 
 mail.google.com##[id^="nav"]
 
-nhipsongkinhdoanh.vn###top-logo
-nhipsongkinhdoanh.vn##.container-fluid
-nhipsongkinhdoanh.vn##[id^="admFull"]
-nhipsongkinhdoanh.vn##[id^="adsWeb"]
-nhipsongkinhdoanh.vn##[id^="ban-"]
-nhipsongkinhdoanh.vn##[id^="zone"]
-nld.com.vn###top-logo
-nld.com.vn##.ads-top
-nld.com.vn##[id^="adm-zone"]
-nld.com.vn##[id^="admbackground"]
-nld.com.vn##[id^="admFull"]
-nld.com.vn##[id^="ban-top-site"]
-nld.com.vn##[id^="sp-"]
-nld.com.vn##[id^="zone"]
+nhipsongkinhdoanh.vn###top-logo, .container-fluid, [id^="admFull"], [id^="adsWeb"], [id^="ban-"], [id^="zone"]
+nld.com.vn###top-logo, .ads-top, [id^="adm-zone"], [id^="admFull"], [id^="admbackground"], [id^="ban-top-site"], [id^="sp-"], [id^="zone"]
 
 perplexity.ai##.animate-in
-plo.vn##[id^="adsMobile"]
-plo.vn##[id^="bn-zone"]
-plo.vn##[id^="Mobile"]
-plo.vn##[id^="zone"]
-plo.vn##div[style="margin: 10px 0px;"]
+plo.vn##[id^="Mobile"], [id^="adsMobile"], [id^="bn-zone"], [id^="zone"], div[style="margin: 10px 0px;"]
 
-quantrimang.com##[class^="ads"]
-quantrimang.com##[id^="adindex"]
-quantrimang.com##[id^="adsposttop"]
-quantrimang.com##[id^="adunderarticle"]
-quantrimang.com##[id^="articleads"]
-quantrimang.com##[id^="mrc"]
+quantrimang.com##[class^="ads"], [id^="adindex"], [id^="adsposttop"], [id^="adunderarticle"], [id^="articleads"], [id^="mrc"]
 
-saostar.vn##[class^="txt-"]
-saostar.vn##[id^="div-"]
-saostar.vn##[id^="mid-"]
-saostar.vn##[id^="mobi-"]
-saostar.vn##[id^="pvoucher-"]
-saostar.vn##[id^="sp-"]
-search.brave.com##[class^="download-"]
-search.brave.com##[class^="premium-"]
-sggp.org.vn##.ls-is-cached
-sggp.org.vn##a[rel="noopener"]
-soha.vn##[class^="div-"]
-soha.vn##[id^="adm-"]
-soha.vn##[id^="admFull"]
-soha.vn##[id^="ban-"]
-soha.vn##[id^="zone-"]
+saostar.vn##[class^="txt-"], [id^="div-"], [id^="mid-"], [id^="mobi-"], [id^="pvoucher-"], [id^="sp-"]
+search.brave.com##[class^="download-"], [class^="premium-"]
+sggp.org.vn##.ls-is-cached, a[rel="noopener"]
+soha.vn##[class^="div-"], [id^="adm-"], [id^="admFull"], [id^="ban-"], [id^="zone-"]
 
-thanhnien.vn##.asd-headt
-thanhnien.vn##[id^="sp"]
-thanhnien.vn##[id^="zone"]
-thegioididong.com##.popup-banner
-thethao.sggp.org.vn##.lazyloaded
-thethao.sggp.org.vn##.ls-is-cached
-thethao.sggp.org.vn##[id^="admFull"] thethao.sggp.org.vn##[id^="adm_"] thethao.sggp.org.vn##[id^="ban-"] thethao.sggp.org.vn##[id^="zone-"] thethao.sggp.org.vn##[id^="Mobile_"]
-thethao.sggp.org.vn##[id^="oa"]
-thethao.sggp.org.vn##[id^="sdaMobile_"]
-thethao.sggp.org.vn##[id^="top-"] thethao.sggp.org.vn##[id^="admFull"] thethao.sggp.org.vn##[id^="adm_"] thethao.sggp.org.vn##[id^="ban-"] thethao.sggp.org.vn##[id^="zone-"] thethao.sggp.org.vn##[id^="Mobile_"]
-thethao.sggp.org.vn##a[rel="noopener"]
-thethao247.vn##.as
-thethao247.vn##.main-content>section
-thethao247.vn##[class^="sp-"]
-thethao247.vn##[class^="text-"]
-thethao247.vn##[id^="nl-"]
-thethao247.vn##[id^="sp-"]
-thethao247.vn##[id^="zone-"]
-thethao247.vn##div[as-id]
-thethao247.vn##div[style*="min-height: 250px"]
+thanhnien.vn##.asd-headt, [id^="sp"], [id^="zone"]
+thegioididong.com##.lazyloaded, .popup-banner
+thethao.sggp.org.vn##.lazyloaded, .ls-is-cached, [id^="admFull"] thethao.sggp.org.vn##[id^="adm_"] thethao.sggp.org.vn##[id^="ban-"] thethao.sggp.org.vn##[id^="zone-"] thethao.sggp.org.vn##[id^="Mobile_"], [id^="oa"], [id^="sdaMobile_"], [id^="top-"] thethao.sggp.org.vn##[id^="admFull"] thethao.sggp.org.vn##[id^="adm_"] thethao.sggp.org.vn##[id^="ban-"] thethao.sggp.org.vn##[id^="zone-"] thethao.sggp.org.vn##[id^="Mobile_"], a[rel="noopener"]
+thethao247.vn##.as, .main-content>section, [class^="sp-"], [class^="text-"], [id^="nl-"], [id^="sp-"], [id^="zone-"], div[as-id], div[style*="min-height: 250px"]
 thuvienphapluat.vn##[id^="sp-"]
-truyenhinhthanhhoa.vn##[class^="ad-"]
-truyenhinhthanhhoa.vn##[id^="banner-"]
-truyenhinhthanhhoa.vn##[id^="placement-"]
-truyenhinhthanhhoa.vn##[id^="share-"]
-truyenhinhthanhhoa.vn##[id^="slot-"]
-truyenhinhthanhhoa.vn##[id^="zone-"]
-tuoitre.vn###admbackground
-tuoitre.vn###LeaderBoardTop
-tuoitre.vn###pvoucher-live-container
-tuoitre.vn##[id^="sp_format-hovering"]
-tuoitre.vn##[id^="zone"]
-tv360.vn###ads-player-base-wrapper
-tv360.vn##.css-1jzjo52
-tv360.vn##.css-1u6gwec
-tv360.vn##.css-1xdipk
-tv360.vn##.css-csxyfn
-tv360.vn##.text-ellipsis
-tv360.vn##.Toastify
-tvbox.one##.adsbygoogle
-tvbox.one##.entry-img-300
-tvbox.one##.homeadv
-tvbox.one##.homeadv>span
+truyenhinhthanhhoa.vn##[class^="ad-"], [id^="banner-"], [id^="placement-"], [id^="share-"], [id^="slot-"], [id^="zone-"]
+tuoitre.vn###LeaderBoardTop, #admbackground, #pvoucher-live-container, [id^="sp_format-hovering"], [id^="zone"]
+tv360.vn###ads-player-base-wrapper, .Toastify, .css-1jzjo52, .css-1u6gwec, .css-1xdipk, .css-csxyfn, .text-ellipsis
+tvbox.one##.adsbygoogle, .entry-img-300, .homeadv, .homeadv>span
 
-vietgiaitri.com###header
-vietgiaitri.com##.cover_header
-vietgiaitri.com##[class^="avgt-"]
-vietgiaitri.com##[class^="inview-"]
-vietgiaitri.com##[id^="Balloon"]
-vietnamnet.vn###catfish
-vietnamnet.vn###mashead-bn
-vietnamnet.vn##[id^="adzone"]
-vietnamnet.vn##[id^="mashead-"]
-vietnamnet.vn##div[onclick="closeMashead(39)"]
-vietnamnet.vn##span[style="color: #fff;text-align: center;display: inherit;font-size: 20px;line-height: 20px;"]
-viettelstore.vn##.icon-neo
-viettelstore.vn##.icon-zalo
-viettelstore.vn##[id^="img-"]
-viettelstore.vn##[id^="pop"]
-viettelstore.vn##[id^=overlay"]
-vnexpress.net###ads_large_detail
-vnexpress.net###banner_top
-vnexpress.net##.banner_mobile_300x250
-vnexpress.net##.section_ads_300x250
-vtcnews.vn###appLink
-vtcnews.vn##.top-ad
-vtcnews.vn##[class^="aanetwork-"]
-vtcnews.vn##a[rel="noopener noreferrer nofollow"]
-vtcnews.vn##a[rel="noopener noreferrer nofollow"]>div
-vtcnews.vn##ins[data-zone="top_mobile_320x50"]
+vietgiaitri.com###header, .cover_header, [class^="avgt-"], [class^="inview-"], [id^="Balloon"]
+vietnamnet.vn###catfish, #mashead-bn, [id^="adzone"], [id^="mashead-"], div[onclick="closeMashead(39)"], span[style="color: #fff;text-align: center;display: inherit;font-size: 20px;line-height: 20px;"]
+viettelstore.vn##.icon-neo, .icon-zalo, [id^="img-"], [id^="pop"], [id^=overlay"]
+vnexpress.net###ads_large_detail, #banner_top, .banner_mobile_300x250, .section_ads_300x250
+vtcnews.vn###appLink, .top-ad, [class^="aanetwork-"], a[rel="noopener noreferrer nofollow"], a[rel="noopener noreferrer nofollow"]>div, ins[data-zone="top_mobile_320x50"]
 
 zingmp3.vn##[class^="z-btn-open"]
-znews.vn##.z2-inpage-wrapper
-znews.vn##[class^="follow"]
-znews.vn##[class^="Okv"]
-znews.vn##[id^="follow"]
-znews.vn##[id^="Okv"]
-znews.vn##[id^="Zingnews"]
-znews.vn##[id^="ZingNews"]
+znews.vn##.z2-inpage-wrapper, [class^="Okv"], [class^="follow"], [id^="Okv"], [id^="ZingNews"], [id^="Zingnews"], [id^="follow"]
 
 ||cdn.ak2yy.com
 ||cdn.kanjp.com
