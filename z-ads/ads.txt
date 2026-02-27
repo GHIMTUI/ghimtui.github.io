@@ -178,4 +178,54 @@ znews.vn##[id^="Okv"]
 znews.vn##[id^="ZingNews"]
 znews.vn##[id^="Zingnews"]
 
-||kgvn.work/
+||kgvn.work
+m.zingmp3.vn##[class^="z-btn-open"]
+
+www.perplexity.ai##.animate-in
+search.brave.com##[class^="download-"]
+search.brave.com##[class^="premium-"]
+dantri.com.vn##[id^="banner"]
+duckduckgo.com##[class^="set-browser-"]
+vtcnews.vn##ins[data-zone="top_mobile_320x50"]
+vtcnews.vn###appLink
+vtcnews.vn##.top-ad
+vtcnews.vn##a[rel="noopener noreferrer nofollow"]>div
+vtcnews.vn##a[rel="noopener noreferrer nofollow"]
+vtcnews.vn##[class^="aanetwork-"]
+baophutho.vn##[class^="dadv_"]
+vietnamnet.vn##span[style="color: #fff;text-align: center;display: inherit;font-size: 20px;line-height: 20px;"]
+vietnamnet.vn##div[onclick="closeMashead(39)"]
+vietnamnet.vn##[id^="mashead-"]
+vietnamnet.vn##[id^="adzone"]
+vietnamnet.vn###catfish
+vietnamnet.vn###mashead-bn
+logos.fandom.com##[id^="top_"]
+logos.fandom.com##[class^="top_"]
+logos.fandom.com##[class^="top-"]
+baolamdong.vn##[class^="ads_"]
+baolamdong.vn##[id^="zone-"]
+baodanang.vn##[class^="ads_"]
+baodanang.vn##[id^="zone-"]
+baocamau.vn##[class^="box_"]
+baocamau.vn##[class^="box-"]
+baocamau.vn##[class^="padding-"]
+baocamau.vn##[id^="revive-"]
+baocamau.vn##[id^="slick-"]
+baovinhlong.com.vn##[class^="ad"]
+
+baodongthap.vn##[class*="-adv"], [class^="adv-"]
+www.baodongthap.vn##.slide>div
+www.baodongthap.vn##.slides
+www.baodongthap.vn##.slider
+www.baodongthap.vn##.box-link-social-home
+baodongthap.vn##.image-item
+
+baodongthap.vn##.slider-container-top-adv
+baodongthap.vn##.social-items
+
+@@||gemini.google.com
+||cdn.ak2yy.com
+||cdn.kanjp.com
+||tiktok.com
+||doubleclick.net^
+||googleadservices.com^
