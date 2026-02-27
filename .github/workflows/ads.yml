@@ -26,46 +26,58 @@ jobs:
               exit(0)
 
           with open(file_path, 'r', encoding='utf-8') as f:
-              raw_lines = f.readlines()
+              raw_lines = f.read().splitlines()
 
           header_lines = []
           ad_records = set()
-          # Danh sách các tiền tố rác cần loại bỏ
-          bad_prefixes = r'^(www\.|m\.|dev\.|staging\.|api\.)'
+          
+          # Regex gộp: Khớp ở đầu dòng (^) hoặc sau dấu phẩy (,\s*)
+          # Chỉ loại bỏ các tiền tố rác cụ thể, giữ nguyên phần còn lại (như .com.vn)
+          bad_prefixes_pattern = r'(^|,\s*)(www\.|m\.|dev\.|staging\.|api\.)'
 
           for line in raw_lines:
               clean = line.strip()
-              if not clean: continue
+              if not clean:
+                  continue
               
-              if clean.startswith('[') or clean.startswith('#'):
+              # Tách riêng các dòng chú thích hoặc cấu trúc đặc biệt [ ]
+              if clean.startswith(('[', '#')):
                   header_lines.append(clean)
               else:
-                  # Xóa tiền tố ở đầu dòng
-                  record = re.sub(bad_prefixes, '', clean)
-                  # Xóa tiền tố sau dấu phẩy (nếu có)
-                  record = re.sub(r',\s*' + bad_prefixes, ', ', record)
+                  # Sử dụng \1 để giữ lại cấu trúc phân cách (đầu dòng hoặc dấu phẩy)
+                  # và loại bỏ tiền tố rác đứng ngay sau nó.
+                  record = re.sub(bad_prefixes_pattern, r'\1', clean)
                   ad_records.add(record)
 
+          # Sắp xếp theo bảng chữ cái (không phân biệt hoa thường)
           unique_ads = sorted(list(ad_records), key=lambda s: s.lower())
+          
           organized_ads = []
           last_group = None
 
           for line in unique_ads:
               if not line: continue
+              # Xác định nhóm để chèn dòng trống (A, B, C... hoặc 0-9)
               first_char = line[0].lower()
               current_group = '0-9' if first_char.isdigit() else first_char
+              
               if last_group is not None and last_group != current_group:
                   organized_ads.append('')
+              
               organized_ads.append(line)
               last_group = current_group
 
-          final_content = header_lines + ([''] if header_lines and organized_ads else []) + organized_ads
+          # Hợp nhất Header và nội dung đã xử lý
+          final_content = "\n".join(header_lines)
+          if header_lines and organized_ads:
+              final_content += "\n\n"
+          final_content += "\n".join(organized_ads)
 
           with open(file_path, 'w', encoding='utf-8') as f:
-              f.write('\n'.join(final_content).strip() + '\n')
+              f.write(final_content.strip() + '\n')
 
       - name: Commit and Push changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "Fixed: Safely removed prefixes while keeping .com.vn domains"
+          commit_message: "Optimization: Standardized domains and removed redundant prefixes"
           file_pattern: 'z-ads/ads.txt'
