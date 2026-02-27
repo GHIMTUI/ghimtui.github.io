@@ -2,7 +2,7 @@
 
 ! Description: chặn quảng cáo
 ! Title: STOP ADS
-! Version: 1.0
+! Version: 1.0.0
 !===================
 
 24h.com.vn##[id^="ADS_"]
@@ -110,7 +110,7 @@ nld.com.vn##[id^="ban-top-site"]
 nld.com.vn##[id^="sp-"]
 nld.com.vn##[id^="zone"]
 
-org.vn##a[rel="noopener"]
+sggp.org.vn##a[rel="noopener"]
 
 perplexity.ai##.animate-in
 plo.vn##[id^="adsMobile"]
