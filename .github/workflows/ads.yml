@@ -1,4 +1,4 @@
-name: Standardize ads.txt
+name: ads.txt
 
 on:
   push:
@@ -16,68 +16,57 @@ jobs:
       - name: Process ads.txt
         shell: python
         run: |
-          import re
-          import os
+          import re, os
+          from pathlib import Path
+          from collections import defaultdict
 
-          file_path = "z-ads/ads.txt"
+          file_path = Path("z-ads/ads.txt")
+          if not file_path.exists(): exit(0)
+
+          lines = file_path.read_text(encoding='utf-8').splitlines()
           
-          if not os.path.exists(file_path):
-              print("File không tồn tại!")
-              exit(0)
+          headers, grouped_rules, other_rules = [], defaultdict(set), set()
+          bad_pfx = r'^(www\.|m\.|dev\.|staging\.|api\.)'
 
-          with open(file_path, 'r', encoding='utf-8') as f:
-              raw_lines = f.readlines()
-
-          header_lines = []
-          ad_records = set()
-          bad_prefixes = r'^(www\.|m\.|dev\.|staging\.|api\.)'
-
-          for line in raw_lines:
-              clean = line.strip()
-              if not clean: continue
-              
-              if clean.startswith('[') or clean.startswith('#'):
-                  header_lines.append(clean)
-              else:
-                  record = re.sub(bad_prefixes, '', clean)
-                  record = re.sub(r',\s*' + bad_prefixes, ', ', record)
-                  ad_records.add(record)
-
-          def sort_key(s):
-              s_lower = s.lower()
-              if s_lower.startswith('@@||'):
-                  return '{~~}' + s_lower 
-              if s_lower.startswith('||'):
-                  return '{~}' + s_lower
-              return s_lower
-
-          unique_ads = sorted(list(ad_records), key=sort_key)
-          organized_ads = []
-          last_group = None
-
-          for line in unique_ads:
+          for line in map(str.strip, lines):
               if not line: continue
-              if line.startswith('@@||'):
-                  current_group = 'EXCLUDE_RULE'
-              elif line.startswith('||'):
-                  current_group = 'BLOCK_RULE'
+              if line.startswith(('[', '#')):
+                  headers.append(line)
+                  continue
+
+              # Xử lý gộp link: domain##selector
+              match = re.match(r'^([^#]+)(##|#@#)(.+)$', line)
+              if match:
+                  dom, sep, sel = match.groups()
+                  clean_dom = re.sub(bad_pfx, '', dom)
+                  # Gộp các selector vào set để tự loại trùng
+                  grouped_rules[f"{clean_dom}{sep}"].update(s.strip() for s in sel.split(','))
               else:
-                  first_char = line[0].lower()
-                  current_group = '0-9' if first_char.isdigit() else first_char
-              
-              if last_group is not None and last_group != current_group:
-                  organized_ads.append('')
-              
-              organized_ads.append(line)
-              last_group = current_group
+                  # Rule khác: ||example.com^
+                  rec = re.sub(bad_pfx, '', line)
+                  rec = re.sub(r',\s*' + bad_pfx, ', ', rec)
+                  other_rules.add(rec)
 
-          final_content = header_lines + ([''] if header_lines and organized_ads else []) + organized_ads
+          # Format lại các rule đã gộp
+          formatted = [f"{k}{', '.join(sorted(v))}" for k, v in grouped_rules.items()]
+          all_rules = sorted(formatted + list(other_rules), 
+                            key=lambda s: ('{~~}' if s.startswith('@@||') else '{~}' if s.startswith('||') else '') + s.lower())
 
-          with open(file_path, 'w', encoding='utf-8') as f:
-              f.write('\n'.join(final_content).strip() + '\n')
+          # Tổ chức nhóm và chèn dòng trống
+          final_ads, last_grp = [], None
+          for line in all_rules:
+              grp = 'EX' if line.startswith('@@||') else 'BL' if line.startswith('||') else line[0].lower()
+              if last_grp and last_grp != grp:
+                  final_ads.append('')
+              final_ads.append(line)
+              last_grp = grp
 
-      - name: Commit and Push changes
+          # Ghi file
+          content = "\n".join(headers + ([''] if headers and final_ads else []) + final_ads)
+          file_path.write_text(content.strip() + '\n', encoding='utf-8')
+
+      - name: Commit and Push
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "Fixed: Separate Z, ||, and @@|| with whitespaces"
+          commit_message: "Auto-format: Grouped duplicate domains and sorted rules"
           file_pattern: 'z-ads/ads.txt'
