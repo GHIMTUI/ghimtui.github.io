@@ -1,4 +1,4 @@
-name: ads.txt
+name: Standardize ads.txt
 
 on:
   push:
@@ -16,57 +16,91 @@ jobs:
       - name: Process ads.txt
         shell: python
         run: |
-          import re, os
+          import re
           from pathlib import Path
           from collections import defaultdict
 
           file_path = Path("z-ads/ads.txt")
-          if not file_path.exists(): exit(0)
+          if not file_path.exists():
+              print("File not found, skipping...")
+              exit(0)
 
-          lines = file_path.read_text(encoding='utf-8').splitlines()
+          # Regex tìm các prefix không mong muốn ở bất kỳ vị trí nào (\b là word boundary)
+          bad_pfx = r'\b(www\.|m\.|dev\.|staging\.|api\.)'
           
+          lines = file_path.read_text(encoding='utf-8').splitlines()
           headers, grouped_rules, other_rules = [], defaultdict(set), set()
-          bad_pfx = r'^(www\.|m\.|dev\.|staging\.|api\.)'
 
           for line in map(str.strip, lines):
               if not line: continue
+              # Lưu comment và block header
               if line.startswith(('[', '#')):
                   headers.append(line)
                   continue
 
-              # Xử lý gộp link: domain##selector
+              # Tách domain và selector: (domains)(##|#@#)(selectors)
               match = re.match(r'^([^#]+)(##|#@#)(.+)$', line)
               if match:
-                  dom, sep, sel = match.groups()
-                  clean_dom = re.sub(bad_pfx, '', dom)
-                  # Gộp các selector vào set để tự loại trùng
-                  grouped_rules[f"{clean_dom}{sep}"].update(s.strip() for s in sel.split(','))
+                  domains_str, separator, selector_str = match.groups()
+                  
+                  # 1. Làm sạch và gộp domain (tách bằng dấu phẩy)
+                  clean_doms = {re.sub(bad_pfx, '', d.strip()) for d in domains_str.split(',')}
+                  # Sắp xếp domain để key luôn nhất quán (a,b## giống b,a##)
+                  domain_key = ",".join(sorted(clean_doms))
+                  
+                  # 2. Tách và làm sạch selector
+                  new_selectors = {s.strip() for s in selector_str.split(',')}
+                  
+                  # 3. Gộp vào dict theo cặp (domain_key, separator)
+                  grouped_rules[(domain_key, separator)].update(new_selectors)
               else:
-                  # Rule khác: ||example.com^
-                  rec = re.sub(bad_pfx, '', line)
-                  rec = re.sub(r',\s*' + bad_pfx, ', ', rec)
-                  other_rules.add(rec)
+                  # Xử lý các rule khác như ||example.com^ hoặc @@||...
+                  # Loại bỏ prefix thừa cho cả domain đơn lẻ
+                  record = re.sub(bad_pfx, '', line)
+                  # Xử lý trường hợp có dấu phẩy trong rule (nếu có)
+                  record = re.sub(r',\s*' + bad_pfx, ', ', record)
+                  other_rules.add(record)
 
-          # Format lại các rule đã gộp
-          formatted = [f"{k}{', '.join(sorted(v))}" for k, v in grouped_rules.items()]
-          all_rules = sorted(formatted + list(other_rules), 
-                            key=lambda s: ('{~~}' if s.startswith('@@||') else '{~}' if s.startswith('||') else '') + s.lower())
+          # Tạo danh sách rule đã định dạng
+          formatted_grouped = [
+              f"{doms}{sep}{', '.join(sorted(sels))}" 
+              for (doms, sep), sels in grouped_rules.items()
+          ]
+          
+          # Sắp xếp toàn bộ rules
+          def sort_logic(s):
+              s_low = s.lower()
+              if s_low.startswith('@@||'): return '{~~}' + s_low  # Xuống cuối cùng
+              if s_low.startswith('||'): return '{~}' + s_low    # Xuống gần cuối
+              return s_low
 
-          # Tổ chức nhóm và chèn dòng trống
-          final_ads, last_grp = [], None
-          for line in all_rules:
-              grp = 'EX' if line.startswith('@@||') else 'BL' if line.startswith('||') else line[0].lower()
-              if last_grp and last_grp != grp:
-                  final_ads.append('')
-              final_ads.append(line)
-              last_grp = grp
+          all_ads = sorted(formatted_grouped + list(other_rules), key=sort_logic)
 
-          # Ghi file
-          content = "\n".join(headers + ([''] if headers and final_ads else []) + final_ads)
-          file_path.write_text(content.strip() + '\n', encoding='utf-8')
+          # Tổ chức nhóm và chèn dòng trống để dễ đọc
+          organized_ads, last_group = [], None
+          for line in all_ads:
+              if line.startswith('@@||'):
+                  current_group = 'EXCLUDE'
+              elif line.startswith('||'):
+                  current_group = 'BLOCK'
+              else:
+                  # Nhóm theo chữ cái đầu tiên của domain
+                  current_group = line[0].lower()
 
-      - name: Commit and Push
+              if last_group is not None and last_group != current_group:
+                  organized_ads.append('')
+              
+              organized_ads.append(line)
+              last_group = current_group
+
+          # Hợp nhất Header và Body
+          final_content = headers + ([''] if headers and organized_ads else []) + organized_ads
+          
+          # Ghi lại vào file
+          file_path.write_text('\n'.join(final_content).strip() + '\n', encoding='utf-8')
+
+      - name: Commit and Push changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "Auto-format: Grouped duplicate domains and sorted rules"
+          commit_message: "Auto-format: Standardized domains and grouped selectors"
           file_pattern: 'z-ads/ads.txt'
