@@ -4,6 +4,18 @@
 ! Title: STOP ADS
 ! Version: 1.0.0
 !===================
+m.genk.vn##[id^="top-"], [id^="admFull"], [id^="adm_"], [id^="adm-"], [id^="admbackground"], [id^="ban-"], [id^="zone-"]
+
+baophapluat.vn##[class^="ad"]
+baotayninh.vn##[class^="ads-"]
+baodongnai.com.vn##[class^="ff"]
+
+baoquangngai.vn##[class^="banner-"]
+baoquangtri.vn##[class^="ff"]
+huengaynay.vn##img[src="https://file.huengaynay.vn/data/0/images/2026/02/27/upload_3836/dh-dang-cac-cap.gif"]
+huengaynay.vn##img[src="https://file.huengaynay.vn/data/0/images/2026/01/19/upload_3836/bau-cu.gif"]
+huengaynay.vn##[class^="adv"], [class^="huetv-"]
+www.thegioididong.com##.lazyloaded
 
 24h.com.vn##[id^="ADS_"]
 24h.com.vn##[id^="div_inpage"]
