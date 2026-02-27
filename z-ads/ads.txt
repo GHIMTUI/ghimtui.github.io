@@ -11,8 +11,6 @@
 24h.com.vn##[id^="inread_sis"]
 24h.com.vn##[id^="sis_inpage"]
 
-@@||gemini.google.com
-
 apkpure.com##[class^="ad-"]
 apkpure.com##[class^="js-"]
 
@@ -110,8 +108,6 @@ nld.com.vn##[id^="ban-top-site"]
 nld.com.vn##[id^="sp-"]
 nld.com.vn##[id^="zone"]
 
-sggp.org.vn##a[rel="noopener"]
-
 perplexity.ai##.animate-in
 plo.vn##[id^="adsMobile"]
 plo.vn##[id^="bn-zone"]
@@ -135,6 +131,7 @@ saostar.vn##[id^="sp-"]
 search.brave.com##[class^="download-"]
 search.brave.com##[class^="premium-"]
 sggp.org.vn##.ls-is-cached
+sggp.org.vn##a[rel="noopener"]
 soha.vn##[class^="div-"]
 soha.vn##[id^="adm-"]
 soha.vn##[id^="admFull"]
@@ -227,3 +224,5 @@ znews.vn##[id^="ZingNews"]
 ||googleadservices.com^
 ||kgvn.work
 ||tiktok.com
+
+@@||gemini.google.com
