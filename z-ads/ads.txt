@@ -84,7 +84,7 @@ sonlatv.vn##.col-md-12, [class*="ads"], [id*="ads"]
 
 thanhnien.vn##.asd-headt, [id^="sp"], [id^="zone"]
 thdt.vn##.blockBanner, [class*="col-md-"], [class^="slick-"]
-thegioididong.com##.lazyloaded, .popup-banner
+thegioididong.com##.popup-banner
 thethao.sggp.org.vn##.lazyloaded, .ls-is-cached, [id^="admFull"] thethao.sggp.org.vn##[id^="adm_"] thethao.sggp.org.vn##[id^="ban-"] thethao.sggp.org.vn##[id^="zone-"] thethao.sggp.org.vn##[id^="Mobile_"], [id^="oa"], [id^="sdaMobile_"], [id^="top-"] thethao.sggp.org.vn##[id^="admFull"] thethao.sggp.org.vn##[id^="adm_"] thethao.sggp.org.vn##[id^="ban-"] thethao.sggp.org.vn##[id^="zone-"] thethao.sggp.org.vn##[id^="Mobile_"], a[rel="noopener"]
 thethao247.vn##.as, .main-content>section, [class^="sp-"], [class^="text-"], [id^="nl-"], [id^="sp-"], [id^="zone-"], div[as-id], div[style*="min-height: 250px"]
 thhp.vn##.col-sm-3, [class*="ads"], [class*="zonegourp"]
