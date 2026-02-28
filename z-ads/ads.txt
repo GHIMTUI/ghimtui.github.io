@@ -4,7 +4,49 @@
 ! Title: STOP ADS
 ! Version: 1.0.0
 !===================
+quantrimang.com##.sidebar
+dienbientv.vn##.null
+dienbientv.vn##[id*="ad_"]
+dienbientv.vn##[class*="ad_"]
+www.google.com##.ki3Mlf
 
+www.agribank.com.vn###agbModal
+www.agribank.com.vn##.modal-backdrop
+vbsp.org.vn###right
+vbsp.org.vn##[class*="ads"]
+vdb.gov.vn##[class*="Ads_"]
+acb.com.vn##.download-app-mb
+hdbank.com.vn##.mobile-popup
+www.vib.com.vn##.new-download-app
+www.scb.com.vn##[class^="slider-"]
+www.sacombank.com.vn##.topbanner
+www.namabank.com.vn##.mobile-popup
+www.ncb-bank.vn##.img-popup
+www.ncb-bank.vn##.ovl
+www.ncb-bank.vn##.left
+www.baca-bank.vn###slider
+kienlongbank.com##.list-items
+www.baovietbank.vn##.bvb-slider-banner
+www.baovietbank.vn##.bvb-info-service
+www.baovietbank.vn##.bvb-slider-top
+
+
+vikkibank.vn##[id*="banner"]
+www.hsbc.com.vn###messaging-banner
+www.sc.com##[class^="smartbanner"]
+www.cimbbank.com.vn##.btn
+qpvn.vn###top-bar
+voh.com.vn##.adstop
+voh.com.vn##[class*="center-"]
+vnpt.vn##[class*="banner-"]
+vnpt.vn##.bnmb
+vnpt.vn###mob-ol
+
+
+www.mobifone.vn##.main-banner
+gmobile.vn##.slide
+vnsky.vn##.carousel__viewport
+vnsky.vn##.modal-popup
 24h.com.vn##[id^="ADS_"], [id^="div_inpage"], [id^="inpage_article"], [id^="inread_sis"], [id^="sis_inpage"]
 
 angiangtv.vn##[class*="swiper"], [class*="wp-"], [id*="media_"]
