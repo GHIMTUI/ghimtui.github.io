@@ -4,54 +4,15 @@
 ! Title: STOP ADS
 ! Version: 1.0.0
 !===================
-quantrimang.com##.sidebar
-dienbientv.vn##.null
-dienbientv.vn##[id*="ad_"]
-dienbientv.vn##[class*="ad_"]
-www.google.com##.ki3Mlf
 
-www.agribank.com.vn###agbModal
-www.agribank.com.vn##.modal-backdrop
-vbsp.org.vn###right
-vbsp.org.vn##[class*="ads"]
-vdb.gov.vn##[class*="Ads_"]
-acb.com.vn##.download-app-mb
-hdbank.com.vn##.mobile-popup
-www.vib.com.vn##.new-download-app
-www.scb.com.vn##[class^="slider-"]
-www.sacombank.com.vn##.topbanner
-www.namabank.com.vn##.mobile-popup
-www.ncb-bank.vn##.img-popup
-www.ncb-bank.vn##.ovl
-www.ncb-bank.vn##.left
-www.baca-bank.vn###slider
-kienlongbank.com##.list-items
-www.baovietbank.vn##.bvb-slider-banner
-www.baovietbank.vn##.bvb-info-service
-www.baovietbank.vn##.bvb-slider-top
-
-
-vikkibank.vn##[id*="banner"]
-www.hsbc.com.vn###messaging-banner
-www.sc.com##[class^="smartbanner"]
-www.cimbbank.com.vn##.btn
-qpvn.vn###top-bar
-voh.com.vn##.adstop
-voh.com.vn##[class*="center-"]
-vnpt.vn##[class*="banner-"]
-vnpt.vn##.bnmb
-vnpt.vn###mob-ol
-
-
-www.mobifone.vn##.main-banner
-gmobile.vn##.slide
-vnsky.vn##.carousel__viewport
-vnsky.vn##.modal-popup
 24h.com.vn##[id^="ADS_"], [id^="div_inpage"], [id^="inpage_article"], [id^="inread_sis"], [id^="sis_inpage"]
 
+acb.com.vn##.download-app-mb
+agribank.com.vn###agbModal, .modal-backdrop
 angiangtv.vn##[class*="swiper"], [class*="wp-"], [id*="media_"]
 apkpure.com##[class^="ad-"], [class^="js-"]
 
+baca-bank.vn###slider
 baobacninhtv.vn##[class*="group-30-"], [class*="group-4-"]
 baocamau.vn##[class^="box-"], [class^="box_"], [class^="padding-"], [id^="revive-"], [id^="slick-"]
 baocaobang.vn##[class^="ads-"], [class^="mt"], [class^="mt-"], [class^="zone-group-"]
@@ -79,46 +40,60 @@ baotayninh.vn##[class*="ads-"], [class*="pb-"], [class^="ads-"]
 baothainguyen.vn##[class^="carousel-"], [class^="e"], [class^="ff"]
 baothanhhoa.vn##[class^="dadv_"], [id^="iad"], [id^="mhot1_"]
 baotuyenquang.com.vn##[class^="ff"], [class^="item-"]
+baovietbank.vn##.bvb-info-service, .bvb-slider-banner, .bvb-slider-top
 baovinhlong.com.vn##[class^="ad"]
 
 cafef.vn##[id^="adm-"], [id^="admFull"], [id^="adm_"], [id^="ban-"], [id^="top-"], [id^="zone-"], img[src="https://adi.admicro.vn/adx/adxlogo-1.png"]
 caobangtv.vn##[class*="adv"]
 chatgpt.com##.block
+cimbbank.com.vn##.btn
 coccoc.com##.useLogin-jCTvg, [class^="adsItem-"], [class^="default-"], [class^="top-"]
 
 danangtv.vn###ctl00_ctl00_Content_Trang_Chủ_Quảng_Cáo_Botttom, .Quang_cao_temp, .XemGiQuangCao, [class*="QuangCao_"]
 dantri.com.vn##[id^="banner"], [id^="dat-"], [id^="dt"], [id^="dtad__"], [id^="mobile-"], [id^="tpm"]
 dauthau.asia##.slider
+dienbientv.vn##.null, [class*="ad_"], [id*="ad_"]
 duckduckgo.com##[class^="js-"], [class^="set-browser-"]
 
 fptplay.vn##.flex-row, a[aria-label="Purchase packages"]
 
 genk.vn##[id^="adm-"], [id^="admFull"], [id^="adm_"], [id^="admbackground"], [id^="ban-"], [id^="top-"], [id^="zone-"]
-google.com##[id^="nav"]
+gmobile.vn##.slide
+google.com##.ki3Mlf, [id^="nav"]
 
 hanoimoi.vn##[class^="ads_"], [class^="c-banner-"], [class^="is-"], [id^="zone-"]
 hanoionline.vn##.banner
+hdbank.com.vn##.mobile-popup
+hsbc.com.vn###messaging-banner
 huengaynay.vn##[class^="adv"], [class^="huetv-"], img[src="https://file.huengaynay.vn/data/0/images/2026/01/19/upload_3836/bau-cu.gif"], img[src="https://file.huengaynay.vn/data/0/images/2026/02/27/upload_3836/dh-dang-cac-cap.gif"]
 huetv.com.vn##.part31>p, [class*="banner"]
 hungyentv.vn##[id^="ads_"], [id^="advertise_"]
 
 kenh14.vn###admFullTop, #ban-top-site, .adv, [id^="adm-slot"], [id^="adm_zone"], [id^="admbackground"], [id^="zone"]
+kienlongbank.com##.list-items
 
 langsontv.vn###socials, .navbar-right>ul, [class^="box_"], [id^="advertise_"]
 logos.fandom.com##[class^="top-"], [class^="top_"], [id^="top_"]
 
 mail.google.com##[id^="nav"]
+mobifone.vn##.main-banner
 
+namabank.com.vn##.mobile-popup
 nbtv.vn##.top-news-right, [class*="banner_"], [class^="app-"], [id^="app_"]
+ncb-bank.vn##.img-popup, .left, .ovl
 nhipsongkinhdoanh.vn###top-logo, .container-fluid, [id^="admFull"], [id^="adsWeb"], [id^="ban-"], [id^="zone"]
 nld.com.vn###top-logo, .ads-top, [id^="adm-zone"], [id^="admFull"], [id^="admbackground"], [id^="ban-top-site"], [id^="sp-"], [id^="zone"]
 
 perplexity.ai##.animate-in
 plo.vn##[id^="Mobile"], [id^="adsMobile"], [id^="bn-zone"], [id^="zone"], div[style="margin: 10px 0px;"]
 
-quantrimang.com##[class^="ads"], [id^="adindex"], [id^="adsposttop"], [id^="adunderarticle"], [id^="articleads"], [id^="mrc"]
+qpvn.vn###top-bar
+quantrimang.com##.sidebar, [class^="ads"], [id^="adindex"], [id^="adsposttop"], [id^="adunderarticle"], [id^="articleads"], [id^="mrc"]
 
+sacombank.com.vn##.topbanner
 saostar.vn##[class^="txt-"], [id^="div-"], [id^="mid-"], [id^="mobi-"], [id^="pvoucher-"], [id^="sp-"]
+sc.com##[class^="smartbanner"]
+scb.com.vn##[class^="slider-"]
 search.brave.com##[class^="download-"], [class^="premium-"]
 sggp.org.vn##.ls-is-cached, a[rel="noopener"]
 soha.vn##[class^="div-"], [id^="adm-"], [id^="admFull"], [id^="ban-"], [id^="zone-"]
@@ -137,10 +112,17 @@ tuoitre.vn###LeaderBoardTop, #admbackground, #pvoucher-live-container, [id^="sp_
 tv360.vn###ads-player-base-wrapper, .Toastify, .css-1jzjo52, .css-1u6gwec, .css-1xdipk, .css-csxyfn, .text-ellipsis
 tvbox.one##.adsbygoogle, .entry-img-300, .homeadv, .homeadv>span
 
+vbsp.org.vn###right, [class*="ads"]
+vdb.gov.vn##[class*="Ads_"]
+vib.com.vn##.new-download-app
 vietgiaitri.com###header, .cover_header, [class^="avgt-"], [class^="inview-"], [id^="Balloon"]
 vietnamnet.vn###catfish, #mashead-bn, [id^="adzone"], [id^="mashead-"], div[onclick="closeMashead(39)"], span[style="color: #fff;text-align: center;display: inherit;font-size: 20px;line-height: 20px;"]
 viettelstore.vn##.icon-neo, .icon-zalo, [id^="img-"], [id^="pop"], [id^="pop-"], [id^=overlay"]
+vikkibank.vn##[id*="banner"]
 vnexpress.net###ads_large_detail, #banner_top, .banner_mobile_300x250, .section_ads_300x250
+vnpt.vn###mob-ol, .bnmb, [class*="banner-"]
+vnsky.vn##.carousel__viewport, .modal-popup
+voh.com.vn##.adstop, [class*="center-"]
 vtcnews.vn###appLink, .top-ad, [class^="aanetwork-"], a[rel="noopener noreferrer nofollow"], a[rel="noopener noreferrer nofollow"]>div, ins[data-zone="top_mobile_320x50"]
 
 youtube.com##.ytmCompanionSlotRendererHost, .ytmPaidContentOverlayHost, [class^="rich-section-"], [class^="ytmBackstagePost"]
