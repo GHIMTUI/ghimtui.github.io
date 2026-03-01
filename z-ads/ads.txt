@@ -141,7 +141,6 @@ vietgiaitri.com###header, .cover_header, [class^="avgt-"], [class^="inview-"], [
 vietnamnet.vn###catfish, #mashead-bn, [id^="adzone"], [id^="mashead-"], div[onclick="closeMashead(39)"], span[style="color: #fff;text-align: center;display: inherit;font-size: 20px;line-height: 20px;"]
 viettelstore.vn##.icon-neo, .icon-zalo, [id^="img-"], [id^="pop"], [id^="pop-"], [id^=overlay"]
 vikkibank.vn##[id*="banner"]
-vnexpress.net###ads_large_detail, #banner_top, .banner_mobile_300x250, .section_ads_300x250
 vnnic.vn##.pad-0-15, .pad-left-15, .skin-default, [id^="vnnic-banner-"]
 vnpt.vn###mob-ol, .bnmb, [class*="banner-"]
 vnsky.vn##.carousel__viewport, .modal-popup
