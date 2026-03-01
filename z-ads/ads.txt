@@ -7,7 +7,6 @@
 
 1thegioi.vn##[class*="zone-"], [class^="c-banner-"], [class^="is-"]
 
-24h.com.vn##[id^="ADS_"], [id^="div_inpage"], [id^="inpage_article"], [id^="inread_sis"], [id^="sis_inpage"]
 2sao.vn###catfish, .adsbygoolge, .vadslogo, [class^="vmc_"], [id^="Mobile_"], [id^="adzone"], [id^="mashead-"], [id^="sp-wrapper-"]
 
 acb.com.vn##.download-app-mb
