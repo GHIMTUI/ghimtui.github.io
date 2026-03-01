@@ -71,7 +71,6 @@ fptplay.vn##.flex-row, a[aria-label="Purchase packages"]
 
 genk.vn##.box-category-bottom, [id^="adm-"], [id^="admFull"], [id^="adm_"], [id^="admbackground"], [id^="ban-"], [id^="top-"], [id^="zone-"]
 gmobile.vn##.slide
-google.com##.ki3Mlf, [id^="nav"]
 
 hanoimoi.vn##[class^="ads_"], [class^="c-banner-"], [class^="is-"], [id^="zone-"]
 hanoionline.vn##.banner
