@@ -4,101 +4,11 @@
 ! Title: STOP ADS
 ! Version: 1.0.0
 !===================
-1thegioi.vn##[class^="is-"]
-1thegioi.vn##[class^="c-banner-"]
-1thegioi.vn##[class*="zone-"]
-baotintuc.vn##.adstop
-dantocmiennui.baotintuc.vn##[id^="sdaMobile_"]
-dantocmiennui.baotintuc.vn##[class^="sda_"]
-dantocmiennui.baotintuc.vn##[class^="ad-"]
-thegioikinhdoanh.vn##.col-right
-thegioikinhdoanh.vn##.full-width
-thegioikinhdoanh.vn##.links-item
-thegioikinhdoanh.vn##.widget-space
-thegioikinhdoanh.vn###link28
-baokhanhhoa.vn##[class^="ff"]
-tintuconline.com.vn##a[rel="nofollow noopener"]
-tintuconline.com.vn##.adsbygoolge
-tintuconline.com.vn##.vadslogo
-tintuconline.com.vn##div[onclick="closeMashead(39)"]
-tintuconline.com.vn##[class^="vmc_"]
-tintuconline.com.vn##[id^="mashead-"]
-tintuconline.com.vn##[id*="adzone"]
-tintuconline.com.vn##[id^="sp-wrapper-"]
-2sao.vn###catfish
-2sao.vn##[id^="Mobile_"]
-2sao.vn##[id^="adzone"]
-2sao.vn##[id^="mashead-"]
-2sao.vn##[id^="sp-wrapper-"]
-2sao.vn##[class^="vmc_"]
-2sao.vn##.vadslogo
-2sao.vn##.adsbygoolge
-docnhanh.vn##img[src="https://adi.admicro.vn/adx/adxlogo-1.png"]
-docnhanh.vn###top-logo
-docnhanh.vn##[id^="admFull"]
-docnhanh.vn##[id^="ad-"]
-docnhanh.vn##[id^="adm_"]
-docnhanh.vn##[id^="ban-"]
-docnhanh.vn##[id^="zone-"]
-docnhanh.vn##[id^="ads-"]
-m.nguoiduatin.vn##.box-aside
-m.nguoiduatin.vn##.ndt-ads
-doisongphapluat.com.vn##.sys-ads
-doisongphapluat.com.vn##[id^="sp-"]
-ttbc-hcm.gov.vn##[class^="c-banner-"]
-ttbc-hcm.gov.vn##[class^="zone-"]
-ttbc-hcm.gov.vn##[class^="abs-"]
-vnnic.vn##.skin-default
-vnnic.vn##[id^="vnnic-banner-"]
-vnnic.vn##.pad-0-15
-vnnic.vn##.pad-left-15
-tintuconline.com.vn###adzone39
-tintuconline.com.vn##[id*="vmcad_inview_"]
-tintuconline.com.vn##[id^="Mobile_"]
-tintuconline.com.vn##div[style="margin-bottom: 35px;"]
-tintuconline.com.vn##[class^="trv-"]
-nld.com.vn##.notifi-list
-nld.com.vn##img[src="https://static.mediacdn.vn/nld/images/e-paper.png"]
-nld.com.vn##img[src="https://static.mediacdn.vn/nld.com.vn/image/Banner_mobile_xuan.png"]
-nld.com.vn##[class^="mb-"]
-docnhanh.vn##.lg:mt-1
-docnhanh.vn##.top
-docnhanh.vn##.iv1
-docnhanh.vn##[class^="background"]
-baodongnai.com.vn##[class^="ad"]
-eva.vn##[id^="spanTextAds_"]
-eva.vn##[id^="ADS"]
-eva.vn##[class^="banr-"]
 
+1thegioi.vn##[class*="zone-"], [class^="c-banner-"], [class^="is-"]
 
-eva.vn##[id*="banner"]
-laodong.vn##.notification-header__msg
-laodong.vn##[id^="sp-"]
-danviet.vn##[class*="ads"]
-danviet.vn##[id*="ads"]
-danviet.vn##[id*="zone-"]
-
-danviet.vn##.sidebar-countdown
-danviet.vn##.video-container
-tienphong.vn##[class^="ad-"]
-tienphong.vn##[class^="sda-"]
-tienphong.vn##[id^="sdaMobile_"]
-nld.com.vn##.mb-20
-vov.vn###header-placeholder
-m.genk.vn##.box-category-bottom
-techlade.vn##[class*="banner"]
-congnghevadoisong.vn##.col-md-8>p
-congnghevadoisong.vn##[class^="ads_"]
-m.cafebiz.vn###top-logo
-m.cafebiz.vn##[id^="admFull"]
-m.cafebiz.vn##[id^="adm-"]
-m.cafebiz.vn##[id^="ban-"]
-m.cafebiz.vn##[id^="zone-"]
-m.cafebiz.vn##[id^="adm_"]
-www.techz.vn##.header_ads
-www.techz.vn###sp-wrapper-hovering
-congngheviet.com##.td-a-rec
 24h.com.vn##[id^="ADS_"], [id^="div_inpage"], [id^="inpage_article"], [id^="inread_sis"], [id^="sis_inpage"]
+2sao.vn###catfish, .adsbygoolge, .vadslogo, [class^="vmc_"], [id^="Mobile_"], [id^="adzone"], [id^="mashead-"], [id^="sp-wrapper-"]
 
 acb.com.vn##.download-app-mb
 agribank.com.vn###agbModal, .modal-backdrop
@@ -111,12 +21,13 @@ baocamau.vn##[class^="box-"], [class^="box_"], [class^="padding-"], [id^="revive
 baocaobang.vn##[class^="ads-"], [class^="mt"], [class^="mt-"], [class^="zone-group-"]
 baodanang.vn##[class^="ads_"], [id^="zone-"]
 baodienbienphu.vn##[class^="mt-"], [class^="pt-"]
-baodongnai.com.vn##[class^="ff"]
+baodongnai.com.vn##[class^="ad"], [class^="ff"]
 baodongthap.vn##.box-link-social-home, .image-item, .slide>div, .slider, .slider-container-top-adv, .slides, .social-items, [class*="-adv"], [class^="adv-"]
 baogialai.com.vn###top-logo, .bg-wrapper, .sad_viewed, [class^="ad-"], [class^="adv"], [class^="sda_"], [id^="adm-zone"], [id^="admFull"], [id^="adm_zone"], [id^="ban-"], [id^="logo-"], [id^="sadMobile_"], [id^="sdaMobile_"], [id^="zone"], img[src="https://adi.admicro.vn/adx/adxlogo-1.png"]
 baohaiphong.vn##[class^="ads_"], [class^="c-banner-"], [class^="zone-"], [id^="mnyyna_"]
 baohatinh.vn##[class*="aanetwork-"], [class^="ad-"], [class^="sad_"], [class^="top-"], [id^="adsMobile_"], [id^="ant-"]
 baohungyen.vn##[class*="ads-"], [class*="zonegroup-"]
+baokhanhhoa.vn##[class^="ff"]
 baolaichau.vn##[class^="blc-topic__"], [class^="stripes-"], [id*="splide01-"]
 baolamdong.vn##[class^="ads_"], [id^="zone-"]
 baolangson.vn##[class*="ads-"], [class*="zonegroup-"]
@@ -132,25 +43,35 @@ baosonla.vn##[class*="my-"], [class^="build-"], [class^="myslides-"]
 baotayninh.vn##[class*="ads-"], [class*="pb-"], [class^="ads-"]
 baothainguyen.vn##[class^="carousel-"], [class^="e"], [class^="ff"]
 baothanhhoa.vn##[class^="dadv_"], [id^="iad"], [id^="mhot1_"]
+baotintuc.vn##.adstop
 baotuyenquang.com.vn##[class^="ff"], [class^="item-"]
 baovietbank.vn##.bvb-info-service, .bvb-slider-banner, .bvb-slider-top
 baovinhlong.com.vn##[class^="ad"]
 
+cafebiz.vn###top-logo, [id^="adm-"], [id^="admFull"], [id^="adm_"], [id^="ban-"], [id^="zone-"]
 cafef.vn##[id^="adm-"], [id^="admFull"], [id^="adm_"], [id^="ban-"], [id^="top-"], [id^="zone-"], img[src="https://adi.admicro.vn/adx/adxlogo-1.png"]
 caobangtv.vn##[class*="adv"]
 chatgpt.com##.block
 cimbbank.com.vn##.btn
 coccoc.com##.useLogin-jCTvg, [class^="adsItem-"], [class^="default-"], [class^="top-"]
+congnghevadoisong.vn##.col-md-8>p, [class^="ads_"]
+congngheviet.com##.td-a-rec
 
 danangtv.vn###ctl00_ctl00_Content_Trang_Chủ_Quảng_Cáo_Botttom, .Quang_cao_temp, .XemGiQuangCao, [class*="QuangCao_"]
+dantocmiennui.baotintuc.vn##[class^="ad-"], [class^="sda_"], [id^="sdaMobile_"]
 dantri.com.vn##[id^="banner"], [id^="dat-"], [id^="dt"], [id^="dtad__"], [id^="mobile-"], [id^="tpm"]
+danviet.vn##.sidebar-countdown, .video-container, [class*="ads"], [id*="ads"], [id*="zone-"]
 dauthau.asia##.slider
 dienbientv.vn##.null, [class*="ad_"], [id*="ad_"]
+docnhanh.vn###top-logo, .iv1, .lg:mt-1, .top, [class^="background"], [id^="ad-"], [id^="admFull"], [id^="adm_"], [id^="ads-"], [id^="ban-"], [id^="zone-"], img[src="https://adi.admicro.vn/adx/adxlogo-1.png"]
+doisongphapluat.com.vn##.sys-ads, [id^="sp-"]
 duckduckgo.com##[class^="js-"], [class^="set-browser-"]
+
+eva.vn##[class^="banr-"], [id*="banner"], [id^="ADS"], [id^="spanTextAds_"]
 
 fptplay.vn##.flex-row, a[aria-label="Purchase packages"]
 
-genk.vn##[id^="adm-"], [id^="admFull"], [id^="adm_"], [id^="admbackground"], [id^="ban-"], [id^="top-"], [id^="zone-"]
+genk.vn##.box-category-bottom, [id^="adm-"], [id^="admFull"], [id^="adm_"], [id^="admbackground"], [id^="ban-"], [id^="top-"], [id^="zone-"]
 gmobile.vn##.slide
 google.com##.ki3Mlf, [id^="nav"]
 
@@ -166,6 +87,7 @@ kenh14.vn###admFullTop, #ban-top-site, .adv, [id^="adm-slot"], [id^="adm_zone"],
 kienlongbank.com##.list-items
 
 langsontv.vn###socials, .navbar-right>ul, [class^="box_"], [id^="advertise_"]
+laodong.vn##.notification-header__msg, [id^="sp-"]
 logos.fandom.com##[class^="top-"], [class^="top_"], [id^="top_"]
 
 mail.google.com##[id^="nav"]
@@ -174,8 +96,9 @@ mobifone.vn##.main-banner
 namabank.com.vn##.mobile-popup
 nbtv.vn##.top-news-right, [class*="banner_"], [class^="app-"], [id^="app_"]
 ncb-bank.vn##.img-popup, .left, .ovl
+nguoiduatin.vn##.box-aside, .ndt-ads
 nhipsongkinhdoanh.vn###top-logo, .container-fluid, [id^="admFull"], [id^="adsWeb"], [id^="ban-"], [id^="zone"]
-nld.com.vn###top-logo, .ads-top, [id^="adm-zone"], [id^="admFull"], [id^="admbackground"], [id^="ban-top-site"], [id^="sp-"], [id^="zone"]
+nld.com.vn###top-logo, .ads-top, .mb-20, .notifi-list, [class^="mb-"], [id^="adm-zone"], [id^="admFull"], [id^="admbackground"], [id^="ban-top-site"], [id^="sp-"], [id^="zone"], img[src="https://static.mediacdn.vn/nld.com.vn/image/Banner_mobile_xuan.png"], img[src="https://static.mediacdn.vn/nld/images/e-paper.png"]
 
 perplexity.ai##.animate-in
 plo.vn##[id^="Mobile"], [id^="adsMobile"], [id^="bn-zone"], [id^="zone"], div[style="margin: 10px 0px;"]
@@ -192,15 +115,21 @@ sggp.org.vn##.ls-is-cached, a[rel="noopener"]
 soha.vn##[class^="div-"], [id^="adm-"], [id^="admFull"], [id^="ban-"], [id^="zone-"]
 sonlatv.vn##.col-md-12, [class*="ads"], [id*="ads"]
 
+techlade.vn##[class*="banner"]
+techz.vn###sp-wrapper-hovering, .header_ads
 thanhnien.vn##.asd-headt, [id^="sp"], [id^="zone"]
 thdt.vn##.blockBanner, [class*="col-md-"], [class^="slick-"]
 thegioididong.com##.popup-banner
+thegioikinhdoanh.vn###link28, .col-right, .full-width, .links-item, .widget-space
 thethao.sggp.org.vn##.lazyloaded, .ls-is-cached, [id^="admFull"] thethao.sggp.org.vn##[id^="adm_"] thethao.sggp.org.vn##[id^="ban-"] thethao.sggp.org.vn##[id^="zone-"] thethao.sggp.org.vn##[id^="Mobile_"], [id^="oa"], [id^="sdaMobile_"], [id^="top-"] thethao.sggp.org.vn##[id^="admFull"] thethao.sggp.org.vn##[id^="adm_"] thethao.sggp.org.vn##[id^="ban-"] thethao.sggp.org.vn##[id^="zone-"] thethao.sggp.org.vn##[id^="Mobile_"], a[rel="noopener"]
 thethao247.vn##.as, .main-content>section, [class^="sp-"], [class^="text-"], [id^="nl-"], [id^="sp-"], [id^="zone-"], div[as-id], div[style*="min-height: 250px"]
 thhp.vn##.col-sm-3, [class*="ads"], [class*="zonegourp"]
 thuvienphapluat.vn##[id^="sp-"]
 thvl.vn##.home-5-col, [class*="wp-image-"], [class^="swapper-"], [id^="swapper-"]
+tienphong.vn##[class^="ad-"], [class^="sda-"], [id^="sdaMobile_"]
+tintuconline.com.vn###adzone39, .adsbygoolge, .vadslogo, [class^="trv-"], [class^="vmc_"], [id*="adzone"], [id*="vmcad_inview_"], [id^="Mobile_"], [id^="mashead-"], [id^="sp-wrapper-"], a[rel="nofollow noopener"], div[onclick="closeMashead(39)"], div[style="margin-bottom: 35px;"]
 truyenhinhthanhhoa.vn##[class^="ad-"], [id^="banner-"], [id^="placement-"], [id^="share-"], [id^="slot-"], [id^="zone-"]
+ttbc-hcm.gov.vn##[class^="abs-"], [class^="c-banner-"], [class^="zone-"]
 tuoitre.vn###LeaderBoardTop, #admbackground, #pvoucher-live-container, [id^="sp_format-hovering"], [id^="zone"]
 tv360.vn###ads-player-base-wrapper, .Toastify, .css-1jzjo52, .css-1u6gwec, .css-1xdipk, .css-csxyfn, .text-ellipsis
 tvbox.one##.adsbygoogle, .entry-img-300, .homeadv, .homeadv>span
@@ -213,9 +142,11 @@ vietnamnet.vn###catfish, #mashead-bn, [id^="adzone"], [id^="mashead-"], div[oncl
 viettelstore.vn##.icon-neo, .icon-zalo, [id^="img-"], [id^="pop"], [id^="pop-"], [id^=overlay"]
 vikkibank.vn##[id*="banner"]
 vnexpress.net###ads_large_detail, #banner_top, .banner_mobile_300x250, .section_ads_300x250
+vnnic.vn##.pad-0-15, .pad-left-15, .skin-default, [id^="vnnic-banner-"]
 vnpt.vn###mob-ol, .bnmb, [class*="banner-"]
 vnsky.vn##.carousel__viewport, .modal-popup
 voh.com.vn##.adstop, [class*="center-"]
+vov.vn###header-placeholder
 vtcnews.vn###appLink, .top-ad, [class^="aanetwork-"], a[rel="noopener noreferrer nofollow"], a[rel="noopener noreferrer nofollow"]>div, ins[data-zone="top_mobile_320x50"]
 
 youtube.com##.ytmCompanionSlotRendererHost, .ytmPaidContentOverlayHost, [class^="rich-section-"], [class^="ytmBackstagePost"]
