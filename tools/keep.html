@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Ghi chú có Thời gian</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background-color: #ffffff;
+            height: 100vh;
+            overflow: hidden;
+            touch-action: manipulation;
+        }
+        .sidebar {
+            position: fixed;
+            left: -100%;
+            top: 0;
+            bottom: 0;
+            width: 85%;
+            max-width: 320px;
+            z-index: 50;
+            transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            background: white;
+            box-shadow: 10px 0 15px -3px rgba(0, 0, 0, 0.1);
+        }
+        .sidebar.open {
+            left: 0;
+        }
+        .overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.4);
+            display: none;
+            z-index: 40;
+            backdrop-filter: blur(2px);
+        }
+        .overlay.active {
+            display: block;
+        }
+        @media (min-width: 768px) {
+            .sidebar {
+                position: static;
+                left: 0;
+                width: 350px;
+                box-shadow: none;
+                border-right: 1px solid #f1f5f9;
+            }
+            .menu-btn { display: none; }
+            .overlay { display: none !important; }
+        }
+        #noteContent {
+            resize: none;
+            outline: none;
+            font-size: 16px;
+        }
+        .active-note {
+            background-color: #f0f7ff;
+            border-left: 4px solid #2563eb;
+        }
+    </style>
+</head>
+<body class="flex flex-col md:flex-row">
+
+    <div id="overlay" class="overlay"></div>
+
+    <!-- Sidebar -->
+    <aside id="sidebar" class="sidebar flex flex-col">
+        <div class="p-5 border-b flex justify-between items-center bg-slate-50/50">
+            <div>
+                <h1 class="text-xl font-bold text-slate-900">Ghi chú</h1>
+                <p class="text-[10px] text-slate-500 uppercase tracking-wider font-semibold">Cập nhật lúc: <span id="lastSync">Vừa xong</span></p>
+            </div>
+            <button id="addNoteBtn" class="bg-blue-600 hover:bg-blue-700 text-white p-2.5 rounded-full shadow-lg active:scale-90 transition">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4" />
+                </svg>
+            </button>
+        </div>
+        
+        <div id="noteList" class="flex-1 overflow-y-auto p-3 space-y-2 bg-white">
+            <!-- List Items -->
+        </div>
+    </aside>
+
+    <!-- Main Editor -->
+    <main class="flex-1 flex flex-col h-full bg-white relative">
+        <!-- Toolbar -->
+        <div class="px-4 py-3 border-b flex items-center justify-between bg-white sticky top-0 z-10">
+            <div class="flex items-center flex-1 mr-4">
+                <button id="menuBtn" class="menu-btn p-2 mr-2 text-slate-500 active:bg-slate-100 rounded-lg">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+                <input type="text" id="noteTitle" placeholder="Tiêu đề ghi chú..." 
+                    class="text-xl font-bold w-full bg-transparent border-none outline-none text-slate-800 placeholder:text-slate-300">
+            </div>
+            
+            <button id="deleteNoteBtn" class="p-2 text-slate-300 hover:text-red-500 active:text-red-700 transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- Editor Container -->
+        <div class="flex-1 flex flex-col overflow-hidden relative">
+            <textarea id="noteContent" placeholder="Viết gì đó..." 
+                class="flex-1 p-6 text-slate-700 leading-relaxed w-full"></textarea>
+            
+            <!-- Bottom Metadata Area -->
+            <div class="px-6 py-2 border-t border-slate-50 bg-slate-50/30 flex justify-between items-center">
+                <span id="charCount" class="text-[11px] text-slate-400 font-medium">0 ký tự</span>
+                <span id="currentNoteTime" class="text-[11px] text-slate-400 italic">--:--</span>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Data Structure: notes = [{ id, title, content, updatedAt }]
+        let notes = JSON.parse(localStorage.getItem('notes_app_timestamped')) || [
+            { id: Date.now(), title: 'Chào mừng!', content: 'Ghi chú này hỗ trợ lưu ngày giờ tự động.', updatedAt: new Date().toISOString() }
+        ];
+        let activeNoteId = notes[0]?.id || null;
+
+        const sidebar = document.getElementById('sidebar');
+        const overlay = document.getElementById('overlay');
+        const menuBtn = document.getElementById('menuBtn');
+        const noteListEl = document.getElementById('noteList');
+        const noteTitleInput = document.getElementById('noteTitle');
+        const noteContentInput = document.getElementById('noteContent');
+        const addNoteBtn = document.getElementById('addNoteBtn');
+        const deleteNoteBtn = document.getElementById('deleteNoteBtn');
+        const charCountEl = document.getElementById('charCount');
+        const timeEl = document.getElementById('currentNoteTime');
+        const lastSyncEl = document.getElementById('lastSync');
+
+        function formatDate(isoString) {
+            const d = new Date(isoString);
+            const time = d.toLocaleTimeString('vi-VN', { hour: '2-digit', minute: '2-digit' });
+            const date = d.toLocaleDateString('vi-VN', { day: '2-digit', month: '2-digit', year: 'numeric' });
+            return `${time}, ${date}`;
+        }
+
+        function toggleSidebar() {
+            sidebar.classList.toggle('open');
+            overlay.classList.toggle('active');
+        }
+
+        menuBtn.onclick = toggleSidebar;
+        overlay.onclick = toggleSidebar;
+
+        function save() {
+            localStorage.setItem('notes_app_timestamped', JSON.stringify(notes));
+            lastSyncEl.innerText = new Date().toLocaleTimeString('vi-VN', { hour: '2-digit', minute: '2-digit' });
+        }
+
+        function renderNoteList() {
+            noteListEl.innerHTML = '';
+            // Sắp xếp ghi chú mới nhất lên đầu dựa trên updatedAt
+            const sortedNotes = [...notes].sort((a, b) => new Date(b.updatedAt) - new Date(a.updatedAt));
+
+            sortedNotes.forEach(note => {
+                const item = document.createElement('div');
+                const isSelected = note.id === activeNoteId;
+                item.className = `p-4 rounded-xl cursor-pointer transition-all border ${isSelected ? 'active-note border-blue-200 shadow-sm' : 'border-transparent text-slate-600 active:bg-slate-50'}`;
+                
+                item.innerHTML = `
+                    <div class="font-bold truncate text-slate-800">${note.title || 'Không tiêu đề'}</div>
+                    <div class="flex justify-between items-center mt-1">
+                        <span class="text-[10px] text-slate-400 font-medium">${formatDate(note.updatedAt)}</span>
+                        <span class="text-[10px] text-slate-300 truncate ml-2">${note.content.substring(0, 15)}...</span>
+                    </div>
+                `;
+                
+                item.onclick = () => {
+                    selectNote(note.id);
+                    if (window.innerWidth < 768) toggleSidebar();
+                };
+                noteListEl.appendChild(item);
+            });
+        }
+
+        function selectNote(id) {
+            activeNoteId = id;
+            const note = notes.find(n => n.id === id);
+            if (note) {
+                noteTitleInput.value = note.title;
+                noteContentInput.value = note.content;
+                timeEl.innerText = `Chỉnh sửa lần cuối: ${formatDate(note.updatedAt)}`;
+                charCountEl.innerText = `${note.content.length} ký tự`;
+            }
+            renderNoteList();
+        }
+
+        function createNote() {
+            const newNote = { 
+                id: Date.now(), 
+                title: '', 
+                content: '', 
+                updatedAt: new Date().toISOString() 
+            };
+            notes.unshift(newNote);
+            activeNoteId = newNote.id;
+            save();
+            selectNote(activeNoteId);
+            noteTitleInput.focus();
+            if (window.innerWidth < 768 && sidebar.classList.contains('open')) toggleSidebar();
+        }
+
+        function updateNote() {
+            const index = notes.findIndex(n => n.id === activeNoteId);
+            if (index !== -1) {
+                const now = new Date().toISOString();
+                notes[index].title = noteTitleInput.value;
+                notes[index].content = noteContentInput.value;
+                notes[index].updatedAt = now;
+                
+                timeEl.innerText = `Chỉnh sửa lúc: ${formatDate(now)}`;
+                charCountEl.innerText = `${noteContentInput.value.length} ký tự`;
+                
+                save();
+                
+                // Cập nhật giao diện danh sách sau một khoảng nghỉ để tránh giật lag khi gõ
+                clearTimeout(window.renderTimeout);
+                window.renderTimeout = setTimeout(renderNoteList, 800);
+            }
+        }
+
+        function deleteNote() {
+            const index = notes.findIndex(n => n.id === activeNoteId);
+            if (index === -1) return;
+
+            // Hiệu ứng xác nhận đơn giản (vì alert gây zoom)
+            if (confirm('Xóa ghi chú này vĩnh viễn?')) {
+                notes = notes.filter(n => n.id !== activeNoteId);
+                if (notes.length === 0) {
+                    createNote();
+                } else {
+                    activeNoteId = notes[0].id;
+                    selectNote(activeNoteId);
+                }
+                save();
+            }
+        }
+
+        // Event Listeners
+        addNoteBtn.onclick = createNote;
+        deleteNoteBtn.onclick = deleteNote;
+        noteTitleInput.oninput = updateNote;
+        noteContentInput.oninput = updateNote;
+
+        // Tự động lưu khi mất tiêu điểm (an toàn hơn trên mobile)
+        window.onblur = save;
+
+        // Khởi tạo
+        window.onload = () => {
+            renderNoteList();
+            selectNote(activeNoteId);
+        };
+    </script>
+</body>
+</html>
