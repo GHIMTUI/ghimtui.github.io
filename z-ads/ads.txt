@@ -143,7 +143,6 @@ vnpt.vn###mob-ol, .bnmb, [class*="banner-"]
 vnsky.vn##.carousel__viewport, .modal-popup
 voh.com.vn##.adstop, [class*="center-"]
 vov.vn###header-placeholder
-vtcnews.vn###appLink, .top-ad, [class^="aanetwork-"], a[rel="noopener noreferrer nofollow"], a[rel="noopener noreferrer nofollow"]>div, ins[data-zone="top_mobile_320x50"]
 
 youtube.com##.ytmCompanionSlotRendererHost, .ytmPaidContentOverlayHost, [class^="rich-section-"], [class^="ytmBackstagePost"]
 
