@@ -148,12 +148,3 @@ youtube.com##.ytmCompanionSlotRendererHost, .ytmPaidContentOverlayHost, [class^=
 
 zingmp3.vn##[class^="z-btn-open"]
 znews.vn##.z2-inpage-wrapper, [class^="Okv"], [class^="follow"], [id^="Okv"], [id^="ZingNews"], [id^="Zingnews"], [id^="follow"]
-
-||cdn.ak2yy.com
-||cdn.kanjp.com
-||doubleclick.net^
-||googleadservices.com^
-||kgvn.work
-||tiktok.com
-
-@@||gemini.google.com
