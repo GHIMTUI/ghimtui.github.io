@@ -46,6 +46,9 @@ http://live.fptplay53.net/fnxsd1/btv9_hls.smil/chunklist_b2500000.m3u8
 #EXTINF:-1 tvg-id="htv7hd" tvg-logo="http://ghimtui.github.io/logo/htv7.png", HTV7
 http://live.fptplay53.net/epzhd1/htv7hd_vhls.smil/chunklist_b5000000.m3u8
 
+#EXTINF:-1 tvg-id="htv9hd" tvg-logo="http://ghimtui.github.io/logo/htv9.png", HTV9
+http://live.fptplay53.net/epzhd1/htv9hd_vhls.smil/chunklist_b5000000.m3u8
+
 #EXTINF:-1 tvg-id="htvcplushd" tvg-logo="http://ghimtui.github.io/logo/htvcplus.png", C+
 http://live.fptplay53.net/epzhd1/htvcplus_vhls.smil/chunklist_b5000000.m3u8
 
@@ -57,9 +60,6 @@ http://live.fptplay53.net/epzhd1/htvcphunu_vhls.smil/chunklist_b5000000.m3u8
 
 #EXTINF:-1 tvg-id="htvcthuanviet" tvg-logo="http://ghimtui.github.io/logo/thuanviet.png", Thuần Việt
 http://live.fptplay53.net/epzhd1/htvcthuanviethd_vhls.smil/chunklist_b5000000.m3u8
-
-#EXTINF:-1 tvg-id="htv9hd" tvg-logo="http://ghimtui.github.io/logo/htv9.png", HTV9
-http://live.fptplay53.net/epzhd1/htv9hd_vhls.smil/chunklist_b5000000.m3u8
 
 #--- BẮC NINH (MB) ---
 
