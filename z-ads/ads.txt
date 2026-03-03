@@ -77,7 +77,6 @@ congthuong.vn##[class*="adsbygoogle"], [class*="inpage-ad"]
 daibieunhandan.vn##.c-banner, .is-custom-size, [class^="zone-"]
 danangtv.vn###ctl00_ctl00_Content_Trang_Chủ_Quảng_Cáo_Botttom, .Quang_cao_temp, .XemGiQuangCao, [class*="QuangCao_"]
 dantocmiennui.baotintuc.vn##[class^="ad-"], [class^="sda_"], [id^="sdaMobile_"]
-dantri.com.vn##[id*="sp-wrapper-hovering"], [id^="banner"], [id^="dat-"], [id^="dt"], [id^="dtad__"], [id^="mobile-"], [id^="tpm"]
 danviet.vn##.sidebar-countdown, .video-container, [class*="ads"], [id*="ads"], [id*="zone-"]
 dauthau.asia##.slider
 dienbientv.vn##.null, [class*="ad_"], [id*="ad_"]
