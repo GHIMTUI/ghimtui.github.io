@@ -4,6 +4,35 @@
 ! Title: STOP ADS
 ! Version: 1.0.0
 !===================
+baomoi.com##.slick-slide
+baomoi.com###slide-footer
+vtcnews.vn##.inpage-ad
+51degrees.com##.g-floating-banner
+
+dantri.com.vn##.dt-py-1,.adsbygoogle
+dantri.com.vn###mobile-top-page
+dantri.com.vn###sp-wrapper-hovering
+dantri.com.vn###tpmInpageContainer
+
+www.accuweather.com##.adhesion-header
+www.accuweather.com###middle,.adsbygoogle
+www.accuweather.com###bottom
+www.accuweather.com##.header-placeholder
+www.accuweather.com###top
+www.xemtivi.top###sp-wrapper-hovering-format
+www.dienmayxanh.com##.popup-banner
+viettelstore.vn###pop-sieusale
+viettelstore.vn###overlay2
+m.cafef.vn###admbackground
+viblo.asia##.fixed-bottom-bar
+viblo.asia##.el-dialog__wrapper
+viblo.asia##.v-modal
+xemtv.net##.adsbygoogle
+hd.xemtv.net##.quangcaos
+hd.xemtv.net##div[data-widget-id="1771082"]
+hd.xemtv.net##div[data-widget-id="1886588"]
+hd.xemtv.net##img[src="/banner/F168-Sidebar.gif"]
+hd.xemtv.net###med_rec_banner2
 
 1thegioi.vn##[class*="zone-"], [class^="c-banner-"], [class^="is-"]
 
