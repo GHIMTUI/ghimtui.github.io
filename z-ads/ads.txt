@@ -6,7 +6,10 @@
 !===================
 
 1thegioi.vn##[class*="zone-"], [class^="c-banner-"], [class^="is-"]
-
+baomoi.com##.is-show
+baomoi.com##.section-ad-native
+baomoi.com##.slick-slider
+baomoi.com###slide-footer
 24h.com.vn##.adsbygoogle, [class^="inpage_"], [id^="ADS_"], [id^="div-gpt-ad-"], [id^="div_inpage_"], [id^="sis_inpage"]
 2sao.vn###catfish, .adsbygoolge, .vadslogo, [class^="vmc_"], [id^="Mobile_"], [id^="adzone"], [id^="mashead-"], [id^="sp-wrapper-"]
 
