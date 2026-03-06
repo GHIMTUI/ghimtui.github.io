@@ -4,7 +4,18 @@
 ! Title: STOP ADS
 ! Version: 1.0.0
 !===================
-
+hungmobile.vn##[class^="popup-"]
+hungmobile.vn##.product_adv
+hungmobile.vn##.b-modal
+hungmobile.vn##.banner
+vietteltelecom.vn##[class^="banner-"]
+vietteltelecom.vn##.slick-current>div
+vietteltelecom.vn##.slick-track
+vietteltelecom.vn##.sc-jgPyTC
+shop.vietnamobile.com.vn##.img
+shop.vietnamobile.com.vn##.laberUrl
+vnreview.vn##.adsbygoogle
+vnreview.vn##.aanetwork-type-flyicon
 1thegioi.vn##[class*="zone-"], [class^="c-banner-"], [class^="is-"]
 
 24h.com.vn##.adsbygoogle, [class^="inpage_"], [id^="ADS_"], [id^="div-gpt-ad-"], [id^="div_inpage_"], [id^="sis_inpage"]
