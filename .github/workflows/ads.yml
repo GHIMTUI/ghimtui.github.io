@@ -3,7 +3,7 @@ name: Standardize ads.txt
 on:
   push:
     paths:
-      - 'z-ads/ads.txt'
+      - 'file/ads.txt'
   workflow_dispatch:
 
 jobs:
@@ -105,4 +105,4 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "Auto-format: Update Block count and Time with !"
-          file_pattern: 'z-ads/ads.txt'
+          file_pattern: 'file/ads.txt'
