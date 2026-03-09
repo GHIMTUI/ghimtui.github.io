@@ -8,7 +8,24 @@
 ! Title: STOP ADS
 ! Version: 1.0.0
 !===================
-
+www.tayninh.gov.vn##.UIAdvertisement_Default
+dongnai.gov.vn##.inner-home
+lamdong.gov.vn##.imageWithLink_f315b473
+khanhhoa.gov.vn###select-box
+gialai.gov.vn###module82
+gialai.gov.vn###module90
+gialai.gov.vn##.widget-space
+gialai.gov.vn##.full-width
+quangngai.gov.vn##.links-item
+quangngai.gov.vn##.full-width
+quangngai.gov.vn###module32
+quangngai.gov.vn##.border-home-vach
+quangngai.gov.vn###module73
+quangngai.gov.vn###module74
+quangngai.gov.vn###module11
+danang.gov.vn##.ml-lg-3
+danang.gov.vn##.mt-sm-0
+hue.gov.vn##.col-md-12
 1thegioi.vn##[class*="zone-"], [class^="c-banner-"], [class^="is-"]
 
 24h.com.vn##.adsbygoogle, [class^="inpage_"], [id^="ADS_"], [id^="div-gpt-ad-"], [id^="div_inpage_"], [id^="sis_inpage"]
