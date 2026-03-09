@@ -21,7 +21,7 @@ jobs:
           from collections import defaultdict
           from datetime import datetime, timedelta
 
-          file_path = Path("z-ads/ads.txt")
+          file_path = Path("file/ads.txt")
           if not file_path.exists():
               print("File not found, skipping...")
               exit(0)
