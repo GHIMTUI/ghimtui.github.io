@@ -19,30 +19,41 @@ jobs:
           import re
           from pathlib import Path
           from collections import defaultdict
-          from datetime import datetime, timedelta
+          from datetime import datetime
 
           file_path = Path("file/ads.txt")
           if not file_path.exists():
               print("File not found, skipping...")
               exit(0)
 
-          bad_pfx = r'\b(www\.|m\.|dev\.|staging\.|api\.)'
+          bad_pfx = r'\b(www\.|m\.|dev\.|staging\.|api\.|s\.)'
+          exclude_keywords = ["Block:", "Time:", "#tổng số", "#cập nhật"]
           
+          # Thiết lập Header cố định
+          current_time = datetime.now().strftime("%d %b %Y %H:%M")
+          formatted_headers = [
+              "[Adblock Plus 2.0]",
+              "! Title: STOP ADS",
+              "! Description: chặn quảng cáo",
+              f"! Updated: {current_time}",
+              "! Version: 1.0.0"
+          ]
+
           lines = file_path.read_text(encoding='utf-8').splitlines()
-          headers, grouped_rules, other_rules = [], defaultdict(set), set()
+          grouped_rules, other_rules = defaultdict(set), set()
 
           for line in map(str.strip, lines):
               if not line: continue
               
-              # Loại bỏ các dòng stats cũ và tags không mong muốn
-              exclude_list = ["Block:", "Time:", "#tổng số", "#cập nhật"]
-              if any(x in line for x in exclude_list):
+              # Loại bỏ các dòng chứa từ khóa cũ
+              if any(kw in line for kw in exclude_keywords):
                   continue
               
+              # Bỏ qua các header cũ trong file để thay bằng header mới
               if line.startswith(('[', '#', '!')):
-                  headers.append(line)
                   continue
 
+              # Xử lý Rules
               match = re.match(r'^([^#]+)(##|#@#)(.+)$', line)
               if match:
                   domains_str, separator, selector_str = match.groups()
@@ -55,63 +66,18 @@ jobs:
                   record = re.sub(r',\s*' + bad_pfx, ', ', record)
                   other_rules.add(record)
 
+          # Gộp kết quả
           formatted_grouped = [
               f"{doms}{sep}{', '.join(sorted(sels))}" 
               for (doms, sep), sels in grouped_rules.items()
           ]
           
-          def sort_logic(s):
-              s_low = s.lower()
-              if s_low.startswith('@@||'): return '{~~}' + s_low
-              if s_low.startswith('||'): return '{~}' + s_low
-              return s_low
-
-          all_ads = sorted(formatted_grouped + list(other_rules), key=sort_logic)
-
-          # --- TẠO THỐNG KÊ MỚI ---
-          count = len(all_ads)
-          now_vn = datetime.utcnow() + timedelta(hours=7)
-          day = now_vn.strftime("%d").lstrip('0')
-          time_formatted = f"{day} {now_vn.strftime('%b %Y %H:%M')}"
-          
-          stats = [
-              f"!Block: {count} page",
-              f"!Time: {time_formatted}"
-          ]
-
-          # Chèn stats vào sau dòng [Adblock Plus 2.0]
-          final_headers = []
-          stats_inserted = False
-          for h in headers:
-              final_headers.append(h)
-              if "[Adblock Plus 2.0]" in h and not stats_inserted:
-                  final_headers.extend(stats)
-                  stats_inserted = True
-          
-          # Nếu không tìm thấy dòng [Adblock Plus 2.0] thì chèn vào đầu headers
-          if not stats_inserted:
-              final_headers = stats + final_headers
-
-          organized_ads, last_group = [], None
-          for line in all_ads:
-              if line.startswith('@@||'):
-                  current_group = 'EXCLUDE'
-              elif line.startswith('||'):
-                  current_group = 'BLOCK'
-              else:
-                  current_group = line[0].lower()
-
-              if last_group is not None and last_group != current_group:
-                  organized_ads.append('')
-              
-              organized_ads.append(line)
-              last_group = current_group
-
-          final_content = final_headers + ([''] if organized_ads else []) + organized_ads
-          file_path.write_text('\n'.join(final_content).strip() + '\n', encoding='utf-8')
+          # Ghi file với Header mới + Dữ liệu đã xử lý
+          final_content = "\n".join(formatted_headers + [""] + sorted(formatted_grouped) + sorted(other_rules))
+          file_path.write_text(final_content, encoding='utf-8')
 
       - name: Commit and Push changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "Auto-format: Move Block/Time below header and remove tags"
+          commit_message: "Auto-format ads.txt: Standardize headers and cleanup"
           file_pattern: 'file/ads.txt'
