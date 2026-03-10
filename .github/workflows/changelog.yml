@@ -1,4 +1,5 @@
 name: Generate Changelog
+
 on:
   push:
     branches: [ main ]
@@ -6,15 +7,26 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    # Cấp quyền write để bot có thể push file thay đổi lên repo
+    permissions:
+      contents: write
+      
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout code
+        uses: actions/checkout@v4
         with:
+          # Cần fetch-depth: 0 để action lấy được toàn bộ lịch sử commit
+          # Nếu không có cái này, action sẽ không thấy các commit cũ để tạo changelog
+          fetch-depth: 0
           token: ${{ secrets.GITHUB_TOKEN }}
       
-      # Sử dụng một action tạo changelog, ví dụ:
       - name: Create Changelog
         uses: TriPSs/conventional-changelog-action@v3
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           git-user-name: "github-actions[bot]"
-          git-user-email: "github-actions[bot]@users.noreply.github.com" 
+          git-user-email: "github-actions[bot]@users.noreply.github.com"
+          # Cấu hình để tự động push code sau khi ghi file
+          git-push: true
+          # Đảm bảo file được tạo đúng tên
+          output-file: "CHANGELOG.md" 
