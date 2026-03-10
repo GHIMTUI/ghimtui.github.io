@@ -37,7 +37,7 @@ jobs:
               "! Description: Chặn quảng cáo",
               f"! Updated: {current_time}",
               "! Version: 1.0.0",
-              "! ====================
+              "! ====================",
               "" # Dòng trống sau header
           ]
 
