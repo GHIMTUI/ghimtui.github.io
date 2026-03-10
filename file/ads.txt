@@ -4,7 +4,17 @@
 ! Updated: 10 Mar 2026 15:04
 ! Version: 1.0.0
 ! ====================
-
+hungyen.gov.vn##.full-width
+www.quangninh.gov.vn##.col-sm-12
+haiphong.gov.vn##.UIAdvertisement_Default
+hanoi.gov.vn##.UIAdvertisement_Default
+bacninh.gov.vn##.adv-containers
+thainguyen.gov.vn##.UIAdvertisement_Default
+sonla.gov.vn##.UIMultiFunction_Default
+laocai.gov.vn##.UIMultiFunction_Default
+langson.gov.vn##.boun-media
+langson.gov.vn##.col-sm-4
+www.tuyenquang.gov.vn##.h-auto
 1thegioi.vn##[class*="zone-"], [class^="c-banner-"], [class^="is-"]
 
 24h.com.vn##.adsbygoogle, [class^="inpage_"], [id^="ADS_"], [id^="div-gpt-ad-"], [id^="div_inpage_"], [id^="sis_inpage"]
