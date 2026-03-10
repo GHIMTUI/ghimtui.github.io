@@ -3,11 +3,13 @@ name: Generate Changelog
 on:
   push:
     branches: [ main ]
+    # Ngăn chặn action chạy khi commit có chứa [skip ci] để tránh vòng lặp
+    paths-ignore:
+      - 'CHANGELOG.md'
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    # Cấp quyền write để bot có thể push file thay đổi lên repo
     permissions:
       contents: write
       
@@ -15,9 +17,8 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
         with:
-          # Cần fetch-depth: 0 để action lấy được toàn bộ lịch sử commit
-          # Nếu không có cái này, action sẽ không thấy các commit cũ để tạo changelog
           fetch-depth: 0
+          # Sử dụng GITHUB_TOKEN mặc định
           token: ${{ secrets.GITHUB_TOKEN }}
       
       - name: Create Changelog
@@ -26,7 +27,9 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           git-user-name: "github-actions[bot]"
           git-user-email: "github-actions[bot]@users.noreply.github.com"
-          # Cấu hình để tự động push code sau khi ghi file
           git-push: true
-          # Đảm bảo file được tạo đúng tên
-          output-file: "CHANGELOG.md" 
+          output-file: "CHANGELOG.md"
+          # Tùy chọn: Nhảy tag phiên bản tự động
+          skip-on-empty: false 
+          # Giúp tránh vòng lặp bằng cách thêm tag skip ci vào commit message của bot
+          git-message: 'chore(release): {version} [skip ci]'
