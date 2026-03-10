@@ -1,20 +1,10 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Description: Chặn quảng cáo
-! Updated: 10 Mar 2026 15:04
+! Updated: 10 Mar 2026 16:52
 ! Version: 1.0.0
 ! ====================
-hungyen.gov.vn##.full-width
-www.quangninh.gov.vn##.col-sm-12
-haiphong.gov.vn##.UIAdvertisement_Default
-hanoi.gov.vn##.UIAdvertisement_Default
-bacninh.gov.vn##.adv-containers
-thainguyen.gov.vn##.UIAdvertisement_Default
-sonla.gov.vn##.UIMultiFunction_Default
-laocai.gov.vn##.UIMultiFunction_Default
-langson.gov.vn##.boun-media
-langson.gov.vn##.col-sm-4
-www.tuyenquang.gov.vn##.h-auto
+
 1thegioi.vn##[class*="zone-"], [class^="c-banner-"], [class^="is-"]
 
 24h.com.vn##.adsbygoogle, [class^="inpage_"], [id^="ADS_"], [id^="div-gpt-ad-"], [id^="div_inpage_"], [id^="sis_inpage"]
@@ -31,6 +21,7 @@ apkmirror.com###bottom-slider, .adsbygoogle, .adslot, .advertisement-text, [clas
 apkpure.com##[class^="ad-"], [class^="js-"]
 
 baca-bank.vn###slider
+bacninh.gov.vn##.adv-containers
 banduong.vn##.active
 baobacninhtv.vn##[class*="group-30-"], [class*="group-4-"]
 baocamau.vn##[class^="box-"], [class^="box_"], [class^="padding-"], [id^="revive-"], [id^="slick-"]
@@ -117,6 +108,8 @@ gialai.gov.vn###module82, #module90, .full-width, .widget-space
 giaothong.tapchixaydung.vn##[class*="qc"]
 gmobile.vn##.slide
 
+haiphong.gov.vn##.UIAdvertisement_Default
+hanoi.gov.vn##.UIAdvertisement_Default
 hanoimoi.vn##[class^="ads_"], [class^="c-banner-"], [class^="is-"], [id^="zone-"]
 hanoionline.vn##.banner
 hd.xemtv.net###med_rec_banner2, .quangcaos, div[data-widget-id="1771082"], div[data-widget-id="1886588"], img[src="/banner/F168-Sidebar.gif"]
@@ -127,6 +120,7 @@ hue.gov.vn##.col-md-12
 huengaynay.vn##[class^="adv"], [class^="huetv-"], img[src="https://file.huengaynay.vn/data/0/images/2026/01/19/upload_3836/bau-cu.gif"], img[src="https://file.huengaynay.vn/data/0/images/2026/02/27/upload_3836/dh-dang-cac-cap.gif"]
 huetv.com.vn##.part31>p, [class*="banner"]
 hungmobile.vn##.b-modal, .banner, .product_adv, [class^="popup-"]
+hungyen.gov.vn##.full-width
 hungyentv.vn##[id^="ads_"], [id^="advertise_"]
 
 kenh14.vn###admFullTop, #ban-top-site, .adv, [id^="adm-slot"], [id^="adm_zone"], [id^="admbackground"], [id^="zone"]
@@ -143,7 +137,9 @@ kinhtenongthon.vn###col_301, #firt, .row, [class*="owl"]
 kqxs.vn##.adsbygoogle, [class^="ads-"]
 
 lamdong.gov.vn##.imageWithLink_f315b473
+langson.gov.vn##.boun-media, .col-sm-4
 langsontv.vn###socials, .navbar-right>ul, [class^="box_"], [id^="advertise_"]
+laocai.gov.vn##.UIMultiFunction_Default
 laodong.vn###main-footer-fix-bottom, .notification-header__msg, [id^="sp-"]
 laodongdoanthe.vn##[class*="ads"], [class*="banner"a]
 lapphap.vn##.section>a
@@ -175,6 +171,7 @@ plo.vn##[id^="Mobile"], [id^="adsMobile"], [id^="bn-zone"], [id^="zone"], div[st
 qdnd.vn##[class^="-banner"], [class^="banner"], [class^="banner-"], [class^="cate-"]
 qpvn.vn###top-bar
 quangngai.gov.vn###module11, #module32, #module73, #module74, .border-home-vach, .full-width, .links-item
+quangninh.gov.vn##.col-sm-12
 quantrimang.com##.sidebar, [class^="ads"], [id^="adindex"], [id^="adsposttop"], [id^="adunderarticle"], [id^="articleads"], [id^="mrc"]
 quocphongthudo.vn###module21, #module24, .full-width
 
@@ -188,6 +185,7 @@ shop.vietnamobile.com.vn##.img, .laberUrl
 sinhthainongnghiep.net.vn##[class^="qc_"]
 soha.vn##[class^="div-"], [id^="adm-"], [id^="admFull"], [id^="ban-"], [id^="zone-"]
 sohuutritue.net.vn##.e, [id^="ads_"], [id^="zone-"]
+sonla.gov.vn##.UIMultiFunction_Default
 sonlatv.vn##.col-md-12, [class*="ads"], [id*="ads"]
 suckhoecongdongonline.vn##.item-img, .wp-banner-top
 suckhoedoisong.vn###ub-anchor-adcontainer, .adsbygoogle, [class*="ads"], [id*="sp-wrapper-hovering"]
@@ -205,6 +203,7 @@ tapchixaydung.vn##.mt-4
 tayninh.gov.vn##.UIAdvertisement_Default
 techlade.vn##[class*="banner"]
 techz.vn###sp-wrapper-hovering, .header_ads
+thainguyen.gov.vn##.UIAdvertisement_Default
 thanhnien.vn##.asd-headt, [id^="sp"], [id^="zone"]
 thdt.vn##.blockBanner, [class*="col-md-"], [class^="slick-"]
 thegioididong.com##.popup-banner
@@ -233,6 +232,7 @@ tintuconline.com.vn###adzone39, .adsbygoolge, .vadslogo, [class^="trv-"], [class
 truyenhinhthanhhoa.vn##[class^="ad-"], [id^="banner-"], [id^="placement-"], [id^="share-"], [id^="slot-"], [id^="zone-"]
 ttbc-hcm.gov.vn##[class^="abs-"], [class^="c-banner-"], [class^="zone-"]
 tuoitre.vn###LeaderBoardTop, #admbackground, #pvoucher-live-container, [id^="sp_format-hovering"], [id^="zone"]
+tuyenquang.gov.vn##.h-auto
 tv360.vn###ads-player-base-wrapper, .Toastify, .css-1jzjo52, .css-1u6gwec, .css-1xdipk, .css-csxyfn, .text-ellipsis
 tvbox.one##.adsbygoogle, .entry-img-300, .homeadv, .homeadv>span
 
