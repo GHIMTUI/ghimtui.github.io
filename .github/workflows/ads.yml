@@ -26,7 +26,6 @@ jobs:
               print("File not found, skipping...")
               exit(0)
 
-          # Regex tìm các prefix không mong muốn
           bad_pfx = r'\b(www\.|m\.|dev\.|staging\.|api\.)'
           
           lines = file_path.read_text(encoding='utf-8').splitlines()
@@ -35,20 +34,15 @@ jobs:
           for line in map(str.strip, lines):
               if not line: continue
               
-              # Loại bỏ dòng thống kê cũ có chứa Block: hoặc Time:
-              if any(x in line for x in ["Block:", "Time:"]):
+              # Loại bỏ các dòng stats cũ và tags không mong muốn
+              exclude_list = ["Block:", "Time:", "#tổng số", "#cập nhật"]
+              if any(x in line for x in exclude_list):
                   continue
               
-              # Loại bỏ các dòng comment cụ thể: #tổng số và #cập nhật
-              if any(tag in line for tag in ["#tổng số", "#cập nhật"]):
-                  continue
-
-              # Xử lý Header (Bắt đầu bằng [, #, !)
               if line.startswith(('[', '#', '!')):
                   headers.append(line)
                   continue
 
-              # Xử lý Cosmetic Filter (có ## hoặc #@#)
               match = re.match(r'^([^#]+)(##|#@#)(.+)$', line)
               if match:
                   domains_str, separator, selector_str = match.groups()
@@ -57,12 +51,10 @@ jobs:
                   new_selectors = {s.strip() for s in selector_str.split(',')}
                   grouped_rules[(domain_key, separator)].update(new_selectors)
               else:
-                  # Xử lý các quy tắc chặn mạng thông thường
                   record = re.sub(bad_pfx, '', line)
                   record = re.sub(r',\s*' + bad_pfx, ', ', record)
                   other_rules.add(record)
 
-          # Gộp các group lại thành list chuỗi
           formatted_grouped = [
               f"{doms}{sep}{', '.join(sorted(sels))}" 
               for (doms, sep), sels in grouped_rules.items()
@@ -78,7 +70,6 @@ jobs:
 
           # --- TẠO THỐNG KÊ MỚI ---
           count = len(all_ads)
-          # UTC+7 cho Việt Nam
           now_vn = datetime.utcnow() + timedelta(hours=7)
           day = now_vn.strftime("%d").lstrip('0')
           time_formatted = f"{day} {now_vn.strftime('%b %Y %H:%M')}"
@@ -87,6 +78,19 @@ jobs:
               f"!Block: {count} page",
               f"!Time: {time_formatted}"
           ]
+
+          # Chèn stats vào sau dòng [Adblock Plus 2.0]
+          final_headers = []
+          stats_inserted = False
+          for h in headers:
+              final_headers.append(h)
+              if "[Adblock Plus 2.0]" in h and not stats_inserted:
+                  final_headers.extend(stats)
+                  stats_inserted = True
+          
+          # Nếu không tìm thấy dòng [Adblock Plus 2.0] thì chèn vào đầu headers
+          if not stats_inserted:
+              final_headers = stats + final_headers
 
           organized_ads, last_group = [], None
           for line in all_ads:
@@ -103,13 +107,11 @@ jobs:
               organized_ads.append(line)
               last_group = current_group
 
-          # Hợp nhất: Thống kê -> Header -> Body
-          final_content = stats + ([''] if headers else []) + headers + ([''] if organized_ads else []) + organized_ads
-          
+          final_content = final_headers + ([''] if organized_ads else []) + organized_ads
           file_path.write_text('\n'.join(final_content).strip() + '\n', encoding='utf-8')
 
       - name: Commit and Push changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "Auto-format: Remove redundant hashtags and update stats"
+          commit_message: "Auto-format: Move Block/Time below header and remove tags"
           file_pattern: 'file/ads.txt'
