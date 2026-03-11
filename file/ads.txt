@@ -4,6 +4,8 @@
 ! Updated: 11 Mar 2026 05:22
 ! Version: 1.0.0
 ! ====================
+thuehaiquan.tapchikinhtetaichinh.vn##.box-qc
+nghiencuu.tapchikinhtetaichinh.vn##[id^="qc-"]
 xemtv.us##.float-ck
 xemtv.us##div[data-widget-id="1433589"]
 amp.laodong.vn##.i-amphtml-sticky-ad-layout, .adsbygoogle
