@@ -10,10 +10,10 @@ jobs:
   format-ads:
     runs-on: ubuntu-latest
     permissions:
-      contents: write # Cấp quyền ghi để push code
+      contents: write
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: uses/checkout@v4
 
       - name: Process ads.txt
         shell: python
@@ -21,7 +21,7 @@ jobs:
           import re
           from pathlib import Path
           from collections import defaultdict
-          from datetime import datetime
+          from datetime import datetime, timedelta
 
           file_path = Path("file/ads.txt")
           if not file_path.exists():
@@ -29,23 +29,17 @@ jobs:
               exit(0)
 
           bad_pfx = r'\b(www\.|m\.|dev\.|staging\.|amp\.|api\.|s\.)'
-          exclude_keywords = ["Block:", "Time:", "#tổng số", "#cập nhật"]
+          exclude_keywords = ["Block:", "Time:", "#tổng số", "#cập nhật", "Total rules:"]
           
-          current_time = datetime.now().strftime("%d %b %Y %H:%M")
-          final_output = [
-              "[Adblock Plus 2.0]",
-              "! Title: STOP ADS",
-              "! Description: Chặn quảng cáo",
-              f"! Updated: {current_time}",
-              "! Version: 1.0.0",
-              "! ====================",
-              "" 
-          ]
+          # 1. Xử lý thời gian GMT+7
+          vn_time = datetime.utcnow() + timedelta(hours=7)
+          current_time_str = vn_time.strftime("%d %b %Y %H:%M")
 
           lines = file_path.read_text(encoding='utf-8').splitlines()
           grouped_rules = defaultdict(set)
           other_rules = set()
 
+          # 2. Phân loại dữ liệu
           for line in map(str.strip, lines):
               if not line or any(kw in line for kw in exclude_keywords) or line.startswith(('[', '#', '!')):
                   continue
@@ -62,26 +56,41 @@ jobs:
                   record = re.sub(r',\s*' + bad_pfx, ', ', record)
                   other_rules.add(record)
 
-          # Gom nhóm kết quả
-          for (doms, sep), selectors in sorted(grouped_rules.items()):
-              final_output.append(f"{doms}{sep}{','.join(sorted(selectors))}")
-          
-          final_output.extend(sorted(other_rules))
+          # 3. Tổng hợp và Sắp xếp
+          all_cleaned_rules = []
+          for (doms, sep), selectors in grouped_rules.items():
+              all_cleaned_rules.append(f"{doms}{sep}{','.join(sorted(selectors))}")
+          all_cleaned_rules.extend(list(other_rules))
+          all_cleaned_rules.sort()
 
-          # Ghi đè lại file ads.txt
-          file_path.write_text("\n".join(final_output), encoding='utf-8')
+          # 4. Chia nhóm 0-9, a-z bằng dòng trống
+          body = []
+          last_char = None
+          for rule in all_cleaned_rules:
+              if not rule: continue
+              current_char = rule[0].lower()
+              if last_char is not None and current_char != last_char:
+                  body.append("") 
+              body.append(rule)
+              last_char = current_char
+
+          # 5. Tạo Header với thống kê
+          header = [
+              "[Adblock Plus 2.0]",
+              "! Title: STOP ADS",
+              "! Description: Chặn quảng cáo",
+              f"! Updated: {current_time_str} (GMT+7)",
+              f"! Total rules: {len(all_cleaned_rules)}",
+              "! Version: 1.0.0",
+              "! ====================",
+              ""
+          ]
+
+          file_path.write_text("\n".join(header + body), encoding='utf-8')
 
       - name: Commit and Push changes
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git add file/ads.txt
-          git commit -m "chore: auto-format and refresh ads.txt [skip ci]" || echo "No changes to commit"
-          git push
-
-      # Tùy chọn: Xóa cache Cloudflare (nếu bạn có dùng)
-      # - name: Purge Cloudflare Cache
-      #   uses: jakejarvis/cloudflare-purge-action@master
-      #   env:
-      #     CLOUDFLARE_ZONE: ${{ secrets.CLOUDFLARE_ZONE }}
-      #     CLOUDFLARE_TOKEN: ${{ secrets.CLOUDFLARE_TOKEN }}
+          git diff --quiet && git diff --staged --quiet || (git commit -m "chore: update ads.txt (GMT+7 & grouping) [skip ci]" && git push)
