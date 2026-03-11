@@ -10,7 +10,7 @@ jobs:
   format-ads:
     runs-on: ubuntu-latest
     permissions:
-      contents: write # Cấp quyền ghi để push code
+      contents: write
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -28,24 +28,24 @@ jobs:
               print("File not found, skipping...")
               exit(0)
 
-          bad_pfx = r'\b(www\.|m\.|dev\.|staging\.|amp\.|api\.|s\.)'
-          exclude_keywords = ["Block:", "Time:", "#tổng số", "#cập nhật"]
+          # 1. Đọc nội dung cũ và lấy Version hiện tại
+          old_content = file_path.read_text(encoding='utf-8')
+          version_match = re.search(r'! Version:\s*(\d+)\.(\d+)\.(\d+)', old_content)
           
-          # Cấu hình múi giờ GMT+7
+          if version_match:
+              major, minor, patch = map(int, version_match.groups())
+              new_version = f"{major}.{minor}.{patch + 1}"
+          else:
+              new_version = "1.0.0"
+
+          # 2. Cấu hình thời gian và lọc dữ liệu
           tz_hcm = timezone(timedelta(hours=7))
           current_time = datetime.now(tz_hcm).strftime("%d %b %Y %H:%M")
           
-          final_output = [
-              "[Adblock Plus 2.0]",
-              "! Title: STOP ADS",
-              "! Description: Chặn quảng cáo",
-              f"! Updated: {current_time} (GMT+7)",
-              "! Version: 1.0.0",
-              "! ====================",
-              "" 
-          ]
-
-          lines = file_path.read_text(encoding='utf-8').splitlines()
+          bad_pfx = r'\b(www\.|m\.|dev\.|staging\.|amp\.|api\.|s\.)'
+          exclude_keywords = ["Block:", "Time:", "#tổng số", "#cập nhật"]
+          
+          lines = old_content.splitlines()
           grouped_rules = defaultdict(set)
           other_rules = set()
 
@@ -65,13 +65,37 @@ jobs:
                   record = re.sub(r',\s*' + bad_pfx, ', ', record)
                   other_rules.add(record)
 
-          # Gom nhóm kết quả
-          for (doms, sep), selectors in sorted(grouped_rules.items()):
-              final_output.append(f"{doms}{sep}{','.join(sorted(selectors))}")
-          
-          final_output.extend(sorted(other_rules))
+          # 3. Tổng hợp danh sách đã sắp xếp
+          all_final_rules = []
+          for (doms, sep), selectors in grouped_rules.items():
+              all_final_rules.append(f"{doms}{sep}{','.join(sorted(selectors))}")
+          all_final_rules.extend(list(other_rules))
+          all_final_rules.sort()
 
-          # Ghi đè lại file ads.txt
+          # 4. Xây dựng nội dung file với phân nhóm (A-Z, 0-9)
+          final_output = [
+              "[Adblock Plus 2.0]",
+              "! Title: STOP ADS",
+              "! Description: Chặn quảng cáo",
+              f"! Updated: {current_time} (GMT+7)",
+              f"! Version: {new_version}",
+              "! ====================",
+              "" 
+          ]
+
+          last_char = None
+          for rule in all_final_rules:
+              first_char = rule[0].lower()
+              if not first_char.isalnum(): first_char = '#' # Cho các ký tự đặc biệt
+              
+              # Nếu chuyển nhóm (ví dụ từ A sang B, hoặc số sang chữ), thêm dòng trống
+              if last_char is not None and first_char != last_char:
+                  final_output.append("")
+              
+              final_output.append(rule)
+              last_char = first_char
+
+          # 5. Ghi file
           file_path.write_text("\n".join(final_output), encoding='utf-8')
 
       - name: Commit and Push changes
@@ -79,5 +103,5 @@ jobs:
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git add file/ads.txt
-          git commit -m "chore: auto-format and refresh ads.txt [skip ci]" || echo "No changes to commit"
+          git commit -m "chore: update ads.txt to version $(grep '! Version:' file/ads.txt | cut -d' ' -f3) [skip ci]" || echo "No changes to commit"
           git push
