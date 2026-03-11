@@ -77,9 +77,9 @@ jobs:
               "[Adblock Plus 2.0]",
               "! Title: STOP ADS",
               "! Description: Chặn quảng cáo",
-              f"! Updated: {current_time} (GMT+7)",
+              f"! Updated: {current_time}",
               f"! Version: {new_version}",
-              "! ====================",
+              "! ==================",
               "" 
           ]
 
