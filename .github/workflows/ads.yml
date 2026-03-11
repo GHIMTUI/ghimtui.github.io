@@ -26,7 +26,7 @@ jobs:
               print("File not found, skipping...")
               exit(0)
 
-          bad_pfx = r'\b(www\.|m\.|dev\.|staging\.|api\.|s\.)'
+          bad_pfx = r'\b(www\.|m\.|dev\.|staging\.|amp\.|api\.|s\.)'
           exclude_keywords = ["Block:", "Time:", "#tổng số", "#cập nhật"]
           
           # 1. Thiết lập Header cố định
