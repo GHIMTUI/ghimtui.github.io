@@ -4,6 +4,8 @@
 ! Updated: 11 Mar 2026 13:14 (GMT+7)
 ! Version: 1.0.0
 ! ====================
+thelinhstore.com##.top-banner
+thelinhstore.com##.collection_banner
 
 1thegioi.vn##[class*="zone-"],[class^="c-banner-"],[class^="is-"]
 24h.com.vn##.adsbygoogle,[class^="inpage_"],[id^="ADS_"],[id^="div-gpt-ad-"],[id^="div_inpage_"],[id^="sis_inpage"]
