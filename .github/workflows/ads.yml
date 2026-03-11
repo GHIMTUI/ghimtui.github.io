@@ -9,6 +9,8 @@ on:
 jobs:
   format-ads:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write # Cấp quyền ghi để push code
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -29,7 +31,6 @@ jobs:
           bad_pfx = r'\b(www\.|m\.|dev\.|staging\.|amp\.|api\.|s\.)'
           exclude_keywords = ["Block:", "Time:", "#tổng số", "#cập nhật"]
           
-          # 1. Thiết lập Header cố định
           current_time = datetime.now().strftime("%d %b %Y %H:%M")
           final_output = [
               "[Adblock Plus 2.0]",
@@ -38,14 +39,13 @@ jobs:
               f"! Updated: {current_time}",
               "! Version: 1.0.0",
               "! ====================",
-              "" # Dòng trống sau header
+              "" 
           ]
 
           lines = file_path.read_text(encoding='utf-8').splitlines()
           grouped_rules = defaultdict(set)
           other_rules = set()
 
-          # 2. Phân loại và làm sạch dữ liệu
           for line in map(str.strip, lines):
               if not line or any(kw in line for kw in exclude_keywords) or line.startswith(('[', '#', '!')):
                   continue
@@ -62,28 +62,26 @@ jobs:
                   record = re.sub(r',\s*' + bad_pfx, ', ', record)
                   other_rules.add(record)
 
-          # 3. Gộp tất cả rules lại và sắp xếp
-          all_final_rules = []
-          for (doms, sep), sels in grouped_rules.items():
-              all_final_rules.append(f"{doms}{sep}{', '.join(sorted(sels))}")
-          all_final_rules.extend(list(other_rules))
-          all_final_rules.sort()
+          # Gom nhóm kết quả
+          for (doms, sep), selectors in sorted(grouped_rules.items()):
+              final_output.append(f"{doms}{sep}{','.join(sorted(selectors))}")
+          
+          final_output.extend(sorted(other_rules))
 
-          # 4. Phân nhóm theo ký tự đầu (0-9, a-z) và thêm dòng trống
-          if all_final_rules:
-              current_char = all_final_rules[0][0].lower()
-              for rule in all_final_rules:
-                  first_char = rule[0].lower()
-                  if first_char != current_char:
-                      final_output.append("") # Xuống dòng khi đổi nhóm ký tự
-                      current_char = first_char
-                  final_output.append(rule)
-
-          # 5. Ghi file
+          # Ghi đè lại file ads.txt
           file_path.write_text("\n".join(final_output), encoding='utf-8')
 
       - name: Commit and Push changes
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: "Auto-format ads.txt: Grouped by 0-9, a-z"
-          file_pattern: 'file/ads.txt'
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add file/ads.txt
+          git commit -m "chore: auto-format and refresh ads.txt [skip ci]" || echo "No changes to commit"
+          git push
+
+      # Tùy chọn: Xóa cache Cloudflare (nếu bạn có dùng)
+      # - name: Purge Cloudflare Cache
+      #   uses: jakejarvis/cloudflare-purge-action@master
+      #   env:
+      #     CLOUDFLARE_ZONE: ${{ secrets.CLOUDFLARE_ZONE }}
+      #     CLOUDFLARE_TOKEN: ${{ secrets.CLOUDFLARE_TOKEN }}
