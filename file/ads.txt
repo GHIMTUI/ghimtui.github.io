@@ -4,7 +4,61 @@
 ! Updated: 10 Mar 2026 16:52
 ! Version: 1.0.0
 ! ====================
+xemtv.us##.float-ck
+xemtv.us##div[data-widget-id="1433589"]
+amp.laodong.vn##.i-amphtml-sticky-ad-layout, .adsbygoogle
+laodong.vn###admbackground-adm
+xemtv.us##.close-ad-btn
+xemtv.us###med_rec_banner2
+www.vietnamplus.vn###sp-wrapper-hovering-format
+vietnammoi.vn##.adsbygoogle
+vietnammoi.vn###admFullTop
+vietnammoi.vn##[id^="adm_"]
+vietnammoi.vn###ban-top-site
+bnews.vn##.adsbygoogle
+bnews.vn##[id^="divAdmicro_"]
+bnews.vn##.aanetwork-flyicon-box
 
+netlife.vn##.is-custom-size
+viettimes.vn###sp-wrapper-hovering-format
+cafeland.vn##.topFullBannerMobileSize
+cafeland.vn###bannerCarouselContentADS
+cafeland.vn###bannerVideoContentADS
+nguoiquansat.vn##.c-banner
+nguoiquansat.vn##.c-banner-item__inner
+m.autopro.com.vn###admbackground, .adsbygoogle, #ban-size-top, #admFullTop, [id^="zone-"], [id^="adm_"]
+giadinh.suckhoedoisong.vn###admBannerPopup
+giadinh.suckhoedoisong.vn##[id^="zone-"],.adsbygoogle
+giadinh.suckhoedoisong.vn###admwrapper
+baonghean.vn##.aanetwork-ads-box
+vn-z.vn##.u-bottomFixer
+www.letemsvetemapplem.eu##.headerbanner-wrapper,.adsbygoogle
+www.letemsvetemapplem.eu###ad_native_single_popular
+www.letemsvetemapplem.eu###ad_native_hp_loop_mob2
+www.mixvale.com.br##.adsbygoogle
+www.mixvale.com.br##div[style="width: 100%; min-height: 280px; display: flex; justify-content: center; align-items: center; margin: 20px 0; background-color: transparent;"]
+mensfolio.vn##.header-banner
+docnhanh.vn##.sp-pto-mb-div
+docnhanh.vn##[id^="ads-widget-"]
+docnhanh.vn##.lg:mt-1
+docnhanh.vn##.iv1, .adsbygoogle
+docnhanh.vn###admFullTop
+docnhanh.vn##[id^="adm_"]
+docnhanh.vn###ban-top-site
+docnhanh.vn##.font-size-font-scale-md
+docnhanh.vn##.top
+docnhanh.vn###admbackground_1
+docnhanh.vn##[id^="zone-"]
+docnhanh.vn##[id^="ads-"]
+motthegioi.vn##.adsbygoogle
+chungta.vn##.clearfix
+gocnhinphaply.nguoiduatin.vn###sp-wrapper-hovering
+gocnhinphaply.nguoiduatin.vn##.no-margin-ads, .adsbygoogle
+m.afamily.vn##.adsbygoogle
+vietstock.vn##.ads-top-mobile
+vietstock.vn###admbackground
+vietnam.vnanet.vn##.uk-margin-small-top
+happyvietnam.vnanet.vn##.background-image
 1thegioi.vn##[class*="zone-"], [class^="c-banner-"], [class^="is-"]
 
 24h.com.vn##.adsbygoogle, [class^="inpage_"], [id^="ADS_"], [id^="div-gpt-ad-"], [id^="div_inpage_"], [id^="sis_inpage"]
