@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ads.txt Fullscreen Editor</title>
+    <style>
+        /* Tối ưu hóa toàn màn hình */
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden; /* Chống cuộn trang ngoài */
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background-color: #1e1e1e; /* Màu nền tối cho chuyên nghiệp */
+        }
+
+        .editor-container {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        /* Thanh công cụ phía trên */
+        .toolbar {
+            background-color: #2d2d2d;
+            color: #ccc;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #3c3c3c;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .info-path {
+            font-family: monospace;
+            font-size: 14px;
+            color: #9cdcfe;
+        }
+
+        .actions {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        /* Khung soạn thảo chính */
+        textarea {
+            flex: 1; /* Chiếm toàn bộ không gian còn lại */
+            width: 100%;
+            border: none;
+            padding: 20px;
+            background-color: #1e1e1e;
+            color: #d4d4d4;
+            font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+            font-size: 16px;
+            line-height: 1.6;
+            outline: none;
+            resize: none;
+            box-sizing: border-box;
+        }
+
+        /* Thanh trạng thái dưới cùng */
+        .status-bar {
+            background-color: #007acc;
+            color: white;
+            padding: 3px 15px;
+            font-size: 12px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 8px 20px;
+            font-size: 14px;
+            font-weight: bold;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+        button:disabled {
+            background-color: #555;
+            color: #888;
+            cursor: not-allowed;
+        }
+
+        .msg { font-weight: normal; margin-right: 10px; }
+        .loading { color: #ffd700; }
+        .success { color: #afffaf; }
+        .error { color: #ff9191; }
+    </style>
+</head>
+<body>
+
+<div class="editor-container">
+    <div class="toolbar">
+        <div class="info-path">ghimtui.github.io / file / <strong>ads.txt</strong></div>
+        <div class="actions">
+            <span id="statusText" class="msg">Đang khởi tạo...</span>
+            <button id="saveBtn" disabled>LƯU THAY ĐỔI</button>
+        </div>
+    </div>
+
+    <textarea id="editor" spellcheck="false" placeholder="Đang tải GitHub..."></textarea>
+
+    <div class="status-bar">
+        <span>UTF-8</span>
+        <span id="lineCount">Dòng: 0</span>
+    </div>
+</div>
+
+<script>
+    const CONFIG = {
+        TOKEN: "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",
+        OWNER: "ghimtui",
+        REPO: "ghimtui.github.io",
+        PATH: "file/ads.txt"
+    };
+
+    const API_URL = `https://api.github.com/repos/${CONFIG.OWNER}/${CONFIG.REPO}/contents/${CONFIG.PATH}`;
+    
+    const editor = document.getElementById('editor');
+    const saveBtn = document.getElementById('saveBtn');
+    const statusText = document.getElementById('statusText');
+    const lineCount = document.getElementById('lineCount');
+
+    let currentSha = null;
+
+    // Đếm số dòng khi nhập liệu
+    editor.addEventListener('input', () => {
+        const lines = editor.value.split('\n').length;
+        lineCount.innerText = `Dòng: ${lines}`;
+    });
+
+    // 1. Tải dữ liệu khi mở trang
+    async function loadFileData() {
+        updateStatus("Đang đồng bộ từ GitHub...", "loading");
+        try {
+            const response = await fetch(API_URL, {
+                headers: { "Authorization": `token ${CONFIG.TOKEN}` }
+            });
+
+            if (response.ok) {
+                const data = await response.json();
+                currentSha = data.sha;
+                const content = decodeURIComponent(escape(atob(data.content)));
+                editor.value = content;
+                updateStatus("Đã tải xong", "success");
+            } else if (response.status === 404) {
+                editor.value = "";
+                updateStatus("File mới (chưa có dữ liệu)", "success");
+            }
+            
+            saveBtn.disabled = false;
+            editor.dispatchEvent(new Event('input')); // Cập nhật số dòng
+        } catch (err) {
+            updateStatus("Lỗi kết nối!", "error");
+        }
+    }
+
+    // 2. Lưu dữ liệu
+    saveBtn.addEventListener('click', async () => {
+        const updatedContent = editor.value;
+        saveBtn.disabled = true;
+        updateStatus("Đang đẩy lên GitHub...", "loading");
+
+        try {
+            const base64Content = btoa(unescape(encodeURIComponent(updatedContent)));
+            
+            const response = await fetch(API_URL, {
+                method: "PUT",
+                headers: {
+                    "Authorization": `token ${CONFIG.TOKEN}`,
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    message: `Update ads.txt via Fullscreen Editor`,
+                    content: base64Content,
+                    sha: currentSha 
+                })
+            });
+
+            const result = await response.json();
+
+            if (response.ok) {
+                currentSha = result.content.sha;
+                updateStatus("✅ Lưu thành công!", "success");
+                setTimeout(() => updateStatus("Đã sẵn sàng", ""), 3000);
+            } else {
+                updateStatus("❌ Lỗi: " + result.message, "error");
+            }
+        } catch (err) {
+            updateStatus("❌ Lỗi hệ thống", "error");
+        } finally {
+            saveBtn.disabled = false;
+        }
+    });
+
+    function updateStatus(text, className) {
+        statusText.innerText = text;
+        statusText.className = "msg " + className;
+    }
+
+    window.onload = loadFileData;
+</script>
+
+</body>
+</html>
