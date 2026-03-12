@@ -4,7 +4,38 @@
 ! Updated: 11 Mar 2026 13:43 (GMT+7)
 ! Version: 1.0.1
 ! ====================
+cafeland.vn##.topFullBannerMobileSize
+cafeland.vn##.wrap-img
+baomoi.com##.ad-wrapper
+baomoi.com##.link-download
+m.gsmarena.com##.i-amphtml-sticky-ad-layout
+m.gsmarena.com##.amp-sticky-ad-close-button,.adsbygoogle
+m.gsmarena.com##.deals
+moitruong.net.vn##.c-banner,.adsbygoogle
+tinhte.vn##.pro-container
+sstruyen.com.vn###flyer
+tieuthuyet.vn###sp-wrapper-hovering-format
+mangatooncom.vn##.index-download-bg
+mangatooncom.vn##.detail-download-bg
+gametoon.mobi###toon-adsense-ads,.ads-bg,.adsbygoogle
+cem.gov.vn##.banner
+anhp.vn###ads_share_header1
+m.loigiaihay.com##.bg-countdown
+m.loigiaihay.com##.nl-infooter-mb-div
+m.loigiaihay.com##.sp-infooter-mb-google-ads
+m.loigiaihay.com###countdown
+m.loigiaihay.com##.homepage-top-ads
+m.loigiaihay.com##.adsbygoogle
+www.babla.vn###ad_topslot
+bizfly.vn###modal_bizfly_popup
+bizfly.vn##.modal-backdrop
+www.anphatpc.com.vn##.global-banner-popup-holder
+www.anphatpc.com.vn##.bg-popup
 
+irace.vn##.g-6
+irace.vn##.sticky-notice-bar
+dienmaycholon.com##.banner_mb
+coccoc.com##.top-14
 1thegioi.vn##[class*="zone-"],[class^="c-banner-"],[class^="is-"]
 
 24h.com.vn##.adsbygoogle,[class^="inpage_"],[id^="ADS_"],[id^="div-gpt-ad-"],[id^="div_inpage_"],[id^="sis_inpage"]
