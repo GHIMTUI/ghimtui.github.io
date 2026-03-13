@@ -1,35 +1,12 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Description: Chặn quảng cáo
-! Updated: 13 Mar 2026 00:31
-! Version: 1.0.2
+! Updated: 13 Mar 2026 10:55
+! Version: 1.0.3
 ! ==================
 
 1thegioi.vn##[class*="zone-"],[class^="c-banner-"],[class^="is-"]
-chinhphu.vn##.AdvertContent
-luatvietnam.vn##.adv-footer-fixed
-luatvietnam.vn##.adsbygoogle
-moit.gov.vn###module9
-via.gov.vn##.bnrCenter
-luatminhkhue.vn##.ads-label
-luatminhkhue.vn###sp-wrapper-hovering-format
-nhanhoa.com###click_download_app
-nhanhoa.com##.shake_img_close
-hoanghamobile.com##.top-category-ads
-hoanghamobile.com##.top-heading
-hoanghamobile.com###popup-modal
-hoanghamobile.com##.jquery-modal
-cellphones.com.vn##.block-top-sliding-banner
-mobilecity.vn##[id^="sudovn-btn-"]
-digiphone.vn##.large--one-whole
-digiphone.vn##.large--two-thirds
-bachlongstore.vn##.tpproductma
-bachlongstore.vn###vnt-banner
-dienthoaihay.vn##.pos1
-dienthoaihay.vn##.slideshow_countdown
-didongthongminh.vn##.list_slideshow
-didongthongminh.vn##.slide_banner
-didongthongminh.vn##.row-banner
+
 24h.com.vn##.adsbygoogle,[class^="inpage_"],[id^="ADS_"],[id^="div-gpt-ad-"],[id^="div_inpage_"],[id^="sis_inpage"]
 2sao.vn###catfish,.adsbygoolge,.vadslogo,[class^="vmc_"],[id^="Mobile_"],[id^="adzone"],[id^="mashead-"],[id^="sp-wrapper-"]
 
@@ -49,6 +26,7 @@ autopro.com.vn###admFullTop,#admbackground,#ban-size-top,.adsbygoogle,[id^="adm_
 
 babla.vn###ad_topslot
 baca-bank.vn###slider
+bachlongstore.vn###vnt-banner,.tpproductma
 bacninh.gov.vn##.adv-containers
 banduong.vn##.active
 baobacninhtv.vn##[class*="group-30-"],[class*="group-4-"]
@@ -98,9 +76,11 @@ cafef.vn###admbackground,[id^="adm-"],[id^="admFull"],[id^="adm_"],[id^="ban-"],
 cafeland.vn###bannerCarouselContentADS,#bannerVideoContentADS,.topFullBannerMobileSize,.wrap-img
 cand.com.vn##.loaded,.nomargin,[id^="admbackground"],[id^="admbackground_"]
 caobangtv.vn##[class*="adv"]
+cellphones.com.vn##.block-top-sliding-banner
 cem.gov.vn##.banner
 chatgpt.com##.block
 chatluongvacuocsong.vn##.e,[id^="ads_"],[id^="zone-"]
+chinhphu.vn##.AdvertContent
 chinhtrivaphattrien.vn##[class*="qc_"]
 chungta.vn##.clearfix
 cimbbank.com.vn##.btn
@@ -120,10 +100,13 @@ dantocmiennui.baotintuc.vn##[class^="ad-"],[class^="sda_"],[id^="sdaMobile_"]
 dantri.com.vn###mobile-top-page,#sp-wrapper-hovering,#tpmInpageContainer,.adsbygoogle,.dt-py-1
 danviet.vn##.sidebar-countdown,.video-container,[class*="ads"],[id*="ads"],[id*="zone-"]
 dauthau.asia##.slider
+didongthongminh.vn##.list_slideshow,.row-banner,.slide_banner
 dienbientv.vn##.null,[class*="ad_"],[id*="ad_"]
 diendandoanhnghiep.vn##[class^="c-banner-"]
 dienmaycholon.com##.banner_mb
 dienmayxanh.com##.popup-banner
+dienthoaihay.vn##.pos1,.slideshow_countdown
+digiphone.vn##.large--one-whole,.large--two-thirds
 doanhnghiephoinhap.vn##.box-qc,.cat-title
 doanhnghiepvathuongmai.vn###banner
 docnhanh.vn###admFullTop,#admbackground_1,#ban-top-site,#top-logo,.adsbygoogle,.font-size-font-scale-md,.iv1,.lg:mt-1,.sp-pto-mb-div,.top,[class^="background"],[id^="ad-"],[id^="admFull"],[id^="adm_"],[id^="ads-"],[id^="ads-widget-"],[id^="ban-"],[id^="zone-"],img[src="https://adi.admicro.vn/adx/adxlogo-1.png"]
@@ -153,6 +136,7 @@ hanoionline.vn##.banner
 happyvietnam.vnanet.vn##.background-image
 hd.xemtv.net###med_rec_banner2,.quangcaos,div[data-widget-id="1771082"],div[data-widget-id="1886588"],img[src="/banner/F168-Sidebar.gif"]
 hdbank.com.vn##.mobile-popup
+hoanghamobile.com###popup-modal,.jquery-modal,.top-category-ads,.top-heading
 hoanhap.vn##.section-1
 hsbc.com.vn###messaging-banner
 hue.gov.vn##.col-md-12
@@ -187,6 +171,8 @@ lapphap.vn##.section>a
 letemsvetemapplem.eu###ad_native_hp_loop_mob2,#ad_native_single_popular,.adsbygoogle,.headerbanner-wrapper
 logos.fandom.com##[class^="top-"],[class^="top_"],[id^="top_"]
 loigiaihay.com###countdown,.adsbygoogle,.bg-countdown,.homepage-top-ads,.nl-infooter-mb-div,.sp-infooter-mb-google-ads
+luatminhkhue.vn###sp-wrapper-hovering-format,.ads-label
+luatvietnam.vn##.adsbygoogle,.adv-footer-fixed
 lyluanchinhtri.vn##[class^="c-banner-"],[class^="is-custom-"]
 
 mail.google.com##[id^="nav"]
@@ -195,6 +181,8 @@ mekongasean.vn##.header-content,[class*="banner"]
 mensfolio.vn##.header-banner
 mixvale.com.br##.adsbygoogle,div[style="width: 100%; min-height: 280px; display: flex; justify-content: center; align-items: center; margin: 20px 0; background-color: transparent;"]
 mobifone.vn##.main-banner
+mobilecity.vn##[id^="sudovn-btn-"]
+moit.gov.vn###module9
 moitruong.net.vn##.adsbygoogle,.c-banner
 motthegioi.vn##.adsbygoogle
 
@@ -209,6 +197,7 @@ nguoidothi.net.vn##.dvMarTop1
 nguoiduatin.vn##.box-aside,.ndt-ads
 nguoiquansat.vn##.c-banner,.c-banner-item__inner
 nhachannuoi.vn###black-studio-tinymce-13,.menu-pr,.quangcao,[class*="banner"]
+nhanhoa.com###click_download_app,.shake_img_close
 nhipsongkinhdoanh.vn###top-logo,.container-fluid,[id^="admFull"],[id^="adsWeb"],[id^="ban-"],[id^="zone"]
 nld.com.vn###top-logo,.ads-top,.mb-20,.notifi-list,[class^="mb-"],[id^="adm-zone"],[id^="admFull"],[id^="admbackground"],[id^="ban-top-site"],[id^="sp-"],[id^="zone"],img[src="https://static.mediacdn.vn/nld.com.vn/image/Banner_mobile_xuan.png"],img[src="https://static.mediacdn.vn/nld/images/e-paper.png"]
 nongnghiepmoitruong.vn##[class^="ads-"],[class^="adv"],[class^="exp_qc_"],[id^="zone-"]
@@ -295,6 +284,7 @@ tvbox.one##.adsbygoogle,.entry-img-300,.homeadv,.homeadv>span
 vanhoanghethuat.vn##.mobile
 vbsp.org.vn###right,[class*="ads"]
 vdb.gov.vn##[class*="Ads_"]
+via.gov.vn##.bnrCenter
 vib.com.vn##.new-download-app
 viblo.asia##.el-dialog__wrapper,.fixed-bottom-bar,.v-modal
 vietgiaitri.com###header,.cover_header,[class^="avgt-"],[class^="inview-"],[id^="Balloon"]
