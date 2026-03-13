@@ -47,6 +47,15 @@ baolaichau.vn##[class^="blc-topic__"],[class^="stripes-"],[id*="splide01-"]
 baolamdong.vn##.aanetwork-ads-box,[class^="ads_"],[id^="zone-"]
 baolangson.vn##[class*="ads-"],[class*="zonegroup-"]
 baolaocai.vn##[class^="ad-"],[class^="sda_"],[id*="sdaMobile_"]
+vi.kalvo.com##.klv_x
+vi.kalvo.com##.adsbygoogle
+vi.kalvo.com##[class^="klvad"]
+vi.kalvo.com##.barsticky
+m.gsmarena.com##.top-adv
+m.gsmarena.com###fKmVnQ
+m.gsmarena.com##.adv-mid
+m.gsmarena.com##.d-flex
+m.gsmarena.com##.adv-bottom,.adv-top
 baomoi.com###slide-footer,.ad-wrapper,.is-show,.link-download,.section-ad-native,.slick-slide,.slick-slider
 baonghean.vn##.aanetwork-ads-box,[class^="ads_"],[class^="c-banner-"],[id^="zone-"]
 baoninhbinh.org.vn##[class*="m-"]
