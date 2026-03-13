@@ -6,7 +6,30 @@
 ! ==================
 
 1thegioi.vn##[class*="zone-"],[class^="c-banner-"],[class^="is-"]
-
+chinhphu.vn##.AdvertContent
+luatvietnam.vn##.adv-footer-fixed
+luatvietnam.vn##.adsbygoogle
+moit.gov.vn###module9
+via.gov.vn##.bnrCenter
+luatminhkhue.vn##.ads-label
+luatminhkhue.vn###sp-wrapper-hovering-format
+nhanhoa.com###click_download_app
+nhanhoa.com##.shake_img_close
+hoanghamobile.com##.top-category-ads
+hoanghamobile.com##.top-heading
+hoanghamobile.com###popup-modal
+hoanghamobile.com##.jquery-modal
+cellphones.com.vn##.block-top-sliding-banner
+mobilecity.vn##[id^="sudovn-btn-"]
+digiphone.vn##.large--one-whole
+digiphone.vn##.large--two-thirds
+bachlongstore.vn##.tpproductma
+bachlongstore.vn###vnt-banner
+dienthoaihay.vn##.pos1
+dienthoaihay.vn##.slideshow_countdown
+didongthongminh.vn##.list_slideshow
+didongthongminh.vn##.slide_banner
+didongthongminh.vn##.row-banner
 24h.com.vn##.adsbygoogle,[class^="inpage_"],[id^="ADS_"],[id^="div-gpt-ad-"],[id^="div_inpage_"],[id^="sis_inpage"]
 2sao.vn###catfish,.adsbygoolge,.vadslogo,[class^="vmc_"],[id^="Mobile_"],[id^="adzone"],[id^="mashead-"],[id^="sp-wrapper-"]
 
