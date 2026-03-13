@@ -1,8 +1,8 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Description: Chặn quảng cáo
-! Updated: 13 Mar 2026 10:55
-! Version: 1.0.3
+! Updated: 13 Mar 2026 11:38
+! Version: 1.0.4
 ! ==================
 
 1thegioi.vn##[class*="zone-"],[class^="c-banner-"],[class^="is-"]
@@ -47,15 +47,6 @@ baolaichau.vn##[class^="blc-topic__"],[class^="stripes-"],[id*="splide01-"]
 baolamdong.vn##.aanetwork-ads-box,[class^="ads_"],[id^="zone-"]
 baolangson.vn##[class*="ads-"],[class*="zonegroup-"]
 baolaocai.vn##[class^="ad-"],[class^="sda_"],[id*="sdaMobile_"]
-vi.kalvo.com##.klv_x
-vi.kalvo.com##.adsbygoogle
-vi.kalvo.com##[class^="klvad"]
-vi.kalvo.com##.barsticky
-m.gsmarena.com##.top-adv
-m.gsmarena.com###fKmVnQ
-m.gsmarena.com##.adv-mid
-m.gsmarena.com##.d-flex
-m.gsmarena.com##.adv-bottom,.adv-top
 baomoi.com###slide-footer,.ad-wrapper,.is-show,.link-download,.section-ad-native,.slick-slide,.slick-slider
 baonghean.vn##.aanetwork-ads-box,[class^="ads_"],[class^="c-banner-"],[id^="zone-"]
 baoninhbinh.org.vn##[class*="m-"]
@@ -136,7 +127,7 @@ gialai.gov.vn###module82,#module90,.full-width,.widget-space
 giaothong.tapchixaydung.vn##[class*="qc"]
 gmobile.vn##.slide
 gocnhinphaply.nguoiduatin.vn###sp-wrapper-hovering,.adsbygoogle,.no-margin-ads
-gsmarena.com##.adsbygoogle,.amp-sticky-ad-close-button,.deals,.i-amphtml-sticky-ad-layout
+gsmarena.com###fKmVnQ,.adsbygoogle,.adv-bottom,.adv-mid,.adv-top,.amp-sticky-ad-close-button,.d-flex,.deals,.i-amphtml-sticky-ad-layout,.top-adv
 
 haiphong.gov.vn##.UIAdvertisement_Default
 hanoi.gov.vn##.UIAdvertisement_Default
@@ -293,6 +284,7 @@ tvbox.one##.adsbygoogle,.entry-img-300,.homeadv,.homeadv>span
 vanhoanghethuat.vn##.mobile
 vbsp.org.vn###right,[class*="ads"]
 vdb.gov.vn##[class*="Ads_"]
+vi.kalvo.com##.adsbygoogle,.barsticky,.klv_x,[class^="klvad"]
 via.gov.vn##.bnrCenter
 vib.com.vn##.new-download-app
 viblo.asia##.el-dialog__wrapper,.fixed-bottom-bar,.v-modal
