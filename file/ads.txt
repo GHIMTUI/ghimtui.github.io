@@ -1,82 +1,20 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Description: Chặn quảng cáo
-! Updated: 13 Mar 2026 11:38
-! Version: 1.0.4
+! Updated: 15 Mar 2026 10:31
+! Version: 1.0.5
 ! ==================
 
 1thegioi.vn##[class*="zone-"],[class^="c-banner-"],[class^="is-"]
-diaocthongthai.com###thongthai-ads-container
-didongthongminh.vn##.list_slideshow
-didongthongminh.vn##.banner-site
-didongthongminh.vn##.slide_banner
-didongthongminh.vn##.banners-home
-didongthongminh.vn##.active
-didongthongminh.vn##.img_org
-vov1.vov.vn##.mobile-header-banner
-vietnamnet.vn##[id^="adzone"]
-vietnamnet.vn###Mobile_AdsArticleBodyInArticle
-ofnews.vn##.qc-slider
-ofnews.vn##.detail-social
-bongda24h.vn##.ads-center,.adsbygoogle
-bongda24h.vn##.adscontent
-www.speedtest.net##.mobile-pretest
-www.speedtest.net###modal-overlay
-www.speedtest.net###zdcFloatingBtn
-www.speedtest.net##.app-promo
-speedtest.vn##.jconfirm-cell
-speedtest.vn##.jconfirm-scrollpane
-speedtest.vn##.jconfirm-bg
-speedtest.vn##.jconfirm
-
-speedtest.vn###advArea
-www.nperf.com##.modal-content
-wifiman.com##._container_mwjca_1
-www.highspeedinternet.com##.wpb_single_image
-www.highspeedinternet.com##.smartbanner
-www.highspeedinternet.com###mobile-nav
-www.highspeedinternet.com##.disclaimer-container
-daidoanket.vn###sp-wrapper-hovering-format
-daidoanket.vn##.adsbygoogle
-daidoanket.vn##.sp-infooter-mb-google-ads
-2sao.vn###adzone39
-docnhanh.vn##div
-nhac.vn##.tbl-link
-nhac.vn###footer-scroll
-vip.keeng.vn##.app_nhac_keeng
-m.afamily.vn##[id^="adm-slot-"]
-doisongvietnam.vn##.lazy
-m.mucnews.com##.e3lan
-tintucvietnam.vn##.banner-header
-tintucvietnam.vn##div[style="display: block;     justify-content: center;"]
-m.kenh24h.com.vn##body>div
-m.xahoi.com.vn##.adsbygoogle
-m.xahoi.com.vn##center[style="margin: 10px 0 10px;"]
-www.vietnamworks.com##.tg_redirecttimviec_2023
-www.vietnamworks.com##.mb
-vovmedia.vn###affiliate-container
-www.emc-directory.com###mobileBottomAd
-didongviet.vn###top-banner
-vietnamradio.org##.add-box-top,.adsbygoogle
-www.otosaigon.com##[class^="ads-"]
-www.otosaigon.com###side-ads-mid-3
-www.sggp.org.vn###sdaMobile_SdaTop
-www.lazada.vn###J_Banner
-vtcnews.vn###adbro-bottom
-www.xemtivitop.com###HTML8
-vietnamnet.vn###adzone39
-xemtivi4k.com##[id^="adstop"]
-xemtivi4k.com##a[href^="https://www.msbgih.com/sportsbook"]
-bom.so##.ads,.adsbygoogle
 
 24h.com.vn##.adsbygoogle,[class^="inpage_"],[id^="ADS_"],[id^="div-gpt-ad-"],[id^="div_inpage_"],[id^="sis_inpage"]
-2sao.vn###catfish,.adsbygoolge,.vadslogo,[class^="vmc_"],[id^="Mobile_"],[id^="adzone"],[id^="mashead-"],[id^="sp-wrapper-"]
+2sao.vn###adzone39,#catfish,.adsbygoolge,.vadslogo,[class^="vmc_"],[id^="Mobile_"],[id^="adzone"],[id^="mashead-"],[id^="sp-wrapper-"]
 
 51degrees.com##.g-floating-banner
 
 acb.com.vn##.download-app-mb
 accuweather.com###bottom,#middle,#top,.adhesion-header,.adsbygoogle,.header-placeholder
-afamily.vn##.adsbygoogle
+afamily.vn##.adsbygoogle,[id^="adm-slot-"]
 agribank.com.vn###agbModal,.modal-backdrop
 angiangtv.vn##[class*="swiper"],[class*="wp-"],[id*="media_"]
 anhp.vn###ads_share_header1
@@ -131,6 +69,8 @@ baovietbank.vn##.bvb-info-service,.bvb-slider-banner,.bvb-slider-top
 baovinhlong.com.vn##[class^="ad"]
 bizfly.vn###modal_bizfly_popup,.modal-backdrop
 bnews.vn##.aanetwork-flyicon-box,.adsbygoogle,[id^="divAdmicro_"]
+bom.so##.ads,.adsbygoogle
+bongda24h.vn##.ads-center,.adsbygoogle,.adscontent
 bongdaplus.vn###ADFT,#ADMTOP,.clz
 
 cafebiz.vn###top-logo,[id^="adm-"],[id^="admFull"],[id^="adm_"],[id^="ban-"],[id^="zone-"]
@@ -156,13 +96,16 @@ congnghieptauthuyvietnam.vn##.w_100
 congthuong.vn##[class*="adsbygoogle"],[class*="inpage-ad"]
 
 daibieunhandan.vn##.c-banner,.is-custom-size,[class^="zone-"]
+daidoanket.vn###sp-wrapper-hovering-format,.adsbygoogle,.sp-infooter-mb-google-ads
 danang.gov.vn##.ml-lg-3,.mt-sm-0
 danangtv.vn###ctl00_ctl00_Content_Trang_Chủ_Quảng_Cáo_Botttom,.Quang_cao_temp,.XemGiQuangCao,[class*="QuangCao_"]
 dantocmiennui.baotintuc.vn##[class^="ad-"],[class^="sda_"],[id^="sdaMobile_"]
 dantri.com.vn###mobile-top-page,#sp-wrapper-hovering,#tpmInpageContainer,.adsbygoogle,.dt-py-1
 danviet.vn##.sidebar-countdown,.video-container,[class*="ads"],[id*="ads"],[id*="zone-"]
 dauthau.asia##.slider
-didongthongminh.vn##.list_slideshow,.row-banner,.slide_banner
+diaocthongthai.com###thongthai-ads-container
+didongthongminh.vn##.active,.banner-site,.banners-home,.img_org,.list_slideshow,.row-banner,.slide_banner
+didongviet.vn###top-banner
 dienbientv.vn##.null,[class*="ad_"],[id*="ad_"]
 diendandoanhnghiep.vn##[class^="c-banner-"]
 dienmaycholon.com##.banner_mb
@@ -171,11 +114,13 @@ dienthoaihay.vn##.pos1,.slideshow_countdown
 digiphone.vn##.large--one-whole,.large--two-thirds
 doanhnghiephoinhap.vn##.box-qc,.cat-title
 doanhnghiepvathuongmai.vn###banner
-docnhanh.vn###admFullTop,#admbackground_1,#ban-top-site,#top-logo,.adsbygoogle,.font-size-font-scale-md,.iv1,.lg:mt-1,.sp-pto-mb-div,.top,[class^="background"],[id^="ad-"],[id^="admFull"],[id^="adm_"],[id^="ads-"],[id^="ads-widget-"],[id^="ban-"],[id^="zone-"],img[src="https://adi.admicro.vn/adx/adxlogo-1.png"]
+docnhanh.vn###admFullTop,#admbackground_1,#ban-top-site,#top-logo,.adsbygoogle,.font-size-font-scale-md,.iv1,.lg:mt-1,.sp-pto-mb-div,.top,[class^="background"],[id^="ad-"],[id^="admFull"],[id^="adm_"],[id^="ads-"],[id^="ads-widget-"],[id^="ban-"],[id^="zone-"],div,img[src="https://adi.admicro.vn/adx/adxlogo-1.png"]
 doisongphapluat.com.vn##.sys-ads,[id^="sp-"]
+doisongvietnam.vn##.lazy
 dongnai.gov.vn##.inner-home
 duckduckgo.com##[class^="js-"],[class^="set-browser-"]
 
+emc-directory.com###mobileBottomAd
 eva.vn##[class^="banr-"],[id*="banner"],[id^="ADS"],[id^="spanTextAds_"]
 
 fptplay.vn##.flex-row,a[aria-label="Purchase packages"]
@@ -198,6 +143,7 @@ hanoionline.vn##.banner
 happyvietnam.vnanet.vn##.background-image
 hd.xemtv.net###med_rec_banner2,.quangcaos,div[data-widget-id="1771082"],div[data-widget-id="1886588"],img[src="/banner/F168-Sidebar.gif"]
 hdbank.com.vn##.mobile-popup
+highspeedinternet.com###mobile-nav,.disclaimer-container,.smartbanner,.wpb_single_image
 hoanghamobile.com###popup-modal,.jquery-modal,.top-category-ads,.top-heading
 hoanhap.vn##.section-1
 hsbc.com.vn###messaging-banner
@@ -211,6 +157,7 @@ hungyentv.vn##[id^="ads_"],[id^="advertise_"]
 irace.vn##.g-6,.sticky-notice-bar
 
 kenh14.vn###admFullTop,#ban-top-site,.adv,[id^="adm-slot"],[id^="adm_zone"],[id^="admbackground"],[id^="zone"]
+kenh24h.com.vn##body>div
 khanhhoa.gov.vn###select-box
 kienlongbank.com##.list-items
 kienthuc.net.vn##.adsbygoogle
@@ -230,6 +177,7 @@ laocai.gov.vn##.UIMultiFunction_Default
 laodong.vn###admbackground-adm,#main-footer-fix-bottom,.adsbygoogle,.i-amphtml-sticky-ad-layout,.notification-header__msg,[id^="sp-"]
 laodongdoanthe.vn##[class*="ads"],[class*="banner"a]
 lapphap.vn##.section>a
+lazada.vn###J_Banner
 letemsvetemapplem.eu###ad_native_hp_loop_mob2,#ad_native_single_popular,.adsbygoogle,.headerbanner-wrapper
 logos.fandom.com##[class^="top-"],[class^="top_"],[id^="top_"]
 loigiaihay.com###countdown,.adsbygoogle,.bg-countdown,.homepage-top-ads,.nl-infooter-mb-div,.sp-infooter-mb-google-ads
@@ -247,6 +195,7 @@ mobilecity.vn##[id^="sudovn-btn-"]
 moit.gov.vn###module9
 moitruong.net.vn##.adsbygoogle,.c-banner
 motthegioi.vn##.adsbygoogle
+mucnews.com##.e3lan
 
 namabank.com.vn##.mobile-popup
 nbtv.vn##.top-news-right,[class*="banner_"],[class^="app-"],[id^="app_"]
@@ -258,11 +207,16 @@ nghiencuu.tapchikinhtetaichinh.vn##[id^="qc-"]
 nguoidothi.net.vn##.dvMarTop1
 nguoiduatin.vn##.box-aside,.ndt-ads
 nguoiquansat.vn##.c-banner,.c-banner-item__inner
+nhac.vn###footer-scroll,.tbl-link
 nhachannuoi.vn###black-studio-tinymce-13,.menu-pr,.quangcao,[class*="banner"]
 nhanhoa.com###click_download_app,.shake_img_close
 nhipsongkinhdoanh.vn###top-logo,.container-fluid,[id^="admFull"],[id^="adsWeb"],[id^="ban-"],[id^="zone"]
 nld.com.vn###top-logo,.ads-top,.mb-20,.notifi-list,[class^="mb-"],[id^="adm-zone"],[id^="admFull"],[id^="admbackground"],[id^="ban-top-site"],[id^="sp-"],[id^="zone"],img[src="https://static.mediacdn.vn/nld.com.vn/image/Banner_mobile_xuan.png"],img[src="https://static.mediacdn.vn/nld/images/e-paper.png"]
 nongnghiepmoitruong.vn##[class^="ads-"],[class^="adv"],[class^="exp_qc_"],[id^="zone-"]
+nperf.com##.modal-content
+
+ofnews.vn##.detail-social,.qc-slider
+otosaigon.com###side-ads-mid-3,[class^="ads-"]
 
 perplexity.ai##.animate-in
 petrotimes.vn##.petrotimes-qc,[id^="ads-"]
@@ -282,13 +236,15 @@ saostar.vn##[class^="txt-"],[id^="div-"],[id^="mid-"],[id^="mobi-"],[id^="pvouch
 sc.com##[class^="smartbanner"]
 scb.com.vn##[class^="slider-"]
 search.brave.com##[class^="download-"],[class^="premium-"]
-sggp.org.vn##.ls-is-cached,a[rel="noopener"]
+sggp.org.vn###sdaMobile_SdaTop,.ls-is-cached,a[rel="noopener"]
 shop.vietnamobile.com.vn##.img,.laberUrl
 sinhthainongnghiep.net.vn##[class^="qc_"]
 soha.vn##[class^="div-"],[id^="adm-"],[id^="admFull"],[id^="ban-"],[id^="zone-"]
 sohuutritue.net.vn##.e,[id^="ads_"],[id^="zone-"]
 sonla.gov.vn##.UIMultiFunction_Default
 sonlatv.vn##.col-md-12,[class*="ads"],[id*="ads"]
+speedtest.net###modal-overlay,#zdcFloatingBtn,.app-promo,.mobile-pretest
+speedtest.vn###advArea,.jconfirm,.jconfirm-bg,.jconfirm-cell,.jconfirm-scrollpane
 sstruyen.com.vn###flyer
 suckhoecongdongonline.vn##.item-img,.wp-banner-top
 suckhoedoisong.vn###ub-anchor-adcontainer,.adsbygoogle,[class*="ads"],[id*="sp-wrapper-hovering"]
@@ -336,6 +292,7 @@ tienphong.vn##[class^="ad-"],[class^="sda-"],[id^="sdaMobile_"]
 tieuthuyet.vn###sp-wrapper-hovering-format
 tinhte.vn##.pro-container
 tintuconline.com.vn###adzone39,.adsbygoolge,.vadslogo,[class^="trv-"],[class^="vmc_"],[id*="adzone"],[id*="vmcad_inview_"],[id^="Mobile_"],[id^="mashead-"],[id^="sp-wrapper-"],a[rel="nofollow noopener"],div[onclick="closeMashead(39)"],div[style="margin-bottom: 35px;"]
+tintucvietnam.vn##.banner-header,div[style="display: block;     justify-content: center;"]
 truyenhinhthanhhoa.vn##[class^="ad-"],[id^="banner-"],[id^="placement-"],[id^="share-"],[id^="slot-"],[id^="zone-"]
 ttbc-hcm.gov.vn##[class^="abs-"],[class^="c-banner-"],[class^="zone-"]
 tuoitre.vn###LeaderBoardTop,#admbackground,#pvoucher-live-container,[id^="sp_format-hovering"],[id^="zone"]
@@ -353,13 +310,16 @@ viblo.asia##.el-dialog__wrapper,.fixed-bottom-bar,.v-modal
 vietgiaitri.com###header,.cover_header,[class^="avgt-"],[class^="inview-"],[id^="Balloon"]
 vietnam.vnanet.vn##.uk-margin-small-top
 vietnammoi.vn###admFullTop,#ban-top-site,.adsbygoogle,[id^="adm_"]
-vietnamnet.vn###catfish,#mashead-bn,[id*="adzone"],[id^="adzone"],[id^="mashead-"],div[onclick="closeMashead(39)"],span[style="color: #fff;text-align: center;display: inherit;font-size: 20px;line-height: 20px;"]
+vietnamnet.vn###Mobile_AdsArticleBodyInArticle,#adzone39,#catfish,#mashead-bn,[id*="adzone"],[id^="adzone"],[id^="mashead-"],div[onclick="closeMashead(39)"],span[style="color: #fff;text-align: center;display: inherit;font-size: 20px;line-height: 20px;"]
 vietnamplus.vn###sp-wrapper-hovering-format
+vietnamradio.org##.add-box-top,.adsbygoogle
+vietnamworks.com##.mb,.tg_redirecttimviec_2023
 vietstock.vn###admbackground,.ads-top-mobile
 viettelstore.vn###overlay2,#pop-sieusale,.icon-neo,.icon-zalo,[id^="img-"],[id^="pop"],[id^="pop-"],[id^=overlay"]
 vietteltelecom.vn##.sc-jgPyTC,.slick-current>div,.slick-track,[class^="banner-"]
 viettimes.vn###sp-wrapper-hovering-format
 vikkibank.vn##[id*="banner"]
+vip.keeng.vn##.app_nhac_keeng
 vjst.vn##.c-banner-item,[id^="zone-"]
 vn-z.vn##.u-bottomFixer
 vnbusiness.vn##[class*="-qc"],[class*="ad-"]
@@ -370,10 +330,17 @@ vnreview.vn##.aanetwork-type-flyicon,.adsbygoogle
 vnsky.vn##.carousel__viewport,.modal-popup
 voh.com.vn##.adstop,[class*="center-"]
 vov.vn###header-placeholder,.ads,[id^="block-ads-"]
-vtcnews.vn##.adsbygoogle,.inpage-ad,.top-ad,[class^="aanetwork-"],[class^="ads-"],[class^="banner-"],[class^="sys-ads"]
+vov1.vov.vn##.mobile-header-banner
+vovmedia.vn###affiliate-container
+vtcnews.vn###adbro-bottom,.adsbygoogle,.inpage-ad,.top-ad,[class^="aanetwork-"],[class^="ads-"],[class^="banner-"],[class^="sys-ads"]
 vtv.vn##.adsbygoogle
 
+wifiman.com##._container_mwjca_1
+
+xahoi.com.vn##.adsbygoogle,center[style="margin: 10px 0 10px;"]
 xemtivi.top###sp-wrapper-hovering-format
+xemtivi4k.com##[id^="adstop"],a[href^="https://www.msbgih.com/sportsbook"]
+xemtivitop.com###HTML8
 xemtv.net##.adsbygoogle
 xemtv.us###med_rec_banner2,.close-ad-btn,.float-ck,div[data-widget-id="1433589"]
 xemtvonline.com###bottom650,.close-ad-btn
