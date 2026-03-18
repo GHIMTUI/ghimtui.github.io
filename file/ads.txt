@@ -1,32 +1,14 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Description: Chặn quảng cáo
-! Updated: 15 Mar 2026 10:31
-! Version: 1.0.5
+! Updated: 18 Mar 2026 19:26
+! Version: 1.0.6
 ! ==================
 
 1thegioi.vn##[class*="zone-"],[class^="c-banner-"],[class^="is-"]
-cellphones.com.vn##.subscriber-popup
-cellphones.com.vn###subscriberEmailOverlay
-technave.com##.ad-container
-leeapk.com##.ads-banner
-leeapk.com###stickyAd
-m.gamek.vn##.ads-top,.adsbygoogle
-m.gamek.vn##[id^="admbackground"]
-m.gamek.vn##[id^="zone-"],[id^="share-"],[id^="placement-"],[id^="banner-"],[id^="slot-"]
-vietgame.asia##.adsbygoogle,[class^="block-"]
-www.xemgame.com##[id^="bannerm"]
-afkmobi.com###gift-banner
-afkmobi.com##.afk_bn_homem_top,.adsbygoogle
-gameorb.com.vn##[id^="pum-"],[id^="popmake-"]
-2game.vn###bannermtop,[class^="banner-"]
-game.gov.vn##.wrapperqc
-gearvn.com###popup-promotion
-gearvn.com##.banner-effect
-gearvn.com##.article-flashsale
-m.game24h.vn##.banner
 
 24h.com.vn##.adsbygoogle,[class^="inpage_"],[id^="ADS_"],[id^="div-gpt-ad-"],[id^="div_inpage_"],[id^="sis_inpage"]
+2game.vn###bannermtop,[class^="banner-"]
 2sao.vn###adzone39,#catfish,.adsbygoolge,.vadslogo,[class^="vmc_"],[id^="Mobile_"],[id^="adzone"],[id^="mashead-"],[id^="sp-wrapper-"]
 
 51degrees.com##.g-floating-banner
@@ -34,6 +16,7 @@ m.game24h.vn##.banner
 acb.com.vn##.download-app-mb
 accuweather.com###bottom,#middle,#top,.adhesion-header,.adsbygoogle,.header-placeholder
 afamily.vn##.adsbygoogle,[id^="adm-slot-"]
+afkmobi.com###gift-banner,.adsbygoogle,.afk_bn_homem_top
 agribank.com.vn###agbModal,.modal-backdrop
 angiangtv.vn##[class*="swiper"],[class*="wp-"],[id*="media_"]
 anhp.vn###ads_share_header1
@@ -97,7 +80,7 @@ cafef.vn###admbackground,[id^="adm-"],[id^="admFull"],[id^="adm_"],[id^="ban-"],
 cafeland.vn###bannerCarouselContentADS,#bannerVideoContentADS,.topFullBannerMobileSize,.wrap-img
 cand.com.vn##.loaded,.nomargin,[id^="admbackground"],[id^="admbackground_"]
 caobangtv.vn##[class*="adv"]
-cellphones.com.vn##.block-top-sliding-banner
+cellphones.com.vn###subscriberEmailOverlay,.block-top-sliding-banner,.subscriber-popup
 cem.gov.vn##.banner
 chatgpt.com##.block
 chatluongvacuocsong.vn##.e,[id^="ads_"],[id^="zone-"]
@@ -144,7 +127,12 @@ eva.vn##[class^="banr-"],[id*="banner"],[id^="ADS"],[id^="spanTextAds_"]
 
 fptplay.vn##.flex-row,a[aria-label="Purchase packages"]
 
+game.gov.vn##.wrapperqc
+game24h.vn##.banner
+gamek.vn##.ads-top,.adsbygoogle,[id^="admbackground"],[id^="banner-"],[id^="placement-"],[id^="share-"],[id^="slot-"],[id^="zone-"]
+gameorb.com.vn##[id^="popmake-"],[id^="pum-"]
 gametoon.mobi###toon-adsense-ads,.ads-bg,.adsbygoogle
+gearvn.com###popup-promotion,.article-flashsale,.banner-effect
 genk.vn##.box-category-bottom,[id^="adm-"],[id^="admFull"],[id^="adm_"],[id^="admbackground"],[id^="ban-"],[id^="top-"],[id^="zone-"]
 giacngo.vn##.picture
 giadinh.suckhoedoisong.vn###admBannerPopup,#admwrapper,.adsbygoogle,[id^="zone-"]
@@ -197,6 +185,7 @@ laodong.vn###admbackground-adm,#main-footer-fix-bottom,.adsbygoogle,.i-amphtml-s
 laodongdoanthe.vn##[class*="ads"],[class*="banner"a]
 lapphap.vn##.section>a
 lazada.vn###J_Banner
+leeapk.com###stickyAd,.ads-banner
 letemsvetemapplem.eu###ad_native_hp_loop_mob2,#ad_native_single_popular,.adsbygoogle,.headerbanner-wrapper
 logos.fandom.com##[class^="top-"],[class^="top_"],[id^="top_"]
 loigiaihay.com###countdown,.adsbygoogle,.bg-countdown,.homepage-top-ads,.nl-infooter-mb-div,.sp-infooter-mb-google-ads
@@ -280,6 +269,7 @@ tapchitoaan.vn##.hidden-xs
 tapchixaydung.vn##.mt-4
 tayninh.gov.vn##.UIAdvertisement_Default
 techlade.vn##[class*="banner"]
+technave.com##.ad-container
 techz.vn###sp-wrapper-hovering,.header_ads
 thainguyen.gov.vn##.UIAdvertisement_Default
 thanhnien.vn##.asd-headt,[id^="sp"],[id^="zone"]
@@ -326,6 +316,7 @@ vi.kalvo.com##.adsbygoogle,.barsticky,.klv_x,[class^="klvad"]
 via.gov.vn##.bnrCenter
 vib.com.vn##.new-download-app
 viblo.asia##.el-dialog__wrapper,.fixed-bottom-bar,.v-modal
+vietgame.asia##.adsbygoogle,[class^="block-"]
 vietgiaitri.com###header,.cover_header,[class^="avgt-"],[class^="inview-"],[id^="Balloon"]
 vietnam.vnanet.vn##.uk-margin-small-top
 vietnammoi.vn###admFullTop,#ban-top-site,.adsbygoogle,[id^="adm_"]
@@ -357,6 +348,7 @@ vtv.vn##.adsbygoogle
 wifiman.com##._container_mwjca_1
 
 xahoi.com.vn##.adsbygoogle,center[style="margin: 10px 0 10px;"]
+xemgame.com##[id^="bannerm"]
 xemtivi.top###sp-wrapper-hovering-format
 xemtivi4k.com##[id^="adstop"],a[href^="https://www.msbgih.com/sportsbook"]
 xemtivitop.com###HTML8
