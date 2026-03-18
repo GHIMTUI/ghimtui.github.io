@@ -6,6 +6,25 @@
 ! ==================
 
 1thegioi.vn##[class*="zone-"],[class^="c-banner-"],[class^="is-"]
+cellphones.com.vn##.subscriber-popup
+cellphones.com.vn###subscriberEmailOverlay
+technave.com##.ad-container
+leeapk.com##.ads-banner
+leeapk.com###stickyAd
+m.gamek.vn##.ads-top,.adsbygoogle
+m.gamek.vn##[id^="admbackground"]
+m.gamek.vn##[id^="zone-"],[id^="share-"],[id^="placement-"],[id^="banner-"],[id^="slot-"]
+vietgame.asia##.adsbygoogle,[class^="block-"]
+www.xemgame.com##[id^="bannerm"]
+afkmobi.com###gift-banner
+afkmobi.com##.afk_bn_homem_top,.adsbygoogle
+gameorb.com.vn##[id^="pum-"],[id^="popmake-"]
+2game.vn###bannermtop,[class^="banner-"]
+game.gov.vn##.wrapperqc
+gearvn.com###popup-promotion
+gearvn.com##.banner-effect
+gearvn.com##.article-flashsale
+m.game24h.vn##.banner
 
 24h.com.vn##.adsbygoogle,[class^="inpage_"],[id^="ADS_"],[id^="div-gpt-ad-"],[id^="div_inpage_"],[id^="sis_inpage"]
 2sao.vn###adzone39,#catfish,.adsbygoolge,.vadslogo,[class^="vmc_"],[id^="Mobile_"],[id^="adzone"],[id^="mashead-"],[id^="sp-wrapper-"]
