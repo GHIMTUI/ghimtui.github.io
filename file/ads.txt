@@ -6,6 +6,20 @@
 ! ==================
 
 1thegioi.vn##[class*="zone-"],[class^="c-banner-"],[class^="is-"]
+gamehub.vn###smartbanner
+vn.beincrypto.com##.custom-button-primary
+vn.beincrypto.com##[class^="banner"]
+vn.beincrypto.com##[class^="parallax"]
+vn.beincrypto.com##[class^="SponsoredLabel-"]
+beincrypto.com##.banner-sticky-bottom-d
+tienphong.vn###sp-wrapper-hovering
+inas.org##.ads-header-mobile
+inas.org###wap_bottombanner_content
+inas.org###match-child-1
+inas.org##.btn-8xbet
+www.kirikuylabruja.com##.catfish-banner-global
+www.kirikuylabruja.com##.banner-chat
+www.kirikuylabruja.com##.btn--secondary
 
 24h.com.vn##.adsbygoogle,[class^="inpage_"],[id^="ADS_"],[id^="div-gpt-ad-"],[id^="div_inpage_"],[id^="sis_inpage"]
 2game.vn###bannermtop,[class^="banner-"]
