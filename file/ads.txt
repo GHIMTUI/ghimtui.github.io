@@ -1,25 +1,11 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Description: Chặn quảng cáo
-! Updated: 18 Mar 2026 19:26
-! Version: 1.0.6
+! Updated: 20 Mar 2026 20:07
+! Version: 1.0.7
 ! ==================
 
 1thegioi.vn##[class*="zone-"],[class^="c-banner-"],[class^="is-"]
-gamehub.vn###smartbanner
-vn.beincrypto.com##.custom-button-primary
-vn.beincrypto.com##[class^="banner"]
-vn.beincrypto.com##[class^="parallax"]
-vn.beincrypto.com##[class^="SponsoredLabel-"]
-beincrypto.com##.banner-sticky-bottom-d
-tienphong.vn###sp-wrapper-hovering
-inas.org##.ads-header-mobile
-inas.org###wap_bottombanner_content
-inas.org###match-child-1
-inas.org##.btn-8xbet
-www.kirikuylabruja.com##.catfish-banner-global
-www.kirikuylabruja.com##.banner-chat
-www.kirikuylabruja.com##.btn--secondary
 
 24h.com.vn##.adsbygoogle,[class^="inpage_"],[id^="ADS_"],[id^="div-gpt-ad-"],[id^="div_inpage_"],[id^="sis_inpage"]
 2game.vn###bannermtop,[class^="banner-"]
@@ -83,6 +69,7 @@ baovannghe.vn##.adsbygoogle
 baovephapluat.vn##.banner-item,.cat-advertise,[id^="dnn_ctr699_"]
 baovietbank.vn##.bvb-info-service,.bvb-slider-banner,.bvb-slider-top
 baovinhlong.com.vn##[class^="ad"]
+beincrypto.com##.banner-sticky-bottom-d
 bizfly.vn###modal_bizfly_popup,.modal-backdrop
 bnews.vn##.aanetwork-flyicon-box,.adsbygoogle,[id^="divAdmicro_"]
 bom.so##.ads,.adsbygoogle
@@ -143,6 +130,7 @@ fptplay.vn##.flex-row,a[aria-label="Purchase packages"]
 
 game.gov.vn##.wrapperqc
 game24h.vn##.banner
+gamehub.vn###smartbanner
 gamek.vn##.ads-top,.adsbygoogle,[id^="admbackground"],[id^="banner-"],[id^="placement-"],[id^="share-"],[id^="slot-"],[id^="zone-"]
 gameorb.com.vn##[id^="popmake-"],[id^="pum-"]
 gametoon.mobi###toon-adsense-ads,.ads-bg,.adsbygoogle
@@ -175,6 +163,7 @@ hungmobile.vn##.b-modal,.banner,.product_adv,[class^="popup-"]
 hungyen.gov.vn##.full-width
 hungyentv.vn##[id^="ads_"],[id^="advertise_"]
 
+inas.org###match-child-1,#wap_bottombanner_content,.ads-header-mobile,.btn-8xbet
 irace.vn##.g-6,.sticky-notice-bar
 
 kenh14.vn###admFullTop,#ban-top-site,.adv,[id^="adm-slot"],[id^="adm_zone"],[id^="admbackground"],[id^="zone"]
@@ -189,6 +178,7 @@ kinhtedothi.vn###component_3575,#component_3589,.aanetwork-ads-box,.image-top-fl
 kinhtedouong.vn###advWebTop
 kinhtemoitruong.vn##.banner
 kinhtenongthon.vn###col_301,#firt,.row,[class*="owl"]
+kirikuylabruja.com##.banner-chat,.btn--secondary,.catfish-banner-global
 kqxs.vn##.adsbygoogle,[class^="ads-"]
 
 lamdong.gov.vn##.imageWithLink_f315b473
@@ -311,7 +301,7 @@ thuongtruong.com.vn##[class*="adsbygoogle"]
 thuvienphapluat.vn###sp-wrapper-hovering-formats,[id^="sp-"]
 thuysanvietnam.com.vn##.ft-fanpage,.hd-cate-wrap
 thvl.vn##.home-5-col,[class*="wp-image-"],[class^="swapper-"],[id^="swapper-"]
-tienphong.vn##[class^="ad-"],[class^="sda-"],[id^="sdaMobile_"]
+tienphong.vn###sp-wrapper-hovering,[class^="ad-"],[class^="sda-"],[id^="sdaMobile_"]
 tieuthuyet.vn###sp-wrapper-hovering-format
 tinhte.vn##.pro-container
 tintuconline.com.vn###adzone39,.adsbygoolge,.vadslogo,[class^="trv-"],[class^="vmc_"],[id*="adzone"],[id*="vmcad_inview_"],[id^="Mobile_"],[id^="mashead-"],[id^="sp-wrapper-"],a[rel="nofollow noopener"],div[onclick="closeMashead(39)"],div[style="margin-bottom: 35px;"]
@@ -346,6 +336,7 @@ vikkibank.vn##[id*="banner"]
 vip.keeng.vn##.app_nhac_keeng
 vjst.vn##.c-banner-item,[id^="zone-"]
 vn-z.vn##.u-bottomFixer
+vn.beincrypto.com##.custom-button-primary,[class^="SponsoredLabel-"],[class^="banner"],[class^="parallax"]
 vnbusiness.vn##[class*="-qc"],[class*="ad-"]
 vnexpress.net###closeButtonSticky,#sis_sticky,[class^="banner_mobile_"],[class^="inner_ads"],[class^="section_ads_"],[class^="tet_ads"],[class^="txt_qc"],[id^="ads_"],[id^="banner_"]
 vnnic.vn##.pad-0-15,.pad-left-15,.skin-default,[id^="vnnic-banner-"]
