@@ -1,14 +1,11 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Description: Chặn quảng cáo
-! Updated: 21 Mar 2026 15:46
-! Version: 1.0.9
-! Checksum: 64f3bcc5c1c02872e4fc039f54b9ed31
+! Updated: 21 Mar 2026 16:03
+! Version: 1.0.10
+! Checksum: a780aa83
 ! ==================
-giaoducthudo.giaoducthoidai.vn###sp-wrapper-hovering-format
-giaoducthudo.giaoducthoidai.vn##.h-show-mobile
-giaoducthudo.giaoducthoidai.vn##.c-banner
-baoquocte.vn###pvoucher-live-container
+
 1thegioi.vn##[class*="zone-"],[class^="c-banner-"],[class^="is-"]
 
 24h.com.vn###header-24h-login-cont,.adsbygoogle,[class^="inpage_"],[id^="ADS_"],[id^="div-gpt-ad-"],[id^="div_inpage_"],[id^="sis_inpage"]
@@ -61,7 +58,7 @@ baophunuthudo.vn##.ads-item
 baophutho.vn##[class^="dadv_"]
 baoquangngai.vn##[class^="banner-"]
 baoquangtri.vn##[class^="ff"]
-baoquocte.vn###header,[class*="banner"]
+baoquocte.vn###header,#pvoucher-live-container,[class*="banner"]
 baosonla.vn##[class*="my-"],[class^="build-"],[class^="myslides-"]
 baotayninh.vn##[class*="ads-"],[class*="pb-"],[class^="ads-"]
 baothainguyen.vn##[class^="carousel-"],[class^="e"],[class^="ff"]
@@ -144,6 +141,7 @@ giacngo.vn##.picture
 giadinh.suckhoedoisong.vn###admBannerPopup,#admwrapper,.adsbygoogle,[id^="zone-"]
 giadinhonline.vn##.active,.adv,.e,[class^="exp_qc_"],[class^="qc-"],[id^="ads_"],[id^="zone-"]
 gialai.gov.vn###module82,#module90,.full-width,.widget-space
+giaoducthudo.giaoducthoidai.vn###sp-wrapper-hovering-format,.c-banner,.h-show-mobile
 giaothong.tapchixaydung.vn##[class*="qc"]
 gmobile.vn##.slide
 gocnhinphaply.nguoiduatin.vn###sp-wrapper-hovering,.adsbygoogle,.no-margin-ads
