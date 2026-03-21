@@ -1,15 +1,13 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Description: Chặn quảng cáo
-! Updated: 21 Mar 2026 12:32
-! Version: 1.0.8
+! Updated: 21 Mar 2026 15:46
+! Version: 1.0.9
+! Checksum: 64f3bcc5c1c02872e4fc039f54b9ed31
 ! ==================
 
 1thegioi.vn##[class*="zone-"],[class^="c-banner-"],[class^="is-"]
-hacom.vn##.bottom-20
-tinhocngoisao.com##.lazyloaded
-minhancomputer.com###js-buildpc-banner
-hotgear.vn##.top-banner
+
 24h.com.vn###header-24h-login-cont,.adsbygoogle,[class^="inpage_"],[id^="ADS_"],[id^="div-gpt-ad-"],[id^="div_inpage_"],[id^="sis_inpage"]
 2game.vn###bannermtop,[class^="banner-"]
 2sao.vn###adzone39,#catfish,.adsbygoolge,.vadslogo,[class^="vmc_"],[id^="Mobile_"],[id^="adzone"],[id^="mashead-"],[id^="sp-wrapper-"]
@@ -148,6 +146,7 @@ gmobile.vn##.slide
 gocnhinphaply.nguoiduatin.vn###sp-wrapper-hovering,.adsbygoogle,.no-margin-ads
 gsmarena.com###fKmVnQ,.adsbygoogle,.adv-bottom,.adv-mid,.adv-top,.amp-sticky-ad-close-button,.d-flex,.deals,.i-amphtml-sticky-ad-layout,.top-adv
 
+hacom.vn##.bottom-20
 haiphong.gov.vn##.UIAdvertisement_Default
 hanoi.gov.vn##.UIAdvertisement_Default
 hanoimoi.vn##[class^="ads_"],[class^="c-banner-"],[class^="is-"],[id^="zone-"]
@@ -158,6 +157,7 @@ hdbank.com.vn##.mobile-popup
 highspeedinternet.com###mobile-nav,.disclaimer-container,.smartbanner,.wpb_single_image
 hoanghamobile.com###popup-modal,.jquery-modal,.top-category-ads,.top-heading
 hoanhap.vn##.section-1
+hotgear.vn##.top-banner
 hsbc.com.vn###messaging-banner
 hue.gov.vn##.col-md-12
 huengaynay.vn##[class^="adv"],[class^="huetv-"],img[src="https://file.huengaynay.vn/data/0/images/2026/01/19/upload_3836/bau-cu.gif"],img[src="https://file.huengaynay.vn/data/0/images/2026/02/27/upload_3836/dh-dang-cac-cap.gif"]
@@ -204,6 +204,7 @@ mail.google.com##[id^="nav"]
 mangatooncom.vn##.detail-download-bg,.index-download-bg
 mekongasean.vn##.header-content,[class*="banner"]
 mensfolio.vn##.header-banner
+minhancomputer.com###js-buildpc-banner
 mixvale.com.br##.adsbygoogle,div[style="width: 100%; min-height: 280px; display: flex; justify-content: center; align-items: center; margin: 20px 0; background-color: transparent;"]
 mobifone.vn##.main-banner
 mobilecity.vn##[id^="sudovn-btn-"]
@@ -306,6 +307,7 @@ thuysanvietnam.com.vn##.ft-fanpage,.hd-cate-wrap
 thvl.vn##.home-5-col,[class*="wp-image-"],[class^="swapper-"],[id^="swapper-"]
 tienphong.vn###sp-wrapper-hovering,[class^="ad-"],[class^="sda-"],[id^="sdaMobile_"]
 tieuthuyet.vn###sp-wrapper-hovering-format
+tinhocngoisao.com##.lazyloaded
 tinhte.vn##.pro-container
 tintuconline.com.vn###adzone39,.adsbygoolge,.vadslogo,[class^="trv-"],[class^="vmc_"],[id*="adzone"],[id*="vmcad_inview_"],[id^="Mobile_"],[id^="mashead-"],[id^="sp-wrapper-"],a[rel="nofollow noopener"],div[onclick="closeMashead(39)"],div[style="margin-bottom: 35px;"]
 tintucvietnam.vn##.banner-header,div[style="display: block;     justify-content: center;"]
