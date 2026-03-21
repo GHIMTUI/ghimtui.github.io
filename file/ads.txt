@@ -1,13 +1,13 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Description: Chặn quảng cáo
-! Updated: 20 Mar 2026 20:07
-! Version: 1.0.7
+! Updated: 21 Mar 2026 12:32
+! Version: 1.0.8
 ! ==================
 
 1thegioi.vn##[class*="zone-"],[class^="c-banner-"],[class^="is-"]
 
-24h.com.vn##.adsbygoogle,[class^="inpage_"],[id^="ADS_"],[id^="div-gpt-ad-"],[id^="div_inpage_"],[id^="sis_inpage"]
+24h.com.vn###header-24h-login-cont,.adsbygoogle,[class^="inpage_"],[id^="ADS_"],[id^="div-gpt-ad-"],[id^="div_inpage_"],[id^="sis_inpage"]
 2game.vn###bannermtop,[class^="banner-"]
 2sao.vn###adzone39,#catfish,.adsbygoolge,.vadslogo,[class^="vmc_"],[id^="Mobile_"],[id^="adzone"],[id^="mashead-"],[id^="sp-wrapper-"]
 
@@ -185,7 +185,7 @@ lamdong.gov.vn##.imageWithLink_f315b473
 langson.gov.vn##.boun-media,.col-sm-4
 langsontv.vn###socials,.navbar-right>ul,[class^="box_"],[id^="advertise_"]
 laocai.gov.vn##.UIMultiFunction_Default
-laodong.vn###admbackground-adm,#main-footer-fix-bottom,.adsbygoogle,.i-amphtml-sticky-ad-layout,.notification-header__msg,[id^="sp-"]
+laodong.vn###admbackground-adm,#main-footer-fix-bottom,.adsbygoogle,.i-amphtml-sticky-ad-layout,.m-top-10,.notification-header__msg,.sp-infooter-mb-google-ads,[id^="sp-"]
 laodongdoanthe.vn##[class*="ads"],[class*="banner"a]
 lapphap.vn##.section>a
 lazada.vn###J_Banner
@@ -360,10 +360,8 @@ xemtivitop.com###HTML8
 xemtv.net##.adsbygoogle
 xemtv.us###med_rec_banner2,.close-ad-btn,.float-ck,div[data-widget-id="1433589"]
 xemtvonline.com###bottom650,.close-ad-btn
-www.24h.com.vn###header-24h-login-cont
-laodong.vn##.sp-infooter-mb-google-ads
-laodong.vn##.m-top-10
+
 youtube.com##.ytmCompanionSlotRendererHost,.ytmPaidContentOverlayHost,[class^="rich-section-"],[class^="ytmBackstagePost"]
 
 zingmp3.vn##[class^="z-btn-open"]
-znews.vn##.z2-inpage-wrapper,[class^="Okv"],[class^="follow"],[id^="Okv"],[id^="ZingNews"],[id^="Zingnews"],[id^="follow"] 
+znews.vn##.z2-inpage-wrapper,[class^="Okv"],[class^="follow"],[id^="Okv"],[id^="ZingNews"],[id^="Zingnews"],[id^="follow"]
