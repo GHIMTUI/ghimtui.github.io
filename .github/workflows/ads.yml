@@ -51,7 +51,7 @@ jobs:
           other_rules = set()
 
           for line in map(str.strip, lines):
-              # Bỏ qua các dòng comment hệ thống và checksum cũ
+              # Bỏ qua các dòng trống, meta info cũ và comments
               if not line or any(kw in line for kw in exclude_keywords) or line.startswith(('[', '#', '!')):
                   continue
 
@@ -74,19 +74,20 @@ jobs:
           all_final_rules.extend(list(other_rules))
           all_final_rules.sort()
 
-          # --- BƯỚC MỚI: TÍNH TOÁN CHECKSUM ---
-          # Gom tất cả các rule lại thành 1 chuỗi để hash
-          rules_string = "\n".join(all_final_rules)
-          checksum = hashlib.md5(rules_string.encode('utf-8')).hexdigest()
+          # 4. Tính toán Checksum cho phần nội dung quy tắc (Rules)
+          # Checksum thường được tính trên các dòng quy tắc thực tế (không tính header)
+          rules_content = "\n".join(all_final_rules)
+          # Loại bỏ khoảng trắng thừa để checksum ổn định hơn nếu cần
+          checksum_val = hashlib.md5(rules_content.encode('utf-8')).hexdigest()[:12] # Lấy 12 ký tự đầu thường dùng
 
-          # 4. Xây dựng nội dung file
+          # 5. Xây dựng nội dung file cuối cùng
           final_output = [
               "[Adblock Plus 2.0]",
               "! Title: STOP ADS",
               "! Description: Chặn quảng cáo",
               f"! Updated: {current_time}",
               f"! Version: {new_version}",
-              f"! Checksum: {checksum}",
+              f"! Checksum: {checksum_val}",
               "! ==================",
               "" 
           ]
@@ -102,7 +103,7 @@ jobs:
               final_output.append(rule)
               last_char = first_char
 
-          # 5. Ghi file
+          # 6. Ghi file
           file_path.write_text("\n".join(final_output), encoding='utf-8')
 
       - name: Commit and Push changes
@@ -110,7 +111,7 @@ jobs:
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git add file/ads.txt
-          # Lấy version để commit message trông chuyên nghiệp hơn
-          VERSION=$(grep '! Version:' file/ads.txt | cut -d' ' -f3)
-          git commit -m "chore: update ads.txt to version $VERSION [skip ci]" || echo "No changes to commit"
-          git push 
+          # Lấy version mới để log commit message
+          NEW_VER=$(grep '! Version:' file/ads.txt | cut -d' ' -f3)
+          git commit -m "chore: update ads.txt to version $NEW_VER [skip ci]" || echo "No changes to commit"
+          git push
