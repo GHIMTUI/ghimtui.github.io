@@ -5,7 +5,10 @@
 ! Version: 1.0.9
 ! Checksum: 64f3bcc5c1c02872e4fc039f54b9ed31
 ! ==================
-
+giaoducthudo.giaoducthoidai.vn###sp-wrapper-hovering-format
+giaoducthudo.giaoducthoidai.vn##.h-show-mobile
+giaoducthudo.giaoducthoidai.vn##.c-banner
+baoquocte.vn###pvoucher-live-container
 1thegioi.vn##[class*="zone-"],[class^="c-banner-"],[class^="is-"]
 
 24h.com.vn###header-24h-login-cont,.adsbygoogle,[class^="inpage_"],[id^="ADS_"],[id^="div-gpt-ad-"],[id^="div_inpage_"],[id^="sis_inpage"]
