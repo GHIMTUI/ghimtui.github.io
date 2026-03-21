@@ -7,7 +7,14 @@
 ! ==================
 
 1thegioi.vn##[class*="zone-"],[class^="c-banner-"],[class^="is-"]
-
+www.thvli.vn##.mobile-install-app
+nokiasaithanh.com###voucher-box
+bongdanet.mobi##.img-adsBanner-bdn
+bongdanet.mobi##[id^="ads_banner_bdn_"]
+bongdanet.mobi##.w-menu-datcuoc
+bongdanet.mobi##.content-home-top
+www.biggcreative.com##.catfish-banner-global
+uniscore.com##.top-0
 24h.com.vn###header-24h-login-cont,.adsbygoogle,[class^="inpage_"],[id^="ADS_"],[id^="div-gpt-ad-"],[id^="div_inpage_"],[id^="sis_inpage"]
 2game.vn###bannermtop,[class^="banner-"]
 2sao.vn###adzone39,#catfish,.adsbygoolge,.vadslogo,[class^="vmc_"],[id^="Mobile_"],[id^="adzone"],[id^="mashead-"],[id^="sp-wrapper-"]
