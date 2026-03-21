@@ -7,7 +7,11 @@
 ! ==================
 
 1thegioi.vn##[class*="zone-"],[class^="c-banner-"],[class^="is-"]
-
+phimmoiz.ac##.w-fit
+phimmoiz.ac##.bg-orange-500
+phimmoiz.ac##.z-[9999]
+phimmoiz.ac##.no-ads-under
+www.momo.vn##.container-topbar
 24h.com.vn###header-24h-login-cont,.adsbygoogle,[class^="inpage_"],[id^="ADS_"],[id^="div-gpt-ad-"],[id^="div_inpage_"],[id^="sis_inpage"]
 2game.vn###bannermtop,[class^="banner-"]
 2sao.vn###adzone39,#catfish,.adsbygoolge,.vadslogo,[class^="vmc_"],[id^="Mobile_"],[id^="adzone"],[id^="mashead-"],[id^="sp-wrapper-"]
