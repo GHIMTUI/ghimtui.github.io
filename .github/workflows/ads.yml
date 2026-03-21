@@ -78,7 +78,7 @@ jobs:
           # Checksum thường được tính trên các dòng quy tắc thực tế (không tính header)
           rules_content = "\n".join(all_final_rules)
           # Loại bỏ khoảng trắng thừa để checksum ổn định hơn nếu cần
-          checksum_val = hashlib.md5(rules_content.encode('utf-8')).hexdigest()[:15] # Lấy 15 ký tự đầu thường dùng
+          checksum_val = hashlib.md5(rules_content.encode('utf-8')).hexdigest()[:18] # Lấy 18 ký tự đầu thường dùng
 
           # 5. Xây dựng nội dung file cuối cùng
           final_output = [
