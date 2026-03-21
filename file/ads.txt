@@ -1,17 +1,13 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Description: Chặn quảng cáo
-! Updated: 21 Mar 2026 16:03
-! Version: 1.0.10
-! Checksum: a780aa83
+! Updated: 21 Mar 2026 16:12
+! Version: 1.0.11
+! Checksum: a65b4db78ad0590
 ! ==================
 
 1thegioi.vn##[class*="zone-"],[class^="c-banner-"],[class^="is-"]
-phimmoiz.ac##.w-fit
-phimmoiz.ac##.bg-orange-500
-phimmoiz.ac##.z-[9999]
-phimmoiz.ac##.no-ads-under
-www.momo.vn##.container-topbar
+
 24h.com.vn###header-24h-login-cont,.adsbygoogle,[class^="inpage_"],[id^="ADS_"],[id^="div-gpt-ad-"],[id^="div_inpage_"],[id^="sis_inpage"]
 2game.vn###bannermtop,[class^="banner-"]
 2sao.vn###adzone39,#catfish,.adsbygoolge,.vadslogo,[class^="vmc_"],[id^="Mobile_"],[id^="adzone"],[id^="mashead-"],[id^="sp-wrapper-"]
@@ -215,6 +211,7 @@ mobifone.vn##.main-banner
 mobilecity.vn##[id^="sudovn-btn-"]
 moit.gov.vn###module9
 moitruong.net.vn##.adsbygoogle,.c-banner
+momo.vn##.container-topbar
 motthegioi.vn##.adsbygoogle
 mucnews.com##.e3lan
 
@@ -242,6 +239,7 @@ otosaigon.com###side-ads-mid-3,[class^="ads-"]
 perplexity.ai##.animate-in
 petrotimes.vn##.petrotimes-qc,[id^="ads-"]
 phaply.net.vn##[class^="qc_"]
+phimmoiz.ac##.bg-orange-500,.no-ads-under,.w-fit,.z-[9999]
 phunuonline.com.vn##.adsbygoogle,[id^="banner_"]
 plo.vn##[id^="Mobile"],[id^="adsMobile"],[id^="bn-zone"],[id^="zone"],div[style="margin: 10px 0px;"]
 
