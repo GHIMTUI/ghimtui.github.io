@@ -1,15 +1,13 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Description: Chặn quảng cáo
-! Updated: 21 Mar 2026 16:12
-! Version: 1.0.11
-! Checksum: a65b4db78ad0590
+! Updated: 21 Mar 2026 21:49
+! Version: 1.0.12
+! Checksum: 14d73657bb35a3b4e
 ! ==================
 
 1thegioi.vn##[class*="zone-"],[class^="c-banner-"],[class^="is-"]
-nhadautu.vn##.e
-www.brandsvietnam.com##.my-3
-www.brandsvietnam.com###overlay-ad
+
 24h.com.vn###header-24h-login-cont,.adsbygoogle,[class^="inpage_"],[id^="ADS_"],[id^="div-gpt-ad-"],[id^="div_inpage_"],[id^="sis_inpage"]
 2game.vn###bannermtop,[class^="banner-"]
 2sao.vn###adzone39,#catfish,.adsbygoolge,.vadslogo,[class^="vmc_"],[id^="Mobile_"],[id^="adzone"],[id^="mashead-"],[id^="sp-wrapper-"]
@@ -78,6 +76,7 @@ bnews.vn##.aanetwork-flyicon-box,.adsbygoogle,[id^="divAdmicro_"]
 bom.so##.ads,.adsbygoogle
 bongda24h.vn##.ads-center,.adsbygoogle,.adscontent
 bongdaplus.vn###ADFT,#ADMTOP,.clz
+brandsvietnam.com###overlay-ad,.my-3
 
 cafebiz.vn###top-logo,[id^="adm-"],[id^="admFull"],[id^="adm_"],[id^="ban-"],[id^="zone-"]
 cafef.vn###admbackground,[id^="adm-"],[id^="admFull"],[id^="adm_"],[id^="ban-"],[id^="top-"],[id^="zone-"],img[src="https://adi.admicro.vn/adx/adxlogo-1.png"]
@@ -229,6 +228,7 @@ nguoiduatin.vn##.box-aside,.ndt-ads
 nguoiquansat.vn##.c-banner,.c-banner-item__inner
 nhac.vn###footer-scroll,.tbl-link
 nhachannuoi.vn###black-studio-tinymce-13,.menu-pr,.quangcao,[class*="banner"]
+nhadautu.vn##.e
 nhanhoa.com###click_download_app,.shake_img_close
 nhipsongkinhdoanh.vn###top-logo,.container-fluid,[id^="admFull"],[id^="adsWeb"],[id^="ban-"],[id^="zone"]
 nld.com.vn###top-logo,.ads-top,.mb-20,.notifi-list,[class^="mb-"],[id^="adm-zone"],[id^="admFull"],[id^="admbackground"],[id^="ban-top-site"],[id^="sp-"],[id^="zone"],img[src="https://static.mediacdn.vn/nld.com.vn/image/Banner_mobile_xuan.png"],img[src="https://static.mediacdn.vn/nld/images/e-paper.png"]
