@@ -19,6 +19,7 @@ jobs:
         shell: python
         run: |
           import re
+          import hashlib
           from pathlib import Path
           from collections import defaultdict
           from datetime import datetime, timedelta, timezone
@@ -43,13 +44,14 @@ jobs:
           current_time = datetime.now(tz_hcm).strftime("%d %b %Y %H:%M")
           
           bad_pfx = r'\b(www\.|m\.|dev\.|staging\.|amp\.|api\.|s\.)'
-          exclude_keywords = ["Block:", "Time:", "#tổng số", "#cập nhật"]
+          exclude_keywords = ["Block:", "Time:", "#tổng số", "#cập nhật", "Checksum:"]
           
           lines = old_content.splitlines()
           grouped_rules = defaultdict(set)
           other_rules = set()
 
           for line in map(str.strip, lines):
+              # Bỏ qua các dòng comment hệ thống và checksum cũ
               if not line or any(kw in line for kw in exclude_keywords) or line.startswith(('[', '#', '!')):
                   continue
 
@@ -72,13 +74,19 @@ jobs:
           all_final_rules.extend(list(other_rules))
           all_final_rules.sort()
 
-          # 4. Xây dựng nội dung file với phân nhóm (A-Z, 0-9)
+          # --- BƯỚC MỚI: TÍNH TOÁN CHECKSUM ---
+          # Gom tất cả các rule lại thành 1 chuỗi để hash
+          rules_string = "\n".join(all_final_rules)
+          checksum = hashlib.md5(rules_string.encode('utf-8')).hexdigest()
+
+          # 4. Xây dựng nội dung file
           final_output = [
               "[Adblock Plus 2.0]",
               "! Title: STOP ADS",
               "! Description: Chặn quảng cáo",
               f"! Updated: {current_time}",
               f"! Version: {new_version}",
+              f"! Checksum: {checksum}",
               "! ==================",
               "" 
           ]
@@ -86,9 +94,8 @@ jobs:
           last_char = None
           for rule in all_final_rules:
               first_char = rule[0].lower()
-              if not first_char.isalnum(): first_char = '#' # Cho các ký tự đặc biệt
+              if not first_char.isalnum(): first_char = '#'
               
-              # Nếu chuyển nhóm (ví dụ từ A sang B, hoặc số sang chữ), thêm dòng trống
               if last_char is not None and first_char != last_char:
                   final_output.append("")
               
@@ -103,5 +110,7 @@ jobs:
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git add file/ads.txt
-          git commit -m "chore: update ads.txt to version $(grep '! Version:' file/ads.txt | cut -d' ' -f3) [skip ci]" || echo "No changes to commit"
-          git push
+          # Lấy version để commit message trông chuyên nghiệp hơn
+          VERSION=$(grep '! Version:' file/ads.txt | cut -d' ' -f3)
+          git commit -m "chore: update ads.txt to version $VERSION [skip ci]" || echo "No changes to commit"
+          git push 
