@@ -1,39 +1,12 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Description: Chặn quảng cáo
-! Updated: 22 Mar 2026 10:32
-! Version: 1.0.15
-! Checksum: 94e3059c7d8de8a8c
+! Updated: 22 Mar 2026 13:46
+! Version: 1.0.16
+! Checksum: 4654df5f0db5034d1
 ! ==================
 
 1thegioi.vn##[class*="zone-"],[class^="c-banner-"],[class^="is-"]
-lamdong.edu.vn##.slogan_img
-lamdong.edu.vn##.sidebar-link
-gddt.daklak.gov.vn###sidebar-left
-quangtri.edu.vn##.full-width
-quangtri.edu.vn##.list-links
-hatinh.edu.vn##.image-list-album
-thanhhoa.edu.vn##.col-md-3
-thanhhoa.edu.vn##.w-download
-hungyen.edu.vn##.link-slide
-bacninh.edu.vn##.widget
-bacninh.edu.vn##.panel-heading
-bacninh.edu.vn##.widget-space
-langson.edu.vn##.image-list-album
-langson.edu.vn##.widget
-langson.edu.vn##.panel-heading
-phutho.edu.vn##.w-download
-thainguyen.edu.vn##.full-width
-thainguyen.edu.vn##.w-download
-sogiaoduc.caobang.gov.vn##.AdvertContent
-sogddtsonla.edu.vn##.image-list-album
-sogddtsonla.edu.vn##.widget
-sogddtsonla.edu.vn###frameBoundB59c0a1e91bcfc
-laocai.edu.vn##.UIMultiFunction_Default
-laichau.edu.vn##.full-width
-laichau.edu.vn###module50
-laichau.edu.vn###frameBoundB60e7fe5366441
-laichau.edu.vn###frameBoundB5c9c2db5333a9
 
 24h.com.vn###header-24h-login-cont,.adsbygoogle,[class^="inpage_"],[id^="ADS_"],[id^="div-gpt-ad-"],[id^="div_inpage_"],[id^="sis_inpage"]
 2game.vn###bannermtop,[class^="banner-"]
@@ -58,6 +31,7 @@ autopro.com.vn###admFullTop,#admbackground,#ban-size-top,.adsbygoogle,[id^="adm_
 babla.vn###ad_topslot
 baca-bank.vn###slider
 bachlongstore.vn###vnt-banner,.tpproductma
+bacninh.edu.vn##.panel-heading,.widget,.widget-space
 bacninh.gov.vn##.adv-containers
 banduong.vn##.active
 baobacninhtv.vn##[class*="group-30-"],[class*="group-4-"]
@@ -170,6 +144,7 @@ gamehub.vn###smartbanner
 gamek.vn##.ads-top,.adsbygoogle,[id^="admbackground"],[id^="banner-"],[id^="placement-"],[id^="share-"],[id^="slot-"],[id^="zone-"]
 gameorb.com.vn##[id^="popmake-"],[id^="pum-"]
 gametoon.mobi###toon-adsense-ads,.ads-bg,.adsbygoogle
+gddt.daklak.gov.vn###sidebar-left
 gearvn.com###popup-promotion,.article-flashsale,.banner-effect
 gemini.google.com##.app-upsell-banner
 genk.vn##.box-category-bottom,[id^="adm-"],[id^="admFull"],[id^="adm_"],[id^="admbackground"],[id^="ban-"],[id^="top-"],[id^="zone-"]
@@ -189,6 +164,7 @@ hanoi.gov.vn##.UIAdvertisement_Default
 hanoimoi.vn##[class^="ads_"],[class^="c-banner-"],[class^="is-"],[id^="zone-"]
 hanoionline.vn##.banner
 happyvietnam.vnanet.vn##.background-image
+hatinh.edu.vn##.image-list-album
 hd.xemtv.net###med_rec_banner2,.quangcaos,div[data-widget-id="1771082"],div[data-widget-id="1886588"],img[src="/banner/F168-Sidebar.gif"]
 hdbank.com.vn##.mobile-popup
 highspeedinternet.com###mobile-nav,.disclaimer-container,.smartbanner,.wpb_single_image
@@ -200,6 +176,7 @@ hue.gov.vn##.col-md-12
 huengaynay.vn##[class^="adv"],[class^="huetv-"],img[src="https://file.huengaynay.vn/data/0/images/2026/01/19/upload_3836/bau-cu.gif"],img[src="https://file.huengaynay.vn/data/0/images/2026/02/27/upload_3836/dh-dang-cac-cap.gif"]
 huetv.com.vn##.part31>p,[class*="banner"]
 hungmobile.vn##.b-modal,.banner,.product_adv,[class^="popup-"]
+hungyen.edu.vn##.link-slide
 hungyen.gov.vn##.full-width
 hungyentv.vn##[id^="ads_"],[id^="advertise_"]
 
@@ -221,9 +198,13 @@ kinhtenongthon.vn###col_301,#firt,.row,[class*="owl"]
 kirikuylabruja.com##.banner-chat,.btn--secondary,.catfish-banner-global
 kqxs.vn##.adsbygoogle,[class^="ads-"]
 
+laichau.edu.vn###frameBoundB5c9c2db5333a9,#frameBoundB60e7fe5366441,#module50,.full-width
+lamdong.edu.vn##.sidebar-link,.slogan_img
 lamdong.gov.vn##.imageWithLink_f315b473
+langson.edu.vn##.image-list-album,.panel-heading,.widget
 langson.gov.vn##.boun-media,.col-sm-4
 langsontv.vn###socials,.navbar-right>ul,[class^="box_"],[id^="advertise_"]
+laocai.edu.vn##.UIMultiFunction_Default
 laocai.gov.vn##.UIMultiFunction_Default
 laodong.vn###admbackground-adm,#main-footer-fix-bottom,.adsbygoogle,.i-amphtml-sticky-ad-layout,.m-top-10,.notification-header__msg,.sp-infooter-mb-google-ads,[id^="sp-"]
 laodongdoanthe.vn##[class*="ads"],[class*="banner"a]
@@ -283,12 +264,14 @@ phaply.net.vn##[class^="qc_"]
 phimmoiz.ac##.bg-orange-500,.no-ads-under,.w-fit,.z-[9999]
 phimsex6s.com###bottomBannerContainer,#popBannerAds,#topBannerContainer
 phunuonline.com.vn##.adsbygoogle,[id^="banner_"]
+phutho.edu.vn##.w-download
 plo.vn##[id^="Mobile"],[id^="adsMobile"],[id^="bn-zone"],[id^="zone"],div[style="margin: 10px 0px;"]
 
 qdnd.vn##[class^="-banner"],[class^="banner"],[class^="banner-"],[class^="cate-"]
 qpvn.vn###top-bar
 quangngai.gov.vn###module11,#module32,#module73,#module74,.border-home-vach,.full-width,.links-item
 quangninh.gov.vn##.col-sm-12
+quangtri.edu.vn##.full-width,.list-links
 quantrimang.com##.sidebar,[class^="ads"],[id^="adindex"],[id^="adsposttop"],[id^="adunderarticle"],[id^="articleads"],[id^="mrc"]
 quocphongthudo.vn###module21,#module24,.full-width
 
@@ -301,6 +284,8 @@ sexdep.blog###bottomBannerContainer,#popBannerAds,#topBannerContainer,#underPlay
 sggp.org.vn###sdaMobile_SdaTop,.ls-is-cached,a[rel="noopener"]
 shop.vietnamobile.com.vn##.img,.laberUrl
 sinhthainongnghiep.net.vn##[class^="qc_"]
+sogddtsonla.edu.vn###frameBoundB59c0a1e91bcfc,.image-list-album,.widget
+sogiaoduc.caobang.gov.vn##.AdvertContent
 soha.vn##[class^="div-"],[id^="adm-"],[id^="admFull"],[id^="ban-"],[id^="zone-"]
 sohuutritue.net.vn##.e,[id^="ads_"],[id^="zone-"]
 sonla.gov.vn##.UIMultiFunction_Default
@@ -325,7 +310,9 @@ tayninh.gov.vn##.UIAdvertisement_Default
 techlade.vn##[class*="banner"]
 technave.com##.ad-container
 techz.vn###sp-wrapper-hovering,.header_ads
+thainguyen.edu.vn##.full-width,.w-download
 thainguyen.gov.vn##.UIAdvertisement_Default
+thanhhoa.edu.vn##.col-md-3,.w-download
 thanhnien.vn##.asd-headt,[id^="sp"],[id^="zone"]
 thdt.vn##.blockBanner,[class*="col-md-"],[class^="slick-"]
 thegioididong.com##.popup-banner
