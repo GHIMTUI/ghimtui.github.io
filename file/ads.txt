@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Description: Chặn quảng cáo
-! Updated: 22 Mar 2026 10:05
-! Version: 1.0.14
-! Checksum: 9258ea92f0a75230ba
+! Updated: 22 Mar 2026 10:32
+! Version: 1.0.15
+! Checksum: 94e3059c7d8de8a8c
 ! ==================
 
 1thegioi.vn##[class*="zone-"],[class^="c-banner-"],[class^="is-"]
@@ -129,11 +129,9 @@ doisongphapluat.com.vn##.sys-ads,[id^="sp-"]
 doisongvietnam.vn##.lazy
 dongnai.gov.vn##.inner-home
 dongthap.edu.vn##.component-image
+download.com.vn###adrightspecial,#adsrightspecial,.adsbygoogle,.in-article
 duckduckgo.com##.js-atb-banner,[class^="js-"],[class^="set-browser-"]
-download.com.vn###adsrightspecial
-download.com.vn##.adsbygoogle
-download.com.vn###adrightspecial
-download.com.vn##.in-article
+
 emc-directory.com###mobileBottomAd
 eva.vn##[class^="banr-"],[id*="banner"],[id^="ADS"],[id^="spanTextAds_"]
 
