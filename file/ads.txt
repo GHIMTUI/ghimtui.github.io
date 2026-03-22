@@ -5,6 +5,33 @@
 ! Version: 1.0.13
 ! Checksum: bd66194e92aa54c
 ! ==================
+gemini.google.com##.app-upsell-banner
+xphimsex.net##.xx-ads
+xphimmoi1.com##.no-gutters
+phimsex6s.com###popBannerAds
+phimsex6s.com###topBannerContainer
+phimsex6s.com###bottomBannerContainer
+sexdep.blog###popBannerAds
+sexdep.blog###bottomBannerContainer
+sexdep.blog###topBannerContainer
+||man88.la
+||s.shopee.vn
+sexdep.blog###underPlayerAdsContainer
+duckduckgo.com##.js-atb-banner
+missav.run##.banner-box
+missav.fans###ts-main-banner-wrapper
+missav.fans##[class^="space-y-"]
+missav123.com##[class^="root--"]
+tiki.vn###VIP_BUNDLE
+camau.edu.vn##.Content
+camau.edu.vn##.UIWebLink_Weblink
+angiang.edu.vn##.widget
+angiang.edu.vn##.w-download
+angiang.edu.vn##.image-list-album
+dongthap.edu.vn##.component-image
+vinhlong.edu.vn##.widget
+cantho.edu.vn##.widget
+cantho.edu.vn##.image-list-album
 
 1thegioi.vn##[class*="zone-"],[class^="c-banner-"],[class^="is-"]
 
