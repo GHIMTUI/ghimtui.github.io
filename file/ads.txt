@@ -7,6 +7,33 @@
 ! ==================
 
 1thegioi.vn##[class*="zone-"],[class^="c-banner-"],[class^="is-"]
+lamdong.edu.vn##.slogan_img
+lamdong.edu.vn##.sidebar-link
+gddt.daklak.gov.vn###sidebar-left
+quangtri.edu.vn##.full-width
+quangtri.edu.vn##.list-links
+hatinh.edu.vn##.image-list-album
+thanhhoa.edu.vn##.col-md-3
+thanhhoa.edu.vn##.w-download
+hungyen.edu.vn##.link-slide
+bacninh.edu.vn##.widget
+bacninh.edu.vn##.panel-heading
+bacninh.edu.vn##.widget-space
+langson.edu.vn##.image-list-album
+langson.edu.vn##.widget
+langson.edu.vn##.panel-heading
+phutho.edu.vn##.w-download
+thainguyen.edu.vn##.full-width
+thainguyen.edu.vn##.w-download
+sogiaoduc.caobang.gov.vn##.AdvertContent
+sogddtsonla.edu.vn##.image-list-album
+sogddtsonla.edu.vn##.widget
+sogddtsonla.edu.vn###frameBoundB59c0a1e91bcfc
+laocai.edu.vn##.UIMultiFunction_Default
+laichau.edu.vn##.full-width
+laichau.edu.vn###module50
+laichau.edu.vn###frameBoundB60e7fe5366441
+laichau.edu.vn###frameBoundB5c9c2db5333a9
 
 24h.com.vn###header-24h-login-cont,.adsbygoogle,[class^="inpage_"],[id^="ADS_"],[id^="div-gpt-ad-"],[id^="div_inpage_"],[id^="sis_inpage"]
 2game.vn###bannermtop,[class^="banner-"]
