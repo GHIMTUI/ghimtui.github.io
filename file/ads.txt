@@ -7,6 +7,15 @@
 ! ==================
 
 1thegioi.vn##[class*="zone-"],[class^="c-banner-"],[class^="is-"]
+lecourrier.vn##.top-adv-pos
+m.baoquankhu1.vn##.hot_top_content
+quankhu2.vn##.advrtise0
+quankhu3.vn###banner0
+baoquankhu4.com.vn###whole-page
+
+baoquankhu5.vn##.ads_image_phone
+baoquankhu5.vn##.jeg_sticky_sidebar
+baoquankhu7.vn##.ml50
 
 24h.com.vn###header-24h-login-cont,.adsbygoogle,[class^="inpage_"],[id^="ADS_"],[id^="div-gpt-ad-"],[id^="div_inpage_"],[id^="sis_inpage"]
 2game.vn###bannermtop,[class^="banner-"]
