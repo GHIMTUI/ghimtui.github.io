@@ -1,21 +1,12 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Description: Chặn quảng cáo
-! Updated: 23 Mar 2026 14:06
-! Version: 1.0.17
-! Checksum: b2d2508d4a39181fb
+! Updated: 23 Mar 2026 14:30
+! Version: 1.0.18
+! Checksum: 4eda033b48c52b492
 ! ==================
 
 1thegioi.vn##[class*="zone-"],[class^="c-banner-"],[class^="is-"]
-lecourrier.vn##.top-adv-pos
-m.baoquankhu1.vn##.hot_top_content
-quankhu2.vn##.advrtise0
-quankhu3.vn###banner0
-baoquankhu4.com.vn###whole-page
-
-baoquankhu5.vn##.ads_image_phone
-baoquankhu5.vn##.jeg_sticky_sidebar
-baoquankhu7.vn##.ml50
 
 24h.com.vn###header-24h-login-cont,.adsbygoogle,[class^="inpage_"],[id^="ADS_"],[id^="div-gpt-ad-"],[id^="div_inpage_"],[id^="sis_inpage"]
 2game.vn###bannermtop,[class^="banner-"]
@@ -70,6 +61,10 @@ baophunuthudo.vn##.ads-item
 baophutho.vn##[class^="dadv_"]
 baoquangngai.vn##[class^="banner-"]
 baoquangtri.vn##[class^="ff"]
+baoquankhu1.vn##.hot_top_content
+baoquankhu4.com.vn###whole-page
+baoquankhu5.vn##.ads_image_phone,.jeg_sticky_sidebar
+baoquankhu7.vn##.ml50
 baoquocte.vn###header,#pvoucher-live-container,[class*="banner"]
 baosonla.vn##[class*="my-"],[class^="build-"],[class^="myslides-"]
 baotayninh.vn##[class*="ads-"],[class*="pb-"],[class^="ads-"]
@@ -229,6 +224,7 @@ laodong.vn###admbackground-adm,#main-footer-fix-bottom,.adsbygoogle,.i-amphtml-s
 laodongdoanthe.vn##[class*="ads"],[class*="banner"a]
 lapphap.vn##.section>a
 lazada.vn###J_Banner
+lecourrier.vn##.top-adv-pos
 leeapk.com###stickyAd,.ads-banner
 letemsvetemapplem.eu###ad_native_hp_loop_mob2,#ad_native_single_popular,.adsbygoogle,.headerbanner-wrapper
 logos.fandom.com##[class^="top-"],[class^="top_"],[id^="top_"]
@@ -292,6 +288,8 @@ qpvn.vn###top-bar
 quangngai.gov.vn###module11,#module32,#module73,#module74,.border-home-vach,.full-width,.links-item
 quangninh.gov.vn##.col-sm-12
 quangtri.edu.vn##.full-width,.list-links
+quankhu2.vn##.advrtise0
+quankhu3.vn###banner0
 quanlynhanuoc.vn##.widget_text
 quantrimang.com##.sidebar,[class^="ads"],[id^="adindex"],[id^="adsposttop"],[id^="adunderarticle"],[id^="articleads"],[id^="mrc"]
 quocphongthudo.vn###module21,#module24,.full-width
