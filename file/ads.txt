@@ -5,6 +5,35 @@
 ! Version: 1.0.16
 ! Checksum: 4654df5f0db5034d1
 ! ==================
+htvc.com.vn##.swal2-container
+www.bkns.vn##.tg_popup_slide_imgthong_bao
+langngheviet.com.vn##.hna-qc-full-center
+baodauthau.vn###adsMobile_AdsTop
+anhp.vn##.right-detail
+tapchigiaoduc.edu.vn##.xs-h350
+tapchigiaoduc.edu.vn##.widget-add
+tapchigiaoduc.edu.vn##.slick-dotted
+kinhtevadubao.vn##.banner
+tapchiketoankiemtoan.vn##.exp_qc_share
+tapchimoitruong.vn##.sidebar-widget
+www.quanlynhanuoc.vn##.widget_text
+doanhnhansaigon.vn##.is-custom-size
+tapchimythuat.vn##[id^="row-"]
+tapchisinhhoc.com###sidebar
+doanhnhansaigon.vn##.c-featured-box__right
+tapchicand.gov.vn##.img-fluid
+dep.com.vn##.ad-widget--category-top
+tapchiyhoctphcm.vn##.align-items-center
+tapchiyhoctphcm.vn##.border
+bienvietnam.vn##.row-height
+bienvietnam.vn##.sdt-image
+bienvietnam.vn##[class^="vc_custom_"]
+truyennhiemvietnam.vn##.index-card
+thesaigontimes.vn###admbackground
+danchuphapluat.vn##.__ads_click
+kienthucchiase.com###sp-wrapper-hovering-format
+tusach.vn###sp-wrapper-hovering-format
+nguoixaydung.com.vn##.col-md-3
 
 1thegioi.vn##[class*="zone-"],[class^="c-banner-"],[class^="is-"]
 
