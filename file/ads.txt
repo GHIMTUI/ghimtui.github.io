@@ -7,7 +7,16 @@
 ! ==================
 
 1thegioi.vn##[class*="zone-"],[class^="c-banner-"],[class^="is-"]
-
+webthethao.vn##.build-advertisements,.ads-block
+vfv.org.vn##.content_graybg
+vfv.org.vn##.content_colorbg
+thethao.sggp.org.vn###oa-360-1774314000422_iru3nrvc7
+thethao.sggp.org.vn###sdaMobile_SdaTop,#ban-site-top
+thethao.sggp.org.vn##[id^="oa-360-"],.adsbygoogle
+nnmt.net.vn##.box-banner-fixd
+nnmt.net.vn##.ads-top-mobile
+nguoihanoi.vn##.c-banner-item
+sachtruyen.com.vn###sp-wrapper-hovering-format
 24h.com.vn###header-24h-login-cont,.adsbygoogle,[class^="inpage_"],[id^="ADS_"],[id^="div-gpt-ad-"],[id^="div_inpage_"],[id^="sis_inpage"]
 2game.vn###bannermtop,[class^="banner-"]
 2sao.vn###adzone39,#catfish,.adsbygoolge,.vadslogo,[class^="vmc_"],[id^="Mobile_"],[id^="adzone"],[id^="mashead-"],[id^="sp-wrapper-"]
