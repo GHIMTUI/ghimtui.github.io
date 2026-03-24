@@ -1,22 +1,13 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Description: Chặn quảng cáo
-! Updated: 23 Mar 2026 14:30
-! Version: 1.0.18
-! Checksum: 4eda033b48c52b492
+! Updated: 24 Mar 2026 18:28
+! Version: 1.0.19
+! Checksum: 88237193ec69
 ! ==================
 
 1thegioi.vn##[class*="zone-"],[class^="c-banner-"],[class^="is-"]
-webthethao.vn##.build-advertisements,.ads-block
-vfv.org.vn##.content_graybg
-vfv.org.vn##.content_colorbg
-thethao.sggp.org.vn###oa-360-1774314000422_iru3nrvc7
-thethao.sggp.org.vn###sdaMobile_SdaTop,#ban-site-top
-thethao.sggp.org.vn##[id^="oa-360-"],.adsbygoogle
-nnmt.net.vn##.box-banner-fixd
-nnmt.net.vn##.ads-top-mobile
-nguoihanoi.vn##.c-banner-item
-sachtruyen.com.vn###sp-wrapper-hovering-format
+
 24h.com.vn###header-24h-login-cont,.adsbygoogle,[class^="inpage_"],[id^="ADS_"],[id^="div-gpt-ad-"],[id^="div_inpage_"],[id^="sis_inpage"]
 2game.vn###bannermtop,[class^="banner-"]
 2sao.vn###adzone39,#catfish,.adsbygoolge,.vadslogo,[class^="vmc_"],[id^="Mobile_"],[id^="adzone"],[id^="mashead-"],[id^="sp-wrapper-"]
@@ -268,6 +259,7 @@ nghenhinvietnam.vn##.adsbygoogle
 nghiencuu.tapchikinhtetaichinh.vn##[id^="qc-"]
 nguoidothi.net.vn##.dvMarTop1
 nguoiduatin.vn##.box-aside,.ndt-ads
+nguoihanoi.vn##.c-banner-item
 nguoiquansat.vn##.c-banner,.c-banner-item__inner
 nguoixaydung.com.vn##.col-md-3
 nhac.vn###footer-scroll,.tbl-link
@@ -276,6 +268,7 @@ nhadautu.vn##.e
 nhanhoa.com###click_download_app,.shake_img_close
 nhipsongkinhdoanh.vn###top-logo,.container-fluid,[id^="admFull"],[id^="adsWeb"],[id^="ban-"],[id^="zone"]
 nld.com.vn###top-logo,.ads-top,.mb-20,.notifi-list,[class^="mb-"],[id^="adm-zone"],[id^="admFull"],[id^="admbackground"],[id^="ban-top-site"],[id^="sp-"],[id^="zone"],img[src="https://static.mediacdn.vn/nld.com.vn/image/Banner_mobile_xuan.png"],img[src="https://static.mediacdn.vn/nld/images/e-paper.png"]
+nnmt.net.vn##.ads-top-mobile,.box-banner-fixd
 nokiasaithanh.com###voucher-box
 nongnghiepmoitruong.vn##[class^="ads-"],[class^="adv"],[class^="exp_qc_"],[id^="zone-"]
 nperf.com##.modal-content
@@ -303,6 +296,7 @@ quanlynhanuoc.vn##.widget_text
 quantrimang.com##.sidebar,[class^="ads"],[id^="adindex"],[id^="adsposttop"],[id^="adunderarticle"],[id^="articleads"],[id^="mrc"]
 quocphongthudo.vn###module21,#module24,.full-width
 
+sachtruyen.com.vn###sp-wrapper-hovering-format
 sacombank.com.vn##.topbanner
 saostar.vn##[class^="txt-"],[id^="div-"],[id^="mid-"],[id^="mobi-"],[id^="pvoucher-"],[id^="sp-"]
 sc.com##[class^="smartbanner"]
@@ -353,7 +347,7 @@ thegioididong.com##.popup-banner
 thegioikinhdoanh.vn###link28,.col-right,.full-width,.links-item,.widget-space
 thelinhstore.com##.collection_banner,.top-banner
 thesaigontimes.vn###admbackground,.adsbygoogle,iframe[style="WIDTH:320px; height:500px;"]
-thethao.sggp.org.vn##.lazyloaded,.ls-is-cached,[id^="admFull"] thethao.sggp.org.vn##[id^="adm_"] thethao.sggp.org.vn##[id^="ban-"] thethao.sggp.org.vn##[id^="zone-"] thethao.sggp.org.vn##[id^="Mobile_"],[id^="oa"],[id^="sdaMobile_"],[id^="top-"] thethao.sggp.org.vn##[id^="admFull"] thethao.sggp.org.vn##[id^="adm_"] thethao.sggp.org.vn##[id^="ban-"] thethao.sggp.org.vn##[id^="zone-"] thethao.sggp.org.vn##[id^="Mobile_"],a[rel="noopener"]
+thethao.sggp.org.vn###ban-site-top,#oa-360-1774314000422_iru3nrvc7,#sdaMobile_SdaTop,.adsbygoogle,.lazyloaded,.ls-is-cached,[id^="admFull"] thethao.sggp.org.vn##[id^="adm_"] thethao.sggp.org.vn##[id^="ban-"] thethao.sggp.org.vn##[id^="zone-"] thethao.sggp.org.vn##[id^="Mobile_"],[id^="oa"],[id^="oa-360-"],[id^="sdaMobile_"],[id^="top-"] thethao.sggp.org.vn##[id^="admFull"] thethao.sggp.org.vn##[id^="adm_"] thethao.sggp.org.vn##[id^="ban-"] thethao.sggp.org.vn##[id^="zone-"] thethao.sggp.org.vn##[id^="Mobile_"],a[rel="noopener"]
 thethao247.vn##.as,.main-content>section,[class^="sp-"],[class^="text-"],[id^="nl-"],[id^="sp-"],[id^="zone-"],div[as-id],div[style*="min-height: 250px"]
 thethaovanhoa.vn##.adsbygoogle,.zone-top
 thhp.vn##.col-sm-3,[class*="ads"],[class*="zonegourp"]
@@ -394,6 +388,7 @@ uniscore.com##.top-0
 vanhoanghethuat.vn##.mobile
 vbsp.org.vn###right,[class*="ads"]
 vdb.gov.vn##[class*="Ads_"]
+vfv.org.vn##.content_colorbg,.content_graybg
 vi.kalvo.com##.adsbygoogle,.barsticky,.klv_x,[class^="klvad"]
 via.gov.vn##.bnrCenter
 vib.com.vn##.new-download-app
@@ -429,6 +424,7 @@ vovmedia.vn###affiliate-container
 vtcnews.vn###adbro-bottom,.adsbygoogle,.inpage-ad,.top-ad,[class^="aanetwork-"],[class^="ads-"],[class^="banner-"],[class^="sys-ads"]
 vtv.vn##.adsbygoogle
 
+webthethao.vn##.ads-block,.build-advertisements
 wifiman.com##._container_mwjca_1
 
 xahoi.com.vn##.adsbygoogle,center[style="margin: 10px 0 10px;"]
