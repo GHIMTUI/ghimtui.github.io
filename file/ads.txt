@@ -1,11 +1,13 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Description: Chặn quảng cáo
-! Updated: 24 Mar 2026 18:28
-! Version: 1.0.19
-! Checksum: 88237193ec69
+! Updated: 25 Mar 2026 14:13
+! Version: 1.0.20
+! Checksum: d544605bf3d0
 ! ==================
+
 .adsbygoogle
+
 1thegioi.vn##[class*="zone-"],[class^="c-banner-"],[class^="is-"]
 
 24h.com.vn###header-24h-login-cont,.adsbygoogle,[class^="inpage_"],[id^="ADS_"],[id^="div-gpt-ad-"],[id^="div_inpage_"],[id^="sis_inpage"]
