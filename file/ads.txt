@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Description: Chặn quảng cáo
-! Updated: 25 Mar 2026 23:10
-! Version: 1.0.0
-! Checksum: 34659a2d
+! Updated: 25 Mar 2026 23:13
+! Version: 0.0.NaN
+! Checksum: 14705d6c
 ! ==================
 
 1thegioi.vn##[class*="zone-"],[class^="c-banner-"],[class^="is-"]
@@ -132,6 +132,7 @@ dienmaycholon.com##.banner_mb
 dienmayxanh.com##.popup-banner
 dienthoaihay.vn##.pos1,.slideshow_countdown
 digiphone.vn##.large--one-whole,.large--two-thirds
+digit.in###v-digit-in-0,.adsbygoogle,.mediad_before_content,[id^="_vdo_ads_"],[id^="outbrain_widget_"],[id^="wordp-"]
 doanhnghiephoinhap.vn##.box-qc,.cat-title
 doanhnghiepvathuongmai.vn###banner
 doanhnhansaigon.vn##.c-featured-box__right,.is-custom-size
@@ -266,6 +267,7 @@ nguoixaydung.com.vn##.col-md-3
 nhac.vn###footer-scroll,.tbl-link
 nhachannuoi.vn###black-studio-tinymce-13,.menu-pr,.quangcao,[class*="banner"]
 nhadautu.vn##.e
+nhanh.vn###bannerMainAdMobile,#myModal,.modal-backdrop
 nhanhoa.com###click_download_app,.shake_img_close
 nhipsongkinhdoanh.vn###top-logo,.container-fluid,[id^="admFull"],[id^="adsWeb"],[id^="ban-"],[id^="zone"]
 nld.com.vn###top-logo,.ads-top,.mb-20,.notifi-list,[class^="mb-"],[id^="adm-zone"],[id^="admFull"],[id^="admbackground"],[id^="ban-top-site"],[id^="sp-"],[id^="zone"],img[src="https://static.mediacdn.vn/nld.com.vn/image/Banner_mobile_xuan.png"],img[src="https://static.mediacdn.vn/nld/images/e-paper.png"]
@@ -422,13 +424,16 @@ voh.com.vn##.adstop,[class*="center-"]
 vov.vn###header-placeholder,.ads,[id^="block-ads-"]
 vov1.vov.vn##.mobile-header-banner
 vovmedia.vn###affiliate-container
+voz.vn###sp-wrapper-hovering-format,.adsbypubpower
 vtcnews.vn###adbro-bottom,.adsbygoogle,.inpage-ad,.top-ad,[class^="aanetwork-"],[class^="ads-"],[class^="banner-"],[class^="sys-ads"]
 vtv.vn##.adsbygoogle
 
+waptrick.com##.cent_list
 webthethao.vn##.ads-block,.build-advertisements
 wifiman.com##._container_mwjca_1
 
 xahoi.com.vn##.adsbygoogle,center[style="margin: 10px 0 10px;"]
+xem.tvso1.com##[id^="M907725S"]
 xemgame.com##[id^="bannerm"]
 xemtivi.top###sp-wrapper-hovering-format
 xemtivi4k.com##[id^="adstop"],a[href^="https://www.msbgih.com/sportsbook"]
@@ -445,4 +450,5 @@ zingmp3.vn##[class^="z-btn-open"]
 znews.vn##.z2-inpage-wrapper,[class^="Okv"],[class^="follow"],[id^="Okv"],[id^="ZingNews"],[id^="Zingnews"],[id^="follow"]
 
 ||man88.la
+||msqwyb.com
 ||shopee.vn
