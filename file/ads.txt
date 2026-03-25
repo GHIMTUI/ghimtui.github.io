@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Description: Chặn quảng cáo
-! Updated: 25 Mar 2026 14:14
-! Version: 1.0.21
-! Checksum: 0647e758f3ae
+! Updated: 25 Mar 2026 22:00
+! Version: 0.21.NaN
+! Checksum: 2d671f9b
 ! ==================
 
 .adsbygoogle
@@ -143,6 +143,7 @@ doisongvietnam.vn##.lazy
 dongnai.gov.vn##.inner-home
 dongthap.edu.vn##.component-image
 download.com.vn###adrightspecial,#adsrightspecial,.adsbygoogle,.in-article
+drt.vn##.ads-block-item
 duckduckgo.com##.js-atb-banner,[class^="js-"],[class^="set-browser-"]
 
 emc-directory.com###mobileBottomAd
