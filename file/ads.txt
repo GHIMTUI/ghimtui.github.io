@@ -7,6 +7,9 @@
 ! ==================
 
 .adsbygoogle
+#admbackground
+vietnamnet.vn###admbackground
+tuoitre.vn##.boxdsk_swiper
 
 1thegioi.vn##[class*="zone-"],[class^="c-banner-"],[class^="is-"]
 
