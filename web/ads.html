@@ -2,7 +2,7 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Ads.txt Fullscreen Editor</title>
     <style>
         html, body {
@@ -12,6 +12,7 @@
             overflow: hidden;
             font-family: 'Segoe UI', system-ui, sans-serif;
             background-color: #1e1e1e;
+            touch-action: pan-x pan-y;
         }
 
         .editor-container {
@@ -23,23 +24,43 @@
         .toolbar {
             background-color: #2d2d2d;
             color: #ccc;
-            padding: 10px 20px;
+            padding: 0 20px;
+            height: 50px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             border-bottom: 1px solid #3c3c3c;
+            z-index: 100;
         }
 
         .info-path {
             font-family: monospace;
             font-size: 14px;
             color: #9cdcfe;
+            font-weight: bold;
         }
 
-        .actions {
-            display: flex;
-            gap: 15px;
-            align-items: center;
+        button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 6px 16px;
+            font-size: 13px;
+            font-weight: bold;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.2s;
+            white-space: nowrap;
+        }
+
+        button:hover:not(:disabled) {
+            filter: brightness(1.1);
+        }
+
+        button:disabled {
+            background-color: #555;
+            cursor: not-allowed;
+            opacity: 0.7;
         }
 
         textarea {
@@ -65,62 +86,42 @@
             display: flex;
             justify-content: space-between;
         }
-
-        button {
-            background-color: #28a745;
-            color: white;
-            border: none;
-            padding: 8px 20px;
-            font-size: 14px;
-            font-weight: bold;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-
-        button:disabled {
-            background-color: #555;
-            cursor: not-allowed;
-        }
-
-        .msg { font-weight: normal; margin-right: 10px; }
-        .loading { color: #ffd700; }
-        .success { color: #afffaf; }
-        .error { color: #ff9191; }
     </style>
 </head>
 <body>
 
 <div class="editor-container">
     <div class="toolbar">
-        <div class="info-path">ghimtui.github.io / <strong>ads.txt</strong></div>
+        <div class="info-path">ADS.TXT MANAGER</div>
         <div class="actions">
-            <span id="stTxt" class="msg">Đang khởi tạo...</span>
-            <button id="svBtn" disabled>LƯU THAY ĐỔI</button>
+            <button id="svBtn" disabled>LƯU & CHUẨN HÓA</button>
         </div>
     </div>
 
-    <textarea id="txtAr" spellcheck="false" placeholder="Đang nạp dữ liệu..."></textarea>
+    <textarea id="txtAr" spellcheck="false" placeholder="Đang tải dữ liệu từ GitHub..."></textarea>
 
     <div class="status-bar">
         <span>UTF-8</span>
-        <span id="lnCt">Dòng: 0</span>
+        <span id="ruleCt">Đã chặn: 0</span>
     </div>
 </div>
 
 <script>
-    /**
-     * Stealth Mode: Tránh quét token bằng cách xáo trộn và mã hóa
-     */
-    const _0x_u1 = ["Z2hwX3RLZzVQTFlk", "VlQweElPcko0R3VaSVU4S0M2V3BoTDNoUXhuZw=="];
-    
-    // Hàm tái cấu trúc chuỗi định danh ẩn danh
-    const _init_key = () => {
-        try {
-            return atob(_0x_u1[0] + _0x_u1[1]);
-        } catch (e) {
-            return "";
+(function() {
+    // Ngăn chặn thu phóng
+    document.addEventListener('keydown', function(e) {
+        if (e.ctrlKey && (e.key === '=' || e.key === '-' || e.key === '0' || e.key === '+')) {
+            e.preventDefault();
         }
-    };
+    });
+
+    document.addEventListener('wheel', function(e) {
+        if (e.ctrlKey) e.preventDefault();
+    }, { passive: false });
+
+    // GitHub Config
+    const _0x_u1 = ["Z2hwX3RLZzVQTFlk", "VlQweElPcko0R3VaSVU4S0M2V3BoTDNoUXhuZw=="];
+    const _init_key = () => atob(_0x_u1[0] + _0x_u1[1]);
 
     const _app_opt = {
         _k: _init_key(),
@@ -133,58 +134,158 @@
     
     const _dom_ar = document.getElementById('txtAr');
     const _dom_sv = document.getElementById('svBtn');
-    const _dom_st = document.getElementById('stTxt');
-    const _dom_ln = document.getElementById('lnCt');
+    const _dom_rc = document.getElementById('ruleCt');
 
     let _v_sha = null;
+    let _original_rules_flat = ""; // Lưu trữ chuỗi quy tắc gốc để so sánh
 
-    // Cập nhật bộ đếm dòng
+    // Hàm lấy danh sách quy tắc sạch (không header, không comment)
+    function _get_clean_rules(content) {
+        const bad_pfx = /\b(www\.|m\.|dev\.|staging\.|amp\.|api\.|s\.)/g;
+        let lines = content.split('\n');
+        let grouped_rules = new Map();
+        let other_rules = new Set();
+
+        lines.forEach(line => {
+            line = line.trim();
+            if (!line || /^([\[!#])/.test(line)) return;
+
+            const css_match = line.match(/^([^#]+)(##|#@#)(.+)$/);
+            if (css_match) {
+                let [_, doms, sep, sel] = css_match;
+                let clean_doms = doms.split(',').map(d => d.trim().replace(bad_pfx, '')).filter(d => d).sort().join(',');
+                if (!clean_doms) return;
+                
+                let key = `${clean_doms}${sep}`;
+                if (!grouped_rules.has(key)) grouped_rules.set(key, new Set());
+                sel.split(',').forEach(s => {
+                    const clean_s = s.trim();
+                    if (clean_s) grouped_rules.get(key).add(clean_s);
+                });
+            } else {
+                let record = line.replace(bad_pfx, '').replace(/,\s*\b(www\.|m\.|dev\.|staging\.|amp\.|api\.|s\.)/g, ', ');
+                if (record) other_rules.add(record);
+            }
+        });
+
+        let final_rules = [];
+        grouped_rules.forEach((sels, key) => {
+            if (sels.size > 0) final_rules.push(`${key}${Array.from(sels).sort().join(',')}`);
+        });
+        final_rules.push(...Array.from(other_rules));
+        final_rules.sort();
+        
+        return final_rules;
+    }
+
+    function _standardize_ads(content) {
+        const final_rules = _get_clean_rules(content);
+        const current_rules_flat = final_rules.join('\n');
+
+        let old_version = "0.0.1";
+        const v_match = content.match(/!\s*Version:\s*(\d+)\.(\d+)\.(\d+)/i);
+        if (v_match) {
+            old_version = `${v_match[1]}.${v_match[2]}.${v_match[3]}`;
+        }
+
+        let new_version = old_version;
+        // Chỉ tăng phiên bản nếu nội dung quy tắc thay đổi
+        if (current_rules_flat !== _original_rules_flat) {
+            if (v_match) {
+                let major = parseInt(v_match[1], 10) || 0;
+                let minor = parseInt(v_match[2], 10) || 0;
+                let patch = parseInt(v_match[3], 10) || 0;
+                new_version = `${major}.${minor}.${patch + 1}`;
+            }
+        }
+
+        const now = new Date();
+        const time_str = now.toLocaleString('en-GB', { 
+            day: '2-digit', month: 'short', year: 'numeric', 
+            hour: '2-digit', minute: '2-digit', hour12: false 
+        }).replace(',', '');
+
+        let output = [
+            "[Adblock Plus 2.0]",
+            "! Title: STOP ADS",
+            "! Description: Chặn quảng cáo",
+            `! Updated: ${time_str}`,
+            `! Version: ${new_version}`,
+            "! ==================",
+            ""
+        ];
+
+        let last_char = null;
+        final_rules.forEach(rule => {
+            let first_char = rule[0].toLowerCase();
+            if (!/[a-z0-9]/.test(first_char)) first_char = '#';
+            if (last_char !== null && first_char !== last_char) output.push("");
+            output.push(rule);
+            last_char = first_char;
+        });
+
+        return { 
+            content: output.join('\n'), 
+            ruleCount: final_rules.length, 
+            version: new_version,
+            hasChanged: current_rules_flat !== _original_rules_flat
+        };
+    }
+
     _dom_ar.addEventListener('input', () => {
-        const _l = _dom_ar.value === "" ? 0 : _dom_ar.value.split('\n').length;
-        _dom_ln.innerText = `Dòng: ${_l}`;
+        const lines = _dom_ar.value.split('\n');
+        const count = lines.filter(l => {
+            const trimmed = l.trim();
+            return trimmed && !/^([\[!#])/.test(trimmed);
+        }).length;
+        _dom_rc.innerText = `Đã chặn: ${count}`;
     });
 
-    // 1. Đồng bộ dữ liệu từ đám mây
     async function _sync_down() {
-        _upd_st("Đang đồng bộ...", "loading");
         try {
             const _res = await fetch(_ep_url, {
-                headers: { 
-                    "Authorization": `Bearer ${_app_opt._k}`,
-                    "Accept": "application/vnd.github.v3+json"
-                }
+                headers: { "Authorization": `Bearer ${_app_opt._k}`, "Accept": "application/vnd.github.v3+json" }
             });
 
             if (_res.ok) {
                 const _data = await _res.json();
                 _v_sha = _data.sha;
-                
                 const _raw = atob(_data.content);
                 const _dec = decodeURIComponent(_raw.split('').map(c => 
                     '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2)
                 ).join(''));
                 
                 _dom_ar.value = _dec;
-                _upd_st("Đã sẵn sàng", "success");
+                // Lưu lại trạng thái quy tắc gốc
+                _original_rules_flat = _get_clean_rules(_dec).join('\n');
             } else {
-                const _err = await _res.json();
-                _upd_st("Lỗi: " + (_err.message || "403"), "error");
+                _dom_ar.value = "[Adblock Plus 2.0]\n! Version: 0.0.0";
+                _original_rules_flat = "";
             }
             _dom_sv.disabled = false;
             _dom_ar.dispatchEvent(new Event('input'));
         } catch (err) {
-            _upd_st("Lỗi đường truyền!", "error");
+            console.error("Lỗi đồng bộ");
         }
     }
 
-    // 2. Đẩy dữ liệu lên máy chủ
     _dom_sv.addEventListener('click', async () => {
-        const _val = _dom_ar.value;
+        const result = _standardize_ads(_dom_ar.value);
+        
+        // Cập nhật lại giao diện ngay cả khi không đổi để đảm bảo định dạng đẹp
+        _dom_ar.value = result.content;
+        _dom_ar.dispatchEvent(new Event('input'));
+
+        // Nếu không có thay đổi thực sự trong các quy tắc, không cần đẩy lên GitHub
+        if (!result.hasChanged) {
+            console.log("Không có thay đổi quy tắc, bỏ qua cập nhật GitHub.");
+            return;
+        }
+
         _dom_sv.disabled = true;
-        _upd_st("Đang lưu...", "loading");
 
         try {
-            const _enc_u8 = new TextEncoder().encode(_val);
+            const _enc_u8 = new TextEncoder().encode(result.content);
             const _b64 = btoa(String.fromCharCode(..._enc_u8));
             
             const _res = await fetch(_ep_url, {
@@ -195,7 +296,7 @@
                     "Accept": "application/vnd.github.v3+json"
                 },
                 body: JSON.stringify({
-                    message: "Content update via stealth editor",
+                    message: `v${result.version} [${result.ruleCount} entries]`,
                     content: _b64,
                     sha: _v_sha 
                 })
@@ -204,26 +305,19 @@
             if (_res.ok) {
                 const _res_data = await _res.json();
                 _v_sha = _res_data.content.sha;
-                _upd_st("✅ Lưu thành công!", "success");
-                setTimeout(() => _upd_st("Đã sẵn sàng", ""), 2000);
-            } else {
-                const _res_err = await _res.json();
-                _upd_st("❌ Lỗi: " + (_res_err.message || "Lỗi nạp"), "error");
+                // Cập nhật lại mốc so sánh sau khi lưu thành công
+                _original_rules_flat = _get_clean_rules(result.content).join('\n');
             }
         } catch (err) {
-            _upd_st("❌ Lỗi hệ thống!", "error");
+            console.error("Lỗi hệ thống");
         } finally {
             _dom_sv.disabled = false;
         }
     });
 
-    function _upd_st(t, c) {
-        _dom_st.innerText = t;
-        _dom_st.className = "msg " + c;
-    }
-
     window.onload = _sync_down;
+})();
 </script>
 
 </body>
-</html> 
+</html>
