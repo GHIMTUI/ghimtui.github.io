@@ -5,7 +5,7 @@
 ! Version: 1.0.19
 ! Checksum: 88237193ec69
 ! ==================
-
+.adsbygoogle
 1thegioi.vn##[class*="zone-"],[class^="c-banner-"],[class^="is-"]
 
 24h.com.vn###header-24h-login-cont,.adsbygoogle,[class^="inpage_"],[id^="ADS_"],[id^="div-gpt-ad-"],[id^="div_inpage_"],[id^="sis_inpage"]
