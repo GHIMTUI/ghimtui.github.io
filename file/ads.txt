@@ -1,15 +1,12 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Description: Chặn quảng cáo
-! Updated: 25 Mar 2026 14:13
-! Version: 1.0.20
-! Checksum: d544605bf3d0
+! Updated: 25 Mar 2026 14:14
+! Version: 1.0.21
+! Checksum: 0647e758f3ae
 ! ==================
 
 .adsbygoogle
-#admbackground
-vietnamnet.vn###admbackground
-tuoitre.vn##.boxdsk_swiper
 
 1thegioi.vn##[class*="zone-"],[class^="c-banner-"],[class^="is-"]
 
@@ -382,7 +379,7 @@ tintucvietnam.vn##.banner-header,div[style="display: block;     justify-content:
 truyenhinhthanhhoa.vn##[class^="ad-"],[id^="banner-"],[id^="placement-"],[id^="share-"],[id^="slot-"],[id^="zone-"]
 truyennhiemvietnam.vn##.index-card
 ttbc-hcm.gov.vn##[class^="abs-"],[class^="c-banner-"],[class^="zone-"]
-tuoitre.vn###LeaderBoardTop,#admbackground,#pvoucher-live-container,[id^="sp_format-hovering"],[id^="zone"]
+tuoitre.vn###LeaderBoardTop,#admbackground,#pvoucher-live-container,.boxdsk_swiper,[id^="sp_format-hovering"],[id^="zone"]
 tusach.vn###sp-wrapper-hovering-format
 tuyenquang.gov.vn##.h-auto
 tv360.vn###ads-player-base-wrapper,.Toastify,.css-1jzjo52,.css-1u6gwec,.css-1xdipk,.css-csxyfn,.text-ellipsis
@@ -402,7 +399,7 @@ vietgame.asia##.adsbygoogle,[class^="block-"]
 vietgiaitri.com###header,.cover_header,[class^="avgt-"],[class^="inview-"],[id^="Balloon"]
 vietnam.vnanet.vn##.uk-margin-small-top
 vietnammoi.vn###admFullTop,#ban-top-site,.adsbygoogle,[id^="adm_"]
-vietnamnet.vn###Mobile_AdsArticleBodyInArticle,#adzone39,#catfish,#mashead-bn,[id*="adzone"],[id^="adzone"],[id^="mashead-"],div[onclick="closeMashead(39)"],span[style="color: #fff;text-align: center;display: inherit;font-size: 20px;line-height: 20px;"]
+vietnamnet.vn###Mobile_AdsArticleBodyInArticle,#admbackground,#adzone39,#catfish,#mashead-bn,[id*="adzone"],[id^="adzone"],[id^="mashead-"],div[onclick="closeMashead(39)"],span[style="color: #fff;text-align: center;display: inherit;font-size: 20px;line-height: 20px;"]
 vietnamplus.vn###sp-wrapper-hovering-format
 vietnamradio.org##.add-box-top,.adsbygoogle
 vietnamworks.com##.mb,.tg_redirecttimviec_2023
