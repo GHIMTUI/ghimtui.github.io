@@ -1,12 +1,12 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Description: Chặn quảng cáo ghim tui
-! Updated: 26 Mar 2026 00:14
-! Version: 0.0.10
-! Checksum: x4xppt0000
+! Updated: 26 Mar 2026 00:15
+! Version: 0.0.11
+! Checksum: 9kalu70000
 ! ==================
 
-1thegioi.vn##.m,[class*="zone-"],[class^="c-banner-"],[class^="is-"]
+1thegioi.vn##[class*="zone-"],[class^="c-banner-"],[class^="is-"]
 
 24h.com.vn###header-24h-login-cont,.adsbygoogle,[class^="inpage_"],[id^="ADS_"],[id^="div-gpt-ad-"],[id^="div_inpage_"],[id^="sis_inpage"]
 2game.vn###bannermtop,[class^="banner-"]
