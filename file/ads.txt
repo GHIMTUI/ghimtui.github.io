@@ -2,11 +2,11 @@
 ! Title: STOP ADS
 ! Description: Chặn quảng cáo ghim tui
 ! Updated: 26 Mar 2026 00:33
-! Version: 0.0.20
-! Checksum: 0001v9ljg2
+! Version: 0.0.21
+! Checksum: 0000cfngow
 ! ==================
 
-1thegioi.vn##.m,[class*="zone-"],[class^="c-banner-"],[class^="is-"]
+1thegioi.vn##[class*="zone-"],[class^="c-banner-"],[class^="is-"]
 
 24h.com.vn###header-24h-login-cont,.adsbygoogle,[class^="inpage_"],[id^="ADS_"],[id^="div-gpt-ad-"],[id^="div_inpage_"],[id^="sis_inpage"]
 2game.vn###bannermtop,[class^="banner-"]
