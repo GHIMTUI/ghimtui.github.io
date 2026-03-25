@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
-! Description: Chặn quảng cáo
-! Updated: 25 Mar 2026 23:25
-! Version: 0.0.NaN
-! Checksum: 14705d6c
+! Description: Chặn quảng cáo ghim tui
+! Updated: 25 Mar 2026 23:39
+! Version: 0.0.1
+! Checksum: 1329840121
 ! ==================
 
 1thegioi.vn##[class*="zone-"],[class^="c-banner-"],[class^="is-"]
@@ -448,7 +448,3 @@ youtube.com##.ytmCompanionSlotRendererHost,.ytmPaidContentOverlayHost,[class^="r
 
 zingmp3.vn##[class^="z-btn-open"]
 znews.vn##.z2-inpage-wrapper,[class^="Okv"],[class^="follow"],[id^="Okv"],[id^="ZingNews"],[id^="Zingnews"],[id^="follow"]
-
-||man88.la
-||msqwyb.com
-||shopee.vn
