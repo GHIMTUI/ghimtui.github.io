@@ -1,8 +1,8 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Description: Chặn quảng cáo
-! Updated: 26 Mar 2026 00:53
-! Version: 0.0.32
+! Updated: 26 Mar 2026 15:51
+! Version: 0.0.33
 ! ==================
 
 1thegioi.vn##[class*="zone-"],[class^="c-banner-"],[class^="is-"]
@@ -18,6 +18,8 @@ accuweather.com###bottom,#middle,#top,.adhesion-header,.adsbygoogle,.header-plac
 afamily.vn##.adsbygoogle,[id^="adm-slot-"]
 afkmobi.com###gift-banner,.adsbygoogle,.afk_bn_homem_top
 agribank.com.vn###agbModal,.modal-backdrop
+amlich.net.vn##.p-1
+amlich.vn##.aanetwork-flyicon-box
 angiang.edu.vn##.image-list-album,.w-download,.widget
 angiangtv.vn##[class*="swiper"],[class*="wp-"],[id*="media_"]
 anhp.vn###ads_share_header1,.right-detail
@@ -140,6 +142,7 @@ doisongphapluat.com.vn##.sys-ads,[id^="sp-"]
 doisongvietnam.vn##.lazy
 dongnai.gov.vn##.inner-home
 dongthap.edu.vn##.component-image
+dorabot.io###navbar-pwa-btn,.adsbygoogle
 download.com.vn###adrightspecial,#adsrightspecial,.adsbygoogle,.in-article
 drt.vn##.ads-block-item
 duckduckgo.com##.js-atb-banner,[class^="js-"],[class^="set-browser-"]
@@ -155,6 +158,7 @@ gamehub.vn###smartbanner
 gamek.vn##.ads-top,.adsbygoogle,[id^="admbackground"],[id^="banner-"],[id^="placement-"],[id^="share-"],[id^="slot-"],[id^="zone-"]
 gameorb.com.vn##[id^="popmake-"],[id^="pum-"]
 gametoon.mobi###toon-adsense-ads,.ads-bg,.adsbygoogle
+gas40.com##.expand-home
 gddt.daklak.gov.vn###sidebar-left
 gearvn.com###popup-promotion,.article-flashsale,.banner-effect
 gemini.google.com##.app-upsell-banner
@@ -164,6 +168,7 @@ giadinh.suckhoedoisong.vn###admBannerPopup,#admwrapper,.adsbygoogle,[id^="zone-"
 giadinhonline.vn##.active,.adv,.e,[class^="exp_qc_"],[class^="qc-"],[id^="ads_"],[id^="zone-"]
 gialai.gov.vn###module82,#module90,.full-width,.widget-space
 giaoducthudo.giaoducthoidai.vn###sp-wrapper-hovering-format,.c-banner,.h-show-mobile
+giaogasnhanh.com##.elementor-jet-slider
 giaothong.tapchixaydung.vn##[class*="qc"]
 gmobile.vn##.slide
 gocnhinphaply.nguoiduatin.vn###sp-wrapper-hovering,.adsbygoogle,.no-margin-ads
@@ -228,6 +233,11 @@ lazada.vn###J_Banner
 lecourrier.vn##.top-adv-pos
 leeapk.com###stickyAd,.ads-banner
 letemsvetemapplem.eu###ad_native_hp_loop_mob2,#ad_native_single_popular,.adsbygoogle,.headerbanner-wrapper
+lichngaytot.com###bottomMobileAdvs,#sp-wrapper-hovering-format,.adsbygoogle,.advbox,[class^="advbox"]
+lichvannien365.com##div[style*="min-height: 240px"],div[style*="min-height: 280px"],div[style*="min-height: 312px"],p[style="text-align:center"]
+lichvansu.wap.pvn##.drop
+lichvansu.wap.vn##.adsbygoogle,[id^="M"],div[style="margin-bottom: 2px;"]
+lichviet.app###smart-app-banner,.banner
 logos.fandom.com##[class^="top-"],[class^="top_"],[id^="top_"]
 loigiaihay.com###countdown,.adsbygoogle,.bg-countdown,.homepage-top-ads,.nl-infooter-mb-div,.sp-infooter-mb-google-ads
 luatminhkhue.vn###sp-wrapper-hovering-format,.ads-label
@@ -236,6 +246,8 @@ lyluanchinhtri.vn##[class^="c-banner-"],[class^="is-custom-"]
 
 mail.google.com##[id^="nav"]
 mangatooncom.vn##.detail-download-bg,.index-download-bg
+marketplace.tripmap.vn##.ad-floating-icon,.my-6
+maytinhdaiviet.com###dv-mobile-bottom-ad,.adsbygoogle
 mekongasean.vn##.header-content,[class*="banner"]
 mensfolio.vn##.header-banner
 minhancomputer.com###js-buildpc-banner
@@ -358,6 +370,7 @@ thitruongtaichinhtiente.vn##.c-banner,.c-bottom-box,[class^="ads_"],[class^="c-b
 thoibaonganhang.vn##.__ads_click,.tbnh-qc-full
 thoibaotaichinhvietnam.vn##[class*="banner"]
 thoidai.com.vn##[class*="banner"]
+thoigian.com.vn###m620,.adsbygoogle,td[id="m005"]>div
 thoitrangvang.vn##[class*="c-banner"],[class^="ads_"],[id^="zone-"]
 thuehaiquan.tapchikinhtetaichinh.vn##.box-qc
 thuonggiaonline.vn##.adsbygoogle
@@ -376,6 +389,7 @@ tinhocngoisao.com##.lazyloaded
 tinhte.vn##.pro-container
 tintuconline.com.vn###adzone39,.adsbygoolge,.vadslogo,[class^="trv-"],[class^="vmc_"],[id*="adzone"],[id*="vmcad_inview_"],[id^="Mobile_"],[id^="mashead-"],[id^="sp-wrapper-"],a[rel="nofollow noopener"],div[onclick="closeMashead(39)"],div[style="margin-bottom: 35px;"]
 tintucvietnam.vn##.banner-header,div[style="display: block;     justify-content: center;"]
+tongdainhadat.vn##.eb-inst
 truyenhinhthanhhoa.vn##[class^="ad-"],[id^="banner-"],[id^="placement-"],[id^="share-"],[id^="slot-"],[id^="zone-"]
 truyennhiemvietnam.vn##.index-card
 ttbc-hcm.gov.vn##[class^="abs-"],[class^="c-banner-"],[class^="zone-"]
@@ -388,6 +402,7 @@ tvbox.one##.adsbygoogle,.entry-img-300,.homeadv,.homeadv>span
 uniscore.com##.top-0
 
 vanhoanghethuat.vn##.mobile
+vansu.net##.block-inner,center[style="padding-top: 15px;height: 280px;"]
 vbsp.org.vn###right,[class*="ads"]
 vdb.gov.vn##[class*="Ads_"]
 vfv.org.vn##.content_colorbg,.content_graybg
@@ -398,6 +413,7 @@ viblo.asia##.el-dialog__wrapper,.fixed-bottom-bar,.v-modal
 vietgame.asia##.adsbygoogle,[class^="block-"]
 vietgiaitri.com###header,.cover_header,[class^="avgt-"],[class^="inview-"],[id^="Balloon"]
 vietnam.vnanet.vn##.uk-margin-small-top
+vietnambiz.vn##.adsbygoogle,.vnbiz-topbanner
 vietnammoi.vn###admFullTop,#ban-top-site,.adsbygoogle,[id^="adm_"]
 vietnamnet.vn###Mobile_AdsArticleBodyInArticle,#admbackground,#adzone39,#catfish,#mashead-bn,[id*="adzone"],[id^="adzone"],[id^="mashead-"],div[onclick="closeMashead(39)"],span[style="color: #fff;text-align: center;display: inherit;font-size: 20px;line-height: 20px;"]
 vietnamplus.vn###sp-wrapper-hovering-format
