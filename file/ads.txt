@@ -1,8 +1,8 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Description: Chặn quảng cáo
-! Updated: 26 Mar 2026 15:51
-! Version: 0.0.33
+! Updated: 26 Mar 2026 16:01
+! Version: 0.0.34
 ! ==================
 
 1thegioi.vn##[class*="zone-"],[class^="c-banner-"],[class^="is-"]
@@ -183,6 +183,7 @@ happyvietnam.vnanet.vn##.background-image
 hatinh.edu.vn##.image-list-album
 hd.xemtv.net###med_rec_banner2,.quangcaos,div[data-widget-id="1771082"],div[data-widget-id="1886588"],img[src="/banner/F168-Sidebar.gif"]
 hdbank.com.vn##.mobile-popup
+helio.vn##[class*="banner"]
 highspeedinternet.com###mobile-nav,.disclaimer-container,.smartbanner,.wpb_single_image
 hoanghamobile.com###popup-modal,.jquery-modal,.top-category-ads,.top-heading
 hoanhap.vn##.section-1
@@ -410,6 +411,7 @@ vi.kalvo.com##.adsbygoogle,.barsticky,.klv_x,[class^="klvad"]
 via.gov.vn##.bnrCenter
 vib.com.vn##.new-download-app
 viblo.asia##.el-dialog__wrapper,.fixed-bottom-bar,.v-modal
+vietcetera.com##[class^="styles_downloadAppBtnWrapper__"],[class^="styles_topBanner__"]
 vietgame.asia##.adsbygoogle,[class^="block-"]
 vietgiaitri.com###header,.cover_header,[class^="avgt-"],[class^="inview-"],[id^="Balloon"]
 vietnam.vnanet.vn##.uk-margin-small-top
