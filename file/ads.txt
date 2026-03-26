@@ -1,8 +1,8 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Description: Chặn quảng cáo
-! Updated: 26 Mar 2026 16:01
-! Version: 0.0.34
+! Updated: 26 Mar 2026 16:16
+! Version: 0.0.35
 ! ==================
 
 1thegioi.vn##[class*="zone-"],[class^="c-banner-"],[class^="is-"]
@@ -248,6 +248,7 @@ lyluanchinhtri.vn##[class^="c-banner-"],[class^="is-custom-"]
 mail.google.com##[id^="nav"]
 mangatooncom.vn##.detail-download-bg,.index-download-bg
 marketplace.tripmap.vn##.ad-floating-icon,.my-6
+masothue.com##.mst_sp-bell-wrapper
 maytinhdaiviet.com###dv-mobile-bottom-ad,.adsbygoogle
 mekongasean.vn##.header-content,[class*="banner"]
 mensfolio.vn##.header-banner
@@ -294,6 +295,7 @@ otosaigon.com###side-ads-mid-3,[class^="ads-"]
 perplexity.ai##.animate-in
 petrotimes.vn##.petrotimes-qc,[id^="ads-"]
 phaply.net.vn##[class^="qc_"]
+phatnguoixe.com###resultValue,div[style="text-align: center;"]
 phimmoiz.ac##.bg-orange-500,.no-ads-under,.w-fit,.z-[9999]
 phimsex6s.com###bottomBannerContainer,#popBannerAds,#topBannerContainer
 phunuonline.com.vn##.adsbygoogle,[id^="banner_"]
