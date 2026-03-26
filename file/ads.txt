@@ -1,8 +1,8 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Description: Chặn quảng cáo
-! Updated: 26 Mar 2026 16:16
-! Version: 0.0.35
+! Updated: 26 Mar 2026 20:05
+! Version: 0.0.36
 ! ==================
 
 1thegioi.vn##[class*="zone-"],[class^="c-banner-"],[class^="is-"]
@@ -72,7 +72,7 @@ baotayninh.vn##[class*="ads-"],[class*="pb-"],[class^="ads-"]
 baothainguyen.vn##[class^="carousel-"],[class^="e"],[class^="ff"]
 baothanhhoa.vn##[class^="dadv_"],[id^="iad"],[id^="mhot1_"]
 baotintuc.vn##.adstop
-baotuyenquang.com.vn##[class^="ff"],[class^="item-"]
+baotuyenquang.com.vn##.item_ads,[class^="ff"],[class^="item-"]
 baovanhoa.vn##.adsitem,[class^="ads_"],[id^="adsMobile_"]
 baovannghe.vn##.adsbygoogle
 baovephapluat.vn##.banner-item,.cat-advertise,[id^="dnn_ctr699_"]
@@ -171,7 +171,7 @@ giaoducthudo.giaoducthoidai.vn###sp-wrapper-hovering-format,.c-banner,.h-show-mo
 giaogasnhanh.com##.elementor-jet-slider
 giaothong.tapchixaydung.vn##[class*="qc"]
 gmobile.vn##.slide
-gocnhinphaply.nguoiduatin.vn###sp-wrapper-hovering,.adsbygoogle,.no-margin-ads
+gocnhinphaply.nguoiduatin.vn###sp-wrapper-hovering,#sp_format_catfish,.adsbygoogle,.no-margin-ads,.qc_container,.sp-pto-mb-div,[class*="sp-ptoproduct-"],div[id="sp_format-ptoproduct_1991"]
 gsmarena.com###fKmVnQ,.adsbygoogle,.adv-bottom,.adv-mid,.adv-top,.amp-sticky-ad-close-button,.d-flex,.deals,.i-amphtml-sticky-ad-layout,.top-adv
 
 hacom.vn##.bottom-20
@@ -384,7 +384,7 @@ thuongtruong.com.vn##[class*="adsbygoogle"]
 thuvienphapluat.vn###sp-wrapper-hovering-formats,[id^="sp-"]
 thuysanvietnam.com.vn##.ft-fanpage,.hd-cate-wrap
 thvl.vn##.home-5-col,[class*="wp-image-"],[class^="swapper-"],[id^="swapper-"]
-thvli.vn##.mobile-install-app
+thvli.vn##.mobile-install-app,[class*="row-install-app"]
 tienphong.vn###sp-wrapper-hovering,[class^="ad-"],[class^="sda-"],[id^="sdaMobile_"]
 tieuthuyet.vn###sp-wrapper-hovering-format
 tiki.vn###VIP_BUNDLE
