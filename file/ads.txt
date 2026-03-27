@@ -1,8 +1,8 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Description: Chặn quảng cáo
-! Updated: 26 Mar 2026 20:05
-! Version: 0.0.36
+! Updated: 27 Mar 2026 08:34
+! Version: 0.0.37
 ! ==================
 
 1thegioi.vn##[class*="zone-"],[class^="c-banner-"],[class^="is-"]
@@ -239,7 +239,7 @@ lichvannien365.com##div[style*="min-height: 240px"],div[style*="min-height: 280p
 lichvansu.wap.pvn##.drop
 lichvansu.wap.vn##.adsbygoogle,[id^="M"],div[style="margin-bottom: 2px;"]
 lichviet.app###smart-app-banner,.banner
-logos.fandom.com##[class^="top-"],[class^="top_"],[id^="top_"]
+logos.fandom.com##.bottom-ads-container,[class^="top-"],[class^="top_"],[id^="top_"]
 loigiaihay.com###countdown,.adsbygoogle,.bg-countdown,.homepage-top-ads,.nl-infooter-mb-div,.sp-infooter-mb-google-ads
 luatminhkhue.vn###sp-wrapper-hovering-format,.ads-label
 luatvietnam.vn##.adsbygoogle,.adv-footer-fixed
@@ -312,6 +312,8 @@ quankhu3.vn###banner0
 quanlynhanuoc.vn##.widget_text
 quantrimang.com##.sidebar,[class^="ads"],[id^="adindex"],[id^="adsposttop"],[id^="adunderarticle"],[id^="articleads"],[id^="mrc"]
 quocphongthudo.vn###module21,#module24,.full-width
+
+reddit.com###xpromo-small-header,.bg-transparent
 
 sachtruyen.com.vn###sp-wrapper-hovering-format
 sacombank.com.vn##.topbanner
