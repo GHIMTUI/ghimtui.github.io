@@ -1,8 +1,8 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Description: Chặn quảng cáo
-! Updated: 27 Mar 2026 08:34
-! Version: 0.0.37
+! Updated: 27 Mar 2026 21:39
+! Version: 0.0.38
 ! ==================
 
 1thegioi.vn##[class*="zone-"],[class^="c-banner-"],[class^="is-"]
@@ -125,6 +125,7 @@ danviet.vn##.sidebar-countdown,.video-container,[class*="ads"],[id*="ads"],[id*=
 dauthau.asia##.slider
 dep.com.vn##.ad-widget--category-top
 diaocthongthai.com###thongthai-ads-container
+dictionary.cambridge.org##.login-promo-block,.parallax-container,.tz0,[id^="ad_"]
 didongthongminh.vn##.active,.banner-site,.banners-home,.img_org,.list_slideshow,.row-banner,.slide_banner
 didongviet.vn###top-banner
 dienbientv.vn##.null,[class*="ad_"],[id*="ad_"]
@@ -146,6 +147,7 @@ dorabot.io###navbar-pwa-btn,.adsbygoogle
 download.com.vn###adrightspecial,#adsrightspecial,.adsbygoogle,.in-article
 drt.vn##.ads-block-item
 duckduckgo.com##.js-atb-banner,[class^="js-"],[class^="set-browser-"]
+dunno.ai##.box-ads
 
 emc-directory.com###mobileBottomAd
 eva.vn##[class^="banr-"],[id*="banner"],[id^="ADS"],[id^="spanTextAds_"]
