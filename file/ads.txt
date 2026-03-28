@@ -1,8 +1,8 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Description: Chặn quảng cáo
-! Updated: 27 Mar 2026 21:39
-! Version: 0.0.38
+! Updated: 28 Mar 2026 13:46
+! Version: 0.0.39
 ! ==================
 
 1thegioi.vn##[class*="zone-"],[class^="c-banner-"],[class^="is-"]
@@ -392,6 +392,8 @@ thvli.vn##.mobile-install-app,[class*="row-install-app"]
 tienphong.vn###sp-wrapper-hovering,[class^="ad-"],[class^="sda-"],[id^="sdaMobile_"]
 tieuthuyet.vn###sp-wrapper-hovering-format
 tiki.vn###VIP_BUNDLE
+time.now###asc-InContent_0
+timeanddate.com###ad-wrap
 tinhocngoisao.com##.lazyloaded
 tinhte.vn##.pro-container
 tintuconline.com.vn###adzone39,.adsbygoolge,.vadslogo,[class^="trv-"],[class^="vmc_"],[id*="adzone"],[id*="vmcad_inview_"],[id^="Mobile_"],[id^="mashead-"],[id^="sp-wrapper-"],a[rel="nofollow noopener"],div[onclick="closeMashead(39)"],div[style="margin-bottom: 35px;"]
@@ -471,3 +473,6 @@ youtube.com##.ytmCompanionSlotRendererHost,.ytmPaidContentOverlayHost,[class^="r
 
 zingmp3.vn##[class^="z-btn-open"]
 znews.vn##.z2-inpage-wrapper,[class^="Okv"],[class^="follow"],[id^="Okv"],[id^="ZingNews"],[id^="Zingnews"],[id^="follow"]
+
+||cf789vi.com^
+||fscore.net^
