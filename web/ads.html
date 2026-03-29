@@ -3,21 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-    <title>Ads.txt Fullscreen Editor</title>
+    <title>Adblock Editor - Smart Sorting & Counting</title>
     <style>
         :root {
-            /* Sử dụng dvh để tự động thích ứng với thanh công cụ trình duyệt */
-            --app-height: 100vh; 
+            --app-height: 100dvh; 
         }
 
         html, body {
-            height: 100dvh; /* Ưu tiên dvh cho trình duyệt hiện đại */
+            height: var(--app-height);
             margin: 0;
             padding: 0;
             overflow: hidden;
             font-family: 'Segoe UI', system-ui, sans-serif;
             background-color: #1e1e1e;
-            touch-action: pan-x pan-y;
         }
 
         .editor-container {
@@ -25,7 +23,6 @@
             flex-direction: column;
             height: 100%;
             width: 100%;
-            position: relative;
         }
 
         .toolbar {
@@ -33,12 +30,10 @@
             color: #ccc;
             padding: 0 15px;
             height: 60px;
-            min-height: 60px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             border-bottom: 1px solid #3c3c3c;
-            z-index: 100;
             box-sizing: border-box;
         }
 
@@ -47,47 +42,28 @@
             font-size: 13px;
             color: #9cdcfe;
             font-weight: bold;
-            margin-right: 10px;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
         }
 
         button {
             background-color: #28a745;
             color: white;
             border: none;
-            padding: 6px 10px;
-            font-size: 14px;
+            padding: 10px 20px;
+            font-size: 13px;
             font-weight: bold;
             border-radius: 4px;
             cursor: pointer;
             transition: all 0.2s;
-            white-space: normal;
-            word-wrap: break-word;
-            max-width: 120px; 
-            line-height: 1.2;
-            text-align: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-        }
-
-        button:hover:not(:disabled) {
-            filter: brightness(1.1);
         }
 
         button:disabled {
-            background-color: #555;
+            background-color: #444;
+            opacity: 0.5;
             cursor: not-allowed;
-            opacity: 0.7;
         }
 
         .textarea-wrapper {
             flex: 1;
-            position: relative;
-            overflow: hidden;
             background-color: #1e1e1e;
         }
 
@@ -95,18 +71,15 @@
             width: 100%;
             height: 100%;
             border: none;
-            /* Thêm padding-bottom lớn để không bị che bởi thanh điều hướng khi cuộn xuống cuối */
-            padding: 20px 20px 5px 20px;
+            padding: 20px;
             background-color: #1e1e1e;
             color: #d4d4d4;
-            font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
-            font-size: 17px;
-            line-height: 1.6;
+            font-family: 'Consolas', monospace;
+            font-size: 16px;
+            line-height: 1.5;
             outline: none;
             resize: none;
             box-sizing: border-box;
-            display: block;
-            -webkit-overflow-scrolling: touch;
         }
     </style>
 </head>
@@ -114,31 +87,19 @@
 
 <div class="editor-container">
     <div class="toolbar">
-        <div class="info-path">ADS.TXT MANAGER</div>
+        <div class="info-path">ADBLOCK EDITOR</div>
         <div class="actions">
-            <button id="svBtn" disabled>LƯU LẠI</button>
+            <button id="svBtn" disabled>LƯU DỮ LIỆU</button>
         </div>
     </div>
 
     <div class="textarea-wrapper">
-        <textarea id="txtAr" spellcheck="false" placeholder="Đang tải dữ liệu từ GitHub..."></textarea>
+        <textarea id="txtAr" spellcheck="false" placeholder="Đang tải dữ liệu..."></textarea>
     </div>
 </div>
 
 <script>
 (function() {
-    // Ngăn chặn thu phóng bằng phím tắt
-    document.addEventListener('keydown', function(e) {
-        if (e.ctrlKey && (e.key === '=' || e.key === '-' || e.key === '0' || e.key === '+')) {
-            e.preventDefault();
-        }
-    });
-
-    document.addEventListener('wheel', function(e) {
-        if (e.ctrlKey) e.preventDefault();
-    }, { passive: false });
-
-    // GitHub Config
     const _0x_u1 = ["Z2hwX3RLZzVQTFlk", "VlQweElPcko0R3VaSVU4S0M2V3BoTDNoUXhuZw=="];
     const _init_key = () => atob(_0x_u1[0] + _0x_u1[1]);
 
@@ -155,76 +116,49 @@
     const _dom_sv = document.getElementById('svBtn');
 
     let _v_sha = null;
-    let _original_rules_flat = ""; 
+    let _last_saved_rules_flat = ""; 
 
-    function _get_clean_rules(content) {
-    const bad_pfx = /\b(www\.|m\.|dev\.|staging\.|amp\.|api\.|s\.)/g;
-    // Regex mới để loại bỏ || và @@|| ở đầu dòng
-    const adblock_pfx = /^(\|\||@@\|\|)/; 
-    
-    let lines = content.split('\n');
-    let grouped_rules = new Map();
-    let other_rules = new Set();
-
-    lines.forEach(line => {
-        line = line.trim();
-        // Bỏ qua dòng trống, comment (! hoặc #) và config [ ]
-        if (!line || /^([\[!#])/.test(line)) return;
-
-        const css_match = line.match(/^([^#]+)(##|#@#)(.+)$/);
-        if (css_match) {
-            let [_, doms, sep, sel] = css_match;
-            let clean_doms = doms.split(',')
-                .map(d => d.trim().replace(bad_pfx, '').replace(adblock_pfx, '')) // Xử lý cả || trong CSS domain
-                .filter(d => d).sort().join(',');
-            if (!clean_doms) return;
-            
-            let key = `${clean_doms}${sep}`;
-            if (!grouped_rules.has(key)) grouped_rules.set(key, new Set());
-            sel.split(',').forEach(s => {
-                const clean_s = s.trim();
-                if (clean_s) grouped_rules.get(key).add(clean_s);
-            });
-        } else {
-            // Xử lý các dòng link/domain thông thường
-            let record = line.replace(bad_pfx, '')
-                             .replace(/,\s*\b(www\.|m\.|dev\.|staging\.|amp\.|api\.|s\.)/g, ', ');
-            
-            // Nếu bạn muốn đếm chính xác domain, có thể cân nhắc xóa adblock_pfx ở đây
-            // Nhưng thông thường ads.txt của Adblock cần giữ || để có hiệu lực.
-            // Nếu chỉ muốn đếm UNIQUE domain, hãy dùng: .replace(adblock_pfx, '')
-            
-            if (record) other_rules.add(record);
-        }
-    });
-
-    let final_rules = [];
-    grouped_rules.forEach((sels, key) => {
-        if (sels.size > 0) final_rules.push(`${key}${Array.from(sels).sort().join(',')}`);
-    });
-    final_rules.push(...Array.from(other_rules));
-    final_rules.sort();
-    
-    return final_rules;
-}
-    function _standardize_ads(content) {
-        const final_rules = _get_clean_rules(content);
-        const current_rules_flat = final_rules.join('\n');
-
-        let old_version = "1.0.0";
-        const v_match = content.match(/!\s*Version:\s*(\d+)\.(\d+)\.(\d+)/i);
-        if (v_match) {
-            old_version = `${v_match[1]}.${v_match[2]}.${v_match[3]}`;
-        }
-
-        let new_version = old_version;
-        if (current_rules_flat !== _original_rules_flat) {
-            if (v_match) {
-                let major = parseInt(v_match[1], 10) || 0;
-                let minor = parseInt(v_match[2], 10) || 0;
-                let patch = parseInt(v_match[3], 10) || 0;
-                new_version = `${major}.${minor}.${patch + 1}`;
+    function _standardize_content(rawInput) {
+        let lines = rawInput.split('\n').map(l => l.trim()).filter(l => l !== "");
+        
+        let headerLines = [];
+        let bodyLines = [];
+        
+        // Loại bỏ metadata cũ
+        lines.forEach(line => {
+            if (line.match(/! (Title|Description|Updated|Version|Blocked|Size|=======)/i) || line.startsWith("[Adblock")) {
+                return;
             }
+            if (line.startsWith('!') && !line.startsWith('! ')) {
+                headerLines.push(line);
+            } else if (!line.startsWith('!')) {
+                bodyLines.push(line);
+            }
+        });
+
+        // Sắp xếp: Whitelist (@@||) luôn ở dưới cùng
+        let whitelistRules = Array.from(new Set(bodyLines.filter(line => line.startsWith("@@||")))).sort();
+        let normalRules = Array.from(new Set(bodyLines.filter(line => !line.startsWith("@@||") && line !== ""))).sort();
+        
+        let uniqueBody = [...normalRules, ...whitelistRules];
+        
+        // LOGIC ĐẾM: Chỉ đếm dòng bắt đầu bằng chữ hoặc số (BỎ QUA @)
+        let realRuleCount = uniqueBody.filter(line => /^[a-zA-Z0-9]/.test(line)).length;
+        
+        let currentRulesFlat = uniqueBody.join('\n');
+        let isChanged = currentRulesFlat !== _last_saved_rules_flat;
+
+        // Xử lý Version
+        let version = "1.0.0";
+        const v_match = rawInput.match(/!\s*Version:\s*(\d+)\.(\d+)\.(\d+)/i);
+        if (v_match) {
+            let v_major = v_match[1];
+            let v_minor = v_match[2];
+            let v_patch = parseInt(v_match[3]);
+            if (isChanged) {
+                v_patch += 1;
+            }
+            version = `${v_major}.${v_minor}.${v_patch}`;
         }
 
         const now = new Date();
@@ -233,101 +167,111 @@
             hour: '2-digit', minute: '2-digit', hour12: false 
         }).replace(',', '');
 
-        let output = [
+        // Xây dựng nội dung hiển thị với khoảng cách nhóm
+        let tempBodyOutput = [];
+        let lastChar = "";
+        uniqueBody.forEach(line => {
+            if (line.startsWith("@@||")) {
+                if (lastChar !== "WL_GROUP") {
+                    tempBodyOutput.push(""); 
+                    lastChar = "WL_GROUP";
+                }
+            } else {
+                let currentChar = line[0].toLowerCase();
+                if (!/[a-z0-9]/.test(currentChar)) currentChar = "SPEC";
+                if (lastChar && lastChar !== "WL_GROUP" && currentChar !== lastChar) {
+                    tempBodyOutput.push(""); 
+                }
+                lastChar = currentChar;
+            }
+            tempBodyOutput.push(line);
+        });
+
+        const headerPrefix = [
             "[Adblock Plus 2.0]",
             "! Title: STOP ADS",
             "! Description: Chặn quảng cáo",
             `! Updated: ${time_str}`,
-            `! Version: ${new_version}`,
-            `! Blocked: ${final_rules.length}`,
+            `! Version: ${version}`,
+            `! Blocked: ${realRuleCount}`
+        ];
+        
+        // Mock content để tính dung lượng (Size)
+        const mockContent = [...headerPrefix, "! Size: 00.0kb", "! ==================", "", ...tempBodyOutput].join('\n');
+        const kbSize = (new TextEncoder().encode(mockContent).length / 1024).toFixed(2);
+
+        let finalOutput = [
+            ...headerPrefix,
+            `! Size: ${kbSize}kb`,
             "! ==================",
-            ""
+            "",
+            ...tempBodyOutput
         ];
 
-        let last_char = null;
-        final_rules.forEach(rule => {
-            let first_char = rule[0].toLowerCase();
-            if (!/[a-z0-9]/.test(first_char)) first_char = '#';
-            if (last_char !== null && first_char !== last_char) output.push("");
-            output.push(rule);
-            last_char = first_char;
-        });
-
-        return { 
-            content: output.join('\n'), 
-            ruleCount: final_rules.length, 
-            version: new_version,
-            hasChanged: current_rules_flat !== _original_rules_flat
+        return {
+            content: finalOutput.join('\n'),
+            version: version,
+            count: realRuleCount,
+            isChanged: isChanged,
+            rulesFlat: currentRulesFlat
         };
     }
 
-    async function _sync_down() {
+    async function _load() {
         try {
-            const _res = await fetch(_ep_url, {
-                headers: { "Authorization": `Bearer ${_app_opt._k}`, "Accept": "application/vnd.github.v3+json" }
+            const res = await fetch(_ep_url, {
+                headers: { "Authorization": `Bearer ${_app_opt._k}` }
             });
-
-            if (_res.ok) {
-                const _data = await _res.json();
-                _v_sha = _data.sha;
-                const _raw = atob(_data.content);
-                const _dec = decodeURIComponent(_raw.split('').map(c => 
-                    '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2)
-                ).join(''));
+            if (res.ok) {
+                const data = await res.json();
+                _v_sha = data.sha;
+                const raw = atob(data.content);
+                const dec = decodeURIComponent(raw.split('').map(c => '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2)).join(''));
                 
-                _dom_ar.value = _dec;
-                _original_rules_flat = _get_clean_rules(_dec).join('\n');
-            } else {
-                _dom_ar.value = "[Adblock Plus 2.0]\n! Version: 1.0.0";
-                _original_rules_flat = "";
+                _dom_ar.value = dec;
+                
+                let lines = dec.split('\n').map(l => l.trim()).filter(l => l && !l.startsWith('!') && !l.startsWith('['));
+                let wl = lines.filter(l => l.startsWith("@@||")).sort();
+                let nl = lines.filter(l => !l.startsWith("@@||")).sort();
+                _last_saved_rules_flat = [...nl, ...wl].join('\n');
             }
             _dom_sv.disabled = false;
-        } catch (err) {
-            console.error("Lỗi đồng bộ");
-        }
+        } catch (e) { console.error("Load error"); }
     }
 
     _dom_sv.addEventListener('click', async () => {
-        const result = _standardize_ads(_dom_ar.value);
+        const result = _standardize_content(_dom_ar.value);
         _dom_ar.value = result.content;
 
-        if (!result.hasChanged) {
-            return;
-        }
-
         _dom_sv.disabled = true;
-
         try {
-            const _enc_u8 = new TextEncoder().encode(result.content);
-            const _b64 = btoa(String.fromCharCode(..._enc_u8));
+            const enc = new TextEncoder().encode(result.content);
+            const b64 = btoa(String.fromCharCode(...enc));
             
-            const _res = await fetch(_ep_url, {
+            const res = await fetch(_ep_url, {
                 method: "PUT",
                 headers: {
                     "Authorization": `Bearer ${_app_opt._k}`,
-                    "Content-Type": "application/json",
-                    "Accept": "application/vnd.github.v3+json"
+                    "Content-Type": "application/json"
                 },
                 body: JSON.stringify({
-                    message: `v${result.version} [${result.ruleCount} entries]`,
-                    content: _b64,
-                    sha: _v_sha 
+                    message: `v${result.version} (${result.count} rules)`,
+                    content: b64,
+                    sha: _v_sha
                 })
             });
 
-            if (_res.ok) {
-                const _res_data = await _res.json();
-                _v_sha = _res_data.content.sha;
-                _original_rules_flat = _get_clean_rules(result.content).join('\n');
+            if (res.ok) {
+                const d = await res.json();
+                _v_sha = d.content.sha;
+                _last_saved_rules_flat = result.rulesFlat;
+                console.log("Saved success: v" + result.version);
             }
-        } catch (err) {
-            console.error("Lỗi hệ thống");
-        } finally {
-            _dom_sv.disabled = false;
-        }
+        } catch (e) { console.error("Save error"); }
+        _dom_sv.disabled = false;
     });
 
-    window.onload = _sync_down;
+    window.onload = _load;
 })();
 </script>
 
