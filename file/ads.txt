@@ -1,11 +1,17 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Description: Chặn quảng cáo
-! Updated: 30 Mar 2026 00:41
-! Version: 1.0.86
-! Blocked: 464
+! Updated: 30 Mar 2026 00:43
+! Version: 1.0.87
+! Blocked: 465
 ! Size: 25.8kb
 ! ==================
+
+||fb.me
+@@||fh.com
+
+||google.co.vi
+@@||google.vn
 
 1thegioi.vn##[class*="zone-"],[class^="c-banner-"],[class^="is-"]
 
@@ -158,7 +164,6 @@ emc-directory.com###mobilebottomad
 ephoto360.com##.ad-container,.i-said-no-thing-can-stop-me-warning,.line-ads
 eva.vn##[class^="banr-"],[id*="banner"],[id^="ads"],[id^="spantextads_"]
 
-||fb.me
 fptplay.vn##.flex-row,a[aria-label="purchase packages"]
 
 game.gov.vn##.wrapperqc
@@ -181,8 +186,6 @@ giaogasnhanh.com##.elementor-jet-slider
 giaothong.tapchixaydung.vn##[class*="qc"]
 gmobile.vn##.slide
 gocnhinphaply.nguoiduatin.vn###sp-wrapper-hovering,#sp_format_catfish,.adsbygoogle,.no-margin-ads,.qc_container,.sp-pto-mb-div,[class*="sp-ptoproduct-"],div[id="sp_format-ptoproduct_1991"]
-||google.co.vi
-@@||google.vn
 gsmarena.com###fkmvnq,.adsbygoogle,.adv-bottom,.adv-mid,.adv-top,.amp-sticky-ad-close-button,.d-flex,.deals,.i-amphtml-sticky-ad-layout,.top-adv
 
 hacom.vn##.bottom-20
