@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Description: Chặn quảng cáo
-! Updated: 30 Mar 2026 00:35
-! Version: 1.0.80
-! Blocked: 461
+! Updated: 30 Mar 2026 00:37
+! Version: 1.0.81
+! Blocked: 467
 ! Size: 25.9kb
 ! ==================
 
@@ -17,6 +17,7 @@
 
 @@||facebook.com
 @@||fb.com
+@@||fb.m
 @@||fb.me
 
 acb.com.vn##.download-app-mb
@@ -501,4 +502,5 @@ zingmp3.vn##[class^="z-btn-open"]
 znews.vn##.z2-inpage-wrapper,[class^="follow"],[class^="okv"],[id^="follow"],[id^="okv"],[id^="zingnews"]
 
 ||fb.me
+
 ||google.co.vi
