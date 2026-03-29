@@ -2,7 +2,7 @@
 ! Title: STOP ADS
 ! Description: Chặn quảng cáo
 ! Updated: 29 Mar 2026 23:30
-! Version: 0.0.50
+! Version: 0.0.51
 ! Blocked: 0
 ! ==================
 
@@ -494,9 +494,3 @@ youtube.com##.ytmcompanionslotrendererhost,.ytmpaidcontentoverlayhost,[class^="r
 
 zingmp3.vn##[class^="z-btn-open"]
 znews.vn##.z2-inpage-wrapper,[class^="okv"],[class^="follow"],[id^="okv"],[id^="zingnews"],[id^="zingnews"],[id^="follow"]
-
-||gemini.google.com
-||google.co.vi
-||google.com
-||google.com.vn
-||google.vn
