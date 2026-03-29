@@ -2,10 +2,11 @@
 ! Title: STOP ADS
 ! Description: Chặn quảng cáo
 ! Updated: 30 Mar 2026 00:03
-! Version: 1.0.66
+! Version: 1.0.67
 ! Blocked: 461
 ! ==================
 
+! Blocked: 461
 ! Blocked: 461
 ! Blocked: 461
 
