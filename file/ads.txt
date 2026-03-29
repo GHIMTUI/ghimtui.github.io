@@ -1,8 +1,8 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Description: Chặn quảng cáo
-! Updated: 29 Mar 2026 10:51
-! Version: 0.0.41
+! Updated: 29 Mar 2026 14:41
+! Version: 0.0.42
 ! ==================
 
 1thegioi.vn##[class*="zone-"],[class^="c-banner-"],[class^="is-"]
@@ -107,6 +107,7 @@ chungta.vn##.clearfix
 cimbbank.com.vn##.btn
 coccoc.com##.top-14,.useLogin-jCTvg,[class^="adsItem-"],[class^="default-"],[class^="top-"]
 cokhivietnam.vn##.banner_quangcao,.col-6
+collinsdictionary.com##[id*="ad_"]
 congluan.vn##.c-banner-item,[class^="ads_"],[id^="zone-"]
 congly.vn##[class^="aanetwork-"],[class^="c-banner-"]
 congnghevadoisong.vn##.col-md-8>p,[class^="ads_"]
@@ -125,7 +126,9 @@ danviet.vn##.sidebar-countdown,.video-container,[class*="ads"],[id*="ads"],[id*=
 dauthau.asia##.slider
 dep.com.vn##.ad-widget--category-top
 diaocthongthai.com###thongthai-ads-container
+dict.laban.vn###laban_app_ad
 dictionary.cambridge.org##.login-promo-block,.parallax-container,.tz0,[id^="ad_"]
+dictionary.com##.ac-player-wrapper,.box-content-top
 didongthongminh.vn##.active,.banner-site,.banners-home,.img_org,.list_slideshow,.row-banner,.slide_banner
 didongviet.vn###top-banner
 dienbientv.vn##.null,[class*="ad_"],[id*="ad_"]
@@ -204,6 +207,7 @@ hungyentv.vn##[id^="ads_"],[id^="advertise_"]
 
 inas.org###match-child-1,#wap_bottombanner_content,.ads-header-mobile,.btn-8xbet
 irace.vn##.g-6,.sticky-notice-bar
+itc.ua##.text-center,.widget_telegram
 
 kenh14.vn###admFullTop,#ban-top-site,.adv,[id^="adm-slot"],[id^="adm_zone"],[id^="admbackground"],[id^="zone"]
 kenh24h.com.vn##body>div
@@ -243,6 +247,7 @@ lichvannien365.com##div[style*="min-height: 240px"],div[style*="min-height: 280p
 lichvansu.wap.pvn##.drop
 lichvansu.wap.vn##.adsbygoogle,[id^="M"],div[style="margin-bottom: 2px;"]
 lichviet.app###smart-app-banner,.banner
+lingolandedu.com##.adsbygoogle,[class^="dict-"],[class^="mt-"]
 logos.fandom.com##.bottom-ads-container,[class^="top-"],[class^="top_"],[id^="top_"]
 loigiaihay.com###countdown,.adsbygoogle,.bg-countdown,.homepage-top-ads,.nl-infooter-mb-div,.sp-infooter-mb-google-ads
 luatminhkhue.vn###sp-wrapper-hovering-format,.ads-label
@@ -251,7 +256,7 @@ lyluanchinhtri.vn##[class^="c-banner-"],[class^="is-custom-"]
 
 mail.google.com##[id^="nav"]
 mangatooncom.vn##.detail-download-bg,.index-download-bg
-manilastandard.net##[id^="div-gpt-ad-"]
+manilastandard.net##[id*="div-gpt-ad-"],[id^="div-gpt-ad-"]
 marketplace.tripmap.vn##.ad-floating-icon,.my-6
 masothue.com##.mst_sp-bell-wrapper
 maytinhdaiviet.com###dv-mobile-bottom-ad,.adsbygoogle
@@ -298,11 +303,13 @@ nperf.com##.modal-content
 ofnews.vn##.detail-social,.qc-slider
 onplus.com.vn##.bg-dark-500,.object-contain,.rounded-3xl
 otosaigon.com###side-ads-mid-3,[class^="ads-"]
+oxfordlearnersdictionaries.com##[id*="ad_"]
 
 perplexity.ai##.animate-in
 petrotimes.vn##.petrotimes-qc,[id^="ads-"]
 phaply.net.vn##[class^="qc_"]
 phatnguoixe.com###resultValue,div[style="text-align: center;"]
+philstartech.com##[class*="a-wrap-"],[id*="div-gpt-ad-"]
 phimmoiz.ac##.bg-orange-500,.no-ads-under,.w-fit,.z-[9999]
 phimsex6s.com###bottomBannerContainer,#popBannerAds,#topBannerContainer
 phunuonline.com.vn##.adsbygoogle,[id^="banner_"]
@@ -344,6 +351,7 @@ sstruyen.com.vn###flyer
 suckhoecongdongonline.vn##.item-img,.wp-banner-top
 suckhoedoisong.vn###ub-anchor-adcontainer,.adsbygoogle,[class*="ads"],[id*="sp-wrapper-hovering"]
 suckhoetreem.vn##[class^="DnnModule-"]
+sunsky-online.com###download-app-dialog
 
 tapchicand.gov.vn##.img-fluid
 tapchicongsan.org.vn##.hidden-md
@@ -418,6 +426,7 @@ tvbox.one##.adsbygoogle,.entry-img-300,.homeadv,.homeadv>span
 
 uniscore.com##.top-0
 
+v2.rung.vn##.adsbygoogle
 vanhoanghethuat.vn##.mobile
 vansu.net##.block-inner,center[style="padding-top: 15px;height: 280px;"]
 vbsp.org.vn###right,[class*="ads"]
@@ -450,6 +459,7 @@ vjst.vn##.c-banner-item,[id^="zone-"]
 vn-z.vn##.u-bottomFixer
 vn.beincrypto.com##.custom-button-primary,[class^="SponsoredLabel-"],[class^="banner"],[class^="parallax"]
 vnbusiness.vn##[class*="-qc"],[class*="ad-"]
+vndoc.com###adpageexpanding,#adundercontent,.adblock,.adlinks,.adsbygoogle,.sidebar,.sticky
 vnexpress.net###closeButtonSticky,#sis_sticky,[class^="banner_mobile_"],[class^="inner_ads"],[class^="section_ads_"],[class^="tet_ads"],[class^="txt_qc"],[id^="ads_"],[id^="banner_"]
 vnnic.vn##.pad-0-15,.pad-left-15,.skin-default,[id^="vnnic-banner-"]
 vnpt.vn###mob-ol,.bnmb,[class*="banner-"]
