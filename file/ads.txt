@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Description: Chặn quảng cáo
-! Updated: 29 Mar 2026 23:15
-! Version: 0.0.45
-! Blocked: 464
+! Updated: 29 Mar 2026 23:18
+! Version: 0.0.46
+! Blocked: 465
 ! ==================
 
 1thegioi.vn##[class*="zone-"],[class^="c-banner-"],[class^="is-"]
@@ -182,6 +182,7 @@ gmobile.vn##.slide
 gocnhinphaply.nguoiduatin.vn###sp-wrapper-hovering,#sp_format_catfish,.adsbygoogle,.no-margin-ads,.qc_container,.sp-pto-mb-div,[class*="sp-ptoproduct-"],div[id="sp_format-ptoproduct_1991"]
 ||google.co.vi
 ||google.com.vn
+||google.vn
 gsmarena.com###fKmVnQ,.adsbygoogle,.adv-bottom,.adv-mid,.adv-top,.amp-sticky-ad-close-button,.d-flex,.deals,.i-amphtml-sticky-ad-layout,.top-adv
 
 hacom.vn##.bottom-20
