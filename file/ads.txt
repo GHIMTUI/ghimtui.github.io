@@ -1,10 +1,12 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Description: Chặn quảng cáo
-! Updated: 29 Mar 2026 23:20
-! Version: 0.0.47
-! Blocked: 466
+! Updated: 29 Mar 2026 23:24
+! Version: 0.0.48
+! Blocked: 462
 ! ==================
+
+.adsbygoogle
 
 1thegioi.vn##[class*="zone-"],[class^="c-banner-"],[class^="is-"]
 
@@ -168,7 +170,6 @@ gametoon.mobi###toon-adsense-ads,.ads-bg,.adsbygoogle
 gas40.com##.expand-home
 gddt.daklak.gov.vn###sidebar-left
 gearvn.com###popup-promotion,.article-flashsale,.banner-effect
-||gemini.google.com
 gemini.google.com##.app-upsell-banner
 genk.vn##.box-category-bottom,[id^="adm-"],[id^="admFull"],[id^="adm_"],[id^="admbackground"],[id^="ban-"],[id^="top-"],[id^="zone-"]
 giacngo.vn##.picture
@@ -180,10 +181,6 @@ giaogasnhanh.com##.elementor-jet-slider
 giaothong.tapchixaydung.vn##[class*="qc"]
 gmobile.vn##.slide
 gocnhinphaply.nguoiduatin.vn###sp-wrapper-hovering,#sp_format_catfish,.adsbygoogle,.no-margin-ads,.qc_container,.sp-pto-mb-div,[class*="sp-ptoproduct-"],div[id="sp_format-ptoproduct_1991"]
-||google.co.vi
-||google.com
-||google.com.vn
-||google.vn
 gsmarena.com###fKmVnQ,.adsbygoogle,.adv-bottom,.adv-mid,.adv-top,.amp-sticky-ad-close-button,.d-flex,.deals,.i-amphtml-sticky-ad-layout,.top-adv
 
 hacom.vn##.bottom-20
@@ -499,3 +496,9 @@ youtube.com##.ytmCompanionSlotRendererHost,.ytmPaidContentOverlayHost,[class^="r
 
 zingmp3.vn##[class^="z-btn-open"]
 znews.vn##.z2-inpage-wrapper,[class^="Okv"],[class^="follow"],[id^="Okv"],[id^="ZingNews"],[id^="Zingnews"],[id^="follow"]
+
+||gemini.google.com
+||google.co.vi
+||google.com
+||google.com.vn
+||google.vn
