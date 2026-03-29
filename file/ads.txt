@@ -2,8 +2,8 @@
 ! Title: STOP ADS
 ! Description: Chặn quảng cáo
 ! Updated: 30 Mar 2026 00:34
-! Version: 1.0.78
-! Blocked: 464
+! Version: 1.0.79
+! Blocked: 465
 ! Size: 25.8kb
 ! ==================
 
@@ -159,6 +159,7 @@ ephoto360.com##.ad-container,.i-said-no-thing-can-stop-me-warning,.line-ads
 eva.vn##[class^="banr-"],[id*="banner"],[id^="ads"],[id^="spantextads_"]
 
 @@||facebook.com
+||fb.me
 @@||fb.me
 fptplay.vn##.flex-row,a[aria-label="purchase packages"]
 
