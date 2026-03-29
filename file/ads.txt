@@ -1,8 +1,8 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Description: Chặn quảng cáo
-! Updated: 28 Mar 2026 21:19
-! Version: 0.0.40
+! Updated: 29 Mar 2026 10:51
+! Version: 0.0.41
 ! ==================
 
 1thegioi.vn##[class*="zone-"],[class^="c-banner-"],[class^="is-"]
@@ -71,7 +71,7 @@ baosonla.vn##[class*="my-"],[class^="build-"],[class^="myslides-"]
 baotayninh.vn##[class*="ads-"],[class*="pb-"],[class^="ads-"]
 baothainguyen.vn##[class^="carousel-"],[class^="e"],[class^="ff"]
 baothanhhoa.vn##[class^="dadv_"],[id^="iad"],[id^="mhot1_"]
-baotintuc.vn##.adstop
+baotintuc.vn###admbackground,#ubVideo,.adstop
 baotuyenquang.com.vn##.item_ads,[class^="ff"],[class^="item-"]
 baovanhoa.vn##.adsitem,[class^="ads_"],[id^="adsMobile_"]
 baovannghe.vn##.adsbygoogle
@@ -188,6 +188,7 @@ hd.xemtv.net###med_rec_banner2,.quangcaos,div[data-widget-id="1771082"],div[data
 hdbank.com.vn##.mobile-popup
 helio.vn##[class*="banner"]
 highspeedinternet.com###mobile-nav,.disclaimer-container,.smartbanner,.wpb_single_image
+hoanghaimobile.jp###hhAppFab
 hoanghamobile.com###popup-modal,.jquery-modal,.top-category-ads,.top-heading
 hoanhap.vn##.section-1
 hotgear.vn##.top-banner
@@ -250,6 +251,7 @@ lyluanchinhtri.vn##[class^="c-banner-"],[class^="is-custom-"]
 
 mail.google.com##[id^="nav"]
 mangatooncom.vn##.detail-download-bg,.index-download-bg
+manilastandard.net##[id^="div-gpt-ad-"]
 marketplace.tripmap.vn##.ad-floating-icon,.my-6
 masothue.com##.mst_sp-bell-wrapper
 maytinhdaiviet.com###dv-mobile-bottom-ad,.adsbygoogle
@@ -294,6 +296,7 @@ nongnghiepmoitruong.vn##[class^="ads-"],[class^="adv"],[class^="exp_qc_"],[id^="
 nperf.com##.modal-content
 
 ofnews.vn##.detail-social,.qc-slider
+onplus.com.vn##.bg-dark-500,.object-contain,.rounded-3xl
 otosaigon.com###side-ads-mid-3,[class^="ads-"]
 
 perplexity.ai##.animate-in
@@ -360,6 +363,7 @@ tapchiyhoctphcm.vn##.align-items-center,.border
 tayninh.gov.vn##.UIAdvertisement_Default
 techlade.vn##[class*="banner"]
 technave.com##.ad-container
+techsignin.com##.td-visible-phone
 techz.vn###sp-wrapper-hovering,.header_ads
 thainguyen.edu.vn##.full-width,.w-download
 thainguyen.gov.vn##.UIAdvertisement_Default
@@ -375,6 +379,7 @@ thethao.sggp.org.vn###ban-site-top,#oa-360-1774314000422_iru3nrvc7,#sdaMobile_Sd
 thethao247.vn##.as,.main-content>section,[class^="sp-"],[class^="text-"],[id^="nl-"],[id^="sp-"],[id^="zone-"],div[as-id],div[style*="min-height: 250px"]
 thethaovanhoa.vn##.adsbygoogle,.zone-top
 thhp.vn##.col-sm-3,[class*="ads"],[class*="zonegourp"]
+thiepmung.com##.i-said-no-thing-can-stop-me-warning,[class^="jquery-"]
 thieunien.vn##.adsbygoogle
 thitruongtaichinhtiente.vn##.c-banner,.c-bottom-box,[class^="ads_"],[class^="c-banner-"],[class^="c-bottom-"],[class^="is-"],[id^="zone-"]
 thoibaonganhang.vn##.__ads_click,.tbnh-qc-full
@@ -420,6 +425,7 @@ vdb.gov.vn##[class*="Ads_"]
 vfv.org.vn##.content_colorbg,.content_graybg
 vi.kalvo.com##.adsbygoogle,.barsticky,.klv_x,[class^="klvad"]
 vi.qrcodechimp.com##[id^="features_popup"]
+vi.xiaomitoday.it###gmp-bottommobile,#gmp-middlemobile,#gmp-topmobile,#xiaom-1572609294,.adsbygoogle,[id*="custom_html-"],[id^="xiaom-"],[id^=cegg_price_movers-"]
 via.gov.vn##.bnrCenter
 vib.com.vn##.new-download-app
 viblo.asia##.el-dialog__wrapper,.fixed-bottom-bar,.v-modal
