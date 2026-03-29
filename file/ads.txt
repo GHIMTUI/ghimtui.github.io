@@ -1,13 +1,11 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Description: Chặn quảng cáo
-! Updated: 30 Mar 2026 00:48
-! Version: 1.0.91
+! Updated: 30 Mar 2026 00:49
+! Version: 1.0.92
 ! Blocked: 462
 ! Size: 25.8kb
 ! ==================
-
-.adsbygoogle
 
 1thegioi.vn##[class*="zone-"],[class^="c-banner-"],[class^="is-"]
 
@@ -497,3 +495,5 @@ youtube.com##.ytmcompanionslotrendererhost,.ytmpaidcontentoverlayhost,[class^="r
 
 zingmp3.vn##[class^="z-btn-open"]
 znews.vn##.z2-inpage-wrapper,[class^="follow"],[class^="okv"],[id^="follow"],[id^="okv"],[id^="zingnews"]
+
+@@||c.mo
