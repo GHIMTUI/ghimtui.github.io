@@ -193,9 +193,6 @@ http://live.fptplay53.net/fnxsd1/tuyenquang_hls.smil/chunklist_b2500000.m3u8
 #KODIPROP:inputstream.adaptive.license_key=7417db88928243fda4e03596bbd19a27:eebb689de1191ae1b207d32f0d5ca9fe
 http://livevlisctcdnw.seenow.vn/livesnv2/PHIM_VIET/manifest.mpd
 
-#EXTINF:-1 tvg-id="onmovies" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/on_cine.png", ON Cine
-http://freem3u.xyz/api/live/play.m3u8?vid=176
-
 #EXTINF:-1 tvg-id="onmovies" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/on_movies.png", ON Movies
 #KODIPROP:inputstream=inputstream.adaptive
 #KODIPROP:inputstream.adaptive.manifest_type=dash
