@@ -2,7 +2,7 @@
 ! Title: STOP ADS
 ! Describe: Chặn quảng cáo
 ! Updated: 30 Mar 2026 15:47
-! Version: 1.0.107
+! Version: 1.0.108
 ! Blocked: 472
 ! Size: 25.96kb
 ! ==================
@@ -508,4 +508,4 @@ xphimsex.net##.xx-ads
 youtube.com##.ytmcompanionslotrendererhost,.ytmpaidcontentoverlayhost,[class^="rich-section-"],[class^="ytmbackstagepost"]
 
 zingmp3.vn##[class^="z-btn-open"]
-znews.vn###Zingnews_SiteHeader,.z2-inpage-wrapper,[class^="follow"],[class^="okv"],[id^="follow"],[id^="okv"],[id^="zingnews"],div>div>div
+znews.vn###Zingnews_SiteHeader,.z2-inpage-wrapper,[class^="follow"],[class^="okv"],[id^="follow"],[id^="okv"],[id^="zingnews"],div>div>divA
