@@ -1,17 +1,17 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Describe: Chặn quảng cáo
-! Updated: 30 Mar 2026 19:19
-! Version: 1.0.131
-! Blocked: 473
-! Size: 26.03kb
+! Updated: 30 Mar 2026 19:25
+! Version: 1.0.132
+! Blocked: 475
+! Size: 26.04kb
 ! ==================
 
 .adsbygoogle
 
 1thegioi.vn##[class*="zone-"],[class^="c-banner-"],[class^="is-"]
 
-24h.com.vn###header-24h-login-cont,.adsbygoogle,[class^="inpage_"],[id^="ads_"],[id^="div-gpt-ad-"],[id^="div_inpage_"],[id^="sis_inpage"]
+24h.com.vn###header-24h-login-cont,.adsbygoogle,[class^="inpage_"],[id^="ADS_"],[id^="ads_"],[id^="div-gpt-ad-"],[id^="div_inpage_"],[id^="sis_inpage"]
 2game.vn###bannermtop,[class^="banner-"]
 2sao.vn###adzone39,#catfish,.adsbygoolge,.vadslogo,[class^="vmc_"],[id^="adzone"],[id^="mashead-"],[id^="mobile_"],[id^="sp-wrapper-"]
 
@@ -193,7 +193,7 @@ hanoimoi.vn##[class^="ads_"],[class^="c-banner-"],[class^="is-"],[id^="zone-"]
 hanoionline.vn##.banner
 happyvietnam.vnanet.vn##.background-image
 hatinh.edu.vn##.image-list-album
-hd.xemtv.net###med_rec_banner2,.quangcaos,div[data-widget-id="1771082"],div[data-widget-id="1886588"],img[src="/banner/f168-sidebar.gif"],.panel-primary
+hd.xemtv.net###med_rec_banner2,.panel-primary,.quangcaos,div[data-widget-id="1771082"],div[data-widget-id="1886588"],img[src="/banner/f168-sidebar.gif"]
 hdbank.com.vn##.mobile-popup
 helio.vn##[class*="banner"]
 highspeedinternet.com###mobile-nav,.disclaimer-container,.smartbanner,.wpb_single_image
@@ -428,7 +428,7 @@ tongdainhadat.vn##.eb-inst
 truyenhinhthanhhoa.vn##[class^="ad-"],[id^="banner-"],[id^="placement-"],[id^="share-"],[id^="slot-"],[id^="zone-"]
 truyennhiemvietnam.vn##.index-card
 ttbc-hcm.gov.vn##[class^="abs-"],[class^="c-banner-"],[class^="zone-"]
-tuoitre.vn##.clearfix,#LeaderBoardTop,#admbackground,#leaderboardtop,#pvoucher-live-container,.boxdsk_swiper,[id^="sp_format-hovering"],[id^="zone"]
+tuoitre.vn###LeaderBoardTop,#admbackground,#leaderboardtop,#pvoucher-live-container,.boxdsk_swiper,.clearfix,[id^="sp_format-hovering"],[id^="zone"]
 tusach.vn###sp-wrapper-hovering-format
 tuyenquang.gov.vn##.h-auto
 tv360.vn###ads-player-base-wrapper,.css-1jzjo52,.css-1u6gwec,.css-1xdipk,.css-csxyfn,.text-ellipsis,.toastify
