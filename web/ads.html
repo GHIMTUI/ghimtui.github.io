@@ -55,11 +55,11 @@
             font-weight: 900;
             font-size: 1.1rem;
             letter-spacing: 2px;
-            color: var(--accent-green); /* Tiêu đề xanh lá đậm */
+            color: var(--accent-green);
             text-transform: uppercase;
         }
 
-        /* Nút Lưu Hình Viên Thuốc - Xanh đậm, Chữ trắng, Phẳng */
+        /* Nút Lưu Hình Viên Thuốc */
         .actions {
             display: flex;
             align-items: center;
@@ -76,12 +76,12 @@
             cursor: pointer;
             text-transform: uppercase;
             letter-spacing: 1px;
-            transition: background-color 0.2s ease, transform 0.1s ease;
+            transition: all 0.2s ease;
             white-space: nowrap;
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            box-shadow: none;
+            min-width: 110px;
         }
 
         #svBtn:hover:not(:disabled) {
@@ -97,6 +97,13 @@
             color: #444;
             cursor: not-allowed;
             opacity: 0.6;
+        }
+
+        /* Trạng thái đã lưu (xám nhẹ) */
+        #svBtn.saved-state {
+            background-color: #1a1a1a;
+            color: #666;
+            cursor: default;
         }
 
         /* Editor Area */
@@ -127,31 +134,9 @@
             border-color: var(--accent-green);
         }
 
-        #txtAr::placeholder {
-            color: #222;
-        }
-
-        /* Custom Scrollbar */
-        #txtAr::-webkit-scrollbar {
-            width: 6px;
-        }
-        #txtAr::-webkit-scrollbar-thumb {
-            background: #1a1a1a;
-            border-radius: 10px;
-        }
-        #txtAr::-webkit-scrollbar-thumb:hover {
-            background: var(--accent-green);
-        }
-
         @media (max-width: 640px) {
-            .info-path {
-                font-size: 0.95rem;
-                letter-spacing: 1px;
-            }
-            #svBtn {
-                padding: 0.5rem 1.2rem;
-                font-size: 0.7rem;
-            }
+            .info-path { font-size: 0.95rem; }
+            #svBtn { padding: 0.5rem 1.2rem; font-size: 0.7rem; min-width: 90px; }
         }
     </style>
 </head>
@@ -161,7 +146,7 @@
     <div class="toolbar">
         <div class="info-path">ADBLOCK EDITOR</div>
         <div class="actions">
-            <button id="svBtn" disabled>LƯU DỮ LIỆU</button>
+            <button id="svBtn" disabled>ĐANG TẢI...</button>
         </div>
     </div>
 
@@ -172,6 +157,7 @@
 
 <script>
 (function() {
+    // Giải mã key bảo mật
     const _0x_u1 = ["Z2hwX3RLZzVQTFlk", "VlQweElPcko0R3VaSVU4S0M2V3BoTDNoUXhuZw=="];
     const _init_key = () => atob(_0x_u1[0] + _0x_u1[1]);
 
@@ -188,14 +174,48 @@
     const _dom_sv = document.getElementById('svBtn');
 
     let _v_sha = null;
-    let _last_saved_rules_flat = ""; 
+    let _last_saved_content = ""; 
+
+    function setBtnState(state) {
+        if (state === 'saved') {
+            _dom_sv.innerText = "ĐÃ LƯU";
+            _dom_sv.disabled = true;
+            _dom_sv.classList.add('saved-state');
+        } else if (state === 'unsaved') {
+            _dom_sv.innerText = "LƯU LẠI";
+            _dom_sv.disabled = false;
+            _dom_sv.classList.remove('saved-state');
+        } else if (state === 'saving') {
+            _dom_sv.innerText = "ĐANG LƯU...";
+            _dom_sv.disabled = true;
+            _dom_sv.classList.remove('saved-state');
+        } else if (state === 'error') {
+            _dom_sv.innerText = "LỖI";
+            _dom_sv.disabled = false;
+        }
+    }
+
+    // Hàm loại bỏ tiền tố tên miền (m., shop., api.,...)
+    function _remove_subdomain_prefixes(domain) {
+        if (!domain) return "";
+        // Danh sách các tiền tố cần loại bỏ (có thể thêm bớt tùy ý)
+        const prefixes = ["m.", "shop.", "api.", "news.", "mobile.", "v.", "app."];
+        let cleaned = domain.toLowerCase();
+        
+        for (let p of prefixes) {
+            if (cleaned.startsWith(p)) {
+                return domain.substring(p.length);
+            }
+        }
+        return domain;
+    }
 
     function _standardize_content(rawInput) {
         let lines = rawInput.split('\n').map(l => l.trim()).filter(l => l !== "");
         let bodyLines = [];
         
         lines.forEach(line => {
-            if (line.match(/! (Title|Description|Updated|Version|Blocked|Size|=======)/i) || line.startsWith("[Adblock")) return;
+            if (line.match(/! (Title|Description|Describe|Updated|Version|Blocked|Size|=======)/i) || line.startsWith("[Adblock")) return;
             if (!line.startsWith('!')) bodyLines.push(line);
         });
 
@@ -204,9 +224,17 @@
 
         bodyLines.forEach(line => {
             if (line.includes('##') && !line.startsWith('@@')) {
-                let [domain, selector] = line.split('##');
+                let parts = line.split('##');
+                // Loại bỏ tiền tố m., shop.,... trước khi dùng làm key trong Map
+                let domain = _remove_subdomain_prefixes(parts[0].trim());
+                let selector = parts.slice(1).join('##');
+                
                 if (!mergedMap.has(domain)) mergedMap.set(domain, new Set());
-                selector.split(',').forEach(s => mergedMap.get(domain).add(s.trim()));
+                
+                selector.split(',').forEach(s => {
+                    const trimmedS = s.trim();
+                    if (trimmedS) mergedMap.get(domain).add(trimmedS);
+                });
             } else {
                 otherRules.push(line);
             }
@@ -214,24 +242,30 @@
 
         let processedBody = [];
         mergedMap.forEach((selectors, domain) => {
-            processedBody.push(`${domain}##${Array.from(selectors).join(',')}`);
+            const sortedSelectors = Array.from(selectors).sort();
+            processedBody.push(`${domain}##${sortedSelectors.join(',')}`);
         });
+
         processedBody = [...processedBody, ...otherRules];
 
-        let whitelistRules = Array.from(new Set(processedBody.filter(line => line.startsWith("@@||")))).sort();
-        let normalRules = Array.from(new Set(processedBody.filter(line => !line.startsWith("@@||") && line !== ""))).sort();
+        // Sắp xếp nghiêm ngặt phân biệt hoa thường ASCII
+        const strictSort = (a, b) => {
+            if (a < b) return -1;
+            if (a > b) return 1;
+            return 0;
+        };
+
+        let whitelistRules = Array.from(new Set(processedBody.filter(line => line.startsWith("@@||")))).sort(strictSort);
+        let normalRules = Array.from(new Set(processedBody.filter(line => !line.startsWith("@@||") && line !== ""))).sort(strictSort);
         
         let uniqueBody = [...normalRules, ...whitelistRules];
-        let realRuleCount = uniqueBody.filter(line => /^[a-zA-Z0-9]/.test(line)).length;
-        
-        let currentRulesFlat = uniqueBody.join('\n');
-        let isChanged = currentRulesFlat !== _last_saved_rules_flat;
+        let realRuleCount = uniqueBody.filter(line => line.trim().length > 0 && !line.startsWith('!')).length;
 
+        // Cập nhật Version
         let version = "1.0.0";
         const v_match = rawInput.match(/!\s*Version:\s*(\d+)\.(\d+)\.(\d+)/i);
         if (v_match) {
-            let v_major = v_match[1], v_minor = v_match[2], v_patch = parseInt(v_match[3]);
-            if (isChanged) v_patch += 1;
+            let v_major = v_match[1], v_minor = v_match[2], v_patch = parseInt(v_match[3]) + 1;
             version = `${v_major}.${v_minor}.${v_patch}`;
         }
 
@@ -241,18 +275,24 @@
             hour: '2-digit', minute: '2-digit', hour12: false 
         }).replace(',', '');
 
+        // Nhóm nội dung và thêm dòng trống
         let tempBodyOutput = [];
-        let lastChar = "";
+        let lastGroupKey = "";
+
         uniqueBody.forEach(line => {
+            let currentGroupKey = "";
             if (line.startsWith("@@||")) {
-                if (lastChar !== "WL_GROUP") { tempBodyOutput.push(""); lastChar = "WL_GROUP"; }
+                currentGroupKey = "WHITELIST";
             } else {
-                let currentChar = line[0].toLowerCase();
-                if (!/[a-z0-9]/.test(currentChar)) currentChar = "SPEC";
-                if (lastChar && lastChar !== "WL_GROUP" && currentChar !== lastChar) tempBodyOutput.push(""); 
-                lastChar = currentChar;
+                currentGroupKey = line[0];
+                if (!/[a-zA-Z0-9]/.test(currentGroupKey)) currentGroupKey = "SPECIAL";
+            }
+
+            if (lastGroupKey && lastGroupKey !== currentGroupKey) {
+                tempBodyOutput.push(""); 
             }
             tempBodyOutput.push(line);
+            lastGroupKey = currentGroupKey;
         });
 
         const headerPrefix = [
@@ -264,7 +304,7 @@
             `! Blocked: ${realRuleCount}`
         ];
         
-        const contentForSize = [...headerPrefix, "! Size: 00.0kb", "! ==================", "", ...tempBodyOutput].join('\n');
+        const contentForSize = [...headerPrefix, "! Size: 00.00kb", "! ==================", "", ...tempBodyOutput].join('\n');
         const kbSize = (new TextEncoder().encode(contentForSize).length / 1024).toFixed(2);
 
         let finalOutput = [
@@ -273,14 +313,9 @@
             "! ==================",
             "",
             ...tempBodyOutput
-        ];
+        ].join('\n');
 
-        return {
-            content: finalOutput.join('\n'),
-            version: version,
-            count: realRuleCount,
-            rulesFlat: currentRulesFlat
-        };
+        return { content: finalOutput, version: version };
     }
 
     async function _load() {
@@ -294,19 +329,28 @@
                 const raw = atob(data.content);
                 const dec = decodeURIComponent(raw.split('').map(c => '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2)).join(''));
                 _dom_ar.value = dec;
-                _last_saved_rules_flat = dec.split('\n').filter(l => l.trim() && !l.startsWith('!') && !l.startsWith('[')).sort().join('\n');
-                _dom_sv.disabled = false;
+                _last_saved_content = dec;
+                setBtnState('saved');
             }
-        } catch (e) { console.error("Error loading"); }
+        } catch (e) { 
+            _dom_sv.innerText = "LỖI KẾT NỐI";
+        }
     }
 
-    _dom_sv.addEventListener('click', async () => {
-        const result = _standardize_content(_dom_ar.value);
-        _dom_ar.value = result.content;
-        _dom_sv.disabled = true;
-        const originalText = _dom_sv.innerText;
-        _dom_sv.innerText = "ĐANG LƯU";
+    _dom_ar.addEventListener('input', () => {
+        if (_dom_ar.value !== _last_saved_content) {
+            setBtnState('unsaved');
+        } else {
+            setBtnState('saved');
+        }
+    });
 
+    _dom_sv.addEventListener('click', async () => {
+        if (_dom_sv.disabled) return;
+        
+        setBtnState('saving');
+        const result = _standardize_content(_dom_ar.value);
+        
         try {
             const enc = new TextEncoder().encode(result.content);
             const b64 = btoa(String.fromCharCode(...enc));
@@ -326,15 +370,16 @@
             if (res.ok) {
                 const d = await res.json();
                 _v_sha = d.content.sha;
-                _dom_sv.innerText = "XONG";
-                setTimeout(() => { _dom_sv.innerText = originalText; _dom_sv.disabled = false; }, 2000);
+                _dom_ar.value = result.content;
+                _last_saved_content = result.content;
+                setBtnState('saved');
             } else {
-                _dom_sv.innerText = "LỖI";
-                setTimeout(() => { _dom_sv.innerText = originalText; _dom_sv.disabled = false; }, 2000);
+                setBtnState('error');
+                setTimeout(() => setBtnState('unsaved'), 2000);
             }
         } catch (e) { 
-            _dom_sv.innerText = "LỖI";
-            _dom_sv.disabled = false;
+            setBtnState('error');
+            setTimeout(() => setBtnState('unsaved'), 2000);
         }
     });
 
