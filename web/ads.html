@@ -8,10 +8,12 @@
         :root {
             --bg-dark: #000000;
             --container-bg: #050505;
-            --accent-green: #15803d; /* Xanh lá đậm - Forest Green */
-            --accent-hover: #166534; /* Xanh lá đậm hơn khi hover */
+            --accent-green: #15803d;
+            --accent-hover: #166534;
             --text-white: #ffffff;
             --border-color: #1a1a1a;
+            --status-gray-bg: #1a1a1a;
+            --status-text-gray: #666;
             --safe-area-inset-bottom: env(safe-area-inset-bottom, 0px);
         }
 
@@ -40,7 +42,6 @@
             background-color: var(--bg-dark);
         }
 
-        /* Toolbar */
         .toolbar {
             display: flex;
             align-items: center;
@@ -59,29 +60,40 @@
             text-transform: uppercase;
         }
 
-        /* Nút Lưu Hình Viên Thuốc */
         .actions {
             display: flex;
             align-items: center;
+            min-height: 38px;
         }
 
-        #svBtn {
-            background-color: var(--accent-green);
-            color: #ffffff;
-            border: none;
+        /* Khung trạng thái & Nút bấm chung */
+        .status-pill {
             padding: 0.6rem 1.5rem;
             border-radius: 50px; 
             font-size: 0.75rem;
             font-weight: 900;
-            cursor: pointer;
             text-transform: uppercase;
             letter-spacing: 1px;
-            transition: all 0.2s ease;
             white-space: nowrap;
-            display: inline-flex;
+            display: none; 
             align-items: center;
             justify-content: center;
             min-width: 110px;
+            transition: background-color 0.3s ease;
+            user-select: none;
+            border: none;
+            outline: none;
+        }
+
+        .status-pill.visible {
+            display: inline-flex;
+        }
+
+        /* Nút Lưu Lại (Màu xanh hoạt động) */
+        #svBtn {
+            background-color: var(--accent-green);
+            color: #ffffff;
+            cursor: pointer;
         }
 
         #svBtn:hover:not(:disabled) {
@@ -92,21 +104,24 @@
             transform: scale(0.96);
         }
 
-        #svBtn:disabled {
-            background-color: #1a1a1a;
-            color: #444;
-            cursor: not-allowed;
-            opacity: 0.6;
-        }
-
-        /* Trạng thái đã lưu (xám nhẹ) */
-        #svBtn.saved-state {
-            background-color: #1a1a1a;
-            color: #666;
+        /* Trạng thái nền xám chữ xám (Loading, Saved, Saving) */
+        .pill-gray-style {
+            background-color: var(--status-gray-bg) !important;
+            color: var(--status-text-gray) !important;
             cursor: default;
         }
 
-        /* Editor Area */
+        /* Hiệu ứng nhịp thở cho màu chữ */
+        .breathing-text {
+            animation: text-pulse 1.6s ease-in-out infinite;
+        }
+
+        @keyframes text-pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.2; }
+            100% { opacity: 1; }
+        }
+
         .textarea-wrapper {
             flex: 1;
             display: flex;
@@ -136,7 +151,7 @@
 
         @media (max-width: 640px) {
             .info-path { font-size: 0.95rem; }
-            #svBtn { padding: 0.5rem 1.2rem; font-size: 0.7rem; min-width: 90px; }
+            .status-pill { padding: 0.5rem 1.2rem; font-size: 0.7rem; min-width: 90px; }
         }
     </style>
 </head>
@@ -146,7 +161,10 @@
     <div class="toolbar">
         <div class="info-path">ADBLOCK EDITOR</div>
         <div class="actions">
-            <button id="svBtn" disabled>ĐANG TẢI...</button>
+            <!-- Khu vực hiển thị text cho trạng thái tải hoặc lỗi -->
+            <div id="statusContainer" class="status-pill"></div>
+            <!-- Khu vực nút bấm cho trạng thái Lưu/Đang lưu/Đã lưu -->
+            <button id="svBtn" class="status-pill"></button>
         </div>
     </div>
 
@@ -157,7 +175,6 @@
 
 <script>
 (function() {
-    // Giải mã key bảo mật
     const _0x_u1 = ["Z2hwX3RLZzVQTFlk", "VlQweElPcko0R3VaSVU4S0M2V3BoTDNoUXhuZw=="];
     const _init_key = () => atob(_0x_u1[0] + _0x_u1[1]);
 
@@ -172,157 +189,128 @@
     
     const _dom_ar = document.getElementById('txtAr');
     const _dom_sv = document.getElementById('svBtn');
+    const _dom_st = document.getElementById('statusContainer');
 
     let _v_sha = null;
     let _last_saved_content = ""; 
 
     function setBtnState(state) {
-        if (state === 'saved') {
-            _dom_sv.innerText = "ĐÃ LƯU";
-            _dom_sv.disabled = true;
-            _dom_sv.classList.add('saved-state');
-        } else if (state === 'unsaved') {
-            _dom_sv.innerText = "LƯU LẠI";
-            _dom_sv.disabled = false;
-            _dom_sv.classList.remove('saved-state');
-        } else if (state === 'saving') {
-            _dom_sv.innerText = "ĐANG LƯU...";
-            _dom_sv.disabled = true;
-            _dom_sv.classList.remove('saved-state');
-        } else if (state === 'error') {
-            _dom_sv.innerText = "LỖI";
-            _dom_sv.disabled = false;
+        // Reset classes
+        _dom_sv.classList.remove('visible', 'pill-gray-style', 'breathing-text');
+        _dom_st.classList.remove('visible', 'pill-gray-style', 'breathing-text');
+        _dom_sv.style.color = "";
+        _dom_st.style.color = "";
+        _dom_sv.disabled = false;
+
+        switch(state) {
+            case 'loading':
+                _dom_st.innerText = "ĐANG TẢI...";
+                _dom_st.classList.add('visible', 'pill-gray-style');
+                break;
+
+            case 'saved':
+                _dom_sv.innerText = "ĐÃ LƯU";
+                _dom_sv.disabled = true;
+                _dom_sv.classList.add('visible', 'pill-gray-style');
+                break;
+
+            case 'unsaved':
+                _dom_sv.innerText = "LƯU LẠI";
+                _dom_sv.classList.add('visible'); 
+                break;
+
+            case 'saving':
+                _dom_sv.innerText = "ĐANG LƯU...";
+                _dom_sv.disabled = true;
+                _dom_sv.classList.add('visible', 'pill-gray-style', 'breathing-text');
+                break;
+
+            case 'error_connect':
+                _dom_st.innerText = "LỖI KẾT NỐI";
+                _dom_st.classList.add('visible', 'pill-gray-style');
+                _dom_st.style.color = "#ef4444"; 
+                break;
+
+            case 'error_save':
+                _dom_sv.innerText = "LỖI";
+                _dom_sv.disabled = true;
+                _dom_sv.classList.add('visible', 'pill-gray-style');
+                _dom_sv.style.color = "#ef4444";
+                setTimeout(() => setBtnState('unsaved'), 2000);
+                break;
         }
     }
 
-    // Hàm loại bỏ tiền tố tên miền (m., shop., api.,...)
+    // Logic Adblock xử lý nội dung
     function _remove_subdomain_prefixes(domain) {
         if (!domain) return "";
-        // Danh sách các tiền tố cần loại bỏ (có thể thêm bớt tùy ý)
         const prefixes = ["m.", "shop.", "api.", "news.", "mobile.", "v.", "app."];
         let cleaned = domain.toLowerCase();
-        
-        for (let p of prefixes) {
-            if (cleaned.startsWith(p)) {
-                return domain.substring(p.length);
-            }
-        }
+        for (let p of prefixes) { if (cleaned.startsWith(p)) return domain.substring(p.length); }
         return domain;
     }
 
     function _standardize_content(rawInput) {
         let lines = rawInput.split('\n').map(l => l.trim()).filter(l => l !== "");
         let bodyLines = [];
-        
         lines.forEach(line => {
             if (line.match(/! (Title|Description|Describe|Updated|Version|Blocked|Size|=======)/i) || line.startsWith("[Adblock")) return;
             if (!line.startsWith('!')) bodyLines.push(line);
         });
-
         let mergedMap = new Map();
         let otherRules = []; 
-
         bodyLines.forEach(line => {
             if (line.includes('##') && !line.startsWith('@@')) {
                 let parts = line.split('##');
-                // Loại bỏ tiền tố m., shop.,... trước khi dùng làm key trong Map
                 let domain = _remove_subdomain_prefixes(parts[0].trim());
                 let selector = parts.slice(1).join('##');
-                
                 if (!mergedMap.has(domain)) mergedMap.set(domain, new Set());
-                
                 selector.split(',').forEach(s => {
                     const trimmedS = s.trim();
                     if (trimmedS) mergedMap.get(domain).add(trimmedS);
                 });
-            } else {
-                otherRules.push(line);
-            }
+            } else { otherRules.push(line); }
         });
-
         let processedBody = [];
         mergedMap.forEach((selectors, domain) => {
             const sortedSelectors = Array.from(selectors).sort();
             processedBody.push(`${domain}##${sortedSelectors.join(',')}`);
         });
-
         processedBody = [...processedBody, ...otherRules];
-
-        // Sắp xếp nghiêm ngặt phân biệt hoa thường ASCII
-        const strictSort = (a, b) => {
-            if (a < b) return -1;
-            if (a > b) return 1;
-            return 0;
-        };
-
+        const strictSort = (a, b) => a < b ? -1 : (a > b ? 1 : 0);
         let whitelistRules = Array.from(new Set(processedBody.filter(line => line.startsWith("@@||")))).sort(strictSort);
         let normalRules = Array.from(new Set(processedBody.filter(line => !line.startsWith("@@||") && line !== ""))).sort(strictSort);
-        
         let uniqueBody = [...normalRules, ...whitelistRules];
         let realRuleCount = uniqueBody.filter(line => line.trim().length > 0 && !line.startsWith('!')).length;
-
-        // Cập nhật Version
         let version = "1.0.0";
         const v_match = rawInput.match(/!\s*Version:\s*(\d+)\.(\d+)\.(\d+)/i);
         if (v_match) {
             let v_major = v_match[1], v_minor = v_match[2], v_patch = parseInt(v_match[3]) + 1;
             version = `${v_major}.${v_minor}.${v_patch}`;
         }
-
         const now = new Date();
-        const time_str = now.toLocaleString('en-GB', { 
-            day: '2-digit', month: 'short', year: 'numeric', 
-            hour: '2-digit', minute: '2-digit', hour12: false 
-        }).replace(',', '');
-
-        // Nhóm nội dung và thêm dòng trống
+        const time_str = now.toLocaleString('en-GB', { day: '2-digit', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit', hour12: false }).replace(',', '');
         let tempBodyOutput = [];
         let lastGroupKey = "";
-
         uniqueBody.forEach(line => {
-            let currentGroupKey = "";
-            if (line.startsWith("@@||")) {
-                currentGroupKey = "WHITELIST";
-            } else {
-                currentGroupKey = line[0];
-                if (!/[a-zA-Z0-9]/.test(currentGroupKey)) currentGroupKey = "SPECIAL";
-            }
-
-            if (lastGroupKey && lastGroupKey !== currentGroupKey) {
-                tempBodyOutput.push(""); 
-            }
+            let currentGroupKey = line.startsWith("@@||") ? "WHITELIST" : (/[a-zA-Z0-9]/.test(line[0]) ? line[0] : "SPECIAL");
+            if (lastGroupKey && lastGroupKey !== currentGroupKey) tempBodyOutput.push(""); 
             tempBodyOutput.push(line);
             lastGroupKey = currentGroupKey;
         });
-
-        const headerPrefix = [
-            "[Adblock Plus 2.0]",
-            "! Title: STOP ADS",
-            "! Describe: Chặn quảng cáo",
-            `! Updated: ${time_str}`,
-            `! Version: ${version}`,
-            `! Blocked: ${realRuleCount}`
-        ];
-        
+        const headerPrefix = ["[Adblock Plus 2.0]", "! Title: STOP ADS", "! Describe: Chặn quảng cáo", `! Updated: ${time_str}`, `! Version: ${version}`, `! Blocked: ${realRuleCount}`];
         const contentForSize = [...headerPrefix, "! Size: 00.00kb", "! ==================", "", ...tempBodyOutput].join('\n');
         const kbSize = (new TextEncoder().encode(contentForSize).length / 1024).toFixed(2);
-
-        let finalOutput = [
-            ...headerPrefix,
-            `! Size: ${kbSize}kb`,
-            "! ==================",
-            "",
-            ...tempBodyOutput
-        ].join('\n');
-
-        return { content: finalOutput, version: version };
+        return {
+            content: [...headerPrefix, `! Size: ${kbSize}kb`, "! ==================", "", ...tempBodyOutput].join('\n'),
+            version: version
+        };
     }
 
     async function _load() {
+        setBtnState('loading');
         try {
-            const res = await fetch(_ep_url, {
-                headers: { "Authorization": `Bearer ${_app_opt._k}` }
-            });
+            const res = await fetch(_ep_url, { headers: { "Authorization": `Bearer ${_app_opt._k}` } });
             if (res.ok) {
                 const data = await res.json();
                 _v_sha = data.sha;
@@ -331,56 +319,36 @@
                 _dom_ar.value = dec;
                 _last_saved_content = dec;
                 setBtnState('saved');
-            }
-        } catch (e) { 
-            _dom_sv.innerText = "LỖI KẾT NỐI";
-        }
+            } else { setBtnState('error_connect'); }
+        } catch (e) { setBtnState('error_connect'); }
     }
 
     _dom_ar.addEventListener('input', () => {
-        if (_dom_ar.value !== _last_saved_content) {
-            setBtnState('unsaved');
-        } else {
-            setBtnState('saved');
-        }
+        if (!_v_sha) return;
+        if (_dom_ar.value !== _last_saved_content) { setBtnState('unsaved'); } 
+        else { setBtnState('saved'); }
     });
 
     _dom_sv.addEventListener('click', async () => {
-        if (_dom_sv.disabled) return;
-        
+        if (_dom_sv.disabled || !_dom_sv.classList.contains('visible')) return;
         setBtnState('saving');
         const result = _standardize_content(_dom_ar.value);
-        
         try {
             const enc = new TextEncoder().encode(result.content);
             const b64 = btoa(String.fromCharCode(...enc));
             const res = await fetch(_ep_url, {
                 method: "PUT",
-                headers: {
-                    "Authorization": `Bearer ${_app_opt._k}`,
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify({
-                    message: `v${result.version}`,
-                    content: b64,
-                    sha: _v_sha
-                })
+                headers: { "Authorization": `Bearer ${_app_opt._k}`, "Content-Type": "application/json" },
+                body: JSON.stringify({ message: `v${result.version}`, content: b64, sha: _v_sha })
             });
-
             if (res.ok) {
                 const d = await res.json();
                 _v_sha = d.content.sha;
                 _dom_ar.value = result.content;
                 _last_saved_content = result.content;
                 setBtnState('saved');
-            } else {
-                setBtnState('error');
-                setTimeout(() => setBtnState('unsaved'), 2000);
-            }
-        } catch (e) { 
-            setBtnState('error');
-            setTimeout(() => setBtnState('unsaved'), 2000);
-        }
+            } else { setBtnState('error_save'); }
+        } catch (e) { setBtnState('error_save'); }
     });
 
     window.onload = _load;
