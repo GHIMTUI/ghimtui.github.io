@@ -1,10 +1,10 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Describe: Chặn quảng cáo
-! Updated: 30 Mar 2026 09:00
-! Version: 1.0.100
-! Blocked: 461
-! Size: 25.85kb
+! Updated: 30 Mar 2026 14:30
+! Version: 1.0.101
+! Blocked: 479
+! Size: 26.46kb
 ! ==================
 
 .adsbygoogle
@@ -192,6 +192,7 @@ hanoionline.vn##.banner
 happyvietnam.vnanet.vn##.background-image
 hatinh.edu.vn##.image-list-album
 hd.xemtv.net###med_rec_banner2,.quangcaos,div[data-widget-id="1771082"],div[data-widget-id="1886588"],img[src="/banner/f168-sidebar.gif"]
+hd.xemtv.net##.panel-primary
 hdbank.com.vn##.mobile-popup
 helio.vn##[class*="banner"]
 highspeedinternet.com###mobile-nav,.disclaimer-container,.smartbanner,.wpb_single_image
@@ -258,6 +259,7 @@ luatminhkhue.vn###sp-wrapper-hovering-format,.ads-label
 luatvietnam.vn##.adsbygoogle,.adv-footer-fixed
 lyluanchinhtri.vn##[class^="c-banner-"],[class^="is-custom-"]
 
+m.thst.vn##.lazy
 mail.google.com##[id^="nav"]
 mangatooncom.vn##.detail-download-bg,.index-download-bg
 manilastandard.net##[id*="div-gpt-ad-"],[id^="div-gpt-ad-"]
@@ -265,6 +267,8 @@ marketplace.tripmap.vn##.ad-floating-icon,.my-6
 masothue.com##.mst_sp-bell-wrapper
 maytinhdaiviet.com###dv-mobile-bottom-ad,.adsbygoogle
 me-qr.com##.modal-apps
+mediaonlinevn.com##[class^="banner"]
+mediaonlinevn.com##[class^="widget-"]
 mekongasean.vn##.header-content,[class*="banner"]
 mensfolio.vn##.header-banner
 minhancomputer.com###js-buildpc-banner
@@ -335,6 +339,8 @@ reddit.com###xpromo-small-header,.bg-transparent
 
 sachtruyen.com.vn###sp-wrapper-hovering-format
 sacombank.com.vn##.topbanner
+samcafe.vn##.egg-container
+samsungmagazine.eu##.headerbanner-wrapper
 saostar.vn##[class^="txt-"],[id^="div-"],[id^="mid-"],[id^="mobi-"],[id^="pvoucher-"],[id^="sp-"]
 sc.com##[class^="smartbanner"]
 scb.com.vn##[class^="slider-"]
@@ -442,6 +448,7 @@ vi.xiaomitoday.it###gmp-bottommobile,#gmp-middlemobile,#gmp-topmobile,#xiaom-157
 via.gov.vn##.bnrcenter
 vib.com.vn##.new-download-app
 viblo.asia##.el-dialog__wrapper,.fixed-bottom-bar,.v-modal
+vieclam24h.vn##[id^="headlessui-dialog-"]
 vietcetera.com##[class^="styles_downloadappbtnwrapper__"],[class^="styles_topbanner__"]
 vietgame.asia##.adsbygoogle,[class^="block-"]
 vietgiaitri.com###header,.cover_header,[class^="avgt-"],[class^="inview-"],[id^="balloon"]
@@ -472,6 +479,7 @@ vnsky.vn##.carousel__viewport,.modal-popup
 voh.com.vn##.adstop,[class*="center-"]
 vov.vn###header-placeholder,.ads,[id^="block-ads-"]
 vov1.vov.vn##.mobile-header-banner
+vovgiaothong.vn##.banner-top
 vovmedia.vn###affiliate-container
 voz.vn###sp-wrapper-hovering-format,.adsbypubpower
 vtcnews.vn###adbro-bottom,.adsbygoogle,.inpage-ad,.top-ad,[class^="aanetwork-"],[class^="ads-"],[class^="banner-"],[class^="sys-ads"]
@@ -480,6 +488,14 @@ vtv.vn##.adsbygoogle
 waptrick.com##.cent_list
 webthethao.vn##.ads-block,.build-advertisements
 wifiman.com##._container_mwjca_1
+www.fandom.com##.ad-slot-placeholder
+www.fandom.com##.top-ads-container
+www.gamespot.com##.mapped-mobile-banner-plus
+www.gamespot.com##.mapped-mobile-incontent-plus
+www.parhazart.org##.catfish-banner-global
+www.wired.com##[class^="StickyHeroAdWrapper-"]
+www.xemtivitop.com###HTML8
+www.xemtivitop.com###facebook-comment
 
 xahoi.com.vn##.adsbygoogle,center[style="margin: 10px 0 10px;"]
 xem.tvso1.com##[id^="m907725s"]
@@ -496,7 +512,9 @@ xphimsex.net##.xx-ads
 youtube.com##.ytmcompanionslotrendererhost,.ytmpaidcontentoverlayhost,[class^="rich-section-"],[class^="ytmbackstagepost"]
 
 zingmp3.vn##[class^="z-btn-open"]
+znews.vn###Zingnews_SiteHeader
 znews.vn##.z2-inpage-wrapper,[class^="follow"],[class^="okv"],[id^="follow"],[id^="okv"],[id^="zingnews"]
+znews.vn##div>div>div
 
 ||f.gh
 
