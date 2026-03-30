@@ -2,16 +2,16 @@
 ! Title: STOP ADS
 ! Describe: Chặn quảng cáo
 ! Updated: 30 Mar 2026 19:25
-! Version: 1.0.132
+! Version: 1.0.133
 ! Blocked: 475
-! Size: 26.04kb
+! Size: 26.07kb
 ! ==================
 
 .adsbygoogle
 
 1thegioi.vn##[class*="zone-"],[class^="c-banner-"],[class^="is-"]
 
-24h.com.vn###header-24h-login-cont,.adsbygoogle,[class^="inpage_"],[id^="ADS_"],[id^="ads_"],[id^="div-gpt-ad-"],[id^="div_inpage_"],[id^="sis_inpage"]
+24h.com.vn###header-24h-login-cont,.adsbygoogle,[class^="inpage_"],[id^="ADS_"],[id^="ads_"],[id^="div-gpt-ad-"],[id^="div_inpage_"],[id^="share-"],[id^="sis_inpage"],[id^="zone-"]
 2game.vn###bannermtop,[class^="banner-"]
 2sao.vn###adzone39,#catfish,.adsbygoolge,.vadslogo,[class^="vmc_"],[id^="adzone"],[id^="mashead-"],[id^="mobile_"],[id^="sp-wrapper-"]
 
