@@ -1,13 +1,11 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
-! Description: txt
-! Updated: 30 Mar 2026 08:49
-! Version: 1.0.96
+! Patch: ..file/ads.txt
+! Updated: 30 Mar 2026 08:50
+! Version: 1.0.97
 ! Blocked: 461
-! Size: 25.83kb
+! Size: 25.82kb
 ! ==================
-
-.Adsbygoogle
 
 1thegioi.vn##[class*="zone-"],[class^="c-banner-"],[class^="is-"]
 
