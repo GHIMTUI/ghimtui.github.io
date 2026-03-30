@@ -3,33 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-    <title>Adblock Editor - Smart Sorting & Counting</title>
+    <title>Adblock Editor - Dark Green Edition</title>
     <style>
         :root {
-            --bg-color: #f8f9fa;
-            --container-bg: #ffffff;
-            --toolbar-bg: #ffffff;
-            --text-main: #1a1a1a;
-            --text-muted: #6c757d;
-            --accent-color: #2563eb;
-            --accent-hover: #1d4ed8;
-            --border-color: #e5e7eb;
-            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --bg-dark: #000000;
+            --container-bg: #050505;
+            --accent-green: #15803d; /* Xanh lá đậm - Forest Green */
+            --accent-hover: #166534; /* Xanh lá đậm hơn khi hover */
+            --text-white: #ffffff;
+            --border-color: #1a1a1a;
             --safe-area-inset-bottom: env(safe-area-inset-bottom, 0px);
-        }
-
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --bg-color: #0f172a;
-                --container-bg: #1e293b;
-                --toolbar-bg: #1e293b;
-                --text-main: #f1f5f9;
-                --text-muted: #94a3b8;
-                --accent-color: #3b82f6;
-                --accent-hover: #60a5fa;
-                --border-color: #334155;
-                --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
-            }
         }
 
         * {
@@ -42,102 +25,132 @@
             padding: 0;
             height: 100%;
             width: 100%;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            overflow: hidden; /* Ngăn scroll toàn trang, chỉ scroll textarea */
+            font-family: 'Inter', -apple-system, system-ui, sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-white);
+            overflow: hidden;
         }
 
         .editor-container {
             display: flex;
             flex-direction: column;
             height: 100vh;
-            max-width: 1000px;
+            max-width: 100%;
             margin: 0 auto;
-            background-color: var(--container-bg);
-            box-shadow: var(--shadow);
+            background-color: var(--bg-dark);
         }
 
-        /* Toolbar Styles */
+        /* Toolbar */
         .toolbar {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 0.75rem 1rem;
+            padding: 0.75rem 1.25rem;
             border-bottom: 1px solid var(--border-color);
-            background-color: var(--toolbar-bg);
+            background-color: #000000;
             z-index: 10;
         }
 
         .info-path {
-            font-weight: 700;
-            font-size: 0.875rem;
-            letter-spacing: 0.05em;
-            color: var(--accent-color);
-        }
-
-        .actions button {
-            background-color: var(--accent-color);
-            color: white;
-            border: none;
-            padding: 0.5rem 1rem;
-            border-radius: 6px;
-            font-size: 0.75rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.2s ease;
+            font-weight: 900;
+            font-size: 1.1rem;
+            letter-spacing: 2px;
+            color: var(--accent-green); /* Tiêu đề xanh lá đậm */
             text-transform: uppercase;
         }
 
-        .actions button:hover:not(:disabled) {
+        /* Nút Lưu Hình Viên Thuốc - Xanh đậm, Chữ trắng, Phẳng */
+        .actions {
+            display: flex;
+            align-items: center;
+        }
+
+        #svBtn {
+            background-color: var(--accent-green);
+            color: #ffffff;
+            border: none;
+            padding: 0.6rem 1.5rem;
+            border-radius: 50px; 
+            font-size: 0.75rem;
+            font-weight: 900;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: background-color 0.2s ease, transform 0.1s ease;
+            white-space: nowrap;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: none;
+        }
+
+        #svBtn:hover:not(:disabled) {
             background-color: var(--accent-hover);
-            transform: translateY(-1px);
         }
 
-        .actions button:active:not(:disabled) {
-            transform: translateY(0);
+        #svBtn:active:not(:disabled) {
+            transform: scale(0.96);
         }
 
-        .actions button:disabled {
-            background-color: var(--text-muted);
-            opacity: 0.5;
+        #svBtn:disabled {
+            background-color: #1a1a1a;
+            color: #444;
             cursor: not-allowed;
+            opacity: 0.6;
         }
 
-        /* Textarea Wrapper */
+        /* Editor Area */
         .textarea-wrapper {
             flex: 1;
-            position: relative;
-            padding-bottom: var(--safe-area-inset-bottom);
+            display: flex;
+            flex-direction: column;
+            padding: 0.5rem;
         }
 
         #txtAr {
+            flex: 1;
             width: 100%;
-            height: 100%;
-            border: none;
+            border: 1px solid var(--border-color);
             outline: none;
-            padding: 1rem;
-            font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
-            font-size: 0.875rem;
+            padding: 1.25rem;
+            font-family: 'JetBrains Mono', 'Fira Code', 'Menlo', monospace;
+            font-size: 0.9rem;
             line-height: 1.6;
-            background-color: transparent;
-            color: var(--text-main);
+            background-color: #050505;
+            color: var(--text-white);
             resize: none;
-            tab-size: 4;
+            border-radius: 8px;
+            padding-bottom: calc(1.5rem + var(--safe-area-inset-bottom));
+        }
+
+        #txtAr:focus {
+            border-color: var(--accent-green);
         }
 
         #txtAr::placeholder {
-            color: var(--text-muted);
-            font-style: italic;
+            color: #222;
         }
 
-        /* Responsive Tweaks */
+        /* Custom Scrollbar */
+        #txtAr::-webkit-scrollbar {
+            width: 6px;
+        }
+        #txtAr::-webkit-scrollbar-thumb {
+            background: #1a1a1a;
+            border-radius: 10px;
+        }
+        #txtAr::-webkit-scrollbar-thumb:hover {
+            background: var(--accent-green);
+        }
+
         @media (max-width: 640px) {
             .info-path {
-                font-size: 0.75rem;
+                font-size: 0.95rem;
+                letter-spacing: 1px;
             }
-            .actions button {
-                padding: 0.4rem 0.75rem;
+            #svBtn {
+                padding: 0.5rem 1.2rem;
+                font-size: 0.7rem;
             }
         }
     </style>
@@ -153,7 +166,7 @@
     </div>
 
     <div class="textarea-wrapper">
-        <textarea id="txtAr" spellcheck="false" placeholder="Đang tải dữ liệu..."></textarea>
+        <textarea id="txtAr" spellcheck="false" placeholder="Đang kết nối..."></textarea>
     </div>
 </div>
 
@@ -179,16 +192,11 @@
 
     function _standardize_content(rawInput) {
         let lines = rawInput.split('\n').map(l => l.trim()).filter(l => l !== "");
-        
         let bodyLines = [];
         
         lines.forEach(line => {
-            if (line.match(/! (Title|Description|Updated|Version|Blocked|Size|=======)/i) || line.startsWith("[Adblock")) {
-                return;
-            }
-            if (!line.startsWith('!')) {
-                bodyLines.push(line);
-            }
+            if (line.match(/! (Title|Description|Updated|Version|Blocked|Size|=======)/i) || line.startsWith("[Adblock")) return;
+            if (!line.startsWith('!')) bodyLines.push(line);
         });
 
         let mergedMap = new Map();
@@ -197,9 +205,7 @@
         bodyLines.forEach(line => {
             if (line.includes('##') && !line.startsWith('@@')) {
                 let [domain, selector] = line.split('##');
-                if (!mergedMap.has(domain)) {
-                    mergedMap.set(domain, new Set());
-                }
+                if (!mergedMap.has(domain)) mergedMap.set(domain, new Set());
                 selector.split(',').forEach(s => mergedMap.get(domain).add(s.trim()));
             } else {
                 otherRules.push(line);
@@ -224,9 +230,7 @@
         let version = "1.0.0";
         const v_match = rawInput.match(/!\s*Version:\s*(\d+)\.(\d+)\.(\d+)/i);
         if (v_match) {
-            let v_major = v_match[1];
-            let v_minor = v_match[2];
-            let v_patch = parseInt(v_match[3]);
+            let v_major = v_match[1], v_minor = v_match[2], v_patch = parseInt(v_match[3]);
             if (isChanged) v_patch += 1;
             version = `${v_major}.${v_minor}.${v_patch}`;
         }
@@ -241,16 +245,11 @@
         let lastChar = "";
         uniqueBody.forEach(line => {
             if (line.startsWith("@@||")) {
-                if (lastChar !== "WL_GROUP") {
-                    tempBodyOutput.push(""); 
-                    lastChar = "WL_GROUP";
-                }
+                if (lastChar !== "WL_GROUP") { tempBodyOutput.push(""); lastChar = "WL_GROUP"; }
             } else {
                 let currentChar = line[0].toLowerCase();
                 if (!/[a-z0-9]/.test(currentChar)) currentChar = "SPEC";
-                if (lastChar && lastChar !== "WL_GROUP" && currentChar !== lastChar) {
-                    tempBodyOutput.push(""); 
-                }
+                if (lastChar && lastChar !== "WL_GROUP" && currentChar !== lastChar) tempBodyOutput.push(""); 
                 lastChar = currentChar;
             }
             tempBodyOutput.push(line);
@@ -265,8 +264,8 @@
             `! Blocked: ${realRuleCount}`
         ];
         
-        const mockContent = [...headerPrefix, "! Size: 00.0kb", "! ==================", "", ...tempBodyOutput].join('\n');
-        const kbSize = (new TextEncoder().encode(mockContent).length / 1024).toFixed(2);
+        const contentForSize = [...headerPrefix, "! Size: 00.0kb", "! ==================", "", ...tempBodyOutput].join('\n');
+        const kbSize = (new TextEncoder().encode(contentForSize).length / 1024).toFixed(2);
 
         let finalOutput = [
             ...headerPrefix,
@@ -280,7 +279,6 @@
             content: finalOutput.join('\n'),
             version: version,
             count: realRuleCount,
-            isChanged: isChanged,
             rulesFlat: currentRulesFlat
         };
     }
@@ -295,29 +293,23 @@
                 _v_sha = data.sha;
                 const raw = atob(data.content);
                 const dec = decodeURIComponent(raw.split('').map(c => '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2)).join(''));
-                
                 _dom_ar.value = dec;
-                
-                let lines = dec.split('\n').map(l => l.trim()).filter(l => l && !l.startsWith('!') && !l.startsWith('['));
-                let wl = lines.filter(l => l.startsWith("@@||")).sort();
-                let nl = lines.filter(l => !l.startsWith("@@||")).sort();
-                _last_saved_rules_flat = [...nl, ...wl].join('\n');
+                _last_saved_rules_flat = dec.split('\n').filter(l => l.trim() && !l.startsWith('!') && !l.startsWith('[')).sort().join('\n');
+                _dom_sv.disabled = false;
             }
-            _dom_sv.disabled = false;
-        } catch (e) { console.error("Load error"); }
+        } catch (e) { console.error("Error loading"); }
     }
 
     _dom_sv.addEventListener('click', async () => {
         const result = _standardize_content(_dom_ar.value);
         _dom_ar.value = result.content;
-
         _dom_sv.disabled = true;
-        _dom_sv.innerText = "ĐANG LƯU...";
-        
+        const originalText = _dom_sv.innerText;
+        _dom_sv.innerText = "ĐANG LƯU";
+
         try {
             const enc = new TextEncoder().encode(result.content);
             const b64 = btoa(String.fromCharCode(...enc));
-            
             const res = await fetch(_ep_url, {
                 method: "PUT",
                 headers: {
@@ -325,7 +317,7 @@
                     "Content-Type": "application/json"
                 },
                 body: JSON.stringify({
-                    message: `v${result.version} (${result.count} rules)`,
+                    message: `v${result.version}`,
                     content: b64,
                     sha: _v_sha
                 })
@@ -334,17 +326,16 @@
             if (res.ok) {
                 const d = await res.json();
                 _v_sha = d.content.sha;
-                _last_saved_rules_flat = result.rulesFlat;
-                _dom_sv.innerText = "ĐÃ LƯU THÀNH CÔNG";
-                setTimeout(() => _dom_sv.innerText = "LƯU DỮ LIỆU", 2000);
+                _dom_sv.innerText = "XONG";
+                setTimeout(() => { _dom_sv.innerText = originalText; _dom_sv.disabled = false; }, 2000);
             } else {
-                _dom_sv.innerText = "LỖI KHI LƯU";
+                _dom_sv.innerText = "LỖI";
+                setTimeout(() => { _dom_sv.innerText = originalText; _dom_sv.disabled = false; }, 2000);
             }
         } catch (e) { 
-            console.error("Save error");
-            _dom_sv.innerText = "LỖI KẾT NỐI";
+            _dom_sv.innerText = "LỖI";
+            _dom_sv.disabled = false;
         }
-        _dom_sv.disabled = false;
     });
 
     window.onload = _load;
