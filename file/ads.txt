@@ -1,13 +1,11 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Describe: Chặn quảng cáo
-! Updated: 30 Mar 2026 19:27
-! Version: 1.0.135
-! Blocked: 474
+! Updated: 30 Mar 2026 19:28
+! Version: 1.0.136
+! Blocked: 473
 ! Size: 26.07kb
 ! ==================
-
-.adsbygoogle
 
 1thegioi.vn##[class*="zone-"],[class^="c-banner-"],[class^="is-"]
 
@@ -158,7 +156,7 @@ dunno.ai##.box-ads
 
 emc-directory.com###mobilebottomad
 ephoto360.com##.ad-container,.i-said-no-thing-can-stop-me-warning,.line-ads
-eva.vn##[class^="banr-"],[id*="banner"],[id^="ads"],[id^="spantextads_"]
+eva.vn##[class^="banr-"],[id*="banner"],[id^="ADS_"],[id^="ads"],[id^="spantextads_"]
 
 fptplay.vn##.flex-row,a[aria-label="purchase packages"]
 
