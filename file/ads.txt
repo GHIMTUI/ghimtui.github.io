@@ -1,13 +1,12 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Describe: Chặn quảng cáo
-! Updated: 30 Mar 2026 15:06
-! Version: 1.0.103
-! Blocked: 479
-! Size: 26.44kb
+! Updated: 30 Mar 2026 15:18
+! Version: 1.0.104
+! Blocked: 472
+! Size: 25.96kb
 ! ==================
 
-##[class*="zone-"]
 .adsbygoogle
 
 1thegioi.vn##[class*="zone-"],[class^="c-banner-"],[class^="is-"]
@@ -192,8 +191,7 @@ hanoimoi.vn##[class^="ads_"],[class^="c-banner-"],[class^="is-"],[id^="zone-"]
 hanoionline.vn##.banner
 happyvietnam.vnanet.vn##.background-image
 hatinh.edu.vn##.image-list-album
-hd.xemtv.net###med_rec_banner2,.quangcaos,div[data-widget-id="1771082"],div[data-widget-id="1886588"],img[src="/banner/f168-sidebar.gif"]
-hd.xemtv.net##.panel-primary
+hd.xemtv.net###med_rec_banner2,.quangcaos,div[data-widget-id="1771082"],div[data-widget-id="1886588"],img[src="/banner/f168-sidebar.gif"],.panel-primary
 hdbank.com.vn##.mobile-popup
 helio.vn##[class*="banner"]
 highspeedinternet.com###mobile-nav,.disclaimer-container,.smartbanner,.wpb_single_image
@@ -268,8 +266,7 @@ marketplace.tripmap.vn##.ad-floating-icon,.my-6
 masothue.com##.mst_sp-bell-wrapper
 maytinhdaiviet.com###dv-mobile-bottom-ad,.adsbygoogle
 me-qr.com##.modal-apps
-mediaonlinevn.com##[class^="banner"]
-mediaonlinevn.com##[class^="widget-"]
+mediaonlinevn.com##[class^="banner"],[class^="widget-"]
 mekongasean.vn##.header-content,[class*="banner"]
 mensfolio.vn##.header-banner
 minhancomputer.com###js-buildpc-banner
@@ -394,7 +391,7 @@ thegioikinhdoanh.vn###link28,.col-right,.full-width,.links-item,.widget-space
 thegioimavach.com##[class^="mfp-"]
 thelinhstore.com##.collection_banner,.top-banner
 thesaigontimes.vn###admbackground,.adsbygoogle,iframe[style="width:320px; height:500px;"]
-thethao.sggp.org.vn###ban-site-top,#oa-360-1774314000422_iru3nrvc7,#sdamobile_sdatop,.adsbygoogle,.lazyloaded,.ls-is-cached,[id^="admfull"] thethao.sggp.org.vn##[id^="adm_"] thethao.sggp.org.vn##[id^="ban-"] thethao.sggp.org.vn##[id^="zone-"] thethao.sggp.org.vn##[id^="mobile_"],[id^="oa"],[id^="oa-360-"],[id^="sdamobile_"],[id^="top-"] thethao.sggp.org.vn##[id^="admfull"] thethao.sggp.org.vn##[id^="adm_"] thethao.sggp.org.vn##[id^="ban-"] thethao.sggp.org.vn##[id^="zone-"] thethao.sggp.org.vn##[id^="mobile_"],a[rel="noopener"]
+thethao.sggp.org.vn###ban-site-top,#oa-360-1774314000422_iru3nrvc7,#sdamobile_sdatop,.adsbygoogle,.lazyloaded,.ls-is-cached,[id^="admfull"] thethao.sggp.org.vn
 thethao247.vn##.as,.main-content>section,[class^="sp-"],[class^="text-"],[id^="nl-"],[id^="sp-"],[id^="zone-"],div[as-id],div[style*="min-height: 250px"]
 thethaovanhoa.vn##.adsbygoogle,.zone-top
 thhp.vn##.col-sm-3,[class*="ads"],[class*="zonegourp"]
@@ -489,14 +486,11 @@ vtv.vn##.adsbygoogle
 waptrick.com##.cent_list
 webthethao.vn##.ads-block,.build-advertisements
 wifiman.com##._container_mwjca_1
-www.fandom.com##.ad-slot-placeholder
-www.fandom.com##.top-ads-container
-www.gamespot.com##.mapped-mobile-banner-plus
-www.gamespot.com##.mapped-mobile-incontent-plus
+www.fandom.com##.ad-slot-placeholder,.top-ads-container
+www.gamespot.com##.mapped-mobile-banner-plus,.mapped-mobile-incontent-plus
 www.parhazart.org##.catfish-banner-global
 www.wired.com##[class^="StickyHeroAdWrapper-"]
-www.xemtivitop.com###HTML8
-www.xemtivitop.com###facebook-comment
+www.xemtivitop.com###HTML8,#facebook-comment
 
 xahoi.com.vn##.adsbygoogle,center[style="margin: 10px 0 10px;"]
 xem.tvso1.com##[id^="m907725s"]
@@ -513,6 +507,4 @@ xphimsex.net##.xx-ads
 youtube.com##.ytmcompanionslotrendererhost,.ytmpaidcontentoverlayhost,[class^="rich-section-"],[class^="ytmbackstagepost"]
 
 zingmp3.vn##[class^="z-btn-open"]
-znews.vn###Zingnews_SiteHeader
-znews.vn##.z2-inpage-wrapper,[class^="follow"],[class^="okv"],[id^="follow"],[id^="okv"],[id^="zingnews"]
-znews.vn##div>div>div
+znews.vn###Zingnews_SiteHeader,.z2-inpage-wrapper,[class^="follow"],[class^="okv"],[id^="follow"],[id^="okv"],[id^="zingnews"],div>div>div
