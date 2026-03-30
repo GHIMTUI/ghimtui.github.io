@@ -1,10 +1,10 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Describe: Chặn quảng cáo
-! Updated: 30 Mar 2026 22:58
-! Version: 1.0.169
-! Blocked: 477
-! Size: 26.32kb
+! Updated: 30 Mar 2026 23:07
+! Version: 1.0.170
+! Blocked: 479
+! Size: 26.38kb
 ! ==================
 
 1thegioi.vn##[class*="zone-"],[class^="c-banner-"],[class^="is-"]
@@ -491,7 +491,9 @@ www.elle.vn##[class*="my-"],[id^="div-gpt-ad-"]
 www.fandom.com##.ad-slot-placeholder,.top-ads-container
 www.gamespot.com##.mapped-mobile-banner-plus,.mapped-mobile-incontent-plus
 www.parhazart.org##.catfish-banner-global
+www.radio.net###sticky-reklame-header
 www.vanhoanghethuat.vn###Mobile_AdsArticleBodyInArticle,#adzone39,#sp-wrapper-hovering-format
+www.vtvcab.vn##.fix_img
 www.wired.com##[class^="StickyHeroAdWrapper-"]
 www.xemtivitop.com###HTML8,#facebook-comment
 
