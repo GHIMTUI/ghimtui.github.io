@@ -5,85 +5,140 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
     <title>Adblock Editor - Smart Sorting & Counting</title>
     <style>
+        :root {
+            --bg-color: #f8f9fa;
+            --container-bg: #ffffff;
+            --toolbar-bg: #ffffff;
+            --text-main: #1a1a1a;
+            --text-muted: #6c757d;
+            --accent-color: #2563eb;
+            --accent-hover: #1d4ed8;
+            --border-color: #e5e7eb;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --safe-area-inset-bottom: env(safe-area-inset-bottom, 0px);
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-color: #0f172a;
+                --container-bg: #1e293b;
+                --toolbar-bg: #1e293b;
+                --text-main: #f1f5f9;
+                --text-muted: #94a3b8;
+                --accent-color: #3b82f6;
+                --accent-hover: #60a5fa;
+                --border-color: #334155;
+                --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+            }
+        }
+
         * {
-            box-sizing: border-box; 
+            box-sizing: border-box;
             -webkit-tap-highlight-color: transparent;
         }
-        html, body {
-    height: 100svh; /* Đơn vị mới giúp khớp chuẩn màn hình di động */
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    font-family: 'Segoe UI', system-ui, sans-serif;
-    background-color: #1e1e1e;
-    /* Chặn việc kéo trang gây mất layout */
-    position: fixed; 
-    width: 100%;
-}
 
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            overflow: hidden; /* Ngăn scroll toàn trang, chỉ scroll textarea */
+        }
 
         .editor-container {
             display: flex;
             flex-direction: column;
-            height: 100%;
-            width: 100%;
+            height: 100vh;
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: var(--container-bg);
+            box-shadow: var(--shadow);
         }
 
+        /* Toolbar Styles */
         .toolbar {
-            background-color: #2d2d2d;
-            color: #ccc;
-            padding: 0 15px;
-            height: 60px;
             display: flex;
-            justify-content: space-between;
             align-items: center;
-            border-bottom: 1px solid #3c3c3c;
-            box-sizing: border-box;
+            justify-content: space-between;
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid var(--border-color);
+            background-color: var(--toolbar-bg);
+            z-index: 10;
         }
 
         .info-path {
-            font-family: monospace;
-            font-size: 13px;
-            color: #9cdcfe;
-            font-weight: bold;
+            font-weight: 700;
+            font-size: 0.875rem;
+            letter-spacing: 0.05em;
+            color: var(--accent-color);
         }
 
-        button {
-            background-color: #28a745;
+        .actions button {
+            background-color: var(--accent-color);
             color: white;
             border: none;
-            padding: 10px 20px;
-            font-size: 13px;
-            font-weight: bold;
-            border-radius: 4px;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 600;
             cursor: pointer;
-            transition: all 0.2s;
+            transition: all 0.2s ease;
+            text-transform: uppercase;
         }
 
-        button:disabled {
-            background-color: #444;
+        .actions button:hover:not(:disabled) {
+            background-color: var(--accent-hover);
+            transform: translateY(-1px);
+        }
+
+        .actions button:active:not(:disabled) {
+            transform: translateY(0);
+        }
+
+        .actions button:disabled {
+            background-color: var(--text-muted);
             opacity: 0.5;
             cursor: not-allowed;
         }
 
+        /* Textarea Wrapper */
         .textarea-wrapper {
             flex: 1;
-            background-color: #1e1e1e;
+            position: relative;
+            padding-bottom: var(--safe-area-inset-bottom);
         }
 
-        textarea {
+        #txtAr {
             width: 100%;
             height: 100%;
             border: none;
-            padding: 15px;
-            background-color: #1e1e1e;
-            color: #d4d4d4;
-            font-family: 'Consolas', monospace;
-            font-size: 16px;
-            line-height: 1.5;
             outline: none;
+            padding: 1rem;
+            font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+            font-size: 0.875rem;
+            line-height: 1.6;
+            background-color: transparent;
+            color: var(--text-main);
             resize: none;
-            box-sizing: border-box;
+            tab-size: 4;
+        }
+
+        #txtAr::placeholder {
+            color: var(--text-muted);
+            font-style: italic;
+        }
+
+        /* Responsive Tweaks */
+        @media (max-width: 640px) {
+            .info-path {
+                font-size: 0.75rem;
+            }
+            .actions button {
+                padding: 0.4rem 0.75rem;
+            }
         }
     </style>
 </head>
@@ -127,7 +182,6 @@
         
         let bodyLines = [];
         
-        // Loại bỏ metadata cũ và tách lấy nội dung chính
         lines.forEach(line => {
             if (line.match(/! (Title|Description|Updated|Version|Blocked|Size|=======)/i) || line.startsWith("[Adblock")) {
                 return;
@@ -137,10 +191,8 @@
             }
         });
 
-        // --- LOGIC GỘP LINK GIỐNG NHAU ---
-        // Sử dụng Map để gom nhóm: domain -> Set(selectors)
         let mergedMap = new Map();
-        let otherRules = []; // Dành cho whitelist @@|| hoặc các quy tắc không chứa ##
+        let otherRules = []; 
 
         bodyLines.forEach(line => {
             if (line.includes('##') && !line.startsWith('@@')) {
@@ -148,7 +200,6 @@
                 if (!mergedMap.has(domain)) {
                     mergedMap.set(domain, new Set());
                 }
-                // Tách các selector con nếu dòng cũ đã có dấu phẩy
                 selector.split(',').forEach(s => mergedMap.get(domain).add(s.trim()));
             } else {
                 otherRules.push(line);
@@ -156,25 +207,20 @@
         });
 
         let processedBody = [];
-        // Chuyển Map ngược lại thành mảng dòng text
         mergedMap.forEach((selectors, domain) => {
             processedBody.push(`${domain}##${Array.from(selectors).join(',')}`);
         });
         processedBody = [...processedBody, ...otherRules];
 
-        // Sắp xếp: Whitelist (@@||) luôn ở dưới cùng
         let whitelistRules = Array.from(new Set(processedBody.filter(line => line.startsWith("@@||")))).sort();
         let normalRules = Array.from(new Set(processedBody.filter(line => !line.startsWith("@@||") && line !== ""))).sort();
         
         let uniqueBody = [...normalRules, ...whitelistRules];
-        
-        // Đếm dòng thực tế (chỉ đếm dòng bắt đầu bằng chữ/số)
         let realRuleCount = uniqueBody.filter(line => /^[a-zA-Z0-9]/.test(line)).length;
         
         let currentRulesFlat = uniqueBody.join('\n');
         let isChanged = currentRulesFlat !== _last_saved_rules_flat;
 
-        // Xử lý Version
         let version = "1.0.0";
         const v_match = rawInput.match(/!\s*Version:\s*(\d+)\.(\d+)\.(\d+)/i);
         if (v_match) {
@@ -191,7 +237,6 @@
             hour: '2-digit', minute: '2-digit', hour12: false 
         }).replace(',', '');
 
-        // Xây dựng nội dung hiển thị có khoảng cách nhóm
         let tempBodyOutput = [];
         let lastChar = "";
         uniqueBody.forEach(line => {
@@ -267,6 +312,8 @@
         _dom_ar.value = result.content;
 
         _dom_sv.disabled = true;
+        _dom_sv.innerText = "ĐANG LƯU...";
+        
         try {
             const enc = new TextEncoder().encode(result.content);
             const b64 = btoa(String.fromCharCode(...enc));
@@ -288,15 +335,20 @@
                 const d = await res.json();
                 _v_sha = d.content.sha;
                 _last_saved_rules_flat = result.rulesFlat;
-                console.log("Saved success: v" + result.version);
+                _dom_sv.innerText = "ĐÃ LƯU THÀNH CÔNG";
+                setTimeout(() => _dom_sv.innerText = "LƯU DỮ LIỆU", 2000);
+            } else {
+                _dom_sv.innerText = "LỖI KHI LƯU";
             }
-        } catch (e) { console.error("Save error"); }
+        } catch (e) { 
+            console.error("Save error");
+            _dom_sv.innerText = "LỖI KẾT NỐI";
+        }
         _dom_sv.disabled = false;
     });
 
     window.onload = _load;
 })();
-
 </script>
 
 </body>
