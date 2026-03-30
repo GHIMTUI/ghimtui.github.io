@@ -2,12 +2,10 @@
 ! Title: STOP ADS
 ! Describe: Chặn quảng cáo
 ! Updated: 30 Mar 2026 22:27
-! Version: 1.0.155
-! Blocked: 478
-! Size: 26.33kb
+! Version: 1.0.156
+! Blocked: 477
+! Size: 26.32kb
 ! ==================
-
-.ads
 
 1thegioi.vn##[class*="zone-"],[class^="c-banner-"],[class^="is-"]
 
