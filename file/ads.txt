@@ -1,10 +1,10 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Describe: Chặn quảng cáo
-! Updated: 30 Mar 2026 14:30
-! Version: 1.0.101
+! Updated: 30 Mar 2026 14:31
+! Version: 1.0.102
 ! Blocked: 479
-! Size: 26.46kb
+! Size: 26.43kb
 ! ==================
 
 .adsbygoogle
@@ -515,9 +515,3 @@ zingmp3.vn##[class^="z-btn-open"]
 znews.vn###Zingnews_SiteHeader
 znews.vn##.z2-inpage-wrapper,[class^="follow"],[class^="okv"],[id^="follow"],[id^="okv"],[id^="zingnews"]
 znews.vn##div>div>div
-
-||f.gh
-
-@@||c.mo
-@@||g.miu
-@@||kin.cm
