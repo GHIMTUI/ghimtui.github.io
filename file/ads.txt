@@ -1,8 +1,8 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Describe: Chặn quảng cáo
-! Updated: 30 Mar 2026 16:15
-! Version: 1.0.125
+! Updated: 30 Mar 2026 16:17
+! Version: 1.0.126
 ! Blocked: 472
 ! Size: 25.97kb
 ! ==================
@@ -509,4 +509,4 @@ xphimsex.net##.xx-ads
 youtube.com##.ytmcompanionslotrendererhost,.ytmpaidcontentoverlayhost,[class^="rich-section-"],[class^="ytmbackstagepost"]
 
 zingmp3.vn##[class^="z-btn-open"]
-znews.vn###Zingnews_SiteHeader,.z2-inpage-wrapper,[class^="follow"],[class^="okv"],[id^="follow"],[id^="okv"],[id^="zingnews"],div>div>divA
+znews.vn###Zingnews_SiteHeader,.z2-inpage-wrapper,[class^="follow"],[class^="okv"],[id^="follow"],[id^="okv"],[id^="zingnews"],div>div>div
