@@ -1,10 +1,10 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Describe: Chặn quảng cáo
-! Updated: 30 Mar 2026 15:57
-! Version: 1.0.115
+! Updated: 30 Mar 2026 15:58
+! Version: 1.0.116
 ! Blocked: 472
-! Size: 25.96kb
+! Size: 25.97kb
 ! ==================
 
 .adsbygoogle
@@ -16,6 +16,8 @@
 2sao.vn###adzone39,#catfish,.adsbygoolge,.vadslogo,[class^="vmc_"],[id^="adzone"],[id^="mashead-"],[id^="mobile_"],[id^="sp-wrapper-"]
 
 51degrees.com##.g-floating-banner
+
+[class^="is-"]
 
 acb.com.vn##.download-app-mb
 accuweather.com###bottom,#middle,#top,.adhesion-header,.adsbygoogle,.header-placeholder
