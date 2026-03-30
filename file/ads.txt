@@ -1,10 +1,10 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Describe: Chặn quảng cáo
-! Updated: 30 Mar 2026 19:36
-! Version: 1.0.140
-! Blocked: 474
-! Size: 26.09kb
+! Updated: 30 Mar 2026 21:15
+! Version: 1.0.141
+! Blocked: 477
+! Size: 26.29kb
 ! ==================
 
 1thegioi.vn##[class*="zone-"],[class^="c-banner-"],[class^="is-"]
@@ -180,7 +180,7 @@ giaogasnhanh.com##.elementor-jet-slider
 giaothong.tapchixaydung.vn##[class*="qc"]
 gmobile.vn##.slide
 gocnhinphaply.nguoiduatin.vn###sp-wrapper-hovering,#sp_format_catfish,.adsbygoogle,.no-margin-ads,.qc_container,.sp-pto-mb-div,[class*="sp-ptoproduct-"],div[id="sp_format-ptoproduct_1991"]
-gsmarena.com###fkmvnq,.adsbygoogle,.adv-bottom,.adv-mid,.adv-top,.amp-sticky-ad-close-button,.d-flex,.deals,.i-amphtml-sticky-ad-layout,.top-adv
+gsmarena.com###fkmvnq,.adsbygoogle,.adv-bottom,.adv-mid,.adv-top,.amp-sticky-ad-close-button,.d-flex,.deals,.i-amphtml-sticky-ad-layout,.price-banner,.top-adv,.widget
 
 hacom.vn##.bottom-20
 haiphong.gov.vn##.uiadvertisement_default
@@ -266,6 +266,7 @@ me-qr.com##.modal-apps
 mediaonlinevn.com##[class^="banner"],[class^="widget-"]
 mekongasean.vn##.header-content,[class*="banner"]
 mensfolio.vn##.header-banner
+migovi.com##.banner-promotions-wrapper
 minhancomputer.com###js-buildpc-banner
 missav.fans###ts-main-banner-wrapper,[class^="space-y-"]
 missav.run##.banner-box
@@ -486,9 +487,11 @@ waptrick.com##.cent_list
 webthethao.vn##.ads-block,.build-advertisements
 wifiman.com##._container_mwjca_1
 www.24h.com.vn##[id^="ADS_"]
+www.elle.vn##[class*="my-"],[id^="div-gpt-ad-"]
 www.fandom.com##.ad-slot-placeholder,.top-ads-container
 www.gamespot.com##.mapped-mobile-banner-plus,.mapped-mobile-incontent-plus
 www.parhazart.org##.catfish-banner-global
+www.vanhoanghethuat.vn###Mobile_AdsArticleBodyInArticle,#adzone39,#sp-wrapper-hovering-format
 www.wired.com##[class^="StickyHeroAdWrapper-"]
 www.xemtivitop.com###HTML8,#facebook-comment
 
