@@ -1,10 +1,10 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Describe: Chặn quảng cáo
-! Updated: 30 Mar 2026 18:30
-! Version: 1.0.130
-! Blocked: 472
-! Size: 25.97kb
+! Updated: 30 Mar 2026 19:19
+! Version: 1.0.131
+! Blocked: 473
+! Size: 26.03kb
 ! ==================
 
 .adsbygoogle
@@ -428,7 +428,7 @@ tongdainhadat.vn##.eb-inst
 truyenhinhthanhhoa.vn##[class^="ad-"],[id^="banner-"],[id^="placement-"],[id^="share-"],[id^="slot-"],[id^="zone-"]
 truyennhiemvietnam.vn##.index-card
 ttbc-hcm.gov.vn##[class^="abs-"],[class^="c-banner-"],[class^="zone-"]
-tuoitre.vn###admbackground,#leaderboardtop,#pvoucher-live-container,.boxdsk_swiper,[id^="sp_format-hovering"],[id^="zone"]
+tuoitre.vn##.clearfix,#LeaderBoardTop,#admbackground,#leaderboardtop,#pvoucher-live-container,.boxdsk_swiper,[id^="sp_format-hovering"],[id^="zone"]
 tusach.vn###sp-wrapper-hovering-format
 tuyenquang.gov.vn##.h-auto
 tv360.vn###ads-player-base-wrapper,.css-1jzjo52,.css-1u6gwec,.css-1xdipk,.css-csxyfn,.text-ellipsis,.toastify
@@ -488,6 +488,7 @@ vtv.vn##.adsbygoogle
 waptrick.com##.cent_list
 webthethao.vn##.ads-block,.build-advertisements
 wifiman.com##._container_mwjca_1
+www.24h.com.vn##[id^="ADS_"]
 www.fandom.com##.ad-slot-placeholder,.top-ads-container
 www.gamespot.com##.mapped-mobile-banner-plus,.mapped-mobile-incontent-plus
 www.parhazart.org##.catfish-banner-global
