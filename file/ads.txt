@@ -1,11 +1,13 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Describe: Chặn quảng cáo
-! Updated: 30 Mar 2026 19:30
-! Version: 1.0.137
-! Blocked: 474
+! Updated: 30 Mar 2026 19:35
+! Version: 1.0.138
+! Blocked: 475
 ! Size: 26.09kb
 ! ==================
+
+.ad
 
 1thegioi.vn##[class*="zone-"],[class^="c-banner-"],[class^="is-"]
 
@@ -256,7 +258,6 @@ luatminhkhue.vn###sp-wrapper-hovering-format,.ads-label
 luatvietnam.vn##.adsbygoogle,.adv-footer-fixed
 lyluanchinhtri.vn##[class^="c-banner-"],[class^="is-custom-"]
 
-m.thst.vn##.lazy
 mail.google.com##[id^="nav"]
 mangatooncom.vn##.detail-download-bg,.index-download-bg
 manilastandard.net##[id*="div-gpt-ad-"],[id^="div-gpt-ad-"]
@@ -344,7 +345,6 @@ scb.com.vn##[class^="slider-"]
 search.brave.com##[class^="download-"],[class^="premium-"]
 sexdep.blog###bottombannercontainer,#popbannerads,#topbannercontainer,#underplayeradscontainer
 sggp.org.vn###sdamobile_sdatop,.ls-is-cached,a[rel="noopener"]
-shop.vietnamobile.com.vn##.img,.laberurl
 sinhthainongnghiep.net.vn##[class^="qc_"]
 sogddtsonla.edu.vn###frameboundb59c0a1e91bcfc,.image-list-album,.widget
 sogiaoduc.caobang.gov.vn##.advertcontent
@@ -402,6 +402,7 @@ thoibaotaichinhvietnam.vn##[class*="banner"]
 thoidai.com.vn##[class*="banner"]
 thoigian.com.vn###m620,.adsbygoogle,td[id="m005"]>div
 thoitrangvang.vn##[class*="c-banner"],[class^="ads_"],[id^="zone-"]
+thst.vn##.lazy
 thuehaiquan.tapchikinhtetaichinh.vn##.box-qc
 thuonggiaonline.vn##.adsbygoogle
 thuonghieucongluan.com.vn##.sidebar-box
@@ -453,6 +454,7 @@ vietnam.vnanet.vn##.uk-margin-small-top
 vietnambiz.vn##.adsbygoogle,.vnbiz-topbanner
 vietnammoi.vn###admfulltop,#ban-top-site,.adsbygoogle,[id^="adm_"]
 vietnamnet.vn###admbackground,#adzone39,#catfish,#mashead-bn,#mobile_adsarticlebodyinarticle,[id*="adzone"],[id^="adzone"],[id^="mashead-"],div[onclick="closemashead(39)"],span[style="color: #fff;text-align: center;display: inherit;font-size: 20px;line-height: 20px;"]
+vietnamobile.com.vn##.img,.laberurl
 vietnamplus.vn###sp-wrapper-hovering-format
 vietnamradio.org##.add-box-top,.adsbygoogle
 vietnamworks.com##.mb,.tg_redirecttimviec_2023
