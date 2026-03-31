@@ -244,7 +244,7 @@
     // Logic Adblock xử lý nội dung
     function _remove_subdomain_prefixes(domain) {
         if (!domain) return "";
-        const prefixes = ["m.", "shop.", "api.", "news.", "mobile.", "v.", "app."];
+        const prefixes = ["www.","www3.", "m.", "shop.", "api.", "news.", "mobile.", "v.", "app.","en.", "vn."];
         let cleaned = domain.toLowerCase();
         for (let p of prefixes) { if (cleaned.startsWith(p)) return domain.substring(p.length); }
         return domain;
