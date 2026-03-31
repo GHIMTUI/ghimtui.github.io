@@ -1,27 +1,20 @@
-! [BEGIN PREFIX]
-www.
-www3.
-docs.
-m.
-shop.
-api.
-app.
-vi.
-vn.
-e.
-! [END PREFIX]
-
 [Adblock Plus 2.0]
 ! Title: STOP ADS
-! Updated: 31 Mar 2026, 11:20
+! Describe: Chặn quảng cáo
+! Updated: 31 Mar 2026 11:22
+! Version: 1.0.0
 ! Blocked: 476
+! Size: 26.53kb
 ! ==================
 
 1thegioi.vn##[class*="zone-"],[class^="c-banner-"],[class^="is-"]
+
 24h.com.vn###header-24h-login-cont,.adsbygoogle,[class^="inpage_"],[id^="ADS_"],[id^="ads_"],[id^="div-gpt-ad-"],[id^="div_inpage_"],[id^="share-"],[id^="sis_inpage"],[id^="zone-"]
 2game.vn###bannermtop,[class^="banner-"]
 2sao.vn###adzone39,#catfish,.adsbygoolge,.vadslogo,[class^="vmc_"],[id^="adzone"],[id^="mashead-"],[id^="mobile_"],[id^="sp-wrapper-"]
+
 51degrees.com##.g-floating-banner,[class^="is-"]
+
 acb.com.vn##.download-app-mb
 accuweather.com###bottom,#middle,#top,.adhesion-header,.adsbygoogle,.header-placeholder
 afamily.vn##.adsbygoogle,[id^="adm-slot-"]
@@ -37,6 +30,7 @@ antoanthongtin.vn##.download-app
 apkmirror.com###bottom-slider,.adsbygoogle,.adslot,.advertisement-text,[class*="ains-"]
 apkpure.com##[class^="ad-"],[class^="js-"]
 autopro.com.vn###admbackground,#admfulltop,#ban-size-top,.adsbygoogle,[id^="adm_"],[id^="zone-"]
+
 babla.vn###ad_topslot
 baca-bank.vn###slider
 bachlongstore.vn###vnt-banner,.tpproductma
@@ -97,6 +91,7 @@ bongda24h.vn##.ads-center,.adsbygoogle,.adscontent
 bongdanet.mobi##.content-home-top,.img-adsbanner-bdn,.w-menu-datcuoc,[id^="ads_banner_bdn_"]
 bongdaplus.vn###adft,#admtop,.clz
 brandsvietnam.com###overlay-ad,.my-3
+
 cafebiz.vn###top-logo,[id^="adm-"],[id^="adm_"],[id^="admfull"],[id^="ban-"],[id^="zone-"]
 cafef.vn###admbackground,[id^="adm-"],[id^="adm_"],[id^="admfull"],[id^="ban-"],[id^="top-"],[id^="zone-"],img[src="https://adi.admicro.vn/adx/adxlogo-1.png"]
 cafeland.vn###bannercarouselcontentads,#bannervideocontentads,.topfullbannermobilesize,.wrap-img
@@ -121,6 +116,7 @@ congnghevadoisong.vn##.col-md-8>p,[class^="ads_"]
 congngheviet.com##.td-a-rec
 congnghieptauthuyvietnam.vn##.w_100
 congthuong.vn##[class*="adsbygoogle"],[class*="inpage-ad"]
+
 daibieunhandan.vn##.c-banner,.is-custom-size,[class^="zone-"]
 daidoanket.vn###sp-wrapper-hovering-format,.adsbygoogle,.sp-infooter-mb-google-ads
 danang.gov.vn##.ml-lg-3,.mt-sm-0
@@ -157,12 +153,15 @@ download.com.vn###adrightspecial,#adsrightspecial,.adsbygoogle,.in-article
 drt.vn##.ads-block-item
 duckduckgo.com##.js-atb-banner,[class^="js-"],[class^="set-browser-"]
 dunno.ai##.box-ads
+
 elle.vn##[class*="my-"],[id^="div-gpt-ad-"]
 emc-directory.com###mobilebottomad
 ephoto360.com##.ad-container,.i-said-no-thing-can-stop-me-warning,.line-ads
 eva.vn##[class^="banr-"],[id*="banner"],[id^="ADS_"],[id^="ads"],[id^="spantextads_"]
+
 fandom.com##.ad-slot-placeholder,.top-ads-container
 fptplay.vn##.flex-row,a[aria-label="purchase packages"]
+
 game.gov.vn##.wrapperqc
 game24h.vn##.banner
 gamehub.vn###smartbanner
@@ -185,6 +184,7 @@ giaothong.tapchixaydung.vn##[class*="qc"]
 gmobile.vn##.slide
 gocnhinphaply.nguoiduatin.vn###sp-wrapper-hovering,#sp_format_catfish,.adsbygoogle,.no-margin-ads,.qc_container,.sp-pto-mb-div,[class*="sp-ptoproduct-"],div[id="sp_format-ptoproduct_1991"]
 gsmarena.com###fkmvnq,.adsbygoogle,.adv-bottom,.adv-mid,.adv-top,.amp-sticky-ad-close-button,.d-flex,.deals,.i-amphtml-sticky-ad-layout,.price-banner,.top-adv,.widget
+
 hacom.vn##.bottom-20
 haiphong.gov.vn##.uiadvertisement_default
 hanoi.gov.vn##.uiadvertisement_default
@@ -209,9 +209,11 @@ hungmobile.vn##.b-modal,.banner,.product_adv,[class^="popup-"]
 hungyen.edu.vn##.link-slide
 hungyen.gov.vn##.full-width
 hungyentv.vn##[id^="ads_"],[id^="advertise_"]
+
 inas.org###match-child-1,#wap_bottombanner_content,.ads-header-mobile,.btn-8xbet
 irace.vn##.g-6,.sticky-notice-bar
 itc.ua##.text-center,.widget_telegram
+
 kalvo.com##.adsbygoogle,.barsticky,.klv_x,[class^="klvad"]
 kenh14.vn###admfulltop,#ban-top-site,.adv,[id^="adm-slot"],[id^="adm_zone"],[id^="admbackground"],[id^="zone"]
 kenh24h.com.vn##body>div
@@ -229,6 +231,7 @@ kinhtenongthon.vn###col_301,#firt,.row,[class*="owl"]
 kinhtevadubao.vn##.banner
 kirikuylabruja.com##.banner-chat,.btn--secondary,.catfish-banner-global
 kqxs.vn##.adsbygoogle,[class^="ads-"]
+
 laichau.edu.vn###frameboundb5c9c2db5333a9,#frameboundb60e7fe5366441,#module50,.full-width
 lamdong.edu.vn##.sidebar-link,.slogan_img
 lamdong.gov.vn##.imagewithlink_f315b473
@@ -256,6 +259,7 @@ loigiaihay.com###countdown,.adsbygoogle,.bg-countdown,.homepage-top-ads,.nl-info
 luatminhkhue.vn###sp-wrapper-hovering-format,.ads-label
 luatvietnam.vn##.adsbygoogle,.adv-footer-fixed
 lyluanchinhtri.vn##[class^="c-banner-"],[class^="is-custom-"]
+
 mail.google.com##[id^="nav"]
 mangatooncom.vn##.detail-download-bg,.index-download-bg
 manilastandard.net##[id*="div-gpt-ad-"],[id^="div-gpt-ad-"]
@@ -279,6 +283,7 @@ moitruong.net.vn##.adsbygoogle,.c-banner
 momo.vn##.container-topbar
 motthegioi.vn##.adsbygoogle
 mucnews.com##.e3lan
+
 namabank.com.vn##.mobile-popup
 nbtv.vn##.top-news-right,[class*="banner_"],[class^="app-"],[id^="app_"]
 ncb-bank.vn##.img-popup,.left,.ovl
@@ -303,10 +308,12 @@ nnmt.net.vn##.ads-top-mobile,.box-banner-fixd
 nokiasaithanh.com###voucher-box
 nongnghiepmoitruong.vn##[class^="ads-"],[class^="adv"],[class^="exp_qc_"],[id^="zone-"]
 nperf.com##.modal-content
+
 ofnews.vn##.detail-social,.qc-slider
 onplus.com.vn##.bg-dark-500,.object-contain,.rounded-3xl
 otosaigon.com###side-ads-mid-3,[class^="ads-"]
 oxfordlearnersdictionaries.com##[id*="ad_"]
+
 parhazart.org##.catfish-banner-global
 perplexity.ai##.animate-in
 petrotimes.vn##.petrotimes-qc,[id^="ads-"]
@@ -318,6 +325,7 @@ phimsex6s.com###bottombannercontainer,#popbannerads,#topbannercontainer
 phunuonline.com.vn##.adsbygoogle,[id^="banner_"]
 phutho.edu.vn##.w-download
 plo.vn##[id^="adsmobile"],[id^="bn-zone"],[id^="mobile"],[id^="zone"],div[style="margin: 10px 0px;"]
+
 qdnd.vn##[class^="-banner"],[class^="banner"],[class^="banner-"],[class^="cate-"]
 qpvn.vn###top-bar
 qrcodechimp.com##[id^="features_popup"]
@@ -329,8 +337,11 @@ quankhu3.vn###banner0
 quanlynhanuoc.vn##.widget_text
 quantrimang.com##.sidebar,[class^="ads"],[id^="adindex"],[id^="adsposttop"],[id^="adunderarticle"],[id^="articleads"],[id^="mrc"]
 quocphongthudo.vn###module21,#module24,.full-width
+
 radio.net###sticky-reklame-header
 reddit.com###xpromo-small-header,.bg-transparent
+rung.vn##.adsbygoogle
+
 sachtruyen.com.vn###sp-wrapper-hovering-format
 sacombank.com.vn##.topbanner
 samcafe.vn##.egg-container
@@ -356,6 +367,7 @@ suckhoecongdongonline.vn##.item-img,.wp-banner-top
 suckhoedoisong.vn###ub-anchor-adcontainer,.adsbygoogle,[class*="ads"],[id*="sp-wrapper-hovering"]
 suckhoetreem.vn##[class^="dnnmodule-"]
 sunsky-online.com###download-app-dialog
+
 tapchicand.gov.vn##.img-fluid
 tapchicongsan.org.vn##.hidden-md
 tapchicongthuong.vn##.sidebar,[class*="ads"]
@@ -427,8 +439,9 @@ tusach.vn###sp-wrapper-hovering-format
 tuyenquang.gov.vn##.h-auto
 tv360.vn###ads-player-base-wrapper,.css-1jzjo52,.css-1u6gwec,.css-1xdipk,.css-csxyfn,.text-ellipsis,.toastify
 tvbox.one##.adsbygoogle,.entry-img-300,.homeadv,.homeadv>span
+
 uniscore.com##.top-0
-v2.rung.vn##.adsbygoogle
+
 vanhoanghethuat.vn###Mobile_AdsArticleBodyInArticle,#adzone39,#sp-wrapper-hovering-format,.mobile
 vansu.net##.block-inner,center[style="padding-top: 15px;height: 280px;"]
 vbsp.org.vn###right,[class*="ads"]
@@ -474,10 +487,12 @@ voz.vn###sp-wrapper-hovering-format,.adsbypubpower
 vtcnews.vn###adbro-bottom,.adsbygoogle,.inpage-ad,.top-ad,[class^="aanetwork-"],[class^="ads-"],[class^="banner-"],[class^="sys-ads"]
 vtv.vn##.adsbygoogle
 vtvcab.vn##.fix_img
+
 waptrick.com##.cent_list
 webthethao.vn##.ads-block,.build-advertisements
 wifiman.com##._container_mwjca_1
 wired.com##[class^="StickyHeroAdWrapper-"]
+
 xahoi.com.vn##.adsbygoogle,center[style="margin: 10px 0 10px;"]
 xem.tvso1.com##[id^="m907725s"]
 xemgame.com##[id^="bannerm"]
@@ -490,9 +505,8 @@ xemtvonline.com###bottom650,.close-ad-btn
 xiaomitoday.it###gmp-bottommobile,#gmp-middlemobile,#gmp-topmobile,#xiaom-1572609294,.adsbygoogle,[id*="custom_html-"],[id^="xiaom-"],[id^=cegg_price_movers-"]
 xphimmoi1.com##.no-gutters
 xphimsex.net##.xx-ads
+
 youtube.com##.ytmcompanionslotrendererhost,.ytmpaidcontentoverlayhost,[class^="rich-section-"],[class^="ytmbackstagepost"]
+
 zingmp3.vn##.z-banner-vip,[class^="z-btn-open"]
 znews.vn###follow_oa,.z2-inpage-wrapper,[class^="Okv-"],[class^="follow"],[id^="Okv-"],[id^="ZingNews_"],[id^="Zingnews_"],[id^="follow"],[id^="zingnews"],div>div,div>div>div
-
-
-
