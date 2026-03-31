@@ -1,10 +1,10 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Describe: Chặn quảng cáo
-! Updated: 31 Mar 2026 08:15
-! Version: 1.0.176
+! Updated: 31 Mar 2026 10:01
+! Version: 1.0.177
 ! Blocked: 476
-! Size: 26.50kb
+! Size: 26.54kb
 ! ==================
 
 1thegioi.vn##[class*="zone-"],[class^="c-banner-"],[class^="is-"]
@@ -273,7 +273,7 @@ migovi.com##.banner-promotions-wrapper
 minhancomputer.com###js-buildpc-banner
 missav.fans###ts-main-banner-wrapper,[class^="space-y-"]
 missav.run##.banner-box
-missav123.com##[class^="root--"]
+missav123.com##[class^="root--"],[class^="space-y-"],[id^="ts_ad_"]
 mixvale.com.br##.adsbygoogle,div[style="width: 100%; min-height: 280px; display: flex; justify-content: center; align-items: center; margin: 20px 0; background-color: transparent;"]
 mobifone.vn##.main-banner
 mobilecity.vn##[id^="sudovn-btn-"]
