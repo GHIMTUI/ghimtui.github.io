@@ -1,10 +1,10 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Describe: Chặn quảng cáo
-! Updated: 31 Mar 2026 08:00
-! Version: 1.0.175
-! Blocked: 480
-! Size: 26.51kb
+! Updated: 31 Mar 2026 08:15
+! Version: 1.0.176
+! Blocked: 476
+! Size: 26.50kb
 ! ==================
 
 1thegioi.vn##[class*="zone-"],[class^="c-banner-"],[class^="is-"]
@@ -80,7 +80,7 @@ baovannghe.vn##.adsbygoogle
 baovephapluat.vn##.banner-item,.cat-advertise,[id^="dnn_ctr699_"]
 baovietbank.vn##.bvb-info-service,.bvb-slider-banner,.bvb-slider-top
 baovinhlong.com.vn##[class^="ad"]
-beincrypto.com##.banner-sticky-bottom-d
+beincrypto.com##.banner-sticky-bottom-d,.custom-button-primary,[class^="banner"],[class^="parallax"],[class^="sponsoredlabel-"]
 bienvietnam.vn##.row-height,.sdt-image,[class^="vc_custom_"]
 biggcreative.com##.catfish-banner-global
 bizfly.vn###modal_bizfly_popup,.modal-backdrop
@@ -154,10 +154,12 @@ drt.vn##.ads-block-item
 duckduckgo.com##.js-atb-banner,[class^="js-"],[class^="set-browser-"]
 dunno.ai##.box-ads
 
+elle.vn##[class*="my-"],[id^="div-gpt-ad-"]
 emc-directory.com###mobilebottomad
 ephoto360.com##.ad-container,.i-said-no-thing-can-stop-me-warning,.line-ads
 eva.vn##[class^="banr-"],[id*="banner"],[id^="ADS_"],[id^="ads"],[id^="spantextads_"]
 
+fandom.com##.ad-slot-placeholder,.top-ads-container
 fptplay.vn##.flex-row,a[aria-label="purchase packages"]
 
 game.gov.vn##.wrapperqc
@@ -165,6 +167,7 @@ game24h.vn##.banner
 gamehub.vn###smartbanner
 gamek.vn##.ads-top,.adsbygoogle,[id^="admbackground"],[id^="banner-"],[id^="placement-"],[id^="share-"],[id^="slot-"],[id^="zone-"]
 gameorb.com.vn##[id^="popmake-"],[id^="pum-"]
+gamespot.com##.mapped-mobile-banner-plus,.mapped-mobile-incontent-plus
 gametoon.mobi###toon-adsense-ads,.ads-bg,.adsbygoogle
 gas40.com##.expand-home
 gddt.daklak.gov.vn###sidebar-left
@@ -310,6 +313,7 @@ onplus.com.vn##.bg-dark-500,.object-contain,.rounded-3xl
 otosaigon.com###side-ads-mid-3,[class^="ads-"]
 oxfordlearnersdictionaries.com##[id*="ad_"]
 
+parhazart.org##.catfish-banner-global
 perplexity.ai##.animate-in
 petrotimes.vn##.petrotimes-qc,[id^="ads-"]
 phaply.net.vn##[class^="qc_"]
@@ -332,6 +336,7 @@ quanlynhanuoc.vn##.widget_text
 quantrimang.com##.sidebar,[class^="ads"],[id^="adindex"],[id^="adsposttop"],[id^="adunderarticle"],[id^="articleads"],[id^="mrc"]
 quocphongthudo.vn###module21,#module24,.full-width
 
+radio.net###sticky-reklame-header
 reddit.com###xpromo-small-header,.bg-transparent
 
 sachtruyen.com.vn###sp-wrapper-hovering-format
@@ -343,7 +348,7 @@ sc.com##[class^="smartbanner"]
 scb.com.vn##[class^="slider-"]
 search.brave.com##[class^="download-"],[class^="premium-"]
 sexdep.blog###bottombannercontainer,#popbannerads,#topbannercontainer,#underplayeradscontainer
-sggp.org.vn###sdamobile_sdatop,.ls-is-cached,a[rel="noopener"]
+sggp.org.vn###admFullTop,#ban-site-top,#sdamobile_sdatop,#top-logo,.ls-is-cached,[id^="Mobile_"],[id^="adm_"],[id^="sdaMobile_"],[id^="sdamobile_"],[id^="zone-"],a[rel="noopener"]
 sinhthainongnghiep.net.vn##[class^="qc_"]
 sogddtsonla.edu.vn###frameboundb59c0a1e91bcfc,.image-list-album,.widget
 sogiaoduc.caobang.gov.vn##.advertcontent
@@ -354,6 +359,7 @@ sonlatv.vn##.col-md-12,[class*="ads"],[id*="ads"]
 speedtest.net###modal-overlay,#zdcfloatingbtn,.app-promo,.mobile-pretest
 speedtest.vn###advarea,.jconfirm,.jconfirm-bg,.jconfirm-cell,.jconfirm-scrollpane
 sstruyen.com.vn###flyer
+starnewskorea.com##[id*="RS_"],div[style="width:100dvw;max-width:320px;height:50px;margin:0 auto;position:relative"]
 suckhoecongdongonline.vn##.item-img,.wp-banner-top
 suckhoedoisong.vn###ub-anchor-adcontainer,.adsbygoogle,[class*="ads"],[id*="sp-wrapper-hovering"]
 suckhoetreem.vn##[class^="dnnmodule-"]
@@ -434,7 +440,7 @@ tvbox.one##.adsbygoogle,.entry-img-300,.homeadv,.homeadv>span
 uniscore.com##.top-0
 
 v2.rung.vn##.adsbygoogle
-vanhoanghethuat.vn##.mobile
+vanhoanghethuat.vn###Mobile_AdsArticleBodyInArticle,#adzone39,#sp-wrapper-hovering-format,.mobile
 vansu.net##.block-inner,center[style="padding-top: 15px;height: 280px;"]
 vbsp.org.vn###right,[class*="ads"]
 vdb.gov.vn##[class*="ads_"]
@@ -466,7 +472,6 @@ vinhlong.edu.vn##.widget
 vip.keeng.vn##.app_nhac_keeng
 vjst.vn##.c-banner-item,[id^="zone-"]
 vn-z.vn##.u-bottomfixer
-vn.beincrypto.com##.custom-button-primary,[class^="banner"],[class^="parallax"],[class^="sponsoredlabel-"]
 vnbusiness.vn##[class*="-qc"],[class*="ad-"]
 vndoc.com###adpageexpanding,#adundercontent,.adblock,.adlinks,.adsbygoogle,.sidebar,.sticky
 vnexpress.net###closebuttonsticky,#sis_sticky,[class^="banner_mobile_"],[class^="inner_ads"],[class^="section_ads_"],[class^="tet_ads"],[class^="txt_qc"],[id^="ads_"],[id^="banner_"]
@@ -482,28 +487,19 @@ vovmedia.vn###affiliate-container
 voz.vn###sp-wrapper-hovering-format,.adsbypubpower
 vtcnews.vn###adbro-bottom,.adsbygoogle,.inpage-ad,.top-ad,[class^="aanetwork-"],[class^="ads-"],[class^="banner-"],[class^="sys-ads"]
 vtv.vn##.adsbygoogle
+vtvcab.vn##.fix_img
 
 waptrick.com##.cent_list
 webthethao.vn##.ads-block,.build-advertisements
 wifiman.com##._container_mwjca_1
-www.24h.com.vn##[id^="ADS_"]
-www.elle.vn##[class*="my-"],[id^="div-gpt-ad-"]
-www.fandom.com##.ad-slot-placeholder,.top-ads-container
-www.gamespot.com##.mapped-mobile-banner-plus,.mapped-mobile-incontent-plus
-www.parhazart.org##.catfish-banner-global
-www.radio.net###sticky-reklame-header
-www.starnewskorea.com##[id*="RS_"],div[style="width:100dvw;max-width:320px;height:50px;margin:0 auto;position:relative"]
-www.vanhoanghethuat.vn###Mobile_AdsArticleBodyInArticle,#adzone39,#sp-wrapper-hovering-format
-www.vtvcab.vn##.fix_img
-www.wired.com##[class^="StickyHeroAdWrapper-"]
-www.xemtivitop.com###HTML8,#facebook-comment
+wired.com##[class^="StickyHeroAdWrapper-"]
 
 xahoi.com.vn##.adsbygoogle,center[style="margin: 10px 0 10px;"]
 xem.tvso1.com##[id^="m907725s"]
 xemgame.com##[id^="bannerm"]
 xemtivi.top###sp-wrapper-hovering-format
 xemtivi4k.com##[id^="adstop"],a[href^="https://www.msbgih.com/sportsbook"]
-xemtivitop.com###html8
+xemtivitop.com###HTML8,#facebook-comment,#html8
 xemtv.net##.adsbygoogle
 xemtv.us###med_rec_banner2,.close-ad-btn,.float-ck,div[data-widget-id="1433589"]
 xemtvonline.com###bottom650,.close-ad-btn
