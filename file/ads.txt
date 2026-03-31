@@ -1,10 +1,10 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Describe: Chặn quảng cáo
-! Updated: 31 Mar 2026 12:57
-! Version: 1.0.12
-! Blocked: 476
-! Size: 26.53kb
+! Updated: 31 Mar 2026 13:04
+! Version: 1.0.13
+! Blocked: 485
+! Size: 26.98kb
 ! ==================
 
 1thegioi.vn##[class*="zone-"],[class^="c-banner-"],[class^="is-"]
@@ -31,7 +31,7 @@ apkmirror.com###bottom-slider,.adsbygoogle,.adslot,.advertisement-text,[class*="
 apkpure.com##[class^="ad-"],[class^="js-"]
 autopro.com.vn###admbackground,#admfulltop,#ban-size-top,.adsbygoogle,[id^="adm_"],[id^="zone-"]
 
-babla.vn###ad_topslot
+babla.vn###ad_topslot,[class^="info-"],[id^="ad-"]
 baca-bank.vn###slider
 bachlongstore.vn###vnt-banner,.tpproductma
 bacninh.edu.vn##.panel-heading,.widget,.widget-space
@@ -105,6 +105,7 @@ chatgpt.com##.block
 chatluongvacuocsong.vn##.e,[id^="ads_"],[id^="zone-"]
 chinhphu.vn##.advertcontent
 chinhtrivaphattrien.vn##[class*="qc_"]
+chotot.com###app_download,[class^="aw__"],[class^="showSafe"]
 chungta.vn##.clearfix
 cimbbank.com.vn##.btn
 coccoc.com##.top-14,.uselogin-jctvg,[class^="adsitem-"],[class^="default-"],[class^="top-"]
@@ -122,6 +123,7 @@ daidoanket.vn###sp-wrapper-hovering-format,.adsbygoogle,.sp-infooter-mb-google-a
 danang.gov.vn##.ml-lg-3,.mt-sm-0
 danangtv.vn###ctl00_ctl00_content_trang_chủ_quảng_cáo_botttom,.quang_cao_temp,.xemgiquangcao,[class*="quangcao_"]
 danchuphapluat.vn##.__ads_click
+danhgiaxe.com##.banner
 dantocmiennui.baotintuc.vn##[class^="ad-"],[class^="sda_"],[id^="sdamobile_"]
 dantri.com.vn###mobile-top-page,#sp-wrapper-hovering,#tpminpagecontainer,.adsbygoogle,.dt-py-1
 danviet.vn##.sidebar-countdown,.video-container,[class*="ads"],[id*="ads"],[id*="zone-"]
@@ -160,6 +162,7 @@ ephoto360.com##.ad-container,.i-said-no-thing-can-stop-me-warning,.line-ads
 eva.vn##[class^="banr-"],[id*="banner"],[id^="ADS_"],[id^="ads"],[id^="spantextads_"]
 
 fandom.com##.ad-slot-placeholder,.top-ads-container
+forum.autodaily.vn##[class^="banner-"]
 fptplay.vn##.flex-row,a[aria-label="purchase packages"]
 
 game.gov.vn##.wrapperqc
@@ -181,6 +184,9 @@ gialai.gov.vn###module82,#module90,.full-width,.widget-space
 giaoducthudo.giaoducthoidai.vn###sp-wrapper-hovering-format,.c-banner,.h-show-mobile
 giaogasnhanh.com##.elementor-jet-slider
 giaothong.tapchixaydung.vn##[class*="qc"]
+giaxe.2banh.vn##[class*="ct_"],[id*="ct_"]
+giaxeoto24h.vn##[id^="slider-"]
+gitiho.com##[class^="banner-"]
 gmobile.vn##.slide
 gocnhinphaply.nguoiduatin.vn###sp-wrapper-hovering,#sp_format_catfish,.adsbygoogle,.no-margin-ads,.qc_container,.sp-pto-mb-div,[class*="sp-ptoproduct-"],div[id="sp_format-ptoproduct_1991"]
 gsmarena.com###fkmvnq,.adsbygoogle,.adv-bottom,.adv-mid,.adv-top,.amp-sticky-ad-close-button,.d-flex,.deals,.i-amphtml-sticky-ad-layout,.price-banner,.top-adv,.widget
@@ -451,6 +457,7 @@ via.gov.vn##.bnrcenter
 vib.com.vn##.new-download-app
 viblo.asia##.el-dialog__wrapper,.fixed-bottom-bar,.v-modal
 vieclam24h.vn##[id^="headlessui-dialog-"]
+vieclamtot.com###app_download,[class^="aw__"],[class^="showSafe"]
 vietcetera.com##[class^="styles_downloadappbtnwrapper__"],[class^="styles_topbanner__"]
 vietgame.asia##.adsbygoogle,[class^="block-"]
 vietgiaitri.com###header,.cover_header,[class^="avgt-"],[class^="inview-"],[id^="balloon"]
@@ -489,11 +496,13 @@ vtv.vn##.adsbygoogle
 vtvcab.vn##.fix_img
 
 waptrick.com##.cent_list
+websosanh.vn##.adsbygoogle,[class^="border-"],[id^="dta-"],[id^="mobile-"]
 webthethao.vn##.ads-block,.build-advertisements
 wifiman.com##._container_mwjca_1
 wired.com##[class^="StickyHeroAdWrapper-"]
 
 xahoi.com.vn##.adsbygoogle,center[style="margin: 10px 0 10px;"]
+xe.chotot.com###app_download,[class^="aw__"],[class^="showSafe"]
 xem.tvso1.com##[id^="m907725s"]
 xemgame.com##[id^="bannerm"]
 xemtivi.top###sp-wrapper-hovering-format
