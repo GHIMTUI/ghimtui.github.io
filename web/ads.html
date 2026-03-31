@@ -66,7 +66,6 @@
             min-height: 38px;
         }
 
-        /* Khung trạng thái & Nút bấm chung */
         .status-pill {
             padding: 0.6rem 1.5rem;
             border-radius: 50px; 
@@ -89,7 +88,6 @@
             display: inline-flex;
         }
 
-        /* Nút Lưu Lại (Màu xanh hoạt động) */
         #svBtn {
             background-color: var(--accent-green);
             color: #ffffff;
@@ -100,18 +98,12 @@
             background-color: var(--accent-hover);
         }
 
-        #svBtn:active:not(:disabled) {
-            transform: scale(0.96);
-        }
-
-        /* Trạng thái nền xám chữ xám (Loading, Saved, Saving) */
         .pill-gray-style {
             background-color: var(--status-gray-bg) !important;
             color: var(--status-text-gray) !important;
             cursor: default;
         }
 
-        /* Hiệu ứng nhịp thở cho màu chữ */
         .breathing-text {
             animation: text-pulse 1.6s ease-in-out infinite;
         }
@@ -161,9 +153,7 @@
     <div class="toolbar">
         <div class="info-path">ADBLOCK EDITOR</div>
         <div class="actions">
-            <!-- Khu vực hiển thị text cho trạng thái tải hoặc lỗi -->
             <div id="statusContainer" class="status-pill"></div>
-            <!-- Khu vực nút bấm cho trạng thái Lưu/Đang lưu/Đã lưu -->
             <button id="svBtn" class="status-pill"></button>
         </div>
     </div>
@@ -193,9 +183,10 @@
 
     let _v_sha = null;
     let _last_saved_content = ""; 
+    let _typing_timer = null;
+    let _is_loading = true;
 
     function setBtnState(state) {
-        // Reset classes
         _dom_sv.classList.remove('visible', 'pill-gray-style', 'breathing-text');
         _dom_st.classList.remove('visible', 'pill-gray-style', 'breathing-text');
         _dom_sv.style.color = "";
@@ -206,6 +197,11 @@
             case 'loading':
                 _dom_st.innerText = "ĐANG TẢI...";
                 _dom_st.classList.add('visible', 'pill-gray-style');
+                break;
+
+            case 'typing_indicator':
+                _dom_st.innerText = "ĐANG NHẬP...";
+                _dom_st.classList.add('visible', 'pill-gray-style', 'breathing-text');
                 break;
 
             case 'saved':
@@ -222,7 +218,7 @@
             case 'saving':
                 _dom_sv.innerText = "ĐANG LƯU...";
                 _dom_sv.disabled = true;
-                _dom_sv.classList.add('visible', 'pill-gray-style', 'breathing-text');
+                _dom_sv.classList.add('visible', 'pill-gray-style');
                 break;
 
             case 'error_connect':
@@ -236,15 +232,14 @@
                 _dom_sv.disabled = true;
                 _dom_sv.classList.add('visible', 'pill-gray-style');
                 _dom_sv.style.color = "#ef4444";
-                setTimeout(() => setBtnState('unsaved'), 2000);
+                setTimeout(() => setBtnState(_dom_ar.value !== _last_saved_content ? 'unsaved' : 'saved'), 2000);
                 break;
         }
     }
 
-    // Logic Adblock xử lý nội dung
     function _remove_subdomain_prefixes(domain) {
         if (!domain) return "";
-        const prefixes = ["www.","www3.", "m.", "shop.", "api.", "news.", "mobile.", "v.", "app.","en.", "vn."];
+        const prefixes = ["www.","www3.", "docs.", "m3.", "m.", "shop.", "api.", "list.", "news.", "mobile.", "v.", "v2.", "app.","en.","us.","vi.", "vn."];
         let cleaned = domain.toLowerCase();
         for (let p of prefixes) { if (cleaned.startsWith(p)) return domain.substring(p.length); }
         return domain;
@@ -254,9 +249,12 @@
         let lines = rawInput.split('\n').map(l => l.trim()).filter(l => l !== "");
         let bodyLines = [];
         lines.forEach(line => {
+            // Loại bỏ các dòng metadata cũ
             if (line.match(/! (Title|Description|Describe|Updated|Version|Blocked|Size|=======)/i) || line.startsWith("[Adblock")) return;
+            // Chỉ giữ lại rules, không giữ comment cũ trong body
             if (!line.startsWith('!')) bodyLines.push(line);
         });
+
         let mergedMap = new Map();
         let otherRules = []; 
         bodyLines.forEach(line => {
@@ -271,25 +269,39 @@
                 });
             } else { otherRules.push(line); }
         });
+
         let processedBody = [];
         mergedMap.forEach((selectors, domain) => {
             const sortedSelectors = Array.from(selectors).sort();
             processedBody.push(`${domain}##${sortedSelectors.join(',')}`);
         });
         processedBody = [...processedBody, ...otherRules];
+
         const strictSort = (a, b) => a < b ? -1 : (a > b ? 1 : 0);
         let whitelistRules = Array.from(new Set(processedBody.filter(line => line.startsWith("@@||")))).sort(strictSort);
         let normalRules = Array.from(new Set(processedBody.filter(line => !line.startsWith("@@||") && line !== ""))).sort(strictSort);
+        
         let uniqueBody = [...normalRules, ...whitelistRules];
-        let realRuleCount = uniqueBody.filter(line => line.trim().length > 0 && !line.startsWith('!')).length;
+
+        // LOGIC ĐẾM BLOCKED: Chỉ đếm các dòng bắt đầu bằng chữ cái/số hoặc whitelist @@||
+        // Không đếm các dòng bắt đầu bằng ký tự đặc biệt như ##, ###, !, [, ...
+        let realRuleCount = uniqueBody.filter(line => {
+            const trimLine = line.trim();
+            if (trimLine.length === 0) return false;
+            // Cho phép: Bắt đầu bằng chữ cái/số HOẶC bắt đầu bằng @@||
+            return /^[a-zA-Z0-9]/.test(trimLine) || trimLine.startsWith("@@||");
+        }).length;
+
         let version = "1.0.0";
         const v_match = rawInput.match(/!\s*Version:\s*(\d+)\.(\d+)\.(\d+)/i);
         if (v_match) {
             let v_major = v_match[1], v_minor = v_match[2], v_patch = parseInt(v_match[3]) + 1;
             version = `${v_major}.${v_minor}.${v_patch}`;
         }
+
         const now = new Date();
         const time_str = now.toLocaleString('en-GB', { day: '2-digit', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit', hour12: false }).replace(',', '');
+        
         let tempBodyOutput = [];
         let lastGroupKey = "";
         uniqueBody.forEach(line => {
@@ -298,9 +310,11 @@
             tempBodyOutput.push(line);
             lastGroupKey = currentGroupKey;
         });
+
         const headerPrefix = ["[Adblock Plus 2.0]", "! Title: STOP ADS", "! Describe: Chặn quảng cáo", `! Updated: ${time_str}`, `! Version: ${version}`, `! Blocked: ${realRuleCount}`];
         const contentForSize = [...headerPrefix, "! Size: 00.00kb", "! ==================", "", ...tempBodyOutput].join('\n');
         const kbSize = (new TextEncoder().encode(contentForSize).length / 1024).toFixed(2);
+        
         return {
             content: [...headerPrefix, `! Size: ${kbSize}kb`, "! ==================", "", ...tempBodyOutput].join('\n'),
             version: version
@@ -318,15 +332,37 @@
                 const dec = decodeURIComponent(raw.split('').map(c => '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2)).join(''));
                 _dom_ar.value = dec;
                 _last_saved_content = dec;
+                _is_loading = false;
                 setBtnState('saved');
             } else { setBtnState('error_connect'); }
         } catch (e) { setBtnState('error_connect'); }
     }
 
+    _dom_ar.addEventListener('focus', () => {
+        if (_is_loading) return;
+        setBtnState('typing_indicator');
+    });
+
+    _dom_ar.addEventListener('blur', () => {
+        if (_is_loading) return;
+        if (_dom_ar.value === _last_saved_content) {
+            setBtnState('saved');
+        } else {
+            setBtnState('unsaved');
+        }
+    });
+
     _dom_ar.addEventListener('input', () => {
-        if (!_v_sha) return;
-        if (_dom_ar.value !== _last_saved_content) { setBtnState('unsaved'); } 
-        else { setBtnState('saved'); }
+        if (_is_loading || !_v_sha) return;
+        clearTimeout(_typing_timer);
+        setBtnState('typing_indicator');
+        _typing_timer = setTimeout(() => {
+            if (_dom_ar.value !== _last_saved_content) {
+                setBtnState('unsaved');
+            } else {
+                setBtnState('saved');
+            }
+        }, 800);
     });
 
     _dom_sv.addEventListener('click', async () => {
