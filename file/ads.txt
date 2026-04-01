@@ -1,10 +1,10 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Describe: Chặn quảng cáo
-! Updated: 01 Apr 2026 20:35
-! Version: 1.0.17
+! Updated: 01 Apr 2026 21:14
+! Version: 1.0.18
 ! Blocked: 493
-! Size: 27.41kb
+! Size: 27.42kb
 ! ==================
 
 1thegioi.vn##[class*="zone-"],[class^="c-banner-"],[class^="is-"]
@@ -253,7 +253,7 @@ laocai.gov.vn##.uimultifunction_default
 laodong.vn###admbackground-adm,#main-footer-fix-bottom,.adsbygoogle,.i-amphtml-sticky-ad-layout,.m-top-10,.notification-header__msg,.sp-infooter-mb-google-ads,[id^="sp-"]
 laodongdoanthe.vn##[class*="ads"],[class*="banner"a]
 lapphap.vn##.section>a
-lazada.vn###j_banner
+lazada.vn###J_Banner,#j_banner
 lecourrier.vn##.top-adv-pos
 leeapk.com###stickyad,.ads-banner
 letemsvetemapplem.eu###ad_native_hp_loop_mob2,#ad_native_single_popular,.adsbygoogle,.headerbanner-wrapper
