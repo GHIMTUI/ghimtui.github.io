@@ -1,10 +1,10 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Describe: Chặn quảng cáo
-! Updated: 01 Apr 2026 21:58
-! Version: 1.0.26
-! Blocked: 499
-! Size: 27.58kb
+! Updated: 01 Apr 2026 23:21
+! Version: 1.0.27
+! Blocked: 510
+! Size: 28.05kb
 ! ==================
 
 1thegioi.vn##[class*="zone-"],[class^="c-banner-"],[class^="is-"]
@@ -24,6 +24,7 @@ accuweather.com###bottom,#middle,#top,.adhesion-header,.adsbygoogle,.header-plac
 afamily.vn##.adsbygoogle,[id^="adm-slot-"]
 afkmobi.com###gift-banner,.adsbygoogle,.afk_bn_homem_top
 agribank.com.vn###agbmodal,.modal-backdrop
+akishop.com.vn##.background-popup,.popup_banner
 amlich.net.vn##.p-1
 amlich.vn##.aanetwork-flyicon-box
 angiang.edu.vn##.image-list-album,.w-download,.widget
@@ -122,6 +123,7 @@ congnghevadoisong.vn##.col-md-8>p,[class^="ads_"]
 congngheviet.com##.td-a-rec
 congnghieptauthuyvietnam.vn##.w_100
 congthuong.vn##[class*="adsbygoogle"],[class*="inpage-ad"]
+cuoi.tuoitre.vn##[id^="sp-wrapper-"]
 
 daibieunhandan.vn##.c-banner,.is-custom-size,[class^="zone-"]
 daidoanket.vn###sp-wrapper-hovering-format,.adsbygoogle,.sp-infooter-mb-google-ads
@@ -167,10 +169,12 @@ dunno.ai##.box-ads
 electrek.co##[class^="st"]
 elle.vn##[class*="my-"],[id^="div-gpt-ad-"]
 emc-directory.com###mobilebottomad
+ems.com.vn##[class^="ant-modal-"]
 ephoto360.com##.ad-container,.i-said-no-thing-can-stop-me-warning,.line-ads
 eva.vn##[class^="banr-"],[id*="banner"],[id^="ADS_"],[id^="ads"],[id^="spantextads_"]
 
 fandom.com##.ad-slot-placeholder,.top-ads-container
+fedex.com##.fxg-smartbanner
 forum.autodaily.vn##[class^="banner-"]
 fptplay.vn##.flex-row,a[aria-label="purchase packages"]
 
@@ -229,6 +233,8 @@ inas.org###match-child-1,#wap_bottombanner_content,.ads-header-mobile,.btn-8xbet
 irace.vn##.g-6,.sticky-notice-bar
 itc.ua##.text-center,.widget_telegram
 
+jtexpress.vn##.fixed-on-top
+
 kalvo.com##.adsbygoogle,.barsticky,.klv_x,[class^="klvad"]
 kenh14.vn###admfulltop,#ban-top-site,.adv,[id^="adm-slot"],[id^="adm_zone"],[id^="admbackground"],[id^="zone"]
 kenh24h.com.vn##body>div
@@ -281,6 +287,7 @@ mangatooncom.vn##.detail-download-bg,.index-download-bg
 manilastandard.net##[id*="div-gpt-ad-"],[id^="div-gpt-ad-"]
 marketplace.tripmap.vn##.ad-floating-icon,.my-6
 masothue.com##.mst_sp-bell-wrapper
+maydocsachviet.vn##.main-banner-img
 maytinhdaiviet.com###dv-mobile-bottom-ad,.adsbygoogle
 me-qr.com##.modal-apps
 mediaonlinevn.com##[class^="banner"],[class^="widget-"]
@@ -291,6 +298,7 @@ minhancomputer.com###js-buildpc-banner
 missav.fans###ts-main-banner-wrapper,[class^="space-y-"]
 missav.run##.banner-box
 missav123.com##[class^="root--"],[class^="space-y-"],[id^="ts_ad_"]
+misseschloe.co.za###vl-header-adx,.notify_block,[class^="banner-"],[class^="catfish-"]
 mixvale.com.br##.adsbygoogle,div[style="width: 100%; min-height: 280px; display: flex; justify-content: center; align-items: center; margin: 20px 0; background-color: transparent;"]
 mobifone.vn##.main-banner
 mobilecity.vn##[id^="sudovn-btn-"]
@@ -302,9 +310,12 @@ msn.com##[class^="banner-"],[id^="views-"]
 mucnews.com##.e3lan
 
 namabank.com.vn##.mobile-popup
+narak.vn##.js-top-bar
 nbtv.vn##.top-news-right,[class*="banner_"],[class^="app-"],[id^="app_"]
 ncb-bank.vn##.img-popup,.left,.ovl
 netlife.vn##.is-custom-size
+nettruyen.sa.com###vl-header-adx,.notify_block,[class^="banner-"],[class^="catfish-"]
+nettruyenn.co##.notify_block
 nghean24h.vn##.block_mobile
 nghenhinvietnam.vn##.adsbygoogle
 nghiencuu.tapchikinhtetaichinh.vn##[id^="qc-"]
@@ -482,6 +493,7 @@ vietnammoi.vn###admfulltop,#ban-top-site,.adsbygoogle,[id^="adm_"]
 vietnamnet.vn###admbackground,#adzone39,#catfish,#mashead-bn,#mobile_adsarticlebodyinarticle,[id*="adzone"],[id^="adzone"],[id^="mashead-"],div[onclick="closemashead(39)"],span[style="color: #fff;text-align: center;display: inherit;font-size: 20px;line-height: 20px;"]
 vietnamobile.com.vn##.img,.laberurl
 vietnamplus.vn###sp-wrapper-hovering-format
+vietnampost.vn##[class^="img-banner-"]
 vietnamradio.org##.add-box-top,.adsbygoogle
 vietnamworks.com##.mb,.tg_redirecttimviec_2023
 vietstock.vn###admbackground,.ads-top-mobile
