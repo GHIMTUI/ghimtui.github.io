@@ -1,10 +1,10 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Describe: Chặn quảng cáo
-! Updated: 01 Apr 2026 21:14
-! Version: 1.0.18
-! Blocked: 493
-! Size: 27.42kb
+! Updated: 01 Apr 2026 21:20
+! Version: 1.0.19
+! Blocked: 499
+! Size: 27.58kb
 ! ==================
 
 1thegioi.vn##[class*="zone-"],[class^="c-banner-"],[class^="is-"]
@@ -14,6 +14,10 @@
 2sao.vn###adzone39,#catfish,.adsbygoolge,.vadslogo,[class^="vmc_"],[id^="adzone"],[id^="mashead-"],[id^="mobile_"],[id^="sp-wrapper-"]
 
 51degrees.com##.g-floating-banner,[class^="is-"]
+
+9to5google.com##[class^="st"]
+9to5mac.com##[class^="st"]
+9to5toys.com##[class^="st"]
 
 acb.com.vn##.download-app-mb
 accuweather.com###bottom,#middle,#top,.adhesion-header,.adsbygoogle,.header-placeholder
@@ -155,10 +159,12 @@ dongnai.gov.vn##.inner-home
 dongthap.edu.vn##.component-image
 dorabot.io###navbar-pwa-btn,.adsbygoogle
 download.com.vn###adrightspecial,#adsrightspecial,.adsbygoogle,.in-article
+dronedj.com##[class^="st"]
 drt.vn##.ads-block-item
 duckduckgo.com##.js-atb-banner,[class^="js-"],[class^="set-browser-"]
 dunno.ai##.box-ads
 
+electrek.co##[class^="st"]
 elle.vn##[class*="my-"],[id^="div-gpt-ad-"]
 emc-directory.com###mobilebottomad
 ephoto360.com##.ad-container,.i-said-no-thing-can-stop-me-warning,.line-ads
@@ -371,6 +377,7 @@ soha.vn##[class^="div-"],[id^="adm-"],[id^="admfull"],[id^="ban-"],[id^="zone-"]
 sohuutritue.net.vn##.e,[id^="ads_"],[id^="zone-"]
 sonla.gov.vn##.uimultifunction_default
 sonlatv.vn##.col-md-12,[class*="ads"],[id*="ads"]
+spaceexplored.com##[class^="st"]
 speedtest.net###modal-overlay,#zdcfloatingbtn,.app-promo,.mobile-pretest
 speedtest.vn###advarea,.jconfirm,.jconfirm-bg,.jconfirm-cell,.jconfirm-scrollpane
 sstruyen.com.vn###flyer
