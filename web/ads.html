@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-    <title>Adblock Editor - Dark Green Edition</title>
+    <title>Uploading Adblock</title>
     <style>
         :root {
             --bg-dark: #000000;
@@ -54,7 +54,7 @@
 
         .info-path {
             font-weight: 900;
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             letter-spacing: 2px;
             color: var(--accent-green);
             text-transform: uppercase;
@@ -105,7 +105,7 @@
         }
 
         .breathing-text {
-            animation: text-pulse 1.6s ease-in-out infinite;
+            animation: text-pulse 1.5s ease-in-out infinite;
         }
 
         @keyframes text-pulse {
@@ -228,7 +228,7 @@
                 break;
 
             case 'error_save':
-                _dom_sv.innerText = "LỖI";
+                _dom_sv.innerText = "LỖI LƯU LẠI";
                 _dom_sv.disabled = true;
                 _dom_sv.classList.add('visible', 'pill-gray-style');
                 _dom_sv.style.color = "#ef4444";
@@ -239,7 +239,7 @@
 
     function _remove_subdomain_prefixes(domain) {
         if (!domain) return "";
-        const prefixes = ["www.","www3.", "docs.", "m3.", "m.", "shop.", "api.", "list.", "news.", "mobile.", "v.", "v2.", "app.","en.","us.","vi.", "vn."];
+        const prefixes = ["www.","www3.", "docs.", "m3.", "m.", "shop.", "api.", "list.", "news.", "mobile.", "e.", "v.", "v2.", "app.","en.","us.","vi.", "vn."];
         let cleaned = domain.toLowerCase();
         for (let p of prefixes) { if (cleaned.startsWith(p)) return domain.substring(p.length); }
         return domain;
@@ -311,7 +311,14 @@
             lastGroupKey = currentGroupKey;
         });
 
-        const headerPrefix = ["[Adblock Plus 2.0]", "! Title: STOP ADS", "! Describe: Chặn quảng cáo", `! Updated: ${time_str}`, `! Version: ${version}`, `! Blocked: ${realRuleCount}`];
+        const headerPrefix = [
+"[Adblock Plus 2.0]",
+"! Title: STOP ADS", 
+"! Describe: Chặn quảng cáo", 
+`! Updated: ${time_str}`, 
+`! Version: ${version}`,
+ `! Blocked: ${realRuleCount}`
+];
         const contentForSize = [...headerPrefix, "! Size: 00.00kb", "! ==================", "", ...tempBodyOutput].join('\n');
         const kbSize = (new TextEncoder().encode(contentForSize).length / 1024).toFixed(2);
         
