@@ -1,10 +1,10 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Describe: Chặn quảng cáo
-! Updated: 02 Apr 2026 14:26
-! Version: 1.0.57
-! Blocked: 512
-! Size: 28.10KB
+! Updated: 02 Apr 2026 15:33
+! Version: 1.0.58
+! Blocked: 513
+! Size: 28.29KB
 ! ==================
 
 1thegioi.vn##[class*="zone-"],[class^="c-banner-"],[class^="is-"]
@@ -355,7 +355,7 @@ phimmoiz.ac##.bg-orange-500,.no-ads-under,.w-fit,.z-[9999]
 phimsex6s.com###bottombannercontainer,#popbannerads,#topbannercontainer
 phunuonline.com.vn##.adsbygoogle,[id^="banner_"]
 phutho.edu.vn##.w-download
-plo.vn##[id^="adsmobile"],[id^="bn-zone"],[id^="mobile"],[id^="zone"],div[style="margin: 10px 0px;"]
+plo.vn###catfish,.adsbyvli,[id^="adsmobile"],[id^="bn-zone"],[id^="container_"],[id^="mobile"],[id^="pw_"],[id^="zone"],div[style="margin: 10px 0px;"]
 
 qdnd.vn##[class^="-banner"],[class^="banner"],[class^="banner-"],[class^="cate-"]
 qpvn.vn###top-bar
@@ -386,7 +386,7 @@ sggp.org.vn###admFullTop,#ban-site-top,#sdamobile_sdatop,#top-logo,.ls-is-cached
 sinhthainongnghiep.net.vn##[class^="qc_"]
 sogddtsonla.edu.vn###frameboundb59c0a1e91bcfc,.image-list-album,.widget
 sogiaoduc.caobang.gov.vn##.advertcontent
-soha.vn##[class^="div-"],[id^="adm-"],[id^="admfull"],[id^="ban-"],[id^="zone-"]
+soha.vn##[class^="div-"],[id^="adm-"],[id^="adm_"],[id^="admbackground"],[id^="admfull"],[id^="ban-"],[id^="zone-"]
 sohuutritue.net.vn##.e,[id^="ads_"],[id^="zone-"]
 sonla.gov.vn##.uimultifunction_default
 sonlatv.vn##.col-md-12,[class*="ads"],[id*="ads"]
@@ -499,6 +499,7 @@ vietnampost.vn##[class^="img-banner-"]
 vietnamradio.org##.add-box-top,.adsbygoogle
 vietnamworks.com##.mb,.tg_redirecttimviec_2023
 vietstock.vn###admbackground,.ads-top-mobile
+viettelfamily.com###md-video,.img-modal,.modal-backdrop,.modal-body,.modal-content,.modal-dialog-centered
 viettelstore.vn###overlay2,#pop-sieusale,.icon-neo,.icon-zalo,[id^="img-"],[id^="pop"],[id^="pop-"],[id^=overlay"]
 vietteltelecom.vn##.sc-jgpytc,.slick-current>div,.slick-track,[class^="banner-"]
 viettimes.vn###sp-wrapper-hovering-format
