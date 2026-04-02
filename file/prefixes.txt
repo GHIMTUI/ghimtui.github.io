@@ -1,4 +1,4 @@
-api. app. aws.fr.
+api. app. aws.ru.
 docs.
 e. en.
 hd.
