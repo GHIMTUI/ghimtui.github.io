@@ -1,8 +1,8 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Describe: Chặn quảng cáo
-! Updated: 02 Apr 2026 22:56
-! Version: 1.0.71
+! Updated: 03 Apr 2026 00:32
+! Version: 1.0.72
 ! Blocked: 513
 ! Size: 28.30KB
 ! ==================
@@ -117,6 +117,7 @@ cimbbank.com.vn##.btn
 coccoc.com##.top-14,.uselogin-jctvg,[class^="adsitem-"],[class^="default-"],[class^="top-"]
 cokhivietnam.vn##.banner_quangcao,.col-6
 collinsdictionary.com##[id*="ad_"]
+com##[class^="smartbanner"]
 congluan.vn##.c-banner-item,[class^="ads_"],[id^="zone-"]
 congly.vn##[class^="aanetwork-"],[class^="c-banner-"]
 congnghevadoisong.vn##.col-md-8>p,[class^="ads_"]
@@ -378,7 +379,6 @@ sacombank.com.vn##.topbanner
 samcafe.vn##.egg-container
 samsungmagazine.eu##.headerbanner-wrapper
 saostar.vn##[class^="txt-"],[id^="div-"],[id^="mid-"],[id^="mobi-"],[id^="pvoucher-"],[id^="sp-"]
-sc.com##[class^="smartbanner"]
 scb.com.vn##[class^="slider-"]
 search.brave.com##[class^="download-"],[class^="premium-"]
 sexdep.blog###bottombannercontainer,#popbannerads,#topbannercontainer,#underplayeradscontainer
