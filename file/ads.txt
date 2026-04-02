@@ -2,7 +2,7 @@
 ! Title: STOP ADS
 ! Describe: Chặn quảng cáo
 ! Updated: 02 Apr 2026 13:44
-! Version: 1.0.40
+! Version: 1.0.41
 ! Blocked: 510
 ! Size: 28.05KB
 ! ==================
