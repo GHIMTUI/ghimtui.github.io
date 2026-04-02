@@ -1,6 +1,6 @@
 api. app. aws.
 de. docs.
-e. en. eu.
+e. en. es. eu.
 fr.
 hd.
 ja.
