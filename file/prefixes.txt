@@ -1,1 +1,13 @@
-api. app. aws. docs. e. en. eu. fr. hd. ja. list. m. m3. mobile. ru. shop. uk. us. v. v2. v3. v4. vi. vn. wap. www. www3.
+api. app. aws.
+docs.
+e. en. eu.
+fr.
+hd.
+ja.
+list.
+m. m3. mobile.
+ru.
+shop.
+uk. us. uz.
+v. v2. v3. v4. vi. vn.
+wap. www. www3.
