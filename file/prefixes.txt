@@ -7,7 +7,7 @@ hd.
 it.
 ja.
 list.
-m. m3. mobile.
+m. m3. mg. mobile.
 nl.
 pl. pt.
 ru.
