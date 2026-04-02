@@ -1,10 +1,10 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Describe: Chặn quảng cáo
-! Updated: 02 Apr 2026 14:18
-! Version: 1.0.55
-! Blocked: 510
-! Size: 28.05KB
+! Updated: 02 Apr 2026 14:26
+! Version: 1.0.56
+! Blocked: 512
+! Size: 28.11KB
 ! ==================
 
 1thegioi.vn##[class*="zone-"],[class^="c-banner-"],[class^="is-"]
@@ -149,6 +149,7 @@ diendandoanhnghiep.vn##[class^="c-banner-"]
 dienmaycholon.com##.banner_mb
 dienmayxanh.com##.popup-banner
 dienthoaihay.vn##.pos1,.slideshow_countdown
+digione.vn##.container>a,.mobile
 digiphone.vn##.large--one-whole,.large--two-thirds
 digit.in###v-digit-in-0,.adsbygoogle,.mediad_before_content,[id^="_vdo_ads_"],[id^="outbrain_widget_"],[id^="wordp-"]
 doanhnghiephoinhap.vn##.box-qc,.cat-title
@@ -235,6 +236,7 @@ itc.ua##.text-center,.widget_telegram
 
 jtexpress.vn##.fixed-on-top
 
+k.giatreo.vn##.fullwidth
 kalvo.com##.adsbygoogle,.barsticky,.klv_x,[class^="klvad"]
 kenh14.vn###admfulltop,#ban-top-site,.adv,[id^="adm-slot"],[id^="adm_zone"],[id^="admbackground"],[id^="zone"]
 kenh24h.com.vn##body>div
