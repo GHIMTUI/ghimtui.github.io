@@ -2,7 +2,7 @@ api. app. ar. aws.
 ceb.
 de. docs.
 e. en. es. eu.
-fr.
+fa. fr.
 hd.
 it.
 ja.
