@@ -1,13 +1,16 @@
-af. api. app. ar. arz. ast. aws.
-ceb.
-de. docs.
-e. en. es. eu.
+af. api. app. ar. arz. ast. aws. az.
+be. bg. bn.
+ca. ceb. cs. cy.
+da. de. docs.
+e. el. en. eo. es. et. eu.
 fa. fr.
-hd.
-it.
+gl.
+hd. he. hr. hu. hy.
+id. it.
 ja.
-list.
-m. m3. mg. mobile.
+ka. ko.
+la. list. lld. lt. lv.
+m. m3. mg. mk. mobile.
 nl.
 pl. pt.
 ru.
@@ -15,4 +18,4 @@ shop. sq. sv.
 uk. us.
 v. v2. v3. v4. vi. vn.
 wap. war. www. www3.
-zh.
+zh-min-nan. zh.
