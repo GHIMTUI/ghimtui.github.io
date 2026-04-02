@@ -12,3 +12,4 @@ shop.
 uk. us.
 v. v2. v3. v4. vi. vn.
 wap. www. www3.
+zh.
