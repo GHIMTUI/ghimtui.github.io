@@ -1,10 +1,10 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Describe: Chặn quảng cáo
-! Updated: 02 Apr 2026 22:51
-! Version: 1.0.69
-! Blocked: 512
-! Size: 28.29KB
+! Updated: 02 Apr 2026 22:53
+! Version: 1.0.70
+! Blocked: 513
+! Size: 28.31KB
 ! ==================
 
 1thegioi.vn##[class*="zone-"],[class^="c-banner-"],[class^="is-"]
@@ -339,6 +339,7 @@ nongnghiepmoitruong.vn##[class^="ads-"],[class^="adv"],[class^="exp_qc_"],[id^="
 nperf.com##.modal-content
 
 ofnews.vn##.detail-social,.qc-slider
+on.vtvcab.vn##.app-text
 online-stopwatch.com##[class^="publift-"]
 onplus.com.vn##.bg-dark-500,.object-contain,.rounded-3xl
 otosaigon.com###side-ads-mid-3,[class^="ads-"]
