@@ -2,9 +2,9 @@
 ! Title: STOP ADS
 ! Describe: Chặn quảng cáo
 ! Updated: 03 Apr 2026 01:05
-! Version: 1.0.81
-! Blocked: 514
-! Size: 28.31KB
+! Version: 1.0.82
+! Blocked: 513
+! Size: 28.30KB
 ! ==================
 
 1thegioi.vn##[class*="zone-"],[class^="c-banner-"],[class^="is-"]
@@ -507,7 +507,6 @@ vikkibank.vn##[id*="banner"]
 vinhlong.edu.vn##.widget
 vip.keeng.vn##.app_nhac_keeng
 vjst.vn##.c-banner-item,[id^="zone-"]
-vn##.top-banner
 vn-z.vn##.u-bottomfixer
 vnbusiness.vn##[class*="-qc"],[class*="ad-"]
 vndoc.com###adpageexpanding,#adundercontent,.adblock,.adlinks,.adsbygoogle,.sidebar,.sticky
