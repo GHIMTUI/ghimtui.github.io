@@ -1,10 +1,10 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Describe: Chặn quảng cáo
-! Updated: 02 Apr 2026 15:33
-! Version: 1.0.58
-! Blocked: 513
-! Size: 28.29KB
+! Updated: 02 Apr 2026 15:38
+! Version: 1.0.59
+! Blocked: 512
+! Size: 28.28KB
 ! ==================
 
 1thegioi.vn##[class*="zone-"],[class^="c-banner-"],[class^="is-"]
@@ -213,7 +213,6 @@ hanoimoi.vn##[class^="ads_"],[class^="c-banner-"],[class^="is-"],[id^="zone-"]
 hanoionline.vn##.banner
 happyvietnam.vnanet.vn##.background-image
 hatinh.edu.vn##.image-list-album
-hd.xemtv.net###med_rec_banner2,.panel-primary,.quangcaos,div[data-widget-id="1771082"],div[data-widget-id="1886588"],img[src="/banner/f168-sidebar.gif"]
 hdbank.com.vn##.mobile-popup
 helio.vn##[class*="banner"]
 highspeedinternet.com###mobile-nav,.disclaimer-container,.smartbanner,.wpb_single_image
@@ -538,7 +537,7 @@ xemgame.com##[id^="bannerm"]
 xemtivi.top###sp-wrapper-hovering-format
 xemtivi4k.com##[id^="adstop"],a[href^="https://www.msbgih.com/sportsbook"]
 xemtivitop.com###HTML8,#facebook-comment,#html8
-xemtv.net##.adsbygoogle
+xemtv.net###med_rec_banner2,.adsbygoogle,.panel-primary,.quangcaos,div[data-widget-id="1771082"],div[data-widget-id="1886588"],img[src="/banner/f168-sidebar.gif"]
 xemtv.us###med_rec_banner2,.close-ad-btn,.float-ck,div[data-widget-id="1433589"]
 xemtvonline.com###bottom650,.close-ad-btn
 xiaomitoday.it###gmp-bottommobile,#gmp-middlemobile,#gmp-topmobile,#xiaom-1572609294,.adsbygoogle,[id*="custom_html-"],[id^="xiaom-"],[id^=cegg_price_movers-"]
