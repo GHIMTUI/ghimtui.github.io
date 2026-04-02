@@ -7,7 +7,7 @@ it.
 ja.
 list.
 m. m3. mobile.
-pt.
+pl. pt.
 ru.
 shop.
 uk. us.
