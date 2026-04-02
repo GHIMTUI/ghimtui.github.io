@@ -1,10 +1,10 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Describe: Chặn quảng cáo
-! Updated: 03 Apr 2026 01:12
-! Version: 1.0.83
+! Updated: 03 Apr 2026 01:13
+! Version: 1.0.84
 ! Blocked: 514
-! Size: 28.32KB
+! Size: 28.31KB
 ! ==================
 
 1thegioi.vn##[class*="zone-"],[class^="c-banner-"],[class^="is-"]
@@ -295,7 +295,6 @@ me-qr.com##.modal-apps
 mediaonlinevn.com##[class^="banner"],[class^="widget-"]
 mekongasean.vn##.header-content,[class*="banner"]
 mensfolio.vn##.header-banner
-meta.vn##.top-banner
 migovi.com##.banner-promotions-wrapper
 minhancomputer.com###js-buildpc-banner
 missav.fans###ts-main-banner-wrapper,[class^="space-y-"]
@@ -508,6 +507,7 @@ vikkibank.vn##[id*="banner"]
 vinhlong.edu.vn##.widget
 vip.keeng.vn##.app_nhac_keeng
 vjst.vn##.c-banner-item,[id^="zone-"]
+vn##.top-banner
 vn-z.vn##.u-bottomfixer
 vnbusiness.vn##[class*="-qc"],[class*="ad-"]
 vndoc.com###adpageexpanding,#adundercontent,.adblock,.adlinks,.adsbygoogle,.sidebar,.sticky
