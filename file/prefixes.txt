@@ -1,21 +1,28 @@
-af. api. app. ar. arz. ast. aws. az.
-be. bg. bn.
-ca. ceb. cs. cy.
-da. de. docs.
-e. el. en. eo. es. et. eu.
-fa. fr.
-gl.
-hd. he. hr. hu. hy.
-id. it.
-ja.
-ka. ko.
-la. list. lld. lt. lv.
-m. m3. mg. mk. mobile.
-nl.
-pl. pt.
-ru.
-shop. sq. sv.
-uk. us.
-v. v2. v3. v4. vi. vn.
-wap. war. www. www3.
-zh-min-nan. zh.
+ab. ace. af. als. am. an. ang. anp. api. app. ar. arc. ary. arz. as. ast. atj. av. avk. aws. ay. az. azb.
+ba. ban. bar. bat-smg. bbc. bcl. be-tarask. be. bew. bg. bh. bi. bjn. bn. bo. bpy. br. bs. bug. bxr.
+ca. cbk-zam. cdo. ce. ceb. ckb. co. crh. cs. csb. cv. cy.
+da. dag. de. dga. diq. docs. dsb. dtp. dv.
+e. ee. el. eml. en. eo. es. et. eu. ext.
+fa. ff. fi. fo. fon. fr. frp. frr. fur. fy.
+ga. gag. gan. gcr. gd. gl. glk. gn. gom. gor. got. gpe. gu. gur. guw. gv.
+ha. hak. haw. hd. he. hif. hr. hsb. ht. hu. hy. hyw.
+ia. id. ie. ig. ilo. inh. io. ipa. is. it.
+ja. jbo. jv.
+ka. kaa. kbd. kbp. kg. kge. ki. kk. km. kn. knc. ko. koi. ks. ku. kus. kv. kw. ky.
+la. lad. lb. lbe. lez. lfn. li. lij. list. lld. lmo. ln. lo. lt. ltg. lv.
+m. m3. mai. map-bms. mg. mhr. min. mk. ml. mn. mni. mobile.
+‌mr.
+mrj. ms. my. myv. mzn.
+nap. nds. ne. new. nia. nl. nn. no. nv. ny.
+oc. olo. or. os.
+pa. pam. pdc. pl. pms. pnb. ps. pt.
+qu.
+ro. roa-rup. ru. rue. rw.
+sa. sah. sat. scn. sco. sd. se. sh. shi. shn. shop. si. simple. sk. skr. sl. smn. sn. so. sq. sr. su. sv. sw. szl.
+ta. te. tg. th. tl. tly. tr. tt. tum.
+uk. ur. us. uz.
+v. v2. v3. v4. vec. vi. vn. vo.
+wa. wap. war. wuu. www. www3.
+xal. xmf.
+yi. yo.
+za. zgh. zh-classical. zh-min-nan. zh-yue. zh. zu.
