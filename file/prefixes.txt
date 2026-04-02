@@ -3,6 +3,7 @@ de. docs.
 e. en. es. eu.
 fr.
 hd.
+it.
 ja.
 list.
 m. m3. mobile.
