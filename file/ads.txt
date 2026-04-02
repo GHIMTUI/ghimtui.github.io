@@ -2,7 +2,7 @@
 ! Title: STOP ADS
 ! Describe: Chặn quảng cáo
 ! Updated: 02 Apr 2026 22:50
-! Version: 1.0.66
+! Version: 1.0.67
 ! Blocked: 512
 ! Size: 28.30KB
 ! ==================
@@ -483,7 +483,7 @@ vfv.org.vn##.content_colorbg,.content_graybg
 via.gov.vn##.bnrcenter
 vib.com.vn##.new-download-app
 viblo.asia##.el-dialog__wrapper,.fixed-bottom-bar,.v-modal
-vieclam24h.vn##[id^="headlessui-dialog-"]on.vtvcab.vn##.app-text
+vieclam24h.vn##[id^="headlessui-dialog-"] on.vtvcab.vn##.app-text
 vieclamtot.com###app_download,[class^="aw__"],[class^="showSafe"]
 vietcetera.com##[class^="styles_downloadappbtnwrapper__"],[class^="styles_topbanner__"]
 vietgame.asia##.adsbygoogle,[class^="block-"]
