@@ -2,9 +2,9 @@
 ! Title: STOP ADS
 ! Describe: Chặn quảng cáo
 ! Updated: 02 Apr 2026 14:26
-! Version: 1.0.56
+! Version: 1.0.57
 ! Blocked: 512
-! Size: 28.11KB
+! Size: 28.10KB
 ! ==================
 
 1thegioi.vn##[class*="zone-"],[class^="c-banner-"],[class^="is-"]
@@ -198,6 +198,7 @@ gialai.gov.vn###module82,#module90,.full-width,.widget-space
 giaoducthudo.giaoducthoidai.vn###sp-wrapper-hovering-format,.c-banner,.h-show-mobile
 giaogasnhanh.com##.elementor-jet-slider
 giaothong.tapchixaydung.vn##[class*="qc"]
+giatreo.vn##.fullwidth
 giaxe.2banh.vn##[class*="ct_"],[id*="ct_"]
 giaxeoto24h.vn##[id^="slider-"]
 gitiho.com##[class^="banner-"]
@@ -236,7 +237,6 @@ itc.ua##.text-center,.widget_telegram
 
 jtexpress.vn##.fixed-on-top
 
-k.giatreo.vn##.fullwidth
 kalvo.com##.adsbygoogle,.barsticky,.klv_x,[class^="klvad"]
 kenh14.vn###admfulltop,#ban-top-site,.adv,[id^="adm-slot"],[id^="adm_zone"],[id^="admbackground"],[id^="zone"]
 kenh24h.com.vn##body>div
