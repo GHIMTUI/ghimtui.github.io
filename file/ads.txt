@@ -1,10 +1,10 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Describe: Chặn quảng cáo
-! Updated: 03 Apr 2026 07:59
-! Version: 1.0.89
-! Blocked: 513
-! Size: 28.30KB
+! Updated: 03 Apr 2026 13:07
+! Version: 1.0.90
+! Blocked: 516
+! Size: 28.53KB
 ! ==================
 
 1thegioi.vn##[class*="zone-"],[class^="c-banner-"],[class^="is-"]
@@ -470,6 +470,9 @@ ttbc-hcm.gov.vn##[class^="abs-"],[class^="c-banner-"],[class^="zone-"]
 tuoitre.vn###LeaderBoardTop,#admbackground,#leaderboardtop,#pvoucher-live-container,.boxdsk_swiper,.clearfix,[id^="sp_format-hovering"],[id^="zone"]
 tusach.vn###sp-wrapper-hovering-format
 tuyenquang.gov.vn##.h-auto
+tv360.bitel.com.pe##.text-ellipsis,a[href="https://tv360.page.link/app-tv360-bitel-install"]
+tv360.metfone.com.kh##.text-ellipsis,a[href^="https://tv360.page.link/app-metfone"]
+tv360.mytel.com.mm##a[href="https://account.mytel.com.mm/tv360"]
 tv360.vn###ads-player-base-wrapper,.css-1jzjo52,.css-1u6gwec,.css-1xdipk,.css-csxyfn,.text-ellipsis,.toastify
 tvbox.one##.adsbygoogle,.entry-img-300,.homeadv,.homeadv>span
 
