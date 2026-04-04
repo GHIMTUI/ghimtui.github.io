@@ -4,8 +4,6 @@
 ! Updated: 04 Apr 2026 23:52
 ! ==================
 
-.as
-
 1thegioi.vn##[class*="zone-"],[class^="c-banner-"],[class^="is-"]
 
 24h.com.vn###catfish,#header-24h-login-cont,.adsbygoogle,.vadslogo,[class^="banner-"],[class^="inpage_"],[class^="vmc_"],[id^="ADS_"],[id^="ads_"],[id^="adzone"],[id^="div-gpt-ad-"],[id^="div_inpage_"],[id^="mashead-"],[id^="mobile_"],[id^="share-"],[id^="sis_inpage"],[id^="sp-wrapper-"],[id^="zone-"]
