@@ -1,17 +1,29 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Describe: Chặn quảng cáo
-! Updated: 04 Apr 2026 16:17
-! Version: 1.0.128
-! Blocked: 523
-! Size: 27.86KB
+! Updated: 04 Apr 2026 16:21
+! Version: 1.0.129
+! Blocked: 536
+! Size: 0.00KB
 ! ==================
 
+.ad
+
+0px;"],div[style="text-align: center;"]
+
+10px;"],div[data-widget-id="1433589"],div[data-widget-id="1771082"],div[data-widget-id="1886588"],img[src="/banner/f168-sidebar.gif"]
 1thegioi.vn##[class*="zone-"],[class^="c-banner-"],[class^="is-"]
 
 24h.com.vn###catfish,#header-24h-login-cont,.adsbygoogle,.adsbygoolge,.vadslogo,[class^="banner-"],[class^="inpage_"],[class^="vmc_"],[id^="ADS_"],[id^="ads_"],[id^="adzone"],[id^="div-gpt-ad-"],[id^="div_inpage_"],[id^="mashead-"],[id^="mobile_"],[id^="share-"],[id^="sis_inpage"],[id^="sp-wrapper-"],[id^="zone-"]
+250px"],div[style="display: block;     justify-content:
+280px"],div[style*="min-height:
+280px;"],div[onclick="closemashead(39)"],span[style="color: #fff;text-align: center;display: inherit;font-size: 20px;line-height: 20px;"]
 2game.vn###bannermtop
+2px;"],p[style="text-align:center"]
 2sao.vn###adzone39
+
+312px"],div[style="margin-bottom:
+35px;"],iframe[style="width:320px;
 
 51degrees.com##.g-floating-banner,[class^="is-"]
 
@@ -108,6 +120,7 @@ cantho.edu.vn##.image-list-album
 caobangtv.vn##[class*="adv"]
 cellphones.com.vn###subscriberemailoverlay
 cem.gov.vn##.banner
+center;"],div[style="margin-bottom:
 chatgpt.com##.block
 chatluongvacuocsong.vn##.e
 chinhphu.vn##.advertcontent
@@ -216,6 +229,7 @@ hanoionline.vn##.banner
 happyvietnam.vnanet.vn##.background-image
 hatinh.edu.vn##.image-list-album
 hdbank.com.vn##.mobile-popup
+height:500px;"],td[colspan="2"],td[id="m005"]>div
 helio.vn##[class*="banner"]
 highspeedinternet.com###mobile-nav
 hoanghaimobile.jp###hhappfab
@@ -259,7 +273,7 @@ kinhtevadubao.vn##.banner
 kirikuylabruja.com##.banner-chat
 kqxs.vn##.adsbygoogle
 
-laichau.edu.vn###ad_native_single_popular,#frameboundb5c9c2db5333a9,#frameboundb60e7fe5366441,#j_banner,#main-footer-fix-bottom,#module50,#sp-wrapper-hovering-format,.ads-banner,.ads-label,.adsbygoogle,.adv-footer-fixed,.advbox,.banner,.bg-countdown,.col-sm-4,.full-width,.headerbanner-wrapper,.homepage-top-ads,.i-amphtml-sticky-ad-layout,.m-top-10,.navbar-right>ul,.nl-infooter-mb-div,.notification-header__msg,.panel-heading,.slogan_img,.sp-infooter-mb-google-ads,.widget,[class*="banner"a],[class^="advbox"],[class^="box_"],[class^="dict-"],[class^="is-custom-"],[class^="mt-"],[class^="top-"],[class^="top_"],[id^="advertise_"],[id^="m"],[id^="sp-"],[id^="top_"],div[style*="min-height: 280px"],div[style*="min-height: 312px"],div[style="margin-bottom: 2px;"],p[style="text-align:center"]
+laichau.edu.vn###ad_native_single_popular,#frameboundb5c9c2db5333a9,#frameboundb60e7fe5366441,#j_banner,#main-footer-fix-bottom,#module50,#sp-wrapper-hovering-format,.ads-banner,.ads-label,.adsbygoogle,.adv-footer-fixed,.advbox,.banner,.bg-countdown,.col-sm-4,.full-width,.headerbanner-wrapper,.homepage-top-ads,.i-amphtml-sticky-ad-layout,.m-top-10,.navbar-right>ul,.nl-infooter-mb-div,.notification-header__msg,.panel-heading,.slogan_img,.sp-infooter-mb-google-ads,.widget,[class*="banner"a],[class^="advbox"],[class^="box_"],[class^="dict-"],[class^="is-custom-"],[class^="mt-"],[class^="top-"],[class^="top_"],[id^="advertise_"],[id^="m"],[id^="sp-"],[id^="top_"],div[style*="min-height:
 lamdong.edu.vn##.sidebar-link
 lamdong.gov.vn##.imagewithlink_f315b473
 langngheviet.com.vn##.hna-qc-full-center
@@ -341,6 +355,7 @@ nld.com.vn###top-logo
 nnmt.net.vn##.ads-top-mobile
 nokiasaithanh.com###voucher-box
 nongnghiepmoitruong.vn##[class^="ads-"]
+noopener"],div[as-id],div[onclick="closemashead(39)"],div[style*="min-height:
 nperf.com##.modal-content
 
 ofnews.vn##.detail-social,.object-contain,.qc-slider,.rounded-3xl,[class^="ads-"]
@@ -350,7 +365,7 @@ onplus.com.vn##.bg-dark-500
 otosaigon.com###side-ads-mid-3
 oxfordlearnersdictionaries.com##[id*="ad_"]
 
-parhazart.org###popbannerads,#topbannercontainer,.adsbyvli,.catfish-banner-global,.no-ads-under,.w-fit,.z-[9999],[id*="div-gpt-ad-"],[id^="ads-"],[id^="adsmobile"],[id^="banner_"],[id^="bn-zone"],[id^="container_"],[id^="mobile"],[id^="pw_"],[id^="zone"],div[style="margin: 10px 0px;"],div[style="text-align: center;"]
+parhazart.org###popbannerads,#topbannercontainer,.adsbyvli,.catfish-banner-global,.no-ads-under,.w-fit,.z-[9999],[id*="div-gpt-ad-"],[id^="ads-"],[id^="adsmobile"],[id^="banner_"],[id^="bn-zone"],[id^="container_"],[id^="mobile"],[id^="pw_"],[id^="zone"],div[style="margin: 10px
 perplexity.ai##.animate-in
 petrotimes.vn##.petrotimes-qc
 phaply.net.vn##[class^="qc_"]
@@ -405,7 +420,7 @@ suckhoedoisong.vn###ub-anchor-adcontainer
 suckhoetreem.vn##[class^="dnnmodule-"]
 sunsky-online.com###download-app-dialog
 
-tapchicand.gov.vn###admbackground,#leaderboardtop,#oa-360-1774314000422_iru3nrvc7,#pvoucher-live-container,#sdamobile_sdatop,.adsbygoogle,.adsbygoolge,.banner-full,.border,.boxdsk_swiper,.c-bottom-box,.clearfix,.col-right,.css-1jzjo52,.css-1u6gwec,.css-1xdipk,.css-csxyfn,.custombanner,.entry-img-300,.fst,.full-width,.hd-cate-wrap,.header_ads,.homeadv,.homeadv>span,.img-fluid,.lazyloaded,.links-item,.ls-is-cached,.main-content>section,.news-bar,.slick-banner-4,.slick-dotted,.tbnh-qc-full,.text-ellipsis,.toastify,.top-banner,.vadslogo,.w-download,.widget-add,.widget-space,.xs-h350,.zone-top,[class*="ads"],[class*="col-md-"],[class*="row-install-app"],[class*="wp-image-"],[class*="zonegourp"],[class^="ad-"],[class^="ads_"],[class^="c-banner-"],[class^="c-bottom-"],[class^="cnx-"],[class^="fs-"],[class^="is-"],[class^="jquery-"],[class^="sda-"],[class^="slick-"],[class^="sp-"],[class^="swapper-"],[class^="text-"],[class^="trv-"],[class^="vmc_"],[class^="zone-"],[id*="adzone"],[id*="vmcad_inview_"],[id^="admfull"] thethao.sggp.org.vn,[id^="asc-"],[id^="banner-"],[id^="fs-"],[id^="google_ads_"],[id^="mashead-"],[id^="mobile_"],[id^="nl-"],[id^="placement-"],[id^="sdamobile_"],[id^="share-"],[id^="slot-"],[id^="sp"],[id^="sp-"],[id^="sp-wrapper-"],[id^="sp_format-hovering"],[id^="swapper-"],[id^="template_"],[id^="zone"],[id^="zone-"],a[href="https://tv360.page.link/app-tv360-bitel-install"],a[href^="https://tv360.page.link/app-metfone"],a[rel="nofollow noopener"],div[as-id],div[onclick="closemashead(39)"],div[style*="min-height: 250px"],div[style="display: block;     justify-content: center;"],div[style="margin-bottom: 35px;"],iframe[style="width:320px; height:500px;"],td[colspan="2"],td[id="m005"]>div
+tapchicand.gov.vn###admbackground,#leaderboardtop,#oa-360-1774314000422_iru3nrvc7,#pvoucher-live-container,#sdamobile_sdatop,.adsbygoogle,.adsbygoolge,.banner-full,.border,.boxdsk_swiper,.c-bottom-box,.clearfix,.col-right,.css-1jzjo52,.css-1u6gwec,.css-1xdipk,.css-csxyfn,.custombanner,.entry-img-300,.fst,.full-width,.hd-cate-wrap,.header_ads,.homeadv,.homeadv>span,.img-fluid,.lazyloaded,.links-item,.ls-is-cached,.main-content>section,.news-bar,.slick-banner-4,.slick-dotted,.tbnh-qc-full,.text-ellipsis,.toastify,.top-banner,.vadslogo,.w-download,.widget-add,.widget-space,.xs-h350,.zone-top,[class*="ads"],[class*="col-md-"],[class*="row-install-app"],[class*="wp-image-"],[class*="zonegourp"],[class^="ad-"],[class^="ads_"],[class^="c-banner-"],[class^="c-bottom-"],[class^="cnx-"],[class^="fs-"],[class^="is-"],[class^="jquery-"],[class^="sda-"],[class^="slick-"],[class^="sp-"],[class^="swapper-"],[class^="text-"],[class^="trv-"],[class^="vmc_"],[class^="zone-"],[id*="adzone"],[id*="vmcad_inview_"],[id^="admfull"]
 tapchicongsan.org.vn##.hidden-md
 tapchicongthuong.vn##.sidebar
 tapchigiaochuc.com.vn##.ads-mobile
@@ -436,6 +451,7 @@ thegioimavach.com##[class^="mfp-"]
 thelinhstore.com##.collection_banner
 thesaigontimes.vn###admbackground
 thethao.sggp.org.vn###ban-site-top
+thethao.sggp.org.vn,##[id^="asc-"],[id^="banner-"],[id^="fs-"],[id^="google_ads_"],[id^="mashead-"],[id^="mobile_"],[id^="nl-"],[id^="placement-"],[id^="sdamobile_"],[id^="share-"],[id^="slot-"],[id^="sp"],[id^="sp-"],[id^="sp-wrapper-"],[id^="sp_format-hovering"],[id^="swapper-"],[id^="template_"],[id^="zone"],[id^="zone-"],a[href="https://tv360.page.link/app-tv360-bitel-install"],a[href^="https://tv360.page.link/app-metfone"],a[rel="nofollow
 thethao247.vn##.as
 thethaovanhoa.vn##.adsbygoogle
 thhp.vn##.col-sm-3
@@ -485,7 +501,7 @@ unica.vn##.sticky,.text-center
 uniscore.com##.top-0
 utctime.net##[class^="margin"]
 
-vanhoanghethuat.vn###Mobile_AdsArticleBodyInArticle,#adundercontent,#adzone39,#ban-top-site,#catfish,#mashead-bn,#mobile_adsarticlebodyinarticle,#pop-sieusale,#sis_sticky,#sp-wrapper-hovering-format,.adblock,.adlinks,.ads,.ads-top-mobile,.adsbygoogle,.adsbypubpower,.bnmb,.content_graybg,.cover_header,.fixed-bottom-bar,.icon-neo,.icon-zalo,.img-modal,.inpage-ad,.laberurl,.mobile,.modal-backdrop,.modal-body,.modal-content,.modal-dialog-centered,.modal-popup,.pad-left-15,.sidebar,.skin-default,.slick-current>div,.slick-track,.sticky,.tg_redirecttimviec_2023,.top-ad,.v-modal,.vnbiz-topbanner,[class*="ad-"],[class*="ads"],[class*="banner-"],[class*="center-"],[class^="aanetwork-"],[class^="ads-"],[class^="avgt-"],[class^="aw__"],[class^="banner-"],[class^="banner_mobile_"],[class^="block-"],[class^="inner_ads"],[class^="inview-"],[class^="section_ads_"],[class^="showSafe"],[class^="styles_topbanner__"],[class^="sys-ads"],[class^="tet_ads"],[class^="txt_qc"],[id*="adzone"],[id^="adm_"],[id^="ads_"],[id^="adzone"],[id^="balloon"],[id^="banner_"],[id^="block-ads-"],[id^="img-"],[id^="mashead-"],[id^="pop"],[id^="pop-"],[id^="vnnic-banner-"],[id^="zone-"],[id^=overlay"],center[style="padding-top: 15px;height: 280px;"],div[onclick="closemashead(39)"],span[style="color: #fff;text-align: center;display: inherit;font-size: 20px;line-height: 20px;"]
+vanhoanghethuat.vn###Mobile_AdsArticleBodyInArticle,#adundercontent,#adzone39,#ban-top-site,#catfish,#mashead-bn,#mobile_adsarticlebodyinarticle,#pop-sieusale,#sis_sticky,#sp-wrapper-hovering-format,.adblock,.adlinks,.ads,.ads-top-mobile,.adsbygoogle,.adsbypubpower,.bnmb,.content_graybg,.cover_header,.fixed-bottom-bar,.icon-neo,.icon-zalo,.img-modal,.inpage-ad,.laberurl,.mobile,.modal-backdrop,.modal-body,.modal-content,.modal-dialog-centered,.modal-popup,.pad-left-15,.sidebar,.skin-default,.slick-current>div,.slick-track,.sticky,.tg_redirecttimviec_2023,.top-ad,.v-modal,.vnbiz-topbanner,[class*="ad-"],[class*="ads"],[class*="banner-"],[class*="center-"],[class^="aanetwork-"],[class^="ads-"],[class^="avgt-"],[class^="aw__"],[class^="banner-"],[class^="banner_mobile_"],[class^="block-"],[class^="inner_ads"],[class^="inview-"],[class^="section_ads_"],[class^="showSafe"],[class^="styles_topbanner__"],[class^="sys-ads"],[class^="tet_ads"],[class^="txt_qc"],[id*="adzone"],[id^="adm_"],[id^="ads_"],[id^="adzone"],[id^="balloon"],[id^="banner_"],[id^="block-ads-"],[id^="img-"],[id^="mashead-"],[id^="pop"],[id^="pop-"],[id^="vnnic-banner-"],[id^="zone-"],[id^=overlay"],center[style="padding-top: 15px;height:
 vansu.net##.block-inner
 vbsp.org.vn###right
 vdb.gov.vn##[class*="ads_"]
@@ -540,7 +556,7 @@ webthethao.vn##.ads-block
 wifiman.com##._container_mwjca_1
 wired.com##[class^="StickyHeroAdWrapper-"]
 
-xahoi.com.vn###facebook-comment,#gmp-middlemobile,#gmp-topmobile,#html8,#xiaom-1572609294,.adsbygoogle,.close-ad-btn,.float-ck,.panel-primary,.quangcaos,[class^="aw__"],[class^="showSafe"],[id*="custom_html-"],[id^="xiaom-"],[id^=cegg_price_movers-"],a[href^="https://www.msbgih.com/sportsbook"],center[style="margin: 10px 0 10px;"],div[data-widget-id="1433589"],div[data-widget-id="1771082"],div[data-widget-id="1886588"],img[src="/banner/f168-sidebar.gif"]
+xahoi.com.vn###facebook-comment,#gmp-middlemobile,#gmp-topmobile,#html8,#xiaom-1572609294,.adsbygoogle,.close-ad-btn,.float-ck,.panel-primary,.quangcaos,[class^="aw__"],[class^="showSafe"],[id*="custom_html-"],[id^="xiaom-"],[id^=cegg_price_movers-"],a[href^="https://www.msbgih.com/sportsbook"],center[style="margin: 10px 0
 xe.chotot.com###app_download
 xem.tvso1.com##[id^="m907725s"]
 xemgame.com##[id^="bannerm"]
