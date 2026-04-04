@@ -1,10 +1,10 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Describe: Chặn quảng cáo
-! Updated: 03 Apr 2026 13:07
-! Version: 1.0.90
-! Blocked: 516
-! Size: 28.53KB
+! Updated: 04 Apr 2026 09:02
+! Version: 1.0.91
+! Blocked: 523
+! Size: 28.89KB
 ! ==================
 
 1thegioi.vn##[class*="zone-"],[class^="c-banner-"],[class^="is-"]
@@ -27,6 +27,7 @@ agribank.com.vn###agbmodal,.modal-backdrop
 akishop.com.vn##.background-popup,.popup_banner
 amlich.net.vn##.p-1
 amlich.vn##.aanetwork-flyicon-box
+amnhactv.com###hoc-sang-tac-nhac-inline-box,.amnhactv-history-float-icon
 angiang.edu.vn##.image-list-album,.w-download,.widget
 angiangtv.vn##[class*="swiper"],[class*="wp-"],[id*="media_"]
 anhp.vn###ads_share_header1,.right-detail
@@ -220,6 +221,7 @@ highspeedinternet.com###mobile-nav,.disclaimer-container,.smartbanner,.wpb_singl
 hoanghaimobile.jp###hhappfab
 hoanghamobile.com###popup-modal,.jquery-modal,.top-category-ads,.top-heading
 hoanhap.vn##.section-1
+hopamviet.vn##.ad-mobile,.adsbygoogle
 hotgear.vn##.top-banner
 hsbc.com.vn###messaging-banner
 htvc.com.vn##.swal2-container
@@ -234,6 +236,7 @@ hungyentv.vn##[id^="ads_"],[id^="advertise_"]
 inas.org###match-child-1,#wap_bottombanner_content,.ads-header-mobile,.btn-8xbet
 irace.vn##.g-6,.sticky-notice-bar
 itc.ua##.text-center,.widget_telegram
+izone.edu.vn##[id^="popmake-"],[id^="pum-"]
 
 jtexpress.vn##.fixed-on-top
 
@@ -241,6 +244,7 @@ kalvo.com##.adsbygoogle,.barsticky,.klv_x,[class^="klvad"]
 kenh14.vn###admfulltop,#ban-top-site,.adv,[id^="adm-slot"],[id^="adm_zone"],[id^="admbackground"],[id^="zone"]
 kenh24h.com.vn##body>div
 khanhhoa.gov.vn###select-box
+khoahoc.vietjack.com###sp-wrapper-hovering-format,.box-adv,.label-adv,.label-adv>span
 kienlongbank.com##.list-items
 kienthuc.net.vn##.adsbygoogle
 kienthucchiase.com###sp-wrapper-hovering-format
@@ -380,6 +384,7 @@ samcafe.vn##.egg-container
 samsungmagazine.eu##.headerbanner-wrapper
 saostar.vn##[class^="txt-"],[id^="div-"],[id^="mid-"],[id^="mobi-"],[id^="pvoucher-"],[id^="sp-"]
 scb.com.vn##[class^="slider-"]
+seami.vn###exampleModal-popup_auto,.main-popup-auto,.modal-backdrop
 search.brave.com##[class^="download-"],[class^="premium-"]
 sexdep.blog###bottombannercontainer,#popbannerads,#topbannercontainer,#underplayeradscontainer
 sggp.org.vn###admFullTop,#ban-site-top,#sdamobile_sdatop,#top-logo,.ls-is-cached,[id^="Mobile_"],[id^="adm_"],[id^="sdaMobile_"],[id^="sdamobile_"],[id^="zone-"],a[rel="noopener"]
@@ -476,6 +481,7 @@ tv360.mytel.com.mm##a[href="https://account.mytel.com.mm/tv360"]
 tv360.vn###ads-player-base-wrapper,.css-1jzjo52,.css-1u6gwec,.css-1xdipk,.css-csxyfn,.text-ellipsis,.toastify
 tvbox.one##.adsbygoogle,.entry-img-300,.homeadv,.homeadv>span
 
+unica.vn##.sticky,.text-center
 uniscore.com##.top-0
 utctime.net##[class^="margin"]
 
@@ -552,3 +558,4 @@ youtube.com##.ytmcompanionslotrendererhost,.ytmpaidcontentoverlayhost,[class^="r
 
 zingmp3.vn##.z-banner-vip,[class^="z-btn-open"]
 znews.vn##[class^="Okv-"],[class^="follow-"],[id^="Okv-"],[id^="ZingNews_"],[id^="Zingnews_"],[id^="follow-"]
+zuto.vn##.ad,.adsbygoogle
