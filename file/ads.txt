@@ -1,39 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Describe: Chặn quảng cáo
-! Updated: 05 Apr 2026 00:54
-! Blocked: 26
-! Size: 1.55 KB
+! Updated: 05 Apr 2026 00:58
+! Blocked: 0
+! Size: 0.14 KB
 ! ==================
-
-1thegioi.vn##[class*="zone-"],[class^="c-banner-"],[class^="is-"]
-
-24h.com.vn###catfish,#header-24h-login-cont,.adsbygoogle,.vadslogo,[class^="banner-"],[class^="inpage_"],[class^="vmc_"],[id^="ADS_"],[id^="ads_"],[id^="adzone"],[id^="div-gpt-ad-"],[id^="div_inpage_"],[id^="mashead-"],[id^="mobile_"],[id^="share-"],[id^="sis_inpage"],[id^="sp-wrapper-"],[id^="zone-"]
-2game.vn###bannermtop
-2sao.vn###adzone39
-
-51degrees.com##.g-floating-banner,[class^="is-"]
-
-9to5google.com##[class^="st"]
-9to5mac.com##[class^="st"]
-9to5toys.com##[class^="st"]
-
-acb.com.vn###admfulltop,#ban-size-top,#middle,#top,.adhesion-header,.adsbygoogle,.adslot,.advertisement-text,.afk_bn_homem_top,.amnhactv-history-float-icon,.download-app-mb,.global-banner-popup-holder,.header-placeholder,.modal-backdrop,.popup_banner,.right-detail,.w-download,.widget,[class*="ains-"],[class*="wp-"],[class^="js-"],[id*="media_"],[id^="adm-slot-"],[id^="adm_"],[id^="zone-"]
-accuweather.com###bottom
-afamily.vn##.adsbygoogle
-afkmobi.com###gift-banner
-agribank.com.vn###agbmodal
-akishop.com.vn##.background-popup
-amlich.net.vn##.p-1
-amlich.vn##.aanetwork-flyicon-box
-amnhactv.com###hoc-sang-tac-nhac-inline-box
-angiang.edu.vn##.image-list-album
-angiangtv.vn##[class*="swiper"]
-anhp.vn###ads_share_header1
-anphatpc.com.vn##.bg-popup
-antoanthongtin.vn##.download-app
-apkmirror.com###bottom-slider
-apkpure.com##[class^="ad-"]
-autopro.com.vn###admbackground
-
-zuto.vn##.ad
