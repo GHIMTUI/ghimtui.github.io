@@ -1,23 +1,14 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Describe: Chặn quảng cáo
-! Updated: 04 Apr 2026 22:02
+! Updated: 04 Apr 2026 22:06
 ! ==================
-
-.ad
 
 1thegioi.vn##[class*="zone-"],[class^="c-banner-"],[class^="is-"]
 
 24h.com.vn###catfish,#header-24h-login-cont,.adsbygoogle,.adsbygoolge,.vadslogo,[class^="banner-"],[class^="inpage_"],[class^="vmc_"],[id^="ADS_"],[id^="ads_"],[id^="adzone"],[id^="div-gpt-ad-"],[id^="div_inpage_"],[id^="mashead-"],[id^="mobile_"],[id^="share-"],[id^="sis_inpage"],[id^="sp-wrapper-"],[id^="zone-"]
-250px"],div[style="display: block;     justify-content:
-280px;"],div[onclick="closemashead(39)"],span[style="color: #fff;text-align: center;display: inherit;font-size: 20px;line-height: 20px;"]
-280px"],div[style*="min-height:
 2game.vn###bannermtop
-2px;"],p[style="text-align:center"]
 2sao.vn###adzone39
-
-312px"],div[style="margin-bottom:
-35px;"],iframe[style="width:320px;
 
 51degrees.com##.g-floating-banner,[class^="is-"]
 
@@ -114,7 +105,6 @@ cantho.edu.vn##.image-list-album
 caobangtv.vn##[class*="adv"]
 cellphones.com.vn###subscriberemailoverlay
 cem.gov.vn##.banner
-center;"],div[style="margin-bottom:
 chatgpt.com##.block
 chatluongvacuocsong.vn##.e
 chinhphu.vn##.advertcontent
@@ -125,7 +115,6 @@ cimbbank.com.vn##.btn
 coccoc.com##.top-14
 cokhivietnam.vn##.banner_quangcao
 collinsdictionary.com##[id*="ad_"]
-com##[class^="smartbanner"]
 congluan.vn##.c-banner-item
 congly.vn##[class^="aanetwork-"]
 congnghevadoisong.vn##.col-md-8>p
@@ -223,7 +212,6 @@ hanoionline.vn##.banner
 happyvietnam.vnanet.vn##.background-image
 hatinh.edu.vn##.image-list-album
 hdbank.com.vn##.mobile-popup
-height:500px;"],td[colspan="2"],td[id="m005"]>div
 helio.vn##[class*="banner"]
 highspeedinternet.com###mobile-nav
 hoanghaimobile.jp###hhappfab
@@ -349,7 +337,6 @@ nld.com.vn###top-logo
 nnmt.net.vn##.ads-top-mobile
 nokiasaithanh.com###voucher-box
 nongnghiepmoitruong.vn##[class^="ads-"]
-noopener"],div[as-id],div[onclick="closemashead(39)"],div[style*="min-height:
 nperf.com##.modal-content
 
 ofnews.vn##.detail-social,.object-contain,.qc-slider,.rounded-3xl,[class^="ads-"]
@@ -444,7 +431,6 @@ thegioikinhdoanh.vn###link28
 thegioimavach.com##[class^="mfp-"]
 thelinhstore.com##.collection_banner
 thesaigontimes.vn###admbackground
-thethao.sggp.org.vn,##[id^="asc-"],[id^="banner-"],[id^="fs-"],[id^="google_ads_"],[id^="mashead-"],[id^="mobile_"],[id^="nl-"],[id^="placement-"],[id^="sdamobile_"],[id^="share-"],[id^="slot-"],[id^="sp"],[id^="sp-"],[id^="sp-wrapper-"],[id^="sp_format-hovering"],[id^="swapper-"],[id^="template_"],[id^="zone"],[id^="zone-"],a[href="https://tv360.page.link/app-tv360-bitel-install"],a[href^="https://tv360.page.link/app-metfone"],a[rel="nofollow
 thethao.sggp.org.vn###ban-site-top
 thethao247.vn##.as
 thethaovanhoa.vn##.adsbygoogle
