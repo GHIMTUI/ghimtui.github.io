@@ -3,7 +3,7 @@
 ! Describe: Chặn quảng cáo
 ! Updated: 05 Apr 2026 00:40
 ! Blocked: 26
-! Size: 1.55 KB
+! Size: 1.54 KB
 ! ==================
 
 1thegioi.vn##[class*="zone-"],[class^="c-banner-"],[class^="is-"]
