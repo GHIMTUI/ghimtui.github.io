@@ -1,11 +1,17 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Describe: Chặn quảng cáo
-! Updated: 05 Apr 2026 01:11
-! Blocked: 2
-! Size: 0.21 KB
+! Updated: 05 Apr 2026 02:02
+! Blocked: 5
+! Size: 0.61 KB
 ! ==================
 
 24h.com.vn##[id^="ADS_"],[id^="div_inpage_"]
 
+baomoi.com###slide-footer,#slide-footer>div,.ad-wrapper,.is-show,.list>div,.slick-list,.slick-slide,.slick-slide>div,.slick-track,[id^="BaoMoi_"],[id^="Ori-zone-"],[id^="OriIfrWrapper_"]
+
 liteapks.com##[id^="ad-"]
+
+vnexpress.net###TOP_BANNER,#banner_top,#sis_breakpage,#sis_breakpage>script,#sis_masthead,.inner_ads,.txt_qc,[class^="banner_mobile_"],[class^="section_ads_"]
+
+znews.vn##[class^="Okv-"],[class^="follow-"],[id^="Okv-"]
