@@ -1,11 +1,12 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Describe: Chặn quảng cáo
-! Updated: 04 Apr 2026 15:50
-! Version: 1.0.112
-! Blocked: 30
+! Updated: 04 Apr 2026 15:51
+! Version: 1.0.113
+! Blocked: 31
 ! Size: 0.00KB
 ! ==================
+.ad
 1thegioi.vn##[class*="zone-"] 1thegioi.vn##[class^="c-banner-"] 1thegioi.vn##[class^="is-"]
 24h.com.vn##.adsbygoogle 24h.com.vn##.adsbygoolge 24h.com.vn##.vadslogo 24h.com.vn##[class^="banner-"] 2sao.vn###adzone39 24h.com.vn##[class^="inpage_"] 24h.com.vn##[class^="vmc_"] 24h.com.vn##[id^="ads_"] 24h.com.vn##[id^="ADS_"] 24h.com.vn##[id^="adzone"] 24h.com.vn##[id^="div_inpage_"] 24h.com.vn##[id^="div-gpt-ad-"] 24h.com.vn##[id^="mashead-"] 24h.com.vn##[id^="mobile_"] 24h.com.vn##[id^="share-"] 24h.com.vn##[id^="sis_inpage"] 24h.com.vn##[id^="sp-wrapper-"] 24h.com.vn##[id^="zone-"] 2game.vn###bannermtop 24h.com.vn###catfish 24h.com.vn###header-24h-login-cont
 51degrees.com##.g-floating-banner 51degrees.com##[class^="is-"]
