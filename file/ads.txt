@@ -6,7 +6,6 @@
 ! Blocked: 523
 ! Size: 28.89KB
 ! ==================
-.ad
 1thegioi.vn##[class*="zone-"],[class^="c-banner-"],[class^="is-"]
 
 24h.com.vn###header-24h-login-cont,.adsbygoogle,[class^="inpage_"],[id^="ADS_"],[id^="ads_"],[id^="div-gpt-ad-"],[id^="div_inpage_"],[id^="share-"],[id^="sis_inpage"],[id^="zone-"]
