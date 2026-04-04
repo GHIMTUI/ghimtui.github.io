@@ -1,23 +1,18 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Describe: Chặn quảng cáo
-! Updated: 04 Apr 2026 16:21
-! Version: 1.0.129
-! Blocked: 536
-! Size: 0.00KB
+! Updated: 04 Apr 2026 16:23
+! Version: 1.0.130
+! Blocked: 533
+! Size: 27.69KB
 ! ==================
 
-.ad
-
-0px;"],div[style="text-align: center;"]
-
-10px;"],div[data-widget-id="1433589"],div[data-widget-id="1771082"],div[data-widget-id="1886588"],img[src="/banner/f168-sidebar.gif"]
 1thegioi.vn##[class*="zone-"],[class^="c-banner-"],[class^="is-"]
 
 24h.com.vn###catfish,#header-24h-login-cont,.adsbygoogle,.adsbygoolge,.vadslogo,[class^="banner-"],[class^="inpage_"],[class^="vmc_"],[id^="ADS_"],[id^="ads_"],[id^="adzone"],[id^="div-gpt-ad-"],[id^="div_inpage_"],[id^="mashead-"],[id^="mobile_"],[id^="share-"],[id^="sis_inpage"],[id^="sp-wrapper-"],[id^="zone-"]
 250px"],div[style="display: block;     justify-content:
-280px"],div[style*="min-height:
 280px;"],div[onclick="closemashead(39)"],span[style="color: #fff;text-align: center;display: inherit;font-size: 20px;line-height: 20px;"]
+280px"],div[style*="min-height:
 2game.vn###bannermtop
 2px;"],p[style="text-align:center"]
 2sao.vn###adzone39
@@ -450,8 +445,8 @@ thegioikinhdoanh.vn###link28
 thegioimavach.com##[class^="mfp-"]
 thelinhstore.com##.collection_banner
 thesaigontimes.vn###admbackground
-thethao.sggp.org.vn###ban-site-top
 thethao.sggp.org.vn,##[id^="asc-"],[id^="banner-"],[id^="fs-"],[id^="google_ads_"],[id^="mashead-"],[id^="mobile_"],[id^="nl-"],[id^="placement-"],[id^="sdamobile_"],[id^="share-"],[id^="slot-"],[id^="sp"],[id^="sp-"],[id^="sp-wrapper-"],[id^="sp_format-hovering"],[id^="swapper-"],[id^="template_"],[id^="zone"],[id^="zone-"],a[href="https://tv360.page.link/app-tv360-bitel-install"],a[href^="https://tv360.page.link/app-metfone"],a[rel="nofollow
+thethao.sggp.org.vn###ban-site-top
 thethao247.vn##.as
 thethaovanhoa.vn##.adsbygoogle
 thhp.vn##.col-sm-3
