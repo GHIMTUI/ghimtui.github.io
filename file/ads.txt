@@ -1,557 +1,501 @@
-[Adblock Plus 2.0]
-! Title: STOP ADS
-! Describe: Chặn quảng cáo
-! Updated: 04 Apr 2026 23:08
-! ==================
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Adblock Editor Pro</title>
+    <style>
+        :root {
+            --bg-dark: #000000;
+            --container-bg: #050505;
+            --accent-green: #15803d;
+            --accent-hover: #166534;
+            --accent-blue: #1d4ed8;
+            --text-white: #ffffff;
+            --border-color: #1a1a1a;
+            --status-gray-bg: #1a1a1a;
+            --status-text-gray: #666;
+            --error-red: #ef4444;
+            --safe-area-inset-bottom: env(safe-area-inset-bottom, 0px);
+        }
 
-1thegioi.vn##[class*="zone-"],[class^="c-banner-"],[class^="is-"]
+        * {
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
 
-24h.com.vn###catfish,#header-24h-login-cont,.adsbygoogle,.vadslogo,[class^="banner-"],[class^="inpage_"],[class^="vmc_"],[id^="ADS_"],[id^="ads_"],[id^="adzone"],[id^="div-gpt-ad-"],[id^="div_inpage_"],[id^="mashead-"],[id^="mobile_"],[id^="share-"],[id^="sis_inpage"],[id^="sp-wrapper-"],[id^="zone-"]
-2game.vn###bannermtop
-2sao.vn###adzone39
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            font-family: 'Inter', -apple-system, system-ui, sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-white);
+            overflow: hidden;
+        }
 
-51degrees.com##.g-floating-banner,[class^="is-"]
+        .editor-container {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            max-width: 100%;
+            margin: 0 auto;
+            background-color: var(--bg-dark);
+        }
 
-9to5google.com##[class^="st"]
-9to5mac.com##[class^="st"]
-9to5toys.com##[class^="st"]
+        .toolbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.75rem 1.25rem;
+            border-bottom: 1px solid var(--border-color);
+            background-color: #000000;
+            z-index: 10;
+        }
 
-acb.com.vn###admfulltop,#ban-size-top,#middle,#top,.adhesion-header,.adsbygoogle,.adslot,.advertisement-text,.afk_bn_homem_top,.amnhactv-history-float-icon,.download-app-mb,.global-banner-popup-holder,.header-placeholder,.modal-backdrop,.popup_banner,.right-detail,.w-download,.widget,[class*="ains-"],[class*="wp-"],[class^="js-"],[id*="media_"],[id^="adm-slot-"],[id^="adm_"],[id^="zone-"]
-accuweather.com###bottom
-afamily.vn##.adsbygoogle
-afkmobi.com###gift-banner
-agribank.com.vn###agbmodal
-akishop.com.vn##.background-popup
-amlich.net.vn##.p-1
-amlich.vn##.aanetwork-flyicon-box
-amnhactv.com###hoc-sang-tac-nhac-inline-box
-angiang.edu.vn##.image-list-album
-angiangtv.vn##[class*="swiper"]
-anhp.vn###ads_share_header1
-anphatpc.com.vn##.bg-popup
-antoanthongtin.vn##.download-app
-apkmirror.com###bottom-slider
-apkpure.com##[class^="ad-"]
-autopro.com.vn###admbackground
+        .info-path {
+            font-weight: 900;
+            font-size: 1.2rem;
+            letter-spacing: 2px;
+            color: var(--accent-green);
+            text-transform: uppercase;
+        }
 
-babla.vn###ad_topslot,#admtop,#pvoucher-live-container,#ubvideo,.ad-wrapper,.adsbygoogle,.adscontent,.adstop,.bg-wrapper,.bvb-slider-banner,.bvb-slider-top,.cat-advertise,.clz,.custom-button-primary,.image-item,.img-adsbanner-bdn,.is-show,.jeg_sticky_sidebar,.link-download,.modal-backdrop,.my-3,.sad_viewed,.sdt-image,.section-ad-native,.slick-slide,.slick-slider,.slide>div,.slider,.slider-container-top-adv,.slides,.social-items,.tpproductma,.w-menu-datcuoc,.widget,.widget-space,[class*="-adv"],[class*="banner"],[class*="group-4-"],[class*="pb-"],[class*="zonegroup-"],[class^="ad-"],[class^="ads-"],[class^="ads_"],[class^="adv"],[class^="adv-"],[class^="banner"],[class^="box_"],[class^="build-"],[class^="c-banner-"],[class^="e"],[class^="ff"],[class^="info-"],[class^="item-"],[class^="mt"],[class^="mt-"],[class^="myslides-"],[class^="padding-"],[class^="parallax"],[class^="pt-"],[class^="sad_"],[class^="sda_"],[class^="sponsoredlabel-"],[class^="stripes-"],[class^="top-"],[class^="vc_custom_"],[class^="zone-"],[class^="zone-group-"],[id*="sdamobile_"],[id*="splide01-"],[id^="ad-"],[id^="adm-zone"],[id^="adm_zone"],[id^="admfull"],[id^="ads_banner_bdn_"],[id^="adsmobile_"],[id^="ant-"],[id^="ban-"],[id^="divadmicro_"],[id^="dnn_ctr699_"],[id^="iad"],[id^="logo-"],[id^="mhot1_"],[id^="mnyyna_"],[id^="revive-"],[id^="sadmobile_"],[id^="sdamobile_"],[id^="slick-"],[id^="zone"],[id^="zone-"],img[src="https://adi.admicro.vn/adx/adxlogo-1.png"]
-baca-bank.vn###slider
-bachlongstore.vn###vnt-banner
-bacninh.edu.vn##.panel-heading
-bacninh.gov.vn##.adv-containers
-banduong.vn##.active
-baobacninhtv.vn##[class*="group-30-"]
-baocamau.vn##[class^="box-"]
-baocaobang.vn##[class^="ads-"]
-baodanang.vn##[class^="ads_"]
-baodauthau.vn###adsmobile_adstop
-baodienbienphu.vn##[class^="mt-"]
-baodongnai.com.vn##[class^="ad"]
-baodongthap.vn##.box-link-social-home
-baogialai.com.vn###top-logo
-baohaiphong.vn##[class^="ads_"]
-baohaiquanvietnam.vn##[class*="-ads"]
-baohatinh.vn##[class*="aanetwork-"]
-baohungyen.vn##[class*="ads-"]
-baokhanhhoa.vn##[class^="ff"]
-baokiemtoan.vn##.l-sidebar
-baolaichau.vn##[class^="blc-topic__"]
-baolamdong.vn##.aanetwork-ads-box
-baolangson.vn##[class*="ads-"]
-baolaocai.vn##[class^="ad-"]
-baomoi.com###slide-footer
-baonghean.vn##.aanetwork-ads-box
-baoninhbinh.org.vn##[class*="m-"]
-baophapluat.vn##[class^="ad"]
-baophunuthudo.vn##.ads-item
-baophutho.vn##[class^="dadv_"]
-baoquangngai.vn##[class^="banner-"]
-baoquangtri.vn##[class^="ff"]
-baoquankhu1.vn##.hot_top_content
-baoquankhu4.com.vn###whole-page
-baoquankhu5.vn##.ads_image_phone
-baoquankhu7.vn##.ml50
-baoquocte.vn###header
-baosonla.vn##[class*="my-"]
-baotayninh.vn##[class*="ads-"]
-baothainguyen.vn##[class^="carousel-"]
-baothanhhoa.vn##[class^="dadv_"]
-baotintuc.vn###admbackground
-baotuyenquang.com.vn##.item_ads
-baovanhoa.vn##.adsitem
-baovannghe.vn##.adsbygoogle
-baovephapluat.vn##.banner-item
-baovietbank.vn##.bvb-info-service
-baovinhlong.com.vn##[class^="ad"]
-beincrypto.com##.banner-sticky-bottom-d
-bienvietnam.vn##.row-height
-biggcreative.com##.catfish-banner-global
-bizfly.vn###modal_bizfly_popup
-bkns.vn##.tg_popup_slide_imgthong_bao
-bnews.vn##.aanetwork-flyicon-box
-bom.so##.ads
-bongda24h.vn##.ads-center
-bongdanet.mobi##.content-home-top
-bongdaplus.vn###adft
-brandsvietnam.com###overlay-ad
+        .tab-nav {
+            display: flex;
+            background: #0a0a0a;
+            border-bottom: 1px solid var(--border-color);
+            padding: 0 1rem;
+        }
 
-cafebiz.vn###bannervideocontentads,#top-logo,.block-top-sliding-banner,.col-6,.nomargin,.subscriber-popup,.topfullbannermobilesize,.uiweblink_weblink,.uselogin-jctvg,.widget,.wrap-img,[class*="inpage-ad"],[class^="ad-"],[class^="ads_"],[class^="adsitem-"],[class^="aw__"],[class^="c-banner-"],[class^="calc-"],[class^="default-"],[class^="showSafe"],[class^="top-"],[id^="adm-"],[id^="adm_"],[id^="admbackground"],[id^="admbackground_"],[id^="admfull"],[id^="ads_"],[id^="ban-"],[id^="top-"],[id^="zone-"],img[src="https://adi.admicro.vn/adx/adxlogo-1.png"]
-cafef.vn###admbackground
-cafeland.vn###bannercarouselcontentads
-calculatorlib.com##.adsbygoogle
-camau.edu.vn##.content
-cand.com.vn##.loaded
-cantho.edu.vn##.image-list-album
-caobangtv.vn##[class*="adv"]
-cellphones.com.vn###subscriberemailoverlay
-cem.gov.vn##.banner
-chatgpt.com##.block
-chatluongvacuocsong.vn##.e
-chinhphu.vn##.advertcontent
-chinhtrivaphattrien.vn##[class*="qc_"]
-chotot.com###app_download
-chungta.vn##.clearfix
-cimbbank.com.vn##.btn
-coccoc.com##.top-14
-cokhivietnam.vn##.banner_quangcao
-collinsdictionary.com##[id*="ad_"]
-congluan.vn##.c-banner-item
-congly.vn##[class^="aanetwork-"]
-congnghevadoisong.vn##.col-md-8>p
-congngheviet.com##.td-a-rec
-congnghieptauthuyvietnam.vn##.w_100
-congthuong.vn##[class*="adsbygoogle"]
-cuoi.tuoitre.vn##[id^="sp-wrapper-"]
+        .tab-btn {
+            padding: 0.8rem 1.2rem;
+            color: #555;
+            background: none;
+            border: none;
+            font-size: 0.8rem;
+            font-weight: 700;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s;
+        }
 
-daibieunhandan.vn###admfulltop,#adsrightspecial,#ban-top-site,#sp-wrapper-hovering,#top-logo,#tpminpagecontainer,.adsbygoogle,.banner-site,.banners-home,.box-content-top,.c-banner,.cat-title,.dt-py-1,.font-size-font-scale-md,.img_org,.in-article,.is-custom-size,.iv1,.large--two-thirds,.lg:mt-1,.list_slideshow,.mediad_before_content,.mobile,.mt-sm-0,.parallax-container,.quang_cao_temp,.row-banner,.slide_banner,.slideshow_countdown,.sp-infooter-mb-google-ads,.sp-pto-mb-div,.top,.tz0,.video-container,.xemgiquangcao,[class*="ad_"],[class*="ads"],[class*="quangcao_"],[class^="background"],[class^="footer-contact-"],[class^="js-"],[class^="sda_"],[class^="set-browser-"],[class^="size-"],[class^="sticky-"],[class^="wp-image-"],[class^="zone-"],[id*="ad_"],[id*="ads"],[id*="zone-"],[id^="_vdo_ads_"],[id^="ad-"],[id^="ad_"],[id^="adm_"],[id^="admfull"],[id^="ads-"],[id^="ads-widget-"],[id^="ban-"],[id^="outbrain_widget_"],[id^="sdamobile_"],[id^="sp-"],[id^="wordp-"],[id^="zone-"],div,img[src="https://adi.admicro.vn/adx/adxlogo-1.png"]
-daidoanket.vn###sp-wrapper-hovering-format
-danang.gov.vn##.ml-lg-3
-danangtv.vn###ctl00_ctl00_content_trang_chủ_quảng_cáo_botttom
-danchuphapluat.vn##.__ads_click
-danhgiaxe.com##.banner
-dantocmiennui.baotintuc.vn##[class^="ad-"]
-dantri.com.vn###mobile-top-page
-danviet.vn##.sidebar-countdown
-datbacninh.com.vn##.size-large
-dauthau.asia##.slider
-dayspedia.com##[class^="banner-"]
-dep.com.vn##.ad-widget--category-top
-diaocthongthai.com###thongthai-ads-container
-dict.laban.vn###laban_app_ad
-dictionary.cambridge.org##.login-promo-block
-dictionary.com##.ac-player-wrapper
-didongthongminh.vn##.active
-didongviet.vn###top-banner
-dienbientv.vn##.null
-diendandoanhnghiep.vn##[class^="c-banner-"]
-dienmaycholon.com##.banner_mb
-dienmayxanh.com##.popup-banner
-dienthoaihay.vn##.pos1
-digione.vn##.container>a
-digiphone.vn##.large--one-whole
-digit.in###v-digit-in-0
-doanhnghiephoinhap.vn##.box-qc
-doanhnghiepvathuongmai.vn###banner
-doanhnhansaigon.vn##.c-featured-box__right
-docnhanh.vn###admbackground_1
-doisongphapluat.com.vn##.sys-ads
-doisongvietnam.vn##.lazy
-dongnai.gov.vn##.inner-home
-dongthap.edu.vn##.component-image
-dorabot.io###navbar-pwa-btn
-download.com.vn###adrightspecial
-dronedj.com##[class^="st"]
-drt.vn##.ads-block-item
-duckduckgo.com##.js-atb-banner
-dunno.ai##.box-ads
+        .tab-btn.active {
+            color: var(--accent-green);
+            border-bottom-color: var(--accent-green);
+        }
 
-electrek.co##.i-said-no-thing-can-stop-me-warning,.line-ads,[class^="st"],[id*="banner"],[id^="ADS_"],[id^="ads"],[id^="div-gpt-ad-"],[id^="spantextads_"]
-elle.vn##[class*="my-"]
-emc-directory.com###mobilebottomad
-ems.com.vn##[class^="ant-modal-"]
-ephoto360.com##.ad-container
-eva.vn##[class^="banr-"]
+        .tab-content {
+            flex: 1;
+            display: none;
+            flex-direction: column;
+            overflow: hidden;
+        }
 
-fandom.com##.ad-slot-placeholder,.top-ads-container,a[aria-label="purchase packages"]
-fedex.com##.fxg-smartbanner
-forum.autodaily.vn##[class^="banner-"]
-fptplay.vn##.flex-row
+        .tab-content.active {
+            display: flex;
+        }
 
-game.gov.vn###admwrapper,#module90,#sp_format_catfish,.ads-bg,.adsbygoogle,.adv,.adv-bottom,.adv-mid,.adv-top,.amp-sticky-ad-close-button,.article-flashsale,.banner-effect,.c-banner,.d-flex,.deals,.e,.full-width,.h-show-mobile,.i-amphtml-sticky-ad-layout,.mapped-mobile-incontent-plus,.no-margin-ads,.price-banner,.qc_container,.sp-pto-mb-div,.top-adv,.widget,.widget-space,.wrapperqc,[class*="sp-ptoproduct-"],[class^="exp_qc_"],[class^="qc-"],[id*="ct_"],[id^="adm-"],[id^="adm_"],[id^="admbackground"],[id^="admfull"],[id^="ads_"],[id^="ban-"],[id^="banner-"],[id^="placement-"],[id^="pum-"],[id^="share-"],[id^="slot-"],[id^="top-"],[id^="zone-"],div[id="sp_format-ptoproduct_1991"]
-game24h.vn##.banner
-gamehub.vn###smartbanner
-gamek.vn##.ads-top
-gameorb.com.vn##[id^="popmake-"]
-gamespot.com##.mapped-mobile-banner-plus
-gametoon.mobi###toon-adsense-ads
-gas40.com##.expand-home
-gddt.daklak.gov.vn###sidebar-left
-gearvn.com###popup-promotion
-gemini.google.com##.app-upsell-banner
-genk.vn##.box-category-bottom
-giacngo.vn##.picture
-giadinh.suckhoedoisong.vn###admbannerpopup
-giadinhonline.vn##.active
-gialai.gov.vn###module82
-giaoducthudo.giaoducthoidai.vn###sp-wrapper-hovering-format
-giaogasnhanh.com##.elementor-jet-slider
-giaothong.tapchixaydung.vn##[class*="qc"]
-giatreo.vn##.fullwidth
-giaxe.2banh.vn##[class*="ct_"]
-giaxeoto24h.vn##[id^="slider-"]
-gitiho.com##[class^="banner-"]
-gmobile.vn##.slide
-gocnhinphaply.nguoiduatin.vn###sp-wrapper-hovering
-gsmarena.com###fkmvnq
+        .actions {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            min-height: 38px;
+        }
 
-hacom.vn##.adsbygoogle,.banner,.bottom-20,.disclaimer-container,.jquery-modal,.product_adv,.smartbanner,.top-category-ads,.top-heading,.wpb_single_image,[class*="banner"],[class^="c-banner-"],[class^="huetv-"],[class^="is-"],[class^="popup-"],[id^="advertise_"],[id^="zone-"],img[src="https://file.huengaynay.vn/data/0/images/2026/01/19/upload_3836/bau-cu.gif"],img[src="https://file.huengaynay.vn/data/0/images/2026/02/27/upload_3836/dh-dang-cac-cap.gif"]
-haiphong.gov.vn##.uiadvertisement_default
-hanoi.gov.vn##.uiadvertisement_default
-hanoimoi.vn##[class^="ads_"]
-hanoionline.vn##.banner
-happyvietnam.vnanet.vn##.background-image
-hatinh.edu.vn##.image-list-album
-hdbank.com.vn##.mobile-popup
-helio.vn##[class*="banner"]
-highspeedinternet.com###mobile-nav
-hoanghaimobile.jp###hhappfab
-hoanghamobile.com###popup-modal
-hoanhap.vn##.section-1
-hopamviet.vn##.ad-mobile
-hotgear.vn##.top-banner
-hsbc.com.vn###messaging-banner
-htvc.com.vn##.swal2-container
-hue.gov.vn##.col-md-12
-huengaynay.vn##[class^="adv"]
-huetv.com.vn##.part31>p
-hungmobile.vn##.b-modal
-hungyen.edu.vn##.link-slide
-hungyen.gov.vn##.full-width
-hungyentv.vn##[id^="ads_"]
+        .status-pill {
+            padding: 0.6rem 1.2rem;
+            border-radius: 50px; 
+            font-size: 0.75rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            white-space: nowrap;
+            display: none; 
+            align-items: center;
+            justify-content: center;
+            min-width: 100px;
+            transition: all 0.3s ease;
+            user-select: none;
+            border: none;
+            outline: none;
+        }
 
-inas.org###match-child-1,#wap_bottombanner_content,.ads-header-mobile,.btn-8xbet,.sticky-notice-bar,.widget_telegram,[id^="pum-"]
-irace.vn##.g-6
-itc.ua##.text-center
-izone.edu.vn##[id^="popmake-"]
+        .status-pill.visible {
+            display: inline-flex;
+        }
 
-jtexpress.vn##.fixed-on-top
+        #svBtn {
+            background-color: var(--accent-green);
+            color: #ffffff;
+            cursor: pointer;
+        }
 
-kalvo.com###ban-top-site,#component_3589,#firt,.aanetwork-ads-box,.adsbygoogle,.adv,.barsticky,.box-adv,.btn--secondary,.c-banner,.catfish-banner-global,.image-top-fluit,.klv_x,.l-sidebar,.label-adv,.label-adv>span,.row,.top-banner,[class*="owl"],[class^="ads-"],[class^="klvad"],[id^="adm-slot"],[id^="adm_zone"],[id^="admbackground"],[id^="zone"]
-kenh14.vn###admfulltop
-kenh24h.com.vn##body>div
-khanhhoa.gov.vn###select-box
-khoahoc.vietjack.com###sp-wrapper-hovering-format
-kienlongbank.com##.list-items
-kienthuc.net.vn##.adsbygoogle
-kienthucchiase.com###sp-wrapper-hovering-format
-kinhdoanhvabienmau.vn###col42
-kinhdoanhvaphattrien.vn##.banner
-kinhtechungkhoan.vn##.adsbygoogle
-kinhtedothi.vn###component_3575
-kinhtedouong.vn###advwebtop
-kinhtemoitruong.vn##.banner
-kinhtenongthon.vn###col_301
-kinhtevadubao.vn##.banner
-kirikuylabruja.com##.banner-chat
-kqxs.vn##.adsbygoogle
+        #svBtn:hover:not(:disabled) {
+            background-color: var(--accent-hover);
+        }
 
-laichau.edu.vn###ad_native_single_popular,#frameboundb5c9c2db5333a9,#frameboundb60e7fe5366441,#j_banner,#main-footer-fix-bottom,#module50,#sp-wrapper-hovering-format,.ads-banner,.ads-label,.adsbygoogle,.adv-footer-fixed,.advbox,.banner,.bg-countdown,.col-sm-4,.full-width,.headerbanner-wrapper,.homepage-top-ads,.i-amphtml-sticky-ad-layout,.m-top-10,.navbar-right>ul,.nl-infooter-mb-div,.notification-header__msg,.panel-heading,.slogan_img,.sp-infooter-mb-google-ads,.widget,[class*="banner"a],[class^="advbox"],[class^="box_"],[class^="dict-"],[class^="is-custom-"],[class^="mt-"],[class^="top-"],[class^="top_"],[id^="advertise_"],[id^="m"],[id^="sp-"],[id^="top_"],div[style*="min-height:
-lamdong.edu.vn##.sidebar-link
-lamdong.gov.vn##.imagewithlink_f315b473
-langngheviet.com.vn##.hna-qc-full-center
-langson.edu.vn##.image-list-album
-langson.gov.vn##.boun-media
-langsontv.vn###socials
-laocai.edu.vn##.uimultifunction_default
-laocai.gov.vn##.uimultifunction_default
-laodong.vn###admbackground-adm
-laodongdoanthe.vn##[class*="ads"]
-lapphap.vn##.section>a
-lazada.vn###J_Banner
-lecourrier.vn##.top-adv-pos
-leeapk.com###stickyad
-letemsvetemapplem.eu###ad_native_hp_loop_mob2
-lichngaytot.com###bottommobileadvs
-lichvannien365.com##div[style*="min-height: 240px"]
-lichvansu.wap.pvn##.drop
-lichvansu.wap.vn##.adsbygoogle
-lichviet.app###smart-app-banner
-lingolandedu.com##.adsbygoogle
-liteapks.com##[id^="ad-"]
-logos.fandom.com##.bottom-ads-container
-loigiaihay.com###countdown
-luatminhkhue.vn###sp-wrapper-hovering-format
-luatvietnam.vn##.adsbygoogle
-lyluanchinhtri.vn##[class^="c-banner-"]
+        .pill-gray-style {
+            background-color: var(--status-gray-bg) !important;
+            color: var(--status-text-gray) !important;
+            cursor: default;
+        }
 
-mail.google.com##.adsbygoogle,.c-banner,.index-download-bg,.my-6,.notify_block,[class*="banner"],[class^="banner-"],[class^="catfish-"],[class^="space-y-"],[class^="widget-"],[id^="div-gpt-ad-"],[id^="nav"],[id^="ts_ad_"],[id^="views-"],div[style="width: 100%; min-height: 280px; display: flex; justify-content: center; align-items: center; margin: 20px 0; background-color: transparent;"]
-mangatooncom.vn##.detail-download-bg
-manilastandard.net##[id*="div-gpt-ad-"]
-marketplace.tripmap.vn##.ad-floating-icon
-masothue.com##.mst_sp-bell-wrapper
-maydocsachviet.vn##.main-banner-img
-maytinhdaiviet.com###dv-mobile-bottom-ad
-me-qr.com##.modal-apps
-mediaonlinevn.com##[class^="banner"]
-mekongasean.vn##.header-content
-mensfolio.vn##.header-banner
-migovi.com##.banner-promotions-wrapper
-minhancomputer.com###js-buildpc-banner
-missav.fans###ts-main-banner-wrapper
-missav.run##.banner-box
-missav123.com##[class^="root--"]
-misseschloe.co.za###vl-header-adx
-mixvale.com.br##.adsbygoogle
-mobifone.vn##.main-banner
-mobilecity.vn##[id^="sudovn-btn-"]
-moit.gov.vn###module9
-moitruong.net.vn##.adsbygoogle
-momo.vn##.container-topbar
-motthegioi.vn##.adsbygoogle
-msn.com##[class^="banner-"]
-mucnews.com##.e3lan
+        .fast-flash {
+            animation: fast-flash-anim 0.4s ease-in-out infinite;
+        }
 
-namabank.com.vn###mymodal,.ads-top,.box-banner-fixd,.c-banner-item__inner,.container-fluid,.left,.mb-20,.menu-pr,.mobile-popup,.modal-backdrop,.ndt-ads,.notifi-list,.notify_block,.ovl,.quangcao,.shake_img_close,.tbl-link,[class*="banner"],[class*="banner_"],[class^="adv"],[class^="app-"],[class^="banner-"],[class^="catfish-"],[class^="exp_qc_"],[class^="mb-"],[id^="adm-zone"],[id^="admbackground"],[id^="admfull"],[id^="adsweb"],[id^="app_"],[id^="ban-"],[id^="ban-top-site"],[id^="sp-"],[id^="zone"],[id^="zone-"],img[src="https://static.mediacdn.vn/nld.com.vn/image/banner_mobile_xuan.png"],img[src="https://static.mediacdn.vn/nld/images/e-paper.png"]
-narak.vn##.js-top-bar
-nbtv.vn##.top-news-right
-ncb-bank.vn##.img-popup
-netlife.vn##.is-custom-size
-nettruyen.sa.com###vl-header-adx
-nettruyenn.co##.notify_block
-nghean24h.vn##.block_mobile
-nghenhinvietnam.vn##.adsbygoogle
-nghiencuu.tapchikinhtetaichinh.vn##[id^="qc-"]
-ngoisao.vn##[class^="ads-"]
-nguoidothi.net.vn##.dvmartop1
-nguoiduatin.vn##.box-aside
-nguoihanoi.vn##.c-banner-item
-nguoiquansat.vn##.c-banner
-nguoixaydung.com.vn##.col-md-3
-nhac.vn###footer-scroll
-nhachannuoi.vn###black-studio-tinymce-13
-nhadautu.vn##.e
-nhanh.vn###bannermainadmobile
-nhanhoa.com###click_download_app
-nhipsongkinhdoanh.vn###top-logo
-nld.com.vn###top-logo
-nnmt.net.vn##.ads-top-mobile
-nokiasaithanh.com###voucher-box
-nongnghiepmoitruong.vn##[class^="ads-"]
-nperf.com##.modal-content
+        @keyframes fast-flash-anim {
+            0% { opacity: 1; }
+            50% { opacity: 0.3; }
+            100% { opacity: 1; }
+        }
 
-ofnews.vn##.detail-social,.object-contain,.qc-slider,.rounded-3xl,[class^="ads-"]
-on.vtvcab.vn##.app-text
-online-stopwatch.com##[class^="publift-"]
-onplus.com.vn##.bg-dark-500
-otosaigon.com###side-ads-mid-3
-oxfordlearnersdictionaries.com##[id*="ad_"]
+        .textarea-wrapper {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 0.5rem;
+        }
 
-parhazart.org###popbannerads,#topbannercontainer,.adsbyvli,.catfish-banner-global,.no-ads-under,.w-fit,.z-[9999],[id*="div-gpt-ad-"],[id^="ads-"],[id^="adsmobile"],[id^="banner_"],[id^="bn-zone"],[id^="container_"],[id^="mobile"],[id^="pw_"],[id^="zone"],div[style="margin: 10px
-perplexity.ai##.animate-in
-petrotimes.vn##.petrotimes-qc
-phaply.net.vn##[class^="qc_"]
-phatnguoixe.com###resultvalue
-philstartech.com##[class*="a-wrap-"]
-phimmoiz.ac##.bg-orange-500
-phimsex6s.com###bottombannercontainer
-phunuonline.com.vn##.adsbygoogle
-phutho.edu.vn##.w-download
-plo.vn###catfish
+        .code-input {
+            flex: 1;
+            width: 100%;
+            border: 1px solid var(--border-color);
+            outline: none;
+            padding: 1.25rem;
+            font-family: 'JetBrains Mono', 'Fira Code', 'Menlo', monospace;
+            font-size: 0.9rem;
+            line-height: 1.6;
+            background-color: #050505;
+            color: var(--text-white);
+            resize: none;
+            border-radius: 8px;
+        }
 
-qdnd.vn###module24,#module32,#module73,#module74,.border-home-vach,.full-width,.links-item,.list-links,[class^="-banner"],[class^="ads"],[class^="banner"],[class^="banner-"],[class^="cate-"],[id^="adindex"],[id^="adsposttop"],[id^="adunderarticle"],[id^="articleads"],[id^="mrc"]
-qpvn.vn###top-bar
-qrcodechimp.com##[id^="features_popup"]
-quangngai.gov.vn###module11
-quangninh.gov.vn##.col-sm-12
-quangtri.edu.vn##.full-width
-quankhu2.vn##.advrtise0
-quankhu3.vn###banner0
-quanlynhanuoc.vn##.widget_text
-quantrimang.com##.sidebar
-quocphongthudo.vn###module21
+        #txtAr, #prefixInput {
+            padding-bottom: calc(1.5rem + var(--safe-area-inset-bottom));
+        }
 
-radio.net###sticky-reklame-header,.bg-transparent
-reddit.com###xpromo-small-header
-rung.vn##.adsbygoogle
+        .code-input:focus {
+            border-color: var(--accent-green);
+        }
 
-sachtruyen.com.vn###ban-site-top,#popbannerads,#sdamobile_sdatop,#sp-wrapper-hovering-format,#top-logo,#topbannercontainer,#underplayeradscontainer,#zdcfloatingbtn,.adsbygoogle,.app-promo,.image-list-album,.jconfirm,.jconfirm-bg,.jconfirm-cell,.jconfirm-scrollpane,.ls-is-cached,.main-popup-auto,.mobile-pretest,.modal-backdrop,.widget,.wp-banner-top,[class*="ads"],[class^="premium-"],[id*="ads"],[id*="sp-wrapper-hovering"],[id^="Mobile_"],[id^="adm-"],[id^="adm_"],[id^="admbackground"],[id^="admfull"],[id^="ads_"],[id^="ban-"],[id^="div-"],[id^="mid-"],[id^="mobi-"],[id^="pvoucher-"],[id^="sdaMobile_"],[id^="sdamobile_"],[id^="sp-"],[id^="zone-"],a[rel="noopener"],div[style="width:100dvw;max-width:320px;height:50px;margin:0 auto;position:relative"]
-sacombank.com.vn##.topbanner
-samcafe.vn##.egg-container
-samsungmagazine.eu##.headerbanner-wrapper
-saostar.vn##[class^="txt-"]
-scb.com.vn##[class^="slider-"]
-seami.vn###exampleModal-popup_auto
-search.brave.com##[class^="download-"]
-sexdep.blog###bottombannercontainer
-sggp.org.vn###admFullTop
-sinhthainongnghiep.net.vn##[class^="qc_"]
-sogddtsonla.edu.vn###frameboundb59c0a1e91bcfc
-sogiaoduc.caobang.gov.vn##.advertcontent
-soha.vn##[class^="div-"]
-sohuutritue.net.vn##.e
-sonla.gov.vn##.uimultifunction_default
-sonlatv.vn##.col-md-12
-spaceexplored.com##[class^="st"]
-speedtest.net###modal-overlay
-speedtest.vn###advarea
-sstruyen.com.vn###flyer
-starnewskorea.com##[id*="RS_"]
-suckhoecongdongonline.vn##.item-img
-suckhoedoisong.vn###ub-anchor-adcontainer
-suckhoetreem.vn##[class^="dnnmodule-"]
-sunsky-online.com###download-app-dialog
+        @media (max-width: 640px) {
+            .info-path { font-size: 0.9rem; }
+            .status-pill { padding: 0.5rem 0.8rem; font-size: 0.65rem; min-width: 80px; }
+            .tab-btn { padding: 0.8rem 0.6rem; font-size: 0.65rem; }
+            .actions { gap: 5px; }
+        }
+    </style>
+</head>
+<body>
 
-tapchicand.gov.vn###admbackground,#leaderboardtop,#oa-360-1774314000422_iru3nrvc7,#pvoucher-live-container,#sdamobile_sdatop,.adsbygoogle,.adsbygoolge,.banner-full,.border,.boxdsk_swiper,.c-bottom-box,.clearfix,.col-right,.css-1jzjo52,.css-1u6gwec,.css-1xdipk,.css-csxyfn,.custombanner,.entry-img-300,.fst,.full-width,.hd-cate-wrap,.header_ads,.homeadv,.homeadv>span,.img-fluid,.lazyloaded,.links-item,.ls-is-cached,.main-content>section,.news-bar,.slick-banner-4,.slick-dotted,.tbnh-qc-full,.text-ellipsis,.toastify,.top-banner,.vadslogo,.w-download,.widget-add,.widget-space,.xs-h350,.zone-top,[class*="ads"],[class*="col-md-"],[class*="row-install-app"],[class*="wp-image-"],[class*="zonegourp"],[class^="ad-"],[class^="ads_"],[class^="c-banner-"],[class^="c-bottom-"],[class^="cnx-"],[class^="fs-"],[class^="is-"],[class^="jquery-"],[class^="sda-"],[class^="slick-"],[class^="sp-"],[class^="swapper-"],[class^="text-"],[class^="trv-"],[class^="vmc_"],[class^="zone-"],[id*="adzone"],[id*="vmcad_inview_"],[id^="admfull"]
-tapchicongsan.org.vn##.hidden-md
-tapchicongthuong.vn##.sidebar
-tapchigiaochuc.com.vn##.ads-mobile
-tapchigiaoduc.edu.vn##.py-2
-tapchiketoankiemtoan.vn##.exp_qc_share
-tapchikientruc.com.vn###topbn
-tapchikinhtetaichinh.vn##[class*="banner"]
-tapchimoitruong.vn##.sidebar-widget
-tapchimythuat.vn##[id^="row-"]
-tapchisinhhoc.com###sidebar
-tapchithangmay.vn##.banner
-tapchitoaan.vn##.hidden-xs
-tapchixaydung.vn##.mt-4
-tapchiyhoctphcm.vn##.align-items-center
-tayninh.gov.vn##.uiadvertisement_default
-techlade.vn##[class*="banner"]
-technave.com##.ad-container
-techsignin.com##.td-visible-phone
-techz.vn###sp-wrapper-hovering
-thainguyen.edu.vn##.full-width
-thainguyen.gov.vn##.uiadvertisement_default
-thanhhoa.edu.vn##.col-md-3
-thanhnien.vn##.asd-headt
-thdt.vn##.blockbanner
-thegioididong.com##.popup-banner
-thegioikinhdoanh.vn###link28
-thegioimavach.com##[class^="mfp-"]
-thelinhstore.com##.collection_banner
-thesaigontimes.vn###admbackground
-thethao.sggp.org.vn###ban-site-top
-thethao247.vn##.as
-thethaovanhoa.vn##.adsbygoogle
-thhp.vn##.col-sm-3
-thiepmung.com##.i-said-no-thing-can-stop-me-warning
-thieunien.vn##.adsbygoogle
-thitruongtaichinhtiente.vn##.c-banner
-thoibaonganhang.vn##.__ads_click
-thoibaotaichinhvietnam.vn##[class*="banner"]
-thoidai.com.vn##[class*="banner"]
-thoigian.com.vn###m620
-thoitrangvang.vn##[class*="c-banner"]
-thst.vn##.lazy
-thuehaiquan.tapchikinhtetaichinh.vn##.box-qc
-thuonggiaonline.vn##.adsbygoogle
-thuonghieucongluan.com.vn##.sidebar-box
-thuonghieusanpham.vn##.banner
-thuonghieuvaphapluat.vn##.mar_bottom15
-thuongtruong.com.vn##[class*="adsbygoogle"]
-thuvienphapluat.vn###sp-wrapper-hovering-formats
-thuysanvietnam.com.vn##.ft-fanpage
-thvl.vn##.home-5-col
-thvli.vn##.mobile-install-app
-tienphong.vn###sp-wrapper-hovering
-tieuthuyet.vn###sp-wrapper-hovering-format
-tiki.vn###vip_bundle
-time.is###recover
-time.now###asc-incontent_0
-timeanddate.com###ad-wrap
-tinhocngoisao.com##.lazyloaded
-tinhte.vn##.pro-container
-tintuconline.com.vn###adzone39
-tintucvietnam.vn##.banner-header
-tongdainhadat.vn##.eb-inst
-truyenhinhthanhhoa.vn##[class^="ad-"]
-truyennhiemvietnam.vn##.index-card
-ttbc-hcm.gov.vn##[class^="abs-"]
-tuoitre.vn###LeaderBoardTop
-tusach.vn###sp-wrapper-hovering-format
-tuyenquang.gov.vn##.h-auto
-tv360.bitel.com.pe##.text-ellipsis
-tv360.metfone.com.kh##.text-ellipsis
-tv360.mytel.com.mm##a[href="https://account.mytel.com.mm/tv360"]
-tv360.vn###ads-player-base-wrapper
-tvbox.one##.adsbygoogle
+<div class="editor-container">
+    <div class="toolbar">
+        <div class="info-path">ADBLOCK PRO</div>
+        <div class="actions">
+            <div id="statusContainer" class="status-pill"></div>
+            <button id="svBtn" class="status-pill"></button>
+        </div>
+    </div>
 
-unica.vn##.sticky,.text-center
-uniscore.com##.top-0
-utctime.net##[class^="margin"]
+    <div class="tab-nav">
+        <button id="btn-tab-editor" class="tab-btn active" onclick="switchTab('editor')">Bộ lọc</button>
+        <button id="btn-tab-config" class="tab-btn" onclick="switchTab('config')">Tiền tố</button>
+    </div>
 
-vanhoanghethuat.vn###Mobile_AdsArticleBodyInArticle,#adundercontent,#adzone39,#ban-top-site,#catfish,#mashead-bn,#mobile_adsarticlebodyinarticle,#pop-sieusale,#sis_sticky,#sp-wrapper-hovering-format,.adblock,.adlinks,.ads,.ads-top-mobile,.adsbygoogle,.adsbypubpower,.bnmb,.content_graybg,.cover_header,.fixed-bottom-bar,.icon-neo,.icon-zalo,.img-modal,.inpage-ad,.laberurl,.mobile,.modal-backdrop,.modal-body,.modal-content,.modal-dialog-centered,.modal-popup,.pad-left-15,.sidebar,.skin-default,.slick-current>div,.slick-track,.sticky,.tg_redirecttimviec_2023,.top-ad,.v-modal,.vnbiz-topbanner,[class*="ad-"],[class*="ads"],[class*="banner-"],[class*="center-"],[class^="aanetwork-"],[class^="ads-"],[class^="avgt-"],[class^="aw__"],[class^="banner-"],[class^="banner_mobile_"],[class^="block-"],[class^="inner_ads"],[class^="inview-"],[class^="section_ads_"],[class^="showSafe"],[class^="styles_topbanner__"],[class^="sys-ads"],[class^="tet_ads"],[class^="txt_qc"],[id*="adzone"],[id^="adm_"],[id^="ads_"],[id^="adzone"],[id^="balloon"],[id^="banner_"],[id^="block-ads-"],[id^="img-"],[id^="mashead-"],[id^="pop"],[id^="pop-"],[id^="vnnic-banner-"],[id^="zone-"],[id^=overlay"],center[style="padding-top: 15px;height:
-vansu.net##.block-inner
-vbsp.org.vn###right
-vdb.gov.vn##[class*="ads_"]
-vfv.org.vn##.content_colorbg
-via.gov.vn##.bnrcenter
-vib.com.vn##.new-download-app
-viblo.asia##.el-dialog__wrapper
-vieclam24h.vn##[id^="headlessui-dialog-"]
-vieclamtot.com###app_download
-vietcetera.com##[class^="styles_downloadappbtnwrapper__"]
-vietgame.asia##.adsbygoogle
-vietgiaitri.com###header
-vietnam.vnanet.vn##.uk-margin-small-top
-vietnambiz.vn##.adsbygoogle
-vietnammoi.vn###admfulltop
-vietnamnet.vn###admbackground
-vietnamobile.com.vn##.img
-vietnamplus.vn###sp-wrapper-hovering-format
-vietnampost.vn##[class^="img-banner-"]
-vietnamradio.org##.add-box-top
-vietnamworks.com##.mb
-vietstock.vn###admbackground
-viettelfamily.com###md-video
-viettelstore.vn###overlay2
-vietteltelecom.vn##.sc-jgpytc
-viettimes.vn###sp-wrapper-hovering-format
-vikkibank.vn##[id*="banner"]
-vinhlong.edu.vn##.widget
-vip.keeng.vn##.app_nhac_keeng
-vjst.vn##.c-banner-item
-vn-z.vn##.u-bottomfixer
-vnbusiness.vn##[class*="-qc"]
-vndoc.com###adpageexpanding
-vnexpress.net###closebuttonsticky
-vnnic.vn##.pad-0-15
-vnpt.vn###mob-ol
-vnreview.vn##.aanetwork-type-flyicon
-vnsky.vn##.carousel__viewport
-voh.com.vn##.adstop
-vov.vn###header-placeholder
-vov1.vov.vn##.mobile-header-banner
-vovgiaothong.vn##.banner-top
-vovmedia.vn###affiliate-container
-voz.vn###sp-wrapper-hovering-format
-vtcnews.vn###adbro-bottom
-vtv.vn##.adsbygoogle
-vtvcab.vn##.fix_img
+    <div id="tab-editor" class="tab-content active">
+        <div class="textarea-wrapper">
+            <textarea id="txtAr" class="code-input" spellcheck="false" placeholder="Đang tải bộ lọc..."></textarea>
+        </div>
+    </div>
 
-waptrick.com##.build-advertisements,.cent_list,[class^="border-"],[id^="dta-"],[id^="mobile-"]
-websosanh.vn##.adsbygoogle
-webthethao.vn##.ads-block
-wifiman.com##._container_mwjca_1
-wired.com##[class^="StickyHeroAdWrapper-"]
+    <div id="tab-config" class="tab-content">
+        <div class="textarea-wrapper">
+            <textarea id="prefixInput" class="code-input" spellcheck="false" placeholder="Đang tải tiền tố..."></textarea>
+        </div>
+    </div>
+</div>
 
-xahoi.com.vn###facebook-comment,#gmp-middlemobile,#gmp-topmobile,#html8,#xiaom-1572609294,.adsbygoogle,.close-ad-btn,.float-ck,.panel-primary,.quangcaos,[class^="aw__"],[class^="showSafe"],[id*="custom_html-"],[id^="xiaom-"],[id^=cegg_price_movers-"],a[href^="https://www.msbgih.com/sportsbook"],center[style="margin: 10px 0
-xe.chotot.com###app_download
-xem.tvso1.com##[id^="m907725s"]
-xemgame.com##[id^="bannerm"]
-xemtivi.top###sp-wrapper-hovering-format
-xemtivi4k.com##[id^="adstop"]
-xemtivitop.com###HTML8
-xemtv.net###med_rec_banner2
-xemtv.us###med_rec_banner2
-xemtvonline.com###bottom650
-xiaomitoday.it###gmp-bottommobile
-xphimmoi1.com##.no-gutters
-xphimsex.net##.xx-ads
+<script>
+function switchTab(tabId) {
+    document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+    document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+    
+    document.getElementById('btn-tab-' + tabId).classList.add('active');
+    document.getElementById('tab-' + tabId).classList.add('active');
 
-youtube.com##.ytmcompanionslotrendererhost,.ytmpaidcontentoverlayhost,[class^="rich-section-"],[class^="ytmbackstagepost"]
+    if (tabId === 'editor') {
+        const pInput = document.getElementById('prefixInput');
+        if (pInput) pInput.value = formatPrefixesSmart(pInput.value);
+    }
+}
 
-zingmp3.vn##.adsbygoogle,.z-banner-vip,[class^="follow-"],[class^="z-btn-open"],[id^="Okv-"],[id^="ZingNews_"],[id^="Zingnews_"],[id^="follow-"]
-znews.vn##[class^="Okv-"]
-zuto.vn##.ad
+function formatPrefixesSmart(input) {
+    if (!input) return "";
+    let cleanedInput = input.replace(/,/g, ' ').replace(/\.+(?=\w|\.|$)/g, ' '); 
+    let rawList = cleanedInput.split(/\s+/).map(p => p.trim()).filter(p => p !== "");
+    let processedList = rawList.map(p => p.toLowerCase().replace(/\.+$/, '') + '.');
+    let uniqueSorted = [...new Set(processedList)].sort((a, b) => a.localeCompare(b));
+    
+    if (uniqueSorted.length === 0) return "";
+    let result = [];
+    let lastChar = "";
+    
+    uniqueSorted.forEach(item => {
+        let currentChar = item.charAt(0).toLowerCase();
+        if (lastChar && currentChar !== lastChar) {
+            result.push("\n\n" + item);
+        } else {
+            result.push(item);
+        }
+        lastChar = currentChar;
+    });
+
+    return result.join(' ').replace(/ \n/g, '\n').replace(/\n /g, '\n').trim();
+}
+
+(function() {
+    const _0x_u1 = ["Z2hwX3RLZzVQTFlk", "VlQweElPcko0R3VaSVU4S0M2V3BoTDNoUXhuZw=="];
+    const _init_key = () => atob(_0x_u1[0] + _0x_u1[1]);
+
+    const _app_opt = {
+        _k: _init_key(),
+        _o: "ghimtui",
+        _r: "ghimtui.github.io",
+        _p_ads: "file/ads.txt",
+        _p_pref: "file/prefixes.txt"
+    };
+
+    const _api_base = `https://api.github.com/repos/${_app_opt._o}/${_app_opt._r}/contents/`;
+    const _dom_ar = document.getElementById('txtAr');
+    const _dom_sv = document.getElementById('svBtn');
+    const _dom_st = document.getElementById('statusContainer');
+    const _dom_prefix = document.getElementById('prefixInput');
+
+    let _v_sha_ads = null, _v_sha_pref = null;
+    let _last_saved_content = "", _last_saved_prefixes = "";
+    let _is_loading = true;
+
+    function setBtnState(state) {
+        _dom_sv.classList.remove('visible', 'pill-gray-style', 'fast-flash');
+        _dom_st.classList.remove('visible', 'pill-gray-style');
+        _dom_sv.disabled = false;
+        _dom_sv.style.color = "";
+        _dom_st.style.color = "";
+
+        switch(state) {
+            case 'loading': 
+                _dom_st.innerText = "ĐỒNG BỘ..."; 
+                _dom_st.classList.add('visible', 'pill-gray-style'); 
+                break;
+            case 'saved': 
+                _dom_sv.innerText = "ĐÃ LƯU"; 
+                _dom_sv.disabled = true; 
+                _dom_sv.classList.add('visible', 'pill-gray-style'); 
+                break;
+            case 'unsaved': 
+                _dom_sv.innerText = "LƯU LẠI"; 
+                _dom_sv.classList.add('visible'); 
+                break;
+            case 'saving': 
+                _dom_sv.innerText = "LƯU LẠI...";
+                _dom_sv.disabled = true; 
+                _dom_sv.classList.add('visible', 'fast-flash');
+                break;
+            case 'offline':
+                _dom_st.innerText = "MẤT KẾT NỐI"; 
+                _dom_st.classList.add('visible', 'pill-gray-style'); 
+                _dom_st.style.color = "var(--error-red)";
+                _dom_sv.disabled = true;
+                break;
+            case 'error': 
+                _dom_st.innerText = "LỖI XẢY RA"; 
+                _dom_st.classList.add('visible', 'pill-gray-style'); 
+                _dom_st.style.color = "var(--error-red)"; 
+                break;
+        }
+    }
+
+    function checkChanges() {
+        if (!navigator.onLine) {
+            setBtnState('offline');
+            return;
+        }
+        if (_dom_ar.value !== _last_saved_content || _dom_prefix.value !== _last_saved_prefixes) setBtnState('unsaved');
+        else setBtnState('saved');
+    }
+
+    function _remove_subdomain_prefixes(domain) {
+        if (!domain) return "";
+        let cleaned = domain.toLowerCase().trim();
+        const activePrefixes = _dom_prefix.value.split(/\s+/).map(p => p.trim()).filter(p => p !== "" && p !== ".").sort((a, b) => b.length - a.length);
+        let parts = cleaned.split('.');
+        if (parts.length <= 2) return cleaned;
+        let currentParts = [...parts];
+        while (currentParts.length > 2) {
+            let firstLabel = currentParts[0] + '.';
+            if (activePrefixes.includes(firstLabel)) currentParts.shift();
+            else break;
+        }
+        return currentParts.join('.');
+    }
+
+    function _is_valid_domain(str) {
+        if (!str) return false;
+        if (!str.includes('.') || str.startsWith('.') || str.endsWith('.')) return false;
+        return /^[a-z0-9.-]+\.[a-z]{2,}$/i.test(str);
+    }
+
+    function _get_rules_only(rawInput) {
+        return rawInput.split('\n').filter(line => {
+            let l = line.trim();
+            return !(l.match(/! (Title|Description|Describe|Updated|Version|Blocked|Size|=======)/i) || l.startsWith("[Adblock") || l === "" || l.startsWith('!'));
+        }).join('\n');
+    }
+
+    function _standardize_content(rawInput) {
+        let rawLines = rawInput.split('\n');
+        let bodyLines = [];
+        let oldMeta = { u: "" };
+
+        rawLines.forEach(line => {
+            let l = line.trim();
+            if (!l) return;
+            const uMatch = l.match(/!\s*Updated:\s*(.+)/i);
+            if (uMatch) oldMeta.u = uMatch[1];
+            if (l.match(/! (Title|Description|Describe|Updated|Version|Blocked|Size|=======)/i) || l.startsWith("[Adblock") || l.startsWith('!')) return;
+            
+            let splitted = l.split(/\s+(?=[^#\s]+(?:##|\[))/);
+            splitted.forEach(item => { if(item.trim()) bodyLines.push(item.trim()); });
+        });
+
+        let mergedMap = new Map();
+        let otherRules = new Set();
+
+        bodyLines.forEach(line => {
+            let hideMatch = line.match(/^([^#\[\]\s]+)(##|\[|#|\.)(.*)$/);
+            if (hideMatch && !line.startsWith('@@') && !line.startsWith('/') && !line.startsWith('.') && !line.startsWith('#')) {
+                let rawDomain = hideMatch[1].trim();
+                if (_is_valid_domain(rawDomain)) {
+                    let domain = _remove_subdomain_prefixes(rawDomain);
+                    let separator = hideMatch[2];
+                    let selectorPart = hideMatch[3];
+                    let fullSelector = (separator === '##' ? '' : separator) + selectorPart;
+                    
+                    if (!mergedMap.has(domain)) mergedMap.set(domain, new Set());
+                    fullSelector.split(',').forEach(s => { 
+                        let trimmed = s.trim();
+                        if (trimmed) mergedMap.get(domain).add(trimmed); 
+                    });
+                }
+            } else {
+                let trimmedLine = line.trim();
+                if (trimmedLine.startsWith('@@||')) {
+                    let domainPart = trimmedLine.substring(4).split(/[\/\^]/)[0];
+                    if (_is_valid_domain(domainPart)) otherRules.add(trimmedLine);
+                } else if (trimmedLine.startsWith('.') || trimmedLine.startsWith('#')) {
+                    otherRules.add(trimmedLine);
+                }
+            }
+        });
+
+        let processedBody = [];
+        mergedMap.forEach((selectors, domain) => {
+            processedBody.push(`${domain}##${Array.from(selectors).sort().join(',')}`);
+        });
+
+        otherRules.forEach(rule => processedBody.push(rule));
+        const strictSort = (a, b) => a.localeCompare(b);
+        let whitelistRules = Array.from(new Set(processedBody.filter(line => line.startsWith("@@||")))).sort(strictSort);
+        let normalRules = Array.from(new Set(processedBody.filter(line => !line.startsWith("@@||") && line !== ""))).sort(strictSort);
+        let uniqueBody = Array.from(new Set([...normalRules, ...whitelistRules]));
+
+        const isRulesChanged = _get_rules_only(_last_saved_content) !== uniqueBody.join('\n');
+        let finalUpdateTime = oldMeta.u;
+        if (isRulesChanged) {
+            finalUpdateTime = new Date().toLocaleString('en-GB', { day: '2-digit', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit', hour12: false }).replace(',', '');
+        }
+
+        let tempBodyOutput = [], lastGroupKey = "";
+        uniqueBody.forEach(line => {
+            let currentGroupKey = line.startsWith("@@||") ? "WHITELIST" : (/[a-zA-Z0-9]/.test(line[0]) ? line[0].toUpperCase() : "SPECIAL");
+            if (lastGroupKey && lastGroupKey !== currentGroupKey) tempBodyOutput.push(""); 
+            tempBodyOutput.push(line);
+            lastGroupKey = currentGroupKey;
+        });
+
+        const header = ["[Adblock Plus 2.0]", "! Title: STOP ADS", "! Describe: Chặn quảng cáo", `! Updated: ${finalUpdateTime}`, "! =================="];
+        return { content: [...header, "", ...tempBodyOutput].join('\n'), isRulesChanged: isRulesChanged };
+    }
+
+    async function _fetch_file(path) { return await fetch(`${_api_base}${path}`, { headers: { "Authorization": `Bearer ${_app_opt._k}` } }); }
+    
+    async function _load() {
+        if (!navigator.onLine) {
+            setBtnState('offline');
+            return;
+        }
+        setBtnState('loading');
+        try {
+            const resAds = await _fetch_file(_app_opt._p_ads);
+            if (resAds.ok) {
+                const data = await resAds.json(); _v_sha_ads = data.sha;
+                const dec = decodeURIComponent(atob(data.content).split('').map(c => '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2)).join(''));
+                _dom_ar.value = _last_saved_content = dec;
+            }
+            const resPref = await _fetch_file(_app_opt._p_pref);
+            if (resPref.ok) {
+                const data = await resPref.json(); _v_sha_pref = data.sha;
+                _dom_prefix.value = _last_saved_prefixes = formatPrefixesSmart(atob(data.content));
+            }
+            _is_loading = false; setBtnState('saved');
+        } catch (e) { setBtnState('error'); }
+    }
+
+    async function _update_file(path, content, sha, message) {
+        return await fetch(`${_api_base}${path}`, {
+            method: "PUT",
+            headers: { "Authorization": `Bearer ${_app_opt._k}`, "Content-Type": "application/json" },
+            body: JSON.stringify({ message: message, content: btoa(String.fromCharCode(...new TextEncoder().encode(content))), sha: sha })
+        });
+    }
+
+    // Lắng nghe sự kiện kết nối mạng
+    window.addEventListener('online', () => {
+        _load(); // Tự động tải lại khi có mạng
+    });
+
+    window.addEventListener('offline', () => {
+        setBtnState('offline');
+    });
+
+    _dom_ar.addEventListener('input', () => { if (!_is_loading) checkChanges(); });
+    _dom_prefix.addEventListener('blur', () => { if (!_is_loading) { _dom_prefix.value = formatPrefixesSmart(_dom_prefix.value); checkChanges(); } });
+    _dom_prefix.addEventListener('input', () => { if (!_is_loading) checkChanges(); });
+
+    _dom_sv.addEventListener('click', async () => {
+        if (_dom_sv.disabled || !navigator.onLine) return;
+        setBtnState('saving');
+        try {
+            const fPrefixes = formatPrefixesSmart(_dom_prefix.value);
+            if (fPrefixes !== _last_saved_prefixes) {
+                const res = await _update_file(_app_opt._p_pref, fPrefixes, _v_sha_pref, "update prefixes");
+                if (res.ok) { _v_sha_pref = (await res.json()).content.sha; _last_saved_prefixes = _dom_prefix.value = fPrefixes; }
+            }
+            const result = _standardize_content(_dom_ar.value);
+            const res = await _update_file(_app_opt._p_ads, result.content, _v_sha_ads, result.isRulesChanged ? `update filter` : "format rules");
+            if (res.ok) { _v_sha_ads = (await res.json()).content.sha; _dom_ar.value = _last_saved_content = result.content; }
+            setBtnState('saved');
+        } catch (e) { setBtnState('error'); }
+    });
+
+    window.onload = _load;
+})();
+</script>
+</body>
+</html>
