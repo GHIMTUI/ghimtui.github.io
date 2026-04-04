@@ -1,11 +1,11 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Describe: Chặn quảng cáo
-! Updated: 04 Apr 2026 16:33
-! Version: 1.0.138
-! Blocked: 533
-! Size: 27.69KB
+! Updated: 04 Apr 2026 16:35
+! Version: 1.0.139
 ! ==================
+
+.ad
 
 1thegioi.vn##[class*="zone-"],[class^="c-banner-"],[class^="is-"]
 
