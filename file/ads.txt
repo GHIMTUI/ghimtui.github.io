@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Describe: Chặn quảng cáo
-! Updated: 04 Apr 2026 16:37
+! Updated: 04 Apr 2026 16:38
 ! ==================
 
 1thegioi.vn##[class*="zone-"],[class^="c-banner-"],[class^="is-"]
@@ -294,6 +294,7 @@ luatminhkhue.vn###sp-wrapper-hovering-format
 luatvietnam.vn##.adsbygoogle
 lyluanchinhtri.vn##[class^="c-banner-"]
 
+m.me##.ads
 mail.google.com##.adsbygoogle,.c-banner,.index-download-bg,.my-6,.notify_block,[class*="banner"],[class^="banner-"],[class^="catfish-"],[class^="space-y-"],[class^="widget-"],[id^="div-gpt-ad-"],[id^="nav"],[id^="ts_ad_"],[id^="views-"],div[style="width: 100%; min-height: 280px; display: flex; justify-content: center; align-items: center; margin: 20px 0; background-color: transparent;"]
 mangatooncom.vn##.detail-download-bg
 manilastandard.net##[id*="div-gpt-ad-"]
