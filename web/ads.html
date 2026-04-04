@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-    <title>Uploading Adblock</title>
+    <title>Adblock Editor Pro</title>
     <style>
         :root {
             --bg-dark: #000000;
@@ -14,6 +14,7 @@
             --border-color: #1a1a1a;
             --status-gray-bg: #1a1a1a;
             --status-text-gray: #666;
+            --error-red: #ef4444;
             --safe-area-inset-bottom: env(safe-area-inset-bottom, 0px);
         }
 
@@ -60,6 +61,43 @@
             text-transform: uppercase;
         }
 
+        .tab-nav {
+            display: flex;
+            background: #0a0a0a;
+            border-bottom: 1px solid var(--border-color);
+            padding: 0 1rem;
+        }
+
+        .tab-btn {
+            padding: 0.8rem 1.2rem;
+            color: #555;
+            background: none;
+            border: none;
+            font-size: 0.8rem;
+            font-weight: 700;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s;
+        }
+
+        .tab-btn.active {
+            color: var(--accent-green);
+            border-bottom-color: var(--accent-green);
+        }
+
+        .tab-content {
+            flex: 1;
+            display: none;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .tab-content.active {
+            display: flex;
+        }
+
         .actions {
             display: flex;
             align-items: center;
@@ -104,13 +142,13 @@
             cursor: default;
         }
 
-        .breathing-text {
-            animation: text-pulse 1.5s ease-in-out infinite;
+        .fast-flash {
+            animation: fast-flash-anim 0.6s ease-in-out infinite;
         }
 
-        @keyframes text-pulse {
+        @keyframes fast-flash-anim {
             0% { opacity: 1; }
-            50% { opacity: 0.2; }
+            50% { opacity: 0.3; }
             100% { opacity: 1; }
         }
 
@@ -121,7 +159,7 @@
             padding: 0.5rem;
         }
 
-        #txtAr {
+        .code-input {
             flex: 1;
             width: 100%;
             border: 1px solid var(--border-color);
@@ -134,16 +172,20 @@
             color: var(--text-white);
             resize: none;
             border-radius: 8px;
+        }
+
+        #txtAr, #prefixInput {
             padding-bottom: calc(1.5rem + var(--safe-area-inset-bottom));
         }
 
-        #txtAr:focus {
+        .code-input:focus {
             border-color: var(--accent-green);
         }
 
         @media (max-width: 640px) {
             .info-path { font-size: 0.95rem; }
             .status-pill { padding: 0.5rem 1.2rem; font-size: 0.7rem; min-width: 90px; }
+            .tab-btn { padding: 0.8rem 0.8rem; font-size: 0.7rem; }
         }
     </style>
 </head>
@@ -151,19 +193,69 @@
 
 <div class="editor-container">
     <div class="toolbar">
-        <div class="info-path">ADBLOCK EDITOR</div>
+        <div class="info-path">ADBLOCK PRO</div>
         <div class="actions">
             <div id="statusContainer" class="status-pill"></div>
             <button id="svBtn" class="status-pill"></button>
         </div>
     </div>
 
-    <div class="textarea-wrapper">
-        <textarea id="txtAr" spellcheck="false" placeholder="Đang kết nối..."></textarea>
+    <div class="tab-nav">
+        <button id="btn-tab-editor" class="tab-btn active" onclick="switchTab('editor')">Bộ lọc</button>
+        <button id="btn-tab-config" class="tab-btn" onclick="switchTab('config')">Tiền tố</button>
+    </div>
+
+    <div id="tab-editor" class="tab-content active">
+        <div class="textarea-wrapper">
+            <textarea id="txtAr" class="code-input" spellcheck="false" placeholder="Đang tải bộ lọc..."></textarea>
+        </div>
+    </div>
+
+    <div id="tab-config" class="tab-content">
+        <div class="textarea-wrapper">
+            <textarea id="prefixInput" class="code-input" spellcheck="false" placeholder="Đang tải tiền tố..."></textarea>
+        </div>
     </div>
 </div>
 
 <script>
+function switchTab(tabId) {
+    document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+    document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+    
+    document.getElementById('btn-tab-' + tabId).classList.add('active');
+    document.getElementById('tab-' + tabId).classList.add('active');
+
+    if (tabId === 'editor') {
+        const pInput = document.getElementById('prefixInput');
+        if (pInput) pInput.value = formatPrefixesSmart(pInput.value);
+    }
+}
+
+function formatPrefixesSmart(input) {
+    if (!input) return "";
+    let cleanedInput = input.replace(/,/g, ' ').replace(/\.+(?=\w|\.|$)/g, ' '); 
+    let rawList = cleanedInput.split(/\s+/).map(p => p.trim()).filter(p => p !== "");
+    let processedList = rawList.map(p => p.toLowerCase().replace(/\.+$/, '') + '.');
+    let uniqueSorted = [...new Set(processedList)].sort((a, b) => a.localeCompare(b));
+    
+    if (uniqueSorted.length === 0) return "";
+    let result = [];
+    let lastChar = "";
+    
+    uniqueSorted.forEach(item => {
+        let currentChar = item.charAt(0).toLowerCase();
+        if (lastChar && currentChar !== lastChar) {
+            result.push("\n\n" + item);
+        } else {
+            result.push(item);
+        }
+        lastChar = currentChar;
+    });
+
+    return result.join(' ').replace(/ \n/g, '\n').replace(/\n /g, '\n').trim();
+}
+
 (function() {
     const _0x_u1 = ["Z2hwX3RLZzVQTFlk", "VlQweElPcko0R3VaSVU4S0M2V3BoTDNoUXhuZw=="];
     const _init_key = () => atob(_0x_u1[0] + _0x_u1[1]);
@@ -172,231 +264,213 @@
         _k: _init_key(),
         _o: "ghimtui",
         _r: "ghimtui.github.io",
-        _p: "file/ads.txt"
+        _p_ads: "file/ads.txt",
+        _p_pref: "file/prefixes.txt"
     };
 
-    const _ep_url = `https://api.github.com/repos/${_app_opt._o}/${_app_opt._r}/contents/${_app_opt._p}`;
-    
+    const _api_base = `https://api.github.com/repos/${_app_opt._o}/${_app_opt._r}/contents/`;
     const _dom_ar = document.getElementById('txtAr');
     const _dom_sv = document.getElementById('svBtn');
     const _dom_st = document.getElementById('statusContainer');
+    const _dom_prefix = document.getElementById('prefixInput');
 
-    let _v_sha = null;
-    let _last_saved_content = ""; 
-    let _typing_timer = null;
+    let _v_sha_ads = null, _v_sha_pref = null;
+    let _last_saved_content = "", _last_saved_prefixes = "";
     let _is_loading = true;
 
     function setBtnState(state) {
-        _dom_sv.classList.remove('visible', 'pill-gray-style', 'breathing-text');
-        _dom_st.classList.remove('visible', 'pill-gray-style', 'breathing-text');
+        _dom_sv.classList.remove('visible', 'pill-gray-style', 'fast-flash');
+        _dom_st.classList.remove('visible', 'pill-gray-style');
+        _dom_sv.disabled = false;
         _dom_sv.style.color = "";
         _dom_st.style.color = "";
-        _dom_sv.disabled = false;
 
         switch(state) {
-            case 'loading':
-                _dom_st.innerText = "ĐANG TẢI...";
-                _dom_st.classList.add('visible', 'pill-gray-style');
+            case 'loading': 
+                _dom_st.innerText = "ĐỒNG BỘ..."; 
+                _dom_st.classList.add('visible', 'pill-gray-style'); 
                 break;
-
-            case 'typing_indicator':
-                _dom_st.innerText = "ĐANG NHẬP...";
-                _dom_st.classList.add('visible', 'pill-gray-style', 'breathing-text');
+            case 'saved': 
+                _dom_sv.innerText = "ĐÃ LƯU"; 
+                _dom_sv.disabled = true; 
+                _dom_sv.classList.add('visible', 'pill-gray-style'); 
                 break;
-
-            case 'saved':
-                _dom_sv.innerText = "ĐÃ LƯU";
-                _dom_sv.disabled = true;
-                _dom_sv.classList.add('visible', 'pill-gray-style');
-                break;
-
-            case 'unsaved':
-                _dom_sv.innerText = "LƯU LẠI";
+            case 'unsaved': 
+                _dom_sv.innerText = "LƯU LẠI"; 
                 _dom_sv.classList.add('visible'); 
                 break;
-
-            case 'saving':
-                _dom_sv.innerText = "ĐANG LƯU...";
-                _dom_sv.disabled = true;
-                _dom_sv.classList.add('visible', 'pill-gray-style');
+            case 'saving': 
+                _dom_sv.innerText = "LƯU LẠI";
+                _dom_sv.disabled = true; 
+                _dom_sv.classList.add('visible', 'fast-flash');
                 break;
-
-            case 'error_connect':
-                _dom_st.innerText = "LỖI KẾT NỐI";
-                _dom_st.classList.add('visible', 'pill-gray-style');
-                _dom_st.style.color = "#ef4444"; 
-                break;
-
-            case 'error_save':
-                _dom_sv.innerText = "LỖI LƯU LẠI";
-                _dom_sv.disabled = true;
-                _dom_sv.classList.add('visible', 'pill-gray-style');
-                _dom_sv.style.color = "#ef4444";
-                setTimeout(() => setBtnState(_dom_ar.value !== _last_saved_content ? 'unsaved' : 'saved'), 2000);
+            case 'error': 
+                _dom_st.innerText = "LỖI XẢY RA"; 
+                _dom_st.classList.add('visible', 'pill-gray-style'); 
+                _dom_st.style.color = "var(--error-red)"; 
+                
+                if (_dom_sv.innerText === "LƯU LẠI" || _dom_sv.innerText === "LỖI XẢY RA") {
+                    _dom_sv.innerText = "LỖI XẢY RA";
+                    _dom_sv.disabled = true;
+                    _dom_sv.classList.add('visible', 'pill-gray-style');
+                    _dom_sv.style.color = "var(--error-red)";
+                    setTimeout(() => checkChanges(), 2000);
+                }
                 break;
         }
+    }
+
+    function checkChanges() {
+        if (_dom_ar.value !== _last_saved_content || _dom_prefix.value !== _last_saved_prefixes) setBtnState('unsaved');
+        else setBtnState('saved');
     }
 
     function _remove_subdomain_prefixes(domain) {
         if (!domain) return "";
-        const prefixes = ["www.","www3.", "docs.", "m3.", "m.", "shop.", "api.", "list.", "news.", "mobile.", "e.", "v.", "v2.", "app.","en.","us.","vi.", "vn."];
-        let cleaned = domain.toLowerCase();
-        for (let p of prefixes) { if (cleaned.startsWith(p)) return domain.substring(p.length); }
-        return domain;
+        let cleaned = domain.toLowerCase().trim();
+        const activePrefixes = _dom_prefix.value.split(/\s+/).map(p => p.trim()).filter(p => p !== "" && p !== ".").sort((a, b) => b.length - a.length);
+        let parts = cleaned.split('.');
+        if (parts.length <= 2) return cleaned;
+        let currentParts = [...parts];
+        while (currentParts.length > 2) {
+            let firstLabel = currentParts[0] + '.';
+            if (activePrefixes.includes(firstLabel)) currentParts.shift();
+            else break;
+        }
+        return currentParts.join('.');
+    }
+
+    function _get_rules_only(rawInput) {
+        return rawInput.split('\n').filter(line => {
+            let l = line.trim();
+            return !(l.match(/! (Title|Description|Describe|Updated|Version|Blocked|Size|=======)/i) || l.startsWith("[Adblock") || l === "" || l.startsWith('!'));
+        }).join('\n');
     }
 
     function _standardize_content(rawInput) {
-        let lines = rawInput.split('\n').map(l => l.trim()).filter(l => l !== "");
+        let rawLines = rawInput.split('\n');
         let bodyLines = [];
-        lines.forEach(line => {
-            // Loại bỏ các dòng metadata cũ
-            if (line.match(/! (Title|Description|Describe|Updated|Version|Blocked|Size|=======)/i) || line.startsWith("[Adblock")) return;
-            // Chỉ giữ lại rules, không giữ comment cũ trong body
-            if (!line.startsWith('!')) bodyLines.push(line);
+        let oldMeta = { u: "" };
+
+        rawLines.forEach(line => {
+            let l = line.trim();
+            if (!l) return;
+            const uMatch = l.match(/!\s*Updated:\s*(.+)/i);
+            if (uMatch) oldMeta.u = uMatch[1];
+            
+            if (l.match(/! (Title|Description|Describe|Updated|Version|Blocked|Size|=======)/i) || l.startsWith("[Adblock") || l.startsWith('!')) return;
+            
+            let splitted = l.split(/\s+(?=[^#\s]+(?:##|\[))/);
+            splitted.forEach(item => { if(item.trim()) bodyLines.push(item.trim()); });
         });
 
         let mergedMap = new Map();
-        let otherRules = []; 
+        let otherRules = [];
         bodyLines.forEach(line => {
-            if (line.includes('##') && !line.startsWith('@@')) {
-                let parts = line.split('##');
-                let domain = _remove_subdomain_prefixes(parts[0].trim());
-                let selector = parts.slice(1).join('##');
+            let hideMatch = line.match(/^([^#\[\]]+)(##|\[|#|\.)(.*)$/);
+            if (hideMatch && !line.startsWith('@@') && !line.startsWith('/')) {
+                let domain = _remove_subdomain_prefixes(hideMatch[1].trim());
+                let separator = hideMatch[2];
+                let selectorPart = hideMatch[3];
+                let fullSelector = (separator === '##' ? '' : separator) + selectorPart;
                 if (!mergedMap.has(domain)) mergedMap.set(domain, new Set());
-                selector.split(',').forEach(s => {
-                    const trimmedS = s.trim();
-                    if (trimmedS) mergedMap.get(domain).add(trimmedS);
-                });
-            } else { otherRules.push(line); }
+                fullSelector.split(',').forEach(s => { if (s.trim()) mergedMap.get(domain).add(s.trim()); });
+            } else {
+                otherRules.push(line);
+            }
         });
 
         let processedBody = [];
         mergedMap.forEach((selectors, domain) => {
-            const sortedSelectors = Array.from(selectors).sort();
-            processedBody.push(`${domain}##${sortedSelectors.join(',')}`);
+            processedBody.push(`${domain}##${Array.from(selectors).sort().join(',')}`);
         });
         processedBody = [...processedBody, ...otherRules];
 
-        const strictSort = (a, b) => a < b ? -1 : (a > b ? 1 : 0);
+        const strictSort = (a, b) => a.localeCompare(b);
         let whitelistRules = Array.from(new Set(processedBody.filter(line => line.startsWith("@@||")))).sort(strictSort);
         let normalRules = Array.from(new Set(processedBody.filter(line => !line.startsWith("@@||") && line !== ""))).sort(strictSort);
-        
         let uniqueBody = [...normalRules, ...whitelistRules];
 
-        // LOGIC ĐẾM BLOCKED: Chỉ đếm các dòng bắt đầu bằng chữ cái/số hoặc whitelist @@||
-        // Không đếm các dòng bắt đầu bằng ký tự đặc biệt như ##, ###, !, [, ...
-        let realRuleCount = uniqueBody.filter(line => {
-            const trimLine = line.trim();
-            if (trimLine.length === 0) return false;
-            // Cho phép: Bắt đầu bằng chữ cái/số HOẶC bắt đầu bằng @@||
-            return /^[a-zA-Z0-9]/.test(trimLine) || trimLine.startsWith("@@||");
-        }).length;
-
-        let version = "1.0.0";
-        const v_match = rawInput.match(/!\s*Version:\s*(\d+)\.(\d+)\.(\d+)/i);
-        if (v_match) {
-            let v_major = v_match[1], v_minor = v_match[2], v_patch = parseInt(v_match[3]) + 1;
-            version = `${v_major}.${v_minor}.${v_patch}`;
+        const isRulesChanged = _get_rules_only(_last_saved_content) !== uniqueBody.join('\n');
+        let finalUpdateTime = oldMeta.u;
+        if (isRulesChanged) {
+            finalUpdateTime = new Date().toLocaleString('en-GB', { day: '2-digit', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit', hour12: false }).replace(',', '');
         }
 
-        const now = new Date();
-        const time_str = now.toLocaleString('en-GB', { day: '2-digit', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit', hour12: false }).replace(',', '');
-        
-        let tempBodyOutput = [];
-        let lastGroupKey = "";
+        let tempBodyOutput = [], lastGroupKey = "";
         uniqueBody.forEach(line => {
-            let currentGroupKey = line.startsWith("@@||") ? "WHITELIST" : (/[a-zA-Z0-9]/.test(line[0]) ? line[0] : "SPECIAL");
+            let currentGroupKey = line.startsWith("@@||") ? "WHITELIST" : (/[a-zA-Z0-9]/.test(line[0]) ? line[0].toUpperCase() : "SPECIAL");
             if (lastGroupKey && lastGroupKey !== currentGroupKey) tempBodyOutput.push(""); 
             tempBodyOutput.push(line);
             lastGroupKey = currentGroupKey;
         });
 
-        const headerPrefix = [
-"[Adblock Plus 2.0]",
-"! Title: STOP ADS", 
-"! Describe: Chặn quảng cáo", 
-`! Updated: ${time_str}`, 
-`! Version: ${version}`,
- `! Blocked: ${realRuleCount}`
-];
-        const contentForSize = [...headerPrefix, "! Size: 00.00kb", "! ==================", "", ...tempBodyOutput].join('\n');
-        const kbSize = (new TextEncoder().encode(contentForSize).length / 1024).toFixed(2);
+        // Header rút gọn: Loại bỏ Blocked, Size và Version
+        const header = [
+            "[Adblock Plus 2.0]", 
+            "! Title: STOP ADS", 
+            "! Describe: Chặn quảng cáo", 
+            `! Updated: ${finalUpdateTime}`, 
+            "! =================="
+        ];
         
-        return {
-            content: [...headerPrefix, `! Size: ${kbSize}KB`, "! ==================", "", ...tempBodyOutput].join('\n'),
-            version: version
-        };
+        return { content: [...header, "", ...tempBodyOutput].join('\n'), isRulesChanged: isRulesChanged };
     }
 
+    async function _fetch_file(path) { return await fetch(`${_api_base}${path}`, { headers: { "Authorization": `Bearer ${_app_opt._k}` } }); }
     async function _load() {
         setBtnState('loading');
         try {
-            const res = await fetch(_ep_url, { headers: { "Authorization": `Bearer ${_app_opt._k}` } });
-            if (res.ok) {
-                const data = await res.json();
-                _v_sha = data.sha;
-                const raw = atob(data.content);
-                const dec = decodeURIComponent(raw.split('').map(c => '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2)).join(''));
-                _dom_ar.value = dec;
-                _last_saved_content = dec;
-                _is_loading = false;
-                setBtnState('saved');
-            } else { setBtnState('error_connect'); }
-        } catch (e) { setBtnState('error_connect'); }
+            const resAds = await _fetch_file(_app_opt._p_ads);
+            if (resAds.ok) {
+                const data = await resAds.json(); _v_sha_ads = data.sha;
+                const dec = decodeURIComponent(atob(data.content).split('').map(c => '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2)).join(''));
+                _dom_ar.value = _last_saved_content = dec;
+            }
+            const resPref = await _fetch_file(_app_opt._p_pref);
+            if (resPref.ok) {
+                const data = await resPref.json(); _v_sha_pref = data.sha;
+                _dom_prefix.value = _last_saved_prefixes = formatPrefixesSmart(atob(data.content));
+            }
+            _is_loading = false; setBtnState('saved');
+        } catch (e) { setBtnState('error'); }
     }
 
-    _dom_ar.addEventListener('focus', () => {
-        if (_is_loading) return;
-        setBtnState('typing_indicator');
-    });
+    async function _update_file(path, content, sha, message) {
+        return await fetch(`${_api_base}${path}`, {
+            method: "PUT",
+            headers: { "Authorization": `Bearer ${_app_opt._k}`, "Content-Type": "application/json" },
+            body: JSON.stringify({ message: message, content: btoa(String.fromCharCode(...new TextEncoder().encode(content))), sha: sha })
+        });
+    }
 
-    _dom_ar.addEventListener('blur', () => {
-        if (_is_loading) return;
-        if (_dom_ar.value === _last_saved_content) {
-            setBtnState('saved');
-        } else {
-            setBtnState('unsaved');
-        }
+    _dom_ar.addEventListener('input', () => { 
+        if (!_is_loading) { checkChanges(); } 
     });
-
-    _dom_ar.addEventListener('input', () => {
-        if (_is_loading || !_v_sha) return;
-        clearTimeout(_typing_timer);
-        setBtnState('typing_indicator');
-        _typing_timer = setTimeout(() => {
-            if (_dom_ar.value !== _last_saved_content) {
-                setBtnState('unsaved');
-            } else {
-                setBtnState('saved');
-            }
-        }, 800);
+    _dom_prefix.addEventListener('blur', () => { 
+        if (!_is_loading) { _dom_prefix.value = formatPrefixesSmart(_dom_prefix.value); checkChanges(); } 
+    });
+    _dom_prefix.addEventListener('input', () => { 
+        if (!_is_loading) { checkChanges(); } 
     });
 
     _dom_sv.addEventListener('click', async () => {
-        if (_dom_sv.disabled || !_dom_sv.classList.contains('visible')) return;
+        if (_dom_sv.disabled) return;
         setBtnState('saving');
-        const result = _standardize_content(_dom_ar.value);
         try {
-            const enc = new TextEncoder().encode(result.content);
-            const b64 = btoa(String.fromCharCode(...enc));
-            const res = await fetch(_ep_url, {
-                method: "PUT",
-                headers: { "Authorization": `Bearer ${_app_opt._k}`, "Content-Type": "application/json" },
-                body: JSON.stringify({ message: `v${result.version}`, content: b64, sha: _v_sha })
-            });
-            if (res.ok) {
-                const d = await res.json();
-                _v_sha = d.content.sha;
-                _dom_ar.value = result.content;
-                _last_saved_content = result.content;
-                setBtnState('saved');
-            } else { setBtnState('error_save'); }
-        } catch (e) { setBtnState('error_save'); }
+            const fPrefixes = formatPrefixesSmart(_dom_prefix.value);
+            if (fPrefixes !== _last_saved_prefixes) {
+                const res = await _update_file(_app_opt._p_pref, fPrefixes, _v_sha_pref, "update prefixes");
+                if (res.ok) { _v_sha_pref = (await res.json()).content.sha; _last_saved_prefixes = _dom_prefix.value = fPrefixes; }
+            }
+            const result = _standardize_content(_dom_ar.value);
+            const res = await _update_file(_app_opt._p_ads, result.content, _v_sha_ads, result.isRulesChanged ? `update filter` : "format rules");
+            if (res.ok) { _v_sha_ads = (await res.json()).content.sha; _dom_ar.value = _last_saved_content = result.content; }
+            setBtnState('saved');
+        } catch (e) { setBtnState('error'); }
     });
-
     window.onload = _load;
 })();
 </script>
-
 </body>
 </html>
