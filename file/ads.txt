@@ -4,7 +4,7 @@
 ! Updated: 04 Apr 2026 22:25
 ! ==================
 
-.ad
+
 
 1thegioi.vn##[class*="zone-"],[class^="c-banner-"],[class^="is-"]
 
