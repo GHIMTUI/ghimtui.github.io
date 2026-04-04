@@ -323,7 +323,7 @@
         const kbSize = (new TextEncoder().encode(contentForSize).length / 1024).toFixed(2);
         
         return {
-            content: [...headerPrefix, `! Size: ${kbSize}kb`, "! ==================", "", ...tempBodyOutput].join('\n'),
+            content: [...headerPrefix, `! Size: ${kbSize}KB`, "! ==================", "", ...tempBodyOutput].join('\n'),
             version: version
         };
     }
