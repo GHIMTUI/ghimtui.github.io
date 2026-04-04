@@ -10,6 +10,7 @@
             --container-bg: #050505;
             --accent-green: #15803d;
             --accent-hover: #166534;
+            --accent-blue: #1d4ed8;
             --text-white: #ffffff;
             --border-color: #1a1a1a;
             --status-gray-bg: #1a1a1a;
@@ -101,11 +102,12 @@
         .actions {
             display: flex;
             align-items: center;
+            gap: 8px;
             min-height: 38px;
         }
 
         .status-pill {
-            padding: 0.6rem 1.5rem;
+            padding: 0.6rem 1.2rem;
             border-radius: 50px; 
             font-size: 0.75rem;
             font-weight: 900;
@@ -115,8 +117,8 @@
             display: none; 
             align-items: center;
             justify-content: center;
-            min-width: 110px;
-            transition: background-color 0.3s ease;
+            min-width: 100px;
+            transition: all 0.3s ease;
             user-select: none;
             border: none;
             outline: none;
@@ -143,7 +145,7 @@
         }
 
         .fast-flash {
-            animation: fast-flash-anim 0.6s ease-in-out infinite;
+            animation: fast-flash-anim 0.4s ease-in-out infinite;
         }
 
         @keyframes fast-flash-anim {
@@ -183,9 +185,10 @@
         }
 
         @media (max-width: 640px) {
-            .info-path { font-size: 0.95rem; }
-            .status-pill { padding: 0.5rem 1.2rem; font-size: 0.7rem; min-width: 90px; }
-            .tab-btn { padding: 0.8rem 0.8rem; font-size: 0.7rem; }
+            .info-path { font-size: 0.9rem; }
+            .status-pill { padding: 0.5rem 0.8rem; font-size: 0.65rem; min-width: 80px; }
+            .tab-btn { padding: 0.8rem 0.6rem; font-size: 0.65rem; }
+            .actions { gap: 5px; }
         }
     </style>
 </head>
@@ -300,27 +303,29 @@ function formatPrefixesSmart(input) {
                 _dom_sv.classList.add('visible'); 
                 break;
             case 'saving': 
-                _dom_sv.innerText = "LƯU LẠI";
+                _dom_sv.innerText = "LƯU LẠI...";
                 _dom_sv.disabled = true; 
                 _dom_sv.classList.add('visible', 'fast-flash');
+                break;
+            case 'offline':
+                _dom_st.innerText = "MẤT KẾT NỐI"; 
+                _dom_st.classList.add('visible', 'pill-gray-style'); 
+                _dom_st.style.color = "var(--error-red)";
+                _dom_sv.disabled = true;
                 break;
             case 'error': 
                 _dom_st.innerText = "LỖI XẢY RA"; 
                 _dom_st.classList.add('visible', 'pill-gray-style'); 
                 _dom_st.style.color = "var(--error-red)"; 
-                
-                if (_dom_sv.innerText === "LƯU LẠI" || _dom_sv.innerText === "LỖI XẢY RA") {
-                    _dom_sv.innerText = "LỖI XẢY RA";
-                    _dom_sv.disabled = true;
-                    _dom_sv.classList.add('visible', 'pill-gray-style');
-                    _dom_sv.style.color = "var(--error-red)";
-                    setTimeout(() => checkChanges(), 2000);
-                }
                 break;
         }
     }
 
     function checkChanges() {
+        if (!navigator.onLine) {
+            setBtnState('offline');
+            return;
+        }
         if (_dom_ar.value !== _last_saved_content || _dom_prefix.value !== _last_saved_prefixes) setBtnState('unsaved');
         else setBtnState('saved');
     }
@@ -340,11 +345,23 @@ function formatPrefixesSmart(input) {
         return currentParts.join('.');
     }
 
+    function _is_valid_domain(str) {
+        if (!str) return false;
+        if (!str.includes('.') || str.startsWith('.') || str.endsWith('.')) return false;
+        return /^[a-z0-9.-]+\.[a-z]{2,}$/i.test(str);
+    }
+
     function _get_rules_only(rawInput) {
         return rawInput.split('\n').filter(line => {
             let l = line.trim();
-            return !(l.match(/! (Title|Description|Describe|Updated|Version|Blocked|Size|=======)/i) || l.startsWith("[Adblock") || l === "" || l.startsWith('!'));
+            return !(l === "" || l.match(/! (Title|Description|Describe|Updated|Version|Blocked|Size|=======)/i) || l.startsWith("[Adblock") || l.startsWith('!') || l.startsWith('#') || l.startsWith('@'));
         }).join('\n');
+    }
+
+    function _format_kb_only(text) {
+        const bytes = new TextEncoder().encode(text).length;
+        const kb = bytes / 1024;
+        return kb.toFixed(2) + " KB";
     }
 
     function _standardize_content(rawInput) {
@@ -365,18 +382,32 @@ function formatPrefixesSmart(input) {
         });
 
         let mergedMap = new Map();
-        let otherRules = [];
+        let otherRules = new Set();
+
         bodyLines.forEach(line => {
-            let hideMatch = line.match(/^([^#\[\]]+)(##|\[|#|\.)(.*)$/);
-            if (hideMatch && !line.startsWith('@@') && !line.startsWith('/')) {
-                let domain = _remove_subdomain_prefixes(hideMatch[1].trim());
-                let separator = hideMatch[2];
-                let selectorPart = hideMatch[3];
-                let fullSelector = (separator === '##' ? '' : separator) + selectorPart;
-                if (!mergedMap.has(domain)) mergedMap.set(domain, new Set());
-                fullSelector.split(',').forEach(s => { if (s.trim()) mergedMap.get(domain).add(s.trim()); });
+            let hideMatch = line.match(/^([^#\[\]\s]+)(##|\[|#|\.)(.*)$/);
+            if (hideMatch && !line.startsWith('@@') && !line.startsWith('/') && !line.startsWith('.') && !line.startsWith('#')) {
+                let rawDomain = hideMatch[1].trim();
+                if (_is_valid_domain(rawDomain)) {
+                    let domain = _remove_subdomain_prefixes(rawDomain);
+                    let separator = hideMatch[2];
+                    let selectorPart = hideMatch[3];
+                    let fullSelector = (separator === '##' ? '' : separator) + selectorPart;
+                    
+                    if (!mergedMap.has(domain)) mergedMap.set(domain, new Set());
+                    fullSelector.split(',').forEach(s => { 
+                        let trimmed = s.trim();
+                        if (trimmed) mergedMap.get(domain).add(trimmed); 
+                    });
+                }
             } else {
-                otherRules.push(line);
+                let trimmedLine = line.trim();
+                if (trimmedLine.startsWith('@@||')) {
+                    let domainPart = trimmedLine.substring(4).split(/[\/\^]/)[0];
+                    if (_is_valid_domain(domainPart)) otherRules.add(trimmedLine);
+                } else if (trimmedLine.startsWith('.') || trimmedLine.startsWith('#') || trimmedLine.startsWith('##')) {
+                    otherRules.add(trimmedLine);
+                }
             }
         });
 
@@ -384,12 +415,16 @@ function formatPrefixesSmart(input) {
         mergedMap.forEach((selectors, domain) => {
             processedBody.push(`${domain}##${Array.from(selectors).sort().join(',')}`);
         });
-        processedBody = [...processedBody, ...otherRules];
 
+        otherRules.forEach(rule => processedBody.push(rule));
         const strictSort = (a, b) => a.localeCompare(b);
         let whitelistRules = Array.from(new Set(processedBody.filter(line => line.startsWith("@@||")))).sort(strictSort);
         let normalRules = Array.from(new Set(processedBody.filter(line => !line.startsWith("@@||") && line !== ""))).sort(strictSort);
-        let uniqueBody = [...normalRules, ...whitelistRules];
+        let uniqueBody = Array.from(new Set([...normalRules, ...whitelistRules]));
+
+        // Logic đếm: Bỏ qua các dòng bắt đầu bằng dấu chấm (.) HOẶC bắt đầu bằng ##.
+        const rulesForCounting = uniqueBody.filter(line => !line.startsWith('.') && !line.startsWith('##.'));
+        const ruleCount = rulesForCounting.length;
 
         const isRulesChanged = _get_rules_only(_last_saved_content) !== uniqueBody.join('\n');
         let finalUpdateTime = oldMeta.u;
@@ -405,20 +440,37 @@ function formatPrefixesSmart(input) {
             lastGroupKey = currentGroupKey;
         });
 
-        // Header rút gọn: Loại bỏ Blocked, Size và Version
-        const header = [
+        const dummyHeader = [
             "[Adblock Plus 2.0]", 
             "! Title: STOP ADS", 
             "! Describe: Chặn quảng cáo", 
-            `! Updated: ${finalUpdateTime}`, 
+            `! Updated: ${finalUpdateTime}`,
+            `! Blocked: ${ruleCount}`,
+            "! Size: -- KB",
+            "! =================="
+        ].join('\n');
+        const finalSize = _format_kb_only(dummyHeader + "\n\n" + tempBodyOutput.join('\n'));
+
+        const finalHeader = [
+            "[Adblock Plus 2.0]", 
+            "! Title: STOP ADS", 
+            "! Describe: Chặn quảng cáo", 
+            `! Updated: ${finalUpdateTime}`,
+            `! Blocked: ${ruleCount}`,
+            `! Size: ${finalSize}`,
             "! =================="
         ];
         
-        return { content: [...header, "", ...tempBodyOutput].join('\n'), isRulesChanged: isRulesChanged };
+        return { content: [...finalHeader, "", ...tempBodyOutput].join('\n'), isRulesChanged: isRulesChanged };
     }
 
     async function _fetch_file(path) { return await fetch(`${_api_base}${path}`, { headers: { "Authorization": `Bearer ${_app_opt._k}` } }); }
+    
     async function _load() {
+        if (!navigator.onLine) {
+            setBtnState('offline');
+            return;
+        }
         setBtnState('loading');
         try {
             const resAds = await _fetch_file(_app_opt._p_ads);
@@ -444,18 +496,15 @@ function formatPrefixesSmart(input) {
         });
     }
 
-    _dom_ar.addEventListener('input', () => { 
-        if (!_is_loading) { checkChanges(); } 
-    });
-    _dom_prefix.addEventListener('blur', () => { 
-        if (!_is_loading) { _dom_prefix.value = formatPrefixesSmart(_dom_prefix.value); checkChanges(); } 
-    });
-    _dom_prefix.addEventListener('input', () => { 
-        if (!_is_loading) { checkChanges(); } 
-    });
+    window.addEventListener('online', () => { _load(); });
+    window.addEventListener('offline', () => { setBtnState('offline'); });
+
+    _dom_ar.addEventListener('input', () => { if (!_is_loading) checkChanges(); });
+    _dom_prefix.addEventListener('blur', () => { if (!_is_loading) { _dom_prefix.value = formatPrefixesSmart(_dom_prefix.value); checkChanges(); } });
+    _dom_prefix.addEventListener('input', () => { if (!_is_loading) checkChanges(); });
 
     _dom_sv.addEventListener('click', async () => {
-        if (_dom_sv.disabled) return;
+        if (_dom_sv.disabled || !navigator.onLine) return;
         setBtnState('saving');
         try {
             const fPrefixes = formatPrefixesSmart(_dom_prefix.value);
@@ -469,6 +518,7 @@ function formatPrefixesSmart(input) {
             setBtnState('saved');
         } catch (e) { setBtnState('error'); }
     });
+
     window.onload = _load;
 })();
 </script>
