@@ -6,7 +6,7 @@
 
 1thegioi.vn##[class*="zone-"],[class^="c-banner-"],[class^="is-"]
 
-24h.com.vn###catfish,#header-24h-login-cont,.adsbygoogle,.adsbygoolge,.vadslogo,[class^="banner-"],[class^="inpage_"],[class^="vmc_"],[id^="ADS_"],[id^="ads_"],[id^="adzone"],[id^="div-gpt-ad-"],[id^="div_inpage_"],[id^="mashead-"],[id^="mobile_"],[id^="share-"],[id^="sis_inpage"],[id^="sp-wrapper-"],[id^="zone-"]
+24h.com.vn###catfish,#header-24h-login-cont,.adsbygoogle,.vadslogo,[class^="banner-"],[class^="inpage_"],[class^="vmc_"],[id^="ADS_"],[id^="ads_"],[id^="adzone"],[id^="div-gpt-ad-"],[id^="div_inpage_"],[id^="mashead-"],[id^="mobile_"],[id^="share-"],[id^="sis_inpage"],[id^="sp-wrapper-"],[id^="zone-"]
 2game.vn###bannermtop
 2sao.vn###adzone39
 
