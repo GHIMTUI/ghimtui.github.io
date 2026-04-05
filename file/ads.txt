@@ -1,27 +1,15 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
-! Describe: Chặn quảng cáo
-! Updated: 05 Apr 2026 12:03
-! Blocked: 10
-! Size: 1.48KB
-! ==================
+! Updated: 05/04/2026, 22:13:59
 
-24h.com.vn##[id^="ADS_"],[id^="div_inpage_"]
-
-baomoi.com###slide-footer,#slide-footer>div,.ad-wrapper,.ic-close,.is-show,.list>div,.slick-list,.slick-slide,.slick-slide>div,.slick-track,[id^="BaoMoi_"],[id^="Ori-zone-"],[id^="OriIfrWrapper_"]
-
-dantri.com.vn###tpmInpageContainer,#tpmInpageContainerWrapper,[id^="dta-"],[id^="dtad_"],[id^="mobile-top-page"]
-
-liteapks.com##[id^="ad-"]
-
-missav123.com##[class^="inner-"],[class^="layoutWrapper-"],[class^="modelWrapper-"],[class^="root-"],[class^="space-"],[class^="ts_"],[id^="model-"],[id^="ts_"]
-
-nld.com.vn###admFullTop,#admbackground,#sp-wrapper-hovering,.ads-top,.ads-top>script,[class^="adv_"],[id^="adm_"],[id^="admbackground_"],[id^="logo-"],[id^="sp-wrapper-hovering-"],[id^="zone-"]
-
-thanhnien.vn##.asd-headt,.asd-headt>div,[id^="banner-"],[id^="placement-"],[id^="share-"],[id^="slot-"],[id^="sp-wrapper-"],[id^="zone-"]
-
-tuoitre.vn###LeaderBoardTop,#admFullTop,#admbackground,.clearfix,[id^="adm_"],[id^="ban-site-top"],[id^="banner-"],[id^="iframe-"],[id^="placement-"],[id^="pqc_"],[id^="pvoucher-"],[id^="share-"],[id^="slot-"],[id^="sp-"],[id^="sp_"],[id^="top-logo"],[id^="zone-"]
-
-vnexpress.net###TOP_BANNER,#banner_top,#sis_breakpage,#sis_breakpage>script,#sis_masthead,.inner_ads,.txt_qc,[class^="banner_mobile_"],[class^="section_ads_"]
-
-znews.vn##[class^="Okv-"],[class^="follow-"],[id^="Okv-"]
+.as
+24h.com.vn##
+baomoi.com##
+dantri.com.vn##
+liteapks.com##
+missav123.com##
+nld.com.vn##
+thanhnien.vn##
+tuoitre.vn##
+vnexpress.net##
+znews.vn##
