@@ -361,7 +361,7 @@ function formatPrefixesSmart(input) {
     function _format_kb_only(text) {
         const bytes = new TextEncoder().encode(text).length;
         const kb = bytes / 1024;
-        return kb.toFixed(2) + " KB";
+        return kb.toFixed(2) + "KB";
     }
 
     function _standardize_content(rawInput) {
