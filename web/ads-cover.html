@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <!-- Ngăn chặn thu phóng trang hoàn toàn -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Adblock Filter Converter - Pro</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        
+        body, html {
+            height: 100%;
+            margin: 0;
+            overflow: hidden;
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff;
+            overscroll-behavior-y: contain;
+        }
+
+      
+        .container {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            width: 100vw;
+        }
+
+        .domain-pane {
+            background-color: #f1f5f9;
+            border-bottom: 2px solid #e2e8f0;
+            flex-shrink: 0;
+            width: 100%;
+        }
+
+        .domain-label {
+            padding: 8px 12px 2px 12px;
+            text-transform: uppercase;
+            font-size: 10px;
+            font-weight: bold;
+            color: #64748b;
+            letter-spacing: 0.05em;
+        }
+
+        .domain-input {
+            width: 100%;
+            background: white;
+            border-top: 1px solid #cbd5e1;
+            border-bottom: 1px solid #cbd5e1;
+            border-left: none;
+            border-right: none;
+            padding: 8px 12px !important;
+            font-size: 14px;
+            outline: none;
+            color: #1e293b;
+            font-weight: 600;
+            display: block;
+        }
+
+        .pane {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            min-height: 0;
+        }
+
+        .input-pane {
+            background-color: #f8fafc;
+            border-bottom: 2px solid #e2e8f0;
+        }
+
+        .output-pane {
+            background-color: #ffffff;
+        }
+
+        textarea {
+            flex: 1;
+            width: 100%;
+            border: none;
+            outline: none;
+            resize: none;
+            font-size: 14px;
+            line-height: 1.5;
+            padding: 12px !important;
+            background: transparent;
+            color: #1e293b;
+            display: block;
+        }
+
+        .output-pane textarea {
+            color: #059669;
+            font-weight: 500;
+        }
+
+        .header-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 6px 12px;
+            background: #e2e8f0;
+            font-size: 10px;
+            font-weight: bold;
+            color: #475569;
+            text-transform: uppercase;
+        }
+
+        .btn-action {
+            color: white;
+            padding: 4px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: opacity 0.2s;
+            font-size: 10px;
+            font-weight: bold;
+            border: none;
+            text-transform: uppercase;
+        }
+
+        .btn-copy {
+            background-color: #10b981;
+        }
+
+        .btn-action:hover {
+            opacity: 0.8;
+        }
+
+        #toast {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translate(-50%, 0);
+            background: rgba(0,0,0,0.8);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 6px;
+            display: none;
+            z-index: 200;
+            font-size: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+    </style>
+</head>
+<body>
+
+    <div id="toast">Đã sao chép!</div>
+
+    <div class="container">
+        <!-- NHẬP TÊN MIỀN -->
+        <div class="domain-pane">
+            <div class="domain-label">Tên miền (Domain)</div>
+            <input type="text" id="domainInput" class="domain-input code-font" placeholder="ví dụ: google.com" spellcheck="false" oninput="convert()">
+        </div>
+
+        <!-- KHUNG 1: INPUT SELECTORS -->
+        <div class="pane input-pane">
+            <div class="header-bar">
+                <span>Khung 1: Selector</span>
+            </div>
+            <textarea id="inputArea" class="code-font" placeholder="Nhập .ads, .ad_banner, #ad-links..." spellcheck="false" oninput="convert()"></textarea>
+        </div>
+
+        <!-- KHUNG 2: OUTPUT KẾT QUẢ -->
+        <div class="pane output-pane">
+            <div class="header-bar">
+                <span>Khung 2: Kết quả (Gộp chung)</span>
+                <button onclick="copyResult()" class="btn-action btn-copy">Sao chép</button>
+            </div>
+            <textarea id="outputArea" class="code-font" readonly placeholder="Kết quả sẽ tự động hiện ra..." spellcheck="false"></textarea>
+        </div>
+    </div>
+
+    <script>
+        function convert() {
+            const domain = document.getElementById('domainInput').value.trim();
+            const input = document.getElementById('inputArea').value.trim();
+            
+            if (!input && !domain) {
+                document.getElementById('outputArea').value = "";
+                return;
+            }
+
+            const tokens = input.split(/[\s,]+/).filter(t => t.trim() !== "");
+            
+            let idSelectors = [];
+            let classSelectors = [];
+            const seen = new Set();
+
+            tokens.forEach(token => {
+                let t = token.trim();
+                if (!t || seen.has(t)) return;
+                seen.add(t);
+
+                // Xử lý ID (#)
+                if (t.startsWith('#*') || t.startsWith('*#')) {
+                    const val = t.replace('#*', '').replace('*#', '');
+                    idSelectors.push(`[id*="${val}"]`);
+                }
+                else if (t.startsWith('#')) {
+                    const val = t.substring(1);
+                    // Có dấu "-" hoặc "_" mới dùng ngoặc vuông
+                    if (val.includes('-') || val.includes('_')) {
+                        idSelectors.push(`[id^="${val}"]`);
+                    } else {
+                        idSelectors.push(`#${val}`);
+                    }
+                }
+                // Xử lý Class (.)
+                else if (t.startsWith('.*') || t.startsWith('*.')) {
+                    const val = t.replace('.*', '').replace('*.', '');
+                    classSelectors.push(`[class*="${val}"]`);
+                }
+                else if (t.startsWith('.')) {
+                    const val = t.substring(1);
+                    // Có dấu "-" hoặc "_" mới dùng ngoặc vuông
+                    if (val.includes('-') || val.includes('_')) {
+                        classSelectors.push(`[class^="${val}"]`);
+                    } else {
+                        classSelectors.push(`.${val}`);
+                    }
+                }
+            });
+
+            const combinedSelectors = [...idSelectors, ...classSelectors];
+
+            if (combinedSelectors.length > 0) {
+                const finalResult = `${domain}##${combinedSelectors.join(', ')}`;
+                document.getElementById('outputArea').value = finalResult;
+            } else {
+                document.getElementById('outputArea').value = domain ? `${domain}##` : "";
+            }
+        }
+
+        function copyResult() {
+            const output = document.getElementById("outputArea");
+            if (!output.value) return;
+            
+            output.select();
+            document.execCommand("copy");
+            
+            const toast = document.getElementById("toast");
+            toast.style.display = "block";
+            setTimeout(() => { toast.style.display = "none"; }, 1500);
+        }
+
+        window.onload = () => {
+            document.getElementById('domainInput').focus();
+        };
+    </script>
+</body>
+</html>
