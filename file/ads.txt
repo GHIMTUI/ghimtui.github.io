@@ -1,18 +1,22 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Describe: Chặn quảng cáo
-! Updated: 05 Apr 2026 11:36
-! Blocked: 8
-! Size: 1.17KB
+! Updated: 05 Apr 2026 12:03
+! Blocked: 10
+! Size: 1.48KB
 ! ==================
 
 24h.com.vn##[id^="ADS_"],[id^="div_inpage_"]
 
 baomoi.com###slide-footer,#slide-footer>div,.ad-wrapper,.ic-close,.is-show,.list>div,.slick-list,.slick-slide,.slick-slide>div,.slick-track,[id^="BaoMoi_"],[id^="Ori-zone-"],[id^="OriIfrWrapper_"]
 
+dantri.com.vn###tpmInpageContainer,#tpmInpageContainerWrapper,[id^="dta-"],[id^="dtad_"],[id^="mobile-top-page"]
+
 liteapks.com##[id^="ad-"]
 
 missav123.com##[class^="inner-"],[class^="layoutWrapper-"],[class^="modelWrapper-"],[class^="root-"],[class^="space-"],[class^="ts_"],[id^="model-"],[id^="ts_"]
+
+nld.com.vn###admFullTop,#admbackground,#sp-wrapper-hovering,.ads-top,.ads-top>script,[class^="adv_"],[id^="adm_"],[id^="admbackground_"],[id^="logo-"],[id^="sp-wrapper-hovering-"],[id^="zone-"]
 
 thanhnien.vn##.asd-headt,.asd-headt>div,[id^="banner-"],[id^="placement-"],[id^="share-"],[id^="slot-"],[id^="sp-wrapper-"],[id^="zone-"]
 
