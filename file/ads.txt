@@ -1,15 +1,27 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
-! Updated: 05/04/2026, 22:13:59
+! Describe: Chặn quảng cáo
+! Updated: 05 Apr 2026 22:14
+! Blocked: 10
+! Size: 0.29KB
+! ==================
 
-.as
 24h.com.vn##
+
 baomoi.com##
+
 dantri.com.vn##
+
 liteapks.com##
+
 missav123.com##
+
 nld.com.vn##
+
 thanhnien.vn##
+
 tuoitre.vn##
+
 vnexpress.net##
+
 znews.vn##
