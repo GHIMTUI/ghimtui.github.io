@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Describe: Chặn quảng cáo
-! Updated: 06 Apr 2026 21:55
+! Updated: 06 Apr 2026 22:05
 ! Blocked: 104
-! Size: 7.72KB
+! Size: 7.77KB
 ! ==================
 
 .bell-click,.notifi-list,[class^="adv_"],[id^="adm_"],[id^="admbackground_"],[id^="logo-"],[id^="sp-wrapper-hovering-"],[id^="zone-"]
@@ -114,7 +114,7 @@ nhadautu.vn##[id^="ads_"],[id^="zone-"]
 
 nhipcaudautu.vn###newsletter,.col-md-8>center
 
-nld.com.vn###admFullTop,#admbackground,#sp-wrapper-hovering,.ads-top,.ads-top>script,.d-block,.loginfrom #head_login
+nld.com.vn###admFullTop,#admbackground,#head_login,#sp-wrapper-hovering,.ads-top,.ads-top>script,.bell-click,.d-block,.loginfrom,.loginfrom #head_login,.notifi-list
 
 nnmt.net.vn##.box-doitac,.partner-slider,[class*="slider-1-"],[class^="ads-"]
 
