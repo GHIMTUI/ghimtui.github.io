@@ -1,10 +1,12 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Describe: Chặn quảng cáo
-! Updated: 06 Apr 2026 15:38
+! Updated: 06 Apr 2026 21:55
 ! Blocked: 104
-! Size: 7.70KB
+! Size: 7.72KB
 ! ==================
+
+.bell-click,.notifi-list,[class^="adv_"],[id^="adm_"],[id^="admbackground_"],[id^="logo-"],[id^="sp-wrapper-hovering-"],[id^="zone-"]
 
 24h.com.vn##[id^="ADS_"],[id^="div_inpage_"]
 
@@ -52,7 +54,7 @@ daibieunhandan.vn##[id^="zone-"]
 
 daidoanket.vn##[id^="ad-"]
 
-dantri.com.vn###tpmInpageContainer,#tpmInpageContainerWrapper,[class^="dt-py-"],[id^="dta-"],[id^="dtad_"],[id^="mobile-top-page"]
+dantri.com.vn###tpmInpageContainer,#tpmInpageContainerWrapper,[class^="dt-py-"],[id^="dta-"],[id^="dtad_"],[id^="mobile-top-page"],[id^="sp-wrapper-"]
 
 danviet.vn##[class^="ads-"],[class^="exp_qc_"],[class^="video-"],[id^="ads_"],[id^="zone-"]
 
@@ -112,7 +114,7 @@ nhadautu.vn##[id^="ads_"],[id^="zone-"]
 
 nhipcaudautu.vn###newsletter,.col-md-8>center
 
-nld.com.vn###admFullTop,#admbackground,#sp-wrapper-hovering,.ads-top,.ads-top>script,.d-block,.loginfrom #head_login .bell-click,.notifi-list,[class^="adv_"],[id^="adm_"],[id^="admbackground_"],[id^="logo-"],[id^="sp-wrapper-hovering-"],[id^="zone-"]
+nld.com.vn###admFullTop,#admbackground,#sp-wrapper-hovering,.ads-top,.ads-top>script,.d-block,.loginfrom #head_login
 
 nnmt.net.vn##.box-doitac,.partner-slider,[class*="slider-1-"],[class^="ads-"]
 
