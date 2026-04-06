@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Describe: Chặn quảng cáo
-! Updated: 06 Apr 2026 22:06
+! Updated: 06 Apr 2026 22:15
 ! Blocked: 104
 ! Size: 7.64KB
 ! ==================
@@ -78,7 +78,7 @@ giaoducthoidai.vn###[id^="sp-wrapper-"],[class^="ad-"],[class^="nl-infooter-"],[
 
 hanoimoi.vn##[class^="ads_"],[class^="c-banner-"],[class^="is-"],[id^="zone-"]
 
-hoahoctro.tienphong.vn##[class^="ad-"],[class^="adsMobile_"],[class^="ads_"],[class^="sp-"],[id^="sp_"],adsbygoogle
+hoahoctro.tienphong.vn##.adsbygoogle,[class^="ad-"],[class^="adsMobile_"],[class^="ads_"],[class^="sp-"],[id^="sp_"]
 
 hoanhap.vn##.section-1
 
