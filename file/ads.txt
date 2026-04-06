@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Describe: Chặn quảng cáo
-! Updated: 06 Apr 2026 22:15
-! Blocked: 104
-! Size: 7.64KB
+! Updated: 07 Apr 2026 00:26
+! Blocked: 125
+! Size: 8.72KB
 ! ==================
 
 24h.com.vn##[id^="ADS_"],[id^="div_inpage_"]
@@ -34,6 +34,8 @@ baovephapluat.vn##[class^="banner-"]
 
 baoxaydung.vn##[id^="pos-"]
 
+bienvietnam.vn##.csj-image,.row-height
+
 cand.com.vn##.capture-block,.capture-block>p,.nomargin
 
 chatluongvacuocsong.vn##.e,[id^="ads_"],[id^="zone-"]
@@ -52,9 +54,13 @@ daibieunhandan.vn##[id^="zone-"]
 
 daidoanket.vn##[id^="ad-"]
 
+danchuphapluat.vn##.__ads_click,.qc,[class^="box-qc-"]
+
 dantri.com.vn###tpmInpageContainer,#tpmInpageContainerWrapper,[class^="dt-py-"],[id^="dta-"],[id^="dtad_"],[id^="mobile-top-page"],[id^="sp-wrapper-"]
 
 danviet.vn##[class^="ads-"],[class^="exp_qc_"],[class^="video-"],[id^="ads_"],[id^="zone-"]
+
+dep.com.vn##.notrack,.pb,[class^="ad-"],[id^="advads-"]
 
 diendandoanhnghiep.vn##[class^="ads_"],[class^="c-banner-"],[id^="zone-"]
 
@@ -67,6 +73,14 @@ doanhnghiephoinhap.vn##.box-qc,[class^="aanetwork-"]
 doanhnghieptiepthi.vn###admFullTop,#ban-top-site,#top-logo,[id^="adm_"],[id^="zone-"]
 
 doanhnghiepvathuongmai.vn###banner,[class^="banner-"]
+
+doanhnhansaigon.vn##[class^="c-banner-"],[class^="is-custom-"],[id^="ads_"],[id^="zone-"]
+
+douongvietnam.vn##.rounded,[class^="mb-"]
+
+edu.vn##.donor
+
+elle.vn##[class^="banner-"],[id^="div-gpt-ad-"]
 
 eva.vn##[class^="banr"],[class^="banr-"],[id^="ADS_"],[id^="spanTextAds_"]
 
@@ -82,6 +96,10 @@ hoahoctro.tienphong.vn##.adsbygoogle,[class^="ad-"],[class^="adsMobile_"],[class
 
 hoanhap.vn##.section-1
 
+hssk.tapchicongsan.org.vn##.c-banner-row
+
+jomc.vn##.adv-wrapper,.center-block
+
 kiemsat.vn##[class^="anh"],[class^="qcao"],[id^="revive-"]
 
 kinhdoanhvaphattrien.vn##.banner
@@ -90,11 +108,17 @@ kinhtedouong.vn##.item-adv,[id^="adv"]
 
 kinhtenongthon.vn###firt,.active,.item,[class^="owl-"],[id^="col_"],[id^="owl-"]
 
+kinhtevadubao.vn##.__ads_click,[class^="banner-"]
+
 laodong.vn##.adsbygoogle,.item,.msg,[class^="lst-advs"],[class^="m-"],[class^="msg-"],[class^="nl-"],[class^="notification-"],[class^="sp-"],[id^="notification-"],[id^="sp_"]
 
 laodongdoanthe.vn##.banner,[class^="mb"]
 
 liteapks.com##[id^="ad-"]
+
+lsvn.vn##.aanetwork-ads-box,.ads-item,sys-ads
+
+markettimes.vn##[class^="c-banner-"]
 
 mekongasean.vn##.header-content,[class^="banner-"]
 
@@ -128,6 +152,8 @@ plo.vn###catfish,.fanpage,.fp,[id^="Mobile_"],[id^="adsMobile_"],[id^="ads_"],[i
 
 quankhu2.vn##[class^="advrtise"],[class^="img-"]
 
+quanlynhanuoc.vn##[class*="wp-image-"]
+
 quocphongthudo.vn###module20,#module35,#module38,#module39,#module40
 
 reatimes.vn##[class^="adv-"],[class^="owl-"]
@@ -148,17 +174,29 @@ svvn.tienphong.vn##[class^="ad-"],[class^="adsMobile_"],[class^="ads_"],[class^=
 
 taochi.vdi.org.vn##[class^="link-"],[id^="WebPartctl00_"],[id^="ctl00_"]
 
-tapchicongsan.org.vn##[class^="hidden-"]
+tapchicand.gov.vn##.adregion
+
+tapchicongsan.org.vn##.journal-content-article,[class^="hidden-"]
 
 tapchicongthuong.vn##[class^="ads-"],[class^="owl-"]
+
+tapchidulich.net.vn##.slider,[class^="banner-"]
 
 tapchigiaochuc.com.vn##[class^="ads-"],[class^="banner-"]
 
 tapchigiaoduc.edu.vn##[class^="content-"],[class^="mb-"],[class^="module__"],[class^="post-"],[class^="section-"],[class^="sidebar-"],[class^="slick-"],[id^="sticker-"],[id^="widget-"]
 
+tapchiketoankiemtoan.vn##.e,[class^="exp_qc_"],[id^="ads_"],[id^="zone-"]
+
 tapchikientruc.com.vn##.customBanner
 
 tapchikinhtetaichinh.vn##[class^="__ads_"],[class^="banner-"]
+
+tapchilaoviet.org##[class^="vc_"],[id^="vc_"]
+
+tapchimoitruong.vn##[class^="sidebar-"]
+
+tapchimythuat.vn####[id^="col-"],.img-inner,[id^="image-"],[id^="row-"]
 
 tapchithangmay.vn##.banner
 
@@ -184,7 +222,7 @@ thoidai.com.vn##[class^="__ads_"],[class^="banner-"]
 
 thoitrangvang.vn##[class^="ads"],[class^="ads_"],[class^="c-banner-"],[id^="zone-"]
 
-thuonghieusanpham.vn###admFullTop,#ban-top-site,#top-logo,.banner,.l-sidebar,[id^="adm_"]
+thuonghieusanpham.vn###admFullTop,#ban-top-site,#top-logo,.banner,.l-sidebar,.news-bar,.news-bar>ul,[id^="adm_"],is-order
 
 thuysanvietnam.com.vn##.ft-fanpage,[class^="hd-cate-"]
 
@@ -196,7 +234,11 @@ tuoitre.vn###LeaderBoardTop,#admFullTop,#admbackground,.clearfix,[id^="adm_"],[i
 
 vanhienplus.vn##.#scrollfix,[class^="image-"],[class^="imqc-"],[id^="secondary-"]
 
+vanhoanghethuat.vn##.sticky
+
 vietnam.vnanet.vn##.uk-margin-small-top
+
+vietnamarchi.vn##.box-doi-tac,.box-doi-tac>div,[class^="list-"],div[style="text-align:center"]
 
 vietnamnet.vn###catfish,[id^="adzone"],[id^="mashead-"]
 
