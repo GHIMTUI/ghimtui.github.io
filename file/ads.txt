@@ -1,12 +1,10 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Describe: Chặn quảng cáo
-! Updated: 08 Apr 2026 01:20
+! Updated: 08 Apr 2026 01:22
 ! Blocked: 197
 ! Size: 14.10KB
 ! ==================
-
-.Quang_cao_temp,[class^="QuangCao_"],.fill,.active,.left
 
 24h.com.vn##[id^="ADS_"],[id^="div_inpage_"]
 
@@ -130,7 +128,7 @@ daibieunhandan.vn##[id^="zone-"]
 
 daidoanket.vn##[id^="ad-"]
 
-danangtv.vn##.XemGiQuangCao,[class^="carousel-"],[id^="Carousel"]
+danangtv.vn##.Quang_cao_temp,.XemGiQuangCao,.active,.fill,.left,[class^="QuangCao_"],[class^="carousel-"],[id^="Carousel"]
 
 danchuphapluat.vn##.__ads_click,.qc,[class^="box-qc-"]
 
