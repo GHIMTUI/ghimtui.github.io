@@ -1,20 +1,24 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Describe: Chặn quảng cáo
-! Updated: 08 Apr 2026 11:34
-! Blocked: 228
-! Size: 16.67KB
+! Updated: 08 Apr 2026 15:36
+! Blocked: 256
+! Size: 18.61KB
 ! ==================
 
 24h.com.vn##[id^="ADS_"],[id^="div_inpage_"]
 
 afamily.vn###admbackground,[id^="adm-"],[id^="admbackground"],[id^="admbackground_"],[id^="banner-"],[id^="close_ad_"],[id^="placement-"],[id^="share-"],[id^="slot-"],[id^="sps_"],[id^="zone-"]
 
+angiang.edu.vn###module1,#module10,#module12,#module13,#module19,#module20,#module21,#module24,#module25,#module26,#module27,#module44,#module45,#module47,#module57,#module58,#module59,#module60,#module61,#module62,#module63,#module64,#module65,#module66,#module67
+
 angiang.gov.vn##[class^="sidebar-"],[class^="sl-"],[class^="slideshow-"]
 
 angiangtv.vn##.aligncenter,.footer-tabbar,.swiper,[class^="swiper-"],[class^="wp-image-"],[id^="media_image-"]
 
 autopro.com.vn##.lightbox-content,.link-callout,.noCaption,.noCaption>div,[class^="ads-"],[id^="adm_"],[id^="admsection"],[id^="zone-"]
+
+bacninh.edu.vn###module21,#module26,#module27,#module28,#module29,#module71,.col-sm-4,.image-list-album
 
 bacninh.gov.vn##.adv-containers
 
@@ -110,9 +114,13 @@ cafebiz.vn###admFullTop,#admbackground,#ban-top-site,#logo_adm,.top-logo,[id^="a
 
 cafef.vn###admFullTop,#admbackground,#ban-top-site,#logo_adm,.top-logo,[id^="adm-"],[id^="admbackground_"],[id^="zone-"]
 
+camau.edu.vn##.UIMultiFunction_Default,.UIWebLink_Weblink
+
 camau.gov.vn##.AdvertContent,[class^="UIAdvertisement_"]
 
 cand.com.vn##.capture-block,.capture-block>p,.nomargin
+
+cantho.edu.vn##.content-image,.widget
 
 cantho.gov.vn##.AdvertContent,.SlideShowItem,.SlideShowItem>a,.image-item,[class^="MultiFunction"],[class^="UIAdvertisement_"],[class^="UIImageLibrary_"]
 
@@ -136,7 +144,11 @@ daibieunhandan.vn##[id^="zone-"]
 
 daidoanket.vn##[id^="ad-"]
 
+daklak.edu.vn##.block
+
 daklak.gov.vn###p_p_id_viewhtml_WAR_unitechappportlet_INSTANCE_HKs7pwVvACG6_,#p_p_id_viewhtml_WAR_unitechappportlet_INSTANCE_saTTV5DWX0T0_
+
+danang.edu.vn##marquee[behavior="scroll"]
 
 danang.gov.vn###carouselBanner,#fragment-0-ppxw,#fragment-0-vpnz,#fragment-10702-feed,#fragment-10702-kbwe,#fragment-10702-owgn,#fragment-10702-pptc,#fragment-19401-enww,#fragment-19401-fvbe,#fragment-19401-hhxk,#fragment-19401-peom,#fragment-19401-qfat,#fragment-19401-vihy,.congtienich
 
@@ -170,6 +182,8 @@ doanhnhansaigon.vn##[class^="c-banner-"],[class^="is-custom-"],[id^="ads_"],[id^
 
 dongnai.gov.vn##.nv-block-banners
 
+dongthap.edu.vn##.component-image
+
 dongthap.gov.vn##.component-image,[class^="banner-"],[id^="fragment-"]
 
 douongvietnam.vn##.rounded,[class^="mb-"]
@@ -188,11 +202,15 @@ genk.vn###admFullTop,#admbackground,#ban-top-site,#logo_adm,#top-logo,[id^="adm-
 
 giadinhonline.vn##.adv,.e,[class^="exp_qc_"],[class^="qc-pc-"],[id^="zone-"]
 
+gialai.edu.vn##.image-list-album
+
 gialai.gov.vn##.active,.bg-item,.img-icon,.media
 
 giaoduc.net.vn##[class^="ad-"],[class^="sda_"],[id^="sdaMobile_"]
 
 giaoducthoidai.vn###[id^="sp-wrapper-"],[class^="ad-"],[class^="nl-infooter-"],[class^="sda_"],[class^="sp-infooter-"],[id^="sdaMobile_"]
+
+haiphong.edu.vn##.quangcaogiua
 
 haiphong.gov.vn##.AdvertContent
 
@@ -202,13 +220,19 @@ hanoimoi.vn##[class^="ads_"],[class^="c-banner-"],[class^="is-"],[id^="zone-"]
 
 hanoionline.vn##.full-width-breakout
 
+hatinh.edu.vn###module13,#module66
+
 hatinh.gov.vn##.mb-2,[class^="services-section"]
+
+hcm.edu.vn##.qimargin15,.quangcaogiua
 
 hcmcpv.org.vn##[class^="banner-"],[id^="chuyende"]
 
 hoahoctro.tienphong.vn##.adsbygoogle,[class^="ad-"],[class^="adsMobile_"],[class^="ads_"],[class^="sp-"],[id^="sp_"]
 
 hoanhap.vn##.section-1
+
+hocbaso.quangninh.edu.vn###module15,.banner-header
 
 hssk.tapchicongsan.org.vn##.c-banner-row
 
@@ -218,6 +242,8 @@ huengaynay.vn##[class*="advrtise"]
 
 huetv.com.vn##[class^="banner"]
 
+hungyen.edu.vn###frameBoundB67c136903e495,#module17,#module25,#module45
+
 hungyen.gov.vn###module12,.category-categoryImageType13,.col-md-4
 
 ioit.vast.gov.vn###scroller,.cov
@@ -225,6 +251,8 @@ ioit.vast.gov.vn###scroller,.cov
 jomc.vn##.adv-wrapper,.center-block
 
 kenh14.vn##.adv,[id^="adm-"],[id^="admbackground"],[id^="admbackground_"],[id^="banner-"],[id^="placement-"],[id^="share-"],[id^="slot-"],[id^="zone-"]
+
+khanhhoa.edu.vn##.image-list-album
 
 khanhhoa.gov.vn###select-box,[class^="banner-"]
 
@@ -238,15 +266,23 @@ kinhtenongthon.vn###firt,.active,.item,[class^="owl-"],[id^="col_"],[id^="owl-"]
 
 kinhtevadubao.vn##.__ads_click,[class^="banner-"]
 
+laichau.edu.vn###module24,#module27,#module30,#module32,#module33,#module35,#module36,#module37,#module38,#module39,#module40,#module41,#module42,#module43,#module45,#module46,#module47,#module48,#module49,#module50,#module52,#module53,#module58,#module59
+
 laichau.gov.vn###frameBoundB5dd514408c64f0,#module19,#module20,#module24,#module25,#module26,#module27,#module28,#module29,#module30,#module31,#module32,#module33,#module34,#module35,#module36,#module46,#module53,#module58,#module59,#module66,#module67,#module69,#module79,#module80,#module81,#module82,#module84,#module88,#module89,#module90,#module91
+
+lamdong.edu.vn###lstLinkBotton,.slogan_img
 
 lamdong.gov.vn##[class^="imageWithLink_"],[class^="owl-"],[class^="slider-"],[class^="vnptBanner_"]
 
 lamdongtv.vn##.mnv-ads
 
+langson.edu.vn###module27,#module31
+
 langson.gov.vn##.boun-media
 
 langsontv.vn##.advertise_item,.box_advertive
+
+laocai.edu.vn##.UIMultiFunction_Default
 
 laocai.gov.vn##[class^="MultiFunction"]
 
@@ -282,6 +318,8 @@ nhadautu.vn##[id^="ads_"],[id^="zone-"]
 
 nhipcaudautu.vn###newsletter,.col-md-8>center
 
+ninhbinh.edu.vn##img[style="height:130px;width:380px;float:left; margin-bottom: 5px;"]
+
 ninhbinh.gov.vn##.UIAdvertisement_Default,.UIMultiFunction_Default
 
 nld.com.vn###admFullTop,#admbackground,#head_login,#sp-wrapper-hovering,.ads-top,.ads-top>script,.bell-click,.d-block,.loginfrom,.loginfrom #head_login,.notifi-list
@@ -300,15 +338,21 @@ phunuonline.com.vn##.bz,.margintop10,[class^="bannerdhd"],[class^="revive-"],[id
 
 phunuvietnam.vn##.admFullTop,.ban-top-site,.mb20,.top-logo,[id^="adm_#zone-"],[id^="logo-"],[id^="streamline_"]
 
+phutho.edu.vn###module15,#module27,#module28,#module40,#module41,#module42,#module43,.image-list-album
+
 phutho.gov.vn###PTPBBannerLeftColumn,[id^="zn_"]
 
 phuthotv.vn##[class^="c3s-"],[id^="slide-"]
 
 plo.vn###catfish,.fanpage,.fp,[id^="Mobile_"],[id^="adsMobile_"],[id^="ads_"],[id^="bn-"],[id^="yomedia-"]
 
+quangngai.edu.vn##.body-topads
+
 quangngai.gov.vn###module15,#module17,#module31,#module32,#module34,#module35,#module36,#module38,#module49,#module72,.img-item,.links-item
 
 quangninh.gov.vn##.banner-left-item
+
+quangtri.edu.vn###module12,#module30
 
 quangtri.gov.vn##.banner-tuyen-truyen,.block-tuyen-truyen-slider,.col-lg-6,.component-image,.pb-1,[class^="Ifr-"]
 
@@ -325,6 +369,10 @@ reatimes.vn##[class^="adv-"],[class^="owl-"]
 sggp.org.vn##[class^="Is-"],[id^="Mobile_"],[id^="sdaMobile_"]
 
 sinhthainongnghiep.net.vn##.promotions,.visible,[class^="qc_"]
+
+sogddtsonla.edu.vn###module47,#module62
+
+sogiaoduc.caobang.gov.vn##.AdvertContent,.UIAdvertisement_Default
 
 soha.vn###admbackground,.noCaption,[class^="admLogoAd"],[class^="adv-"],[class^="lightbox-"],[id^="adm-"],[id^="banner-"],[id^="cpmzone_"],[id^="masthead_"],[id^="placement-"],[id^="share-"],[id^="slot-"],[id^="zone-"]
 
@@ -382,7 +430,11 @@ techlade.vn##[class^="attachments-"],[class^="banner_"]
 
 techz.vn##.adsbygoogle,.header_ads,.header_ads>center,[class^="mt-"],[id^="ad-"],[id^="sp-"]
 
+thainguyen.edu.vn###module14,#module23,#module57,#module58,#module60,#module61,#module62,#module63
+
 thainguyen.gov.vn##.AdvertContent
+
+thanhhoa.edu.vn###module13,#module47,#module48,#module49,#module50,#module51,#module52,#module53,#module54,#module71,#module72,#module73,#module74
 
 thanhhoa.gov.vn##.tandan-div-module-links-img
 
@@ -426,6 +478,8 @@ tudonghoangaynay.vn##.__ads_click,[class^="qc-"]
 
 tuoitre.vn###LeaderBoardTop,#admFullTop,#admbackground,.clearfix,[id^="adm_"],[id^="ban-site-top"],[id^="banner-"],[id^="iframe-"],[id^="placement-"],[id^="pqc_"],[id^="pvoucher-"],[id^="share-"],[id^="slot-"],[id^="sp-"],[id^="sp_"],[id^="top-logo"],[id^="zone-"]
 
+tuyenquang.edu.vn###module53,#module62,#module63,#module64
+
 vanhienplus.vn##.#scrollfix,[class^="image-"],[class^="imqc-"],[id^="secondary-"]
 
 vanhoanghethuat.vn##.sticky
@@ -443,6 +497,8 @@ vietnamnews.vn##.banner,.clearfix,[class^="CloseButton_"],[class^="InstreamDom_"
 vietnamplus.vn##.adsbygoogle,[class^="sda_"],[id^="sdaMobile_"],[id^="sp-"]
 
 viettimes.vn##[id^="sp-wrapper-"]
+
+vinhlong.edu.vn##.content-image,.member2,.post-image
 
 vinhlong.gov.vn##.DNNContainer_noTitle,.col-xs-12,.dnnPEMContNotitle,[id^="dnn_ctr48185_"]
 
