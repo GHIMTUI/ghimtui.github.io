@@ -1,14 +1,18 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Describe: Chặn quảng cáo
-! Updated: 08 Apr 2026 15:36
-! Blocked: 256
-! Size: 18.61KB
+! Updated: 09 Apr 2026 00:32
+! Blocked: 279
+! Size: 19.40KB
 ! ==================
 
 24h.com.vn##[id^="ADS_"],[id^="div_inpage_"]
 
+acb.com.vn###download-banner-footer
+
 afamily.vn###admbackground,[id^="adm-"],[id^="admbackground"],[id^="admbackground_"],[id^="banner-"],[id^="close_ad_"],[id^="placement-"],[id^="share-"],[id^="slot-"],[id^="sps_"],[id^="zone-"]
+
+agribank.com.vn###agbModal,.modal-backdrop
 
 angiang.edu.vn###module1,#module10,#module12,#module13,#module19,#module20,#module21,#module24,#module25,#module26,#module27,#module44,#module45,#module47,#module57,#module58,#module59,#module60,#module61,#module62,#module63,#module64,#module65,#module66,#module67
 
@@ -130,6 +134,8 @@ caobangtv.vn##.cntslider,[class^="adv_"],[class^="bx-"]
 
 chatluongvacuocsong.vn##.e,[id^="ads_"],[id^="zone-"]
 
+cimbbank.com.vn##.btn
+
 cokhivietnam.vn##[class^="banner_"],[class^="box-banner-"]
 
 congly.vn##[class^="ads_"],[class^="c-banner-"],[class^="is-"],[id^="zone-"]
@@ -210,6 +216,8 @@ giaoduc.net.vn##[class^="ad-"],[class^="sda_"],[id^="sdaMobile_"]
 
 giaoducthoidai.vn###[id^="sp-wrapper-"],[class^="ad-"],[class^="nl-infooter-"],[class^="sda_"],[class^="sp-infooter-"],[id^="sdaMobile_"]
 
+gpbank.com.vn##[id^="advert-"]
+
 haiphong.edu.vn##.quangcaogiua
 
 haiphong.gov.vn##.AdvertContent
@@ -228,11 +236,15 @@ hcm.edu.vn##.qimargin15,.quangcaogiua
 
 hcmcpv.org.vn##[class^="banner-"],[id^="chuyende"]
 
+hdbank.com.vn##.mobile-popup
+
 hoahoctro.tienphong.vn##.adsbygoogle,[class^="ad-"],[class^="adsMobile_"],[class^="ads_"],[class^="sp-"],[id^="sp_"]
 
 hoanhap.vn##.section-1
 
 hocbaso.quangninh.edu.vn###module15,.banner-header
+
+hsbc.com.vn##[id*="banner"]
 
 hssk.tapchicongsan.org.vn##.c-banner-row
 
@@ -257,6 +269,8 @@ khanhhoa.edu.vn##.image-list-album
 khanhhoa.gov.vn###select-box,[class^="banner-"]
 
 kiemsat.vn##[class^="anh"],[class^="qcao"],[id^="revive-"]
+
+kienlongbank.com###fancybox-container-1
 
 kinhdoanhvaphattrien.vn##.banner
 
@@ -296,13 +310,21 @@ lsvn.vn##.aanetwork-ads-box,.ads-item,[class^="aanetwork-"],[class^="ads-"],[cla
 
 markettimes.vn##[class^="c-banner-"]
 
+mbv.com.vn##.bg-primary
+
 mekongasean.vn##.header-content,[class^="banner-"]
 
 missav123.com##[class^="inner-"],[class^="layoutWrapper-"],[class^="modelWrapper-"],[class^="root-"],[class^="space-"],[class^="ts_"],[id^="model-"],[id^="ts_"]
 
+mobifone.vn##.main-banner
+
 moet.gov.vn##.full-width,.list-links
 
+namabank.com.vn##.mobile-popup
+
 nbtv.vn##.box_banner,[class^="app_"],[class^="banner_"],[class^="img-"],[class^="item-"],[class^="qrcode_"],[id^="app_"],[id^="banner-"]
+
+ncb-bank.vn##.img-popup,.ovl
 
 nghean.gov.vn##.AdvertContent,.col3,[class^="MultiFunction"]
 
@@ -328,9 +350,13 @@ nnmt.net.vn##.box-doitac,.partner-slider,[class*="slider-1-"],[class^="ads-"]
 
 nongnghiepmoitruong.vn##.e,[class^="ads-"],[id^="ads_"],[id^="zone-"]
 
+ocb.com.vn##.slider-banner
+
 oto.com.vn##.box-bn-home,[class^="banner-"],[class^="cpn-"],[id^="cpn-"]
 
 otosaigon.com###top-mobile-ads,[class^="ads-"],[id^="banner-"],[id^="div-gpt-ad-"]
+
+pgbank.com.vn##.footer-menu,.section-2
 
 phaply.net.vn##.visible,[class^="qc_"]
 
@@ -345,6 +371,8 @@ phutho.gov.vn###PTPBBannerLeftColumn,[id^="zn_"]
 phuthotv.vn##[class^="c3s-"],[id^="slide-"]
 
 plo.vn###catfish,.fanpage,.fp,[id^="Mobile_"],[id^="adsMobile_"],[id^="ads_"],[id^="bn-"],[id^="yomedia-"]
+
+pvcombank.com.vn##.responsive-wrapper
 
 quangngai.edu.vn##.body-topads
 
@@ -366,7 +394,11 @@ quocphongthudo.vn###module20,#module35,#module38,#module39,#module40
 
 reatimes.vn##[class^="adv-"],[class^="owl-"]
 
+sc.com##.smartbanner,[class^="smartbanner-"]
+
 sggp.org.vn##[class^="Is-"],[id^="Mobile_"],[id^="sdaMobile_"]
+
+shinhan.com.vn##.responsive-wrapper
 
 sinhthainongnghiep.net.vn##.promotions,.visible,[class^="qc_"]
 
@@ -484,6 +516,14 @@ vanhienplus.vn##.#scrollfix,[class^="image-"],[class^="imqc-"],[id^="secondary-"
 
 vanhoanghethuat.vn##.sticky
 
+vbsp.org.vn##[class^="ads"]
+
+vcbneo.com.vn##[class^="banner_"]
+
+vdb.gov.vn##[class^="Ads_"]
+
+vib.com.vn##.new-download-app
+
 vietdaily.vn###click-protector,.adsbygoogle-noablate,.grippy-host
 
 vietnam.vnanet.vn##.uk-margin-small-top
@@ -496,7 +536,11 @@ vietnamnews.vn##.banner,.clearfix,[class^="CloseButton_"],[class^="InstreamDom_"
 
 vietnamplus.vn##.adsbygoogle,[class^="sda_"],[id^="sdaMobile_"],[id^="sp-"]
 
+vietteltelecom.vn##.cta-card,.slick-current>div,.slick-track,[class^="banner-"]
+
 viettimes.vn##[id^="sp-wrapper-"]
+
+vikkibank.vn###my-smart-banner
 
 vinhlong.edu.vn##.content-image,.member2,.post-image
 
@@ -513,6 +557,8 @@ vnexpress.net###TOP_BANNER,#banner_top,#button-adblock,#sis_breakpage,#sis_break
 vnreview.vn##[class^="aanetwork-"],[class^="bg-"],[id^="bg-"]
 
 vtcnews.vn###appLink,.adsbygoogle,.inpage-ad,.top-ad,[class^="aanetwork-"],[class^="baner-"],[class^="inpage-ad-"]
+
+woori.com.vn##[class^="banner-"]
 
 xehay.vn###link-,.flash,[class^="ads-"]
 
