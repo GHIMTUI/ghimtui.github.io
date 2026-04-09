@@ -63,16 +63,20 @@ http://live.fptplay53.net/epzhd1/htvcphunu_vhls.smil/chunklist_b5000000.m3u8
 http://live.fptplay53.net/epzhd1/htvcthuanviethd_vhls.smil/chunklist_b5000000.m3u8
 
 #EXTINF:-1 tvg-id="bacninh" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/bacninh.png", Bắc Ninh 
-http://live.fptplay53.net/fnxsd1/bacninh01_hls.smil/chunklist_b2500000.m3u8
+#http://live.fptplay53.net/fnxsd1/bacninh01_hls.smil/chunklist_b2500000.m3u8
+http://live.mediatech.vn/live/285983d45f5bdab43ebb4cab75573adeda1/chunklist.m3u8
 
 #EXTINF:-1 tvg-id="cantho1" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/cantho1.png", Cần Thơ 1 
-http://live.fptplay53.net/epzsd1/cantho_hls.smil/chunklist_b2500000.m3u8
+#http://live.fptplay53.net/epzsd1/cantho_hls.smil/chunklist_b2500000.m3u8
+https://live.canthotv.vn/live/tv/chunklist_w2043652289.m3u8
 
 #EXTINF:-1 tvg-id="cantho2" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/cantho2.png", Cần Thơ 2 
-http://live.fptplay53.net/epzsd1/cantho02_vhls.smil/chunklist_b5000000.m3u8
+#http://live.fptplay53.net/epzsd1/cantho02_vhls.smil/chunklist_b5000000.m3u8
+https://live.canthotv.vn/cs2/live.stream/chunklist_w405846797.m3u8 
 
 #EXTINF:-1 tvg-id="cantho3" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/cantho3.png", Cần Thơ 3 
-http://live.fptplay53.net/epzsd1/cantho03_hls.smil/chunklist_b2500000.m3u8
+#http://live.fptplay53.net/epzsd1/cantho03_hls.smil/chunklist_b2500000.m3u8
+https://live.canthotv.vn/cs3/tv/chunklist_w898135023.m3u8 
 
 #EXTINF:-1 tvg-id="camau" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/camau.png", Cà Mau 
 http://live.fptplay53.net/epzsd1/camau_hls.smil/chunklist_b2500000.m3u8
@@ -175,13 +179,13 @@ http://live.fptplay53.net/epzsd1/quangtri_hls.smil/chunklist_b2500000.m3u8
 http://live.fptplay53.net/fnxsd1/sonla_hls.smil/chunklist_b2500000.m3u8
 
 #EXTINF:-1 tvg-id="tayninh1" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/tayninh.png", Tây Ninh 
-http://live.mediatech.vn/live/2851dc2c9af68834814a89e61db0faee561/playlist.m3u8
+http://live.mediatech.vn/live/2851dc2c9af68834814a89e61db0faee561/chunklist.m3u8
 
 #EXTINF:-1 tvg-id="thainguyen" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/thainguyen.png", Thái Nguyên 
 http://live.fptplay53.net/fnxsd1/thainguyen_hls.smil/chunklist_b2500000.m3u8
 
 #EXTINF:-1 tvg-id="thanhhoa" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/thanhhoa.png", Thanh Hóa 
-http://liveh12.vtvprime.vn/hls/THANHHOATV/03.m3u8
+http://truyenhinh.vnptvas.vn/live.m3u8?c=vstv525&q=sd&pkg=pkg12.hni
 
 #EXTINF:-1 tvg-id="tuyenquang" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/tuyenquang.png", Tuyên Quang 
 http://live.fptplay53.net/fnxsd1/tuyenquang_hls.smil/chunklist_b2500000.m3u8
