@@ -3,7 +3,7 @@
 ! Describe: Chặn quảng cáo
 ! Updated: 09 Apr 2026 23:42
 ! Blocked: 304
-! Size: 22.73KB
+! Size: 22.71KB
 ! ==================
 
 24h.com.vn##[id^="ADS_"],[id^="div_inpage_"]
@@ -426,7 +426,7 @@ sogddtsonla.edu.vn###module47,#module62
 
 sogiaoduc.caobang.gov.vn##.AdvertContent,.UIAdvertisement_Default
 
-soha.vn###admbackground,[class^="admLogoAd"],[class^="adv-"],[class^="lightbox-"],[id^="adm-"],[id^="banner-"],[id^="cpmzone_"],[id^="masthead_"],[id^="placement-"],[id^="share-"],[id^="slot-"],[id^="zone-"]
+soha.vn###admbackground,[class^="admLogoAd"],[class^="adv-"],[id^="adm-"],[id^="banner-"],[id^="cpmzone_"],[id^="masthead_"],[id^="placement-"],[id^="share-"],[id^="slot-"],[id^="zone-"]
 
 sohuutritue.net.vn##.e,[id^="ads_"],[id^="zone-"]
 
