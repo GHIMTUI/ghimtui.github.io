@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Describe: Chặn quảng cáo
-! Updated: 09 Apr 2026 23:19
+! Updated: 09 Apr 2026 23:42
 ! Blocked: 304
-! Size: 22.99KB
+! Size: 22.73KB
 ! ==================
 
 24h.com.vn##[id^="ADS_"],[id^="div_inpage_"]
@@ -124,7 +124,7 @@ cafef.vn###admFullTop,#admbackground,#ban-top-site,#logo_adm,.top-logo,[id^="adm
 
 camau.edu.vn##.UIMultiFunction_Default,.UIWebLink_Weblink
 
-camau.gov.vn###@##ctrl_160903_87_SlideShow,#@#.AdvertContent>marquee,.AdvertContent,[class^="UIAdvertisement_"],img[src="https://files-vnportalcmu.camau.gov.vn/cmu-chinhquyen/1/quantritintuc20258/NONG THON MOI 2025.jpg"],img[src="https://files-vnportalcmu.camau.gov.vn/cmu-chinhquyen/1/quantritintuc20258/TIEP CAN THONG TIN 2025-074496.png"],img[src="https://files-vnportalcmu.camau.gov.vn/cmu-chinhquyen/1/quantritintuc20263/CHONG KHAI THAC IUU-790730.png"]
+camau.gov.vn###@##ctrl_160903_87_SlideShow,#@#.AdvertContent>marquee,.AdvertContent,[class^="UIAdvertisement_"],img[src="https://files-vnportalcmu.camau.gov.vn/cmu-chinhquyen/1/quantritintuc20258/NONG THON MOI
 
 cand.com.vn##.capture-block,.capture-block>p,.nomargin
 
@@ -426,7 +426,7 @@ sogddtsonla.edu.vn###module47,#module62
 
 sogiaoduc.caobang.gov.vn##.AdvertContent,.UIAdvertisement_Default
 
-soha.vn###admbackground,.noCaption,[class^="admLogoAd"],[class^="adv-"],[class^="lightbox-"],[id^="adm-"],[id^="banner-"],[id^="cpmzone_"],[id^="masthead_"],[id^="placement-"],[id^="share-"],[id^="slot-"],[id^="zone-"]
+soha.vn###admbackground,[class^="admLogoAd"],[class^="adv-"],[class^="lightbox-"],[id^="adm-"],[id^="banner-"],[id^="cpmzone_"],[id^="masthead_"],[id^="placement-"],[id^="share-"],[id^="slot-"],[id^="zone-"]
 
 sohuutritue.net.vn##.e,[id^="ads_"],[id^="zone-"]
 
