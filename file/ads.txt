@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Describe: Chặn quảng cáo
-! Updated: 10 Apr 2026 00:30
-! Blocked: 304
-! Size: 22.69KB
+! Updated: 10 Apr 2026 07:51
+! Blocked: 303
+! Size: 22.46KB
 ! ==================
 
 24h.com.vn##[id^="ADS_"],[id^="div_inpage_"]
@@ -595,8 +595,6 @@ vjst.vn##[class^="c-banner-"]
 vnbusiness.vn##[class*="ad-"]
 
 vneconomy.vn##.user-login,[class^="mb-"]
-
-vnexpress.net###TOP_BANNER,#admbackground,#button-adblock,#sis_breakpage,#sis_breakpage>script,#sis_masthead,#sis_sticky,.adsbygoogle,.inner_ads,.txt_qc,[class^="ad_"],[class^="banner_mobile_"],[class^="section-logo-"],[class^="section_ads_"]
 
 vnreview.vn##[class^="aanetwork-"],[class^="bg-"],[id^="bg-"]
 
