@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Describe: Chặn quảng cáo
-! Updated: 12 Apr 2026 23:14
-! Blocked: 324
-! Size: 24.38KB
+! Updated: 14 Apr 2026 12:09
+! Blocked: 357
+! Size: 26.59KB
 ! ==================
 
 24h.com.vn##[id^="ADS_"],[id^="div_inpage_"]
@@ -16,6 +16,10 @@ afamily.vn###admbackground,[id^="adm-"],[id^="admbackground"],[id^="admbackgroun
 
 agribank.com.vn###agbModal,.modal-backdrop
 
+amlich.vn##[class^="aanetwork-"]
+
+amlichvietnam.com##.cta-box
+
 angiang.edu.vn###module1,#module10,#module12,#module13,#module19,#module20,#module21,#module24,#module25,#module26,#module27,#module44,#module45,#module47,#module57,#module58,#module59,#module60,#module61,#module62,#module63,#module64,#module65,#module66,#module67
 
 angiang.gov.vn##.col-lg-4,[class^="sidebar-"],[class^="sl-"],[class^="slideshow-"],a[target="_self"],img[src="https://angiang.gov.vn//sites/default/files/banner/bophapdien.jpg"],img[src="https://angiang.gov.vn//sites/default/files/banner/gui%20phan%20anh%20kien%20nghi.jpg"],img[src="https://angiang.gov.vn//sites/default/files/banner/tiep%20nhan%20y%20lkien%20cong%20dan.jpg"]
@@ -24,7 +28,7 @@ angiangtv.vn##.aligncenter,.footer-tabbar,.swiper,[class^="swiper-"],[class^="wp
 
 apk.watch##.adv_text,.adx_center,[class*="adslot_"]
 
-apkcombo.com##.diseanmevrtt,div[style="margin-bottom: -15px; margin-top: 15px"],div[style="margin-bottom: 10px; max-height: 260px; min-height: 260px; overflow: hidden"]
+apkcombo.com##.diseanmevrtt,div[style="margin-bottom: -15px; margin-top:
 
 apkmirror.com###bottom-slider,.adslot,.advertisement-text,[class*="ains-"],[class^="div-gpt-ad-"]
 
@@ -40,7 +44,7 @@ bacninh.gov.vn##.adv-containers
 
 bacninhtv.vn##.header-top,[class^="ads-"],[id^="ads-"]
 
-banduong.vn###21T1,.0,.1 #20T1,.active,.ards
+banduong.vn###21T1,.0,.1 #20T1,.active,.ards,.box-rightq,.qctop
 
 baobacninhtv.vn##.group-10-2,.group-4-3
 
@@ -112,7 +116,7 @@ baotayninh.vn##.advertis,[class^="ads-"],[class^="zonegroup-"]
 
 baothainguyen.vn##.anpham_baoin,.carousel,[class^="carousel-"],[class^="e"],[class^="ff"]
 
-baotintuc.vn###ubVideo,[id^="content_"],[id^="unibots-"]
+baotintuc.vn###ubVideo,.bannertop,[id^="content_"],[id^="unibots-"]
 
 baotuyenquang.com.vn##[class*="ads"]
 
@@ -130,6 +134,8 @@ bom.so##.ad,.ads,.adsbygoogle
 
 bongda24h.vn###bottomAdvs,.ads-center,.adscontent
 
+bongdaplus.vn###ADMTOP,[class^="tip-"],[class^="tips-"]
+
 buonmathuot.daklak.gov.vn##a[href="/danh-sach-phat-ngon-7.html"],a[href="/hoi-dap.html"]
 
 cafebiz.vn###admFullTop,#admbackground,#ban-top-site,#logo_adm,.top-logo,[id^="adm-"],[id^="admbackground_"],[id^="zone-"]
@@ -140,7 +146,7 @@ camau.edu.vn##.UIMultiFunction_Default,.UIWebLink_Weblink
 
 camau.gov.vn###@##ctrl_160903_87_SlideShow,#@#.AdvertContent>marquee,.AdvertContent,[class^="UIAdvertisement_"],img[src="https://files-vnportalcmu.camau.gov.vn/cmu-chinhquyen/1/quantritintuc20258/NONG THON MOI
 
-cand.com.vn##.capture-block,.capture-block>p,.nomargin
+cand.com.vn##.capture-block,.capture-block>p,.header-banner,.loaded,.loaded>p,.nomargin
 
 cantho.edu.vn##.content-image,.widget
 
@@ -156,6 +162,8 @@ capcut.com##[class^="banner_"]
 
 chatluongvacuocsong.vn##.e,[id^="ads_"],[id^="zone-"]
 
+chinhtrivaphattrien.vn##.qc_container
+
 cimbbank.com.vn##.btn
 
 cokhivietnam.vn##[class^="banner_"],[class^="box-banner-"]
@@ -168,7 +176,7 @@ congnghevadoisong.vn##.col-md-8>p,[class^="ads_"]
 
 congnghieptauthuyvietnam.vn##[class^="w_"]
 
-congthuong.vn##.loading,[class^="ads-"]
+congthuong.vn##.loading,.sys-ads,[class^="aanetwork-"],[class^="ads-"]
 
 daibieunhandan.vn##[id^="zone-"]
 
@@ -178,6 +186,8 @@ daklak.edu.vn##.block
 
 daklak.gov.vn###CarouselBanner9,#marquee_videos,#p_p_id_viewhtml_WAR_unitechappportlet_INSTANCE_HKs7pwVvACG6_,#p_p_id_viewhtml_WAR_unitechappportlet_INSTANCE_saTTV5DWX0T0_,.baner-home-item,.banner-92-1,.banner-93-2,.d-block,a[href="/categories/giay-phep-moi-truong-99.html"],a[href="/categories/van-ban-xin-loi-98.html"],a[href="/danh-gia-website.html"],a[href="/hoi-dap.html"],a[href="/mau-bieu-hanh-chinh.html"],a[href="/tu-lieu-truyen-thong-ve-ung-dung-pc-covid-va-quet-ma-qr-4128.html"],a[href="/van-ban.html"],a[href="http://baodaklak.vn/"],a[href="http://qlvb.bmt.daklak.gov.vn/"],a[href="http://vbpl.vn/pages/portal.aspx"],a[href="https://baucu.daklak.gov.vn/"],a[href="https://binhdanhocvuso.gov.vn/"],a[href="https://daklak.daklak.gov.vn/van-ban/ban-hanh-quy-che-tiep-cong-dan-tai-tru-so-tiep-cong-dan-huyen-cu-kuin-480.html"],a[href="https://daklak.gov.vn/"],a[href="https://draybhang.daklak.gov.vn/categories/thong-tin-cchc-37.html"],a[href="https://dx.gov.vn/"],a[href="https://mail.bmt.daklak.gov.vn/"],a[href="https://pbgdpl.daklak.gov.vn/"],a[href="https://qlvb.daklak.gov.vn/"],a[href="https://qlvb.daklak.gov.vn/hcukuin"],a[href^="http://qlvb.daklak.daklak.gov.vn/daklak/daklak/xschedule/page/web/index.cpx"],a[href^="https://daklak.daklak.gov.vn/van-ban.html"],a[href^="https://dichvucong.daklak.gov.vn/dichvucong/bothutuc"]
 
+daklak24h.com.vn##.BannerItem
+
 danang.edu.vn##marquee[behavior="scroll"]
 
 danang.gov.vn###carouselBanner,#fragment-0-ppxw,#fragment-0-vpnz,#fragment-10702-feed,#fragment-10702-kbwe,#fragment-10702-owgn,#fragment-10702-pptc,#fragment-19401-enww,#fragment-19401-fvbe,#fragment-19401-hhxk,#fragment-19401-peom,#fragment-19401-qfat,#fragment-19401-vihy,.congtienich,.mt-sm-0
@@ -186,11 +196,13 @@ danangtv.vn##.Quang_cao_temp,.XemGiQuangCao,.active,.fill,.left,[class^="QuangCa
 
 danchuphapluat.vn##.__ads_click,.qc,[class^="box-qc-"]
 
-dantocphattrien.vietnamnet.vn##.AdvBanner
+dantocphattrien.vietnamnet.vn##.AdvBanner,[class^="Adv"]
 
-dantri.com.vn###tpmInpageContainer,#tpmInpageContainerWrapper,[class^="dt-py-"],[id^="dta-"],[id^="dtad_"],[id^="mobile-top-page"],[id^="sp-wrapper-"]
+dantri.com.vn###desktop-home-top-page,#tpmInpageContainer,#tpmInpageContainerWrapper,[class^="dt-py-"],[id^="banner"],[id^="dta-"],[id^="dtad_"],[id^="mobile-top-page"],[id^="sp-wrapper-"]
 
 danviet.vn##[class^="ads-"],[class^="exp_qc_"],[class^="video-"],[id^="ads_"],[id^="zone-"]
+
+dembuon.vn###ads-google
 
 dep.com.vn##.notrack,.pb,[class^="ad-"],[id^="advads-"]
 
@@ -236,6 +248,8 @@ elle.vn##[class^="banner-"],[id^="div-gpt-ad-"]
 
 eva.vn##[class^="banr"],[class^="banr-"],[id^="ADS_"],[id^="spanTextAds_"]
 
+fandom.com##.top-ads-container,[class^="ad-"]
+
 finance.vietstock.vn##[class*="ats-overplay-"],[class^="bannerhtml"],[id^="googleAds_"]
 
 fptplay.vn##.flex-row
@@ -251,6 +265,8 @@ gialai.gov.vn##.active,.bg-item,.img-icon,.media
 giaoduc.net.vn##[class^="ad-"],[class^="sda_"],[id^="sdaMobile_"]
 
 giaoducthoidai.vn###[id^="sp-wrapper-"],[class^="ad-"],[class^="nl-infooter-"],[class^="sda_"],[class^="sp-infooter-"],[id^="sdaMobile_"]
+
+gitiho.com##.mobile-internal-camp,[class*="banner-"]
 
 gpbank.com.vn##[id^="advert-"]
 
@@ -302,6 +318,8 @@ ioit.vast.gov.vn###scroller,.cov
 
 iq.com##.download-container,.qrcode-wrap
 
+irace.vn##.g-6,.td-visible-phone
+
 jomc.vn##.adv-wrapper,.center-block
 
 kalvo.com##[class^="klv_"],[class^="klvad"]
@@ -348,11 +366,25 @@ laodong.vn###admbackground,#main-footer-fix-bottom,.adsbygoogle,.item,.msg,[clas
 
 laodongdoanthe.vn##.banner,[class^="mb"]
 
+lichcupdien.org##[id*="bn2-wrapper"],[id*="sp-wrapper"],[id*="tt-wrapper"]
+
+lichcupdien.vn##[id^="pvoucher"]
+
+lichngaytot.com##.adsbygoogle,[class^="advbox"]
+
+lichvannien365.com##.adsbygoogle
+
+lichviet.app###smart-app-banner,[class*="banner"],[class*="swiper"]
+
 liteapks.com##[id^="ad-"]
 
 lsvn.vn##.aanetwork-ads-box,.ads-item,[class^="aanetwork-"],[class^="ads-"],[class^="sys"],sys-ads
 
+lyluanchinhtri.vn##[class^="ads_"],[class^="c-banner-"],[id^="zone-"]
+
 markettimes.vn##[class^="c-banner-"]
+
+maytinhdaiviet.com###dv-mobile-bottom-ad
 
 mbv.com.vn##.bg-primary
 
@@ -363,6 +395,8 @@ missav123.com##[class^="inner-"],[class^="layoutWrapper-"],[class^="modelWrapper
 mobifone.vn##.main-banner
 
 moet.gov.vn##.full-width,.list-links
+
+mthi.tuyensinh247.com##.adsbygoogle,.btn_small_fix_container,[class*="countdown"],[id*="countdown"]
 
 namabank.com.vn##.mobile-popup
 
@@ -382,7 +416,7 @@ nguoiduatin.vn##.adsbygoogle,[class^="ndt-"],[class^="sp-"],[id^="sp-"],[id^="sp
 
 nguoiquansat.vn##.c-banner,.footer-sticky,[class^="adbox-"],[class^="ads_"],[class^="is-"],[class^="nguoiquansat-"],[id^="zone-"]
 
-nhachannuoi.vn##.left-banner,.logothuonghieu,.menu-pr,.pdthieu,.quangcao,.tapchi,.tapchichannuoi,.tapchithaydoi,.thuonghieu,.thuonghieu>li,.wapthuonghieu,[class^="banner-"],[class^="center-"],[class^="exp_qc_"],[id^="ads_"],[id^="black-"],[id^="callblacks3_"],[id^="zone-"]
+nhachannuoi.vn##.left-banner,.logothuonghieu,.menu-pr,.pdthieu,.quangcao,.tapchi,.tapchichannuoi,.tapchithaydoi,.thuonghieu,.thuonghieu>li,.wapthuonghieu,.wp-image-86552,[class^="banner-"],[class^="center-"],[class^="exp_qc_"],[id^="ads_"],[id^="black-"],[id^="callblacks3_"],[id^="zone-"]
 
 nhadautu.vn##[id^="ads_"],[id^="zone-"]
 
@@ -392,7 +426,7 @@ ninhbinh.edu.vn##img[style="height:130px;width:380px;float:left; margin-bottom: 
 
 ninhbinh.gov.vn##.UIAdvertisement_Default,.UIMultiFunction_Default
 
-nld.com.vn###admFullTop,#admbackground,#head_login,#sp-wrapper-hovering,.ads-top,.ads-top>script,.bell-click,.d-block,.loginfrom,.loginfrom #head_login,.notifi-list
+nld.com.vn###admFullTop,#admbackground,#head_login,#sp-wrapper-hovering,.ads-top,.ads-top>script,.bell-click,.d-block,.loginfrom,.loginfrom #head_login,.notifi-list,.txtlogo,[class^="admLogoAdmatic"],[class^="banner-"],[id^="adnzone_"],[id^="banner-"],[id^="placement-"],[id^="share-"],[id^="slot-"],[id^="ssppagebid_"],[id^="zone-"]
 
 nnmt.net.vn##.box-doitac,.partner-slider,[class*="slider-1-"],[class^="ads-"]
 
@@ -406,11 +440,15 @@ otosaigon.com###top-mobile-ads,[class^="ads-"],[id^="banner-"],[id^="div-gpt-ad-
 
 pgbank.com.vn##.footer-menu,.section-2
 
+phapluat.suckhoedoisong.vn##[class^="c-banner-"]
+
 phaply.net.vn##.visible,[class^="qc_"]
+
+phongvu.vn##[class^="pv-"],[id^="pv-"]
 
 phunuonline.com.vn##.bz,.margintop10,[class^="bannerdhd"],[class^="revive-"],[id^="home_"]
 
-phunuvietnam.vn##.admFullTop,.ban-top-site,.mb20,.top-logo,[id^="adm_#zone-"],[id^="logo-"],[id^="streamline_"]
+phunuvietnam.vn##.admFullTop,.ban-top-site,.mb20,.top-logo,[class^="admLogoAd"],[id^="adm_#zone-"],[id^="adnzone_"],[id^="banner-"],[id^="logo-"],[id^="placement-"],[id^="share-"],[id^="slot-"],[id^="ssppagebid_"],[id^="streamline_"],[id^="zone-"]
 
 phutho.edu.vn###module15,#module27,#module28,#module40,#module41,#module42,#module43,.image-list-album
 
@@ -418,7 +456,7 @@ phutho.gov.vn###PTPBBannerLeftColumn,[id^="zn_"]
 
 phuthotv.vn##[class^="c3s-"],[id^="slide-"]
 
-plo.vn###catfish,.fanpage,.fp,[id^="Mobile_"],[id^="adsMobile_"],[id^="ads_"],[id^="bn-"],[id^="yomedia-"]
+plo.vn###catfish,.fanpage,.fp,.top-banner,[id^="Mobile_"],[id^="Web_"],[id^="adsMobile_"],[id^="adsWeb_"],[id^="ads_"],[id^="bn-"],[id^="bn-zone-"],[id^="yomedia-"]
 
 pvcombank.com.vn##.responsive-wrapper
 
@@ -438,7 +476,7 @@ quankhu2.vn##[class^="advrtise"],[class^="img-"]
 
 quanlynhanuoc.vn##[class*="wp-image-"]
 
-quantrimang.com###adunderarticle,.adsbygoogle,.in-article,[id*="adsposttop"],[id^="adindexcenter"],[id^="mrc"]
+quantrimang.com###adunderarticle,.adsbygoogle,.in-article,[id*="adright"],[id*="adsposttop"],[id^="adindexcenter"],[id^="mrc"]
 
 quocphongthudo.vn###module20,#module35,#module38,#module39,#module40
 
@@ -446,7 +484,9 @@ reatimes.vn##[class^="adv-"],[class^="owl-"]
 
 sc.com##.smartbanner,[class^="smartbanner-"]
 
-sggp.org.vn##[class^="Is-"],[id^="Mobile_"],[id^="sdaMobile_"]
+sdttg.hochiminhcity.gov.vn##[class^="journal-"],[class^="wrapPartners-"]
+
+sggp.org.vn##[class^="Is-"],[id^="Mobile_"],[id^="oa-"],[id^="sdaMobile_"]
 
 shinhan.com.vn##.responsive-wrapper
 
@@ -508,6 +548,8 @@ tapchivietnamhuongsac.vn##.banner
 
 tayninh.gov.vn##.AdvertContent,.UIGoldCustomer_default2
 
+tcdcpl.moj.gov.vn##.box-ads
+
 tcnnld.vn##[class*="tapchifull"],[class^=".magazine-promo_"]
 
 tdtt.gov.vn###dnn_TopGrid4A,#dnn_TopGrid4B,#dnn_TopGrid4C
@@ -526,6 +568,8 @@ thanhhoa.gov.vn##.tandan-div-module-links-img
 
 thanhnien.vn##.asd-headt,.asd-headt>div,[id^="banner-"],[id^="placement-"],[id^="share-"],[id^="slot-"],[id^="sp-wrapper-"],[id^="zone-"]
 
+thanhtra.com.vn##.build-advertisements
+
 thdt.vn##.blockBanner,.hover,[class^="Partner_"]
 
 thesaigontimes.vn##.tdi_129,.tdi_129>style
@@ -538,11 +582,13 @@ thhp.vn##[class^="ads-"],[class^="zonegroup-"]
 
 thieunhivietnam.vn##.item
 
-thieunien.vn##.my-1,.my-1>p
+thieunien.vn##.my-1,.my-1>p,.section-content,[id^="media_"]
 
 thitruongtaichinhtiente.vn##[class^="ads_"],[class^="c-banner-"],[class^="c-bottom-"],[class^="is-"],[id^="zone-"]
 
-thoidai.com.vn##[class^="__ads_"],[class^="banner-"]
+thoibaotaichinhvietnam.vn##[class^="banner"]
+
+thoidai.com.vn##.banner,[class^="__ads_"],[class^="banner-"]
 
 thoitrangvang.vn##[class^="ads"],[class^="ads_"],[class^="c-banner-"],[id^="zone-"]
 
@@ -572,6 +618,8 @@ tudonghoangaynay.vn##.__ads_click,[class^="qc-"]
 
 tuoitre.vn###LeaderBoardTop,#admFullTop,#admbackground,.clearfix,[id^="adm_"],[id^="ban-site-top"],[id^="banner-"],[id^="iframe-"],[id^="placement-"],[id^="pqc_"],[id^="pvoucher-"],[id^="share-"],[id^="slot-"],[id^="sp-"],[id^="sp_"],[id^="top-logo"],[id^="zone-"]
 
+tuvi.vn##[class*="ads"],[class^="aanetwork-"],[class^="carousel-"]
+
 tuyenquang.edu.vn###module53,#module62,#module63,#module64
 
 tv.xem8x.com##iframe[height="95"]
@@ -586,6 +634,8 @@ tv360.vn##.text-ellipsis,a[href^="https://tv360.page.link/"]
 
 tvbox.one###google_vignette,.adsbygoogle,.entry-img-300,.homeadv
 
+upanh.1doi1.com##.adsbygoogle,.resizeimg>center
+
 vanhienplus.vn##.#scrollfix,[class^="image-"],[class^="imqc-"],[id^="secondary-"]
 
 vanhoanghethuat.vn##.sticky
@@ -599,6 +649,8 @@ vbsp.org.vn##[class^="ads"]
 vcbneo.com.vn##[class^="banner_"]
 
 vdb.gov.vn##[class^="Ads_"]
+
+vhds.baothanhhoa.vn###iad,[class^="dadv_"],[id^="mngang1_"]
 
 vib.com.vn##.new-download-app
 
@@ -618,6 +670,8 @@ vietnamnews.vn##.banner,.clearfix,[class^="CloseButton_"],[class^="InstreamDom_"
 
 vietnamplus.vn##.adsbygoogle,.ats-overlay-bottom-wrapper-unrendered,[class^="sda_"],[id^="sdaMobile_"],[id^="sp-"]
 
+vietnamradio.org##.add-box-top,.adsbygoogle
+
 vietnamworks.com##.top-0,.z-50
 
 vietteltelecom.vn##.cta-card,.slick-current>div,.slick-track,[class^="banner-"]
@@ -636,17 +690,29 @@ vnbusiness.vn##[class*="ad-"]
 
 vneconomy.vn##.user-login,[class^="mb-"]
 
-vnexpress.net###TOP_BANNER,#banner_top,#google_vignette,.adsbygoogle,.inner_ads,.text_ads,.txt_qc,[class*="section_ads_"],[class^="banner_ads_"],[class^="google_ads_"]
+vnexpress.net###TOP_BANNER,#banner_top,#google_vignette,.adsbygoogle,.inner_ads,.text_ads,.txt_qc,.txt_qc .text_ads .inner_ads,[class*="section_ads_"],[class^="banner_ads_"],[class^="google_ads_"],[id^="banner_"]
 
 vnreview.vn##[class^="aanetwork-"],[class^="bg-"],[id^="bg-"]
 
+voh.com.vn##.adstop
+
+vov2.vov.vn###block-daihoidangbanner,#block-daihoidangbanner>div,.video-fluid
+
+vovgiaothong.vn##.e,[class^="ads_"],[class^="banner-"],[id^="zone_"]
+
+voz.vn##[id^="sp-"]
+
 vtcnews.vn###appLink,.adsbygoogle,.inpage-ad,.top-ad,[class^="aanetwork-"],[class^="baner-"],[class^="inpage-ad-"]
+
+vtv.vn##[id^="banner-"],[id^="lozad-"],[id^="placement-"],[id^="share-"],[id^="slot-"],[id^="zone-"]
 
 vtvgo.vn##.micro-open-app
 
 woori.com.vn##[class^="banner-"]
 
 xehay.vn###link-,.flash,[class^="ads-"]
+
+xemtivi4k.com##a[href="https://record.brave888.com/_CXLXKr7jtXINaHdFA_j09GNd7ZgqdRLk/23283/"]
 
 xemtv.net###bottom650,.ads-mb,.line,div[data-widget-id="1771082"],div[data-widget-id="1845723"],div[data-widget-id="1886588"],marquee[direction="left"]
 
