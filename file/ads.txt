@@ -1,15 +1,10 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Describe: Chặn quảng cáo
-! Updated: 15 Apr 2026 22:23
-! Blocked: 362
-! Size: 26.73KB
+! Updated: 15 Apr 2026 22:24
+! Blocked: 360
+! Size: 26.82KB
 ! ==================
-
-.link-callout,.noCaption,.noCaption>div,[class^="ads-"],[id^="adm_"],[id^="admsection"],[id^="zone-"]
-.text_ads
-#20T1,.active,.ards,.box-rightq,.qctop
-#head_login,.notifi-list,.txtlogo,[class^="admLogoAdmatic"],[class^="banner-"],[id^="adnzone_"],[id^="banner-"],[id^="placement-"],[id^="share-"],[id^="slot-"],[id^="ssppagebid_"],[id^="zone-"]
 
 24h.com.vn##[id^="ADS_"],[id^="div_inpage_"]
 
@@ -19,9 +14,9 @@ acb.com.vn###download-banner-footer
 
 afamily.vn###admbackground,[id^="adm-"],[id^="admbackground"],[id^="admbackground_"],[id^="banner-"],[id^="close_ad_"],[id^="placement-"],[id^="share-"],[id^="slot-"],[id^="sps_"],[id^="zone-"]
 
-agribank.com.vn###agbModal #modal-backdrop
+agribank.com.vn###agbModal,.modal-backdrop
 
-amlich.vn##[class^="aanetwork-"] .add
+amlich.vn##[class^="aanetwork-"]
 
 amlichvietnam.com##.cta-box
 
@@ -33,7 +28,7 @@ angiangtv.vn##.aligncenter,.footer-tabbar,.swiper,[class^="swiper-"],[class^="wp
 
 apk.watch##.adv_text,.adx_center,[class*="adslot_"]
 
-apkcombo.com##.diseanmevrtt,div[style="margin-bottom:
+apkcombo.com##.diseanmevrtt,div[style="margin-bottom: -15px; margin-top:
 
 apkmirror.com###bottom-slider,.adslot,.advertisement-text,[class*="ains-"],[class^="div-gpt-ad-"]
 
@@ -41,7 +36,7 @@ apkpure.com##.ad,.adsbygoogle,.aegon,.js-ad-slot,.right
 
 apkpure.net###google_vignette,.ad,.adsbygoogle,.js-ad-slot,[class*="-banner-"],[class^="banner-"]
 
-autopro.com.vn##.lightbox-content
+autopro.com.vn##.lightbox-content,.link-callout,.noCaption,.noCaption>div,[class^="ads-"],[id^="adm_"],[id^="admsection"],[id^="zone-"]
 
 bacninh.edu.vn###module21,#module26,#module27,#module28,#module29,#module71,.col-sm-4,.image-list-album
 
@@ -49,7 +44,7 @@ bacninh.gov.vn##.adv-containers
 
 bacninhtv.vn##.header-top,[class^="ads-"],[id^="ads-"]
 
-banduong.vn###21T1,.0,.1
+banduong.vn###21T1,.0,.1 #20T1,.active,.ards,.box-rightq,.qctop
 
 baobacninhtv.vn##.group-10-2,.group-4-3
 
@@ -59,7 +54,7 @@ baocantho.com.vn##[class^="paddingtop"],[id^="home_right_"],[id^="mobitop"]
 
 baocaobang.vn##.block-scroll-right,.mt-3,[class^="ads-"],[class^="zonegroup-"]
 
-baodaklak.vn##a[href="/chinh-tri/Bau-cu-DBQH-va-dai-bieu-HDND-cac-cap"],a[href="https://tgdv.vtscloud.vn/installation"],a[style="padding:
+baodaklak.vn##a[href="/chinh-tri/Bau-cu-DBQH-va-dai-bieu-HDND-cac-cap"],a[href="https://tgdv.vtscloud.vn/installation"],a[style="padding: 0 6px; width: 100%;"]
 
 baodanang.vn##[class^="ads_"],[class^="c-banner-"],[class^="c-box__"],[class^="h-show-"],[id^="zone-"]
 
@@ -73,7 +68,7 @@ baogialai.com.vn##[class^="ad-"],[class^="sda_"],[id^="sdaMobile_"]
 
 baohaiphong.vn##.is-custom-size,[class^="ads_"],[class^="c-banner-"],[id^="zone-"]
 
-baohaiquanvietnam.vn##.insert-ads,p[style="text-align:
+baohaiquanvietnam.vn##.insert-ads,p[style="text-align: justify;"]
 
 baohatinh.vn##[class^="ad-"],[class^="sda_"],[id^="sdaMobile_"]
 
@@ -149,7 +144,7 @@ cafef.vn###admFullTop,#admbackground,#ban-top-site,#logo_adm,.top-logo,[id^="adm
 
 camau.edu.vn##.UIMultiFunction_Default,.UIWebLink_Weblink
 
-camau.gov.vn###@##ctrl_160903_87_SlideShow,#@#.AdvertContent>marquee,.AdvertContent,[class^="UIAdvertisement_"],img[src="https://files-vnportalcmu.camau.gov.vn/cmu-chinhquyen/1/quantritintuc20258/NONG
+camau.gov.vn###@##ctrl_160903_87_SlideShow,#@#.AdvertContent>marquee,.AdvertContent,[class^="UIAdvertisement_"],img[src="https://files-vnportalcmu.camau.gov.vn/cmu-chinhquyen/1/quantritintuc20258/NONG THON MOI
 
 cand.com.vn##.capture-block,.capture-block>p,.header-banner,.loaded,.loaded>p,.nomargin
 
@@ -433,11 +428,11 @@ nhadautu.vn##[id^="ads_"],[id^="zone-"]
 
 nhipcaudautu.vn###newsletter,.col-md-8>center
 
-ninhbinh.edu.vn##img[style="height:130px;width:380px;float:left;
+ninhbinh.edu.vn##img[style="height:130px;width:380px;float:left; margin-bottom: 5px;"]
 
 ninhbinh.gov.vn##.UIAdvertisement_Default,.UIMultiFunction_Default
 
-nld.com.vn###admFullTop,#admbackground,#head_login,#sp-wrapper-hovering,.ads-top,.ads-top>script,.bell-click,.d-block,.loginfrom
+nld.com.vn###admFullTop,#admbackground,#head_login,#sp-wrapper-hovering,.ads-top,.ads-top>script,.bell-click,.d-block,.loginfrom,.loginfrom #head_login,.notifi-list,.txtlogo,[class^="admLogoAdmatic"],[class^="banner-"],[id^="adnzone_"],[id^="banner-"],[id^="placement-"],[id^="share-"],[id^="slot-"],[id^="ssppagebid_"],[id^="zone-"]
 
 nnmt.net.vn##.box-doitac,.partner-slider,[class*="slider-1-"],[class^="ads-"]
 
@@ -701,7 +696,7 @@ vnbusiness.vn##[class*="ad-"]
 
 vneconomy.vn##.user-login,[class^="mb-"]
 
-vnexpress.net###TOP_BANNER,#banner_top,#google_vignette,.adsbygoogle,.inner_ads,.text_ads,.txt_qc
+vnexpress.net###TOP_BANNER,#banner_top,#google_vignette,.adsbygoogle,.inner_ads,.text_ads,.txt_qc,.txt_qc .text_ads
 
 vnreview.vn##[class^="aanetwork-"],[class^="bg-"],[id^="bg-"]
 
@@ -729,4 +724,4 @@ xemtv.net###bottom650,.ads-mb,.line,div[data-widget-id="1771082"],div[data-widge
 
 xemtv.us###med_rec_banner2,.ads-mb,.d-block,.float-ck,.sticky_bottom,div[data-widget-id="1433589"]
 
-znews.vn##[class^="Okv-"],[class^="follow-"],[id^="Okv-"],[id^="ZingNews_"],[id^="Zingnews_"]
+znews.vn##[class^="Okv-"],[class^="follow-"],[id^="Okv-"],[id^="ZingNews_"],[id^="Zingnews_"
