@@ -3,8 +3,10 @@
 ! Describe: Chặn quảng cáo
 ! Updated: 15 Apr 2026 22:24
 ! Blocked: 360
-! Size: 26.82KB
+! Size: 26.83KB
 ! ==================
+
+.ads
 
 24h.com.vn##[id^="ADS_"],[id^="div_inpage_"]
 
