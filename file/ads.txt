@@ -1,26 +1,19 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
-! Updated: 15 Apr 2026 21:51
+! Describe: Chặn quảng cáo
+! Updated: 15 Apr 2026 22:19
+! Blocked: 362
+! Size: 26.72KB
 ! ==================
 
--15px;
+.link-callout,.noCaption,.noCaption>div,[class^="ads-"],[id^="adm_"],[id^="admsection"],[id^="zone-"]
 .text_ads
 #20T1,.active,.ards,.box-rightq,.qctop
 #head_login,.notifi-list,.txtlogo,[class^="admLogoAdmatic"],[class^="banner-"],[id^="adnzone_"],[id^="banner-"],[id^="placement-"],[id^="share-"],[id^="slot-"],[id^="ssppagebid_"],[id^="zone-"]
 
-||a.com
-
-0
-
-100%;"]
-
 24h.com.vn##[id^="ADS_"],[id^="div_inpage_"]
 
 2sao.vn###catfish,.adsbyvli,.vmc_ads_viewport,[id*="adzone"],[id^="Mobile_"],[id^="adzone"],[id^="container-"],[id^="pw_"],[id^="sp-wrapper-"],[id^="yomedia-"]
-
-5px;"]
-
-6px;
 
 acb.com.vn###download-banner-footer
 
@@ -48,7 +41,7 @@ apkpure.com##.ad,.adsbygoogle,.aegon,.js-ad-slot,.right
 
 apkpure.net###google_vignette,.ad,.adsbygoogle,.js-ad-slot,[class*="-banner-"],[class^="banner-"]
 
-autopro.com.vn##.lightbox-content,.link-callout,.noCaption,.noCaption>div,[class^="ads-"],[id^="adm_"],[id^="admsection"],[id^="zone-"]
+autopro.com.vn##.lightbox-content
 
 bacninh.edu.vn###module21,#module26,#module27,#module28,#module29,#module71,.col-sm-4,.image-list-album
 
@@ -336,8 +329,6 @@ irace.vn##.g-6,.td-visible-phone
 
 jomc.vn##.adv-wrapper,.center-block
 
-justify;"]
-
 kalvo.com##[class^="klv_"],[class^="klvad"]
 
 kenh14.vn##.adv,[id^="adm-"],[id^="admbackground"],[id^="admbackground_"],[id^="banner-"],[id^="placement-"],[id^="share-"],[id^="slot-"],[id^="zone-"]
@@ -400,10 +391,6 @@ lsvn.vn##.aanetwork-ads-box,.ads-item,[class^="aanetwork-"],[class^="ads-"],[cla
 
 lyluanchinhtri.vn##[class^="ads_"],[class^="c-banner-"],[id^="zone-"]
 
-margin-bottom:
-
-margin-top:
-
 markettimes.vn##[class^="c-banner-"]
 
 maytinhdaiviet.com###dv-mobile-bottom-ad
@@ -417,8 +404,6 @@ missav123.com##[class^="inner-"],[class^="layoutWrapper-"],[class^="modelWrapper
 mobifone.vn##.main-banner
 
 moet.gov.vn##.full-width,.list-links
-
-MOI
 
 mthi.tuyensinh247.com##.adsbygoogle,.btn_small_fix_container,[class*="countdown"],[id*="countdown"]
 
@@ -618,8 +603,6 @@ thoidai.com.vn##.banner,[class^="__ads_"],[class^="banner-"]
 
 thoitrangvang.vn##[class^="ads"],[class^="ads_"],[class^="c-banner-"],[id^="zone-"]
 
-THON
-
 thuonghieusanpham.vn###admFullTop,#ban-top-site,#top-logo,.banner,.l-sidebar,.news-bar,.news-bar>ul,[id^="adm_"],is-order
 
 thuvienphapluat.vn###TVNDWidget,#TVNDWidget>div,.goiDvu-footer,.goiDvu-footer>div,[id^="sp-wrapper-"]
@@ -735,8 +718,6 @@ vtcnews.vn###appLink,.adsbygoogle,.inpage-ad,.top-ad,[class^="aanetwork-"],[clas
 vtv.vn##[id^="banner-"],[id^="lozad-"],[id^="placement-"],[id^="share-"],[id^="slot-"],[id^="zone-"]
 
 vtvgo.vn##.micro-open-app
-
-width:
 
 woori.com.vn##[class^="banner-"]
 
