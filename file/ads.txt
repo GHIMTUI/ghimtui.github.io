@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Describe: Chặn quảng cáo
-! Updated: 15 Apr 2026 22:22
+! Updated: 15 Apr 2026 22:23
 ! Blocked: 362
-! Size: 26.72KB
+! Size: 26.73KB
 ! ==================
 
 .link-callout,.noCaption,.noCaption>div,[class^="ads-"],[id^="adm_"],[id^="admsection"],[id^="zone-"]
@@ -21,7 +21,7 @@ afamily.vn###admbackground,[id^="adm-"],[id^="admbackground"],[id^="admbackgroun
 
 agribank.com.vn###agbModal #modal-backdrop
 
-amlich.vn##[class^="aanetwork-"]
+amlich.vn##[class^="aanetwork-"] .add
 
 amlichvietnam.com##.cta-box
 
