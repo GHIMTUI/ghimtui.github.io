@@ -268,7 +268,7 @@ function formatPrefixesSmart(input) {
         _o: "ghimtui",
         _r: "ghimtui.github.io",
         _p_ads: "file/ads.txt",
-        _p_pref: "file/prefixes.txt"
+        _p_pref: "file/ads-prefix.txt"
     };
 
     const _api_base = `https://api.github.com/repos/${_app_opt._o}/${_app_opt._r}/contents/`;
@@ -377,52 +377,62 @@ function formatPrefixesSmart(input) {
             
             if (l.match(/! (Title|Description|Describe|Updated|Version|Blocked|Size|=======)/i) || l.startsWith("[Adblock") || l.startsWith('!')) return;
             
-            let splitted = l.split(/\s+(?=[^#\s]+(?:##|\[))/);
-            splitted.forEach(item => { if(item.trim()) bodyLines.push(item.trim()); });
+            // Ở bước lọc thô, giữ nguyên dòng gốc, không split bậy bạ để tránh làm mất context domain
+            bodyLines.push(l);
         });
 
         let mergedMap = new Map();
         let otherRules = new Set();
 
         bodyLines.forEach(line => {
-            let hideMatch = line.match(/^([^#\[\]\s]+)(##|\[|#|\.)(.*)$/);
+            // Regex chặt chẽ hơn: tìm domain và phần phân tách ##
+            let hideMatch = line.match(/^([^#\[\]\s,]+)(##|#|\[|\.)(.*)$/);
+            
             if (hideMatch && !line.startsWith('@@') && !line.startsWith('/') && !line.startsWith('.') && !line.startsWith('#')) {
                 let rawDomain = hideMatch[1].trim();
+                
                 if (_is_valid_domain(rawDomain)) {
                     let domain = _remove_subdomain_prefixes(rawDomain);
                     let separator = hideMatch[2];
                     let selectorPart = hideMatch[3];
+                    
+                    // Khôi phục separator nếu là lỗi dán thiếu dấu ##
                     let fullSelector = (separator === '##' ? '' : separator) + selectorPart;
                     
                     if (!mergedMap.has(domain)) mergedMap.set(domain, new Set());
-                    fullSelector.split(',').forEach(s => { 
+                    
+                    // CHỈ Tách khi có dấu phẩy rõ ràng
+                    // Không tách bằng khoảng trắng ở đây để giữ quan hệ cha con (a.com##.ad1 .ad2)
+                    let selectors = fullSelector.split(/,(?![^\[]*\])/);
+                    
+                    selectors.forEach(s => {
                         let trimmed = s.trim();
-                        if (trimmed) mergedMap.get(domain).add(trimmed); 
+                        if (trimmed) mergedMap.get(domain).add(trimmed);
                     });
+                } else {
+                    // Nếu không phải domain hợp lệ, coi như generic rule
+                    otherRules.add(line);
                 }
             } else {
-                let trimmedLine = line.trim();
-                if (trimmedLine.startsWith('@@||')) {
-                    let domainPart = trimmedLine.substring(4).split(/[\/\^]/)[0];
-                    if (_is_valid_domain(domainPart)) otherRules.add(trimmedLine);
-                } else if (trimmedLine.startsWith('.') || trimmedLine.startsWith('#') || trimmedLine.startsWith('##')) {
-                    otherRules.add(trimmedLine);
-                }
+                otherRules.add(line);
             }
         });
 
         let processedBody = [];
         mergedMap.forEach((selectors, domain) => {
+            // Sắp xếp các selector của cùng 1 domain và nối bằng dấu phẩy
             processedBody.push(`${domain}##${Array.from(selectors).sort().join(',')}`);
         });
 
-        otherRules.forEach(rule => processedBody.push(rule));
+        otherRules.forEach(rule => {
+            if (rule.trim()) processedBody.push(rule.trim());
+        });
+
         const strictSort = (a, b) => a.localeCompare(b);
         let whitelistRules = Array.from(new Set(processedBody.filter(line => line.startsWith("@@||")))).sort(strictSort);
         let normalRules = Array.from(new Set(processedBody.filter(line => !line.startsWith("@@||") && line !== ""))).sort(strictSort);
         let uniqueBody = Array.from(new Set([...normalRules, ...whitelistRules]));
 
-        // Logic đếm: Bỏ qua các dòng bắt đầu bằng dấu chấm (.) HOẶC bắt đầu bằng ##.
         const rulesForCounting = uniqueBody.filter(line => !line.startsWith('.') && !line.startsWith('##.'));
         const ruleCount = rulesForCounting.length;
 
@@ -432,12 +442,30 @@ function formatPrefixesSmart(input) {
             finalUpdateTime = new Date().toLocaleString('en-GB', { day: '2-digit', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit', hour12: false }).replace(',', '');
         }
 
-        let tempBodyOutput = [], lastGroupKey = "";
+        let tempBodyOutput = [], lastGroupKey = "", lastDomainBase = "";
         uniqueBody.forEach(line => {
-            let currentGroupKey = line.startsWith("@@||") ? "WHITELIST" : (/[a-zA-Z0-9]/.test(line[0]) ? line[0].toUpperCase() : "SPECIAL");
-            if (lastGroupKey && lastGroupKey !== currentGroupKey) tempBodyOutput.push(""); 
+            let currentGroupKey = "";
+            let currentDomainBase = "";
+
+            if (line.startsWith("@@||")) {
+                currentGroupKey = "WHITELIST";
+                currentDomainBase = line.substring(4).split(/[\/\^]/)[0];
+            } else if (/[a-zA-Z0-9]/.test(line[0])) {
+                currentGroupKey = line[0].toUpperCase();
+                currentDomainBase = line.split('##')[0];
+            } else {
+                currentGroupKey = "SPECIAL";
+            }
+
+            if (lastGroupKey && lastGroupKey !== currentGroupKey) {
+                tempBodyOutput.push(""); 
+            } else if (lastDomainBase && currentDomainBase && lastDomainBase !== currentDomainBase && currentGroupKey !== "SPECIAL") {
+                tempBodyOutput.push("");
+            }
+
             tempBodyOutput.push(line);
             lastGroupKey = currentGroupKey;
+            lastDomainBase = currentDomainBase;
         });
 
         const dummyHeader = [
