@@ -1,12 +1,13 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Describe: Chặn quảng cáo
-! Updated: 15 Apr 2026 08:17
-! Blocked: 357
-! Size: 26.66KB
+! Updated: 15 Apr 2026 15:44
+! Blocked: 360
+! Size: 26.97KB
 ! ==================
 
 .inner_ads,[class*="section_ads_"],[class^="banner_ads_"],[class^="google_ads_"],[id^="banner_"]
+.inner_ads,[class*="section_ads_"],[id^="banner_"]
 
 24h.com.vn##[id^="ADS_"],[id^="div_inpage_"]
 
@@ -242,6 +243,8 @@ download.it##.bcnt
 
 draybhang.daklak.gov.vn##a[href="https://draybhang.daklak.gov.vn/tai-lieu-huong-dan-phong-trao-binh-dan-hoc-vu-so-8768.html"]
 
+dreamlogos.fandom.com##[class^="top_"],[id^="top_"]
+
 drt.vn##.col-sm-3,[class^="ads-"],[id^="ads-"]
 
 edu.vn##.donor
@@ -256,7 +259,7 @@ finance.vietstock.vn##[class*="ats-overplay-"],[class^="bannerhtml"],[id^="googl
 
 fptplay.vn##.flex-row
 
-genk.vn###admFullTop,#admbackground,#ban-top-site,#logo_adm,#top-logo,[id^="adm-"],[id^="admbackground_"],[id^="zone-"]
+genk.vn###admFullTop,#admbackground,#ban-top-site,#logo_adm,#top-logo,.ads,[class^="khw-ads-"],[id^="adm-"],[id^="admbackground_"],[id^="zone-"]
 
 giadinhonline.vn##.adv,.e,[class^="exp_qc_"],[class^="qc-pc-"],[id^="zone-"]
 
@@ -380,6 +383,8 @@ lichviet.app###smart-app-banner,[class*="banner"],[class*="swiper"]
 
 liteapks.com##[id^="ad-"]
 
+logos.fandom.com##[class^="top_"],[id^="top_"]
+
 lsvn.vn##.aanetwork-ads-box,.ads-item,[class^="aanetwork-"],[class^="ads-"],[class^="sys"],sys-ads
 
 lyluanchinhtri.vn##[class^="ads_"],[class^="c-banner-"],[id^="zone-"]
@@ -407,6 +412,8 @@ nbtv.vn##.box_banner,[class^="app_"],[class^="banner_"],[class^="img-"],[class^=
 ncb-bank.vn##.img-popup,.ovl
 
 nghean.gov.vn##.AdvertContent,.col3,[class^="MultiFunction"]
+
+nghenhinvietnam.vn##.ads,[class^="ads-"],[id^="ads-"]
 
 ngoisao.vn###google_vignette,.adsbygoogle-noablate,[id^="ads_"],[id^="zone-"]
 
@@ -596,7 +603,7 @@ thoitrangvang.vn##[class^="ads"],[class^="ads_"],[class^="c-banner-"],[id^="zone
 
 thuonghieusanpham.vn###admFullTop,#ban-top-site,#top-logo,.banner,.l-sidebar,.news-bar,.news-bar>ul,[id^="adm_"],is-order
 
-thuvienphapluat.vn##[id^="sp-wrapper-"]
+thuvienphapluat.vn###TVNDWidget,#TVNDWidget>div,.goiDvu-footer,.goiDvu-footer>div,[id^="sp-wrapper-"]
 
 thuysanvietnam.com.vn##.ft-fanpage,[class^="hd-cate-"]
 
@@ -658,7 +665,7 @@ vib.com.vn##.new-download-app
 
 viblo.asia##.el-dialog,.el-dialog__body,.el-dialog__wrapper,.el-notification,.v-modal
 
-vieon.vn##.basis-full,.voucher,[class^="Button_small__"]
+vieon.vn##.basis-full,.vie-mobile-download,.voucher,[class^="Button_small__"]
 
 vietdaily.vn###click-protector,.adsbygoogle-noablate,.grippy-host
 
@@ -666,7 +673,7 @@ vietnam.vnanet.vn##.uk-margin-small-top
 
 vietnamarchi.vn##.box-doi-tac,.box-doi-tac>div,[class^="list-"],div[style="text-align:center"]
 
-vietnamnet.vn###catfish,[id^="adzone"],[id^="mashead-"]
+vietnamnet.vn###Mobile_AdsArticleBodyInArticle,#catfish,[class*="ads-"],[id^="admbackground"],[id^="adzone"],[id^="mashead-"]
 
 vietnamnews.vn##.banner,.clearfix,[class^="CloseButton_"],[class^="InstreamDom_"],[class^="material-"],[class^="style-module_"],[id^="adv_"]
 
@@ -692,7 +699,7 @@ vnbusiness.vn##[class*="ad-"]
 
 vneconomy.vn##.user-login,[class^="mb-"]
 
-vnexpress.net###TOP_BANNER,#banner_top,#google_vignette,.adsbygoogle,.inner_ads,.text_ads,.txt_qc,.txt_qc .text_ads,.txt_qc .text_ads .inner_ads,[class*="section_ads_"],[id^="banner_"]
+vnexpress.net###TOP_BANNER,#banner_top,#google_vignette,.adsbygoogle,.inner_ads,.text_ads,.txt_qc,.txt_qc .text_ads
 
 vnreview.vn##[class^="aanetwork-"],[class^="bg-"],[id^="bg-"]
 
