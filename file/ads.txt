@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Describe: Chặn quảng cáo
-! Updated: 15 Apr 2026 22:19
+! Updated: 15 Apr 2026 22:22
 ! Blocked: 362
 ! Size: 26.72KB
 ! ==================
@@ -19,7 +19,7 @@ acb.com.vn###download-banner-footer
 
 afamily.vn###admbackground,[id^="adm-"],[id^="admbackground"],[id^="admbackground_"],[id^="banner-"],[id^="close_ad_"],[id^="placement-"],[id^="share-"],[id^="slot-"],[id^="sps_"],[id^="zone-"]
 
-agribank.com.vn###agbModal,.modal-backdrop
+agribank.com.vn###agbModal #modal-backdrop
 
 amlich.vn##[class^="aanetwork-"]
 
