@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Describe: Chặn quảng cáo
-! Updated: 16 Apr 2026 08:33
-! Blocked: 376
-! Size: 27.82KB
+! Updated: 16 Apr 2026 19:14
+! Blocked: 380
+! Size: 28.17KB
 ! ==================
 
 24h.com.vn##[id^="ADS_"],[id^="div_inpage_"]
@@ -11,6 +11,8 @@
 2sao.vn###catfish,.adsbyvli,.vmc_ads_viewport,[id*="adzone"],[id^="Mobile_"],[id^="adzone"],[id^="container-"],[id^="pw_"],[id^="sp-wrapper-"],[id^="yomedia-"]
 
 acb.com.vn###download-banner-footer
+
+accuweather.com###adhesion,#bottom,#connatix,#top,.adhesion-header
 
 afamily.vn###admbackground,[id^="adm-"],[id^="admbackground"],[id^="admbackground_"],[id^="banner-"],[id^="close_ad_"],[id^="placement-"],[id^="share-"],[id^="slot-"],[id^="sps_"],[id^="zone-"]
 
@@ -324,6 +326,8 @@ hungyen.edu.vn###frameBoundB67c136903e495,#module17,#module25,#module45
 
 hungyen.gov.vn###module12,.category-categoryImageType13,.col-md-4
 
+imuzik.vn##.download-app-suggest-wrapper
+
 ioit.vast.gov.vn###scroller,.cov
 
 iq.com##.download-container,.qrcode-wrap
@@ -455,6 +459,8 @@ nnmt.net.vn##.box-doitac,.partner-slider,[class*="slider-1-"],[class^="ads-"]
 nongnghiepmoitruong.vn##.e,[class^="ads-"],[id^="ads_"],[id^="zone-"]
 
 ocb.com.vn##.slider-banner
+
+on.vtvcab.vn##.app-text
 
 online-audio-converter.com##.remove-ads
 
@@ -631,6 +637,8 @@ thuysanvietnam.com.vn##.ft-fanpage,[class^="hd-cate-"]
 thvli.vn##.mt-4,.row-install-app,[class^="mobile-install-"]
 
 tienphong.vn###mg-gpt-popup-modal,.adsbygoogle,.close_ub-anchor,.sp-pto-mb-div,[class^="ad-"],[class^="adsMobile_"],[class^="ads_"],[class^="sp-"],[id^="sp_"],[id^="ub-anchor-"],adsbygoogle
+
+tiin.vn###admFullTop,#advBallon,#advHomeTop,#ban-top-site,#top-logo,[id^="admLogoAd"],[id^="adm_"],[id^="adnzone_"],[id^="banner-"],[id^="placement-"],[id^="share-"],[id^="slot-"],[id^="ssppagebid_"],[id^="yomedia-"],[id^="zone-"]
 
 tin.skydoor.net##[id^="M"]
 
