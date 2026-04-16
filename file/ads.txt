@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Describe: Chặn quảng cáo
-! Updated: 16 Apr 2026 08:21
+! Updated: 16 Apr 2026 08:22
 ! Blocked: 376
 ! Size: 27.64KB
 ! ==================
@@ -756,4 +756,4 @@ xemtv.us###med_rec_banner2,.ads-mb,.d-block,.float-ck,.sticky_bottom,div[data-wi
 
 zingmp3.vn###js-banner-vip,.z-banner-vip,.z-btn-open-app
 
-znews.vn##[class^="Okv-"],[class^="follow-"],[id^="Okv-"],[id^="ZingNews_"],[id^="Zingnews_"
+znews.vn##[class^="Okv-"],[class^="follow-"],[id^="Okv-"],[id^="ZingNews_"],[id^="Zingnews_"]
