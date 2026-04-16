@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Describe: Chặn quảng cáo
-! Updated: 16 Apr 2026 19:14
+! Updated: 16 Apr 2026 19:18
 ! Blocked: 380
-! Size: 28.17KB
+! Size: 28.20KB
 ! ==================
 
 24h.com.vn##[id^="ADS_"],[id^="div_inpage_"]
@@ -764,4 +764,4 @@ xemtv.us###med_rec_banner2,.ads-mb,.d-block,.float-ck,.sticky_bottom,div[data-wi
 
 zingmp3.vn###js-banner-vip,.z-banner-vip,.z-btn-open-app
 
-znews.vn##[class^="Okv-"],[class^="follow-"],[id^="Okv-"],[id^="ZingNews_"],[id^="Zingnews_"]
+znews.vn##[class^="Hvx-"],[class^="Okv-"],[class^="follow-"],[id^="Hvx-"],[id^="Okv-"],[id^="ZingNews_"],[id^="Zingnews_"]
