@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Describe: Chặn quảng cáo
-! Updated: 15 Apr 2026 22:25
-! Blocked: 360
-! Size: 26.82KB
+! Updated: 16 Apr 2026 08:21
+! Blocked: 376
+! Size: 27.64KB
 ! ==================
 
 24h.com.vn##[id^="ADS_"],[id^="div_inpage_"]
@@ -35,6 +35,8 @@ apkmirror.com###bottom-slider,.adslot,.advertisement-text,[class*="ains-"],[clas
 apkpure.com##.ad,.adsbygoogle,.aegon,.js-ad-slot,.right
 
 apkpure.net###google_vignette,.ad,.adsbygoogle,.js-ad-slot,[class*="-banner-"],[class^="banner-"]
+
+audio-joiner.com##.ad,.premium-entry-button,.remove-ads
 
 autopro.com.vn##.lightbox-content,.link-callout,.noCaption,.noCaption>div,[class^="ads-"],[id^="adm_"],[id^="admsection"],[id^="zone-"]
 
@@ -146,7 +148,7 @@ camau.edu.vn##.UIMultiFunction_Default,.UIWebLink_Weblink
 
 camau.gov.vn###@##ctrl_160903_87_SlideShow,#@#.AdvertContent>marquee,.AdvertContent,[class^="UIAdvertisement_"],img[src="https://files-vnportalcmu.camau.gov.vn/cmu-chinhquyen/1/quantritintuc20258/NONG THON MOI
 
-cand.com.vn##.capture-block,.capture-block>p,.header-banner,.loaded,.loaded>p,.nomargin
+cand.com.vn##.capture-block,.capture-block>p,.col-sidebar,.header-banner,.loaded,.loaded>p,.nomargin
 
 cantho.edu.vn##.content-image,.widget
 
@@ -176,7 +178,9 @@ congnghevadoisong.vn##.col-md-8>p,[class^="ads_"]
 
 congnghieptauthuyvietnam.vn##[class^="w_"]
 
-congthuong.vn##.loading,.sys-ads,[class^="aanetwork-"],[class^="ads-"]
+congthuong.vn##.bx-cat-name,.loading,.sys-ads,[class^="aanetwork-"],[class^="ads-"]
+
+convert.io##.ad,.adsbygoogle,.premium-entry-button,.remove-ads
 
 daibieunhandan.vn##[id^="zone-"]
 
@@ -250,6 +254,8 @@ elle.vn##[class^="banner-"],[id^="div-gpt-ad-"]
 
 eva.vn##[class^="banr"],[class^="banr-"],[id^="ADS_"],[id^="spanTextAds_"]
 
+extract.me##.ad,.adsbygoogle,.premium-entry-button,.remove-ads
+
 fandom.com##.top-ads-container,[class^="ad-"]
 
 finance.vietstock.vn##[class*="ats-overplay-"],[class^="bannerhtml"],[id^="googleAds_"]
@@ -281,6 +287,8 @@ hanoi.gov.vn##.AdvertContent,.layout-3-col
 hanoimoi.vn##[class^="ads_"],[class^="c-banner-"],[class^="is-"],[id^="zone-"]
 
 hanoionline.vn##.full-width-breakout
+
+happyvietnam.vnanet.vn##.background-image
 
 hatinh.edu.vn###module13,#module66
 
@@ -326,7 +334,7 @@ jomc.vn##.adv-wrapper,.center-block
 
 kalvo.com##[class^="klv_"],[class^="klvad"]
 
-kenh14.vn##.adv,[id^="adm-"],[id^="admbackground"],[id^="admbackground_"],[id^="banner-"],[id^="placement-"],[id^="share-"],[id^="slot-"],[id^="zone-"]
+kenh14.vn##.adv,[class^="adzone"],[id^="adm-"],[id^="admbackground"],[id^="admbackground_"],[id^="admzone"],[id^="banner-"],[id^="placement-"],[id^="share-"],[id^="slot-"],[id^="zone-"]
 
 khanhhoa.edu.vn##.image-list-album
 
@@ -368,6 +376,8 @@ laodong.vn###admbackground,#main-footer-fix-bottom,.adsbygoogle,.item,.msg,[clas
 
 laodongdoanthe.vn##.banner,[class^="mb"]
 
+lecourrier.vn##[id^="adv_"]
+
 lichcupdien.org##[id*="bn2-wrapper"],[id*="sp-wrapper"],[id*="tt-wrapper"]
 
 lichcupdien.vn##[id^="pvoucher"]
@@ -400,7 +410,11 @@ mobifone.vn##.main-banner
 
 moet.gov.vn##.full-width,.list-links
 
+mp3cut.net##.ad,.adsbygoogle,.premium-entry-button,.remove-ads
+
 mthi.tuyensinh247.com##.adsbygoogle,.btn_small_fix_container,[class*="countdown"],[id*="countdown"]
+
+muvi.vn###advHeaderMb,.adsbygoogle
 
 namabank.com.vn##.mobile-popup
 
@@ -422,6 +436,8 @@ nguoiduatin.vn##.adsbygoogle,[class^="ndt-"],[class^="sp-"],[id^="sp-"],[id^="sp
 
 nguoiquansat.vn##.c-banner,.footer-sticky,[class^="adbox-"],[class^="ads_"],[class^="is-"],[class^="nguoiquansat-"],[id^="zone-"]
 
+nhac.vn###footer-scroll,.tbl-link
+
 nhachannuoi.vn##.left-banner,.logothuonghieu,.menu-pr,.pdthieu,.quangcao,.tapchi,.tapchichannuoi,.tapchithaydoi,.thuonghieu,.thuonghieu>li,.wapthuonghieu,.wp-image-86552,[class^="banner-"],[class^="center-"],[class^="exp_qc_"],[id^="ads_"],[id^="black-"],[id^="callblacks3_"],[id^="zone-"]
 
 nhadautu.vn##[id^="ads_"],[id^="zone-"]
@@ -440,9 +456,15 @@ nongnghiepmoitruong.vn##.e,[class^="ads-"],[id^="ads_"],[id^="zone-"]
 
 ocb.com.vn##.slider-banner
 
+online-audio-converter.com##.remove-ads
+
+online-voice-recorder.com##.remove-ads
+
 oto.com.vn##.box-bn-home,[class^="banner-"],[class^="cpn-"],[id^="cpn-"]
 
 otosaigon.com###top-mobile-ads,[class^="ads-"],[id^="banner-"],[id^="div-gpt-ad-"]
+
+pdf.io##.ad,.adsbygoogle
 
 pgbank.com.vn##.footer-menu,.section-2
 
@@ -465,6 +487,8 @@ phuthotv.vn##[class^="c3s-"],[id^="slide-"]
 plo.vn###catfish,.fanpage,.fp,.top-banner,[id^="Mobile_"],[id^="Web_"],[id^="adsMobile_"],[id^="adsWeb_"],[id^="ads_"],[id^="bn-"],[id^="bn-zone-"],[id^="yomedia-"]
 
 pvcombank.com.vn##.responsive-wrapper
+
+qdnd.vn##[class*="banner"]
 
 quangngai.edu.vn##.body-topads
 
@@ -662,6 +686,8 @@ vib.com.vn##.new-download-app
 
 viblo.asia##.el-dialog,.el-dialog__body,.el-dialog__wrapper,.el-notification,.v-modal
 
+video-converter.com##.ad,.adsbygoogle,.premium-entry-button,.remove-ads
+
 vieon.vn##.basis-full,.vie-mobile-download,.voucher,[class^="Button_small__"]
 
 vietdaily.vn###click-protector,.adsbygoogle-noablate,.grippy-host
@@ -690,6 +716,8 @@ vinhlong.edu.vn##.content-image,.member2,.post-image
 
 vinhlong.gov.vn##.DNNContainer_noTitle,.col-xs-12,.dnnPEMContNotitle,[id^="dnn_ctr48185_"]
 
+vip.keeng.vn##.app_nhac_keeng,.app_nhac_keeng>span
+
 vjst.vn##[class^="c-banner-"]
 
 vnbusiness.vn##[class*="ad-"]
@@ -714,6 +742,8 @@ vtv.vn##[id^="banner-"],[id^="lozad-"],[id^="placement-"],[id^="share-"],[id^="s
 
 vtvgo.vn##.micro-open-app
 
+webcamera.io##.ad,.adsbygoogle,.premium-entry-button,.remove-ads
+
 woori.com.vn##[class^="banner-"]
 
 xehay.vn###link-,.flash,[class^="ads-"]
@@ -723,5 +753,7 @@ xemtivi4k.com##a[href="https://record.brave888.com/_CXLXKr7jtXINaHdFA_j09GNd7Zgq
 xemtv.net###bottom650,.ads-mb,.line,div[data-widget-id="1771082"],div[data-widget-id="1845723"],div[data-widget-id="1886588"],marquee[direction="left"]
 
 xemtv.us###med_rec_banner2,.ads-mb,.d-block,.float-ck,.sticky_bottom,div[data-widget-id="1433589"]
+
+zingmp3.vn###js-banner-vip,.z-banner-vip,.z-btn-open-app
 
 znews.vn##[class^="Okv-"],[class^="follow-"],[id^="Okv-"],[id^="ZingNews_"],[id^="Zingnews_"
