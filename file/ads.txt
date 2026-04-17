@@ -1,12 +1,16 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Describe: Chặn quảng cáo
-! Updated: 17 Apr 2026 16:35
-! Blocked: 401
-! Size: 29.16KB
+! Updated: 17 Apr 2026 16:40
+! Blocked: 404
+! Size: 29.29KB
 ! ==================
 
+1thegioi.vn##[class^="c-banner-"],[id^="zone-"]
+
 24h.com.vn##[id^="ADS_"],[id^="div_inpage_"]
+
+24hmoney.vn##.open-app-header
 
 2sao.vn###catfish,.adsbyvli,.vmc_ads_viewport,[id*="adzone"],[id^="Mobile_"],[id^="adzone"],[id^="container-"],[id^="pw_"],[id^="sp-wrapper-"],[id^="yomedia-"]
 
@@ -439,6 +443,8 @@ missav123.com##[class^="inner-"],[class^="layoutWrapper-"],[class^="modelWrapper
 mobifone.vn##.main-banner
 
 moet.gov.vn##.full-width,.list-links
+
+motthegioi.vn##.adsbygoogle,[class^="tdi_"]
 
 mp3cut.net##.ad,.adsbygoogle,.premium-entry-button,.remove-ads
 
