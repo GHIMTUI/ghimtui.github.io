@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Describe: Chặn quảng cáo
-! Updated: 17 Apr 2026 16:40
-! Blocked: 404
-! Size: 29.29KB
+! Updated: 17 Apr 2026 22:11
+! Blocked: 409
+! Size: 29.74KB
 ! ==================
 
 1thegioi.vn##[class^="c-banner-"],[id^="zone-"]
@@ -176,6 +176,8 @@ caobangtv.vn##.cntslider,[class^="adv_"],[class^="bx-"]
 
 capcut.com##[class^="banner_"]
 
+cellphones.com.vn##.animate-scale-y-in
+
 chatluongvacuocsong.vn##.e,[id^="ads_"],[id^="zone-"]
 
 chiaseapk.com##[class*="ads"],[class^="banner-"],[class^="qc-"],[id*="ad"],[id^="HTML"]
@@ -233,6 +235,8 @@ dienbien.gov.vn##.TD-quangcao,.img-quangcao-ngang,.tandan-div-module-links-img,i
 dienbientv.vn##.ad_right
 
 diendandoanhnghiep.vn##[class^="ads_"],[class^="c-banner-"],[id^="zone-"]
+
+dienmayxanh.com##.header-top-bar,.remind_location,[class*="-banner"],[class^="banner-"],[class^="media-"]
 
 dientuungdung.vn##.__ads_click,[class^="banner-"]
 
@@ -644,6 +648,8 @@ thanhtra.com.vn##.build-advertisements
 
 thdt.vn##.blockBanner,.hover,[class^="Partner_"]
 
+thegioididong.com##.header-top-bar,.remind_location,[class*="-banner"],[class^="banner-"],[class^="media-"]
+
 thesaigontimes.vn##.tdi_129,.tdi_129>style
 
 thethao247.vn###sp-wrapper-hovering-format,.adsbygoogle,.as,.main-content>section,[class^="nl-"],[class^="sp-"]
@@ -752,6 +758,8 @@ vietnamworks.com##.top-0,.z-50
 
 vietstock.vn##[class^="bannerhtml"]
 
+viettelstore.vn###img-popup,.icon-neo,[class*="-banner"],[class^="icon-"],[id*="-banner"],[id^="banner-"],[id^="overlay"]
+
 vietteltelecom.vn##.cta-card,.slick-current>div,.slick-track,[class^="banner-"]
 
 viettimes.vn##[id^="sp-wrapper-"]
@@ -774,7 +782,9 @@ vnexpress.net###TOP_BANNER,#banner_top,#google_vignette,.adsbygoogle,.inner_ads,
 
 vnreview.vn##[class^="aanetwork-"],[class^="bg-"],[id^="bg-"]
 
-voh.com.vn##.adstop
+voh.com.vn##.adstop,.center-01,.center-01>div,[id^="div-gpt-ad-"]
+
+vov1.vov.vn##.mobile-header-banner
 
 vov2.vov.vn###block-daihoidangbanner,#block-daihoidangbanner>div,.video-fluid
 
