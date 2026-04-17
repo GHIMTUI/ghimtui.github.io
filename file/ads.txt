@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Describe: Chặn quảng cáo
-! Updated: 16 Apr 2026 19:18
-! Blocked: 380
-! Size: 28.20KB
+! Updated: 17 Apr 2026 11:55
+! Blocked: 390
+! Size: 28.71KB
 ! ==================
 
 24h.com.vn##[id^="ADS_"],[id^="div_inpage_"]
@@ -41,6 +41,8 @@ apkpure.net###google_vignette,.ad,.adsbygoogle,.js-ad-slot,[class*="-banner-"],[
 audio-joiner.com##.ad,.premium-entry-button,.remove-ads
 
 autopro.com.vn##.lightbox-content,.link-callout,.noCaption,.noCaption>div,[class^="ads-"],[id^="adm_"],[id^="admsection"],[id^="zone-"]
+
+az24.vn##div[data-type="_mgwidget"]
 
 bacninh.edu.vn###module21,#module26,#module27,#module28,#module29,#module71,.col-sm-4,.image-list-album
 
@@ -133,6 +135,8 @@ baovinhlong.com.vn##[class^="ad"],[class^="row"]
 baoxaydung.vn##[id^="pos-"]
 
 bienvietnam.vn##.csj-image,.row-height
+
+bnews.vn###ban-top-site #admFullTop,#top-logo,[class^="aanetwork-"],[id^="adm_"],[id^="divAdmicro_"],[id^="zone-"]
 
 bom.so##.ad,.ads,.adsbygoogle
 
@@ -356,6 +360,8 @@ kinhtenongthon.vn###firt,.active,.item,[class^="owl-"],[id^="col_"],[id^="owl-"]
 
 kinhtevadubao.vn##.__ads_click,[class^="banner-"]
 
+kqxs.vn##.adsbygoogle,[class^="ads-"]
+
 laichau.edu.vn###module24,#module27,#module30,#module32,#module33,#module35,#module36,#module37,#module38,#module39,#module40,#module41,#module42,#module43,#module45,#module46,#module47,#module48,#module49,#module50,#module52,#module53,#module58,#module59
 
 laichau.gov.vn###frameBoundB5dd514408c64f0,#module19,#module20,#module24,#module25,#module26,#module27,#module28,#module29,#module30,#module31,#module32,#module33,#module34,#module35,#module36,#module46,#module53,#module58,#module59,#module66,#module67,#module69,#module79,#module80,#module81,#module82,#module84,#module88,#module89,#module90,#module91
@@ -407,6 +413,10 @@ maytinhdaiviet.com###dv-mobile-bottom-ad
 mbv.com.vn##.bg-primary
 
 mekongasean.vn##.header-content,[class^="banner-"]
+
+minhchinh.com##.adsbygoogle,.hidemin480,.modules_top>div,[class^="adv"],[id^="adv"]
+
+minhngoc.net.vn##[id^="adv"]
 
 missav123.com##[class^="inner-"],[class^="layoutWrapper-"],[class^="modelWrapper-"],[class^="root-"],[class^="space-"],[class^="ts_"],[id^="model-"],[id^="ts_"]
 
@@ -761,6 +771,16 @@ xemtivi4k.com##a[href="https://record.brave888.com/_CXLXKr7jtXINaHdFA_j09GNd7Zgq
 xemtv.net###bottom650,.ads-mb,.line,div[data-widget-id="1771082"],div[data-widget-id="1845723"],div[data-widget-id="1886588"],marquee[direction="left"]
 
 xemtv.us###med_rec_banner2,.ads-mb,.d-block,.float-ck,.sticky_bottom,div[data-widget-id="1433589"]
+
+xoso.com.vn###bottomMobileAdvs,.ads,.adsbygoogle,.advfixfooterClose,.google-ads
+
+xoso.net.vn##[class^="adv-"]
+
+xosodaiphat.com##[class^="qc-"]
+
+xosominhngoc.net.vn##.hidemin720
+
+xsmn.mobi##.ads,.hdc-csi_square
 
 zingmp3.vn###js-banner-vip,.z-banner-vip,.z-btn-open-app
 
