@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Describe: Chặn quảng cáo
-! Updated: 17 Apr 2026 11:55
-! Blocked: 390
-! Size: 28.71KB
+! Updated: 17 Apr 2026 16:35
+! Blocked: 401
+! Size: 29.16KB
 ! ==================
 
 24h.com.vn##[id^="ADS_"],[id^="div_inpage_"]
@@ -37,6 +37,8 @@ apkmirror.com###bottom-slider,.adslot,.advertisement-text,[class*="ains-"],[clas
 apkpure.com##.ad,.adsbygoogle,.aegon,.js-ad-slot,.right
 
 apkpure.net###google_vignette,.ad,.adsbygoogle,.js-ad-slot,[class*="-banner-"],[class^="banner-"]
+
+appbrain.com###topAd,.adsbygoogle
 
 audio-joiner.com##.ad,.premium-entry-button,.remove-ads
 
@@ -144,6 +146,8 @@ bongda24h.vn###bottomAdvs,.ads-center,.adscontent
 
 bongdaplus.vn###ADMTOP,[class^="tip-"],[class^="tips-"]
 
+btmc.vn##[class*="banner"]
+
 buonmathuot.daklak.gov.vn##a[href="/danh-sach-phat-ngon-7.html"],a[href="/hoi-dap.html"]
 
 cafebiz.vn###admFullTop,#admbackground,#ban-top-site,#logo_adm,.top-logo,[id^="adm-"],[id^="admbackground_"],[id^="zone-"]
@@ -169,6 +173,8 @@ caobangtv.vn##.cntslider,[class^="adv_"],[class^="bx-"]
 capcut.com##[class^="banner_"]
 
 chatluongvacuocsong.vn##.e,[id^="ads_"],[id^="zone-"]
+
+chiaseapk.com##[class*="ads"],[class^="banner-"],[class^="qc-"],[id*="ad"],[id^="HTML"]
 
 chinhtrivaphattrien.vn##.qc_container
 
@@ -270,6 +276,8 @@ fptplay.vn##.flex-row
 
 genk.vn###admFullTop,#admbackground,#ban-top-site,#logo_adm,#top-logo,.ads,[class^="khw-ads-"],[id^="adm-"],[id^="admbackground_"],[id^="zone-"]
 
+giacaphe.com##.adsbygoogle,[class^="aanetwork-"],[class^="ga_"]
+
 giadinhonline.vn##.adv,.e,[class^="exp_qc_"],[class^="qc-pc-"],[id^="zone-"]
 
 gialai.edu.vn##.image-list-album
@@ -280,7 +288,11 @@ giaoduc.net.vn##[class^="ad-"],[class^="sda_"],[id^="sdaMobile_"]
 
 giaoducthoidai.vn###[id^="sp-wrapper-"],[class^="ad-"],[class^="nl-infooter-"],[class^="sda_"],[class^="sp-infooter-"],[id^="sdaMobile_"]
 
+giavang.net##.header__banner
+
 gitiho.com##.mobile-internal-camp,[class*="banner-"]
+
+gocmod.com##.textwidget,[id^="gm-"],[id^="gocmod-"]
 
 gpbank.com.vn##[id^="advert-"]
 
@@ -330,7 +342,11 @@ hungyen.edu.vn###frameBoundB67c136903e495,#module17,#module25,#module45
 
 hungyen.gov.vn###module12,.category-categoryImageType13,.col-md-4
 
+ijc.vn##[class^="brave_"]
+
 imuzik.vn##.download-app-suggest-wrapper
+
+investing.com##.z-50
 
 ioit.vast.gov.vn###scroller,.cov
 
@@ -425,6 +441,8 @@ mobifone.vn##.main-banner
 moet.gov.vn##.full-width,.list-links
 
 mp3cut.net##.ad,.adsbygoogle,.premium-entry-button,.remove-ads
+
+msn.com##[class^="banner-"],[class^="consumption-"]
 
 mthi.tuyensinh247.com##.adsbygoogle,.btn_small_fix_container,[class*="countdown"],[id*="countdown"]
 
@@ -602,6 +620,8 @@ tdtt.gov.vn###dnn_TopGrid4A,#dnn_TopGrid4B,#dnn_TopGrid4C
 
 techlade.vn##[class^="attachments-"],[class^="banner_"]
 
+techspot.com##.mobile-ad
+
 techz.vn##.adsbygoogle,.header_ads,.header_ads>center,[class^="mt-"],[id^="ad-"],[id^="sp-"]
 
 thainguyen.edu.vn###module14,#module23,#module57,#module58,#module60,#module61,#module62,#module63
@@ -723,6 +743,8 @@ vietnamplus.vn##.adsbygoogle,.ats-overlay-bottom-wrapper-unrendered,[class^="sda
 vietnamradio.org##.add-box-top,.adsbygoogle
 
 vietnamworks.com##.top-0,.z-50
+
+vietstock.vn##[class^="bannerhtml"]
 
 vietteltelecom.vn##.cta-card,.slick-current>div,.slick-track,[class^="banner-"]
 
