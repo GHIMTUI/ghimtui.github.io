@@ -228,11 +228,6 @@ function switchTab(tabId) {
     
     document.getElementById('btn-tab-' + tabId).classList.add('active');
     document.getElementById('tab-' + tabId).classList.add('active');
-
-    if (tabId === 'editor') {
-        const pInput = document.getElementById('prefixInput');
-        if (pInput) pInput.value = formatPrefixesSmart(pInput.value);
-    }
 }
 
 function formatPrefixesSmart(input) {
@@ -268,7 +263,10 @@ function formatPrefixesSmart(input) {
         _o: "ghimtui",
         _r: "ghimtui.github.io",
         _p_ads: "file/ads.txt",
-        _p_pref: "file/ads-prefix.txt"
+        _p_pref: "file/ads-prefix.txt",
+        _p_block: "file/ads-block.txt",
+        _p_whitelist: "file/ads-whitelist.txt",
+        _p_unhide: "file/ads-unhide.txt"
     };
 
     const _api_base = `https://api.github.com/repos/${_app_opt._o}/${_app_opt._r}/contents/`;
@@ -277,7 +275,7 @@ function formatPrefixesSmart(input) {
     const _dom_st = document.getElementById('statusContainer');
     const _dom_prefix = document.getElementById('prefixInput');
 
-    let _v_sha_ads = null, _v_sha_pref = null;
+    let _v_shas = { ads: null, pref: null, block: null, whitelist: null, unhide: null };
     let _last_saved_content = "", _last_saved_prefixes = "";
     let _is_loading = true;
 
@@ -285,9 +283,7 @@ function formatPrefixesSmart(input) {
         _dom_sv.classList.remove('visible', 'pill-gray-style', 'fast-flash');
         _dom_st.classList.remove('visible', 'pill-gray-style');
         _dom_sv.disabled = false;
-        _dom_sv.style.color = "";
-        _dom_st.style.color = "";
-
+        
         switch(state) {
             case 'loading': 
                 _dom_st.innerText = "ĐỒNG BỘ..."; 
@@ -322,12 +318,20 @@ function formatPrefixesSmart(input) {
     }
 
     function checkChanges() {
+        if (_is_loading) return;
         if (!navigator.onLine) {
             setBtnState('offline');
             return;
         }
-        if (_dom_ar.value !== _last_saved_content || _dom_prefix.value !== _last_saved_prefixes) setBtnState('unsaved');
-        else setBtnState('saved');
+        
+        const hasContentChanged = _dom_ar.value !== _last_saved_content;
+        const hasPrefixChanged = _dom_prefix.value !== _last_saved_prefixes;
+
+        if (hasContentChanged || hasPrefixChanged) {
+            setBtnState('unsaved');
+        } else {
+            setBtnState('saved');
+        }
     }
 
     function _remove_subdomain_prefixes(domain) {
@@ -351,19 +355,6 @@ function formatPrefixesSmart(input) {
         return /^[a-z0-9.-]+\.[a-z]{2,}$/i.test(str);
     }
 
-    function _get_rules_only(rawInput) {
-        return rawInput.split('\n').filter(line => {
-            let l = line.trim();
-            return !(l === "" || l.match(/! (Title|Description|Describe|Updated|Version|Blocked|Size|=======)/i) || l.startsWith("[Adblock") || l.startsWith('!') || l.startsWith('#') || l.startsWith('@'));
-        }).join('\n');
-    }
-
-    function _format_kb_only(text) {
-        const bytes = new TextEncoder().encode(text).length;
-        const kb = bytes / 1024;
-        return kb.toFixed(2) + "KB";
-    }
-
     function _standardize_content(rawInput) {
         let rawLines = rawInput.split('\n');
         let bodyLines = [];
@@ -374,10 +365,7 @@ function formatPrefixesSmart(input) {
             if (!l) return;
             const uMatch = l.match(/!\s*Updated:\s*(.+)/i);
             if (uMatch) oldMeta.u = uMatch[1];
-            
             if (l.match(/! (Title|Description|Describe|Updated|Version|Blocked|Size|=======)/i) || l.startsWith("[Adblock") || l.startsWith('!')) return;
-            
-            // Ở bước lọc thô, giữ nguyên dòng gốc, không split bậy bạ để tránh làm mất context domain
             bodyLines.push(l);
         });
 
@@ -385,90 +373,57 @@ function formatPrefixesSmart(input) {
         let otherRules = new Set();
 
         bodyLines.forEach(line => {
-            // Regex chặt chẽ hơn: tìm domain và phần phân tách ##
             let hideMatch = line.match(/^([^#\[\]\s,]+)(##|#|\[|\.)(.*)$/);
-            
             if (hideMatch && !line.startsWith('@@') && !line.startsWith('/') && !line.startsWith('.') && !line.startsWith('#')) {
                 let rawDomain = hideMatch[1].trim();
-                
                 if (_is_valid_domain(rawDomain)) {
                     let domain = _remove_subdomain_prefixes(rawDomain);
                     let separator = hideMatch[2];
                     let selectorPart = hideMatch[3];
-                    
-                    // Khôi phục separator nếu là lỗi dán thiếu dấu ##
                     let fullSelector = (separator === '##' ? '' : separator) + selectorPart;
-                    
                     if (!mergedMap.has(domain)) mergedMap.set(domain, new Set());
-                    
-                    // CHỈ Tách khi có dấu phẩy rõ ràng
-                    // Không tách bằng khoảng trắng ở đây để giữ quan hệ cha con (a.com##.ad1 .ad2)
                     let selectors = fullSelector.split(/,(?![^\[]*\])/);
-                    
                     selectors.forEach(s => {
                         let trimmed = s.trim();
                         if (trimmed) mergedMap.get(domain).add(trimmed);
                     });
-                } else {
-                    // Nếu không phải domain hợp lệ, coi như generic rule
-                    otherRules.add(line);
-                }
-            } else {
-                otherRules.add(line);
-            }
+                } else { otherRules.add(line); }
+            } else { otherRules.add(line); }
         });
 
         let processedBody = [];
         mergedMap.forEach((selectors, domain) => {
-            // Sắp xếp các selector của cùng 1 domain và nối bằng dấu phẩy
             processedBody.push(`${domain}##${Array.from(selectors).sort().join(',')}`);
         });
-
-        otherRules.forEach(rule => {
-            if (rule.trim()) processedBody.push(rule.trim());
-        });
+        otherRules.forEach(rule => { if (rule.trim()) processedBody.push(rule.trim()); });
 
         const strictSort = (a, b) => a.localeCompare(b);
-        let whitelistRules = Array.from(new Set(processedBody.filter(line => line.startsWith("@@||")))).sort(strictSort);
-        let normalRules = Array.from(new Set(processedBody.filter(line => !line.startsWith("@@||") && line !== ""))).sort(strictSort);
-        let uniqueBody = Array.from(new Set([...normalRules, ...whitelistRules]));
+        let uniqueBody = Array.from(new Set(processedBody)).sort(strictSort);
 
-        const rulesForCounting = uniqueBody.filter(line => !line.startsWith('.') && !line.startsWith('##.'));
-        const ruleCount = rulesForCounting.length;
+        let blockRules = uniqueBody.filter(l => l.startsWith('||') && !l.startsWith('@@'));
+        let whitelistRules = uniqueBody.filter(l => l.startsWith('@@||'));
+        let unhideRules = uniqueBody.filter(l => l.includes('#@#'));
 
-        const isRulesChanged = _get_rules_only(_last_saved_content) !== uniqueBody.join('\n');
-        let finalUpdateTime = oldMeta.u;
-        if (isRulesChanged) {
-            finalUpdateTime = new Date().toLocaleString('en-GB', { day: '2-digit', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit', hour12: false }).replace(',', '');
-        }
+        const ruleCount = uniqueBody.filter(line => !line.startsWith('.') && !line.startsWith('##.')).length;
+        const currentRulesOnly = uniqueBody.join('\n');
+        const isRulesChanged = _last_saved_content.includes(currentRulesOnly) === false; 
+        
+        let finalUpdateTime = isRulesChanged ? new Date().toLocaleString('en-GB', { day: '2-digit', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit', hour12: false }).replace(',', '') : oldMeta.u;
 
         let tempBodyOutput = [], lastGroupKey = "", lastDomainBase = "";
         uniqueBody.forEach(line => {
-            let currentGroupKey = "";
-            let currentDomainBase = "";
+            let currentGroupKey = line.startsWith("@@||") ? "WHITELIST" : (/[a-zA-Z0-9]/.test(line[0]) ? line[0].toUpperCase() : "SPECIAL");
+            let currentDomainBase = line.startsWith("@@||") ? line.substring(4).split(/[\/\^]/)[0] : (line.includes('##') ? line.split('##')[0] : "");
 
-            if (line.startsWith("@@||")) {
-                currentGroupKey = "WHITELIST";
-                currentDomainBase = line.substring(4).split(/[\/\^]/)[0];
-            } else if (/[a-zA-Z0-9]/.test(line[0])) {
-                currentGroupKey = line[0].toUpperCase();
-                currentDomainBase = line.split('##')[0];
-            } else {
-                currentGroupKey = "SPECIAL";
-            }
-
-            if (lastGroupKey && lastGroupKey !== currentGroupKey) {
-                tempBodyOutput.push(""); 
-            } else if (lastDomainBase && currentDomainBase && lastDomainBase !== currentDomainBase && currentGroupKey !== "SPECIAL") {
-                tempBodyOutput.push("");
-            }
+            if (lastGroupKey && lastGroupKey !== currentGroupKey) tempBodyOutput.push("");
+            else if (lastDomainBase && currentDomainBase && lastDomainBase !== currentDomainBase && currentGroupKey !== "SPECIAL") tempBodyOutput.push("");
 
             tempBodyOutput.push(line);
             lastGroupKey = currentGroupKey;
             lastDomainBase = currentDomainBase;
         });
 
-        const dummyHeader = [
+        const headerArr = [
             "[Adblock Plus 2.0]", 
             "! Title: STOP ADS", 
             "! Describe: Chặn quảng cáo", 
@@ -476,42 +431,53 @@ function formatPrefixesSmart(input) {
             `! Blocked: ${ruleCount}`,
             "! Size: -- KB",
             "! =================="
-        ].join('\n');
-        const finalSize = _format_kb_only(dummyHeader + "\n\n" + tempBodyOutput.join('\n'));
-
-        const finalHeader = [
-            "[Adblock Plus 2.0]", 
-            "! Title: STOP ADS", 
-            "! Describe: Chặn quảng cáo", 
-            `! Updated: ${finalUpdateTime}`,
-            `! Blocked: ${ruleCount}`,
-            `! Size: ${finalSize}`,
-            "! =================="
         ];
+        const finalSize = _format_kb_only(headerArr.join('\n') + "\n\n" + tempBodyOutput.join('\n'));
+        headerArr[5] = `! Size: ${finalSize}`;
         
-        return { content: [...finalHeader, "", ...tempBodyOutput].join('\n'), isRulesChanged: isRulesChanged };
+        return { 
+            content: [...headerArr, "", ...tempBodyOutput].join('\n'), 
+            isRulesChanged: isRulesChanged,
+            subFiles: {
+                block: blockRules.join('\n'),
+                whitelist: whitelistRules.join('\n'),
+                unhide: unhideRules.join('\n')
+            }
+        };
     }
 
-    async function _fetch_file(path) { return await fetch(`${_api_base}${path}`, { headers: { "Authorization": `Bearer ${_app_opt._k}` } }); }
+    async function _fetch_file(path) { 
+        try {
+            const res = await fetch(`${_api_base}${path}`, { headers: { "Authorization": `Bearer ${_app_opt._k}` } }); 
+            return res.ok ? await res.json() : null;
+        } catch(e) { return null; }
+    }
     
     async function _load() {
-        if (!navigator.onLine) {
-            setBtnState('offline');
-            return;
-        }
+        if (!navigator.onLine) { setBtnState('offline'); return; }
         setBtnState('loading');
         try {
-            const resAds = await _fetch_file(_app_opt._p_ads);
-            if (resAds.ok) {
-                const data = await resAds.json(); _v_sha_ads = data.sha;
-                const dec = decodeURIComponent(atob(data.content).split('').map(c => '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2)).join(''));
-                _dom_ar.value = _last_saved_content = dec;
+            const [ads, pref, blk, wht, unh] = await Promise.all([
+                _fetch_file(_app_opt._p_ads),
+                _fetch_file(_app_opt._p_pref),
+                _fetch_file(_app_opt._p_block),
+                _fetch_file(_app_opt._p_whitelist),
+                _fetch_file(_app_opt._p_unhide)
+            ]);
+
+            if (ads) {
+                _v_shas.ads = ads.sha;
+                _dom_ar.value = _last_saved_content = decodeURIComponent(atob(ads.content).split('').map(c => '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2)).join(''));
             }
-            const resPref = await _fetch_file(_app_opt._p_pref);
-            if (resPref.ok) {
-                const data = await resPref.json(); _v_sha_pref = data.sha;
-                _dom_prefix.value = _last_saved_prefixes = formatPrefixesSmart(atob(data.content));
+            if (pref) { 
+                _v_shas.pref = pref.sha; 
+                const prefDec = atob(pref.content);
+                _dom_prefix.value = _last_saved_prefixes = formatPrefixesSmart(prefDec); 
             }
+            if (blk) _v_shas.block = blk.sha;
+            if (wht) _v_shas.whitelist = wht.sha;
+            if (unh) _v_shas.unhide = unh.sha;
+
             _is_loading = false; setBtnState('saved');
         } catch (e) { setBtnState('error'); }
     }
@@ -524,29 +490,53 @@ function formatPrefixesSmart(input) {
         });
     }
 
-    window.addEventListener('online', () => { _load(); });
-    window.addEventListener('offline', () => { setBtnState('offline'); });
-
-    _dom_ar.addEventListener('input', () => { if (!_is_loading) checkChanges(); });
-    _dom_prefix.addEventListener('blur', () => { if (!_is_loading) { _dom_prefix.value = formatPrefixesSmart(_dom_prefix.value); checkChanges(); } });
-    _dom_prefix.addEventListener('input', () => { if (!_is_loading) checkChanges(); });
+    // Sự kiện nhập liệu
+    _dom_ar.addEventListener('input', checkChanges);
+    _dom_prefix.addEventListener('input', checkChanges);
+    
+    // Format khi rời khỏi khung nhập tiền tố
+    _dom_prefix.addEventListener('blur', () => {
+        if (_is_loading) return;
+        const formatted = formatPrefixesSmart(_dom_prefix.value);
+        if (formatted !== _dom_prefix.value) {
+            _dom_prefix.value = formatted;
+            checkChanges();
+        }
+    });
 
     _dom_sv.addEventListener('click', async () => {
         if (_dom_sv.disabled || !navigator.onLine) return;
         setBtnState('saving');
         try {
             const fPrefixes = formatPrefixesSmart(_dom_prefix.value);
-            if (fPrefixes !== _last_saved_prefixes) {
-                const res = await _update_file(_app_opt._p_pref, fPrefixes, _v_sha_pref, "update prefixes");
-                if (res.ok) { _v_sha_pref = (await res.json()).content.sha; _last_saved_prefixes = _dom_prefix.value = fPrefixes; }
-            }
             const result = _standardize_content(_dom_ar.value);
-            const res = await _update_file(_app_opt._p_ads, result.content, _v_sha_ads, result.isRulesChanged ? `update filter` : "format rules");
-            if (res.ok) { _v_sha_ads = (await res.json()).content.sha; _dom_ar.value = _last_saved_content = result.content; }
+
+            const updateTasks = [
+                _update_file(_app_opt._p_ads, result.content, _v_shas.ads, result.isRulesChanged ? `update filter` : "format rules"),
+                _update_file(_app_opt._p_block, result.subFiles.block, _v_shas.block, "sync block"),
+                _update_file(_app_opt._p_whitelist, result.subFiles.whitelist, _v_shas.whitelist, "sync whitelist"),
+                _update_file(_app_opt._p_unhide, result.subFiles.unhide, _v_shas.unhide, "sync unhide")
+            ];
+
+            if (fPrefixes !== _last_saved_prefixes) {
+                updateTasks.push(_update_file(_app_opt._p_pref, fPrefixes, _v_shas.pref, "update prefixes"));
+            }
+
+            await Promise.all(updateTasks);
+            
+            _last_saved_content = result.content;
+            _last_saved_prefixes = fPrefixes;
+            _dom_ar.value = result.content;
+            _dom_prefix.value = fPrefixes;
+            
+            // Tải lại SHA mới nhất
+            await _load();
             setBtnState('saved');
         } catch (e) { setBtnState('error'); }
     });
 
+    window.addEventListener('online', _load);
+    window.addEventListener('offline', () => setBtnState('offline'));
     window.onload = _load;
 })();
 </script>
