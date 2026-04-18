@@ -2,8 +2,8 @@
 ! Title: STOP ADS
 ! Describe: Chặn quảng cáo
 ! Updated: 18 Apr 2026 22:34
-! Blocked: 409
-! Size: 29.74KB
+! Blocked: 414
+! Size: 29.95KB
 ! ==================
 
 1thegioi.vn##[class^="c-banner-"],[id^="zone-"]
@@ -157,6 +157,8 @@ buonmathuot.daklak.gov.vn##a[href="/danh-sach-phat-ngon-7.html"],a[href="/hoi-da
 cafebiz.vn###admFullTop,#admbackground,#ban-top-site,#logo_adm,.top-logo,[id^="adm-"],[id^="admbackground_"],[id^="zone-"]
 
 cafef.vn###admFullTop,#admbackground,#ban-top-site,#logo_adm,.top-logo,[id^="adm-"],[id^="admbackground_"],[id^="zone-"]
+
+cafeland.vn##.topFullBannerMobileSize
 
 camau.edu.vn##.UIMultiFunction_Default,.UIWebLink_Weblink
 
@@ -344,7 +346,7 @@ hue.gov.vn##.DanhChoDN,.list_QuangCao,.view_list_QuangCao,[id^="dnn_ctr14676_"],
 
 huengaynay.vn##[class*="advrtise"]
 
-huetv.com.vn##[class^="banner"]
+huetv.com.vn##.part31>p,[class^="banner"]
 
 hungyen.edu.vn###frameBoundB67c136903e495,#module17,#module25,#module45
 
@@ -424,7 +426,7 @@ lichviet.app###smart-app-banner,[class*="banner"],[class*="swiper"]
 
 liteapks.com##[id^="ad-"]
 
-logos.fandom.com##[class^="top_"],[id^="top_"]
+logos.fandom.com##[class^="bottom-"],[class^="top_"],[id^="bottom_"],[id^="top_"]
 
 lsvn.vn##.aanetwork-ads-box,.ads-item,[class^="aanetwork-"],[class^="ads-"],[class^="sys"],sys-ads
 
@@ -503,6 +505,8 @@ on.vtvcab.vn##.app-text
 online-audio-converter.com##.remove-ads
 
 online-voice-recorder.com##.remove-ads
+
+onsports.vn##[class^="aanetwork-"]
 
 oto.com.vn##.box-bn-home,[class^="banner-"],[class^="cpn-"],[id^="cpn-"]
 
@@ -628,6 +632,8 @@ tcnnld.vn##[class*="tapchifull"],[class^=".magazine-promo_"]
 
 tdtt.gov.vn###dnn_TopGrid4A,#dnn_TopGrid4B,#dnn_TopGrid4C
 
+techcenter.vn##.topbar-banner
+
 techlade.vn##[class^="attachments-"],[class^="banner_"]
 
 techspot.com##.mobile-ad
@@ -746,6 +752,8 @@ vietnam.vnanet.vn##.uk-margin-small-top
 
 vietnamarchi.vn##.box-doi-tac,.box-doi-tac>div,[class^="list-"],div[style="text-align:center"]
 
+vietnammedia.vnanet.vn##.slider
+
 vietnamnet.vn###Mobile_AdsArticleBodyInArticle,#catfish,[class*="ads-"],[id^="admbackground"],[id^="adzone"],[id^="mashead-"]
 
 vietnamnews.vn##.banner,.clearfix,[class^="CloseButton_"],[class^="InstreamDom_"],[class^="material-"],[class^="style-module_"],[id^="adv_"]
@@ -791,6 +799,8 @@ vov2.vov.vn###block-daihoidangbanner,#block-daihoidangbanner>div,.video-fluid
 vovgiaothong.vn##.e,[class^="ads_"],[class^="banner-"],[id^="zone_"]
 
 voz.vn##[id^="sp-"]
+
+vtc.edu.vn##.alignnone,[class^="pum-"]
 
 vtcnews.vn###appLink,.adsbygoogle,.inpage-ad,.top-ad,.txtlogo,[class^="aanetwork-"],[class^="admLogoAd"],[class^="ads-"],[class^="baner-"],[class^="inpage-ad-"],[class^="sponsored-"],[id^="adnzone_"],[id^="banner-"],[id^="placement-"],[id^="share-"],[id^="slot-"],[id^="ssppagebid_"],[id^="zone-"]
 
