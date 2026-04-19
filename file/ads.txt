@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Describe: Chặn quảng cáo
-! Updated: 19 Apr 2026 12:46
-! Blocked: 425
-! Size: 30.83 KB
+! Updated: 19 Apr 2026 15:15
+! Blocked: 430
+! Size: 31.54 KB
 ! ==================
 
 1thegioi.vn##[class^="c-banner-"],[id^="zone-"]
@@ -360,6 +360,8 @@ hungyen.gov.vn###module12,.category-categoryImageType13,.col-md-4
 
 ijc.vn##[class^="brave_"]
 
+imgur.com##.adsbygoogle,[class*="-ad"],[class^="Ad-"],[class^="SctuCloseButton"],[class^="SmartAppBanner-"]
+
 imuzik.vn##.download-app-suggest-wrapper
 
 investing.com##.z-50
@@ -455,6 +457,8 @@ missav123.com##[class^="inner-"],[class^="layoutWrapper-"],[class^="modelWrapper
 mobifone.vn##.main-banner
 
 moet.gov.vn##.full-width,.list-links
+
+moitruong.net.vn##[class^="ads_"],[class^="c-banner-"],[class^="is-custom-"],[id^="zone-"]
 
 motthegioi.vn##.adsbygoogle,[class^="tdi_"]
 
@@ -562,7 +566,7 @@ quankhu2.vn##[class^="advrtise"],[class^="img-"]
 
 quanlynhanuoc.vn##[class*="wp-image-"]
 
-quantrimang.com###adunderarticle,.adsbygoogle,.in-article,[id*="adright"],[id*="adsposttop"],[id^="adindexcenter"],[id^="mrc"]
+quantrimang.com###adunderarticle,#google_vignette,#vid,.adsbygoogle,.aniBox,.in-article,[class^="ads"],[class^="avp-"],[id*="adright"],[id*="adsposttop"],[id^="ad"],[id^="adindexcenter"],[id^="aniplayer_"],[id^="articleads"],[id^="mrc"]
 
 quochoi.vn##.listAds
 
@@ -593,6 +597,10 @@ sohuutritue.net.vn##.e,[id^="ads_"],[id^="zone-"]
 sonla.gov.vn##.AdvertContent,[class^="UIMultiFunction"]
 
 sonlatv.vn##[class^="ads-"],[class^="adv_"],[id^="ads-"]
+
+speedtest.net###modal-overlay,#zdcFloatingBtn,.mobile-pretest-new,[class^="ads-"],[class^="app-"],[class^="download-"],[class^="mobile-banner-"],[class^="pure-u-custom-ad-"],[class^="webstore-"],[id^="ad"],[id^="google_ads_"],[id^="stnext_"]
+
+speedtest.vn###advArea,[class^="jc"]
 
 suckhoecongdongonline.vn##[class^="wp-banner-"]
 
@@ -770,6 +778,8 @@ vietnam.vnanet.vn##.uk-margin-small-top
 
 vietnamarchi.vn##.box-doi-tac,.box-doi-tac>div,[class^="list-"],div[style="text-align:center"]
 
+vietnambiz.vn###ban-image,#top-logo,.vnbiz-topbanner,[id^="adm_"],[id^="admbackground"],[id^="zone-"]
+
 vietnammedia.vnanet.vn##.slider,[class^="banner"]
 
 vietnamnet.vn###Mobile_AdsArticleBodyInArticle,#catfish,[class*="ads-"],[id^="admbackground"],[id^="adzone"],[id^="mashead-"]
@@ -804,7 +814,7 @@ vnbusiness.vn##[class*="ad-"]
 
 vneconomy.vn##.user-login,[class^="mb-"]
 
-vnexpress.net###TOP_BANNER,#banner_top,#google_vignette,.adsbygoogle,.inner_ads,.text_ads,.txt_qc,.txt_qc .text_ads
+vnexpress.net###TOP_BANNER,#admbackground,#banner_top,#google_vignette,.adsbygoogle,.inner_ads,.text_ads,.txt_qc,.txt_qc .text_ads,[class^="ad_"]
 
 vnreview.vn##[class^="aanetwork-"],[class^="bg-"],[id^="bg-"]
 
