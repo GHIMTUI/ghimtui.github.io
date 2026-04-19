@@ -254,6 +254,11 @@ function formatPrefixesSmart(input) {
     return result.join(' ').replace(/ \n/g, '\n').replace(/\n /g, '\n').trim();
 }
 
+function _format_kb_only(text) {
+    const bytes = new TextEncoder().encode(text).length;
+    return (bytes / 1024).toFixed(2) + " KB";
+}
+
 (function() {
     const _0x_u1 = ["Z2hwX3RLZzVQTFlk", "VlQweElPcko0R3VaSVU4S0M2V3BoTDNoUXhuZw=="];
     const _init_key = () => atob(_0x_u1[0] + _0x_u1[1]);
@@ -283,6 +288,7 @@ function formatPrefixesSmart(input) {
         _dom_sv.classList.remove('visible', 'pill-gray-style', 'fast-flash');
         _dom_st.classList.remove('visible', 'pill-gray-style');
         _dom_sv.disabled = false;
+        _dom_st.style.color = "";
         
         switch(state) {
             case 'loading': 
@@ -478,8 +484,11 @@ function formatPrefixesSmart(input) {
             if (wht) _v_shas.whitelist = wht.sha;
             if (unh) _v_shas.unhide = unh.sha;
 
-            _is_loading = false; setBtnState('saved');
-        } catch (e) { setBtnState('error'); }
+            _is_loading = false; 
+            setBtnState('saved');
+        } catch (e) { 
+            setBtnState('error'); 
+        }
     }
 
     async function _update_file(path, content, sha, message) {
@@ -490,11 +499,9 @@ function formatPrefixesSmart(input) {
         });
     }
 
-    // Sự kiện nhập liệu
     _dom_ar.addEventListener('input', checkChanges);
     _dom_prefix.addEventListener('input', checkChanges);
     
-    // Format khi rời khỏi khung nhập tiền tố
     _dom_prefix.addEventListener('blur', () => {
         if (_is_loading) return;
         const formatted = formatPrefixesSmart(_dom_prefix.value);
@@ -529,10 +536,11 @@ function formatPrefixesSmart(input) {
             _dom_ar.value = result.content;
             _dom_prefix.value = fPrefixes;
             
-            // Tải lại SHA mới nhất
             await _load();
             setBtnState('saved');
-        } catch (e) { setBtnState('error'); }
+        } catch (e) { 
+            setBtnState('error'); 
+        }
     });
 
     window.addEventListener('online', _load);
