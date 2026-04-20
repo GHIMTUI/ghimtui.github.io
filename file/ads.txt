@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Describe: Chặn quảng cáo
-! Updated: 20 Apr 2026 06:35
+! Updated: 20 Apr 2026 06:39
 ! Blocked: 471
-! Size: 33.53 KB
+! Size: 33.54 KB
 ! ==================
 
 1thegioi.vn##[class^="c-banner-"],[id^="zone-"]
@@ -880,7 +880,7 @@ vikkibank.vn###my-smart-banner
 
 vinhlong.edu.vn##.content-image,.member2,.post-image
 
-vinhlong.gov.vn##.DNNContainer_noTitle,.col-xs-12,.dnnPEMContNotitle,.lienketban,.liink_item_vp,[id^="dnn_ctr48185_"]
+vinhlong.gov.vn##.DNNContainer_noTitle,.col-xs-12,.dnnPEMContNotitle,.link_item_vp,[class^="lienketban"],[id^="dnn_ctr48185_"]
 
 vinid.net##[class^="VinID-modal-"],[class^="modal-"],[class^="vinid-modal-"],[id^="VinID-popup-"]
 
