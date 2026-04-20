@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Describe: Chặn quảng cáo
-! Updated: 20 Apr 2026 01:08
-! Blocked: 454
-! Size: 32.59 KB
+! Updated: 20 Apr 2026 05:27
+! Blocked: 466
+! Size: 33.33 KB
 ! ==================
 
 1thegioi.vn##[class^="c-banner-"],[id^="zone-"]
@@ -242,6 +242,8 @@ dembuon.vn###ads-google
 
 dep.com.vn##.notrack,.pb,[class^="ad-"],[id^="advads-"]
 
+dict.laban.vn###laban_app_ad,.bold,.info-app
+
 dictionary.cambridge.org###ad_houseslot_b,#ad_topslot,.i-amphtml-layout-fill,.parallax-abs,.parallax-container
 
 dienbien.gov.vn##.TD-quangcao,.img-quangcao-ngang,.tandan-div-module-links-img,img[src="/portal/images/khamchuabenh.gif"]
@@ -296,6 +298,8 @@ extract.me##.ad,.adsbygoogle,.premium-entry-button,.remove-ads
 
 fandom.com##.top-ads-container,[class^="ad-"]
 
+faztaa.com##.btn-puzzle
+
 fhsc.com.vn###smart-banner
 
 finance.vietstock.vn##[class*="ats-overplay-"],[class^="bannerhtml"],[id^="googleAds_"]
@@ -305,6 +309,8 @@ finhay.com.vn###smart-banner
 fmarket.vn##[class^="register__"]
 
 fptplay.vn##.flex-row
+
+gearvn.com##[class^="banner-"],[class^="index-banner-"],[class^="index-slider-"],[class^="modal-"],[id^="popup-"]
 
 genk.vn###admFullTop,#admbackground,#ban-top-site,#logo_adm,#top-logo,.ads,[class^="khw-ads-"],[id^="adm-"],[id^="admbackground_"],[id^="zone-"]
 
@@ -452,11 +458,15 @@ lichvannien365.com##.adsbygoogle
 
 lichviet.app###smart-app-banner,[class*="banner"],[class*="swiper"]
 
+liendoanluatsu.org.vn###row-480566132,#row-660605896,#section_364720549
+
 liteapks.com##[id^="ad-"]
 
 logos.fandom.com##[class^="bottom-"],[class^="top_"],[id^="bottom_"],[id^="top_"]
 
 lsvn.vn##.aanetwork-ads-box,.ads-item,[class^="aanetwork-"],[class^="ads-"],[class^="sys"],sys-ads
+
+luatvietnam.vn##.section-lvn
 
 lyluanchinhtri.vn##[class^="ads_"],[class^="c-banner-"],[id^="zone-"]
 
@@ -554,9 +564,15 @@ pdf.io##.ad,.adsbygoogle
 
 pgbank.com.vn##.footer-menu,.section-2
 
+phapluat.gov.vn##[class^="banner-"],[class^="custom-banner-"]
+
 phapluat.suckhoedoisong.vn##[class^="c-banner-"]
 
 phaply.net.vn##.visible,[class^="qc_"]
+
+phatnguoi.com###adBottom,.adsbygoogle,.align-items-center,[class^="ad_"],[class^="app-box__"],[class^="nav-"]
+
+phatnguoixe.com##div[style="text-align: center;"]
 
 phongvu.vn##[class^="pv-"],[id^="pv-"]
 
@@ -611,6 +627,8 @@ sdttg.hochiminhcity.gov.vn##[class^="journal-"],[class^="wrapPartners-"]
 sggp.org.vn##[class^="Is-"],[id^="Mobile_"],[id^="oa-"],[id^="sdaMobile_"]
 
 shinhan.com.vn##.responsive-wrapper
+
+shopeepay.vn##[class^="StickyBar__"]
 
 simplize.vn##.css-1ke0mll
 
@@ -760,6 +778,8 @@ tmo.taimienphi.vn##.adsbygoogle
 
 topi.vn##.bottom-0,.el-dialog,.v-modal,[class^="el-dialog__"]
 
+traphatnguoi.net##[class^="app-"],[id^="appDialog"]
+
 truyenhinhnghean.vn##.active,[class^="carousel"]
 
 truyenhinhthanhhoa.vn##[class^="ad-"],[id^="banner-"],[id^="placement-"],[id^="share-"],[id^="slot-"],[id^="zone-"]
@@ -852,6 +872,8 @@ vinhlong.edu.vn##.content-image,.member2,.post-image
 
 vinhlong.gov.vn##.DNNContainer_noTitle,.col-xs-12,.dnnPEMContNotitle,[id^="dnn_ctr48185_"]
 
+vinid.net##[class^="VinID-modal-"],[class^="modal-"],[class^="vinid-modal-"],[id^="VinID-popup-"]
+
 vip.keeng.vn##.app_nhac_keeng,.app_nhac_keeng>span
 
 vjst.vn##[class^="c-banner-"]
@@ -877,6 +899,8 @@ voz.vn##[id^="sp-"]
 vtc.edu.vn##.alignnone,[class^="pum-"]
 
 vtcnews.vn###appLink,.adsbygoogle,.inpage-ad,.top-ad,.txtlogo,[class^="aanetwork-"],[class^="adbro-"],[class^="admLogoAd"],[class^="ads-"],[class^="baner-"],[class^="inpage-ad-"],[class^="sponsored-"],[id^="adbro-"],[id^="adnzone_"],[id^="banner-"],[id^="placement-"],[id^="share-"],[id^="slot-"],[id^="ssppagebid_"],[id^="zone-"]
+
+vtcpay.vn##[class^="alsli_ud_"],[class^="sli_ud_"]
 
 vtv.vn##[id^="banner-"],[id^="lozad-"],[id^="placement-"],[id^="share-"],[id^="slot-"],[id^="zone-"]
 
