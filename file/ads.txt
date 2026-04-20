@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Describe: Chặn quảng cáo
-! Updated: 19 Apr 2026 15:15
-! Blocked: 430
-! Size: 31.54 KB
+! Updated: 20 Apr 2026 01:08
+! Blocked: 454
+! Size: 32.59 KB
 ! ==================
 
 1thegioi.vn##[class^="c-banner-"],[id^="zone-"]
@@ -14,7 +14,11 @@
 
 2sao.vn###catfish,.adsbyvli,.vmc_ads_viewport,[id*="adzone"],[id^="Mobile_"],[id^="adzone"],[id^="container-"],[id^="pw_"],[id^="sp-wrapper-"],[id^="yomedia-"]
 
+3gang.vn###popupContainer,.active,.scroll-to-bulletsv2,[class^="custom-popup-"]
+
 acb.com.vn###download-banner-footer
+
+acbs.com.vn##[class*="-popup"]
 
 accuweather.com###adhesion,#bottom,#connatix,#top,.adhesion-header
 
@@ -160,6 +164,8 @@ cafef.vn###admFullTop,#admbackground,#ban-top-site,#logo_adm,.top-logo,[id^="adm
 
 cafeland.vn##.topFullBannerMobileSize
 
+cake.vn##.px-5,[id^="posts-"],[id^="sticky_"]
+
 camau.edu.vn##.UIMultiFunction_Default,.UIWebLink_Weblink
 
 camau.gov.vn###@##ctrl_160903_87_SlideShow,#@#.AdvertContent>marquee,.AdvertContent,[class^="UIAdvertisement_"],img[src="https://files-vnportalcmu.camau.gov.vn/cmu-chinhquyen/1/quantritintuc20258/NONG THON MOI
@@ -185,6 +191,8 @@ chatluongvacuocsong.vn##.e,[id^="ads_"],[id^="zone-"]
 chiaseapk.com##[class*="ads"],[class^="banner-"],[class^="qc-"],[id*="ad"],[id^="HTML"]
 
 chinhtrivaphattrien.vn##.qc_container
+
+chungkhoantriduc.vn##[class*="-banner-"]
 
 cimbbank.com.vn##.btn
 
@@ -276,6 +284,8 @@ dreamlogos.fandom.com##[class^="top_"],[id^="top_"]
 
 drt.vn##.col-sm-3,[class^="ads-"],[id^="ads-"]
 
+dulieu.nguoiquansat.vn##.nguoiquansat-mb-topbanner,.w-100
+
 edu.vn##.donor
 
 elle.vn##[class^="banner-"],[id^="div-gpt-ad-"]
@@ -286,7 +296,13 @@ extract.me##.ad,.adsbygoogle,.premium-entry-button,.remove-ads
 
 fandom.com##.top-ads-container,[class^="ad-"]
 
+fhsc.com.vn###smart-banner
+
 finance.vietstock.vn##[class*="ats-overplay-"],[class^="bannerhtml"],[id^="googleAds_"]
+
+finhay.com.vn###smart-banner
+
+fmarket.vn##[class^="register__"]
 
 fptplay.vn##.flex-row
 
@@ -341,6 +357,8 @@ hoanhap.vn##.section-1
 hocbaso.quangninh.edu.vn###module15,.banner-header
 
 hochiminhcity.gov.vn###carouselExampleIndicators,[class^="banner-"]
+
+homecredit.vn##.text-primary-foreground
 
 hplus.com.vn##.dl_mobile
 
@@ -420,6 +438,8 @@ laodong.vn###admbackground,#main-footer-fix-bottom,.adsbygoogle,.item,.msg,[clas
 
 laodongdoanthe.vn##.banner,[class^="mb"]
 
+ld-eshop.misa.vn###i9c0ei
+
 lecourrier.vn##[id^="adv_"]
 
 lichcupdien.org##[id*="bn2-wrapper"],[id*="sp-wrapper"],[id*="tt-wrapper"]
@@ -460,6 +480,8 @@ moet.gov.vn##.full-width,.list-links
 
 moitruong.net.vn##[class^="ads_"],[class^="c-banner-"],[class^="is-custom-"],[id^="zone-"]
 
+momo.vn##.container-topbar,[class^="jsx-"]
+
 motthegioi.vn##.adsbygoogle,[class^="tdi_"]
 
 mp3cut.net##.ad,.adsbygoogle,.premium-entry-button,.remove-ads
@@ -492,11 +514,15 @@ nguoiduatin.vn##.adsbygoogle,[class^="ndt-"],[class^="sp-"],[id^="sp-"],[id^="sp
 
 nguoiquansat.vn##.c-banner,.footer-sticky,[class^="adbox-"],[class^="ads_"],[class^="is-"],[class^="nguoiquansat-"],[id^="zone-"]
 
+nguyenkim.com##[class^="pv-"],[id^="popup-"]
+
 nhac.vn###footer-scroll,.tbl-link
 
 nhachannuoi.vn##.left-banner,.logothuonghieu,.menu-pr,.pdthieu,.quangcao,.tapchi,.tapchichannuoi,.tapchithaydoi,.thuonghieu,.thuonghieu>li,.wapthuonghieu,.wp-image-86552,[class^="banner-"],[class^="center-"],[class^="exp_qc_"],[id^="ads_"],[id^="black-"],[id^="callblacks3_"],[id^="zone-"]
 
 nhadautu.vn##[id^="ads_"],[id^="zone-"]
+
+nhanh.vn###bannerMainAdMobile,#myModal,[class^="modal-"]
 
 nhipcaudautu.vn###newsletter,.col-md-8>center
 
@@ -572,7 +598,11 @@ quochoi.vn##.listAds
 
 quocphongthudo.vn###module20,#module35,#module38,#module39,#module40
 
+quydautuphattrien.hanoi.gov.vn##.commonBanner
+
 reatimes.vn##[class^="adv-"],[class^="owl-"]
+
+sbv.gov.vn##[class*="-banner"]
 
 sc.com##.smartbanner,[class^="smartbanner-"]
 
@@ -581,6 +611,8 @@ sdttg.hochiminhcity.gov.vn##[class^="journal-"],[class^="wrapPartners-"]
 sggp.org.vn##[class^="Is-"],[id^="Mobile_"],[id^="oa-"],[id^="sdaMobile_"]
 
 shinhan.com.vn##.responsive-wrapper
+
+simplize.vn##.css-1ke0mll
 
 sinhthainongnghiep.net.vn##.promotions,.visible,[class^="qc_"]
 
@@ -601,6 +633,8 @@ sonlatv.vn##[class^="ads-"],[class^="adv_"],[id^="ads-"]
 speedtest.net###modal-overlay,#zdcFloatingBtn,.mobile-pretest-new,[class^="ads-"],[class^="app-"],[class^="download-"],[class^="mobile-banner-"],[class^="pure-u-custom-ad-"],[class^="webstore-"],[id^="ad"],[id^="google_ads_"],[id^="stnext_"]
 
 speedtest.vn###advArea,[class^="jc"]
+
+ssiam.com.vn##[class^="ourAchievements__"]
 
 suckhoecongdongonline.vn##[class^="wp-banner-"]
 
@@ -651,6 +685,10 @@ tcnnld.vn##[class*="tapchifull"],[class^=".magazine-promo_"]
 tdtt.gov.vn###dnn_TopGrid4A,#dnn_TopGrid4B,#dnn_TopGrid4C
 
 techcenter.vn##.topbar-banner
+
+techcombank.com##.alternate-button-mobile
+
+techinasia.com##.text-center
 
 techlade.vn##[class^="attachments-"],[class^="banner_"]
 
@@ -706,6 +744,8 @@ tienphong.vn###mg-gpt-popup-modal,.adsbygoogle,.close_ub-anchor,.sp-pto-mb-div,[
 
 tiin.vn###admFullTop,#advBallon,#advHomeTop,#ban-top-site,#top-logo,[id^="admLogoAd"],[id^="adm_"],[id^="adnzone_"],[id^="banner-"],[id^="placement-"],[id^="share-"],[id^="slot-"],[id^="ssppagebid_"],[id^="yomedia-"],[id^="zone-"]
 
+tikop.vn##[class^="footer-ads"]
+
 tin.skydoor.net##[id^="M"]
 
 tinhte.vn###admFullTop,#admbackground,#ban-top-site,#logo_adm,.pro-container,.top-logo,[id^="adm-"],[id^="admbackground_"],[id^="zone-"]
@@ -717,6 +757,8 @@ tintucvietnam.vn##.e,[class^="ads_"],[class^="banner-"],[id^="zone-"]
 tinyurl.vn##.adsbygoogle
 
 tmo.taimienphi.vn##.adsbygoogle
+
+topi.vn##.bottom-0,.el-dialog,.v-modal,[class^="el-dialog__"]
 
 truyenhinhnghean.vn##.active,[class^="carousel"]
 
@@ -756,6 +798,8 @@ vatvostudio.vn##.VatvoxWintel,.VatvoxWintel>picture,.class-hinh-anh,.entry-tags
 
 vbsp.org.vn##[class^="ads"]
 
+vcbf.com##[class*="cta"]
+
 vcbneo.com.vn##[class^="banner_"]
 
 vdb.gov.vn##[class^="Ads_"]
@@ -771,6 +815,8 @@ video-converter.com##.ad,.adsbygoogle,.premium-entry-button,.remove-ads
 viendongonline.com##[class*="-ads-"]
 
 vieon.vn##.basis-full,.vie-mobile-download,.voucher,[class^="Button_small__"]
+
+vietcetera.com##[class^="styles_headerDetailPage__"],[class^="styles_topBanner__"]
 
 vietdaily.vn###click-protector,.adsbygoogle-noablate,.grippy-host
 
@@ -792,7 +838,7 @@ vietnamradio.org##.add-box-top,.adsbygoogle
 
 vietnamworks.com##.top-0,.z-50
 
-vietstock.vn##[class^="bannerhtml"]
+vietstock.vn###admbackground,[class^="ad_"],[class^="bannerhtml"]
 
 viettelstore.vn###img-popup,.icon-neo,[class*="-banner"],[class^="icon-"],[id*="-banner"],[id^="banner-"],[id^="overlay"]
 
@@ -861,6 +907,8 @@ xosodaiphat.com##[class^="qc-"]
 xosominhngoc.net.vn##.hidemin720
 
 xsmn.mobi##.ads,.hdc-csi_square
+
+zalopay.vn##[class^="styles_promoteContainer__"]
 
 zingmp3.vn###js-banner-vip,.z-banner-vip,.z-btn-open-app
 
