@@ -2,8 +2,8 @@
 ! Title: STOP ADS
 ! Describe: Chặn quảng cáo
 ! Updated: 21 Apr 2026 06:08
-! Blocked: 473
-! Size: 33.55 KB
+! Blocked: 474
+! Size: 33.56 KB
 ! ==================
 
 1thegioi.vn##[class^="c-banner-"],[id^="zone-"]
@@ -313,6 +313,7 @@ fptplay.vn##.flex-row
 
 g-pay.vn###myCarousel
 G.com
+G1.com
 gearvn.com##[class^="banner-"],[class^="index-banner-"],[class^="index-slider-"],[class^="modal-"],[id^="popup-"]
 
 genk.vn###admFullTop,#admbackground,#ban-top-site,#logo_adm,#top-logo,.ads,[class^="khw-ads-"],[id^="adm-"],[id^="admbackground_"],[id^="zone-"]
