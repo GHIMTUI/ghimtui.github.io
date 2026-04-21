@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Describe: Chặn quảng cáo
-! Updated: 21 Apr 26 13:37
-! Blocked: 472
-! Size: 33.54 KB
+! Updated: 21 Apr 2026 13:40
+! Blocked: 473
+! Size: 33.55 KB
 ! ==================
 
 1thegioi.vn##[class^="c-banner-"],[id^="zone-"]
@@ -299,7 +299,7 @@ extract.me##.ad,.adsbygoogle,.premium-entry-button,.remove-ads
 fandom.com##.top-ads-container,[class^="ad-"]
 
 faztaa.com##.btn-puzzle
-
+Fg
 fhsc.com.vn###smart-banner
 
 finance.vietstock.vn##[class*="ats-overplay-"],[class^="bannerhtml"],[id^="googleAds_"]
