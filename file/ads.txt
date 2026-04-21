@@ -1,8 +1,8 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Describe: Chặn quảng cáo
-! Updated: 21 Apr 2026 13:34
-! Blocked: 471
+! Updated: 21 Apr 26 13:37
+! Blocked: 472
 ! Size: 33.54 KB
 ! ==================
 
@@ -419,7 +419,7 @@ kinhtedouong.vn##.item-adv,[id^="adv"]
 kinhtenongthon.vn###firt,.active,.item,[class^="owl-"],[id^="col_"],[id^="owl-"]
 
 kinhtevadubao.vn##.__ads_click,[class^="banner-"]
-
+Kmo
 kqxs.vn##.adsbygoogle,[class^="ads-"]
 
 laichau.edu.vn###module24,#module27,#module30,#module32,#module33,#module35,#module36,#module37,#module38,#module39,#module40,#module41,#module42,#module43,#module45,#module46,#module47,#module48,#module49,#module50,#module52,#module53,#module58,#module59
