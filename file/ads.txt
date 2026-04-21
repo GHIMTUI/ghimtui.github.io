@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Describe: Chặn quảng cáo
-! Updated: 21 Apr 2026 06:26
-! Blocked: 475
-! Size: 33.56 KB
+! Updated: 21 Apr 2026 06:31
+! Blocked: 471
+! Size: 33.54 KB
 ! ==================
 
 1thegioi.vn##[class^="c-banner-"],[id^="zone-"]
@@ -296,7 +296,6 @@ eva.vn##[class^="banr"],[class^="banr-"],[id^="ADS_"],[id^="spanTextAds_"]
 
 extract.me##.ad,.adsbygoogle,.premium-entry-button,.remove-ads
 
-F.com
 fandom.com##.top-ads-container,[class^="ad-"]
 
 faztaa.com##.btn-puzzle
@@ -312,8 +311,7 @@ fmarket.vn##[class^="register__"]
 fptplay.vn##.flex-row
 
 g-pay.vn###myCarousel
-G.com
-G1.com
+
 gearvn.com##[class^="banner-"],[class^="index-banner-"],[class^="index-slider-"],[class^="modal-"],[id^="popup-"]
 
 genk.vn###admFullTop,#admbackground,#ban-top-site,#logo_adm,#top-logo,.ads,[class^="khw-ads-"],[id^="adm-"],[id^="admbackground_"],[id^="zone-"]
@@ -402,7 +400,6 @@ irace.vn##.g-6,.td-visible-phone
 
 jomc.vn##.adv-wrapper,.center-block
 
-K.yt
 kalvo.com##.footer,[class^="klv_"],[class^="klvad"]
 
 kenh14.vn##.adv,[class^="adzone"],[id^="adm-"],[id^="admbackground"],[id^="admbackground_"],[id^="admzone"],[id^="banner-"],[id^="placement-"],[id^="share-"],[id^="slot-"],[id^="zone-"]
