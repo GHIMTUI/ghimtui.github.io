@@ -1,8 +1,8 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Describe: Chặn quảng cáo
-! Updated: 20 Apr 2026 06:39
-! Blocked: 471
+! Updated: 21 Apr 2026 04:14
+! Blocked: 472
 ! Size: 33.54 KB
 ! ==================
 
@@ -296,6 +296,7 @@ eva.vn##[class^="banr"],[class^="banr-"],[id^="ADS_"],[id^="spanTextAds_"]
 
 extract.me##.ad,.adsbygoogle,.premium-entry-button,.remove-ads
 
+F.com
 fandom.com##.top-ads-container,[class^="ad-"]
 
 faztaa.com##.btn-puzzle
