@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Describe: Chặn quảng cáo
-! Updated: 21 Apr 2026 04:14
-! Blocked: 472
-! Size: 33.54 KB
+! Updated: 21 Apr 2026 06:04
+! Blocked: 473
+! Size: 33.55 KB
 ! ==================
 
 1thegioi.vn##[class^="c-banner-"],[id^="zone-"]
@@ -312,7 +312,7 @@ fmarket.vn##[class^="register__"]
 fptplay.vn##.flex-row
 
 g-pay.vn###myCarousel
-
+G.com
 gearvn.com##[class^="banner-"],[class^="index-banner-"],[class^="index-slider-"],[class^="modal-"],[id^="popup-"]
 
 genk.vn###admFullTop,#admbackground,#ban-top-site,#logo_adm,#top-logo,.ads,[class^="khw-ads-"],[id^="adm-"],[id^="admbackground_"],[id^="zone-"]
