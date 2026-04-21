@@ -1,8 +1,8 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Describe: Chặn quảng cáo
-! Updated: 21 Apr 2026 06:08
-! Blocked: 474
+! Updated: 21 Apr 2026 06:18
+! Blocked: 475
 ! Size: 33.56 KB
 ! ==================
 
@@ -402,6 +402,7 @@ irace.vn##.g-6,.td-visible-phone
 
 jomc.vn##.adv-wrapper,.center-block
 
+K.yt
 kalvo.com##.footer,[class^="klv_"],[class^="klvad"]
 
 kenh14.vn##.adv,[class^="adzone"],[id^="adm-"],[id^="admbackground"],[id^="admbackground_"],[id^="admzone"],[id^="banner-"],[id^="placement-"],[id^="share-"],[id^="slot-"],[id^="zone-"]
