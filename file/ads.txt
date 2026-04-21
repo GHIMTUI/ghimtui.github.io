@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Describe: Chặn quảng cáo
-! Updated: 21 Apr 2026 06:31
+! Updated: 21 Apr 2026 13:34
 ! Blocked: 471
 ! Size: 33.54 KB
 ! ==================
