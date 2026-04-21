@@ -222,14 +222,23 @@
 </div>
 
 <script>
+/**
+ * Chuyển đổi giữa các tab giao diện
+ */
 function switchTab(tabId) {
     document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
     document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
     
-    document.getElementById('btn-tab-' + tabId).classList.add('active');
-    document.getElementById('tab-' + tabId).classList.add('active');
+    const targetBtn = document.getElementById('btn-tab-' + tabId);
+    const targetTab = document.getElementById('tab-' + tabId);
+    
+    if (targetBtn) targetBtn.classList.add('active');
+    if (targetTab) targetTab.classList.add('active');
 }
 
+/**
+ * Định dạng danh sách tiền tố domain (Prefixes) một cách thông minh
+ */
 function formatPrefixesSmart(input) {
     if (!input) return "";
     let cleanedInput = input.replace(/,/g, ' ').replace(/\.+(?=\w|\.|$)/g, ' '); 
@@ -254,6 +263,9 @@ function formatPrefixesSmart(input) {
     return result.join(' ').replace(/ \n/g, '\n').replace(/\n /g, '\n').trim();
 }
 
+/**
+ * Tính toán dung lượng văn bản theo KB
+ */
 function _format_kb_only(text) {
     const bytes = new TextEncoder().encode(text).length;
     return (bytes / 1024).toFixed(2) + " KB";
@@ -285,6 +297,9 @@ function _format_kb_only(text) {
     let _is_loading = true;
 
     function setBtnState(state) {
+        if (!_dom_sv || !_dom_st) return;
+        
+        // Reset trạng thái hiển thị cơ bản
         _dom_sv.classList.remove('visible', 'pill-gray-style', 'fast-flash');
         _dom_st.classList.remove('visible', 'pill-gray-style');
         _dom_sv.disabled = false;
@@ -294,6 +309,16 @@ function _format_kb_only(text) {
             case 'loading': 
                 _dom_st.innerText = "ĐỒNG BỘ..."; 
                 _dom_st.classList.add('visible', 'pill-gray-style'); 
+                break;
+            case 'online':
+                _dom_st.innerText = "ĐÃ KẾT NỐI..."; 
+                _dom_st.classList.add('visible', 'pill-gray-style');
+                // Giữ thông báo online trong 2.5 giây rồi mới ẩn
+                setTimeout(() => { 
+                    if (_dom_st.innerText === "ĐÃ KẾT NỐI...") {
+                        _dom_st.classList.remove('visible'); 
+                    }
+                }, 2500);
                 break;
             case 'saved': 
                 _dom_sv.innerText = "ĐÃ LƯU"; 
@@ -357,8 +382,9 @@ function _format_kb_only(text) {
 
     function _is_valid_domain(str) {
         if (!str) return false;
-        if (!str.includes('.') || str.startsWith('.') || str.endsWith('.')) return false;
-        return /^[a-z0-9.-]+\.[a-z]{2,}$/i.test(str);
+        let s = str.trim().toLowerCase();
+        if (!s.includes('.') || s.startsWith('.') || s.endsWith('.') || s.startsWith('-') || s.endsWith('-')) return false;
+        return /^[a-z0-9][a-z0-9-]*\.[a-z0-9.-]*[a-z]{2,}$/i.test(s);
     }
 
     function _standardize_content(rawInput) {
@@ -379,47 +405,79 @@ function _format_kb_only(text) {
         let otherRules = new Set();
 
         bodyLines.forEach(line => {
-            let hideMatch = line.match(/^([^#\[\]\s,]+)(##|#|\[|\.)(.*)$/);
-            if (hideMatch && !line.startsWith('@@') && !line.startsWith('/') && !line.startsWith('.') && !line.startsWith('#')) {
+            let hideMatch = line.match(/^([^#\[\]\s,]+)(##|#@?#|#\$#|#\?#)(.*)$/);
+            
+            if (hideMatch) {
                 let rawDomain = hideMatch[1].trim();
-                if (_is_valid_domain(rawDomain)) {
+                let separator = hideMatch[2];
+                let selectorPart = hideMatch[3]?.trim() || "";
+
+                if (_is_valid_domain(rawDomain) && selectorPart !== "") {
                     let domain = _remove_subdomain_prefixes(rawDomain);
-                    let separator = hideMatch[2];
-                    let selectorPart = hideMatch[3];
-                    let fullSelector = (separator === '##' ? '' : separator) + selectorPart;
                     if (!mergedMap.has(domain)) mergedMap.set(domain, new Set());
-                    let selectors = fullSelector.split(/,(?![^\[]*\])/);
+                    
+                    let selectors = selectorPart.split(/,(?![^\[]*\])/);
                     selectors.forEach(s => {
                         let trimmed = s.trim();
-                        if (trimmed) mergedMap.get(domain).add(trimmed);
+                        if (trimmed) mergedMap.get(domain).add(separator + trimmed);
                     });
-                } else { otherRules.add(line); }
-            } else { otherRules.add(line); }
+                } 
+            } else {
+                let trimmedLine = line.trim();
+                if (!trimmedLine.startsWith('||') && !trimmedLine.startsWith('@@') && !trimmedLine.startsWith('/') && !trimmedLine.startsWith('#')) {
+                    if (!_is_valid_domain(trimmedLine)) return; 
+                }
+                if (trimmedLine) otherRules.add(trimmedLine);
+            }
         });
 
         let processedBody = [];
         mergedMap.forEach((selectors, domain) => {
-            processedBody.push(`${domain}##${Array.from(selectors).sort().join(',')}`);
+            if (selectors.size > 0) {
+                let standardHides = [];
+                let specialHides = [];
+                selectors.forEach(s => {
+                    if (s.startsWith('##')) standardHides.push(s.substring(2));
+                    else specialHides.push(s);
+                });
+
+                if (standardHides.length > 0) {
+                    processedBody.push(`${domain}##${standardHides.sort().join(',')}`);
+                }
+                specialHides.forEach(sh => processedBody.push(domain + sh));
+            }
         });
-        otherRules.forEach(rule => { if (rule.trim()) processedBody.push(rule.trim()); });
+        otherRules.forEach(rule => processedBody.push(rule));
 
         const strictSort = (a, b) => a.localeCompare(b);
         let uniqueBody = Array.from(new Set(processedBody)).sort(strictSort);
 
+        const finalBlocked = uniqueBody.length; 
         let blockRules = uniqueBody.filter(l => l.startsWith('||') && !l.startsWith('@@'));
         let whitelistRules = uniqueBody.filter(l => l.startsWith('@@||'));
         let unhideRules = uniqueBody.filter(l => l.includes('#@#'));
 
-        const ruleCount = uniqueBody.filter(line => !line.startsWith('.') && !line.startsWith('##.')).length;
         const currentRulesOnly = uniqueBody.join('\n');
         const isRulesChanged = _last_saved_content.includes(currentRulesOnly) === false; 
         
-        let finalUpdateTime = isRulesChanged ? new Date().toLocaleString('en-GB', { day: '2-digit', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit', hour12: false }).replace(',', '') : oldMeta.u;
+        let finalUpdated = oldMeta.u;
+        if (isRulesChanged) {
+            const now = new Date();
+            finalUpdated = now.toLocaleString('en-GB', { 
+                day: '2-digit', 
+                month: 'short', 
+                year: 'numeric', 
+                hour: '2-digit', 
+                minute: '2-digit', 
+                hour12: false,
+                timeZone: 'Asia/Ho_Chi_Minh'
+            }).replace(',', '');
+        }
 
         let tempBodyOutput = [], lastGroupKey = "", lastDomainBase = "";
         uniqueBody.forEach(line => {
             let currentGroupKey = line.startsWith("@@||") ? "WHITELIST" : (/[a-zA-Z0-9]/.test(line[0]) ? line[0].toUpperCase() : "SPECIAL");
-            let currentDomainBase = line.startsWith("@@||") ? line.substring(4).split(/[\/\^]/)[0] : (line.includes('##') ? line.split('##')[0] : "");
+            let currentDomainBase = line.startsWith("@@||") ? line.substring(4).split(/[\/\^]/)[0] : (line.includes('#') ? line.split('#')[0] : "");
 
             if (lastGroupKey && lastGroupKey !== currentGroupKey) tempBodyOutput.push("");
             else if (lastDomainBase && currentDomainBase && lastDomainBase !== currentDomainBase && currentGroupKey !== "SPECIAL") tempBodyOutput.push("");
@@ -429,17 +487,19 @@ function _format_kb_only(text) {
             lastDomainBase = currentDomainBase;
         });
 
+        const bodyContent = tempBodyOutput.join('\n');
+        const mockHeader = `[Adblock Plus 2.0]\n! Title: STOP ADS\n! Describe: Chặn quảng cáo\n! Updated: ${finalUpdated}\n! Blocked: ${finalBlocked}\n! Size: 00.00 KB\n! ==================`;
+        const finalSize = _format_kb_only(mockHeader + "\n\n" + bodyContent);
+
         const headerArr = [
             "[Adblock Plus 2.0]", 
             "! Title: STOP ADS", 
             "! Describe: Chặn quảng cáo", 
-            `! Updated: ${finalUpdateTime}`,
-            `! Blocked: ${ruleCount}`,
-            "! Size: -- KB",
+            `! Updated: ${finalUpdated}`,
+            `! Blocked: ${finalBlocked}`,
+            `! Size: ${finalSize}`,
             "! =================="
         ];
-        const finalSize = _format_kb_only(headerArr.join('\n') + "\n\n" + tempBodyOutput.join('\n'));
-        headerArr[5] = `! Size: ${finalSize}`;
         
         return { 
             content: [...headerArr, "", ...tempBodyOutput].join('\n'), 
@@ -459,8 +519,19 @@ function _format_kb_only(text) {
         } catch(e) { return null; }
     }
     
-    async function _load() {
-        if (!navigator.onLine) { setBtnState('offline'); return; }
+    async function _load(isReconnect = false) {
+        if (!navigator.onLine) { 
+            setBtnState('offline'); 
+            return; 
+        }
+        
+        // Nếu là kết nối lại, hiển thị "ĐÃ KẾT NỐI..." trước, sau đó mới hiện "ĐỒNG BỘ..."
+        if (isReconnect) {
+            setBtnState('online');
+            // Chờ một chút để người dùng thấy thông báo Đã kết nối trước khi hiện Đồng bộ
+            await new Promise(r => setTimeout(r, 1000));
+        }
+
         setBtnState('loading');
         try {
             const [ads, pref, blk, wht, unh] = await Promise.all([
@@ -499,53 +570,63 @@ function _format_kb_only(text) {
         });
     }
 
-    _dom_ar.addEventListener('input', checkChanges);
-    _dom_prefix.addEventListener('input', checkChanges);
-    
-    _dom_prefix.addEventListener('blur', () => {
-        if (_is_loading) return;
-        const formatted = formatPrefixesSmart(_dom_prefix.value);
-        if (formatted !== _dom_prefix.value) {
-            _dom_prefix.value = formatted;
-            checkChanges();
-        }
-    });
-
-    _dom_sv.addEventListener('click', async () => {
-        if (_dom_sv.disabled || !navigator.onLine) return;
-        setBtnState('saving');
-        try {
-            const fPrefixes = formatPrefixesSmart(_dom_prefix.value);
-            const result = _standardize_content(_dom_ar.value);
-
-            const updateTasks = [
-                _update_file(_app_opt._p_ads, result.content, _v_shas.ads, result.isRulesChanged ? `update filter` : "format rules"),
-                _update_file(_app_opt._p_block, result.subFiles.block, _v_shas.block, "sync block"),
-                _update_file(_app_opt._p_whitelist, result.subFiles.whitelist, _v_shas.whitelist, "sync whitelist"),
-                _update_file(_app_opt._p_unhide, result.subFiles.unhide, _v_shas.unhide, "sync unhide")
-            ];
-
-            if (fPrefixes !== _last_saved_prefixes) {
-                updateTasks.push(_update_file(_app_opt._p_pref, fPrefixes, _v_shas.pref, "update prefixes"));
+    if (_dom_ar) _dom_ar.addEventListener('input', checkChanges);
+    if (_dom_prefix) {
+        _dom_prefix.addEventListener('input', checkChanges);
+        _dom_prefix.addEventListener('blur', () => {
+            if (_is_loading) return;
+            const formatted = formatPrefixesSmart(_dom_prefix.value);
+            if (formatted !== _dom_prefix.value) {
+                _dom_prefix.value = formatted;
+                checkChanges();
             }
+        });
+    }
 
-            await Promise.all(updateTasks);
-            
-            _last_saved_content = result.content;
-            _last_saved_prefixes = fPrefixes;
-            _dom_ar.value = result.content;
-            _dom_prefix.value = fPrefixes;
-            
-            await _load();
-            setBtnState('saved');
-        } catch (e) { 
-            setBtnState('error'); 
-        }
+    if (_dom_sv) {
+        _dom_sv.addEventListener('click', async () => {
+            if (_dom_sv.disabled || !navigator.onLine) return;
+            setBtnState('saving');
+            try {
+                const fPrefixes = formatPrefixesSmart(_dom_prefix.value);
+                const result = _standardize_content(_dom_ar.value);
+
+                const updateTasks = [
+                    _update_file(_app_opt._p_ads, result.content, _v_shas.ads, result.isRulesChanged ? `update filter` : "format rules"),
+                    _update_file(_app_opt._p_block, result.subFiles.block, _v_shas.block, "sync block"),
+                    _update_file(_app_opt._p_whitelist, result.subFiles.whitelist, _v_shas.whitelist, "sync whitelist"),
+                    _update_file(_app_opt._p_unhide, result.subFiles.unhide, _v_shas.unhide, "sync unhide")
+                ];
+
+                if (fPrefixes !== _last_saved_prefixes) {
+                    updateTasks.push(_update_file(_app_opt._p_pref, fPrefixes, _v_shas.pref, "update prefixes"));
+                }
+
+                await Promise.all(updateTasks);
+                
+                _last_saved_content = result.content;
+                _last_saved_prefixes = fPrefixes;
+                _dom_ar.value = result.content;
+                _dom_prefix.value = fPrefixes;
+                
+                await _load();
+                setBtnState('saved');
+            } catch (e) { 
+                setBtnState('error'); 
+            }
+        });
+    }
+
+    // Xử lý sự kiện online/offline mượt mà hơn
+    window.addEventListener('online', () => {
+        _load(true); // Truyền true để kích hoạt trạng thái thông báo online
+    });
+    
+    window.addEventListener('offline', () => {
+        setBtnState('offline');
     });
 
-    window.addEventListener('online', _load);
-    window.addEventListener('offline', () => setBtnState('offline'));
-    window.onload = _load;
+    window.onload = () => _load(false);
 })();
 </script>
 </body>
