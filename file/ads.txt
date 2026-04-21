@@ -1,8 +1,8 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Describe: Chặn quảng cáo
-! Updated: 21 Apr 2026 13:40
-! Blocked: 473
+! Updated: 21 Apr 2026 13:43
+! Blocked: 471
 ! Size: 33.55 KB
 ! ==================
 
@@ -20,7 +20,7 @@ acb.com.vn###download-banner-footer
 
 acbs.com.vn##[class*="-popup"]
 
-accuweather.com###adhesion,#bottom,#connatix,#top,.adhesion-header
+accuweather.com###adhesion,#bottom,#connatix,#top,.ad,.adhesion-header
 
 afamily.vn###admbackground,[id^="adm-"],[id^="admbackground"],[id^="admbackground_"],[id^="banner-"],[id^="close_ad_"],[id^="placement-"],[id^="share-"],[id^="slot-"],[id^="sps_"],[id^="zone-"]
 
@@ -299,7 +299,7 @@ extract.me##.ad,.adsbygoogle,.premium-entry-button,.remove-ads
 fandom.com##.top-ads-container,[class^="ad-"]
 
 faztaa.com##.btn-puzzle
-Fg
+
 fhsc.com.vn###smart-banner
 
 finance.vietstock.vn##[class*="ats-overplay-"],[class^="bannerhtml"],[id^="googleAds_"]
@@ -419,7 +419,7 @@ kinhtedouong.vn##.item-adv,[id^="adv"]
 kinhtenongthon.vn###firt,.active,.item,[class^="owl-"],[id^="col_"],[id^="owl-"]
 
 kinhtevadubao.vn##.__ads_click,[class^="banner-"]
-Kmo
+
 kqxs.vn##.adsbygoogle,[class^="ads-"]
 
 laichau.edu.vn###module24,#module27,#module30,#module32,#module33,#module35,#module36,#module37,#module38,#module39,#module40,#module41,#module42,#module43,#module45,#module46,#module47,#module48,#module49,#module50,#module52,#module53,#module58,#module59
