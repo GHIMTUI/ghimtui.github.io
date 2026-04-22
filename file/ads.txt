@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Describe: Chặn quảng cáo
-! Updated: 21 Apr 2026 13:43
-! Blocked: 471
-! Size: 33.55 KB
+! Updated: 22 Apr 2026 22:17
+! Blocked: 481
+! Size: 34.22 KB
 ! ==================
 
 1thegioi.vn##[class^="c-banner-"],[id^="zone-"]
@@ -11,6 +11,8 @@
 24h.com.vn##[id^="ADS_"],[id^="div_inpage_"]
 
 24hmoney.vn##.open-app-header
+
+24timezones.com##.adsbygoogle,.sidebar,[id^="div-gpt-ad"],[id^="google_ads_iframe"]
 
 2sao.vn###catfish,.adsbyvli,.vmc_ads_viewport,[id*="adzone"],[id^="Mobile_"],[id^="adzone"],[id^="container-"],[id^="pw_"],[id^="sp-wrapper-"],[id^="yomedia-"]
 
@@ -198,6 +200,8 @@ cimbbank.com.vn##.btn
 
 click49.vn##.adsbygoogle,[class^="td-g-rec-id-content_"]
 
+clock.zone##.adsbygoogle,[id^="AdThrive_"],[id^="cls-"],[id^="google_ads_iframe"]
+
 cokhivietnam.vn##[class^="banner_"],[class^="box-banner-"]
 
 congdongketoan.vn##.col-sm-12
@@ -292,6 +296,8 @@ edu.vn##.donor
 
 elle.vn##[class^="banner-"],[id^="div-gpt-ad-"]
 
+epochconverter.com##.adsbygoogle,[class^="ad_"],[class^="bnr_"],[id^="google_ads_iframe"]
+
 eva.vn##[class^="banr"],[class^="banr-"],[id^="ADS_"],[id^="spanTextAds_"]
 
 extract.me##.ad,.adsbygoogle,.premium-entry-button,.remove-ads
@@ -374,7 +380,7 @@ hsbc.com.vn##[id*="banner"]
 
 hssk.tapchicongsan.org.vn##.c-banner-row
 
-hue.gov.vn##.DanhChoDN,.list_QuangCao,.view_list_QuangCao,[id^="dnn_ctr14676_"],[id^="dnn_ctr1673_"],[id^="dnn_ctr2760_"]
+hue.gov.vn###ctl35_divLk,#ctl51_divLk,.Cell12_6,.DanhChoDN,.list_QuangCao,.view_list_QuangCao,[class^="adv-"],[id^="dnn_ctr14676_"],[id^="dnn_ctr1673_"],[id^="dnn_ctr2760_"],[id^="wd-banner-"]
 
 huengaynay.vn##[class*="advrtise"]
 
@@ -512,6 +518,8 @@ nbtv.vn##.box_banner,[class^="app_"],[class^="banner_"],[class^="img-"],[class^=
 
 ncb-bank.vn##.img-popup,.ovl
 
+newocean.edu.vn##.wp-image-47384
+
 news.nganluong.vn###sticky
 
 nghean.gov.vn##.AdvertContent,.col3,[class^="MultiFunction"]
@@ -562,6 +570,8 @@ online-audio-converter.com##.remove-ads
 
 online-voice-recorder.com##.remove-ads
 
+onlinealarmkur.com##.adsbygoogle,[id^="adngin-"],[id^="google_ads_iframe"]
+
 onsports.vn##[class^="aanetwork-"]
 
 oto.com.vn##.box-bn-home,[class^="banner-"],[class^="cpn-"],[id^="cpn-"]
@@ -599,6 +609,8 @@ plo.vn###catfish,.fanpage,.fp,.top-banner,[id^="Mobile_"],[id^="Web_"],[id^="ads
 pvcombank.com.vn##.responsive-wrapper
 
 qdnd.vn##[class*="banner"]
+
+qpvn.vn##.d-sm-none
 
 quangngai.edu.vn##.body-topads
 
@@ -774,6 +786,12 @@ tiin.vn###admFullTop,#advBallon,#advHomeTop,#ban-top-site,#top-logo,[id^="admLog
 
 tikop.vn##[class^="footer-ads"]
 
+time.is###recover,.adsbygoogle,[class^="cnx-"],[id^="fs-"],[id^="google_ads_iframe"]
+
+time.now##.adsbygoogle,[id^="asc-"],[id^="google_ads_iframe"]
+
+timeanddate.com##.adsbygoogle,[id^="ad"],[id^="ad-"]
+
 tin.skydoor.net##[id^="M"]
 
 tinhte.vn###admFullTop,#admbackground,#ban-top-site,#logo_adm,.pro-container,.top-logo,[id^="adm-"],[id^="admbackground_"],[id^="zone-"]
@@ -817,6 +835,8 @@ tvbox.one###google_vignette,.adsbygoogle,.entry-img-300,.homeadv
 unbox.ph##.elementor-column-gap-default,[class*="wp-image-"]
 
 upanh.1doi1.com##.adsbygoogle,.resizeimg>center
+
+utctime.net##.margin10
 
 vanhienplus.vn##.#scrollfix,[class^="image-"],[class^="imqc-"],[id^="secondary-"]
 
