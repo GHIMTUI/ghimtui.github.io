@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Describe: Chặn quảng cáo
-! Updated: 22 Apr 2026 22:17
-! Blocked: 481
-! Size: 34.22 KB
+! Updated: 24 Apr 2026 08:34
+! Blocked: 493
+! Size: 34.71 KB
 ! ==================
 
 1thegioi.vn##[class^="c-banner-"],[id^="zone-"]
@@ -27,6 +27,8 @@ accuweather.com###adhesion,#bottom,#connatix,#top,.ad,.adhesion-header
 afamily.vn###admbackground,[id^="adm-"],[id^="admbackground"],[id^="admbackground_"],[id^="banner-"],[id^="close_ad_"],[id^="placement-"],[id^="share-"],[id^="slot-"],[id^="sps_"],[id^="zone-"]
 
 agribank.com.vn###agbModal,.modal-backdrop
+
+ai-hay.vn##.fixed
 
 amlich.vn##[class^="aanetwork-"]
 
@@ -202,6 +204,8 @@ click49.vn##.adsbygoogle,[class^="td-g-rec-id-content_"]
 
 clock.zone##.adsbygoogle,[id^="AdThrive_"],[id^="cls-"],[id^="google_ads_iframe"]
 
+coccoc.com##.top-14
+
 cokhivietnam.vn##[class^="banner_"],[class^="box-banner-"]
 
 congdongketoan.vn##.col-sm-12
@@ -318,7 +322,7 @@ fptplay.vn##.flex-row
 
 g-pay.vn###myCarousel
 
-gearvn.com##[class^="banner-"],[class^="index-banner-"],[class^="index-slider-"],[class^="modal-"],[id^="popup-"]
+gearvn.com###slidernew-banner-collection,[class^="banner-"],[class^="index-banner-"],[class^="index-slider-"],[class^="modal-"],[id^="popup-"]
 
 genk.vn###admFullTop,#admbackground,#ban-top-site,#logo_adm,#top-logo,.ads,[class^="khw-ads-"],[id^="adm-"],[id^="admbackground_"],[id^="zone-"]
 
@@ -371,6 +375,8 @@ hoanhap.vn##.section-1
 hocbaso.quangninh.edu.vn###module15,.banner-header
 
 hochiminhcity.gov.vn###carouselExampleIndicators,[class^="banner-"]
+
+hocmai.vn##.modal-backdrop,[id^="popup-setting"]
 
 homecredit.vn##.text-primary-foreground
 
@@ -451,6 +457,8 @@ laocai.gov.vn##[class^="MultiFunction"]
 laodong.vn###admbackground,#main-footer-fix-bottom,.adsbygoogle,.item,.msg,[class^="lst-advs"],[class^="m-"],[class^="msg-"],[class^="nl-"],[class^="notification-"],[class^="sp-"],[id^="admbackground-"],[id^="notification-"],[id^="sp-"],[id^="sp_"]
 
 laodongdoanthe.vn##.banner,[class^="mb"]
+
+lazada.vn###J_Banner,[class^="smart-banner-"]
 
 ld-eshop.misa.vn###i9c0ei
 
@@ -574,6 +582,8 @@ onlinealarmkur.com##.adsbygoogle,[id^="adngin-"],[id^="google_ads_iframe"]
 
 onsports.vn##[class^="aanetwork-"]
 
+opera.com##[class^="download-"],[id^="download-"]
+
 oto.com.vn##.box-bn-home,[class^="banner-"],[class^="cpn-"],[id^="cpn-"]
 
 otosaigon.com###top-mobile-ads,[class^="ads-"],[id^="banner-"],[id^="div-gpt-ad-"]
@@ -643,6 +653,8 @@ sapo.vn##[class^="banner-"]
 sbv.gov.vn##[class*="-banner"]
 
 sc.com##.smartbanner,[class^="smartbanner-"]
+
+sctv.com.vn##.banner
 
 sdttg.hochiminhcity.gov.vn##[class^="journal-"],[class^="wrapPartners-"]
 
@@ -796,6 +808,8 @@ tin.skydoor.net##[id^="M"]
 
 tinhte.vn###admFullTop,#admbackground,#ban-top-site,#logo_adm,.pro-container,.top-logo,[id^="adm-"],[id^="admbackground_"],[id^="zone-"]
 
+tinhthanhvn.com##.google-top-ads,.top-ads
+
 tintuconline.com.vn##.adsbygoogle,.vadslogo,[class^="vads-"],[class^="vmc_"],[id^="adzone"],[id^="mashead-"],[id^="sp-"]
 
 tintucvietnam.vn##.e,[class^="ads_"],[class^="banner-"],[id^="zone-"]
@@ -806,7 +820,11 @@ tmo.taimienphi.vn##.adsbygoogle
 
 topi.vn##.bottom-0,.el-dialog,.v-modal,[class^="el-dialog__"]
 
+tplab.vn##[class^="banner-"]
+
 traphatnguoi.net##[class^="app-"],[id^="appDialog"]
+
+tripi.vn##img[alt="image blog"]
 
 truyenhinhnghean.vn##.active,[class^="carousel"]
 
@@ -861,6 +879,8 @@ vib.com.vn##.new-download-app
 viblo.asia##.el-dialog,.el-dialog__body,.el-dialog__wrapper,.el-notification,.v-modal
 
 video-converter.com##.ad,.adsbygoogle,.premium-entry-button,.remove-ads
+
+vieclam24h.vn##[id^="headlessui-dialog-overlay-"]
 
 viendongonline.com##[class*="-ads-"]
 
@@ -948,9 +968,13 @@ xehay.vn###link-,.flash,[class^="ads-"]
 
 xemtivi4k.com##a[href="https://record.brave888.com/_CXLXKr7jtXINaHdFA_j09GNd7ZgqdRLk/23283/"]
 
+xemtivitop.com###HTML8,#facebook-comment
+
 xemtv.net###bottom650,.ads-mb,.line,div[data-widget-id="1771082"],div[data-widget-id="1845723"],div[data-widget-id="1886588"],marquee[direction="left"]
 
 xemtv.us###med_rec_banner2,.ads-mb,.d-block,.float-ck,.sticky_bottom,div[data-widget-id="1433589"]
+
+xemtvonline.com##.bottom650,[class^="ads-"],marquee[direction="left"]
 
 xoso.com.vn###bottomMobileAdvs,.ads,.adsbygoogle,.advfixfooterClose,.google-ads
 
