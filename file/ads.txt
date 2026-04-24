@@ -1,22 +1,11 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Describe: Chặn quảng cáo
-! Updated: 24 Apr 2026 08:38
-! Blocked: 492
-! Size: 34.67 KB
+! Updated: 24 Apr 2026 14:42
+! Blocked: 494
+! Size: 35.01 KB
 ! ==================
-baomoi.com##[class^="slick-"]
-baomoi.com###slide-footer
 
-www.news.com.au##.news-tops_group-rhc
-www.news.com.au###fixed-ad, [id^="ad-"], [class^="storybook-"], [class^="sticky-"]
-www.aljazeera.com##.ads
-www.aljazeera.com##.container--ads-leaderboard-atf
-bongdaplus.vn##[class^="uni-"]
-bongdaplus.vn##[id^="sp-"]
-bongdaplus.vn##[id^="adbro-"],[class^="adbro-"]
-bongdaplus.vn###inpage1>div
-bongdaplus.vn###inpage1, [id^="gmvideo"], [id^="zone-"], [id^="admbackground_"], [class^="gliaplayer-"], [class^="InstreamDom_"]
 1thegioi.vn##[class^="c-banner-"],[id^="zone-"]
 
 24h.com.vn##[id^="ADS_"],[id^="div_inpage_"]
@@ -40,6 +29,8 @@ afamily.vn###admbackground,[id^="adm-"],[id^="admbackground"],[id^="admbackgroun
 agribank.com.vn###agbModal,.modal-backdrop
 
 ai-hay.vn##.fixed
+
+aljazeera.com##.ads,.container--ads-leaderboard-atf
 
 amlich.vn##[class^="aanetwork-"]
 
@@ -115,7 +106,7 @@ baolangson.vn##.col-md-6,.mb-2,[class^="ads-"],[class^="zonegroup-"]
 
 baolaocai.vn##.topics,[class^="ad-"],[class^="sda_"],[id^="sdaMobile_"]
 
-baomoi.com###slide-footer,#slide-footer>div,.ad-wrapper,.ic-close,.is-show,.list>div,.slick-list,.slick-slide,.slick-slide>div,.slick-track,[id^="BaoMoi_"],[id^="Ori-zone-"],[id^="OriIfrWrapper_"]
+baomoi.com###slide-footer,#slide-footer>div,.ad-wrapper,.ic-close,.is-show,.list>div,.slick-list,.slick-slide,.slick-slide>div,.slick-track,[class^="slick-"],[id^="BaoMoi_"],[id^="Ori-zone-"],[id^="OriIfrWrapper_"]
 
 baonghean.vn##[class^="ads_"],[class^="c-banner-"],[id^="zone-"]
 
@@ -167,7 +158,7 @@ bom.so##.ad,.ads,.adsbygoogle
 
 bongda24h.vn###bottomAdvs,.ads-center,.adscontent
 
-bongdaplus.vn###ADMTOP,[class^="tip-"],[class^="tips-"]
+bongdaplus.vn###ADMTOP,#inpage1,#inpage1>div,[class^="InstreamDom_"],[class^="adbro-"],[class^="gliaplayer-"],[class^="tip-"],[class^="tips-"],[class^="uni-"],[id^="adbro-"],[id^="admbackground_"],[id^="gmvideo"],[id^="sp-"],[id^="zone-"]
 
 btmc.vn##[class*="banner"]
 
@@ -536,6 +527,8 @@ nbtv.vn##.box_banner,[class^="app_"],[class^="banner_"],[class^="img-"],[class^=
 ncb-bank.vn##.img-popup,.ovl
 
 newocean.edu.vn##.wp-image-47384
+
+news.com.au###fixed-ad,.news-tops_group-rhc,[class^="sticky-"],[class^="storybook-"],[id^="ad-"]
 
 news.nganluong.vn###sticky
 
