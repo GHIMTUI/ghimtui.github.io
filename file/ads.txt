@@ -5,7 +5,18 @@
 ! Blocked: 492
 ! Size: 34.67 KB
 ! ==================
+baomoi.com##[class^="slick-"]
+baomoi.com###slide-footer
 
+www.news.com.au##.news-tops_group-rhc
+www.news.com.au###fixed-ad, [id^="ad-"], [class^="storybook-"], [class^="sticky-"]
+www.aljazeera.com##.ads
+www.aljazeera.com##.container--ads-leaderboard-atf
+bongdaplus.vn##[class^="uni-"]
+bongdaplus.vn##[id^="sp-"]
+bongdaplus.vn##[id^="adbro-"],[class^="adbro-"]
+bongdaplus.vn###inpage1>div
+bongdaplus.vn###inpage1, [id^="gmvideo"], [id^="zone-"], [id^="admbackground_"], [class^="gliaplayer-"], [class^="InstreamDom_"]
 1thegioi.vn##[class^="c-banner-"],[id^="zone-"]
 
 24h.com.vn##[id^="ADS_"],[id^="div_inpage_"]
