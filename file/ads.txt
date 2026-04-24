@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Describe: Chặn quảng cáo
-! Updated: 24 Apr 2026 08:34
-! Blocked: 493
-! Size: 34.71 KB
+! Updated: 24 Apr 2026 08:38
+! Blocked: 492
+! Size: 34.67 KB
 ! ==================
 
 1thegioi.vn##[class^="c-banner-"],[id^="zone-"]
@@ -467,8 +467,6 @@ lecourrier.vn##[id^="adv_"]
 lichcupdien.org##[id*="bn2-wrapper"],[id*="sp-wrapper"],[id*="tt-wrapper"]
 
 lichcupdien.vn##[id^="pvoucher"]
-
-lichngaytot.com##.adsbygoogle,[class^="advbox"]
 
 lichvannien365.com##.adsbygoogle
 
