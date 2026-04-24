@@ -1,10 +1,9 @@
 [Adblock Plus 2.0]
-! Title: STOP ADS
-! Updated: 24 Apr 2026 15:38
-! Blocked: 496
-! Size: 34.46 KB
+! Updated: 08:41:16 24/4/2026
+! Blocked: 497
 ! ==================
 
+||b.cm
 1thegioi.vn##[class^="c-banner-"],[id^="zone-"]
 24h.com.vn##[id^="ADS_"],[id^="div_inpage_"]
 24hmoney.vn##.open-app-header
