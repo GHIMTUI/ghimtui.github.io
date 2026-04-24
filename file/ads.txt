@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Describe: Chặn quảng cáo
-! Updated: 24 Apr 2026 14:42
-! Blocked: 494
-! Size: 35.01 KB
+! Updated: 24 Apr 2026 15:10
+! Blocked: 496
+! Size: 35.09 KB
 ! ==================
 
 1thegioi.vn##[class^="c-banner-"],[id^="zone-"]
@@ -55,6 +55,8 @@ apkpure.net###google_vignette,.ad,.adsbygoogle,.js-ad-slot,[class*="-banner-"],[
 appbrain.com###topAd,.adsbygoogle
 
 audio-joiner.com##.ad,.premium-entry-button,.remove-ads
+
+auto5.vn##.adv,.bg_gray,.e,[id^="div-gpt-ad-"]
 
 autopro.com.vn##.lightbox-content,.link-callout,.noCaption,.noCaption>div,[class^="ads-"],[id^="adm_"],[id^="admsection"],[id^="zone-"]
 
@@ -965,6 +967,8 @@ websosanh.vn##.adsbygoogle,.border-x-0,[class^="dta-"],[class^="mobile-"],[id^="
 woori.com.vn##[class^="banner-"]
 
 xahoi.com.vn##[class^="ads-"]
+
+xedoisong.vn##.ads,[class^="ads-"]
 
 xehay.vn###link-,.flash,[class^="ads-"]
 
