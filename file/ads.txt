@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Describe: Chặn quảng cáo
-! Updated: 24 Apr 2026 15:43
+! Updated: 25 Apr 2026 09:36
 ! Blocked: 496
-! Size: 35.09 KB
+! Size: 35.11 KB
 ! ==================
 
 1thegioi.vn##[class^="c-banner-"],[id^="zone-"]
@@ -110,7 +110,7 @@ baolaocai.vn##.topics,[class^="ad-"],[class^="sda_"],[id^="sdaMobile_"]
 
 baomoi.com###slide-footer,#slide-footer>div,.ad-wrapper,.ic-close,.is-show,.list>div,.slick-list,.slick-slide,.slick-slide>div,.slick-track,[class^="slick-"],[id^="BaoMoi_"],[id^="Ori-zone-"],[id^="OriIfrWrapper_"]
 
-baonghean.vn##[class^="ads_"],[class^="c-banner-"],[id^="zone-"]
+baonghean.vn##[class^="aanetwork-"],[class^="ads_"],[class^="c-banner-"],[id^="zone-"]
 
 baoninhbinh.org.vn##.m-4
 
