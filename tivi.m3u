@@ -3,6 +3,9 @@
 #FPTPlay/7.27.4 (Linux; U; Android 12; BRAVIA 4K VH2 Build/PKG6.8160; Cronet/141.7340.3.1)
 #Mozilla/5.0 (Linux; Android 12; BRAVIA 4K VH2 Build/PKG6.8160) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36 Edg/144.0.0.0
 #Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36 Edg/144.0.0.0
+#iPlayTV/3.3.10 (Apple TV; iOS 16.1; Scale/2.00)
+#Wattpad/9.68.0.2 CFNetwork/1331.0.7 Darwin/21.4.0
+#VIZIO VHD32M-0807 ViziOS/1.6.970.1 WatchFree/25.04.14 FancyPlayer/1.9.22
 
 #EXTINF:-1 tvg-id="angiang1" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/angiang1.png", An Giang 1 
 http://live.fptplay53.net/epzsd1/angiang01_hls.smil/chunklist_b2500000.m3u8
