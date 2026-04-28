@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Describe: Chặn quảng cáo
-! Updated: 25 Apr 2026 09:36
-! Blocked: 496
-! Size: 35.11 KB
+! Updated: 28 Apr 2026 08:14
+! Blocked: 499
+! Size: 35.36 KB
 ! ==================
 
 1thegioi.vn##[class^="c-banner-"],[id^="zone-"]
@@ -498,6 +498,8 @@ mbv.com.vn##.bg-primary
 
 mekongasean.vn##.header-content,[class^="banner-"]
 
+memeosupdates.com##.adsbygoogle,[class*="-ad"]
+
 minhchinh.com##.adsbygoogle,.hidemin480,.modules_top>div,[class^="adv"],[id^="adv"]
 
 minhngoc.net.vn##[id^="adv"]
@@ -620,6 +622,8 @@ phuthotv.vn##[class^="c3s-"],[id^="slide-"]
 
 plo.vn###catfish,.fanpage,.fp,.top-banner,[id^="Mobile_"],[id^="Web_"],[id^="adsMobile_"],[id^="adsWeb_"],[id^="ads_"],[id^="bn-"],[id^="bn-zone-"],[id^="yomedia-"]
 
+pngegg.com##.list_ads,[class^="staticpubads"],[id^="oa-"]
+
 pvcombank.com.vn##.responsive-wrapper
 
 qdnd.vn##[class*="banner"]
@@ -628,7 +632,7 @@ qpvn.vn##.d-sm-none
 
 quangngai.edu.vn##.body-topads
 
-quangngai.gov.vn###module15,#module17,#module31,#module32,#module34,#module35,#module36,#module38,#module49,#module72,.img-item,.links-item
+quangngai.gov.vn###module11,#module15,#module16,#module17,#module18,#module31,#module32,#module33,#module34,#module35,#module36,#module37,#module38,#module39,#module49,#module50,#module72,#module73,.img-item,.links-item
 
 quangngaitv.vn##.ads-block-item
 
@@ -931,6 +935,8 @@ vinid.net##[class^="VinID-modal-"],[class^="modal-"],[class^="vinid-modal-"],[id
 vip.keeng.vn##.app_nhac_keeng,.app_nhac_keeng>span
 
 vjst.vn##[class^="c-banner-"]
+
+vn-z.vn##.notices,a[href="https://vn-z.vn/account/upgrades"]
 
 vnbusiness.vn##[class*="ad-"]
 
