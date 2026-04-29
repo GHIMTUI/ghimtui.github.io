@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Describe: Chặn quảng cáo
-! Updated: 28 Apr 2026 08:14
-! Blocked: 499
-! Size: 35.36 KB
+! Updated: 29 Apr 2026 21:50
+! Blocked: 501
+! Size: 35.51 KB
 ! ==================
 
 1thegioi.vn##[class^="c-banner-"],[id^="zone-"]
@@ -806,6 +806,8 @@ tiin.vn###admFullTop,#advBallon,#advHomeTop,#ban-top-site,#top-logo,[id^="admLog
 
 tikop.vn##[class^="footer-ads"]
 
+tima.vn##.boxCamoto,.boxLeftLayout-icon
+
 time.is###recover,.adsbygoogle,[class^="cnx-"],[id^="fs-"],[id^="google_ads_iframe"]
 
 time.now##.adsbygoogle,[id^="asc-"],[id^="google_ads_iframe"]
@@ -829,6 +831,8 @@ tmo.taimienphi.vn##.adsbygoogle
 topi.vn##.bottom-0,.el-dialog,.v-modal,[class^="el-dialog__"]
 
 tplab.vn##[class^="banner-"]
+
+tradingkey.com##[class^="appInstallLeft-"],[class^="signUp-"],[id^="app-"]
 
 traphatnguoi.net##[class^="app-"],[id^="appDialog"]
 
@@ -982,7 +986,7 @@ xemtivi4k.com##a[href="https://record.brave888.com/_CXLXKr7jtXINaHdFA_j09GNd7Zgq
 
 xemtivitop.com###HTML8,#facebook-comment
 
-xemtv.net###bottom650,.ads-mb,.line,div[data-widget-id="1771082"],div[data-widget-id="1845723"],div[data-widget-id="1886588"],marquee[direction="left"]
+xemtv.net###bottom650,#pc-catfish,.ads-mb,.line,.panel-primary,[class^="ads_"],div[data-widget-id="1771082"],div[data-widget-id="1845723"],div[data-widget-id="1886588"],marquee[direction="left"]
 
 xemtv.us###med_rec_banner2,.ads-mb,.d-block,.float-ck,.sticky_bottom,div[data-widget-id="1433589"]
 
