@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Describe: Chặn quảng cáo
-! Updated: 29 Apr 2026 21:50
-! Blocked: 501
-! Size: 35.51 KB
+! Updated: 02 May 2026 07:57
+! Blocked: 506
+! Size: 35.74 KB
 ! ==================
 
 1thegioi.vn##[class^="c-banner-"],[id^="zone-"]
@@ -168,7 +168,7 @@ buonmathuot.daklak.gov.vn##a[href="/danh-sach-phat-ngon-7.html"],a[href="/hoi-da
 
 cafebiz.vn###admFullTop,#admbackground,#ban-top-site,#logo_adm,.top-logo,[id^="adm-"],[id^="admbackground_"],[id^="zone-"]
 
-cafef.vn###admFullTop,#admbackground,#ban-top-site,#logo_adm,.top-logo,[id^="adm-"],[id^="admbackground_"],[id^="zone-"]
+cafef.vn###admFullTop,#admbackground,#ban-top-site,#logo_adm,.center,.top-logo,[id^="adm-"],[id^="admbackground_"],[id^="zone-"]
 
 cafeland.vn##.topFullBannerMobileSize
 
@@ -299,6 +299,8 @@ dreamlogos.fandom.com##[class^="top_"],[id^="top_"]
 drt.vn##.col-sm-3,[class^="ads-"],[id^="ads-"]
 
 dulieu.nguoiquansat.vn##.nguoiquansat-mb-topbanner,.w-100
+
+ebank.tpb.vn##.btn-right,.sh-left,.sh-left>div,.suggest-header
 
 edu.vn##.donor
 
@@ -472,6 +474,8 @@ lichcupdien.org##[id*="bn2-wrapper"],[id*="sp-wrapper"],[id*="tt-wrapper"]
 
 lichcupdien.vn##[id^="pvoucher"]
 
+lichngaytot.com##.advbox
+
 lichvannien365.com##.adsbygoogle
 
 lichviet.app###smart-app-banner,[class*="banner"],[class*="swiper"]
@@ -523,6 +527,8 @@ msn.com##[class^="banner-"],[class^="consumption-"]
 mthi.tuyensinh247.com##.adsbygoogle,.btn_small_fix_container,[class*="countdown"],[id*="countdown"]
 
 muvi.vn###advHeaderMb,.adsbygoogle
+
+mytv.com.vn##.primary-btn
 
 namabank.com.vn##.mobile-popup
 
@@ -772,6 +778,8 @@ thdt.vn##.blockBanner,.hover,[class^="Partner_"]
 
 thegioididong.com##.header-top-bar,.remind_location,[class*="-banner"],[class^="banner-"],[class^="media-"]
 
+thelinhstore.com##.close,.d-sm-none,.position-absolute
+
 thesaigontimes.vn##.tdi_129,.tdi_129>style
 
 thethao247.vn###sp-wrapper-hovering-format,.adsbygoogle,.as,.main-content>section,[class^="nl-"],[class^="sp-"]
@@ -965,6 +973,8 @@ vtc.edu.vn##.alignnone,[class^="pum-"]
 vtcnews.vn###appLink,.adsbygoogle,.inpage-ad,.top-ad,.txtlogo,[class^="aanetwork-"],[class^="adbro-"],[class^="admLogoAd"],[class^="ads-"],[class^="baner-"],[class^="inpage-ad-"],[class^="sponsored-"],[id^="adbro-"],[id^="adnzone_"],[id^="banner-"],[id^="placement-"],[id^="share-"],[id^="slot-"],[id^="ssppagebid_"],[id^="zone-"]
 
 vtcpay.vn##[class^="alsli_ud_"],[class^="sli_ud_"]
+
+vtv.gov.vn##img[src="/assets/banner_cp.jpg"]
 
 vtv.vn##[id^="banner-"],[id^="lozad-"],[id^="placement-"],[id^="share-"],[id^="slot-"],[id^="zone-"]
 
