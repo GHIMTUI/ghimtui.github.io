@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Describe: Chặn quảng cáo
-! Updated: 02 May 2026 08:20
-! Blocked: 496
-! Size: 35.19 KB
+! Updated: 02 May 2026 10:33
+! Blocked: 504
+! Size: 35.70 KB
 ! ==================
 
 1thegioi.vn##[class^="c-banner-"],[id^="zone-"]
@@ -52,6 +52,8 @@ apkpure.com##.ad,.adsbygoogle,.aegon,.js-ad-slot,.right,[class^="aegon-"]
 
 apkpure.net###google_vignette,.ad,.adsbygoogle,.js-ad-slot,[class*="-banner-"],[class^="banner-"]
 
+apnews.com##.FreeStar,.fs-feed-ad,[class*="-leaderboardAd"],[class^="LeaderBoardAd-"],[class^="apnews_home_"],[id^="nativo-hp-"],[id^="ntv"]
+
 appbrain.com###topAd,.adsbygoogle
 
 audio-joiner.com##.ad,.premium-entry-button,.remove-ads
@@ -61,6 +63,10 @@ auto5.vn##.adv,.bg_gray,.e,[id^="div-gpt-ad-"]
 autopro.com.vn##.lightbox-content,.link-callout,.noCaption,.noCaption>div,[class^="ads-"],[id^="adm_"],[id^="admsection"],[id^="zone-"]
 
 az24.vn##div[data-type="_mgwidget"]
+
+bab.la##[class^="info-"],[id^="ad_"]
+
+babla.vn##[class^="info-"],[id^="ad_"]
 
 bacninh.edu.vn###module21,#module26,#module27,#module28,#module29,#module71,.col-sm-4,.image-list-album
 
@@ -344,6 +350,8 @@ gocmod.com##.textwidget,[id^="gm-"],[id^="gocmod-"]
 
 gpbank.com.vn##[id^="advert-"]
 
+gsmarena.com##.d-flex,.deals,[class*="adv"],[id^="div-gpt-ad-"]
+
 haiphong.edu.vn##.quangcaogiua
 
 haiphong.gov.vn##.AdvertContent
@@ -484,6 +492,8 @@ masothue.com##[class^="mst_"]
 
 maytinhdaiviet.com###dv-mobile-bottom-ad
 
+mazii.net##.btn-open,[class*="-ad"],[class^="app-open-"],[class^="box-ads-"]
+
 mbv.com.vn##.bg-primary
 
 mekongasean.vn##.header-content,[class^="banner-"]
@@ -517,6 +527,8 @@ muvi.vn###advHeaderMb,.adsbygoogle
 mytv.com.vn##.primary-btn
 
 namabank.com.vn##.mobile-popup
+
+nanoreview.net##.adsbyvli,[class^="rtx_3_"]
 
 nbtv.vn##.box_banner,[class^="app_"],[class^="banner_"],[class^="img-"],[class^="item-"],[class^="qrcode_"],[id^="app_"],[id^="banner-"]
 
@@ -598,6 +610,8 @@ phatnguoi.com###adBottom,.adsbygoogle,.align-items-center,[class^="ad_"],[class^
 
 phatnguoixe.com##div[style="text-align: center;"]
 
+phonesdata.com##[class^="ad"],[id^="ad"],[id^="ezoic-pub-ad-placeholder-"]
+
 phongvu.vn##[class^="pv-"],[id^="pv-"]
 
 phunuonline.com.vn##.bz,.margintop10,[class^="bannerdhd"],[class^="revive-"],[id^="home_"]
@@ -647,6 +661,8 @@ quocphongthudo.vn###module20,#module35,#module38,#module39,#module40
 quydautuphattrien.hanoi.gov.vn##.commonBanner
 
 reatimes.vn##[class^="adv-"],[class^="owl-"]
+
+rung.vn##.adsbygoogle,.bg-gray-200
 
 sapo.vn##[class^="banner-"]
 
