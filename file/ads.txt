@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Describe: Chặn quảng cáo
-! Updated: 02 May 2026 10:33
-! Blocked: 504
-! Size: 35.70 KB
+! Updated: 04 May 2026 01:33
+! Blocked: 506
+! Size: 35.96 KB
 ! ==================
 
 1thegioi.vn##[class^="c-banner-"],[id^="zone-"]
@@ -266,7 +266,7 @@ dep.com.vn##.notrack,.pb,[class^="ad-"],[id^="advads-"]
 
 dienbien.gov.vn##.TD-quangcao,.img-quangcao-ngang,.tandan-div-module-links-img,img[src="/portal/images/khamchuabenh.gif"]
 
-dienbientv.vn##.ad_right
+dienbientv.vn##.ad_right,[class^="ads-"]
 
 diendandoanhnghiep.vn##[class^="ads_"],[class^="c-banner-"],[id^="zone-"]
 
@@ -678,6 +678,8 @@ shinhan.com.vn##.responsive-wrapper
 
 shopeepay.vn##[class^="StickyBar__"]
 
+siamphone.com###adsAllzone,#wrap-adsense,#wrapper-left-banner,#wrapper-video-hybrid,.adsbygoogle,.lazy,[class^="InstreamDom_"],[class^="SP_responsive_"],[class^="adszone-"],[class^="styles-module_container_"]
+
 simplize.vn##.css-1ke0mll
 
 sinhthainongnghiep.net.vn##.promotions,.visible,[class^="qc_"]
@@ -913,6 +915,8 @@ vietnamarchi.vn##.box-doi-tac,.box-doi-tac>div,[class^="list-"],div[style="text-
 vietnambiz.vn###ban-image,#top-logo,.vnbiz-topbanner,[id^="adm_"],[id^="admbackground"],[id^="zone-"]
 
 vietnammedia.vnanet.vn##.slider,[class^="banner"]
+
+vietnammoi.vn##.vnmoi-topbanner,.w1000
 
 vietnamnet.vn###Mobile_AdsArticleBodyInArticle,#catfish,[class*="ads-"],[id^="admbackground"],[id^="adzone"],[id^="mashead-"]
 
