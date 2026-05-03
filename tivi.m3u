@@ -163,8 +163,7 @@ http://live.fptplay53.net/fnxsd1/laichau_hls.smil/chunklist_b2500000.m3u8
 http://stream.langsontv.vn/live/285c78da0c246524c90917842f8de03bd21/chunklist.m3u8
 
 #EXTINF:-1 tvg-id="laocai" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/laocai.png", Lào Cai 
-#http://live.fptplay53.net/fnxsd1/laocai_hls.smil/chunklist_b2500000.m3u8
-http://live.baolaocai.vn/channel2/stream.m3u8
+http://live.fptplay53.net/fnxsd1/laocai_hls.smil/chunklist_b2500000.m3u8
 
 #EXTINF:-1 tvg-id="nghean" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/nghean.png", Nghệ An 
 http://live.mediatech.vn/live/2859591eef2e92249b682db021f4247c364/chunklist.m3u8
@@ -182,10 +181,12 @@ http://live.mediatech.vn/live/285aaa79b4b265a457d81bb72bc32e2c114/playlist.m3u8
 http://vtvgolive-ott3.vtvdigital.vn/live/bentretv/chunklist_2.m3u8
 
 #EXTINF:-1 tvg-id="quangninh1" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/quangninh1.png", Quảng Ninh 1 
-http://live.fptplay53.net/fnxsd1/quangninh1_hls.smil/chunklist_b2500000.m3u8
+#http://live.fptplay53.net/fnxsd1/quangninh1_hls.smil/chunklist_b2500000.m3u8
+http://live.baoquangninh.vn/qtvlive/tv1live.m3u8
 
 #EXTINF:-1 tvg-id="quangninh3" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/quangninh3.png", Quảng Ninh 3 
-http://live.fptplay53.net/fnxsd1/quangninh3_hls.smil/chunklist_b2500000.m3u8
+#http://live.fptplay53.net/fnxsd1/quangninh3_hls.smil/chunklist_b2500000.m3u8
+http://live.baoquangninh.vn/qtvlive/tv3live.m3u8
 
 #EXTINF:-1 tvg-id="quangtri" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/quangtri.png", Quảng Trị 
 http://live.fptplay53.net/epzsd1/quangtri_hls.smil/chunklist_b2500000.m3u8
