@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Describe: Chặn quảng cáo
-! Updated: 09 May 2026 00:12
-! Blocked: 511
-! Size: 36.37 KB
+! Updated: 09 May 2026 00:23
+! Blocked: 514
+! Size: 36.48 KB
 ! ==================
 
 1thegioi.vn##[class^="c-banner-"],[id^="zone-"]
@@ -55,6 +55,8 @@ apkpure.net###google_vignette,.ad,.adsbygoogle,.js-ad-slot,[class*="-banner-"],[
 apnews.com##.FreeStar,.fs-feed-ad,[class*="-leaderboardAd"],[class^="LeaderBoardAd-"],[class^="apnews_home_"],[id^="nativo-hp-"],[id^="ntv"]
 
 appbrain.com###topAd,.adsbygoogle
+
+atpsoftware.vn##[class^="atp-"],[class^="tada"]
 
 audio-joiner.com##.ad,.premium-entry-button,.remove-ads
 
@@ -328,6 +330,8 @@ fptplay.vn##.flex-row
 
 g-pay.vn###myCarousel
 
+gapowork.com##[class^="HomePopup_"]
+
 gearvn.com###slidernew-banner-collection,[class^="banner-"],[class^="index-banner-"],[class^="index-slider-"],[class^="modal-"],[id^="popup-"]
 
 genk.vn###admFullTop,#admbackground,#ban-top-site,#logo_adm,#top-logo,.ads,[class^="khw-ads-"],[id^="adm-"],[id^="admbackground_"],[id^="zone-"]
@@ -423,6 +427,8 @@ kenh14.vn##.adv,[class^="adzone"],[id^="adm-"],[id^="admbackground"],[id^="admba
 khanhhoa.edu.vn##.image-list-album
 
 khanhhoa.gov.vn###select-box,[class^="banner-"]
+
+khoahoc.tv##[id^="ad"]
 
 kiemsat.vn##[class^="anh"],[class^="qcao"],[id^="revive-"]
 
