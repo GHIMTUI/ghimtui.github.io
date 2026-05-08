@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Describe: Chặn quảng cáo
-! Updated: 04 May 2026 01:33
-! Blocked: 506
-! Size: 35.96 KB
+! Updated: 09 May 2026 00:12
+! Blocked: 511
+! Size: 36.37 KB
 ! ==================
 
 1thegioi.vn##[class^="c-banner-"],[id^="zone-"]
@@ -80,7 +80,7 @@ baobacninhtv.vn##.group-10-2,.group-4-3
 
 baocamau.vn##.news-block-header,[class^="padding-bot-"]
 
-baocantho.com.vn##[class^="paddingtop"],[id^="home_right_"],[id^="mobitop"]
+baocantho.com.vn##[class^="paddingtop"],[id^="home_right_"],[id^="mobitop"],img[src="https://ads.baocantho.com.vn/www/images/3f637f8c2a2589f5187ab88eed5cd3e1.webp"],img[src="https://ads.baocantho.com.vn/www/images/c252baee013e071741260b7557ba5350.webp"]
 
 baocaobang.vn##.block-scroll-right,.mt-3,[class^="ads-"],[class^="zonegroup-"]
 
@@ -92,7 +92,7 @@ baodienbienphu.vn##.mt-1
 
 baodongnai.com.vn##[class^="ad"]
 
-baodongthap.vn##.image-item,.slide,.slide>div,.slides
+baodongthap.vn##.image-item,.slide,.slide>div,.slides,[class*="adv"]
 
 baogialai.com.vn##[class^="ad-"],[class^="sda_"],[id^="sdaMobile_"]
 
@@ -163,6 +163,8 @@ baoxaydung.vn##[id^="pos-"]
 bienvietnam.vn##.csj-image,.row-height
 
 bnews.vn###ban-top-site #admFullTop,#top-logo,[class^="aanetwork-"],[id^="adm_"],[id^="divAdmicro_"],[id^="zone-"]
+
+bocongan.gov.vn##[class^="banner-"]
 
 bom.so##.ad,.ads,.adsbygoogle
 
@@ -380,6 +382,8 @@ hocmai.vn##.modal-backdrop,[id^="popup-setting"]
 
 homecredit.vn##.text-primary-foreground
 
+hostvn.net###videobox,.plyr
+
 hplus.com.vn##.dl_mobile
 
 hsbc.com.vn##[id*="banner"]
@@ -508,6 +512,8 @@ missav123.com##[class^="inner-"],[class^="layoutWrapper-"],[class^="modelWrapper
 
 mobifone.vn##.main-banner
 
+mobifoneplus.vn##[id^="uc_simple_slider_elementor_"]
+
 moet.gov.vn##.full-width,.list-links
 
 moitruong.net.vn##[class^="ads_"],[class^="c-banner-"],[class^="is-custom-"],[id^="zone-"]
@@ -565,6 +571,8 @@ nhachannuoi.vn##.left-banner,.logothuonghieu,.menu-pr,.pdthieu,.quangcao,.tapchi
 nhadautu.vn##[id^="ads_"],[id^="zone-"]
 
 nhanh.vn###bannerMainAdMobile,#myModal,[class^="modal-"]
+
+nhanhoa.com###click_download_app,.fa-times,.shake_img_close
 
 nhipcaudautu.vn###newsletter,.col-md-8>center
 
@@ -627,6 +635,8 @@ phuthotv.vn##[class^="c3s-"],[id^="slide-"]
 plo.vn###catfish,.fanpage,.fp,.top-banner,[id^="Mobile_"],[id^="Web_"],[id^="adsMobile_"],[id^="adsWeb_"],[id^="ads_"],[id^="bn-"],[id^="bn-zone-"],[id^="yomedia-"]
 
 pngegg.com##.list_ads,[class^="staticpubads"],[id^="oa-"]
+
+pornhub.org##.noBottom,.topRemoveCTA
 
 pvcombank.com.vn##.responsive-wrapper
 
@@ -976,7 +986,7 @@ vtcpay.vn##[class^="alsli_ud_"],[class^="sli_ud_"]
 
 vtv.gov.vn##img[src="/assets/banner_cp.jpg"]
 
-vtv.vn##[id^="banner-"],[id^="lozad-"],[id^="placement-"],[id^="share-"],[id^="slot-"],[id^="zone-"]
+vtv.vn##.top-aside,[id^="banner-"],[id^="lozad-"],[id^="placement-"],[id^="share-"],[id^="slot-"],[id^="zone-"]
 
 vtvgo.vn##.micro-open-app
 
