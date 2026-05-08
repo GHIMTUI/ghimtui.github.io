@@ -1,5 +1,5 @@
 #EXTM3U
-#Mozilla/5.0 (m3u-ip.tv 3.0.12) Android
+#Mozilla/5.0 (m3u-ip.tv 3.0.13) Android
 #Dalvik/2.1.0 (Linux; Android 15; SM-A057F Build/AP3A.240905.015.A2.A057FXXSBDYJ1)
 #FPTPlay/7.27.4 (Linux; U; Android 12; BRAVIA 4K VH2 Build/PKG6.8160; Cronet/141.7340.3.1)
 #Mozilla/5.0 (Linux; Android 12; BRAVIA 4K VH2 Build/PKG6.8160) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36 Edg/144.0.0.0
@@ -16,6 +16,19 @@ http://live.fptplay53.net/epzsd1/angiang_hls.smil/chunklist_b2500000.m3u8
 
 #EXTINF:-1 tvg-id="angiang3" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/angiang3.png", An Giang 3
 http://live.fptplay53.net/epzsd1/angiang03_hls.smil/chunklist_b2500000.m3u8
+
+#EXTINF:-1 tvg-id="cantho1" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/cantho1.png", Cần Thơ 1 
+#http://live.fptplay53.net/epzsd1/cantho_hls.smil/chunklist_b2500000.m3u8
+https://live.canthotv.vn/live/tv/chunklist_w2043652289.m3u8
+
+#EXTINF:-1 tvg-id="cantho2" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/cantho2.png", Cần Thơ 2 
+#http://live.fptplay53.net/epzsd1/cantho02_vhls.smil/chunklist_b5000000.m3u8
+https://live.canthotv.vn/cs2/live.stream/chunklist_w405846797.m3u8 
+
+#EXTINF:-1 tvg-id="cantho3" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/cantho3.png", Cần Thơ 3 
+#http://live.fptplay53.net/epzsd1/cantho03_hls.smil/chunklist_b2500000.m3u8
+https://live.canthotv.vn/cs3/tv/chunklist_w898135023.m3u8 
+
 #--- VĨNH LONG (MN) ---
 #EXTINF:-1 tvg-id="vinhlong1hd" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/vinhlong1.png", Vĩnh Long 1
 http://live.fptplay53.net/epzch2/vinhlong1_abr.smil/chunklist_b4200000.m3u8 
@@ -68,19 +81,8 @@ http://live.fptplay53.net/epzhd1/htvcthuanviethd_vhls.smil/chunklist_b5000000.m3
 
 #EXTINF:-1 tvg-id="bacninh" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/bacninh.png", Bắc Ninh 
 #http://live.fptplay53.net/fnxsd1/bacninh01_hls.smil/chunklist_b2500000.m3u8
-http://live.mediatech.vn/live/285983d45f5bdab43ebb4cab75573adeda1/chunklist.m3u8
-
-#EXTINF:-1 tvg-id="cantho1" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/cantho1.png", Cần Thơ 1 
-#http://live.fptplay53.net/epzsd1/cantho_hls.smil/chunklist_b2500000.m3u8
-https://live.canthotv.vn/live/tv/chunklist_w2043652289.m3u8
-
-#EXTINF:-1 tvg-id="cantho2" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/cantho2.png", Cần Thơ 2 
-#http://live.fptplay53.net/epzsd1/cantho02_vhls.smil/chunklist_b5000000.m3u8
-https://live.canthotv.vn/cs2/live.stream/chunklist_w405846797.m3u8 
-
-#EXTINF:-1 tvg-id="cantho3" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/cantho3.png", Cần Thơ 3 
-#http://live.fptplay53.net/epzsd1/cantho03_hls.smil/chunklist_b2500000.m3u8
-https://live.canthotv.vn/cs3/tv/chunklist_w898135023.m3u8 
+#http://live.mediatech.vn/live/285983d45f5bdab43ebb4cab75573adeda1/chunklist.m3u8
+http://1253668792.e.cdneverest.net/tIYh2FiGhfPJEXqGvM4Crg/1778246252/live/285f5f227e988ab4445a2138091d3d62e8d/chunklist.m3u8
 
 #EXTINF:-1 tvg-id="camau" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/camau.png", Cà Mau 
 http://live.fptplay53.net/epzsd1/camau_hls.smil/chunklist_b2500000.m3u8
@@ -192,7 +194,7 @@ http://live.fptplay53.net/epzsd1/quangtri_hls.smil/chunklist_b2500000.m3u8
 http://cdn.sonlatv.vn/live/28595222e707a364251b8724717894baa46/chunklist.m3u8
 
 #EXTINF:-1 tvg-id="tayninh1" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/tayninh.png", Tây Ninh 
-http://liveh34.vtvprime.vn/hls/TAYNINHTV/03.m3u8
+http://live.fptplay53.net/epzsd1/tayninh01_hls.smil/chunklist_b2500000.m3u8
 
 #EXTINF:-1 tvg-id="thainguyen" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/thainguyen.png", Thái Nguyên 
 http://live.fptplay53.net/fnxsd1/thainguyen_hls.smil/chunklist_b2500000.m3u8
@@ -343,7 +345,13 @@ http://live.fptplay53.net/fnxhd1/vtv7hd_vhls.smil/chunklist_b5000000.m3u8
 http://live.fptplay53.net/epzhd1/vtv8hd_vhls.smil/chunklist_b5000000.m3u8
 
 #EXTINF:-1 tvg-id="vtv9hd" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/vtv9.png", VTV9
-http://live.fptplay53.net/fnxhd1/vtv9_vhls.smil/chunklist_b5000000.m3u8
+#http://live.fptplay53.net/fnxhd1/vtv9_vhls.smil/chunklist_b5000000.m3u8
+#93857193760b4aa882db3880cf07ecaf:0241398b0816b126f4e5b715f993b6c6,263edeb9da2e453787a08321717fa076:f56b38d09ef049c3afea71314b0f0f86
+#KODIPROP:inputstream=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.manifest_type=dash
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=93857193760b4aa882db3880cf07ecaf:0241398b0816b126f4e5b715f993b6c6
+http://livevlisctcdnw.seenow.vn/livesnv2/VTV9_HD/manifest.mpd
 
 #EXTINF:-1 tvg-id="vtv10hd" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/vtv10.png", VTV10
 http://live-a.fptplay53.net/live/media/VTV_can_tho/live_hls_avc/VTV_can_tho-avc1_3800000=10000-mp4a_131600=20000.m3u8
