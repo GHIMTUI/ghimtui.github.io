@@ -332,7 +332,8 @@ http://live.fptplay53.net/fnxch2/vtv1hd_abr.smil/chunklist_b3000000.m3u8
 http://live.fptplay53.net/fnxch2/vtv2hd_abr.smil/chunklist_b4200000.m3u8
 
 #EXTINF:-1 tvg-id="vtv3hd" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/vtv3.png", VTV3
-http://live.fptplay53.net/fnxch2/vtv3hd_abr.smil/chunklist_b3000000.m3u8
+#http://live.fptplay53.net/fnxch2/vtv3hd_abr.smil/chunklist_b3000000.m3u8
+http://live-a.fptplay53.net/live/media/VTV3HD/live_hls_avc/VTV3HD-avc1_3800000=10000-mp4a_131600=20000.m3u8
 
 #EXTINF:-1 tvg-id="vtv4hd" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/vtv4.png", VTV4
 #http://live.fptplay53.net/fnxch2/vtv4hd_abr.smil/chunklist_b4200000.m3u8
@@ -343,7 +344,8 @@ http://live.fptplay53.net/fnxch2/vtv3hd_abr.smil/chunklist_b3000000.m3u8
 http://livevlisctcdnw.seenow.vn/livesnv2/VTV4_HD/manifest.mpd
 
 #EXTINF:-1 tvg-id="vtv5hd" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/vtv5.png", VTV5
-http://live.fptplay53.net/epzch2/vtv5hd_abr.smil/chunklist_b4200000.m3u8
+#http://live.fptplay53.net/epzch2/vtv5hd_abr.smil/chunklist_b4200000.m3u8
+http://live-a.fptplay53.net/live/media/VTV5HD/live_hls_avc/VTV5HD-avc1_3800000=10000-mp4a_131600=20000.m3u8
 
 #EXTINF:-1 tvg-id="vtv5hdtn" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/vtv5tn.png", VTV5 Trung Bộ
 http://live.fptplay53.net/fnxhd1/vtv5taynguyen_vhls.smil/chunklist_b5000000.m3u8
