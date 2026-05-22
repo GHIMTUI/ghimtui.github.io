@@ -1,5 +1,5 @@
 #EXTM3U
-#Mozilla/5.0 (m3u-ip.tv) Android
+#Mozilla/5.0 (m3u-ip.tv 3.0.20) Android
 #Dalvik/2.1.0 (Linux; Android 15; SM-A057F Build/AP3A.240905.015.A2.A057FXXSBDYJ1)
 #FPTPlay/7.27.4 (Linux; U; Android 12; BRAVIA 4K VH2 Build/PKG6.8160; Cronet/141.7340.3.1)
 #Mozilla/5.0 (Linux; Android 12; BRAVIA 4K VH2 Build/PKG6.8160) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36 Edg/144.0.0.0
@@ -202,7 +202,8 @@ http://live.fptplay53.net/epzsd1/tayninh01_hls.smil/chunklist_b2500000.m3u8
 http://live.fptplay53.net/fnxsd1/thainguyen_hls.smil/chunklist_b2500000.m3u8
 
 #EXTINF:-1 tvg-id="thanhhoa" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/thanhhoa.png", Thanh Hóa 
-http://truyenhinh.vnptvas.vn/live.m3u8?c=vstv525&q=sd&pkg=pkg12.hni
+#http://truyenhinh.vnptvas.vn/live.m3u8?c=vstv525&q=sd&pkg=pkg12.hni
+http://liveh12.vtvprime.vn/hls/THANHHOATV/03.m3u8
 
 #EXTINF:-1 tvg-id="tuyenquang" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/tuyenquang.png", Tuyên Quang 
 http://live.fptplay53.net/fnxsd1/tuyenquang_hls.smil/chunklist_b2500000.m3u8
@@ -308,7 +309,8 @@ http://live.fptplay53.net/fnxhd2/anninhtv_vhls.smil/chunklist_b5000000.m3u8
 http://live.fptplay53.net/fnxhd2/quocphongvnhd_vhls.smil/chunklist_b5000000.m3u8
 
 #EXTINF:-1 tvg-id="vtv1hd" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/vtv1.png", VTV1
-http://live.fptplay53.net/fnxch2/vtv1hd_abr.smil/chunklist_b3000000.m3u8
+#http://live.fptplay53.net/fnxch2/vtv1hd_abr.smil/chunklist_b4200000.m3u8
+http://livevlisctcdnw.seenow.vn/livesnv2/VTV1_HD/manifest.mpd
 
 #EXTINF:-1 tvg-id="vtv2hd" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/vtv2.png", VTV2
 http://live.fptplay53.net/fnxch2/vtv2hd_abr.smil/chunklist_b4200000.m3u8
@@ -329,11 +331,12 @@ http://livevlisctcdnw.seenow.vn/livesnv2/VTV4_HD/manifest.mpd
 #http://live.fptplay53.net/epzch2/vtv5hd_abr.smil/chunklist_b4200000.m3u8
 http://live-a.fptplay53.net/live/media/VTV5HD/live_hls_avc/VTV5HD-avc1_3800000=10000-mp4a_131600=20000.m3u8
 
+#EXTINF:-1 tvg-id="vtv5hdtnb" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/vtv5tnb.png", VTV5 Nam Bộ
+http://live.fptplay53.net/fnxhd1/vtv5tnb_vhls.smil/chunklist_b5000000.m3u8
+
 #EXTINF:-1 tvg-id="vtv5hdtn" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/vtv5tn.png", VTV5 Trung Bộ
 http://live.fptplay53.net/fnxhd1/vtv5taynguyen_vhls.smil/chunklist_b5000000.m3u8
 
-#EXTINF:-1 tvg-id="vtv5hdtnb" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/vtv5tnb.png", VTV5 Nam Bộ
-http://live.fptplay53.net/fnxhd1/vtv5tnb_vhls.smil/chunklist_b5000000.m3u8
 
 #EXTINF:-1 tvg-id="vtv7hd" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/vtv7.png", VTV7
 http://live.fptplay53.net/fnxhd1/vtv7hd_vhls.smil/chunklist_b5000000.m3u8
