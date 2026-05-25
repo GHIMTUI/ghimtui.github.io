@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Describe: Chặn quảng cáo
-! Updated: 15 May 2026 08:08
-! Blocked: 514
-! Size: 36.48 KB
+! Updated: 25 May 2026 08:21
+! Blocked: 519
+! Size: 36.88 KB
 ! ==================
 
 1thegioi.vn##[class^="c-banner-"],[id^="zone-"]
@@ -205,6 +205,8 @@ caobang.gov.vn##.AdvertContent,.UIAdvertisement_Default,[class^="MultiFunction"]
 caobangtv.vn##.cntslider,[class^="adv_"],[class^="bx-"]
 
 capcut.com##[class^="banner_"]
+
+caronphone.com##[class^="ad-"]
 
 cellphones.com.vn##.animate-scale-y-in
 
@@ -550,6 +552,8 @@ newocean.edu.vn##.wp-image-47384
 
 news.com.au###fixed-ad,.news-tops_group-rhc,[class^="sticky-"],[class^="storybook-"],[id^="ad-"]
 
+newsex.xxx###catfishm,.hide-desktop,.▭__push
+
 nganluong.vn###sticky
 
 nghean.gov.vn##.AdvertContent,.col3,[class^="MultiFunction"]
@@ -624,6 +628,8 @@ phatnguoi.com###adBottom,.adsbygoogle,.align-items-center,[class^="ad_"],[class^
 
 phatnguoixe.com##div[style="text-align: center;"]
 
+phimxemsex.net##[class*="ad"],[id*="ad"]
+
 phonesdata.com##[class^="ad"],[id^="ad"],[id^="ezoic-pub-ad-placeholder-"]
 
 phongvu.vn##[class^="pv-"],[id^="pv-"]
@@ -646,7 +652,7 @@ pornhub.org##.noBottom,.topRemoveCTA
 
 pvcombank.com.vn##.responsive-wrapper
 
-qdnd.vn##[class*="banner"]
+qdnd.vn##[class*="banner"],[class^="banner-"]
 
 qpvn.vn##.d-sm-none
 
@@ -668,7 +674,7 @@ quankhu2.vn##[class^="advrtise"],[class^="img-"]
 
 quanlynhanuoc.vn##[class*="wp-image-"]
 
-quantrimang.com###adunderarticle,#google_vignette,#vid,.adsbygoogle,.aniBox,.in-article,[class^="ads"],[class^="avp-"],[id*="adright"],[id*="adsposttop"],[id^="ad"],[id^="adindexcenter"],[id^="aniplayer_"],[id^="articleads"],[id^="mrc"]
+quantrimang.com###adsposttop1,#adunderarticle,#google_vignette,#vid,.adsbygoogle,.aniBox,.in-article,[class^="ads"],[class^="avp-"],[id*="adright"],[id*="adsposttop"],[id^="ad"],[id^="adindexcenter"],[id^="aniplayer_"],[id^="articleads"],[id^="mrc"]
 
 quochoi.vn##.listAds
 
@@ -974,6 +980,8 @@ vnexpress.net###TOP_BANNER,#admbackground,#banner_top,#google_vignette,.adsbygoo
 
 vnreview.vn##[class^="aanetwork-"],[class^="bg-"],[id^="bg-"]
 
+vnsextop1.com##[class*="-banner-"],[class*="Ads"],[class*="ad"],[id*="Ads"]
+
 voh.com.vn##.adstop,.center-01,.center-01>div,[id^="div-gpt-ad-"]
 
 vov1.vov.vn##.mobile-header-banner
@@ -1002,6 +1010,8 @@ websosanh.vn##.adsbygoogle,.border-x-0,[class^="dta-"],[class^="mobile-"],[id^="
 
 woori.com.vn##[class^="banner-"]
 
+x.xxphims.blog###catfishTop,[class^="ads-"],[id^="wap_bottombanner_"]
+
 xahoi.com.vn##[class^="ads-"]
 
 xedoisong.vn##.ads,[class^="ads-"]
@@ -1012,7 +1022,7 @@ xemtivi4k.com##a[href="https://record.brave888.com/_CXLXKr7jtXINaHdFA_j09GNd7Zgq
 
 xemtivitop.com###HTML8,#facebook-comment
 
-xemtv.net###bottom650,#pc-catfish,.ads-mb,.line,.panel-primary,[class^="ads_"],div[data-widget-id="1771082"],div[data-widget-id="1845723"],div[data-widget-id="1886588"],marquee[direction="left"]
+xemtv.net###bottom650,#pc-catfish,.ads-mb,.line,.panel-primary,[class^="ads-"],[class^="ads_"],[class^="close-ad-"],[class^="d-"],[id^="med_rec_"],div[data-widget-id="1771082"],div[data-widget-id="1845723"],div[data-widget-id="1886588"],img[src="/banner/300x250-xbh_wc.gif"],marquee[direction="left"]
 
 xemtv.us###med_rec_banner2,.ads-mb,.d-block,.float-ck,.sticky_bottom,div[data-widget-id="1433589"]
 
