@@ -1,4 +1,5 @@
 const fs = require('fs');
+const path = require('path'); // Nhập thư viện xử lý đường dẫn hệ thống
 
 // Danh sách cấu hình chuẩn tương ứng với ID trong file m3u của bạn
 const channels = [
@@ -15,7 +16,8 @@ const channels = [
     { id: 'sctv21hd',  url: 'http://hoiquan.dpdns.org/VTVGo/?sctv21' }
 ];
 
-const m3uFilePath = '../tivi.m3u';
+// CÁCH KHAI BÁO ĐƯỜNG DẪN TUYỆT ĐỐI AN TOÀN NHẤT:
+const m3uFilePath = path.join(__dirname, 'tivi.m3u');
 
 async function updateM3u() {
     try {
@@ -59,7 +61,7 @@ async function updateM3u() {
             fs.writeFileSync(m3uFilePath, m3uContent, 'utf8');
             console.log('--- ĐÃ GHI ĐÈ VÀ CẬP NHẬT THÀNH CÔNG FILE TIVI.M3U ---');
         } else {
-            console.log('Không có thay đổi nào được cập nhật vào file.');
+            console.log('Không có thay đổi nào được cập nhật vào file (Do trùng link hoặc lệch cấu trúc).');
         }
 
     } catch (error) {
