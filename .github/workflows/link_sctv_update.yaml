@@ -2,7 +2,7 @@ name: Auto Update SCTV Link
 
 on:
   schedule:
-    - cron: '0 */3 * * *' # Chạy mỗi 3 tiếng (vào phút thứ 0)
+    - cron: '0 */2 * * *' # Đã đổi thành chạy mỗi 2 tiếng cho kịp thời gian link hết hạn
   workflow_dispatch: # Giúp bạn có thể bấm nút chạy thủ công trên GitHub để test ngay
 
 jobs:
@@ -18,10 +18,10 @@ jobs:
     - name: Cài đặt Node.js
       uses: actions/setup-node@v4
       with:
-        node-version: 24
+        node-version: 24 # Đã nâng lên bản 24 mới nhất theo thông báo của GitHub
 
     - name: Chạy script cập nhật link
-      run: node link_sctv_update.js
+      run: node link_sctv_update.js # Đảm bảo file JS ngoài thư mục gốc cũng tên là link_sctv_update.js
 
     - name: Commit và Push nếu có thay đổi
       run: |
