@@ -15,7 +15,7 @@ const channels = [
     { id: 'sctv21hd',  url: 'http://hoiquan.dpdns.org/VTVGo/?sctv21' }
 ];
 
-const m3uFilePath = '../tivi.m3u'; // Đường dẫn file m3u của bạn
+const m3uFilePath = './tivi.m3u'; // Đường dẫn file m3u của bạn
 
 async function updateM3u() {
     try {
