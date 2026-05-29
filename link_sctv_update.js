@@ -2,17 +2,17 @@ const fs = require('fs');
 
 // Cấu hình danh sách các kênh cần getlink và cập nhật
 const channels = [
-    { id: 'sctvhdpth', url: 'http://hoiquan.dpdns.org/VTVGo/?sctvphim' },
-    { id: 'sctv1hd',   url: 'http://hoiquan.dpdns.org/VTVGo/?sctv1' },
-    { id: 'sctv4hd',   url: 'http://hoiquan.dpdns.org/VTVGo/?sctv4' },
-    { id: 'sctv7hd',   url: 'http://hoiquan.dpdns.org/VTVGo/?sctv7' },
-    { id: 'sctv8hd',   url: 'http://hoiquan.dpdns.org/VTVGo/?sctv8' },
-    { id: 'sctv11hd',  url: 'http://hoiquan.dpdns.org/VTVGo/?sctv11' },
-    { id: 'sctv13hd',  url: 'http://hoiquan.dpdns.org/VTVGo/?sctv13' },
-    { id: 'sctv14hd',  url: 'http://hoiquan.dpdns.org/VTVGo/?sctv14' },
-    { id: 'sctv18hd',  url: 'http://hoiquan.dpdns.org/VTVGo/?sctv18' },
-    { id: 'sctv19hd',  url: 'http://hoiquan.dpdns.org/VTVGo/?sctv19' },
-    { id: 'sctv21hd',  url: 'http://hoiquan.dpdns.org/VTVGo/?sctv21' }
+    { id: 'sctvhdpth', url: 'https://hoiquan.dpdns.org/VTVGo/?sctvphim' },
+    { id: 'sctv1hd',   url: 'https://hoiquan.dpdns.org/VTVGo/?sctv1' },
+    { id: 'sctv4hd',   url: 'https://hoiquan.dpdns.org/VTVGo/?sctv4' },
+    { id: 'sctv7hd',   url: 'https://hoiquan.dpdns.org/VTVGo/?sctv7' },
+    { id: 'sctv8hd',   url: 'https://hoiquan.dpdns.org/VTVGo/?sctv8' },
+    { id: 'sctv11hd',  url: 'https://hoiquan.dpdns.org/VTVGo/?sctv11' },
+    { id: 'sctv13hd',  url: 'https://hoiquan.dpdns.org/VTVGo/?sctv13' },
+    { id: 'sctv14hd',  url: 'https://hoiquan.dpdns.org/VTVGo/?sctv14' },
+    { id: 'sctv18hd',  url: 'https://hoiquan.dpdns.org/VTVGo/?sctv18' },
+    { id: 'sctv19hd',  url: 'https://hoiquan.dpdns.org/VTVGo/?sctv19' },
+    { id: 'sctv21hd',  url: 'https://hoiquan.dpdns.org/VTVGo/?sctv21' }
 ];
 
 const m3uFilePath = './tivi.m3u'; // Đường dẫn file m3u của bạn
