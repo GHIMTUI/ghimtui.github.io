@@ -383,6 +383,9 @@ http://vtvgolive-sctvdrm.vtvdigital.vn/9sgtOK8lE9pqP0INaVLEpg/1780056036/manifes
 #http://liveatmvng.vtvprime.vn/live/data8/SCTV19/Live_DASHDRM/SCTV19.mpd
 http://vtvgolive-sctv.vtvdigital.vn/3VHOimjJ126UUaANypAAYA/1780056047/5m63a995d8vtvsctv/19/index.m3u8
 
+#EXTINF:-1 tvg-id="sctv21hd"  tvg-logo="https://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV21.png",SCTV21
+http://vtvgolive-sctv.vtvdigital.vn/3VFdpwj33HVzgKIjLZGabA/1780056049/bdnc6qbiq1vtvsctv/21/index.m3u8
+
 #EXTINF:-1 tvg-id="antvhd" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/antv.png", An Ninh
 http://live.fptplay53.net/fnxhd2/anninhtv_vhls.smil/chunklist_b5000000.m3u8
 
@@ -390,8 +393,7 @@ http://live.fptplay53.net/fnxhd2/anninhtv_vhls.smil/chunklist_b5000000.m3u8
 http://live.fptplay53.net/fnxhd2/quocphongvnhd_vhls.smil/chunklist_b5000000.m3u8
 
 #EXTINF:-1 tvg-id="vtv1hd" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/vtv1.png", VTV1
-#http://live.fptplay53.net/fnxch2/vtv1hd_abr.smil/chunklist_b4200000.m3u8
-http://livevlisctcdnw.seenow.vn/livesnv2/VTV1_HD/manifest.mpd
+http://live.fptplay53.net/fnxch2/vtv1hd_abr.smil/chunklist_b4200000.m3u8
 
 #EXTINF:-1 tvg-id="vtv2hd" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/vtv2.png", VTV2
 http://live.fptplay53.net/fnxch2/vtv2hd_abr.smil/chunklist_b4200000.m3u8
