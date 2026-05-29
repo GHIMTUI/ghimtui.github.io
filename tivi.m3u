@@ -299,6 +299,9 @@ http://livevlisctcdnw.seenow.vn/livesnv2/D_DRAMAS_HD/manifest.mpd
 #KODIPROP:inputstream.adaptive.license_key=c01b22c5f5b44d72b9902b33a4c36fb7:8fe81a99e5b1cc891bb9e9f848b6e2e7
 http://livevlisctcdnw.seenow.vn/livesnv2/VFAMILY/manifest.mpd
 
+#EXTINF:-1 tvg-id="sctvhdpth"  tvg-logo="https://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTVPTH.png",SCTV Phim Tổng Hợp
+http://vtvgolive-sctvdrm.vtvdigital.vn/GlbECwP9Qhh4KLf4hwFuSQ/1780056052/manifest/sctvpth/playlist_1080p.m3u8
+
 #EXTINF:-1 tvg-id="sctv1hd"  tvg-logo="https://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV1.png",SCTV1
 #http://liveh12.vtvprime.vn/hls/SCTV1/03.m3u8
 http://vtvgolive-sctv.vtvdigital.vn/XK-Wq_CoMGbBt96YJdYXeQ/1780056022/asdfasdvgas2vtvsctv/1/masterh264.m3u8
