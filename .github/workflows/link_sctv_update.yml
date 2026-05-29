@@ -2,14 +2,18 @@ name: Auto Update SCTV Link
 
 on:
   schedule:
-    - cron: '0 */2 * * *' # Đã đổi thành chạy mỗi 2 tiếng cho kịp thời gian link hết hạn
-  workflow_dispatch: # Giúp bạn có thể bấm nút chạy thủ công trên GitHub để test ngay
+    - cron: '0 */2 * * *'
+  workflow_dispatch:
 
 jobs:
   update-list:
     runs-on: ubuntu-latest
     permissions:
-      contents: write # Cấp quyền cho bot ghi/push file lên repo
+      contents: write
+
+    # 👇 THÊM ĐOẠN NÀY VÀO ĐỂ ÉP GITHUB CHẠY NODE 24 THEO ĐÚNG YÊU CẦU
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
 
     steps:
     - name: Checkout mã nguồn
@@ -18,10 +22,10 @@ jobs:
     - name: Cài đặt Node.js
       uses: actions/setup-node@v4
       with:
-        node-version: 24 # Đã nâng lên bản 24 mới nhất theo thông báo của GitHub
+        node-version: 24 # Đảm bảo dòng này đã sửa thành 24
 
     - name: Chạy script cập nhật link
-      run: node link_sctv_update.js # Đảm bảo file JS ngoài thư mục gốc cũng tên là link_sctv_update.js
+      run: node link_sctv_update.js
 
     - name: Commit và Push nếu có thay đổi
       run: |
