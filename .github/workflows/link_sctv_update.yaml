@@ -1,0 +1,30 @@
+name: Auto Update SCTV Link
+
+on:
+  schedule:
+    - cron: '0 */3 * * *' # Chạy mỗi 3 tiếng (vào phút thứ 0)
+  workflow_dispatch: # Giúp bạn có thể bấm nút chạy thủ công trên GitHub để test ngay
+
+jobs:
+  update-list:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # Cấp quyền cho bot ghi/push file lên repo
+
+    steps:
+    - name: Checkout mã nguồn
+      uses: actions/checkout@v4
+
+    - name: Cài đặt Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: 20
+
+    - name: Chạy script cập nhật link
+      run: node link_sctv_update.js
+
+    - name: Commit và Push nếu có thay đổi
+      run: |
+        git config --local user.email "github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
+        git diff --quiet || (git add . && git commit -m "Bot: Cập nhật link SCTV mới [$(date +'%Y-%m-%d %H:%M:%S')]" && git push)
