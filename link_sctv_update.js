@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-// Cấu hình danh sách các kênh cần getlink và cập nhật
+// Danh sách cấu hình chuẩn tương ứng với ID trong file m3u của bạn
 const channels = [
     { id: 'sctvhdpth', url: 'http://hoiquan.dpdns.org/VTVGo/?sctvphim' },
     { id: 'sctv1hd',   url: 'http://hoiquan.dpdns.org/VTVGo/?sctv1' },
@@ -15,7 +15,7 @@ const channels = [
     { id: 'sctv21hd',  url: 'http://hoiquan.dpdns.org/VTVGo/?sctv21' }
 ];
 
-const m3uFilePath = './tivi.m3u'; // Đường dẫn file m3u ở thư mục gốc
+const m3uFilePath = './tivi.m3u';
 
 async function updateM3u() {
     try {
@@ -24,47 +24,46 @@ async function updateM3u() {
             return;
         }
 
-        // Đọc toàn bộ nội dung file m3u
         let m3uContent = fs.readFileSync(m3uFilePath, 'utf8');
         let isUpdated = false;
 
         for (const ch of channels) {
             try {
-                // Gọi HEAD request lấy URL sau khi Redirect
+                // Thực hiện gọi lấy link stream mới nhất từ server getlink
                 const response = await fetch(ch.url, { method: 'HEAD', redirect: 'follow' });
                 const finalStreamUrl = response.url;
 
                 if (!finalStreamUrl || finalStreamUrl === ch.url) {
-                    console.error(`[${ch.id}] Không lấy được link redirect từ server, bỏ qua.`);
+                    console.error(`[${ch.id}] Không lấy được link redirect từ server.`);
                     continue;
                 }
 
-                // REGEX CẢI TIẾN: Bỏ qua mọi loại khoảng trắng đặc biệt (\s), không phân biệt HOA/thường (i)
+                // REGEX NÂNG CAO: Chấp tất cả các loại khoảng trắng ẩn, khoảng trắng dư thừa cuối dòng và dấu xuống dòng \r\n
                 const escapedId = ch.id.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
-                const regex = new RegExp(`(#EXTINF:[^\\n\\r]*tvg-id\\s*=\\s*["']${escapedId}["'][^\\n\\r]*\\r?\\n)(http[^\\s\\r\\n]+)`, 'gi');
+                const regex = new RegExp(`(#EXTINF:[^\\n\\r]*tvg-id\\s*=\\s*["']${escapedId}["'][^\\n\\r]*(?:\\r?\\n)+)(http[^\\s\\r\\n]+)`, 'gi');
 
                 if (regex.test(m3uContent)) {
                     m3uContent = m3uContent.replace(regex, `$1${finalStreamUrl}`);
-                    console.log(`[${ch.id}] -> Lấy link mới thành công.`);
+                    console.log(`[${ch.id}] -> Đã tìm thấy vị trí và thay thế link mới thành công.`);
                     isUpdated = true;
                 } else {
-                    console.warn(`[${ch.id}] Không tìm thấy tvg-id="${ch.id}" trong file m3u.`);
+                    console.warn(`[${ch.id}] Không tìm thấy dòng chứa tvg-id="${ch.id}" trong file m3u.`);
                 }
             } catch (err) {
                 console.error(`Lỗi xử lý kênh ${ch.id}:`, err.message);
             }
         }
 
-        // Ghi lại file nếu có thay đổi
+        // Lưu lại file tivi.m3u nếu có sự thay đổi link
         if (isUpdated) {
             fs.writeFileSync(m3uFilePath, m3uContent, 'utf8');
-            console.log('--- Đã cập nhật xong toàn bộ danh sách kênh SCTV vào tivi.m3u ---');
+            console.log('--- ĐÃ GHI ĐÈ VÀ CẬP NHẬT THÀNH CÔNG FILE TIVI.M3U ---');
         } else {
-            console.log('Không có thay đổi nào được cập nhật (Có thể do trùng link cũ hoặc lệch cấu trúc hoàn toàn).');
+            console.log('Không có thay đổi nào được cập nhật vào file.');
         }
 
     } catch (error) {
-        console.error('Lỗi hệ thống:', error);
+        console.error('Lỗi hệ thống tổng quan:', error);
     }
 }
 
