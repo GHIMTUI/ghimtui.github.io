@@ -41,8 +41,8 @@ async function updateM3u() {
 
                 // Tạo Regex tìm đúng dòng tvg-id của từng kênh và bắt link dòng kế tiếp
                 const escapedId = ch.id.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
-                const regex = new RegExp(`(#EXTINF:.*tvg-id="${escapedId}"[\\s\\S]*?\\n)(http[^\\s]+)`, 'g');
-
+                const regex = new RegExp(`(#EXTINF:[^\\n]*tvg-id="${escapedId}"[^\\n]*\\r?\\n)(http[^\\s\\r\\n]+)`, 'gi');
+                
                 if (regex.test(m3uContent)) {
                     m3uContent = m3uContent.replace(regex, `$1${finalStreamUrl}`);
                     console.log(`[${ch.id}] -> Lấy link mới thành công.`);
