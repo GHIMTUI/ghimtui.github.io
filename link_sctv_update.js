@@ -1,38 +1,70 @@
 const fs = require('fs');
 
+// Cấu hình danh sách các kênh cần getlink và cập nhật
+const channels = [
+    { id: 'sctvhdpth', url: 'http://hoiquan.dpdns.org/VTVGo/?sctvphim' },
+    { id: 'sctv1hd',   url: 'http://hoiquan.dpdns.org/VTVGo/?sctv1' },
+    { id: 'sctv4hd',   url: 'http://hoiquan.dpdns.org/VTVGo/?sctv4' },
+    { id: 'sctv7hd',   url: 'http://hoiquan.dpdns.org/VTVGo/?sctv7' },
+    { id: 'sctv8hd',   url: 'http://hoiquan.dpdns.org/VTVGo/?sctv8' },
+    { id: 'sctv11hd',  url: 'http://hoiquan.dpdns.org/VTVGo/?sctv11' },
+    { id: 'sctv13hd',  url: 'http://hoiquan.dpdns.org/VTVGo/?sctv13' },
+    { id: 'sctv14hd',  url: 'http://hoiquan.dpdns.org/VTVGo/?sctv14' },
+    { id: 'sctv18hd',  url: 'http://hoiquan.dpdns.org/VTVGo/?sctv18' },
+    { id: 'sctv19hd',  url: 'http://hoiquan.dpdns.org/VTVGo/?sctv19' },
+    { id: 'sctv21hd',  url: 'http://hoiquan.dpdns.org/VTVGo/?sctv21' }
+];
+
+const m3uFilePath = './tivi.m3u'; // Đường dẫn file m3u của bạn
+
 async function updateM3u() {
-    const getlinkUrl = 'http://hoiquan.dpdns.org/VTVGo/?sctv1';
-    const m3uFilePath = './tivi.m3u'; // Đường dẫn tới file m3u của bạn
-
     try {
-        // 1. Gọi fetch để lấy URL sau khi tự động Redirect
-        const response = await fetch(getlinkUrl, { method: 'HEAD', redirect: 'follow' });
-        const finalStreamUrl = response.url;
-
-        console.log('Link stream mới lấy được:', finalStreamUrl);
-
-        if (!finalStreamUrl || finalStreamUrl.includes('?sctv1')) {
-            console.error('Không lấy được link redirect thực tế!');
+        if (!fs.existsSync(m3uFilePath)) {
+            console.error(`Không tìm thấy file m3u tại đường dẫn: ${m3uFilePath}`);
             return;
         }
 
-        // 2. Đọc nội dung file m3u hiện tại
+        // Đọc toàn bộ nội dung file m3u một lần duy nhất
         let m3uContent = fs.readFileSync(m3uFilePath, 'utf8');
+        let isUpdated = false;
 
-        // 3. Dùng Regex để tìm và thay thế link bên dưới dòng SCTV1
-        // Regex này tìm dòng #EXTINF có chứa tvg-id="sctv1hd" và thay thế link ngay phía sau nó
-        const regex = /(#EXTINF:.*tvg-id="sctv1hd"[\s\S]*?\n)(http[^\s]+)/g;
-        
-        if (regex.test(m3uContent)) {
-            m3uContent = m3uContent.replace(regex, `$1${finalStreamUrl}`);
+        for (const ch of channels) {
+            try {
+                // Gọi HEAD request lấy URL sau khi Redirect
+                const response = await fetch(ch.url, { method: 'HEAD', redirect: 'follow' });
+                const finalStreamUrl = response.url;
+
+                if (!finalStreamUrl || finalStreamUrl === ch.url) {
+                    console.error(`[${ch.id}] Không lấy được link redirect, bỏ qua.`);
+                    continue;
+                }
+
+                // Tạo Regex tìm đúng dòng tvg-id của từng kênh và bắt link dòng kế tiếp
+                const escapedId = ch.id.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
+                const regex = new RegExp(`(#EXTINF:.*tvg-id="${escapedId}"[\\s\\S]*?\\n)(http[^\\s]+)`, 'g');
+
+                if (regex.test(m3uContent)) {
+                    m3uContent = m3uContent.replace(regex, `$1${finalStreamUrl}`);
+                    console.log(`[${ch.id}] -> Lấy link mới thành công.`);
+                    isUpdated = true;
+                } else {
+                    console.warn(`[${ch.id}] Không tìm thấy tvg-id="${ch.id}" trong file m3u.`);
+                }
+            } catch (err) {
+                console.error(`Lỗi xử lý kênh ${ch.id}:`, err.message);
+            }
+        }
+
+        // Chỉ ghi lại file nếu có ít nhất 1 kênh thay đổi link thành công
+        if (isUpdated) {
             fs.writeFileSync(m3uFilePath, m3uContent, 'utf8');
-            console.log('Đã cập nhật link SCTV1 mới vào file m3u thành công!');
+            console.log('--- Đã cập nhật xong toàn bộ danh sách kênh SCTV vào tivi.m3u ---');
         } else {
-            console.error('Không tìm thấy dòng cấu hình SCTV1 trong file m3u!');
+            console.log('Không có thay đổi nào được cập nhật.');
         }
 
     } catch (error) {
-        console.error('Lỗi trong quá trình xử lý:', error);
+        console.error('Lỗi tổng quan hệ thống:', error);
     }
 }
 
