@@ -17,21 +17,24 @@ CHANNELS = {
 
 def fetch_live_link(url):
     try:
+        # Sử dụng lệnh curl_chrome116 (giả lập y hệt Chrome thật từ nhân mạng)
         cmd = [
-            'curl', '-s', '-L', '--max-time', '15',
-            '-A', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
-            '-H', 'accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8',
-            '-H', 'accept-language: vi-VN,vi;q=0.9,en-US;q=0.8,en;q=0.7',
+            'curl_chrome116', '-s', '-L', '--max-time', '15',
             url
         ]
         result = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, encoding='utf-8', errors='ignore')
         content = result.stdout.strip()
+        
         if content:
+            # Nếu Cloudflare trả về trang lỗi hoặc landing challenge, bỏ qua luôn
+            if "cloudflare" in content.lower() and "error" in content.lower():
+                return None
+                
             match = re.search(r'(https?://\S+)', content)
             if match:
                 return match.group(1).replace('"', '').replace("'", "").strip()
     except Exception as e:
-        print(f"Lỗi khi curl: {e}")
+        print(f"Lỗi hệ thống lệnh: {e}")
     return None
 
 def main():
@@ -45,13 +48,13 @@ def main():
 
     live_links = {}
     for tvg_id, url in CHANNELS.items():
-        print(f"Đang lấy link cho {tvg_id}...")
+        print(f"Đang cào link cho {tvg_id}...")
         link = fetch_live_link(url)
         if link:
             live_links[tvg_id] = link
-            print(f"-> Lấy được link: {link}")
+            print(f"-> Thành công lấy được: {link}")
         else:
-            print(f"-> Thất bại!")
+            print(f"-> Thất bại (Bị Cloudflare chặn)")
 
     new_lines = []
     skip_next = False
@@ -73,7 +76,8 @@ def main():
 
     with open(m3u_file, "w", encoding="utf-8") as f:
         f.writelines(new_lines)
-    print(f"Tổng số kênh đã thay link thành công: {count_updated}/{len(CHANNELS)}")
+    print(f"--- KẾT QUẢ CẬP NHẬT ---")
+    print(f"Đã thay thế thành công: {count_updated}/{len(CHANNELS)} kênh.")
 
 if __name__ == "__main__":
     main()
