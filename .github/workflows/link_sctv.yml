@@ -1,11 +1,11 @@
-name: Tự động cập nhật Link SCTV
+name: Tự động cập nhật Link SCTV gốc
 
 on:
   schedule:
-    # Chạy mỗi 2 giờ một lần
+    # Chạy mỗi 2 giờ một lần để bắt kịp thời gian link chết
     - cron: '0 */2 * * *'
   
-  # Cho phép bấm chạy thủ công bằng tay
+  # Cho phép bấm chạy thủ công bằng tay để kiểm tra
   workflow_dispatch:
 
 jobs:
@@ -17,14 +17,15 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
 
-    # Bước 2: Tải nội dung link thô và giả lập trình duyệt để tránh lỗi 403
-    - name: Tải link gốc và lưu vào file
+    # Bước 2: Tải nội dung IPTV và chỉ lọc lấy dòng chứa link http rồi ghi vào link_sctv.txt
+    - name: Bóc tách link gốc m3u8
       run: |
+        # Dùng curl để tải dữ liệu kèm User-Agent giả lập trình duyệt chống lỗi 403.
+        # Sau đó dùng grep để chỉ giữ lại dòng nào bắt đầu bằng "http" (loại bỏ dòng #EXTINF).
         curl -s -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" \
-             -H "Accept: text/plain,text/html" \
-             "http://hoiquan.dpdns.org/VTVGo/?sctv5" > link_sctv.txt
+             "http://hoiquan.dpdns.org/VTVGo/?sctv1" | grep -E '^https?://' > link_sctv.txt
 
-    # Bước 3: Kiểm tra xem link mới có khác link cũ không, nếu khác thì mới push
+    # Bước 3: Kiểm tra xem link mới có khác link cũ không, nếu khác thì mới commit và đẩy lên
     - name: Commit và Push nếu có thay đổi
       run: |
         git config --local user.email "github-actions[bot]@users.noreply.github.com"
@@ -32,9 +33,10 @@ jobs:
         
         git add link_sctv.txt
         
+        # Vì cứ 2 tiếng link gốc sẽ đổi token một lần, nên chắc chắn sẽ có thay đổi và tạo commit mới
         if ! git diff --cached --quiet; then
           git commit -m "Auto-update link_sctv.txt ($(date +'%Y-%m-%d %H:%M:%S'))"
           git push
         else
-          echo "Link không có thay đổi so với phiên bản trước, bỏ qua commit."
+          echo "Link không có thay đổi, bỏ qua commit."
         fi
