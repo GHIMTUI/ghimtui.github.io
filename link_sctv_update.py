@@ -1,5 +1,6 @@
 import re
 import urllib.request
+import urllib.error
 
 # Định nghĩa danh sách các link lấy token mới và định dạng nhận diện trong file m3u
 CHANNELS = {
@@ -46,22 +47,34 @@ CHANNELS = {
 }
 
 def get_live_link(url):
+    # Tạo bộ headers "xịn" giả lập trình duyệt Chrome đầy đủ thông tin để vượt tường lửa
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+        'Accept-Language': 'vi,en-US;q=0.9,en;q=0.8',
+        'Cache-Control': 'max-age=0',
+        'Connection': 'keep-alive',
+        'Upgrade-Insecure-Requests': '1'
+    }
     try:
-        req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
-        with urllib.request.urlopen(req, timeout=10) as response:
+        req = urllib.request.Request(url, headers=headers)
+        with urllib.request.urlopen(req, timeout=15) as response:
             html = response.read().decode('utf-8')
-            # Tìm link định dạng .m3u8 trong mã nguồn trả về
+            # Tìm link .m3u8 xuất hiện trong mã nguồn
             match = re.search(r'http[s]?://[^\s"\']+\.m3u8[^\s"\']*', html)
             if match:
                 return match.group(0).strip()
+    except urllib.error.HTTPError as e:
+        print(f"Lỗi HTTP {e.code} khi tải từ {url}")
+    except urllib.error.URLError as e:
+        print(f"Lỗi kết nối mạng: {e.reason} tại {url}")
     except Exception as e:
-        print(f"Lỗi khi tải từ {url}: {e}")
+        print(f"Lỗi hệ thống không xác định: {e} tại {url}")
     return None
 
 def main():
     m3u_file = "tivi.m3u"
     
-    # Đọc nội dung file tivi.m3u hiện tại
     try:
         with open(m3u_file, "r", encoding="utf-8") as f:
             content = f.read()
@@ -69,20 +82,17 @@ def main():
         print(f"Không tìm thấy file {m3u_file} ở thư mục gốc!")
         return
 
-    # Duyệt qua từng kênh để lấy link mới và thay thế
     for channel_id, info in CHANNELS.items():
         new_link = get_live_link(info["url"])
         if new_link:
-            # Dùng Regex để tìm link cũ tương ứng và thay bằng link mới
             content, count = re.subn(info["pattern"], new_link, content)
             if count > 0:
-                print(f"[{channel_id.upper()}] Đã cập nhật thành công link mới.")
+                print(f"[{channel_id.upper()}] Cập nhật thành công.")
             else:
-                print(f"[{channel_id.upper()}] Tìm thấy link mới nhưng không khớp cấu trúc để thay thế trong tivi.m3u.")
+                print(f"[{channel_id.upper()}] Lấy được link mới nhưng cấu trúc regex không khớp với link cũ trong file m3u.")
         else:
-            print(f"[{channel_id.upper()}] Không lấy được link mới từ nguồn.")
+            print(f"[{channel_id.upper()}] Thất bại: Không phản hồi hoặc bị chặn.")
 
-    # Ghi đè lại nội dung mới vào file tivi.m3u
     with open(m3u_file, "w", encoding="utf-8") as f:
         f.write(content)
 
