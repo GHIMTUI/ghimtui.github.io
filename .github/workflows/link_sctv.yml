@@ -2,13 +2,9 @@ name: Tự động cập nhật Link SCTV gốc
 
 on:
   schedule:
-    # Tự động chạy mỗi 2 tiếng một lần để cập nhật token mới cho link
-    - cron: '0 */2 * * *'
-  
-  # Cho phép bạn bấm nút chạy thủ công bằng tay bất cứ lúc nào
-  workflow_dispatch:
+    - cron: '0 */2 * * *' # Tự động chạy mỗi 2 tiếng một lần
+  workflow_dispatch: # Cho phép bấm chạy bằng tay
 
-# Cấp quyền ghi nội dung để GitHub Actions có thể push file lên repo của bạn
 permissions:
   contents: write
 
@@ -17,46 +13,42 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    # Bước 1: Tải mã nguồn của repository về máy ảo
     - name: Checkout repository
       uses: actions/checkout@v4
 
-    # Bước 2: Chạy bộ lọc 3 tầng thông minh để lấy bằng được link m3u8
     - name: Bóc tách link gốc m3u8
       run: |
-        echo "=== PHƯƠNG PHÁP 1: TẢI TRỰC TIẾP GIẢ LẬP TRÌNH DUYỆT BẢN MỚI ==="
+        echo "=== PHƯƠNG PHÁP 1: TẢI TRỰC TIẾP GIẢ LẬP TRÌNH DUYỆT ==="
         curl -s -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" \
              -H "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8" \
              -H "Accept-Language: vi-VN,vi;q=0.9,en-US;q=0.8,en;q=0.7" \
              "http://hoiquan.dpdns.org/VTVGo/?sctv1" > raw.txt
 
-        # Kiểm tra xem phương pháp 1 có lấy được link m3u8 không, nếu không có chữ m3u8 thì chuyển hướng proxy
+        # Nếu không thấy chữ m3u8 trong file raw.txt, chuyển sang Proxy 1
         if ! grep -q "m3u8" raw.txt; then
-          echo "⚠️ Phương pháp 1 thất bại (Bị chặn IP Datacenter). ĐANG CHUYỂN SANG PHƯƠNG PHÁP 2: DÙNG PROXY TRUNG GIAN CORSPROXY..."
+          echo "⚠️ Phương pháp 1 bị chặn IP. Đang chuyển sang Phương pháp 2 (Corsproxy)..."
           curl -s "https://corsproxy.io/?http://hoiquan.dpdns.org/VTVGo/?sctv1" > raw.txt
         fi
 
-        # Nếu phương pháp 2 vẫn thất bại, chuyển sang phương pháp 3 dự phòng
+        # Nếu vẫn chưa thấy m3u8, chuyển sang Proxy 2 dự phòng
         if ! grep -q "m3u8" raw.txt; then
-          echo "⚠️ Phương pháp 2 thất bại. ĐANG CHUYỂN SANG PHƯƠNG PHÁP 3: DÙNG PROXY DỰ PHÒNG ALLORIGINS..."
+          echo "⚠️ Phương pháp 2 thất bại. Đang chuyển sang Phương pháp 3 (Allorigins)..."
           curl -s "https://api.allorigins.win/raw?url=http://hoiquan.dpdns.org/VTVGo/?sctv1" > raw.txt
         fi
 
-        # Tiến hành trích xuất đường link m3u8 thực tế (Bỏ dòng #EXTINF và bỏ khoảng trắng thừa)
-        grep -E 'https?://' raw.txt | grep -v 'hoiquan.dpdns.org' | tr -d '\r' | head -n 1 | xargs > link_sctv.txt || true
+        # CHÍNH XÁC Ở ĐÂY: Chỉ lọc dòng nào có chứa chữ 'm3u8' để lấy đúng link xem TV
+        grep 'm3u8' raw.txt | tr -d '\r' | head -n 1 | xargs > link_sctv.txt || true
 
-        # Kiểm tra cuối cùng xem file link_sctv.txt có dữ liệu chuẩn hay không
+        # Kiểm tra xem file xuất ra có trống không
         if [ ! -s link_sctv.txt ] || [ "$(cat link_sctv.txt)" = "" ]; then
-          echo "❌ THẤT BẠI HOÀN TOÀN: Cả 3 phương pháp đều bị chặn hoặc không tìm thấy link m3u8!"
-          echo "Nội dung phản hồi cuối cùng từ server để kiểm tra:"
+          echo "❌ THẤT BẠI: Không tìm thấy hoặc không bóc tách được dòng chứa link m3u8!"
           cat raw.txt
           exit 1
         fi
 
-        echo "✅ THÀNH CÔNG RỰC RỠ! Đã bóc tách được link gốc:"
+        echo "✅ THÀNH CÔNG! Đường dẫn m3u8 đã được bóc tách:"
         cat link_sctv.txt
 
-    # Bước 3: Đẩy file link_sctv.txt đã cập nhật lên GitHub của bạn
     - name: Commit và Push nếu có thay đổi
       run: |
         git config --local user.email "github-actions[bot]@users.noreply.github.com"
@@ -68,5 +60,5 @@ jobs:
           git commit -m "Auto-update link_sctv.txt ($(date +'%Y-%m-%d %H:%M:%S'))"
           git push
         else
-          echo "Link giống hệt phiên bản cũ, bỏ qua commit để tránh rác lịch sử Git."
+          echo "Link giống hệt bản cũ, bỏ qua commit."
         fi
