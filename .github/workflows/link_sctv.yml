@@ -16,7 +16,7 @@ jobs:
     - name: Thiết lập Python
       uses: actions/setup-python@v5
       with:
-        python-cache-dependency-path: '' # Bỏ qua cache để chạy nhanh hơn
+        python-cache-dependency-path: ''
 
     - name: Bóc tách link gốc và lưu vào file
       run: |
@@ -25,33 +25,43 @@ jobs:
         import re
 
         try:
-            # 1. Tải nội dung từ trang vỏ
             url = 'http://hoiquan.dpdns.org/VTVGo/?sctv5'
-            req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
+            
+            # Thêm Headers giả lập trình duyệt Chrome để tránh lỗi 403 Forbidden
+            headers = {
+                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+                'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+                'Accept-Language': 'vi,en-US;q=0.7,en;q=0.3',
+                'Referer': 'https://www.google.com/'
+            }
+            
+            req = urllib.request.Request(url, headers=headers)
             html = urllib.request.urlopen(req).read().decode('utf-8')
 
-            # 2. Tìm tất cả các link (ví dụ link .m3u8 hoặc link bất kỳ) bên trong HTML
-            # Tìm các chuỗi bắt đầu bằng http/https và không chứa dấu nháy hoặc khoảng trắng
+            # Tìm tất cả các link (đuôi m3u8, mp4 hoặc link bất kỳ) bên trong HTML
             links = re.findall(r'(https?://[^\s\"\'<>]+)', html)
             
             if links:
-                # Lọc bỏ chính cái link vỏ nếu nó xuất hiện trong nội dung
+                # Lọc bỏ chính cái link vỏ hoiquan.dpdns.org nếu nó nằm trong nội dung kết quả
                 real_links = [l for l in links if 'hoiquan.dpdns.org' not in l]
                 
                 if real_links:
-                    # Lấy link đầu tiên tìm được
+                    # Lấy link gốc đầu tiên tìm thấy
                     origin_link = real_links[0]
                     
-                    # 3. Ghi đè vào file link_sctv.txt
+                    # Ghi đè vào file link_sctv.txt
                     with open('link_sctv.txt', 'w') as f:
                         f.write(origin_link.strip())
-                    print(f'Đã tìm thấy và lưu link gốc: {origin_link}')
+                    print(f'Thành công! Đã lưu link gốc: {origin_link}')
                 else:
-                    print('Không tìm thấy link gốc hợp lệ nào khác ngoài link vỏ.')
+                    print('Không tìm thấy link gốc nào khác ngoài link vỏ.')
             else:
-                print('Không tìm thấy bất kỳ link nào trong nội dung.')
+                print('Không tìm thấy chuỗi link nào trong nội dung phản hồi.')
+                
         except Exception as e:
-            print(f'Lỗi khi xử lý: {e}')
+            print(f'Lỗi khi cào dữ liệu: {e}')
+            # Nếu vẫn lỗi, xuất toàn bộ lỗi ra để kiểm tra
+            raise e
         "
 
     - name: Commit và Push nếu có thay đổi
