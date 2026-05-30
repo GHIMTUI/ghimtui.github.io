@@ -2,38 +2,33 @@ name: Tự động cập nhật link SCTV
 
 on:
   schedule:
-    - cron: '0 */2 * * *' # Chạy mỗi 2 giờ
-  workflow_dispatch:      # Cho phép bấm chạy thủ công
+    - cron: '0 */2 * * *' # Tự động chạy mỗi 2 giờ
+  workflow_dispatch:      # Bấm chạy bằng tay để kiểm tra
 
 jobs:
   update-m3u:
     runs-on: ubuntu-latest
     permissions:
-      contents: write # Cần quyền ghi để đẩy file cập nhật lên repo
+      contents: write
 
     steps:
       - name: Lấy mã nguồn từ Repository
         uses: actions/checkout@v4
 
-      - name: Cài đặt Python 3.10
-        uses: actions/setup-python@v5
+      - name: Cài đặt Node.js
+        uses: actions/setup-node@v4
         with:
-          python-version: '3.10'
+          node-node-version: '20' # Sử dụng Node.js bản cập nhật mới định dạng chuẩn
 
-      - name: Cài đặt thư viện cloudscraper
-        run: pip install cloudscraper
-
-      - name: Chạy script lấy link và cập nhật
-        run: python link_sctv_update.py
+      - name: Chạy script Node.js lấy link và cập nhật
+        run: node link_sctv_update.js
 
       - name: Lưu các file lên Github (Commit & Push)
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           
-          # Kiểm tra xem có file nào thay đổi không
           git add tivi.m3u file/link_sctv_update.txt
           
-          # Chỉ commit nếu có sự thay đổi thực sự
-          git diff --quiet && git diff --staged --quiet || git commit -m "Auto-update: Cập nhật link SCTV mới"
+          git diff --quiet && git diff --staged --quiet || git commit -m "Auto-update: Cập nhật link SCTV bằng Node.js"
           git push
