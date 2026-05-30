@@ -1,33 +1,33 @@
 #EXTM3U
 #EXTINF:-1 tvg-id="sctvhdpth" tvg-logo="https://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTVPTH.png",SCTV Phim Tổng Hợp
-http://error-or-expired-link.m3u8
+http://error-connection-failed.m3u8
 
 #EXTINF:-1 tvg-id="sctv1hd" tvg-logo="https://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV1.png",SCTV1
-http://error-or-expired-link.m3u8
+http://error-connection-failed.m3u8
 
 #EXTINF:-1 tvg-id="sctv4hd" tvg-logo="https://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV4.png",SCTV4 
-http://error-or-expired-link.m3u8
+http://error-connection-failed.m3u8
 
 #EXTINF:-1 tvg-id="sctv7hd" tvg-logo="https://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV7.png",SCTV7 
-http://error-or-expired-link.m3u8
+http://error-connection-failed.m3u8
 
 #EXTINF:-1 tvg-id="sctv8hd" tvg-logo="https://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV8.png",SCTV8
-http://error-or-expired-link.m3u8
+http://error-connection-failed.m3u8
 
 #EXTINF:-1 tvg-id="sctv11hd" tvg-logo="https://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV11.png",SCTV11
-http://error-or-expired-link.m3u8
+http://error-connection-failed.m3u8
 
 #EXTINF:-1 tvg-id="sctv13hd" tvg-logo="https://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV13.png",SCTV13
-http://error-or-expired-link.m3u8
+http://error-connection-failed.m3u8
 
 #EXTINF:-1 tvg-id="sctv14hd" tvg-logo="https://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV14.png",SCTV14 
-http://error-or-expired-link.m3u8
+http://error-connection-failed.m3u8
 
 #EXTINF:-1 tvg-id="sctv18hd" tvg-logo="https://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV18.png",SCTV18 
-http://error-or-expired-link.m3u8
+http://error-connection-failed.m3u8
 
 #EXTINF:-1 tvg-id="sctv19hd" tvg-logo="https://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV19.png",SCTV19
-http://error-or-expired-link.m3u8
+http://error-connection-failed.m3u8
 
 #EXTINF:-1 tvg-id="sctv21hd" tvg-logo="https://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV21.png",SCTV21
-http://error-or-expired-link.m3u8
+http://error-connection-failed.m3u8
