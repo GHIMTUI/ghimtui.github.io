@@ -36,7 +36,7 @@ def fetch_live_link(url):
     return None
 
 def main():
-    m3u_file = "tivi.m3u"
+    m3u_file = "ghimtui.github.io/tivi.m3u"
     
     # Đọc nội dung file tivi.m3u hiện tại
     try:
