@@ -2,7 +2,7 @@ name: Tự động cập nhật Link SCTV gốc
 
 on:
   schedule:
-    # Chạy mỗi 2 giờ một lần để bắt kịp thời gian link chết
+    # Chạy mỗi 2 giờ một lần để cập nhật token mới
     - cron: '0 */2 * * *'
   
   # Cho phép bấm chạy thủ công bằng tay để kiểm tra
@@ -17,15 +17,35 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
 
-    # Bước 2: Tải nội dung IPTV và chỉ lọc lấy dòng chứa link http rồi ghi vào link_sctv.txt
+    # Bước 2: Tải nội dung và bóc tách link một cách an toàn
     - name: Bóc tách link gốc m3u8
       run: |
-        # Dùng curl để tải dữ liệu kèm User-Agent giả lập trình duyệt chống lỗi 403.
-        # Sau đó dùng grep để chỉ giữ lại dòng nào bắt đầu bằng "http" (loại bỏ dòng #EXTINF).
-        curl -s -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" \
-             "http://hoiquan.dpdns.org/VTVGo/?sctv1" | grep -E '^https?://' > link_sctv.txt
+        # 1. Tải nội dung về file tạm raw.txt (Thêm tham số -i để lưu cả Header HTTP kiểm tra lỗi)
+        curl -i -s -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" \
+             "http://hoiquan.dpdns.org/VTVGo/?sctv1" > raw.txt
+        
+        # 2. In toàn bộ nội dung nhận được lên màn hình Log để theo dõi
+        echo "========================================="
+        echo "===  NHẬT KÝ PHẢN HỒI TỪ MÁY CHỦ TẢI VỀ ==="
+        echo "========================================="
+        cat raw.txt
+        echo ""
+        echo "========================================="
+        
+        # 3. Tiến hành lọc lấy link gốc (Tìm dòng chứa 'http://' hoặc 'https://', loại bỏ link vỏ)
+        # Thêm '|| true' để không bị sập tiến trình đột ngột nếu không tìm thấy chuỗi
+        grep -E 'https?://' raw.txt | grep -v 'hoiquan.dpdns.org' | tr -d '\r' | head -n 1 | xargs > link_sctv.txt || true
+        
+        # 4. Kiểm tra kết quả cuối cùng trước khi chuyển bước
+        if [ ! -s link_sctv.txt ] || [ "$(cat link_sctv.txt)" = "" ]; then
+          echo "❌ LỖI: Không bóc tách được link gốc! Vui lòng cuộn lên xem mục 'NHẬT KÝ PHẢN HỒI' ở trên xem máy chủ trả về lỗi gì (ví dụ: 403 Forbidden)."
+          exit 1
+        fi
+        
+        echo "✅ THÀNH CÔNG! Đã tìm thấy link gốc hợp lệ:"
+        cat link_sctv.txt
 
-    # Bước 3: Kiểm tra xem link mới có khác link cũ không, nếu khác thì mới commit và đẩy lên
+    # Bước 3: Commit và đẩy file lên kho lưu trữ
     - name: Commit và Push nếu có thay đổi
       run: |
         git config --local user.email "github-actions[bot]@users.noreply.github.com"
@@ -33,10 +53,9 @@ jobs:
         
         git add link_sctv.txt
         
-        # Vì cứ 2 tiếng link gốc sẽ đổi token một lần, nên chắc chắn sẽ có thay đổi và tạo commit mới
         if ! git diff --cached --quiet; then
           git commit -m "Auto-update link_sctv.txt ($(date +'%Y-%m-%d %H:%M:%S'))"
           git push
         else
-          echo "Link không có thay đổi, bỏ qua commit."
+          echo "Link không có thay đổi so với phiên bản cũ, bỏ qua commit."
         fi
