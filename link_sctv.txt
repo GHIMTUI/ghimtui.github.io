@@ -1,1 +1,1 @@
-Report-To: {group:cf-nel,max_age:604800,endpoints:[{url:https://a.nel.cloudflare.com/report/v4?s=0zc9kbNIm0ziIXeHVi0zRm6YQwEjWd3S0FqcOMtWz5NBhovPxIjvJT26aVujBXGGYfKRPHErAHqZ1DblJoSLJIpSSWH1dM0a%2F4IH83TRnMwLBRWjU8cXDwYbLgM87cPlGL108w%3D%3D}]}
+<span class=cf-footer-item sm:block sm:mb-1><span>Performance &amp; security by</span> <a rel=noopener noreferrer href=https://www.cloudflare.com/5xx-error-landing id=brand_link target=_blank>Cloudflare</a></span>
