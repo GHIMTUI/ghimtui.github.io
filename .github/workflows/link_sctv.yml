@@ -1,41 +1,4 @@
-name: Tự động cập nhật Link SCTV
-
-on:
-  schedule:
-    # Chạy mỗi 2 giờ một lần (UTC). 
-    # Lưu ý: GitHub Actions có thể bị trễ từ 5-10 phút tùy thuộc vào hệ thống lúc đó.
-    - cron: '0 */2 * * *'
-  
-  # Cho phép bấm chạy thủ công bằng tay nếu muốn
-  workflow_dispatch:
-
-jobs:
-  update-link:
-    runs-on: ubuntu-latest
-
-    steps:
-    # Bước 1: Checkout mã nguồn về máy ảo
-    - name: Checkout repository
-      uses: actions/checkout@v4
-
-    # Bước 2: Tải nội dung từ URL và lưu đè vào file link_sctv.txt
-    - name: Tải link mới nhất
+- name: Tải link mới nhất (Dành cho text thuần hoặc Redirect)
       run: |
-        curl -sL "http://hoiquan.dpdns.org/VTVGo/?sctv5" -o link_sctv.txt
-
-    # Bước 3: Kiểm tra xem file có thay đổi gì không, nếu có thì commit và push lên GitHub
-    - name: Commit và Push nếu có thay đổi
-      run: |
-        git config --local user.email "github-actions[bot]@users.noreply.github.com"
-        git config --local user.name "github-actions[bot]"
-        
-        # Thêm file vào vùng chờ commit
-        git add link_sctv.txt
-        
-        # Chỉ commit nếu file có sự thay đổi thực sự so với phiên bản cũ
-        if ! git diff --cached --quiet; then
-          git commit -m "Auto-update link_sctv.txt ($(date +'%Y-%m-%d %H:%M:%S'))"
-          git push
-        else
-          echo "Không có thay đổi nào trong nội dung link, bỏ qua commit."
-        fi
+        # -sL sẽ tự động đi theo đường link nếu web dùng cơ chế chuyển hướng (Redirect)
+        curl -sL "http://hoiquan.dpdns.org/VTVGo/?sctv5" > link_sctv.txt
