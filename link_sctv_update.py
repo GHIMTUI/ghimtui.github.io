@@ -1,6 +1,5 @@
-import urllib.request
+import subprocess
 import re
-import ssl
 
 CHANNELS = {
     "sctvhdpth": "https://hoiquan.dpdns.org/VTVGo/?sctvphim",
@@ -18,34 +17,25 @@ CHANNELS = {
 
 def fetch_live_link(url):
     try:
-        # Bỏ qua xác thực SSL nếu web nguồn bị lỗi chứng chỉ
-        ctx = ssl.create_default_context()
-        ctx.check_hostname = False
-        ctx.verify_mode = ssl.CERT_NONE
-        
-        # Giả lập như trình duyệt thật
-        req = urllib.request.Request(
-            url, 
-            headers={
-                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
-                'Accept': '*/*'
-            }
-        )
-        with urllib.request.urlopen(req, context=ctx, timeout=15) as response:
-            content = response.read().decode('utf-8').strip()
-            
-            # Tìm link http/https đầu tiên xuất hiện trong nội dung trả về
+        cmd = [
+            'curl', '-s', '-L', '--max-time', '15',
+            '-A', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
+            '-H', 'accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8',
+            '-H', 'accept-language: vi-VN,vi;q=0.9,en-US;q=0.8,en;q=0.7',
+            url
+        ]
+        result = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, encoding='utf-8', errors='ignore')
+        content = result.stdout.strip()
+        if content:
             match = re.search(r'(https?://\S+)', content)
             if match:
-                # Làm sạch link nếu có dấu nháy hoặc ký tự lạ
                 return match.group(1).replace('"', '').replace("'", "").strip()
     except Exception as e:
-        print(f"Lỗi khi kết nối tới {url}: {e}")
+        print(f"Lỗi khi curl: {e}")
     return None
 
 def main():
     m3u_file = "tivi.m3u"
-    
     try:
         with open(m3u_file, "r", encoding="utf-8") as f:
             lines = f.readlines()
@@ -61,7 +51,7 @@ def main():
             live_links[tvg_id] = link
             print(f"-> Lấy được link: {link}")
         else:
-            print(f"-> Thất bại không lấy được link!")
+            print(f"-> Thất bại!")
 
     new_lines = []
     skip_next = False
@@ -71,11 +61,8 @@ def main():
         if skip_next:
             skip_next = False
             continue
-            
         new_lines.append(line)
-        
         if line.startswith("#EXTINF"):
-            # Tìm chính xác tvg-id trong dòng
             match = re.search(r'tvg-id="([^"]+)"', line)
             if match:
                 tvg_id = match.group(1)
@@ -86,7 +73,7 @@ def main():
 
     with open(m3u_file, "w", encoding="utf-8") as f:
         f.writelines(new_lines)
-    print(f"Đã cập nhật xong! Tổng số kênh đã thay link: {count_updated}/{len(CHANNELS)}")
+    print(f"Tổng số kênh đã thay link thành công: {count_updated}/{len(CHANNELS)}")
 
 if __name__ == "__main__":
     main()
