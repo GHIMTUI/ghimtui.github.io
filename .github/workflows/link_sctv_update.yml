@@ -1,17 +1,4 @@
-name: Tự động cập nhật link SCTV
-
-on:
-  schedule:
-    - cron: '0 */2 * * *' # Lệnh này nghĩa là cứ chẵn 2 giờ chạy 1 lần (00:00, 02:00, 04:00...)
-  workflow_dispatch: # Cho phép bạn bấm nút "Run workflow" bằng tay để test ngay lập tức
-
-jobs:
-  update-m3u:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write # Cho phép Actions được quyền sửa và lưu file tivi.m3u
-
-    steps:
+steps:
       - name: Lấy mã nguồn về
         uses: actions/checkout@v4
 
@@ -20,14 +7,17 @@ jobs:
         with:
           python-version: '3.10'
 
+      # Thêm đúng đoạn này vào để Github cài thư viện chống bot
+      - name: Cài đặt thư viện cần thiết
+        run: pip install cloudscraper
+
       - name: Chạy script lấy link mới
         run: python link_sctv_update.py
 
-      - name: Lưu file tivi.m3u lên Github (Commit & Push)
+      - name: Lưu các file lên Github (Commit & Push)
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add tivi.m3u
-          # Lệnh dưới đây kiểm tra nếu file có thay đổi thì mới commit, không thì bỏ qua để tránh lỗi
+          git add tivi.m3u file/link_sctv_update.txt
           git diff --quiet && git diff --staged --quiet || git commit -m "Auto-update: Cập nhật link SCTV mới"
           git push
