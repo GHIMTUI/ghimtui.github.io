@@ -1,37 +1,34 @@
-name: Tự động cập nhật link SCTV 2h/lần
+name: Auto Update IPTV Links
 
 on:
   schedule:
-    # Chạy mỗi 2 tiếng (tính theo giờ UTC)
+    # Chạy mỗi 2 tiếng (0 phút, mỗi 2 giờ trong ngày)
     - cron: '0 */2 * * *'
-  workflow_dispatch: # Giúp bạn có thể bấm nút chạy thủ công bất cứ lúc nào trên GitHub
+  workflow_dispatch: # Nút bấm để bạn có thể tự kích hoạt chạy bằng tay lúc nào muốn
 
 jobs:
   update-links:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write # Cấp quyền cho Action được push code/file mới lên lại repo
 
     steps:
-    - name: Kiểm tra mã nguồn (Checkout)
+    - name: Checkout Repository
       uses: actions/checkout@v4
 
-    - name: Cài đặt Python
+    - name: Set up Python
       uses: actions/setup-python@v5
       with:
         python-version: '3.x'
 
-    - name: Chạy script cập nhật link
+    - name: Run Update Script
       run: python link_sctv_update.py
 
-    - name: Kiểm tra thay đổi và Push lên lại Kho lưu trữ
+    - name: Commit and Push Changes
       run: |
-        git config --local user.email "github-actions[bot]@users.noreply.github.com"
-        git config --local user.name "github-actions[bot]"
-        
-        # Kiểm tra xem file tivi.m3u có thay đổi hay không
-        if ! git diff --exit-code tivi.m3u; then
-          git add tivi.m3u
-          git commit -m "Tự động cập nhật link mới [$(date +'%Y-%m-%d %H:%M:%S')]"
-          git push
-        else
-          echo "Không có thay đổi nào về link, bỏ qua commit."
-        fi
+        git config --global user.name "GitHub Action Bot"
+        git config --global user.email "action@github.com"
+        git add tivi.m3u
+        # Chỉ commit nếu file có sự thay đổi (tránh lỗi nếu link cũ và link mới giống nhau)
+        git diff-index --quiet HEAD || git commit -m "Auto-updated IPTV links [Skip CI]"
+        git push
