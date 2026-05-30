@@ -1,39 +1,91 @@
-name: Auto Update M3U Links
+import subprocess
+import re
 
-on:
-  schedule:
-    - cron: '0 */2 * * *'
-  workflow_dispatch:
+CHANNELS = {
+    "sctvhdpth": "https://hoiquan.dpdns.org/VTVGo/?sctvphim",
+    "sctv1hd": "https://hoiquan.dpdns.org/VTVGo/?sctv1",
+    "sctv4hd": "https://hoiquan.dpdns.org/VTVGo/?sctv4",
+    "sctv7hd": "https://hoiquan.dpdns.org/VTVGo/?sctv7",
+    "sctv8hd": "https://hoiquan.dpdns.org/VTVGo/?sctv8",
+    "sctv11hd": "https://hoiquan.dpdns.org/VTVGo/?sctv11",
+    "sctv13hd": "https://hoiquan.dpdns.org/VTVGo/?sctv13",
+    "sctv14hd": "https://hoiquan.dpdns.org/VTVGo/?sctv14",
+    "sctv18hd": "https://hoiquan.dpdns.org/VTVGo/?sctv18",
+    "sctv19hd": "https://hoiquan.dpdns.org/VTVGo/?sctv19",
+    "sctv21hd": "https://hoiquan.dpdns.org/VTVGo/?sctv21",
+}
 
-jobs:
-  update-m3u:
-    runs-on: ubuntu-latest
-
-    steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
-
-    - name: Set up Python
-      uses: actions/setup-python@v5
-      with:
-        python-version: '3.x'
-
-    # SỬA TẠI ĐÂY: Đổi tên thành link_sctv_update.py cho đúng với file của bạn
-    - name: Run update script
-      run: python link_sctv_update.py
-
-    # SỬA TẠI ĐÂY: Thêm lệnh kiểm tra lỗi cấu trúc để chắc chắn commit được đẩy lên
-    - name: Commit and Push changes
-      run: |
-        git config --local user.email "github-actions[bot]@users.noreply.github.com"
-        git config --local user.name "github-actions[bot]"
+def fetch_live_link(url):
+    try:
+        # Sử dụng lệnh curl hệ thống kèm các header giả lập trình duyệt Chrome thật để tránh 403
+        cmd = [
+            'curl', 
+            '-s', 
+            '-L', 
+            '--max-time', '15',
+            '-A', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
+            '-H', 'accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8',
+            '-H', 'accept-language: vi-VN,vi;q=0.9,en-US;q=0.8,en;q=0.7',
+            url
+        ]
         
-        # Ép buộc nhận diện file tivi.m3u ở thư mục gốc
-        git add tivi.m3u
+        result = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, encoding='utf-8', errors='ignore')
+        content = result.stdout.strip()
         
-        if git diff --staged --quiet; then
-          echo "Không có link nào thay đổi so với bản cũ."
-        else
-          git commit -m "Auto-update tivi.m3u links [skip ci]"
-          git push origin main
-        fi
+        if content:
+            # Tìm link http/https đầu tiên xuất hiện trong nội dung
+            match = re.search(r'(https?://\S+)', content)
+            if match:
+                clean_link = match.group(1).replace('"', '').replace("'", "").strip()
+                return clean_link
+    except Exception as e:
+        print(f"Lỗi khi thực hiện lệnh curl: {e}")
+    return None
+
+def main():
+    m3u_file = "tivi.m3u"
+    
+    try:
+        with open(m3u_file, "r", encoding="utf-8") as f:
+            lines = f.readlines()
+    except FileNotFoundError:
+        print(f"Không tìm thấy file {m3u_file} ở thư mục gốc!")
+        return
+
+    live_links = {}
+    for tvg_id, url in CHANNELS.items():
+        print(f"Đang lấy link cho {tvg_id}...")
+        link = fetch_live_link(url)
+        if link:
+            live_links[tvg_id] = link
+            print(f"-> Lấy được link: {link}")
+        else:
+            print(f"-> Vẫn bị chặn hoặc lỗi không lấy được link!")
+
+    new_lines = []
+    skip_next = False
+    count_updated = 0
+    
+    for i, line in enumerate(lines):
+        if skip_next:
+            skip_next = False
+            continue
+            
+        new_lines.append(line)
+        
+        if line.startswith("#EXTINF"):
+            match = re.search(r'tvg-id="([^"]+)"', line)
+            if match:
+                tvg_id = match.group(1)
+                if tvg_id in live_links and i + 1 < len(lines):
+                    new_lines.append(live_links[tvg_id] + "\n")
+                    skip_next = True
+                    count_updated += 1
+
+    with open(m3u_file, "w", encoding="utf-8") as f:
+        f.writelines(new_lines)
+    print(f"--- Hoàn tất quy trình ---")
+    print(f"Tổng số kênh đã thay link thành công: {count_updated}/{len(CHANNELS)}")
+
+if __name__ == "__main__":
+    main()
