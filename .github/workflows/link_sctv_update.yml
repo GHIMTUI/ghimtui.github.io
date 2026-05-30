@@ -8,21 +8,29 @@ on:
 jobs:
   update-m3u:
     runs-on: ubuntu-latest
+    # Sử dụng container giả lập trình duyệt xịn để vượt Cloudflare
+    container:
+      image: lwthiker/curl-impersonate:main-chrome
 
     steps:
+    # 1. Cài đặt các công cụ cơ bản cho container
+    - name: Install git and python
+      run: |
+        apt-get update
+        apt-get install -y git python3
+
+    # 2. Lấy code từ repository về
     - name: Checkout repository
       uses: actions/checkout@v4
 
-    - name: Set up Python
-      uses: actions/setup-python@v5
-      with:
-        python-version: '3.x'
-
+    # 3. Chạy script Python để quét và lấy link
     - name: Run update script
-      run: python link_sctv_update.py
+      run: python3 link_sctv_update.py
 
+    # 4. Lưu lại và đẩy file tivi.m3u mới lên hệ thống
     - name: Commit and Push changes
       run: |
+        git config --global --add safe.directory "$GITHUB_WORKSPACE"
         git config --local user.email "github-actions[bot]@users.noreply.github.com"
         git config --local user.name "github-actions[bot]"
         git add tivi.m3u
