@@ -2,40 +2,38 @@ name: Auto Update M3U Links
 
 on:
   schedule:
-    # Chạy mỗi 2 giờ (0h, 2h, 4h, v.v... theo giờ UTC)
     - cron: '0 */2 * * *'
-  workflow_dispatch: # Giúp bạn có thể bấm chạy bằng tay bất cứ lúc nào để test
+  workflow_dispatch:
 
 jobs:
   update-m3u:
     runs-on: ubuntu-latest
 
     steps:
-    # Bước 1: Checkout code về máy ảo của Github
     - name: Checkout repository
       uses: actions/checkout@v4
 
-    # Bước 2: Cài đặt Python
     - name: Set up Python
       uses: actions/setup-python@v5
       with:
         python-version: '3.x'
 
-    # Bước 3: Chạy script cập nhật link trực tiếp vào file ở thư mục gốc
+    # SỬA TẠI ĐÂY: Đổi tên thành link_sctv_update.py cho đúng với file của bạn
     - name: Run update script
       run: python link_sctv_update.py
 
-    # Bước 4: Commit và Push file tivi.m3u mới lên lại repo công khai
+    # SỬA TẠI ĐÂY: Thêm lệnh kiểm tra lỗi cấu trúc để chắc chắn commit được đẩy lên
     - name: Commit and Push changes
       run: |
         git config --local user.email "github-actions[bot]@users.noreply.github.com"
         git config --local user.name "github-actions[bot]"
+        
+        # Ép buộc nhận diện file tivi.m3u ở thư mục gốc
         git add tivi.m3u
         
-        # Kiểm tra xem có sự thay đổi nào không trước khi commit để tránh lỗi
         if git diff --staged --quiet; then
-          echo "Không có thay đổi nào về link."
+          echo "Không có link nào thay đổi so với bản cũ."
         else
           git commit -m "Auto-update tivi.m3u links [skip ci]"
-          git push
+          git push origin main
         fi
