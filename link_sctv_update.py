@@ -1,7 +1,11 @@
 import urllib.request
 import re
+import ssl
 
-# 1. Định nghĩa danh sách các kênh và link mẹ tương ứng
+# Cấu hình bỏ qua xác thực SSL nếu chứng chỉ của trang mẹ bị lỗi
+ssl_context = ssl._create_unverified_context()
+
+# 1. Danh sách các kênh và link mẹ
 channels = {
     "sctvpth": "https://hoiquan.dpdns.org/VTVGo/?sctvphim",
     "sctv1": "https://hoiquan.dpdns.org/VTVGo/?sctv1",
@@ -16,34 +20,56 @@ channels = {
     "sctv21": "https://hoiquan.dpdns.org/VTVGo/?sctv21"
 }
 
-# Giả lập Header để tránh bị chặn (User-Agent)
-headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'}
+# 2. Tạo Header "xịn" giả lập trình duyệt Chrome để không bị chặn
+headers = {
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+    'Accept-Language': 'vi,en-US;q=0.9,en;q=0.8',
+    'Referer': 'https://hoiquan.dpdns.org/',
+    'Origin': 'https://hoiquan.dpdns.org'
+}
 
 links = {}
 
-# 2. Cào (Get) link gốc từ link mẹ
+print("--- Bắt đầu lấy link gốc từ hoiquan.dpdns.org ---")
+
 for ch, url in channels.items():
     try:
         req = urllib.request.Request(url, headers=headers)
-        with urllib.request.urlopen(req, timeout=10) as response:
-            # Nếu link mẹ tự redirect thẳng sang link m3u8
+        # Thực hiện gọi link mẹ
+        with urllib.request.urlopen(req, context=ssl_context, timeout=15) as response:
             final_url = response.geturl()
+            content = response.read().decode('utf-8', errors='ignore')
             
-            # Nếu không redirect mà trả về nội dung text chứa link, ta dùng Regex để tìm
-            if "m3u8" not in final_url:
-                content = response.read().decode('utf-8', errors='ignore')
-                match = re.search(r'(https?://[^\s"\']+\.m3u8[^\s"\']*)', content)
+            # Cách 1: Nếu trang web redirect thẳng tới link m3u8
+            if "m3u8" in final_url:
+                links[ch] = final_url
+                print(f"[Redirect] {ch} -> {final_url}")
+            else:
+                # Cách 2: Tìm link m3u8 ẩn bên trong mã nguồn (HTML/Javascript) của trang
+                # Tìm tất cả các chuỗi bắt đầu bằng http... và kết thúc bằng .m3u8
+                match = re.search(r'(https?://[^\s"\'\`>]+?\.m3u8[^\s"\'\`>]*)', content)
                 if match:
-                    final_url = match.group(1)
-            
-            links[ch] = final_url
-            print(f"Thành công {ch}: {final_url}")
+                    raw_link = match.group(1)
+                    # Xử lý nếu link bị dính dấu chống backslash (/) thường gặp trong javascript
+                    raw_link = raw_link.replace('\\/', '/')
+                    links[ch] = raw_link
+                    print(f"[Tìm thấy trong Code] {ch} -> {raw_link}")
+                else:
+                    # Cách 3: Nếu không thấy m3u8, thử tìm link vtvdigital dạng thường
+                    match_vtv = re.search(r'(https?://[^\s"\'\`>]+?vtvdigital\.vn[^\s"\'\`>]*)', content)
+                    if match_vtv:
+                        links[ch] = match_vtv.group(1).replace('\\/', '/')
+                        print(f"[Tìm thấy dạng VTV] {ch} -> {links[ch]}")
+                    else:
+                        print(f"[Thất bại] {ch} không tìm thấy link m3u8 hợp lệ trong mã nguồn.")
+                        links[ch] = "http://error-link-expired.m3u8"
+                        
     except Exception as e:
-        print(f"Lỗi khi lấy link {ch}: {e}")
-        # Nếu lỗi, giữ một link tạm thời hoặc bỏ trống
-        links[ch] = "http://error-or-expired-link.m3u8"
+        print(f"[Lỗi kết nối] {ch}: {e}")
+        links[ch] = "http://error-connection-failed.m3u8"
 
-# 3. Tạo nội dung file M3U mới
+# 3. Tiến hành ghi đè dữ liệu mới vào file playlist.m3u
 m3u_content = f"""#EXTM3U
 #EXTINF:-1 tvg-id="sctvhdpth" tvg-logo="https://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTVPTH.png",SCTV Phim Tổng Hợp
 {links.get('sctvpth')}
@@ -79,6 +105,7 @@ m3u_content = f"""#EXTM3U
 {links.get('sctv21')}
 """
 
-# 4. Ghi nội dung ra file playlist.m3u
 with open("tivi.m3u", "w", encoding="utf-8") as f:
     f.write(m3u_content)
+
+print("--- Đã cập nhật xong file playlist.m3u ---")
