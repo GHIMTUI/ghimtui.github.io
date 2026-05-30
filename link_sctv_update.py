@@ -1,7 +1,7 @@
 import urllib.request
 import re
+import ssl
 
-# Cấu hình map giữa tvg-id trong file m3u và link lấy nguồn
 CHANNELS = {
     "sctvhdpth": "https://hoiquan.dpdns.org/VTVGo/?sctvphim",
     "sctv1hd": "https://hoiquan.dpdns.org/VTVGo/?sctv1",
@@ -18,27 +18,34 @@ CHANNELS = {
 
 def fetch_live_link(url):
     try:
+        # Bỏ qua xác thực SSL nếu web nguồn bị lỗi chứng chỉ
+        ctx = ssl.create_default_context()
+        ctx.check_hostname = False
+        ctx.verify_mode = ssl.CERT_NONE
+        
+        # Giả lập như trình duyệt thật
         req = urllib.request.Request(
             url, 
-            headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'}
+            headers={
+                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+                'Accept': '*/*'
+            }
         )
-        with urllib.request.urlopen(req, timeout=10) as response:
+        with urllib.request.urlopen(req, context=ctx, timeout=15) as response:
             content = response.read().decode('utf-8').strip()
-            # Kiểm tra nếu nội dung trả về có dạng link http/https
-            if content.startswith("http"):
-                return content
-            # Nếu web trả về cả cục m3u, tìm dòng http đầu tiên
+            
+            # Tìm link http/https đầu tiên xuất hiện trong nội dung trả về
             match = re.search(r'(https?://\S+)', content)
             if match:
-                return match.group(1)
+                # Làm sạch link nếu có dấu nháy hoặc ký tự lạ
+                return match.group(1).replace('"', '').replace("'", "").strip()
     except Exception as e:
-        print(f"Lỗi khi lấy link từ {url}: {e}")
+        print(f"Lỗi khi kết nối tới {url}: {e}")
     return None
 
 def main():
-    m3u_file = "ghimtui.github.io/tivi.m3u"
+    m3u_file = "tivi.m3u"
     
-    # Đọc nội dung file tivi.m3u hiện tại
     try:
         with open(m3u_file, "r", encoding="utf-8") as f:
             lines = f.readlines()
@@ -46,20 +53,19 @@ def main():
         print(f"Không tìm thấy file {m3u_file} ở thư mục gốc!")
         return
 
-    # Lấy link mới cho tất cả các kênh
     live_links = {}
     for tvg_id, url in CHANNELS.items():
         print(f"Đang lấy link cho {tvg_id}...")
         link = fetch_live_link(url)
         if link:
             live_links[tvg_id] = link
-            print(f"-> Thành công: {link}")
+            print(f"-> Lấy được link: {link}")
         else:
-            print(f"-> Thất bại!")
+            print(f"-> Thất bại không lấy được link!")
 
-    # Cập nhật vào nội dung m3u
     new_lines = []
     skip_next = False
+    count_updated = 0
     
     for i, line in enumerate(lines):
         if skip_next:
@@ -68,23 +74,19 @@ def main():
             
         new_lines.append(line)
         
-        # Nếu dòng hiện tại là #EXTINF, kiểm tra tvg-id
         if line.startswith("#EXTINF"):
-            # Tìm tvg-id="..."
+            # Tìm chính xác tvg-id trong dòng
             match = re.search(r'tvg-id="([^"]+)"', line)
             if match:
                 tvg_id = match.group(1)
-                # Nếu tvg-id này có trong danh sách cần cập nhật và dòng tiếp theo là link cũ
                 if tvg_id in live_links and i + 1 < len(lines):
-                    next_line = lines[i+1].strip()
-                    if next_line.startswith("http") or next_line == "":
-                        new_lines.append(live_links[tvg_id] + "\n")
-                        skip_next = True # Bỏ qua không add dòng link cũ nữa
+                    new_lines.append(live_links[tvg_id] + "\n")
+                    skip_next = True
+                    count_updated += 1
 
-    # Ghi lại vào file tivi.m3u tại thư mục gốc
     with open(m3u_file, "w", encoding="utf-8") as f:
         f.writelines(new_lines)
-    print("Đã cập nhật file tivi.m3u thành công!")
+    print(f"Đã cập nhật xong! Tổng số kênh đã thay link: {count_updated}/{len(CHANNELS)}")
 
 if __name__ == "__main__":
     main()
