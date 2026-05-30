@@ -1,34 +1,37 @@
-name: Tự động cập nhật link SCTV
+name: Tự động cập nhật link SCTV 2h/lần
 
 on:
   schedule:
-    - cron: '0 */2 * * *' # Tự động chạy mỗi 2 giờ
-  workflow_dispatch:      # Bấm chạy bằng tay để kiểm tra
+    # Chạy mỗi 2 tiếng (tính theo giờ UTC)
+    - cron: '0 */2 * * *'
+  workflow_dispatch: # Giúp bạn có thể bấm nút chạy thủ công bất cứ lúc nào trên GitHub
 
 jobs:
-  update-m3u:
+  update-links:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
 
     steps:
-      - name: Lấy mã nguồn từ Repository
-        uses: actions/checkout@v4
+    - name: Kiểm tra mã nguồn (Checkout)
+      uses: actions/checkout@v4
 
-      - name: Cài đặt Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-node-version: '20' # Sử dụng Node.js bản cập nhật mới định dạng chuẩn
+    - name: Cài đặt Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.x'
 
-      - name: Chạy script Node.js lấy link và cập nhật
-        run: node link_sctv_update.js
+    - name: Chạy script cập nhật link
+      run: python link_sctv_update.py
 
-      - name: Lưu các file lên Github (Commit & Push)
-        run: |
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
-          
-          git add tivi.m3u file/link_sctv_update.txt
-          
-          git diff --quiet && git diff --staged --quiet || git commit -m "Auto-update: Cập nhật link SCTV bằng Node.js"
+    - name: Kiểm tra thay đổi và Push lên lại Kho lưu trữ
+      run: |
+        git config --local user.email "github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
+        
+        # Kiểm tra xem file tivi.m3u có thay đổi hay không
+        if ! git diff --exit-code tivi.m3u; then
+          git add tivi.m3u
+          git commit -m "Tự động cập nhật link mới [$(date +'%Y-%m-%d %H:%M:%S')]"
           git push
+        else
+          echo "Không có thay đổi nào về link, bỏ qua commit."
+        fi
