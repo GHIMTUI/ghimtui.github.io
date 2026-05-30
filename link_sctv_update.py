@@ -1,6 +1,7 @@
-import cloudscraper
+import urllib.request
 import re
 
+# Cấu hình map giữa tvg-id trong file m3u và link lấy nguồn
 CHANNELS = {
     "sctvhdpth": "https://hoiquan.dpdns.org/VTVGo/?sctvphim",
     "sctv1hd": "https://hoiquan.dpdns.org/VTVGo/?sctv1",
@@ -15,24 +16,29 @@ CHANNELS = {
     "sctv21hd": "https://hoiquan.dpdns.org/VTVGo/?sctv21",
 }
 
-def fetch_live_link(scraper, url):
+def fetch_live_link(url):
     try:
-        # Thực hiện request giả lập trình duyệt vượt qua kiểm tra JavaScript của Cloudflare
-        response = scraper.get(url, timeout=15)
-        if response.status_code == 200:
-            content = response.text.strip()
-            # Tìm link http/https đầu tiên xuất hiện trong nội dung trả về
+        req = urllib.request.Request(
+            url, 
+            headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'}
+        )
+        with urllib.request.urlopen(req, timeout=10) as response:
+            content = response.read().decode('utf-8').strip()
+            # Kiểm tra nếu nội dung trả về có dạng link http/https
+            if content.startswith("http"):
+                return content
+            # Nếu web trả về cả cục m3u, tìm dòng http đầu tiên
             match = re.search(r'(https?://\S+)', content)
             if match:
-                return match.group(1).replace('"', '').replace("'", "").strip()
-        else:
-            print(f"-> Mã lỗi HTTP: {response.status_code}")
+                return match.group(1)
     except Exception as e:
-        print(f"Lỗi khi cào link: {e}")
+        print(f"Lỗi khi lấy link từ {url}: {e}")
     return None
 
 def main():
     m3u_file = "tivi.m3u"
+    
+    # Đọc nội dung file tivi.m3u hiện tại
     try:
         with open(m3u_file, "r", encoding="utf-8") as f:
             lines = f.readlines()
@@ -40,42 +46,45 @@ def main():
         print(f"Không tìm thấy file {m3u_file} ở thư mục gốc!")
         return
 
-    # Khởi tạo công cụ vượt Cloudflare (giả lập trình duyệt Chrome trên Windows)
-    scraper = cloudscraper.create_scraper(browser={'browser': 'chrome', 'platform': 'windows', 'mobile': False})
-    
+    # Lấy link mới cho tất cả các kênh
     live_links = {}
     for tvg_id, url in CHANNELS.items():
-        print(f"Đang xử lý kênh {tvg_id}...")
-        link = fetch_live_link(scraper, url)
+        print(f"Đang lấy link cho {tvg_id}...")
+        link = fetch_live_link(url)
         if link:
             live_links[tvg_id] = link
-            print(f"-> Lấy link thành công: {link}")
+            print(f"-> Thành công: {link}")
         else:
-            print(f"-> Không lấy được link hợp lệ!")
+            print(f"-> Thất bại!")
 
+    # Cập nhật vào nội dung m3u
     new_lines = []
     skip_next = False
-    count_updated = 0
     
     for i, line in enumerate(lines):
         if skip_next:
             skip_next = False
             continue
+            
         new_lines.append(line)
+        
+        # Nếu dòng hiện tại là #EXTINF, kiểm tra tvg-id
         if line.startswith("#EXTINF"):
+            # Tìm tvg-id="..."
             match = re.search(r'tvg-id="([^"]+)"', line)
             if match:
                 tvg_id = match.group(1)
+                # Nếu tvg-id này có trong danh sách cần cập nhật và dòng tiếp theo là link cũ
                 if tvg_id in live_links and i + 1 < len(lines):
-                    new_lines.append(live_links[tvg_id] + "\n")
-                    skip_next = True
-                    count_updated += 1
+                    next_line = lines[i+1].strip()
+                    if next_line.startswith("http") or next_line == "":
+                        new_lines.append(live_links[tvg_id] + "\n")
+                        skip_next = True # Bỏ qua không add dòng link cũ nữa
 
+    # Ghi lại vào file tivi.m3u tại thư mục gốc
     with open(m3u_file, "w", encoding="utf-8") as f:
         f.writelines(new_lines)
-        
-    print(f"\n--- HOÀN THÀNH QUY TRÌNH ---")
-    print(f"Cập nhật thành công: {count_updated}/{len(CHANNELS)} kênh vào file gốc.")
+    print("Đã cập nhật file tivi.m3u thành công!")
 
 if __name__ == "__main__":
     main()
