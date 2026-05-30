@@ -1,90 +1,71 @@
 import urllib.request
-import re
+import os
 
-# Cấu hình map giữa tvg-id trong file m3u và link lấy nguồn
-CHANNELS = {
-    "sctvhdpth": "https://hoiquan.dpdns.org/VTVGo/?sctvphim",
-    "sctv1hd": "https://hoiquan.dpdns.org/VTVGo/?sctv1",
-    "sctv4hd": "https://hoiquan.dpdns.org/VTVGo/?sctv4",
-    "sctv7hd": "https://hoiquan.dpdns.org/VTVGo/?sctv7",
-    "sctv8hd": "https://hoiquan.dpdns.org/VTVGo/?sctv8",
-    "sctv11hd": "https://hoiquan.dpdns.org/VTVGo/?sctv11",
-    "sctv13hd": "https://hoiquan.dpdns.org/VTVGo/?sctv13",
-    "sctv14hd": "https://hoiquan.dpdns.org/VTVGo/?sctv14",
-    "sctv18hd": "https://hoiquan.dpdns.org/VTVGo/?sctv18",
-    "sctv19hd": "https://hoiquan.dpdns.org/VTVGo/?sctv19",
-    "sctv21hd": "https://hoiquan.dpdns.org/VTVGo/?sctv21",
+# Danh sách map giữa Tên kênh (trong file m3u) và Link API lấy token mới
+CHANNELS_API = {
+    "SCTV Phim Tổng Hợp": "https://hoiquan.dpdns.org/VTVGo/?sctvphim",
+    "SCTV1": "https://hoiquan.dpdns.org/VTVGo/?sctv1",
+    "SCTV4": "https://hoiquan.dpdns.org/VTVGo/?sctv4",
+    "SCTV8": "https://hoiquan.dpdns.org/VTVGo/?sctv8",
+    "SCTV11": "https://hoiquan.dpdns.org/VTVGo/?sctv11",
+    "SCTV13": "https://hoiquan.dpdns.org/VTVGo/?sctv13",
+    "SCTV14": "https://hoiquan.dpdns.org/VTVGo/?sctv14",
+    "SCTV18": "https://hoiquan.dpdns.org/VTVGo/?sctv18",
+    "SCTV19": "https://hoiquan.dpdns.org/VTVGo/?sctv19",
+    "SCTV21": "https://hoiquan.dpdns.org/VTVGo/?sctv21"
+    # Lưu ý: SCTV7 bạn không cung cấp link API, nên script sẽ bỏ qua và giữ nguyên link cũ của SCTV7.
 }
 
-def fetch_live_link(url):
+def get_new_m3u8(api_url):
+    """Gọi API để lấy link m3u8 mới"""
     try:
-        req = urllib.request.Request(
-            url, 
-            headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'}
-        )
-        with urllib.request.urlopen(req, timeout=10) as response:
+        # Giả lập trình duyệt để tránh bị chặn
+        req = urllib.request.Request(api_url, headers={'User-Agent': 'Mozilla/5.0'})
+        with urllib.request.urlopen(req, timeout=15) as response:
             content = response.read().decode('utf-8').strip()
-            # Kiểm tra nếu nội dung trả về có dạng link http/https
+            # Nếu API trả về trực tiếp đoạn text chứa link
             if content.startswith("http"):
                 return content
-            # Nếu web trả về cả cục m3u, tìm dòng http đầu tiên
-            match = re.search(r'(https?://\S+)', content)
-            if match:
-                return match.group(1)
+            # Nếu API sử dụng redirect (chuyển hướng) thẳng tới link m3u8
+            elif response.geturl() != api_url:
+                return response.geturl()
     except Exception as e:
-        print(f"Lỗi khi lấy link từ {url}: {e}")
+        print(f"Lỗi khi lấy link {api_url}: {e}")
     return None
 
-def main():
-    m3u_file = "tivi.m3u"
-    
-    # Đọc nội dung file tivi.m3u hiện tại
-    try:
-        with open(m3u_file, "r", encoding="utf-8") as f:
-            lines = f.readlines()
-    except FileNotFoundError:
-        print(f"Không tìm thấy file {m3u_file} ở thư mục gốc!")
+def update_m3u_file(filepath="tivi.m3u"):
+    if not os.path.exists(filepath):
+        print(f"Không tìm thấy file {filepath}")
         return
 
-    # Lấy link mới cho tất cả các kênh
-    live_links = {}
-    for tvg_id, url in CHANNELS.items():
-        print(f"Đang lấy link cho {tvg_id}...")
-        link = fetch_live_link(url)
-        if link:
-            live_links[tvg_id] = link
-            print(f"-> Thành công: {link}")
-        else:
-            print(f"-> Thất bại!")
+    with open(filepath, 'r', encoding='utf-8') as f:
+        lines = f.readlines()
 
-    # Cập nhật vào nội dung m3u
-    new_lines = []
-    skip_next = False
-    
-    for i, line in enumerate(lines):
-        if skip_next:
-            skip_next = False
-            continue
-            
-        new_lines.append(line)
-        
-        # Nếu dòng hiện tại là #EXTINF, kiểm tra tvg-id
-        if line.startswith("#EXTINF"):
-            # Tìm tvg-id="..."
-            match = re.search(r'tvg-id="([^"]+)"', line)
-            if match:
-                tvg_id = match.group(1)
-                # Nếu tvg-id này có trong danh sách cần cập nhật và dòng tiếp theo là link cũ
-                if tvg_id in live_links and i + 1 < len(lines):
-                    next_line = lines[i+1].strip()
-                    if next_line.startswith("http") or next_line == "":
-                        new_lines.append(live_links[tvg_id] + "\n")
-                        skip_next = True # Bỏ qua không add dòng link cũ nữa
+    updated = False
+    for i in range(len(lines)):
+        # Tìm các dòng chứa thông tin kênh
+        if lines[i].startswith("#EXTINF"):
+            for channel_name, api_url in CHANNELS_API.items():
+                # Kiểm tra xem tên kênh có khớp với dòng hiện tại không (ví dụ: ,SCTV1)
+                if f",{channel_name}" in lines[i]:
+                    new_link = get_new_m3u8(api_url)
+                    # Nếu lấy được link mới và dòng ngay bên dưới là dòng chứa link cũ
+                    if new_link and (i + 1 < len(lines)) and lines[i+1].startswith("http"):
+                        if lines[i+1].strip() != new_link:
+                            lines[i+1] = new_link + "\n"
+                            print(f"Đã cập nhật thành công: {channel_name}")
+                            updated = True
+                        else:
+                            print(f"Link chưa thay đổi, bỏ qua: {channel_name}")
+                    break
 
-    # Ghi lại vào file tivi.m3u tại thư mục gốc
-    with open(m3u_file, "w", encoding="utf-8") as f:
-        f.writelines(new_lines)
-    print("Đã cập nhật file tivi.m3u thành công!")
+    # Ghi lại đè lên file cũ nếu có sự thay đổi
+    if updated:
+        with open(filepath, 'w', encoding='utf-8') as f:
+            f.writelines(lines)
+        print("Đã lưu các thay đổi vào tivi.m3u")
+    else:
+        print("Không có link nào cần cập nhật.")
 
 if __name__ == "__main__":
-    main()
+    update_m3u_file()
