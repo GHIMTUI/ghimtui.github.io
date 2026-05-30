@@ -299,44 +299,42 @@ http://livevlisctcdnw.seenow.vn/livesnv2/D_DRAMAS_HD/manifest.mpd
 #KODIPROP:inputstream.adaptive.license_key=c01b22c5f5b44d72b9902b33a4c36fb7:8fe81a99e5b1cc891bb9e9f848b6e2e7
 http://livevlisctcdnw.seenow.vn/livesnv2/VFAMILY/manifest.mpd
 
-#EXTINF:-1 tvg-id="sctvhdpth" tvg-logo="https://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTVPTH.png",SCTV Phim Tổng Hợp
-https://www.cloudflare.com/5xx-error-landing
+#EXTINF:-1 tvg-id="sctvhdpth"  tvg-logo="https://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTVPTH.png",SCTV Phim Tổng Hợp
+http://vtvgolive-sctvdrm.vtvdigital.vn/I9iQAJCMUVso3ERHVTdAfg/1780077660/manifest/sctvpth/playlist_1080p.m3u8
 
-#EXTINF:-1 tvg-id="sctv1hd" tvg-logo="https://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV1.png",SCTV1
-https://www.cloudflare.com/5xx-error-landing
+#EXTINF:-1 tvg-id="sctv1hd"  tvg-logo="https://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV1.png",SCTV1
+http://vtvgolive-sctv.vtvdigital.vn/OpLgY00yWPjBEFy82i1y-w/1780088435/asdfasdvgas2vtvsctv/1/masterh264.m3u8
 
-#EXTINF:-1 tvg-id="sctv2hd" tvg-logo="https://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV2.png",SCTV2
-http://liveh12.vtvprime.vn/hls/SCTV2/03.m3u8
+#EXTINF:-1 tvg-id="sctv4hd"  tvg-logo="https://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV4.png",SCTV4 
+http://vtvgolive-sctvdrm.vtvdigital.vn/ELslfhcyzbaaxSINsAbHdw/1780088439/manifest/sctv4/master.m3u8
 
-#EXTINF:-1 tvg-id="sctv4hd" tvg-logo="https://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV4.png",SCTV4 
-https://www.cloudflare.com/5xx-error-landing
+#EXTINF:-1 tvg-id="sctv7hd"  tvg-logo="https://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV7.png",SCTV7 
+http://vtvgolive-sctvdrm.vtvdigital.vn/4HFkh6JR069L_VJYKsjUfw/1780088443/manifest/sctv7/master.m3u8
 
-#EXTINF:-1 tvg-id="sctv6hd" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/sctv6.png",SCTV6
-http://live.fptplay53.net/epzhd2/film360_vhls.smil/chunklist_b5000000.m3u8
+#EXTINF:-1 tvg-id="sctv8hd"  tvg-logo="https://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV8.png",SCTV8
+http://vtvgolive-sctv.vtvdigital.vn/7yLD8T_teBznB6gwvJL4xQ/1780088444/bdnc6qbiq1vtvsctv/8/index.m3u8
 
-#EXTINF:-1 tvg-id="sctv7hd" tvg-logo="https://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV7.png",SCTV7 
-https://www.cloudflare.com/5xx-error-landing
+#EXTINF:-1 tvg-id="sctv11hd"  tvg-logo="https://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV11.png",SCTV11
+http://vtvgolive-sctvdrm.vtvdigital.vn/ws76JpQWoKBqWXACgxLeCg/1780088448/manifest/sctv11/master.m3u8
 
-#EXTINF:-1 tvg-id="sctv8hd" tvg-logo="https://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV8.png",SCTV8
-https://www.cloudflare.com/5xx-error-landing
+#EXTINF:-1 tvg-id="sctv13hd"  tvg-logo="https://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV13.png",SCTV13
+http://vtvgolive-sctvdrm.vtvdigital.vn/Yppyslj5oQqybgxmm-yV0Q/1780066866/manifest/sctv11/playlist_720p.m3u8
 
-#EXTINF:-1 tvg-id="sctv11hd" tvg-logo="https://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV11.png",SCTV11
-https://www.cloudflare.com/5xx-error-landing
 
-#EXTINF:-1 tvg-id="sctv13hd" tvg-logo="https://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV13.png",SCTV13
-https://www.cloudflare.com/5xx-error-landing
+#EXTINF:-1 tvg-id="sctv14hd"  tvg-logo="https://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV14.png",SCTV14 
+http://vtvgolive-sctv.vtvdigital.vn/CyyvCslHh1Hhw1eUXMOzxA/1780077655/6GoYKNrTy3vtvsctv/14/masterh264.m3u8
 
-#EXTINF:-1 tvg-id="sctv14hd" tvg-logo="https://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV14.png",SCTV14 
-https://www.cloudflare.com/5xx-error-landing
 
-#EXTINF:-1 tvg-id="sctv18hd" tvg-logo="https://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV18.png",SCTV18 
-https://www.cloudflare.com/5xx-error-landing
+#EXTINF:-1 tvg-id="sctv18hd"  tvg-logo="https://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV18.png",SCTV18 
+http://vtvgolive-sctvdrm.vtvdigital.vn/I9iQAJCMUVso3ERHVTdAfg/1780077660/manifest/sctv18/playlist_720p.m3u8
 
-#EXTINF:-1 tvg-id="sctv19hd" tvg-logo="https://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV19.png",SCTV19
-https://www.cloudflare.com/5xx-error-landing
 
-#EXTINF:-1 tvg-id="sctv21hd" tvg-logo="https://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV21.png",SCTV21
-https://www.cloudflare.com/5xx-error-landing
+#EXTINF:-1 tvg-id="sctv19hd"  tvg-logo="https://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV19.png",SCTV19
+http://vtvgolive-sctv.vtvdigital.vn/MliE-sLZSm_p-V7dXekohA/1780077662/5m63a995d8vtvsctv/19/index.m3u8
+
+
+#EXTINF:-1 tvg-id="sctv21hd"  tvg-logo="https://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV21.png",SCTV21
+http://vtvgolive-sctv.vtvdigital.vn/p1GJpvT0T3tOgYfVD0g14w/1780077666/bdnc6qbiq1vtvsctv/21/index.m3u8
 
 #EXTINF:-1 tvg-id="antvhd" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/antv.png", An Ninh
 http://live.fptplay53.net/fnxhd2/anninhtv_vhls.smil/chunklist_b5000000.m3u8
