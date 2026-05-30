@@ -1,40 +1,33 @@
-name: Auto Update M3U Links
+name: Tự động cập nhật link SCTV
 
 on:
   schedule:
-    - cron: '0 */2 * * *'
-  workflow_dispatch:
+    - cron: '0 */2 * * *' # Lệnh này nghĩa là cứ chẵn 2 giờ chạy 1 lần (00:00, 02:00, 04:00...)
+  workflow_dispatch: # Cho phép bạn bấm nút "Run workflow" bằng tay để test ngay lập tức
 
 jobs:
   update-m3u:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write # Cho phép Actions được quyền sửa và lưu file tivi.m3u
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
+      - name: Lấy mã nguồn về
+        uses: actions/checkout@v4
 
-    - name: Set up Python
-      uses: actions/setup-python@v5
-      with:
-        python-version: '3.10'
+      - name: Cài đặt Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
 
-    # Cài đặt thư viện chuyên dụng để vượt qua Cloudflare
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install cloudscraper
+      - name: Chạy script lấy link mới
+        run: python link_sctv_update.py
 
-    - name: Run update script
-      run: python link_sctv_update.py
-
-    - name: Commit and Push changes
-      run: |
-        git config --local user.email "github-actions[bot]@users.noreply.github.com"
-        git config --local user.name "github-actions[bot]"
-        git add tivi.m3u
-        if git diff --staged --quiet; then
-          echo "Không có link nào thay đổi."
-        else
-          git commit -m "Auto-update tivi.m3u links [skip ci]"
-          git push origin main
-        fi
+      - name: Lưu file tivi.m3u lên Github (Commit & Push)
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add tivi.m3u
+          # Lệnh dưới đây kiểm tra nếu file có thay đổi thì mới commit, không thì bỏ qua để tránh lỗi
+          git diff --quiet && git diff --staged --quiet || git commit -m "Auto-update: Cập nhật link SCTV mới"
+          git push
