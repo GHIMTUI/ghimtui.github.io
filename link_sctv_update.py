@@ -1,5 +1,5 @@
-import urllib.request
 import os
+import cloudscraper
 
 CHANNELS_API = {
     "SCTV Phim Tổng Hợp": "https://hoiquan.dpdns.org/VTVGo/?sctvphim",
@@ -18,32 +18,38 @@ TXT_FILE_PATH = "file/link_sctv_update.txt"
 M3U_FILE_PATH = "tivi.m3u"
 
 def get_new_m3u8(api_url):
-    """Giả lập trình duyệt để vượt qua lỗi 403 Forbidden"""
-    headers = {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
-        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8',
-        'Accept-Language': 'vi-VN,vi;q=0.9,en-US;q=0.8,en;q=0.7',
-        'Referer': 'https://hoiquan.dpdns.org/',
-        'Connection': 'keep-alive',
-        'Upgrade-Insecure-Requests': '1'
-    }
+    """Sử dụng cloudscraper để vượt tường lửa chống bot (Cloudflare/WAF)"""
+    # Khởi tạo scraper ngụy trang thành Chrome trên Windows
+    scraper = cloudscraper.create_scraper(
+        browser={
+            'browser': 'chrome',
+            'platform': 'windows',
+            'desktop': True
+        }
+    )
+    
     try:
-        req = urllib.request.Request(api_url, headers=headers)
-        with urllib.request.urlopen(req, timeout=15) as response:
-            content = response.read().decode('utf-8').strip()
+        response = scraper.get(api_url, timeout=15)
+        
+        # Nếu trang trả về mã 200 (Thành công)
+        if response.status_code == 200:
+            content = response.text.strip()
+            # Nếu nội dung trả về là 1 link m3u8 trực tiếp
             if content.startswith("http"):
                 return content
-            elif response.geturl() != api_url:
-                return response.geturl()
+                
+        # Nếu web sử dụng cơ chế chuyển hướng (Redirect)
+        if response.url != api_url and response.url.startswith("http"):
+            return response.url
+            
     except Exception as e:
         print(f"Lỗi khi lấy link {api_url}: {e}")
+        
     return None
 
 def step1_fetch_and_save_txt():
     """BƯỚC 1: Lấy link mới và in ra thư mục file/link_sctv_update.txt"""
-    # Tự động tạo thư mục 'file' nếu chưa có
     os.makedirs(os.path.dirname(TXT_FILE_PATH), exist_ok=True)
-    
     fetched_links = {}
     print("--- BƯỚC 1: Lấy link và lưu ra file txt ---")
     
@@ -51,7 +57,6 @@ def step1_fetch_and_save_txt():
         for channel, api in CHANNELS_API.items():
             new_link = get_new_m3u8(api)
             if new_link:
-                # Lưu vào txt theo cấu trúc: Tên kênh|Link
                 f.write(f"{channel}|{new_link}\n")
                 fetched_links[channel] = new_link
                 print(f"[+] Thành công: {channel}")
@@ -61,7 +66,7 @@ def step1_fetch_and_save_txt():
     return fetched_links
 
 def step2_update_m3u(fetched_links):
-    """BƯỚC 2: Cập nhật ngược lại vào tivi.m3u từ dữ liệu vừa lấy"""
+    """BƯỚC 2: Cập nhật ngược lại vào tivi.m3u"""
     print("\n--- BƯỚC 2: Cập nhật tivi.m3u ---")
     if not os.path.exists(M3U_FILE_PATH):
         print(f"Không tìm thấy file {M3U_FILE_PATH}")
@@ -74,9 +79,7 @@ def step2_update_m3u(fetched_links):
     for i in range(len(lines)):
         if lines[i].startswith("#EXTINF"):
             for channel_name, new_link in fetched_links.items():
-                # Tìm dòng có chứa đúng tên kênh (có dấu phẩy ở trước)
                 if f",{channel_name}" in lines[i]:
-                    # Nếu dòng ngay bên dưới là link cũ thì đè link mới vào
                     if (i + 1 < len(lines)) and lines[i+1].startswith("http"):
                         if lines[i+1].strip() != new_link:
                             lines[i+1] = new_link + "\n"
@@ -94,7 +97,6 @@ def step2_update_m3u(fetched_links):
         print("\n=> Không có thay đổi nào để lưu.")
 
 if __name__ == "__main__":
-    # Chạy nối tiếp 2 bước
     links = step1_fetch_and_save_txt()
     if links:
         step2_update_m3u(links)
