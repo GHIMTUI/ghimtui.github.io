@@ -2,17 +2,17 @@ import cloudscraper
 import re
 
 CHANNELS = {
-    "sctvhdpth": "http://hoiquan.dpdns.org/VTVGo/?sctvphim",
-    "sctv1hd": "http://hoiquan.dpdns.org/VTVGo/?sctv1",
-    "sctv4hd": "http://hoiquan.dpdns.org/VTVGo/?sctv4",
-    "sctv7hd": "http://hoiquan.dpdns.org/VTVGo/?sctv7",
-    "sctv8hd": "http://hoiquan.dpdns.org/VTVGo/?sctv8",
-    "sctv11hd": "http://hoiquan.dpdns.org/VTVGo/?sctv11",
-    "sctv13hd": "http://hoiquan.dpdns.org/VTVGo/?sctv13",
-    "sctv14hd": "http://hoiquan.dpdns.org/VTVGo/?sctv14",
-    "sctv18hd": "http://hoiquan.dpdns.org/VTVGo/?sctv18",
-    "sctv19hd": "http://hoiquan.dpdns.org/VTVGo/?sctv19",
-    "sctv21hd": "http://hoiquan.dpdns.org/VTVGo/?sctv21",
+    "sctvhdpth": "https://hoiquan.dpdns.org/VTVGo/?sctvphim",
+    "sctv1hd": "https://hoiquan.dpdns.org/VTVGo/?sctv1",
+    "sctv4hd": "https://hoiquan.dpdns.org/VTVGo/?sctv4",
+    "sctv7hd": "https://hoiquan.dpdns.org/VTVGo/?sctv7",
+    "sctv8hd": "https://hoiquan.dpdns.org/VTVGo/?sctv8",
+    "sctv11hd": "https://hoiquan.dpdns.org/VTVGo/?sctv11",
+    "sctv13hd": "https://hoiquan.dpdns.org/VTVGo/?sctv13",
+    "sctv14hd": "https://hoiquan.dpdns.org/VTVGo/?sctv14",
+    "sctv18hd": "https://hoiquan.dpdns.org/VTVGo/?sctv18",
+    "sctv19hd": "https://hoiquan.dpdns.org/VTVGo/?sctv19",
+    "sctv21hd": "https://hoiquan.dpdns.org/VTVGo/?sctv21",
 }
 
 def fetch_live_link(scraper, url):
