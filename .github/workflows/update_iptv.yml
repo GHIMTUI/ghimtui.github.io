@@ -2,8 +2,8 @@ name: Extract IPTV Link to Text File With M3U8 Extension
 
 on:
   schedule:
-    - cron: '0 */2 * * *' # Chạy tự động mỗi 2 tiếng
-  workflow_dispatch: # Nút bấm chạy bằng tay
+    - cron: '0 */2 * * *' # Tự động chạy mỗi 2 tiếng
+  workflow_dispatch: # Nút bấm chạy bằng tay bất cứ lúc nào
 
 jobs:
   extract-link:
@@ -16,7 +16,7 @@ jobs:
     - name: Set up Node.js
       uses: actions/setup-node@v4
       with:
-        node-version: 20
+        node-version: 24
 
     - name: Run JavaScript Extract Link
       run: |
@@ -28,27 +28,28 @@ jobs:
 
         function extractRealLink(url) {
             http.get(url, {
-                headers: { "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)" }
+                headers: { 
+                    // Đã thay đổi User-Agent sang bản Android Mobile theo yêu cầu của bạn
+                    "User-Agent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Mobile Safari/537.36" 
+                }
             }, (res) => {
                 if ([301, 302, 307].includes(res.statusCode) && res.headers.location) {
                     let realUrl = res.headers.location.trim();
                     
-                    // Kiểm tra xem link cuối cùng đã kết thúc bằng .m3u8 chưa
+                    // Kiểm tra và ép đuôi .m3u8 ở cuối file text
                     if (!realUrl.endsWith(".m3u8")) {
-                        // Nếu link có dấu "?" (đang chứa token/tham số), ta nối thêm "&file=.m3u8"
                         if (realUrl.includes("?")) {
                             realUrl = realUrl + "&file=.m3u8";
                         } else {
-                            // Nếu link trắng không có tham số, ta nối thêm "?file=.m3u8"
                             realUrl = realUrl + "?file=.m3u8";
                         }
                     }
                     
-                    // Ghi vào file txt
+                    // Ghi vào file link_sctv.txt
                     fs.writeFileSync("link_sctv.txt", realUrl);
-                    console.log("Đã bóc tách và ép đuôi m3u8 thành công: " + realUrl);
+                    console.log("Đã bóc vỏ với UA Mobile thành công: " + realUrl);
                 } else {
-                    console.log("Không tìm thấy link redirect. Mã lỗi: " + res.statusCode);
+                    console.log("Không tìm thấy link redirect với UA này. Mã phản hồi: " + res.statusCode);
                 }
             }).on("error", (err) => {
                 console.error("Lỗi kết nối: " + err.message);
@@ -63,5 +64,5 @@ jobs:
         git config --global user.name "GitHub Action Bot"
         git config --global user.email "actions@github.com"
         git add link_sctv.txt
-        git commit -m "Cập nhật link chuẩn đuôi m3u8 vào link_sctv.txt" || echo "Không có thay đổi"
+        git commit -m "Cập nhật link dùng UA Android Mobile" || echo "Không có thay đổi"
         git push
