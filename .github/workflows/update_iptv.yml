@@ -1,0 +1,57 @@
+name: IPTV Link to Text File
+
+on:
+  schedule:
+    - cron: '0 */2 * * *' # Tự động chạy mỗi 2 tiếng một lần
+  workflow_dispatch: # Nút bấm để bạn tự kích hoạt chạy bằng tay bất cứ lúc nào
+
+jobs:
+  extract-link:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: 20 # Sử dụng phiên bản Node.js ổn định
+
+    - name: Run JavaScript Extract Link
+      run: |
+        node -e '
+        const http = require("http");
+        const fs = require("fs");
+
+        const targetUrl = "http://hoiquan.dpdns.org/VTVGo/?sctv4";
+
+        function extractRealLink(url) {
+            http.get(url, {
+                headers: { "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)" }
+            }, (res) => {
+                // Kiểm tra nếu server trả về mã phản hồi chuyển hướng (301, 302, 307)
+                if ([301, 302, 307].includes(res.statusCode) && res.headers.location) {
+                    let realUrl = res.headers.location;
+                    
+                    // Ghi đè duy nhất nội dung đường link vào file link_sctv.txt
+                    fs.writeFileSync("link_sctv.txt", realUrl.trim());
+                    console.log("Bóc tách thành công! Đã lưu vào link_sctv.txt: " + realUrl);
+                } else {
+                    console.log("Server không trả về mã chuyển hướng. Mã trạng thái: " + res.statusCode);
+                }
+            }).on("error", (err) => {
+                console.error("Lỗi kết nối đến server vỏ: " + err.message);
+            });
+        }
+
+        extractRealLink(targetUrl);
+        '
+
+    - name: Commit and Push changes
+      run: |
+        git config --global user.name "GitHub Action Bot"
+        git config --global user.email "actions@github.com"
+        git add link_sctv.txt
+        git commit -m "Cập nhật link m3u8 mới vào link_sctv.txt" || echo "Không có thay đổi"
+        git push 
