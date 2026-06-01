@@ -2,8 +2,8 @@ name: Extract IPTV Link to Text File With M3U8 Extension
 
 on:
   schedule:
-    - cron: '0 */2 * * *' # Tự động chạy mỗi 2 tiếng một lần
-  workflow_dispatch: # Nút bấm chạy bằng tay bất cứ lúc nào
+    - cron: '0 */2 * * *' # Tự động chạy ngầm định kỳ mỗi 2 tiếng một lần
+  workflow_dispatch: # Nút bấm chạy bằng tay nếu muốn test ngay
 
 jobs:
   extract-link:
@@ -18,6 +18,9 @@ jobs:
       with:
         node-version: 20
 
+    - name: Install Axios Library
+      run: npm install axios # Cài đặt thư viện xử lý mạng nâng cao để bypass 403
+
     - name: Run JavaScript Extract Link
       run: node extract.js
 
@@ -26,5 +29,5 @@ jobs:
         git config --global user.name "GitHub Action Bot"
         git config --global user.email "actions@github.com"
         git add link_sctv.txt
-        git commit -m "Bypass 403 và cập nhật link m3u8" || echo "Không có thay đổi"
+        git commit -m "Bypass 403 bằng Axios và cập nhật link m3u8" || echo "Không có thay đổi"
         git push
