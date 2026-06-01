@@ -1,73 +1,63 @@
-const http = require("http");
-const fs = require("fs");
+const axios = require('axios');
+const fs = require('fs');
 
 const targetUrl = "http://hoiquan.dpdns.org/VTVGo/?sctv4";
 
-function requestWithBypass(url, retryCount = 0) {
-    if (retryCount > 3) {
-        console.log("Quá số lần chuyển hướng cho phép.");
-        return;
-    }
+async function extractLink() {
+    try {
+        console.log("Đang tiến hành bóc tách vỏ qua Axios...");
+        
+        // Gửi request với đầy đủ cấu hình giả lập trình duyệt di động sâu
+        const response = await axios.get(targetUrl, {
+            headers: {
+                'User-Agent': 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Mobile Safari/537.36',
+                'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8',
+                'Accept-Language': 'vi-VN,vi;q=0.9,en-US;q=0.8,en;q=0.7',
+                'Referer': 'http://hoiquan.dpdns.org/',
+                'Origin': 'http://hoiquan.dpdns.org',
+                'Connection': 'keep-alive',
+                'Cache-Control': 'max-age=0'
+            },
+            maxRedirects: 5, // Tự động đi xuyên qua tối đa 5 lớp vỏ redirect
+            validateStatus: function (status) {
+                return status >= 200 && status < 400; // Nhận hết các mã phản hồi từ 200 đến 399
+            }
+        });
 
-    console.log("Đang kết nối tới: " + url);
-    
-    http.get(url, {
-        headers: { 
-            "User-Agent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Mobile Safari/537.36",
-            "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8",
-            "Accept-Language": "vi-VN,vi;q=0.9,en-US;q=0.8,en;q=0.7",
-            "Cache-Control": "max-age=0",
-            "Upgrade-Insecure-Requests": "1",
-            "Connection": "keep-alive"
+        // Lấy URL cuối cùng sau khi đã đi xuyên qua các lớp chuyển hướng
+        let realUrl = response.request.res.responseUrl || targetUrl;
+        
+        // Nếu trường hợp server trả về mã 200 và giấu link trong nội dung HTML
+        if (realUrl === targetUrl || !realUrl.includes('m3u8')) {
+            const htmlContent = response.data;
+            const m3u8Regex = /(https?:\/\/[^\s"']+\.m3u8[^\s"']*)/i;
+            const match = htmlContent.match(m3u8Regex);
+            if (match && match[1]) {
+                realUrl = match[1].trim();
+            }
         }
-    }, (res) => {
-        // Trường hợp 1: Chuyển hướng 301, 302, 307
-        if ([301, 302, 307].includes(res.statusCode) && res.headers.location) {
-            let realUrl = res.headers.location.trim();
+
+        // Kiểm tra và ép định dạng đuôi .m3u8 cho chuẩn chỉnh
+        if (realUrl && (realUrl.includes('m3u8') || realUrl.includes('vtvgo'))) {
+            if (!realUrl.endsWith(".m3u8")) {
+                realUrl = realUrl.includes("?") ? realUrl + "&file=.m3u8" : realUrl + "?file=.m3u8";
+            }
             
-            if (realUrl.startsWith("/")) {
-                realUrl = "http://hoiquan.dpdns.org" + realUrl;
-            }
-
-            if (realUrl.includes("m3u8") || realUrl.includes("vtvgo.vn") || retryCount === 2) {
-                if (!realUrl.endsWith(".m3u8")) {
-                    realUrl = realUrl.includes("?") ? realUrl + "&file=.m3u8" : realUrl + "?file=.m3u8";
-                }
-                fs.writeFileSync("link_sctv.txt", realUrl);
-                console.log("=== BÓC TÁCH THÀNH CÔNG ===");
-                console.log("Đã lưu vào link_sctv.txt: " + realUrl);
-            } else {
-                requestWithBypass(realUrl, retryCount + 1);
-            }
-        } 
-        // Trường hợp 2: Trả về mã 200, tìm link ẩn trong HTML bằng Regex
-        else if (res.statusCode === 200) {
-            let data = "";
-            res.on("data", (chunk) => { data += chunk; });
-            res.on("end", () => {
-                const m3u8Regex = /(https?:\/\/[^\s"']+\.m3u8[^\s"']*)/i;
-                const match = data.match(m3u8Regex);
-                
-                if (match && match[1]) {
-                    let realUrl = match[1].trim();
-                    if (!realUrl.endsWith(".m3u8")) {
-                        realUrl = realUrl.includes("?") ? realUrl + "&file=.m3u8" : realUrl + "?file=.m3u8";
-                    }
-                    fs.writeFileSync("link_sctv.txt", realUrl);
-                    console.log("=== BÓC TÁCH THÀNH CÔNG TỪ HTML ===");
-                    console.log("Đã tìm thấy link: " + realUrl);
-                } else {
-                    console.log("=== THẤT BẠI ===");
-                    console.log("Server trả về mã 200 nhưng không có link m3u8 nào ẩn bên trong.");
-                }
-            });
+            // Ghi kết quả vào file txt
+            fs.writeFileSync("link_sctv.txt", realUrl);
+            console.log("=== BÓC TÁCH THÀNH CÔNG ===");
+            console.log("Link thu được: " + realUrl);
         } else {
-            console.log("=== BỊ CHẶN ===");
-            console.log("Mã lỗi: " + res.statusCode);
+            console.log("=== THẤT BẠI ===");
+            console.log("Không tìm thấy đường link m3u8 nào hợp lệ.");
         }
-    }).on("error", (err) => {
-        console.error("Lỗi mạng: " + err.message);
-    });
+
+    } catch (error) {
+        console.error("Lỗi trong quá trình bóc vỏ: " + error.message);
+        if (error.response) {
+            console.log("Mã phản hồi từ Server: " + error.response.status);
+        }
+    }
 }
 
-requestWithBypass(targetUrl);
+extractLink();
