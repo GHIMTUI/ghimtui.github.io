@@ -202,7 +202,8 @@ http://live.fptplay53.net/fnxsd1/thainguyen_hls.smil/chunklist_b2500000.m3u8
 
 #EXTINF:-1 tvg-id="thanhhoa" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/thanhhoa.png", Thanh Hóa 
 #http://truyenhinh.vnptvas.vn/live.m3u8?c=vstv525&q=sd&pkg=pkg12.hni
-http://liveh12.vtvprime.vn/hls/THANHHOATV/03.m3u8
+#http://liveh12.vtvprime.vn/hls/THANHHOATV/03.m3u8
+http://freem3u.xyz/api/live/play.m3u8?vid=89
 
 #EXTINF:-1 tvg-id="tuyenquang" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/tuyenquang.png", Tuyên Quang 
 http://live.fptplay53.net/fnxsd1/tuyenquang_hls.smil/chunklist_b2500000.m3u8
