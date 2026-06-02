@@ -2,43 +2,66 @@ const { chromium } = require('playwright');
 const fs = require('fs');
 
 (async () => {
-  // Khởi chạy trình duyệt ẩn (headless)
-  const browser = await chromium.launch({ headless: true });
-  const page = await browser.newPage();
+  // Khởi chạy trình duyệt với cấu hình giả lập sâu hơn
+  const browser = await chromium.launch({ 
+    headless: true,
+    args: [
+      '--disable-blink-features=AutomationControlled', // Ẩn biến tự động hóa của robot
+      '--no-sandbox',
+      '--disable-setuid-sandbox'
+    ]
+  });
   
+  // Tạo context với User-Agent thật và kích thước màn hình phổ biến
+  const context = await browser.newContext({
+    userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
+    viewport: { width: 1280, height: 720 },
+    extraHTTPHeaders: {
+      'Referer': 'https://hoiquan.dpdns.org/VTVGo/'
+    }
+  });
+
+  const page = await context.newPage();
   let m3u8Url = '';
 
-  // Bắt các request mạng để tìm link chứa .m3u8
+  // Lắng nghe tất cả các request để bắt link m3u8
   page.on('request', request => {
     const url = request.url();
-    // Lọc tìm link m3u8 gốc (bỏ qua các link tracking hoặc phụ nếu có)
-    if (url.includes('.m3u8') && !url.includes('analytics')) {
+    // Bắt các link m3u8 từ vtvgo hoặc hệ thống CDN
+    if (url.includes('.m3u8')) {
+      console.log('-> Phát hiện URL mạng:', url);
       m3u8Url = url;
     }
   });
 
   try {
-    // Truy cập vào link của bạn
+    console.log('Đang truy cập trang web...');
     await page.goto('https://hoiquan.dpdns.org/VTVGo/?sctv7', {
-      waitUntil: 'networkidle', // Đợi cho đến khi mạng hết tải (đã load xong link video)
-      timeout: 45000
+      waitUntil: 'domcontentloaded', // Đợi cấu trúc trang load xong trước
+      timeout: 60000
     });
     
-    // Đợi thêm 3 giây cho chắc chắn script player đã chạy
-    await page.waitForTimeout(3000); 
+    // Cuộn trang xuống một chút để giả lập hành vi người dùng
+    await page.evaluate(() => window.scrollBy(0, 300));
+    
+    console.log('Đợi luồng dữ liệu video tải (15 giây)...');
+    await page.waitForTimeout(15000); 
+
+    // CHỤP ẢNH MÀN HÌNH ĐỂ KIỂM TRA (Sẽ lưu thành file trong repo để bạn xem có bị Cloudflare chặn không)
+    await page.screenshot({ path: 'screenshot.png' });
+    console.log('Đã chụp ảnh màn hình debug tại screenshot.png');
+
   } catch (error) {
-    console.error('Lỗi khi tải trang:', error);
+    console.error('Lỗi trong quá trình chạy:', error);
   }
 
-  // Kiểm tra nếu tìm thấy link thì ghi vào file
+  // Ghi kết quả
   if (m3u8Url) {
-    console.log('Đã tìm thấy link M3U8:', m3u8Url);
+    console.log('THÀNH CÔNG! Đã tìm thấy link m3u8:', m3u8Url);
     fs.writeFileSync('sctv_link.txt', m3u8Url, 'utf8');
-    console.log('Đã lưu vào file sctv_link.txt thành công!');
   } else {
-    console.log('Không tìm thấy link M3U8 nào.');
-    // Ghi file rỗng hoặc báo lỗi để không bị giữ link cũ
-    fs.writeFileSync('sctv_link.txt', 'Không tìm thấy link', 'utf8');
+    console.log('THẤT BẠI: Không tìm thấy link m3u8 nào sau 15 giây chờ.');
+    fs.writeFileSync('sctv_link.txt', 'Không tìm thấy link - Có thể bị chặn IP', 'utf8');
   }
 
   await browser.close();
