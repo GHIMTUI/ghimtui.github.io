@@ -176,10 +176,6 @@
             border-radius: 8px;
         }
 
-        #txtAr, #prefixInput {
-            padding-bottom: calc(1.5rem + var(--safe-area-inset-bottom));
-        }
-
         .code-input:focus {
             border-color: var(--accent-green);
         }
@@ -198,7 +194,7 @@
     <div class="toolbar">
         <div class="info-path">ADBLOCK PRO</div>
         <div class="actions">
-            <div id="statusContainer" class="status-pill"></div>
+            <div id="statusContainer" class="status-pill visible pill-gray-style">KHỞI TẠO...</div>
             <button id="svBtn" class="status-pill"></button>
         </div>
     </div>
@@ -210,7 +206,7 @@
 
     <div id="tab-editor" class="tab-content active">
         <div class="textarea-wrapper">
-            <textarea id="txtAr" class="code-input" spellcheck="false" placeholder="Đang tải bộ lọc..."></textarea>
+            <textarea id="txtAr" class="code-input" spellcheck="false" placeholder="Đang tải bộ lọc từ GitHub..."></textarea>
         </div>
     </div>
 
@@ -241,15 +237,28 @@ function switchTab(tabId) {
  */
 function formatPrefixesSmart(input) {
     if (!input) return "";
-    let cleanedInput = input.replace(/,/g, ' ').replace(/\.+(?=\w|\.|$)/g, ' '); 
+    
+    // Bước 1: Thay thế tất cả các dấu phẩy, khoảng trắng, xuống dòng thành khoảng trắng đơn lẻ
+    // Đồng thời loại bỏ các dấu chấm dư thừa ở cuối các từ nhưng bảo vệ cấu trúc chữ số và chữ cái dạng 2g, 5g, 15g
+    let cleanedInput = input.replace(/,/g, ' ');
+    
+    // Bước 2: Tách thành danh sách mảng dựa trên khoảng trắng
     let rawList = cleanedInput.split(/\s+/).map(p => p.trim()).filter(p => p !== "");
-    let processedList = rawList.map(p => p.toLowerCase().replace(/\.+$/, '') + '.');
+    
+    // Bước 3: Chuẩn hóa mỗi tiền tố: chuyển sang chữ thường, loại bỏ tất cả dấu chấm thừa ở đuôi và thêm lại duy nhất 1 dấu chấm ở cuối
+    let processedList = rawList.map(p => {
+        let cleanPrefix = p.toLowerCase().replace(/\.+$/, '');
+        return cleanPrefix ? cleanPrefix + '.' : '';
+    }).filter(p => p !== "" && p !== ".");
+    
+    // Bước 4: Lọc trùng lặp và sắp xếp thứ tự Alphabet
     let uniqueSorted = [...new Set(processedList)].sort((a, b) => a.localeCompare(b));
     
     if (uniqueSorted.length === 0) return "";
     let result = [];
     let lastChar = "";
     
+    // Bước 5: Phân nhóm các chữ cái đầu để xuống dòng cho đẹp mắt
     uniqueSorted.forEach(item => {
         let currentChar = item.charAt(0).toLowerCase();
         if (lastChar && currentChar !== lastChar) {
@@ -299,7 +308,6 @@ function _format_kb_only(text) {
     function setBtnState(state) {
         if (!_dom_sv || !_dom_st) return;
         
-        // Reset trạng thái hiển thị cơ bản
         _dom_sv.classList.remove('visible', 'pill-gray-style', 'fast-flash');
         _dom_st.classList.remove('visible', 'pill-gray-style');
         _dom_sv.disabled = false;
@@ -313,7 +321,6 @@ function _format_kb_only(text) {
             case 'online':
                 _dom_st.innerText = "ĐÃ KẾT NỐI..."; 
                 _dom_st.classList.add('visible', 'pill-gray-style');
-                // Giữ thông báo online trong 2.5 giây rồi mới ẩn
                 setTimeout(() => { 
                     if (_dom_st.innerText === "ĐÃ KẾT NỐI...") {
                         _dom_st.classList.remove('visible'); 
@@ -525,10 +532,8 @@ function _format_kb_only(text) {
             return; 
         }
         
-        // Nếu là kết nối lại, hiển thị "ĐÃ KẾT NỐI..." trước, sau đó mới hiện "ĐỒNG BỘ..."
         if (isReconnect) {
             setBtnState('online');
-            // Chờ một chút để người dùng thấy thông báo Đã kết nối trước khi hiện Đồng bộ
             await new Promise(r => setTimeout(r, 1000));
         }
 
@@ -617,9 +622,8 @@ function _format_kb_only(text) {
         });
     }
 
-    // Xử lý sự kiện online/offline mượt mà hơn
     window.addEventListener('online', () => {
-        _load(true); // Truyền true để kích hoạt trạng thái thông báo online
+        _load(true);
     });
     
     window.addEventListener('offline', () => {
