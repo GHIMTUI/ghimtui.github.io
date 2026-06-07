@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Describe: Chặn quảng cáo
-! Updated: 06 Jun 2026 21:33
-! Blocked: 519
-! Size: 36.88 KB
+! Updated: 07 Jun 2026 13:56
+! Blocked: 520
+! Size: 36.92 KB
 ! ==================
 
 1thegioi.vn##[class^="c-banner-"],[id^="zone-"]
@@ -1017,6 +1017,8 @@ xahoi.com.vn##[class^="ads-"]
 xedoisong.vn##.ads,[class^="ads-"]
 
 xehay.vn###link-,.flash,[class^="ads-"]
+
+xem360.net##[class^="ads-"],div[data-uid]
 
 xemtivi4k.com##a[href="https://record.brave888.com/_CXLXKr7jtXINaHdFA_j09GNd7ZgqdRLk/23283/"]
 
