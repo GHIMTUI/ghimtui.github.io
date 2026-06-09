@@ -455,7 +455,7 @@ http://livevlisctcdnw.seenow.vn/livesnv2/O2_TV/manifest.mpd
 #KODIPROP:inputstream.adaptive.max_video_height=1080
 http://livevlisctcdnw.seenow.vn/livesnv2/HAY_TV/manifest.mpd
 
-#EXTINF:-1 tvg-id="onstyletv" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/on_styletv.png" m3u8format="ts", ON Style
+#EXTINF:-1 tvg-id="onstyletv" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/on_styletv.png", ON Style
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=414a288afe3d4f3985407d9613ec21eb:31d12c6d561e208f4c79b4a6c280dd5b
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
@@ -562,6 +562,18 @@ http://liveh12.vtvprime.vn/hls/SCTV2/03.m3u8
 #KODIPROP:inputstream.adaptive.max_video_width=1920
 #KODIPROP:inputstream.adaptive.max_video_height=1080
 http://live.fptplay53.net/epzhd2/film360_vhls.smil/chunklist_b5000000.m3u8
+
+#EXTINF:-1 tvg-id="sctv14hd"  tvg-logo="http://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV14.png",SCTV14
+#KODIPROP:inputstream.adaptive.manifest_type=hls
+#KODIPROP:inputstream.adaptive.max_video_width=1920
+#KODIPROP:inputstream.adaptive.max_video_height=1080
+https://hoiquan.dpdns.org/VTVGo/?sctv14
+
+#EXTINF:-1 tvg-id="sctvhdpth"  tvg-logo="http://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTVPTH.png",SCTV Phim Tổng Hợp
+#KODIPROP:inputstream.adaptive.manifest_type=hls
+#KODIPROP:inputstream.adaptive.max_video_width=1920
+#KODIPROP:inputstream.adaptive.max_video_height=1080
+https://hoiquan.dpdns.org/VTVGo/?sctvphim
 
 #EXTINF:-1 tvg-id="sctv16hd"  tvg-logo="https://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV16.png",SCTV16
 #KODIPROP:inputstream.adaptive.license_type=clearkey
