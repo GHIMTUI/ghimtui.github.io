@@ -1,35 +1,33 @@
 name: Get Original SCTV Link
 
 on:
-  # Chạy tự động vào lúc 00:00 mỗi ngày (tùy chỉnh nếu cần)
   schedule:
-    - cron: '0 0 * * *'
-  # Cho phép bạn nhấn nút chạy thủ công từ giao diện GitHub
-  workflow_dispatch:
+    - cron: '0 0 * * *' # Chạy tự động mỗi ngày
+  workflow_dispatch: # Cho phép nhấn chạy thủ công
 
 jobs:
   fetch-link:
     runs-on: ubuntu-latest
 
     steps:
-    # Bước 1: Kiểm tra và lấy mã nguồn của repo về máy ảo
     - name: Checkout repository
       uses: actions/checkout@v4
 
-    # Bước 2: Gọi thử link proxy, lấy URL gốc sau khi redirect và ghi vào file
-    - name: Fetch original URL
+    - name: Fetch original URL from content
       run: |
         PROXY_URL="http://hoiquan.dpdns.org/VTVGo/?sctv3"
         
-        # Lấy URL cuối cùng từ phản hồi header (Location)
-        ORIGINAL_URL=$(curl -sIL -o /dev/null -w "%{url_effective}" "$PROXY_URL")
+        # Tải nội dung text bên trong link proxy (đây chính là link gốc)
+        ORIGINAL_URL=$(curl -s "$PROXY_URL")
         
-        echo "Link gốc tìm được: $ORIGINAL_URL"
+        # Loại bỏ các khoảng trắng hoặc ký tự xuống dòng thừa nếu có
+        ORIGINAL_URL=$(echo "$ORIGINAL_URL" | xargs)
         
-        # Ghi đè vào file link-sctv.txt
+        echo "Link gốc lấy được: $ORIGINAL_URL"
+        
+        # Ghi đè link gốc vào file link-sctv.txt
         echo "$ORIGINAL_URL" > link-sctv.txt
 
-    # Bước 3: Commit và Push file link-sctv.txt mới lên lại GitHub
     - name: Commit and Push changes
       run: |
         git config --global user.name "github-actions[bot]"
@@ -37,9 +35,8 @@ jobs:
         
         git add link-sctv.txt
         
-        # Chỉ commit nếu file có sự thay đổi để tránh lỗi workflow
         if git diff --staged --quiet; then
-          echo "Không có thay đổi nào trong link."
+          echo "Không có thay đổi, giữ nguyên."
         else
           git commit -m "Auto-update: Cập nhật link gốc SCTV"
           git push
