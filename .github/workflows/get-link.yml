@@ -19,7 +19,7 @@ jobs:
     # Bước 2: Gọi thử link proxy, lấy URL gốc sau khi redirect và ghi vào file
     - name: Fetch original URL
       run: |
-        PROXY_URL="http://vpsttt.vietanhtv.top/sctv/tv.php?id=sctv14-789c9f45"
+        PROXY_URL="http://hoiquan.dpdns.org/VTVGo/?sctv3"
         
         # Lấy URL cuối cùng từ phản hồi header (Location)
         ORIGINAL_URL=$(curl -sIL -o /dev/null -w "%{url_effective}" "$PROXY_URL")
