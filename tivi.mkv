@@ -153,11 +153,11 @@ http://live.fptplay53.net/epzhd1/htvcphunu_vhls.smil/chunklist_b5000000.m3u8
 #KODIPROP:inputstream.adaptive.max_video_height=1080
 http://live.fptplay53.net/epzhd1/htvcthuanviethd_vhls.smil/chunklist_b5000000.m3u8
 
-#EXTINF:-1 tvg-id="htvphim" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/phim.png", Phim
+#EXTINF:-1 tvg-id="htvcdulich" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/dulich.png", Du Lịch
 #KODIPROP:inputstream.adaptive.manifest_type=hls
 #KODIPROP:inputstream.adaptive.max_video_width=1920
 #KODIPROP:inputstream.adaptive.max_video_height=1080
-http://live.fptplay53.net/epzhd1/htvcmovieshd_vhls.smil/chunklist_b5000000.m3u8
+http://live.fptplay53.net/epzhd1/htvcdulich_vhls.smil/chunklist_b5000000.m3u8
 
 #EXTINF:-1 tvg-id="bacninh" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/bacninh.png", Bắc Ninh 
 #KODIPROP:inputstream.adaptive.manifest_type=hls
@@ -562,6 +562,12 @@ http://liveh12.vtvprime.vn/hls/SCTV2/03.m3u8
 #KODIPROP:inputstream.adaptive.max_video_width=1920
 #KODIPROP:inputstream.adaptive.max_video_height=1080
 http://live.fptplay53.net/epzhd2/film360_vhls.smil/chunklist_b5000000.m3u8
+
+#EXTINF:-1 tvg-id="sctv14hd"  tvg-logo="https://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV14.png",SCTV14
+#KODIPROP:inputstream.adaptive.manifest_type=hls
+#KODIPROP:inputstream.adaptive.max_video_width=1920
+#KODIPROP:inputstream.adaptive.max_video_height=1080
+http://vpsttt.vietanhtv.top/sctv/proxy.php/http://e12.endpoint.cdn.sctvonline.vn/cdn-secure/v1/sctvonline/1/A8m1VR6LuBTNTZ8PfI_M7A/1781283600/LA4FE/live/sctv14/master.m3u8
 
 #EXTINF:-1 tvg-id="sctv16hd"  tvg-logo="https://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV16.png",SCTV16
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
