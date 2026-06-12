@@ -575,7 +575,7 @@ http://liveatmvng.vtvprime.vn/live/data8/SCTV16/Live_DASHDRM/SCTV16.mpd
 #KODIPROP:inputstream.adaptive.manifest_type=hls
 #KODIPROP:inputstream.adaptive.max_video_width=1920
 #KODIPROP:inputstream.adaptive.max_video_height=1080
-http://vpsttt.vietanhtv.top/sctv/proxy.php/http://e12.endpoint.cdn.sctvonline.vn/cdn-secure/v1/sctvonline/1/CvIMEfp9QdjdDk2NaLJ3RQ/1781283600/LA4FE/live/sctv4/video_hd/playlist.m3u8 
+http://vpsttt.vietanhtv.top/sctv/proxy.php/http://e12.endpoint.cdn.sctvonline.vn/cdn-secure/v1/sctvonline/1/CvIMEfp9QdjdDk2NaLJ3RQ/1781283600/LA4FE/live/sctv4/master.m3u8 
 
 #EXTINF:-1 tvg-id="sctv7hd"  tvg-logo="http://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV7.png",SCTV7
 #KODIPROP:inputstream.adaptive.manifest_type=hls
@@ -593,7 +593,7 @@ http://vpsttt.vietanhtv.top/sctv/proxy.php/http://e1.endpoint.cdn.sctvonline.vn/
 #KODIPROP:inputstream.adaptive.manifest_type=hls
 #KODIPROP:inputstream.adaptive.max_video_width=1920
 #KODIPROP:inputstream.adaptive.max_video_height=1080
-http://vpsttt.vietanhtv.top/sctv/proxy.php/http://e11.endpoint.cdn.sctvonline.vn/cdn-secure/v1/sctvonline/1/u8-WeYeN8AIMrt8zC2RABQ/1781283600/LA4FE/live/sctv11/video_hd/playlist.m3u8
+http://vpsttt.vietanhtv.top/sctv/proxy.php/http://e11.endpoint.cdn.sctvonline.vn/cdn-secure/v1/sctvonline/1/u8-WeYeN8AIMrt8zC2RABQ/1781283600/LA4FE/live/sctv11/master.m3u8
 
 #EXTINF:-1 tvg-id="sctv12hd"  tvg-logo="http://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV12.png",SCTV12
 #KODIPROP:inputstream.adaptive.manifest_type=hls
@@ -605,19 +605,19 @@ http://vpsttt.vietanhtv.top/sctv/proxy.php/http://e1.endpoint.cdn.sctvonline.vn/
 #KODIPROP:inputstream.adaptive.manifest_type=hls
 #KODIPROP:inputstream.adaptive.max_video_width=1920
 #KODIPROP:inputstream.adaptive.max_video_height=1080
-http://vpsttt.vietanhtv.top/sctv/proxy.php/http://e12.endpoint.cdn.sctvonline.vn/cdn-secure/v1/sctvonline/1/9cPii-QsFquKwjVYLGck4w/1781283600/LA4FE/live/sctv13/video_hd/playlist.m3u8
+http://vpsttt.vietanhtv.top/sctv/proxy.php/http://e12.endpoint.cdn.sctvonline.vn/cdn-secure/v1/sctvonline/1/9cPii-QsFquKwjVYLGck4w/1781283600/LA4FE/live/sctv13/master.m3u8
 
 #EXTINF:-1 tvg-id="sctv14hd"  tvg-logo="https://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV14.png",SCTV14
 #KODIPROP:inputstream.adaptive.manifest_type=hls
 #KODIPROP:inputstream.adaptive.max_video_width=1920
 #KODIPROP:inputstream.adaptive.max_video_height=1080
-http://vpsttt.vietanhtv.top/sctv/proxy.php/http://e12.endpoint.cdn.sctvonline.vn/cdn-secure/v1/sctvonline/1/A8m1VR6LuBTNTZ8PfI_M7A/1781283600/LA4FE/live/sctv14/video_hd/playlist.m3u8 
+http://vpsttt.vietanhtv.top/sctv/proxy.php/http://e12.endpoint.cdn.sctvonline.vn/cdn-secure/v1/sctvonline/1/A8m1VR6LuBTNTZ8PfI_M7A/1781283600/LA4FE/live/sctv14/master.m3u8 
 
 #EXTINF:-1 tvg-id="sctv18hd"  tvg-logo="http://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV18.png",SCTV18
 #KODIPROP:inputstream.adaptive.manifest_type=hls
 #KODIPROP:inputstream.adaptive.max_video_width=1920
 #KODIPROP:inputstream.adaptive.max_video_height=1080
-http://vpsttt.vietanhtv.top/sctv/proxy.php/http://e10.endpoint.cdn.sctvonline.vn/cdn-secure/v1/sctvonline/1/gwgiPq_M5mL925L-ArgjiA/1781283600/LA4FE/live:forensic/sctv18/video_hd/playlist.m3u8
+http://vpsttt.vietanhtv.top/sctv/proxy.php/http://e10.endpoint.cdn.sctvonline.vn/cdn-secure/v1/sctvonline/1/gwgiPq_M5mL925L-ArgjiA/1781283600/LA4FE/live:forensic/sctv18/master.m3u8
 
 #EXTINF:-1 tvg-id="sctv19hd"  tvg-logo="http://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV19.png",SCTV19
 #KODIPROP:inputstream.adaptive.manifest_type=hls
@@ -635,7 +635,7 @@ http://vpsttt.vietanhtv.top/sctv/proxy.php/http://e1.endpoint.cdn.sctvonline.vn/
 #KODIPROP:inputstream.adaptive.manifest_type=hls
 #KODIPROP:inputstream.adaptive.max_video_width=1920
 #KODIPROP:inputstream.adaptive.max_video_height=1080
-http://vpsttt.vietanhtv.top/sctv/proxy.php/http://e12.endpoint.cdn.sctvonline.vn/cdn-secure/v1/sctvonline/1/N6cr3Cz8l2IURK7ElqjUCA/1781283600/LA4FE/live/sctvpth/video_hd/playlist.m3u8
+http://vpsttt.vietanhtv.top/sctv/proxy.php/http://e12.endpoint.cdn.sctvonline.vn/cdn-secure/v1/sctvonline/1/N6cr3Cz8l2IURK7ElqjUCA/1781283600/LA4FE/live/sctvpth/master.m3u8
 
 #EXTINF:-1 tvg-id="vtv1hd" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/vtv1.png", VTV1
 #KODIPROP:inputstream.adaptive.manifest_type=hls
