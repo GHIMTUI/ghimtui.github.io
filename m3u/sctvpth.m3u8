@@ -1,9 +1,0 @@
-#EXTM3U
-#EXT-X-VERSION:3
-
-#--- ĐỊNH NGHĨA LUỒNG AUDIO ---
-#EXT-X-MEDIA:TYPE=AUDIO,GROUP-ID="audio-group",NAME="Tiếng Việt",DEFAULT=YES,AUTOSELECT=YES,LANGUAGE="vi",URI="http://vpsttt.vietanhtv.top/sctv/proxy.php/http://e12.endpoint.cdn.sctvonline.vn/cdn-secure/v1/sctvonline/1/N6cr3Cz8l2IURK7ElqjUCA/1781283600/LA4FE/live/sctvpth/audio/playlist.m3u8"
-
-#--- LIÊN KẾT AUDIO VÀO VIDEO ---
-#EXT-X-STREAM-INF:BANDWIDTH=5000000,RESOLUTION=1920x1080,AUDIO="audio-group"
-http://vpsttt.vietanhtv.top/sctv/proxy.php/http://e12.endpoint.cdn.sctvonline.vn/cdn-secure/v1/sctvonline/1/N6cr3Cz8l2IURK7ElqjUCA/1781283600/LA4FE/live/sctvpth/video_hd/playlist.m3u8 
