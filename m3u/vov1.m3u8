@@ -1,0 +1,12 @@
+#EXTM3U
+#EXT-X-VERSION:3
+
+#1. Khai báo luồng hình nền (Ép hiển thị ảnh nền tỉ lệ 16:9 full màn hình TV)
+#EXT-X-IMAGE-STREAM-INF:BANDWIDTH=4000,RESOLUTION=1920x1080,URI="http://file3.qdnd.vn/data/images/0/2023/05/03/vuhuyen/khanhphan.jpg"
+
+#2. Khai báo nhóm luồng âm thanh gốc từ VOV1
+#EXT-X-MEDIA:TYPE=AUDIO,GROUP-ID="vov1-audio",NAME="English",DEFAULT=YES,AUTOSELECT=YES,URI="http://audio-lss.vov.vn/han/live/vov1/audio/haudio-eng.m3u8"
+
+#3. Kết hợp luồng âm thanh vào Master Playlist để trình phát trên TV tự động mix tiếng vào nền hình
+#EXT-X-STREAM-INF:BANDWIDTH=132000,AUDIO="vov1-audio",RESOLUTION=1920x1080
+http://audio-lss.vov.vn/han/live/vov1/audio/haudio-eng.m3u8
