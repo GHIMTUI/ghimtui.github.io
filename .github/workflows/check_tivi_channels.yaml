@@ -2,9 +2,8 @@ name: Check TV Channels Signal
 
 on:
   schedule:
-    # Chạy vào đúng 0h sáng giờ Việt Nam (17h chiều giờ UTC ngày hôm trước)
-    - cron: '0 17 * * *'
-  workflow_dispatch: # Cho phép bạn bấm nút chạy thủ công bất kỳ lúc nào để test
+    - cron: '0 17 * * *' # 0h sáng giờ VN
+  workflow_dispatch:
 
 jobs:
   check-signal:
@@ -16,64 +15,65 @@ jobs:
 
     - name: Set up Python
       uses: actions/setup-python@v5
-      with:
-        python-cache-dependency-path: 3.x
 
     - name: Install FFmpeg
       run: |
         sudo apt-get update
         sudo apt-get install -y ffmpeg
 
-    - name: Run Scan Script and Update Log
+    - name: Scan Channels
       run: |
         python - << 'EOF'
         import os
         import subprocess
+        import re
         from datetime import datetime
 
         file_path = "tivi.mkv"
         log_path = "tivi_scan.txt"
         current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
-        # Chuẩn bị nội dung ghi vào log
-        log_entries = []
-        log_entries.append(f"=== KẾT QUẢ QUÉT KÊNH ({current_time}) ===")
-
         if not os.path.exists(file_path):
-            log_entries.append(f"❌ Thất bại: Không tìm thấy file gốc '{file_path}'.")
-        else:
-            log_entries.append(f"🔍 Đang kiểm tra file: {file_path}")
-            
-            # Chạy ffmpeg test thử tín hiệu trong 3 giây, xuất output ra null (không ghi đè file)
-            cmd = [
-                "ffmpeg", "-v", "error", "-i", file_path, 
-                "-t", "3", "-f", "null", "-"
-            ]
-            
+            print("Không tìm thấy file tivi.mkv")
+            exit(1)
+
+        # Đọc danh sách link từ file tivi.mkv
+        with open(file_path, "r", encoding="utf-8", errors="ignore") as f:
+            content = f.read()
+
+        # Dùng Regex để tìm tất cả các link (http/https/rtmp...) có trong file
+        links = re.findall(r'(https?://[^\s"\'>]+|rtmp://[^\s"\'>]+)', content)
+
+        good_channels = []
+        good_channels.append(f"=== KÊNH CÓ TÍN HIỆU ({current_time}) ===")
+
+        print(f"Tìm thấy {len(links)} link kênh. Bắt đầu quét...")
+
+        for link in links:
+            # Test nhanh từng link trong 2 giây
+            cmd = ["ffmpeg", "-v", "error", "-t", "2", "-i", link, "-f", "null", "-"]
             result = subprocess.run(cmd, stderr=subprocess.PIPE, stdout=subprocess.PIPE, text=True)
             
-            if result.returncode != 0:
-                log_entries.append("⚠️ CẢNH BÁO: Kênh/Luồng phát hiện KHÔNG CÓ TÍN HIỆU hoặc bị lỗi!")
-                log_entries.append(f"Chi tiết lỗi kỹ thuật:\n{result.stderr.strip()}")
+            if result.returncode == 0:
+                # Kênh SỐNG -> Lưu lại
+                good_channels.append(f"✅ SỐNG: {link}")
             else:
-                log_entries.append("✅ Trạng thái: Tín hiệu ổn định, hoạt động bình thường.")
-        
-        log_entries.append("=========================================\n")
-        
-        # Ghi toàn bộ kết quả vào file tivi_scan.txt (Ghi đè file cũ mỗi ngày hoặc dùng 'a' nếu muốn nối tiếp)
-        log_content = "\n".join(log_entries)
+                # Kênh CHẾT (Không tín hiệu) -> BỎ QUA, KHÔNG BÁO đúng ý bạn!
+                pass
+
+        good_channels.append("=========================================\n")
+
+        # Ghi danh sách các kênh SỐNG vào file tivi_scan.txt
         with open(log_path, "w", encoding="utf-8") as log_file:
-            log_file.write(log_content)
-            
-        print(f"🎉 Đã quét xong và cập nhật nhật ký vào file: {log_path}")
-        print(log_content)
+            log_file.write("\n".join(good_channels))
+
+        print("Quét xong! Đã lọc các kênh sống vào tivi_scan.txt")
         EOF
 
     - name: Commit and Push tivi_scan.txt
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
-        # Kiểm tra xem file tivi_scan.txt có thay đổi gì không, nếu có thì commit lên repo
         git add tivi_scan.txt
-        git diff-index --quiet HEAD || git commit -m "Automated update: tivi_scan.txt [skip ci]"
+        git diff-index --quiet HEAD || git commit -m "Cập nhật kênh sống [skip ci]"
         git push
