@@ -1,0 +1,64 @@
+name: Check TiVi Channels
+
+on:
+  schedule:
+    # 0h sáng giờ Việt Nam (GMT+7) tương đương với 17h chiều giờ UTC ngày hôm trước
+    - cron: '0 17 * * *'
+  workflow_dispatch: # Nút bấm để bạn có thể chạy thử thủ công bất cứ lúc nào
+
+jobs:
+  check-signal:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-cache-dependency-path: 3.x
+
+    - name: Install FFmpeg
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y ffmpeg
+
+    - name: Run Scan Script
+      run: |
+        python - << 'EOF'
+        import os
+        import subprocess
+        import re
+
+        file_path = "tivi.mkv"
+
+        if not os.path.exists(file_path):
+            print(f"❌ Không tìm thấy file {file_path}")
+            exit(1)
+
+        print(f"🔍 Bắt đầu quét kiểm tra tín hiệu từ file: {file_path}...\n")
+
+        # Sử dụng ffprobe để trích xuất các đường dẫn/luồng bên trong file mkv
+        # (Giả định file mkv của bạn chứa các đường dẫn stream hoặc bạn muốn test chính file đó)
+        # Nếu tivi.mkv là một file chứa danh sách stream dạng văn bản thô, hãy đổi cách đọc.
+        
+        # Dưới đây là lệnh kiểm tra tín hiệu trực tiếp của file/luồng bằng ffmpeg
+        # ffmpeg sẽ chạy thử 3 giây để check xem có đọc được data không
+        cmd = [
+            "ffmpeg", "-v", "error", "-i", file_path, 
+            "-t", "3", "-f", "null", "-"
+        ]
+        
+        result = subprocess.run(cmd, stderr=subprocess.PIPE, stdout=subprocess.PIPE, text=True)
+        
+        if result.returncode != 0:
+            print("⚠️ CẢNH BÁO: Kênh/File không có tín hiệu hoặc bị lỗi!")
+            print(f"Chi tiết lỗi:\n{result.stderr}")
+        else:
+            print("✅ Tín hiệu ổn định. Không có lỗi phát hiện.")
+            # Theo yêu cầu: "xem kênh nào không tín hiệu thì không báo" 
+            # Nghĩa là nếu bạn muốn tùy biến sâu hơn cho từng link bên trong, bạn có thể parse file ở đây.
+            
+        print("\n🏁 Quá trình quét hoàn thành!")
+        EOF
