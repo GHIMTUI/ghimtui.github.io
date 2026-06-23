@@ -16,21 +16,18 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v5
 
-    # Dùng Action này để setup FFmpeg siêu nhanh (chỉ mất ~3 giây thay vì apt-get)
-    # Setup FFmpeg siêu tốc (Bản chính chủ, ổn định)
     - name: Setup FFmpeg Fast
       uses: federicocarboni/setup-ffmpeg@v3
       with:
-        # Tự động lấy bản FFmpeg mới nhất phù hợp với hệ thống
         token: ${{ secrets.GITHUB_TOKEN }}
 
-    # Quét siêu tốc bằng đa luồng (Multi-threading)
     - name: Scan Channels Parallel
       run: |
         python - << 'EOF'
         import os
         import subprocess
         import re
+        import sys
         from datetime import datetime
         from concurrent.futures import ThreadPoolExecutor, as_completed
 
@@ -40,30 +37,26 @@ jobs:
 
         if not os.path.exists(file_path):
             print("Không tìm thấy file tivi.mkv")
-            exit(1)
+            sys.exit(1)
 
         with open(file_path, "r", encoding="utf-8", errors="ignore") as f:
             content = f.read()
 
-        # Lọc danh sách link
         links = re.findall(r'(https?://[^\s"\'>]+|rtmp://[^\s"\'>]+)', content)
-        # Loại bỏ các link trùng nhau nếu có để tiết kiệm thời gian quét
         links = list(set(links)) 
 
-        print(f"🚀 Tìm thấy {len(links)} link độc nhất. Bắt đầu quét song song...")
+        total_links = len(links)
+        print(f"🚀 Tìm thấy {total_links} link độc nhất. Bắt đầu quét song song...")
 
         good_channels = []
 
-        # Hàm kiểm tra 1 link đơn lẻ
         def check_single_link(link):
-            # Giới hạn ffmpeg chỉ được timeout tối đa 3 giây để tránh bị treo ở link chết
             cmd = ["ffmpeg", "-v", "error", "-rw_timeout", "3000000", "-t", "1", "-i", link, "-f", "null", "-"]
             result = subprocess.run(cmd, stderr=subprocess.PIPE, stdout=subprocess.PIPE, text=True)
             if result.returncode == 0:
                 return link
             return None
 
-        # Chạy song song tối đa 15 luồng cùng lúc (Có thể tăng lên nếu list cực dài)
         with ThreadPoolExecutor(max_workers=15) as executor:
             futures = {executor.submit(check_single_link, link): link for link in links}
             
@@ -72,13 +65,26 @@ jobs:
                 if res:
                     print(f"✅ SỐNG: {res}")
                     good_channels.append(f"✅ SỐNG: {res}")
-                # Kênh chết trả về None -> Bỏ qua không báo đúng ý bạn
 
-        # Sắp xếp lại danh sách cho đẹp trước khi ghi file
         good_channels.sort()
         
-        # Ghi nhật ký
-        log_output = [f"=== KÊNH CÓ TÍN HIỆU ({current_time}) ==="] + good_channels + ["=========================================\n"]
+        # --- Đoạn xử lý logic ghi log thông minh ---
+        log_output = [f"=== KÊNH CÓ TÍN HIỆU ({current_time}) ==="]
+        
+        if total_links == 0:
+            log_output.append("⚠️ Không tìm thấy link kênh tịvi để quét.")
+        elif len(good_channels) == total_links:
+            log_output.append(f"☑️ Tổng {total_links}/{total_links} kênh có tín hiệu.")
+            log_output.extend(good_channels)
+        elif len(good_channels) == 0:
+            log_output.append("❌ Toàn bộ kênh mất tín hiệu!")
+        else:
+            log_output.append(f"📊 Kết quả: {len(good_channels)}/{total_links} kênh hoạt động tốt.")
+            log_output.extend(good_channels)
+            
+        log_output.append("=========================================\n")
+        
+        # Ghi nội dung vào file log
         with open(log_path, "w", encoding="utf-8") as log_file:
             log_file.write("\n".join(log_output))
 
@@ -90,5 +96,5 @@ jobs:
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
         git add changelog_scan_tivi.txt
-        git diff-index --quiet HEAD || git commit -m "Cập nhật kênh sống siêu tốc [skip ci]"
+        git diff-index --quiet HEAD || git commit -m "Cập nhật quét kênh siêu tốc [skip ci]"
         git push
