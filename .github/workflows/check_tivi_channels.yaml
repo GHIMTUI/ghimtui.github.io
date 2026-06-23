@@ -1,4 +1,4 @@
-name: Check TV Channels Signal
+name: Check TV Channels Signal (Fast Mode)
 
 on:
   schedule:
@@ -16,64 +16,77 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v5
 
-    - name: Install FFmpeg
-      run: |
-        sudo apt-get update
-        sudo apt-get install -y ffmpeg
+    # Dùng Action này để setup FFmpeg siêu nhanh (chỉ mất ~3 giây thay vì apt-get)
+    - name: Setup FFmpeg Fast
+      uses: bhowell2/setup-ffmpeg@v1
+      with:
+        ffmpeg-version: '6.0'
 
-    - name: Scan Channels
+    # Quét siêu tốc bằng đa luồng (Multi-threading)
+    - name: Scan Channels Parallel
       run: |
         python - << 'EOF'
         import os
         import subprocess
         import re
         from datetime import datetime
+        from concurrent.futures import ThreadPoolExecutor, as_completed
 
         file_path = "tivi.mkv"
-        log_path = "scan_tivi.txt"
+        log_path = "changelog_scan_tivi.txt"
         current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
         if not os.path.exists(file_path):
             print("Không tìm thấy file tivi.mkv")
             exit(1)
 
-        # Đọc danh sách link từ file tivi.mkv
         with open(file_path, "r", encoding="utf-8", errors="ignore") as f:
             content = f.read()
 
-        # Dùng Regex để tìm tất cả các link (http/https/rtmp...) có trong file
+        # Lọc danh sách link
         links = re.findall(r'(https?://[^\s"\'>]+|rtmp://[^\s"\'>]+)', content)
+        # Loại bỏ các link trùng nhau nếu có để tiết kiệm thời gian quét
+        links = list(set(links)) 
+
+        print(f"🚀 Tìm thấy {len(links)} link độc nhất. Bắt đầu quét song song...")
 
         good_channels = []
-        good_channels.append(f"=== KÊNH CÓ TÍN HIỆU ({current_time}) ===")
 
-        print(f"Tìm thấy {len(links)} link kênh. Bắt đầu quét...")
-
-        for link in links:
-            # Test nhanh từng link trong 2 giây
-            cmd = ["ffmpeg", "-v", "error", "-t", "2", "-i", link, "-f", "null", "-"]
+        # Hàm kiểm tra 1 link đơn lẻ
+        def check_single_link(link):
+            # Giới hạn ffmpeg chỉ được timeout tối đa 3 giây để tránh bị treo ở link chết
+            cmd = ["ffmpeg", "-v", "error", "-rw_timeout", "3000000", "-t", "1", "-i", link, "-f", "null", "-"]
             result = subprocess.run(cmd, stderr=subprocess.PIPE, stdout=subprocess.PIPE, text=True)
-            
             if result.returncode == 0:
-                # Kênh SỐNG -> Lưu lại
-                good_channels.append(f"✅ SỐNG: {link}")
-            else:
-                # Kênh CHẾT (Không tín hiệu) -> BỎ QUA, KHÔNG BÁO đúng ý bạn!
-                pass
+                return link
+            return None
 
-        good_channels.append("=========================================\n")
+        # Chạy song song tối đa 15 luồng cùng lúc (Có thể tăng lên nếu list cực dài)
+        with ThreadPoolExecutor(max_workers=15) as executor:
+            futures = {executor.submit(check_single_link, link): link for link in links}
+            
+            for future in as_completed(futures):
+                res = future.result()
+                if res:
+                    print(f"✅ SỐNG: {res}")
+                    good_channels.append(f"✅ SỐNG: {res}")
+                # Kênh chết trả về None -> Bỏ qua không báo đúng ý bạn
 
-        # Ghi danh sách các kênh SỐNG vào file tivi_scan.txt
+        # Sắp xếp lại danh sách cho đẹp trước khi ghi file
+        good_channels.sort()
+        
+        # Ghi nhật ký
+        log_output = [f"=== KÊNH CÓ TÍN HIỆU ({current_time}) ==="] + good_channels + ["=========================================\n"]
         with open(log_path, "w", encoding="utf-8") as log_file:
-            log_file.write("\n".join(good_channels))
+            log_file.write("\n".join(log_output))
 
-        print("Quét xong! Đã lọc các kênh sống vào tivi_scan.txt")
+        print(f"🏁 Đã quét xong siêu tốc! Kết quả lưu tại {log_path}")
         EOF
 
-    - name: Commit and Push scan_tivi.txt
+    - name: Commit and Push changelog_scan_tivi.txt
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
-        git add scan_tivi.txt
-        git diff-index --quiet HEAD || git commit -m "Cập nhật kênh sống [skip ci]"
+        git add changelog_scan_tivi.txt
+        git diff-index --quiet HEAD || git commit -m "Cập nhật kênh sống siêu tốc [skip ci]"
         git push
