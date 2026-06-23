@@ -1,0 +1,9 @@
+=== KẾT QUẢ QUÉT KÊNH (2026-06-23 15:24:34) ===
+🔍 Đang kiểm tra file: tivi.mkv
+⚠️ CẢNH BÁO: Kênh/Luồng phát hiện KHÔNG CÓ TÍN HIỆU hoặc bị lỗi!
+Chi tiết lỗi kỹ thuật:
+[matroska,webm @ 0x55a17a08be80] EBML header parsing failed
+[in#0 @ 0x55a17a08bd80] Error opening input: Invalid data found when processing input
+Error opening input file tivi.mkv.
+Error opening input files: Invalid data found when processing input
+=========================================
