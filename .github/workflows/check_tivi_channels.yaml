@@ -1,10 +1,10 @@
-name: Check TiVi Channels
+name: Check TV Channels Signal
 
 on:
   schedule:
-    # 0h sáng giờ Việt Nam (GMT+7) tương đương với 17h chiều giờ UTC ngày hôm trước
+    # Chạy vào đúng 0h sáng giờ Việt Nam (17h chiều giờ UTC ngày hôm trước)
     - cron: '0 17 * * *'
-  workflow_dispatch: # Nút bấm để bạn có thể chạy thử thủ công bất cứ lúc nào
+  workflow_dispatch: # Cho phép bạn bấm nút chạy thủ công bất kỳ lúc nào để test
 
 jobs:
   check-signal:
@@ -24,41 +24,56 @@ jobs:
         sudo apt-get update
         sudo apt-get install -y ffmpeg
 
-    - name: Run Scan Script
+    - name: Run Scan Script and Update Log
       run: |
         python - << 'EOF'
         import os
         import subprocess
-        import re
+        from datetime import datetime
 
         file_path = "tivi.mkv"
+        log_path = "tivi_scan.txt"
+        current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+
+        # Chuẩn bị nội dung ghi vào log
+        log_entries = []
+        log_entries.append(f"=== KẾT QUẢ QUÉT KÊNH ({current_time}) ===")
 
         if not os.path.exists(file_path):
-            print(f"❌ Không tìm thấy file {file_path}")
-            exit(1)
-
-        print(f"🔍 Bắt đầu quét kiểm tra tín hiệu từ file: {file_path}...\n")
-
-        # Sử dụng ffprobe để trích xuất các đường dẫn/luồng bên trong file mkv
-        # (Giả định file mkv của bạn chứa các đường dẫn stream hoặc bạn muốn test chính file đó)
-        # Nếu tivi.mkv là một file chứa danh sách stream dạng văn bản thô, hãy đổi cách đọc.
-        
-        # Dưới đây là lệnh kiểm tra tín hiệu trực tiếp của file/luồng bằng ffmpeg
-        # ffmpeg sẽ chạy thử 3 giây để check xem có đọc được data không
-        cmd = [
-            "ffmpeg", "-v", "error", "-i", file_path, 
-            "-t", "3", "-f", "null", "-"
-        ]
-        
-        result = subprocess.run(cmd, stderr=subprocess.PIPE, stdout=subprocess.PIPE, text=True)
-        
-        if result.returncode != 0:
-            print("⚠️ CẢNH BÁO: Kênh/File không có tín hiệu hoặc bị lỗi!")
-            print(f"Chi tiết lỗi:\n{result.stderr}")
+            log_entries.append(f"❌ Thất bại: Không tìm thấy file gốc '{file_path}'.")
         else:
-            print("✅ Tín hiệu ổn định. Không có lỗi phát hiện.")
-            # Theo yêu cầu: "xem kênh nào không tín hiệu thì không báo" 
-            # Nghĩa là nếu bạn muốn tùy biến sâu hơn cho từng link bên trong, bạn có thể parse file ở đây.
+            log_entries.append(f"🔍 Đang kiểm tra file: {file_path}")
             
-        print("\n🏁 Quá trình quét hoàn thành!")
+            # Chạy ffmpeg test thử tín hiệu trong 3 giây, xuất output ra null (không ghi đè file)
+            cmd = [
+                "ffmpeg", "-v", "error", "-i", file_path, 
+                "-t", "3", "-f", "null", "-"
+            ]
+            
+            result = subprocess.run(cmd, stderr=subprocess.PIPE, stdout=subprocess.PIPE, text=True)
+            
+            if result.returncode != 0:
+                log_entries.append("⚠️ CẢNH BÁO: Kênh/Luồng phát hiện KHÔNG CÓ TÍN HIỆU hoặc bị lỗi!")
+                log_entries.append(f"Chi tiết lỗi kỹ thuật:\n{result.stderr.strip()}")
+            else:
+                log_entries.append("✅ Trạng thái: Tín hiệu ổn định, hoạt động bình thường.")
+        
+        log_entries.append("=========================================\n")
+        
+        # Ghi toàn bộ kết quả vào file tivi_scan.txt (Ghi đè file cũ mỗi ngày hoặc dùng 'a' nếu muốn nối tiếp)
+        log_content = "\n".join(log_entries)
+        with open(log_path, "w", encoding="utf-8") as log_file:
+            log_file.write(log_content)
+            
+        print(f"🎉 Đã quét xong và cập nhật nhật ký vào file: {log_path}")
+        print(log_content)
         EOF
+
+    - name: Commit and Push tivi_scan.txt
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        # Kiểm tra xem file tivi_scan.txt có thay đổi gì không, nếu có thì commit lên repo
+        git add tivi_scan.txt
+        git diff-index --quiet HEAD || git commit -m "Automated update: tivi_scan.txt [skip ci]"
+        git push
