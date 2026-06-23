@@ -30,7 +30,7 @@ jobs:
         from datetime import datetime
 
         file_path = "tivi.mkv"
-        log_path = "tivi_scan.txt"
+        log_path = "scan_tivi.txt"
         current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
         if not os.path.exists(file_path):
@@ -70,10 +70,10 @@ jobs:
         print("Quét xong! Đã lọc các kênh sống vào tivi_scan.txt")
         EOF
 
-    - name: Commit and Push tivi_scan.txt
+    - name: Commit and Push scan_tivi.txt
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
-        git add tivi_scan.txt
+        git add scan_tivi.txt
         git diff-index --quiet HEAD || git commit -m "Cập nhật kênh sống [skip ci]"
         git push
