@@ -1,7 +1,11 @@
-User-agent: Googlebot
-Disallow: /nogooglebot/
-
 User-agent: *
-Allow: /
-
-Sitemap: https://ghimtui.github.io/sitemap.xml
+Disallow: /file/
+Disallow: /logo/
+Disallow: /m3u/
+Disallow: /web/
+Disallow: /index.html
+Disallow: /radio.m3u
+Disallow: /tivi.m3u
+Disallow: /robots.txt
+Disallow: /sitemaps.xml
+Disallow: /package.json
