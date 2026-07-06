@@ -1,0 +1,27 @@
+name: Live Radio to Video Stream
+
+on:
+  schedule:
+    - cron: '0 */6 * * *' # Tự động khởi động lại mỗi 6 tiếng để duy trì luồng live
+  workflow_dispatch: # Cho phép bạn bấm chạy thủ công bằng tay
+
+jobs:
+  convert-stream:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v4
+
+    - name: Install FFmpeg
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y ffmpeg
+
+    - name: Run Transcoding Script
+      run: bash convert.sh
+
+    - name: Deploy Stream to GitHub Pages or Branch
+      uses: JamesIves/github-pages-deploy-action@v4
+      with:
+        folder: hls # Thư mục chứa file m3u8 và các file phân đoạn .ts vừa tạo
+        branch: gh-pages # Đẩy lên nhánh này để lấy link stream công khai
