@@ -82,7 +82,7 @@ http://live.fptplay53.net/epzhd2/vinhlong5hd_vhls.smil/chunklist_b5000000.m3u8
 #KODIPROP:inputstream.adaptive.manifest_type=hls
 #KODIPROP:inputstream.adaptive.max_video_width=1920
 #KODIPROP:inputstream.adaptive.max_video_height=1080
-http://vpsttt.vietanhtv.top/vieon/vieon.php?id=vinh-long-audio&a=.m3u8
+http://vpsttt.vietanhtv.top/vieon/vieon.php?id=vinh-long-audio&ch=.m3u8
 
 #--- HTV(TP.HCM) ---
 #EXTINF:-1 tvg-id="htv1" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/htv1.png", HTV1
@@ -498,8 +498,7 @@ http://livevlisctcdnw.seenow.vn/livesnv2/GIAITRI_TV_HD/manifest.mpd
 #KODIPROP:inputstream.adaptive.max_video_height=1080
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=f2abb744acd24369943a79635f4fa43a:f674652c13211536e0e21d9ea860ca90
-#http://livevlisctcdnw.seenow.vn/livesnv2/D_DRAMAS_HD/manifest.mpd
-http://kubolive.ddns.net/play/SkhUYW1CRWpCOGp0R1QzbkZwYm5tWjlscHZ0WHpKWDVFYWgzcmhmZEdyeWlsZG5TQkZ1MzFwd1htQTdFK0laWFNUY0pXZHJzc0pLNkVEUjZBbE81bTIvVThkRlNvVjZ6VjBmVGROcGc2T2s9/master.m3u8
+http://livevlisctcdnw.seenow.vn/livesnv2/D_DRAMAS_HD/manifest.mpd
 
 #EXTINF:-1 tvg-id="onvfamily" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/on_vfamily.png", ON VFamily
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
