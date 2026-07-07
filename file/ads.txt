@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Describe: Chặn quảng cáo
-! Updated: 07 Jun 2026 13:56
-! Blocked: 520
-! Size: 36.92 KB
+! Updated: 07 Jul 2026 08:44
+! Blocked: 522
+! Size: 36.98 KB
 ! ==================
 
 1thegioi.vn##[class^="c-banner-"],[id^="zone-"]
@@ -413,6 +413,8 @@ imuzik.vn##.download-app-suggest-wrapper
 investing.com##.z-50
 
 ioit.vast.gov.vn###scroller,.cov
+
+iptvhdplayer.com##.mb-6
 
 iq.com##.download-container,.qrcode-wrap
 
@@ -1003,6 +1005,8 @@ vtv.gov.vn##img[src="/assets/banner_cp.jpg"]
 vtv.vn##.top-aside,[id^="banner-"],[id^="lozad-"],[id^="placement-"],[id^="share-"],[id^="slot-"],[id^="zone-"]
 
 vtvgo.vn##.micro-open-app
+
+vtvprime.vn##.btnFloatingShake
 
 webcamera.io##.ad,.adsbygoogle,.premium-entry-button,.remove-ads
 
