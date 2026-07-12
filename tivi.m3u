@@ -141,18 +141,6 @@ http://live.fptplay53.net/epzhd1/htvcphunu_vhls.smil/chunklist_b5000000.m3u8
 #KODIPROP:inputstream.adaptive.max_video_height=1080
 http://live.fptplay53.net/epzhd1/htvcthuanviethd_vhls.smil/chunklist_b5000000.m3u8
 
-#EXTINF:-1 tvg-id="htvcdulichhd" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/dulich.png", Du Lịch
-#KODIPROP:inputstream.adaptive.manifest_type=hls
-#KODIPROP:inputstream.adaptive.max_video_width=1920
-#KODIPROP:inputstream.adaptive.max_video_height=1080
-http://live.fptplay53.net/epzhd1/htvcdulich_vhls.smil/chunklist_b5000000.m3u8
-
-#EXTINF:-1 tvg-id="htvcphimhd" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/phim.png", Phim
-#KODIPROP:inputstream.adaptive.manifest_type=hls
-#KODIPROP:inputstream.adaptive.max_video_width=1920
-#KODIPROP:inputstream.adaptive.max_video_height=1080
-http://live.fptplay53.net/epzhd1/htvcmovieshd_vhls.smil/chunklist_b5000000.m3u8
-
 #EXTINF:-1 tvg-id="antvhd" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/antv.png", An Ninh
 #KODIPROP:inputstream.adaptive.manifest_type=hls
 #KODIPROP:inputstream.adaptive.max_video_width=1920
@@ -455,6 +443,15 @@ http://livevlisctcdnw.seenow.vn/livesnv2/E_CHANNEL/manifest.mpd
 #KODIPROP:inputstream.adaptive.license_key=39425f1a9f7f4db985b5e7b2e65e4208:63e3aad2bc5bed77e59724ba8d2e94f0
 http://livevlisctcdnw.seenow.vn/livesnv2/INFO_TV/manifest.mpd
 
+#EXTINF:-1 tvg-id="onmusic"  tvg-logo="http://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/VTVCab/OnMusic.png",On Music
+#KODIPROP:inputstream=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.manifest_type=dash
+#KODIPROP:inputstream.adaptive.max_video_width=1920
+#KODIPROP:inputstream.adaptive.max_video_height=1080
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=e518bbb7e8614a7da4d8d974d62486da:b509751f1fa3c676f482cde476670dd6
+http://livevlisctcdnw.seenow.vn/livesnv2/M_CHANNEL/manifest.mpd
+
 #EXTINF:-1 tvg-id="onlife" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/on_life.png", ON Life
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.max_video_width=1920
@@ -470,6 +467,14 @@ http://livevlisctcdnw.seenow.vn/livesnv2/LIFE_TV/manifest.mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=765c826c381e4d58849784bb206c8e90:2970317ebf86d70fa11434eab4c59c5d
 http://livevlisctcdnw.seenow.vn/livesnv2/YEAH1_TV/manifest.mpd
+
+#EXTINF:-1 tvg-id="onsportsplus"  tvg-logo="https://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/VTVCab/OnSports%2B.png",ON Sports+
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.max_video_width=1920
+#KODIPROP:inputstream.adaptive.max_video_height=1080
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=f3d73b3a9b89462ebf7911004ea3b3b9:2e547a81ff90aa02648cb9e3f79e7339
+http://livevlisctcdnw.seenow.vn/livesnv2/HAY_TV/manifest.mpd
 
 #EXTINF:-1 tvg-id="onviedramas" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/on_viedramas.png", ON Dramas
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
@@ -495,37 +500,6 @@ http://livevlisctcdnw.seenow.vn/livesnv2/GIAITRI_TV_HD/manifest.mpd
 #KODIPROP:inputstream.adaptive.license_key=c01b22c5f5b44d72b9902b33a4c36fb7:8fe81a99e5b1cc891bb9e9f848b6e2e7
 http://livevlisctcdnw.seenow.vn/livesnv2/VFAMILY/manifest.mpd
 
-#EXTINF:-1 tvg-id="onsportsplus"  tvg-logo="https://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/VTVCab/OnSports%2B.png",ON Sports+
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.max_video_width=1920
-#KODIPROP:inputstream.adaptive.max_video_height=1080
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=f3d73b3a9b89462ebf7911004ea3b3b9:2e547a81ff90aa02648cb9e3f79e7339
-http://livevlisctcdnw.seenow.vn/livesnv2/HAY_TV/manifest.mpd
-
-#EXTINF:-1 tvg-id="onsports"  tvg-logo="http://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/VTVCab/OnSports.png",ON Sports
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.max_video_width=1920
-#KODIPROP:inputstream.adaptive.max_video_height=1080
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=f3d73b3a9b89462ebf7911004ea3b3b9:2e547a81ff90aa02648cb9e3f79e7339
-http://livevlisctcdnw.seenow.vn/livesnv2/THETHAO_HD/manifest.mpd
-
-#EXTINF:-1 tvg-id="onfootball"  tvg-logo="http://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/VTVCab/OnFootball.png",ON Football
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.max_video_width=1920
-#KODIPROP:inputstream.adaptive.max_video_height=1080
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=f3d73b3a9b89462ebf7911004ea3b3b9:2e547a81ff90aa02648cb9e3f79e7339
-http://livevlisctcdnw.seenow.vn/livesnv2/BONGDA_HD/manifest.mpd
-
-#EXTINF:-1 tvg-id="onsportsnews"  tvg-logo="http://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/VTVCab/OnSportsNew.png",ON Sports News
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.max_video_width=1920
-#KODIPROP:inputstream.adaptive.max_video_height=1080
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=f3d73b3a9b89462ebf7911004ea3b3b9:2e547a81ff90aa02648cb9e3f79e7339
-http://livevlisctcdnw.seenow.vn/livesnv2/THETHAO_TINTUC_HD/manifest.mpd
 
 #EXTINF:-1 tvg-id="onbibi"  tvg-logo="https://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/VTVCab/OnBibi.png",On BiBi
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
