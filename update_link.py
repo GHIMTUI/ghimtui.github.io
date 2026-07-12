@@ -3,7 +3,6 @@ import re
 import requests
 
 # 1. Định nghĩa danh sách các kênh cần lấy và mã tvg-id tương ứng trong file m3u
-# Bạn có thể kiểm tra xem tvg-id trong file tivi.m3u của bạn đã khớp với các mã dưới đây chưa nhé.
 CHANNELS = {
     "sctv4": {"url": "http://vmttv.dpdns.org/VTVGo/?sctv4", "tvg_id": "sctv4hd"},
     "sctv7": {"url": "http://vmttv.dpdns.org/VTVGo/?sctv7", "tvg_id": "sctv7hd"},
@@ -14,17 +13,22 @@ CHANNELS = {
     "sctv18": {"url": "http://vmttv.dpdns.org/VTVGo/?sctv18", "tvg_id": "sctv18hd"},
     "sctv19": {"url": "http://vmttv.dpdns.org/VTVGo/?sctv19", "tvg_id": "sctv19hd"},
     "sctv21": {"url": "http://vmttv.dpdns.org/VTVGo/?sctv21", "tvg_id": "sctv21hd"},
-    "sctvphim": {"url": "http://vmttv.dpdns.org/VTVGo/?sctvphim", "tvg_id": "sctvhdpth"},
+    "sctvphim": {"url": "http://vmttv.dpdns.org/VTVGo/?sctvphim", "tvg_id": "sctvphimhd"},
 }
 
 FILE_NAME = "tivi.m3u"
 
 def get_live_link(url, channel_name):
     try:
-        # Gửi request và đi theo redirect để lấy link .m3u8 thực tế mới nhất
+        # Gửi request và đi theo redirect để lấy link thực tế mới nhất
         response = requests.get(url, timeout=15, allow_redirects=True)
         final_url = response.url
-        print(f"[{channel_name.upper()}] Đã lấy được link mới nhất: {final_url}")
+        
+        # Bắt buộc chuyển đổi đầu link https thành http
+        if final_url.startswith("https://"):
+            final_url = final_url.replace("https://", "http://", 1)
+            
+        print(f"[{channel_name.upper()}] Đã lấy được link (HTTP): {final_url}")
         return final_url
     except Exception as e:
         print(f"[{channel_name.upper()}] Lỗi khi kết nối lấy link: {e}")
@@ -35,7 +39,7 @@ def update_m3u_file():
         print(f"Lỗi: Không tìm thấy file {FILE_NAME} trong thư mục để sửa đổi.")
         return
 
-    # Đọc toàn bộ nội dung hiện tại của file tivi.m3u một lần duy nhất
+    # Đọc toàn bộ nội dung hiện tại của file tivi.m3u
     with open(FILE_NAME, "r", encoding="utf-8") as f:
         content = f.read()
 
@@ -46,18 +50,15 @@ def update_m3u_file():
         tvg_id = config["tvg_id"]
         source_url = config["url"]
         
-        # Lấy link stream mới của kênh hiện tại
+        # Lấy link stream mới dạng http
         new_link = get_live_link(source_url, channel_name)
         if not new_link:
             continue
 
-        # Tạo biểu thức chính quy (Regex) động cho từng mã tvg-id cụ thể
-        # Tìm từ dòng #EXTINF có chứa tvg-id="..." chính xác cho đến hết các dòng #KODIPROP và URL cũ
-        pattern = rf'(#EXTINF:[^\n]*tvg-id="{tvg_id}"[^\n]*\n(?:#KODIPROP:[^\n]*\n)*)(http?://[^\n]+)'
+        # Regex tìm cụm cấu hình của tvg-id và dòng link ngay phía sau nó (chấp nhận cả http và https cũ)
+        pattern = rf'(#EXTINF:[^\n]*tvg-id="{tvg_id}"[^\n]*\n(?:#KODIPROP:[^\n]*\n)*)(https?://[^\n]+)'
 
-        # Kiểm tra xem kênh có trong file không
         if re.search(pattern, content, re.IGNORECASE):
-            # Tiến hành thay thế link cho kênh này
             content, count = re.subn(pattern, rf'\1{new_link}', content, flags=re.IGNORECASE)
             if count > 0:
                 print(f"--> Đã cập nhật thành công link cho {channel_name.upper()}")
@@ -65,13 +66,13 @@ def update_m3u_file():
         else:
             print(f"--> Cảnh báo: Không tìm thấy cấu trúc kênh {channel_name.upper()} với tvg-id=\"{tvg_id}\" trong m3u.")
 
-    # Nếu có bất kỳ kênh nào được thay đổi link, thực hiện ghi đè lại file
+    # Ghi đè file nếu có sự thay đổi
     if has_changed:
         with open(FILE_NAME, "w", encoding="utf-8") as f:
             f.write(content)
-        print(f"\n Hoàn tất! Đã cập nhật xong toàn bộ các kênh được tìm thấy trong {FILE_NAME}.")
+        print(f"\n Hoàn tất! Toàn bộ link dạng HTTP đã được cập nhật vào {FILE_NAME}.")
     else:
-        print("\n Không có kênh nào thay đổi link hoặc không tìm thấy kênh phù hợp để cập nhật.")
+        print("\n Không có thay đổi nào được thực hiện.")
 
 if __name__ == "__main__":
     update_m3u_file()
