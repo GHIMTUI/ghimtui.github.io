@@ -1,0 +1,44 @@
+name: Tự động cập nhật Link Tivi
+
+on:
+  schedule:
+    # Chạy vào lúc 17:00 UTC hàng ngày (tương đương 00:00 giờ Việt Nam)
+    - cron: '0 17 * * *'
+  workflow_dispatch: # Nút bấm để bạn có thể nhấn chạy thử thủ công bất kỳ lúc nào
+
+jobs:
+  update-link:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # Cấp quyền cho Action ghi/commit file vào repo
+
+    steps:
+    - name: Kiểm tra mã nguồn (Checkout)
+      uses: actions/checkout@v4
+
+    - name: Thiết lập Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.x'
+
+    - name: Cài đặt thư viện cần thiết
+      run: |
+        python -m pip install --upgrade pip
+        pip install requests
+
+    - name: Chạy script lấy link mới
+      run: python update_link.py
+
+    - name: Commit và Push thay đổi lên GitHub
+      run: |
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "github-actions[bot]@users.noreply.github.com"
+        
+        # Kiểm tra xem file có thay đổi thực sự hay không trước khi commit
+        if [ -n "$(git status --porcelain)" ]; then
+          git add channel-tivi.txt
+          git commit -m "Automated: Cập nhật link SCTV14 vào lúc 0h"
+          git push
+        else
+          echo "Không có thay đổi nào trong link, bỏ qua commit."
+        fi
