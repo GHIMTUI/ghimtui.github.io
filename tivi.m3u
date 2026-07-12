@@ -573,7 +573,7 @@ http://live.fptplay53.net/epzhd2/film360_vhls.smil/chunklist_b5000000.m3u8
 #KODIPROP:inputstream.adaptive.manifest_type=hls
 #KODIPROP:inputstream.adaptive.max_video_width=1920
 #KODIPROP:inputstream.adaptive.max_video_height=1080
-http://vtvgolive-sctv.vtvdigital.vn/N18LWO2ytmVgFxfHnkC1Lw/1783886998/6GoYKNrTy3vtvsctv/14/masterh264.m3u8
+https://vtvgolive-sctv.vtvdigital.vn/pwcux0GmaxuJiAlkbRCqFw/1783889569/6GoYKNrTy3vtvsctv/14/masterh264.m3u8
 
 #EXTINF:-1 tvg-id="sctv16hd" tvg-logo="http://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV16.png",SCTV16 
 #KODIPROP:inputstream.adaptive.manifest_type=dash
