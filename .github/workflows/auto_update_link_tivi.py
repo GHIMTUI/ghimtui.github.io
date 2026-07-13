@@ -16,7 +16,7 @@ CHANNELS = {
     "sctv18": {"url": "http://vmttv.dpdns.org/VTVGo/?sctv18", "tvg_id": "sctv18hd"},
     "sctv19": {"url": "http://vmttv.dpdns.org/VTVGo/?sctv19", "tvg_id": "sctv19hd"},
     "sctv21": {"url": "http://vmttv.dpdns.org/VTVGo/?sctv21", "tvg_id": "sctv21hd"},
-    "sctvphim": {"url": "http://vmttv.dpdns.org/VTVGo/?sctvphim", "tvg_id": "sctvphim"},
+    "sctvphim": {"url": "http://vmttv.dpdns.org/VTVGo/?sctvphim", "tvg_id": "sctvhdpth"},
 }
 
 FILE_NAME = "tivi.m3u"
