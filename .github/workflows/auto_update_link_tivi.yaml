@@ -1,8 +1,8 @@
-name: Auto update link tivi
+name: Auto Update Link Tivi
 
 on:
   schedule:
-    # Chạy mỗi 4 giờ một lần (ví dụ: 0h, 4h, 8h, 12h, 16h, 20h UTC)
+    # Chạy mỗi 4 tiếng một lần (vào phút thứ 0 của các khung giờ: 0h, 4h, 8h, 12h,...)
     - cron: '0 */4 * * *'
   workflow_dispatch: # Cho phép bấm chạy thủ công kiểm tra bất kỳ lúc nào
 
@@ -27,7 +27,7 @@ jobs:
         pip install requests
 
     - name: Chạy script lấy link mới và sửa file m3u
-      run: python auto_update_link_tivi.py
+      run: python auto-update_link_tivi.py
 
     - name: Commit và Push thay đổi lên GitHub
       run: |
@@ -37,8 +37,8 @@ jobs:
         # Kiểm tra xem file tivi.m3u có thay đổi hay không trước khi commit
         if [ -n "$(git status --porcelain)" ]; then
           git add tivi.m3u
-          git commit -m "Automated: Cập nhật link tivi mới nhất"
+          git commit -m "Automated: Cập nhật link sctv tivi.m3u định kỳ"
           git push
         else
-          echo "Link không đổi so với link cũ, bỏ qua commit."
+          echo "Link hôm nay không đổi so với link cũ, bỏ qua commit."
         fi
