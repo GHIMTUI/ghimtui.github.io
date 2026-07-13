@@ -3,7 +3,7 @@ name: Auto Update SCTV
 on:
   schedule:
     # Chạy mỗi 5 tiếng một lần
-    - cron: '0 */5 * * *'
+    - cron: '0 */4 * * *'
   workflow_dispatch: # Cho phép bấm chạy thủ công kiểm tra bất kỳ lúc nào
 
 jobs:
