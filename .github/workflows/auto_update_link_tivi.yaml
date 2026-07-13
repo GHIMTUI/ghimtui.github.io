@@ -27,7 +27,7 @@ jobs:
         pip install requests
 
     - name: Chạy script lấy link mới và sửa file m3u
-      run: python auto_update_link_tivi.py
+      run: python .github/workflows/auto_update_link_tivi.py
 
     - name: Commit và Push thay đổi lên GitHub
       run: |
