@@ -34,3 +34,4 @@ def get_live_link(url, channel_name):
         print(f"[{channel_name.upper()}] Đã lấy được link (HTTP): {final_url}")
         return final_url
     except Exception as e:
+        pass
