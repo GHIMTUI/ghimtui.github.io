@@ -10,7 +10,7 @@ on:
 
 jobs:
   update-link:
-    name: Cập nhật link
+    name: Đang cập nhật...
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -19,7 +19,7 @@ jobs:
     - name: Tải mã nguồn
       uses: actions/checkout@v4
 
-    - name: Cài Python
+    - name: Cài đặt Python
       uses: actions/setup-python@v5
       with:
         python-version: '3.x'
@@ -32,13 +32,13 @@ jobs:
     - name: Kiểm tra lịch cron
       id: check-group
       run: |
-        UPDATE_TYPE="all"
+        UPDATE_TYPE="ALL"
         if [ "${{ github.event_name }}" = "schedule" ]; then
           CRON_TIME="${{ github.event.schedule }}"
           if [ "$CRON_TIME" = "0 */3 * * *" ]; then
-            UPDATE_TYPE="fast"
+            UPDATE_TYPE="FAST"
           elif [ "$CRON_TIME" = "0 */12 * * *" ]; then
-            UPDATE_TYPE="slow"
+            UPDATE_TYPE="SLOW"
           fi
         fi
         echo "UPDATE_TYPE=$UPDATE_TYPE" >> $GITHUB_ENV
@@ -51,12 +51,12 @@ jobs:
 
     - name: Lưu thay đổi
       run: |
-        git config --global user.name "auto-update[bot]"
+        git config --global user.name "github-actions[bot]"
         git config --global user.email "github-actions[bot]@users.noreply.github.com"
         
         if [ -n "$(git status --porcelain)" ]; then
           git add tivi.m3u
-          git commit -m "[Auto]: Cập nhật link  ($UPDATE_TYPE)"
+          git commit -m "[$UPDATE_TYPE]: Đã cập nhật xong"
           git push
         else
           echo "Link hôm nay không đổi so với link cũ."
