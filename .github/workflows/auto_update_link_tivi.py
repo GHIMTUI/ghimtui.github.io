@@ -36,7 +36,7 @@ def get_live_link(url, channel_name):
             else:
                 final_url = final_url.replace("master.m3u8", "playlist_720p.m3u8")
             
-        print(f"[{channel_name.upper()}] Đã lấy được link (HTTP): {final_url}")
+        print(f"[{channel_name.upper()}] Đã lấy được link: {final_url}")
         return final_url
     except Exception as e:
         print(f"[{channel_name.upper()}] Lỗi khi kết nối lấy link: {e}")
@@ -90,7 +90,7 @@ def update_m3u_file():
         if re.search(pattern, content, re.IGNORECASE):
             content, count = re.subn(pattern, rf'\1{new_link}', content, flags=re.IGNORECASE)
             if count > 0:
-                print(f"--> Đã cập nhật thành công link cho {channel_name.upper()}")
+                print(f"--> Đã cập nhật link {channel_name.upper()}")
                 has_changed = True
         else:
             print(f"--> Cảnh báo: Không tìm thấy cấu trúc kênh {channel_name.upper()} với tvg-id=\"{tvg_id}\" trong m3u.")
@@ -98,9 +98,9 @@ def update_m3u_file():
     if has_changed:
         with open(FILE_NAME, "w", encoding="utf-8") as f:
             f.write(content)
-        print(f"\n Hoàn tất! Đã ghi nhận các thay đổi vào {FILE_NAME}.")
+        print(f"\n Hoàn tất! Đã lưu các thay đổi vào {FILE_NAME}.")
     else:
-        print("\n Không có thay đổi nào được thực hiện thực tế trên file.")
+        print("\n Không có thay đổi nào được thực hiện  trên file.")
 
 if __name__ == "__main__":
     update_m3u_file()
