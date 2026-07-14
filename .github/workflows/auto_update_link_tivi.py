@@ -8,16 +8,13 @@ CHANNELS = {
     "sctv7": {"url": "http://vmttv.dpdns.org/VTVGo/?sctv7", "tvg_id": "sctv7hd"},
     "sctv11": {"url": "http://vmttv.dpdns.org/VTVGo/?sctv11", "tvg_id": "sctv11hd"},
     "sctv13": {"url": "http://vmttv.dpdns.org/VTVGo/?sctv13", "tvg_id": "sctv13hd"},
-    "sctv14": {"url": "http://vmttv.dpdns.org/VTVGo/?sctv14", "tvg_id": "sctv14hd"},
-    "sctv18": {"url": "http://vmttv.dpdns.org/VTVGo/?sctv18", "tvg_id": "sctv18hd"},
-    "sctv19": {"url": "http://vmttv.dpdns.org/VTVGo/?sctv19", "tvg_id": "sctv19hd"},
-    "sctv21": {"url": "http://vmttv.dpdns.org/VTVGo/?sctv21", "tvg_id": "sctv21hd"},
+      "sctv18": {"url": "http://vmttv.dpdns.org/VTVGo/?sctv18", "tvg_id": "sctv18hd"},
     "sctvphim": {"url": "http://vmttv.dpdns.org/VTVGo/?sctvphim", "tvg_id": "sctvhdpth"},
    "dong-nai-3": {"url": "http://vpsttt.vietanhtv.top/vieon/vieon.php?id=dong-nai-3", "tvg_id": "dongnai3"},
 }
 
 # Danh sách phân loại kênh theo tần suất
-FAST_CHANNELS = ["sctv14", "sctv19", "sctv21"]
+FAST_CHANNELS = ["dong-nai-3"]
 
 FILE_NAME = "tivi.m3u"
 
