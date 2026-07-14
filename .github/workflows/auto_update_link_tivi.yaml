@@ -3,7 +3,7 @@ name: Auto Update SCTV
 on:
   schedule:
     # Nhóm chạy 3 tiếng một lần (sctv14, sctv19, sctv21)
-    - cron: '0 */3 * * *'
+    - cron: '0 */10 * * *'
     # Nhóm chạy 12 tiếng một lần (các kênh còn lại)
     - cron: '0 */12 * * *'
   workflow_dispatch: # Cho phép bấm chạy thủ công tất cả các kênh
