@@ -10,7 +10,7 @@ on:
 
 jobs:
   update-link:
-    name: Đang cập nhật...
+    name: cập nhật link
     runs-on: ubuntu-latest
     permissions:
       contents: write
