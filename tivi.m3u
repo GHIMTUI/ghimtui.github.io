@@ -557,7 +557,7 @@ http://liveh12vng.vtvprime.vn/hls/SCTV2/03.m3u8
 #KODIPROP:inputstream.adaptive.manifest_type=hls
 #KODIPROP:inputstream.adaptive.max_video_width=1920
 #KODIPROP:inputstream.adaptive.max_video_height=1080
-http://vtvgolive-sctvdrm.vtvdigital.vn/vKqkQrI223wngcDKefrCgA/1784023424/manifest/sctv4/master.m3u8
+http://vtvgolive-sctvdrm.vtvdigital.vn/IY8rjwe4PTJjGtdwTKbZvw/1784030423/manifest/sctv4/playlist_720p.m3u8
 
 #EXTINF:-1 tvg-id="sctv6hd"  tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/sctv6.png",SCTV6
 #KODIPROP:inputstream.adaptive.manifest_type=hls
@@ -569,25 +569,25 @@ http://live.fptplay53.net/epzhd2/film360_vhls.smil/chunklist_b5000000.m3u8
 #KODIPROP:inputstream.adaptive.manifest_type=hls
 #KODIPROP:inputstream.adaptive.max_video_width=1920
 #KODIPROP:inputstream.adaptive.max_video_height=1080
-http://vtvgolive-sctvdrm.vtvdigital.vn/yU_qQXwGma3coTvdJIpqLw/1784023427/manifest/sctv7/master.m3u8
+http://vtvgolive-sctvdrm.vtvdigital.vn/1pz0f1B1HgF-n84_fZi2ow/1784030426/manifest/sctv7/playlist_720p.m3u8
 
 #EXTINF:-1 tvg-id="sctv11hd"  tvg-logo="http://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV11.png",SCTV11
 #KODIPROP:inputstream.adaptive.manifest_type=hls
 #KODIPROP:inputstream.adaptive.max_video_width=1920
 #KODIPROP:inputstream.adaptive.max_video_height=1080
-http://vtvgolive-sctvdrm.vtvdigital.vn/OsJoNlC_jyAq3WbCQux4Dg/1784023430/manifest/sctv11/master.m3u8
+http://vtvgolive-sctvdrm.vtvdigital.vn/l2vlyLjyS7UdBOqp8Ctz2g/1784030429/manifest/sctv11/playlist_720p.m3u8
 
 #EXTINF:-1 tvg-id="sctv13hd"  tvg-logo="http://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV13.png",SCTV13
 #KODIPROP:inputstream.adaptive.manifest_type=hls
 #KODIPROP:inputstream.adaptive.max_video_width=1920
 #KODIPROP:inputstream.adaptive.max_video_height=1080
-http://vtvgolive-sctvdrm.vtvdigital.vn/N8wESZvkgySPkt36ck8nnQ/1784023432/manifest/sctv13/master.m3u8
+http://vtvgolive-sctvdrm.vtvdigital.vn/3oXW9sBmk8RW33oYJi261A/1784030432/manifest/sctv13/playlist_720p.m3u8
 
 #EXTINF:-1 tvg-id="sctv14hd"  tvg-logo="http://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV14.png",SCTV14
 #KODIPROP:inputstream.adaptive.manifest_type=hls
 #KODIPROP:inputstream.adaptive.max_video_width=1920
 #KODIPROP:inputstream.adaptive.max_video_height=1080
-http://vtvgolive-sctv.vtvdigital.vn/7wzXDQKeht18Ypx4OHgxFQ/1784023435/6GoYKNrTy3vtvsctv/14/masterh264.m3u8
+http://vtvgolive-sctv.vtvdigital.vn/84WIBWV7VIEIrRbgf0FXng/1784030434/6GoYKNrTy3vtvsctv/14/masterh264.m3u8
 
 #EXTINF:-1 tvg-id="sctv16hd" tvg-logo="http://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV16.png",SCTV16 
 #KODIPROP:inputstream.adaptive.manifest_type=dash
@@ -601,25 +601,25 @@ http://liveatmvng.vtvprime.vn/live/data8/SCTV16/Live_DASHDRM/SCTV16.mpd
 #KODIPROP:inputstream.adaptive.manifest_type=hls
 #KODIPROP:inputstream.adaptive.max_video_width=1920
 #KODIPROP:inputstream.adaptive.max_video_height=1080
-http://vtvgolive-sctvdrm.vtvdigital.vn/xpa9_2Q_o5WD1WcR_CXCuw/1784023438/manifest/sctv18/master.m3u8
+http://vtvgolive-sctvdrm.vtvdigital.vn/j5vbLtsKbRRh4LCxjyKFKA/1784030438/manifest/sctv18/playlist_720p.m3u8
 
 #EXTINF:-1 tvg-id="sctv19hd"  tvg-logo="http://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV19.png",SCTV19
 #KODIPROP:inputstream.adaptive.manifest_type=hls
 #KODIPROP:inputstream.adaptive.max_video_width=1920
 #KODIPROP:inputstream.adaptive.max_video_height=1080
-http://vtvgolive-sctv.vtvdigital.vn/agP_CxolGZuduoeA6hZaog/1784023441/5m63a995d8vtvsctv/19/index.m3u8
+http://vtvgolive-sctv.vtvdigital.vn/yv0eH3mcKht1CXFVP96jhQ/1784030440/5m63a995d8vtvsctv/19/index.m3u8
 
 #EXTINF:-1 tvg-id="sctv21hd"  tvg-logo="http://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV21.png",SCTV21
 #KODIPROP:inputstream.adaptive.manifest_type=hls
 #KODIPROP:inputstream.adaptive.max_video_width=1920
 #KODIPROP:inputstream.adaptive.max_video_height=1080
-http://vtvgolive-sctv.vtvdigital.vn/mCtSYdEdu6hRxCJVTly3UA/1784023443/bdnc6qbiq1vtvsctv/21/index.m3u8
+http://vtvgolive-sctv.vtvdigital.vn/1dbojG-5MC2CesZagCg_UA/1784030443/bdnc6qbiq1vtvsctv/21/index.m3u8
 
 #EXTINF:-1 tvg-id="sctvhdpth"  tvg-logo="http://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTVPTH.png",SCTV Phim Tổng Hợp
 #KODIPROP:inputstream.adaptive.manifest_type=hls
 #KODIPROP:inputstream.adaptive.max_video_width=1920
 #KODIPROP:inputstream.adaptive.max_video_height=1080
-http://vtvgolive-sctvdrm.vtvdigital.vn/IcFKF-YENaL3qltb15Qttw/1784023445/manifest/sctvpth/master.m3u8
+http://vtvgolive-sctvdrm.vtvdigital.vn/a5YWhoBP-kMQkZf1-TuJQg/1784030447/manifest/sctvpth/playlist_1080p.m3u8
 
 #EXTINF:-1 tvg-id="vtv1hd" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/vtv1.png", VTV1
 #KODIPROP:inputstream.adaptive.manifest_type=hls
