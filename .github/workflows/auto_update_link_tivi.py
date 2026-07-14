@@ -13,6 +13,7 @@ CHANNELS = {
     "sctv19": {"url": "http://vmttv.dpdns.org/VTVGo/?sctv19", "tvg_id": "sctv19hd"},
     "sctv21": {"url": "http://vmttv.dpdns.org/VTVGo/?sctv21", "tvg_id": "sctv21hd"},
     "sctvphim": {"url": "http://vmttv.dpdns.org/VTVGo/?sctvphim", "tvg_id": "sctvhdpth"},
+   "dong-nai-3": {"url": "http://vpsttt.vietanhtv.top/vieon/vieon.php?id=dong-nai-3", "tvg_id": "dongnai3"},
 }
 
 # Danh sách phân loại kênh theo tần suất
