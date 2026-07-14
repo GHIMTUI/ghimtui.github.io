@@ -10,6 +10,7 @@ on:
 
 jobs:
   update-link:
+   - name: Chạy cập nhật
     runs-on: ubuntu-latest
     permissions:
       contents: write # Cấp quyền ghi vào repo cho Action
@@ -54,14 +55,14 @@ jobs:
 
     - name: Commit và Push thay đổi lên GitHub
       run: |
-        git config --global user.name "github-actions[bot]"
+        git config --global user.name "auto-update [bot]"
         git config --global user.email "github-actions[bot]@users.noreply.github.com"
         
         # Kiểm tra xem file tivi.m3u có thay đổi hay không trước khi commit
         if [ -n "$(git status --porcelain)" ]; then
           git add tivi.m3u
-          git commit -m "Automated: Cập nhật link sctv theo lịch ($UPDATE_TYPE)"
+          git commit -m "[Auto]: Cập nhật link sctv theo lịch ($UPDATE_TYPE)"
           git push
         else
-          echo "Link hôm nay không đổi so với link cũ, bỏ qua commit."
+          echo "Link hôm nay không đổi so với link cũ."
         fi
