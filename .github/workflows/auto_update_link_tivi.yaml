@@ -1,4 +1,4 @@
-name: Auto Update SCTV
+name: Auto Update Channels
 
 on:
   schedule:
