@@ -27,6 +27,13 @@ def get_live_link(url, channel_name):
         if final_url.startswith("https://"):
             final_url = final_url.replace("https://", "http://", 1)
             
+        # Logic thay đổi đuôi master.m3u8 thành playlist phù hợp theo yêu cầu
+        if "master.m3u8" in final_url:
+            if channel_name.lower() == "sctvphim":
+                final_url = final_url.replace("master.m3u8", "playlist_1080p.m3u8")
+            else:
+                final_url = final_url.replace("master.m3u8", "playlist_720p.m3u8")
+            
         print(f"[{channel_name.upper()}] Đã lấy được link (HTTP): {final_url}")
         return final_url
     except Exception as e:
