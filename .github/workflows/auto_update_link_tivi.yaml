@@ -1,4 +1,4 @@
-name: Auto Update Channels
+name: Auto Update Channel
 
 on:
   schedule:
@@ -44,7 +44,7 @@ jobs:
         echo "UPDATE_TYPE=$UPDATE_TYPE" >> $GITHUB_ENV
         echo "--> Nhóm kênh sẽ được cập nhật lần này: $UPDATE_TYPE"
 
-    - name: Chạy script cập nhật
+    - name: Chạy script
       env:
         UPDATE_TYPE: ${{ env.UPDATE_TYPE }}
       run: python .github/workflows/auto_update_link_tivi.py
@@ -56,7 +56,7 @@ jobs:
         
         if [ -n "$(git status --porcelain)" ]; then
           git add tivi.m3u
-          git commit -m "[$UPDATE_TYPE]: Đã cập nhật xong"
+          git commit -m "[$UPDATE_TYPE] Đã cập nhật xong"
           git push
         else
           echo "Link hôm nay không đổi so với link cũ."
