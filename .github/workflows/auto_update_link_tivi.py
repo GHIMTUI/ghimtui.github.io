@@ -8,12 +8,14 @@ CHANNELS = {
     "sctv7": {"url": "http://vmttv.dpdns.org/VTVGo/?sctv7", "tvg_id": "sctv7hd"},
     "sctv11": {"url": "http://vmttv.dpdns.org/VTVGo/?sctv11", "tvg_id": "sctv11hd"},
     "sctv13": {"url": "http://vmttv.dpdns.org/VTVGo/?sctv13", "tvg_id": "sctv13hd"},
-      "sctv18": {"url": "http://vmttv.dpdns.org/VTVGo/?sctv18", "tvg_id": "sctv18hd"},
+    "sctv18": {"url": "http://vmttv.dpdns.org/VTVGo/?sctv18", "tvg_id": "sctv18hd"},
     "sctvphim": {"url": "http://vmttv.dpdns.org/VTVGo/?sctvphim", "tvg_id": "sctvhdpth"},
    "dong-nai-3": {"url": "http://vpsttt.vietanhtv.top/vieon/vieon.php?id=dong-nai-3", "tvg_id": "dongnai3"},
-"vinhlong1": {"url": "http://vpsttt.vietanhtv.top/vieon/vieon.php?id=thvl1-hd", "tvg_id": "vinhlong1hd"},
-"vinhlong2": {"url": "http://vpsttt.vietanhtv.top/vieon/vieon.php?id=thvl2-hd", "tvg_id": "vinhlong2hd"},
-"vinhlong3": {"url": "http://vpsttt.vietanhtv.top/vieon/vieon.php?id=thvl3-hd", "tvg_id": "vinhlong3hd"},
+  "thvl1-hd": {"url": "http://vpsttt.vietanhtv.top/vieon/vieon.php?id=thvl1-hd", "tvg_id": "vinhlong1hd"},
+  "thvl2-hd": {"url": "http://vpsttt.vietanhtv.top/vieon/vieon.php?id=thvl2-hd", "tvg_id": "vinhlong2hd"},
+  "thvl3-hd": {"url": "http://vpsttt.vietanhtv.top/vieon/vieon.php?id=thvl3-hd", "tvg_id": "vinhlong3hd"},
+  "thvl4-hd": {"url": "http://vpsttt.vietanhtv.top/vieon/vieon.php?id=thvl4-hd", "tvg_id": "vinhlong4hd"},
+  "thvl5-hd": {"url": "http://vpsttt.vietanhtv.top/vieon/vieon.php?id=thvl5-hd", "tvg_id": "vinhlong5hd"},
 
 }
 
