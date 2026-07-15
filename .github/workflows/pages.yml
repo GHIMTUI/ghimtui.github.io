@@ -1,0 +1,40 @@
+name: "Cài đặt và triển khai trang web" # Tên workflow thay cho "pages build and deployment"
+
+on:
+  push:
+    branches: ["main"] # Hoặc tên nhánh của bạn
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    name: "Tạo bản dựng hệ thống" # Thay cho chữ "build" trên sơ đồ
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Kiểm tra mã nguồn"
+        uses: actions/checkout@v4
+      - name: "Cấu hình Pages"
+        uses: actions/configure-pages@v5
+      - name: "Tải lên sản phẩm"
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.' # Hoặc thư mục chứa web của bạn
+
+  deploy:
+    name: "Triển khai lên mạng" # Thay cho chữ "deploy" trên sơ đồ
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps: deployment.outputs.page_url }}
+    steps:
+      - name: "Tiến hành đưa lên trang web chính thức"
+        id: deployment
+        uses: actions/deploy-pages@v4
