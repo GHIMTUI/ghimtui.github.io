@@ -10,11 +10,10 @@ CHANNELS = {
     "sctv13": {"url": "http://vmttv.dpdns.org/VTVGo/?sctv13", "tvg_id": "sctv13hd"},
       "sctv18": {"url": "http://vmttv.dpdns.org/VTVGo/?sctv18", "tvg_id": "sctv18hd"},
     "sctvphim": {"url": "http://vmttv.dpdns.org/VTVGo/?sctvphim", "tvg_id": "sctvhdpth"},
-   "dong-nai-3": {"url": "http://vpsttt.vietanhtv.top/vieon/vieon.php?id=dong-nai-3", "tvg_id": "dongnai3"},
-}
+   }
 
 # Danh sách phân loại kênh theo tần suất
-FAST_CHANNELS = ["dong-nai-3"]
+FAST_CHANNELS = [""]
 
 FILE_NAME = "tivi.m3u"
 
