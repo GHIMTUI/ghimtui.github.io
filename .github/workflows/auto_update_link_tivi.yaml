@@ -2,10 +2,10 @@ name: Auto Update Channel
 
 on:
   schedule:
-    # Nhóm chạy 3 tiếng một lần (sctv14, sctv19, sctv21)
+    # Nhóm chạy 10 tiếng một lần (sctv14, sctv19, sctv21)
     - cron: '0 */10 * * *'
-    # Nhóm chạy 12 tiếng một lần (các kênh còn lại)
-    - cron: '0 */12 * * *'
+    # Nhóm chạy 24 tiếng một lần (các kênh còn lại)
+    - cron: '0 */24 * * *'
   workflow_dispatch: # Cho phép bấm chạy thủ công tất cả các kênh
 
 jobs:
