@@ -1,8 +1,8 @@
-name: "Cài đặt và triển khai trang web" # Tên workflow thay cho "pages build and deployment"
+name: "Cài đặt và Triển khai Trang web" # Tên workflow thay cho "pages build and deployment"
 
 on:
   push:
-    branches: ["main"] # Hoặc tên nhánh của bạn
+    branches: ["main"] # Nhánh chạy chính của bạn
 
 permissions:
   contents: read
@@ -25,7 +25,7 @@ jobs:
       - name: "Tải lên sản phẩm"
         uses: actions/upload-pages-artifact@v3
         with:
-          path: '.' # Hoặc thư mục chứa web của bạn
+          path: '.' # Đường dẫn thư mục chứa web của bạn
 
   deploy:
     name: "Triển khai lên mạng" # Thay cho chữ "deploy" trên sơ đồ
@@ -33,7 +33,7 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: github-pages
-      url: ${{ steps: deployment.outputs.page_url }}
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: "Tiến hành đưa lên trang web chính thức"
         id: deployment
