@@ -2,15 +2,15 @@ name: Auto Update Channel
 
 on:
   schedule:
-    # Nhóm chạy 10 tiếng một lần (sctv14, sctv19, sctv21)
-    - cron: '0 */10 * * *'
+    # Nhóm chạy 12 tiếng một lần (sctv14, sctv19, sctv21)
+   # - cron: '0 */12 * * *'
     # Nhóm chạy 24 tiếng một lần (các kênh còn lại)
     - cron: '0 */24 * * *'
   workflow_dispatch: # Cho phép bấm chạy thủ công tất cả các kênh
 
 jobs:
   update-link:
-    name: cập nhật link
+    name: cập nhật liên kết
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -35,9 +35,9 @@ jobs:
         UPDATE_TYPE="ALL"
         if [ "${{ github.event_name }}" = "schedule" ]; then
           CRON_TIME="${{ github.event.schedule }}"
-          if [ "$CRON_TIME" = "0 */3 * * *" ]; then
+          if [ "$CRON_TIME" = "0 */12 * * *" ]; then
             UPDATE_TYPE="FAST"
-          elif [ "$CRON_TIME" = "0 */12 * * *" ]; then
+          elif [ "$CRON_TIME" = "0 */24 * * *" ]; then
             UPDATE_TYPE="SLOW"
           fi
         fi
