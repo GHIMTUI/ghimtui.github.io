@@ -4,8 +4,8 @@ on:
   schedule:
     # Nhóm chạy 12 tiếng một lần (sctv14, sctv19, sctv21)
    # - cron: '0 */12 * * *'
-    # Nhóm chạy 24 tiếng một lần (các kênh còn lại)
-    - cron: '0 */24 * * *'
+    # Nhóm chạy 48 tiếng một lần (các kênh còn lại)
+    - cron: '0 */48 * * *'
   workflow_dispatch: # Cho phép bấm chạy thủ công tất cả các kênh
 
 jobs:
@@ -32,13 +32,13 @@ jobs:
     - name: Kiểm tra lịch cron
       id: check-group
       run: |
-        UPDATE_TYPE="ALL"
+        UPDATE_TYPE="Tất cả kênh"
         if [ "${{ github.event_name }}" = "schedule" ]; then
           CRON_TIME="${{ github.event.schedule }}"
           if [ "$CRON_TIME" = "0 */12 * * *" ]; then
-            UPDATE_TYPE="FAST"
-          elif [ "$CRON_TIME" = "0 */24 * * *" ]; then
-            UPDATE_TYPE="SLOW"
+            UPDATE_TYPE="Nhóm 12h"
+          elif [ "$CRON_TIME" = "0 */48 * * *" ]; then
+            UPDATE_TYPE="Nhóm 48h"
           fi
         fi
         echo "UPDATE_TYPE=$UPDATE_TYPE" >> $GITHUB_ENV
@@ -56,7 +56,7 @@ jobs:
         
         if [ -n "$(git status --porcelain)" ]; then
           git add tivi.m3u
-          git commit -m "[$UPDATE_TYPE] Đã cập nhật xong"
+          git commit -m "$UPDATE_TYPE đã cập nhật xong"
           git push
         else
           echo "Link hôm nay không đổi so với link cũ."
