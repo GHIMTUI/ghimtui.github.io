@@ -298,13 +298,13 @@ http://live.fptplay53.net/epzsd1/dongnai2_hls.smil/chunklist_b2500000.m3u8
 #KODIPROP:inputstream.adaptive.manifest_type=hls
 #KODIPROP:inputstream.adaptive.max_video_width=1920
 #KODIPROP:inputstream.adaptive.max_video_height=1080
-http://live.mediatech.vn/live/285b59a111d76974225a8e3004bfc31a509/chunklist.m3u8
+http://live.fptplay53.net/epzsd1/danang1_hls.smil/chunklist_b2500000.m3u8
 
 #EXTINF:-1 tvg-id="danang2" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/danang2.png", Đà Nẵng 2
 #KODIPROP:inputstream.adaptive.manifest_type=hls
 #KODIPROP:inputstream.adaptive.max_video_width=1920
 #KODIPROP:inputstream.adaptive.max_video_height=1080
-http://live.mediatech.vn/live/2859145290d0d7947ef88b6240123b62474/chunklist.m3u8
+http://live.fptplay53.net/epzsd1/danang2_hls.smil/chunklist_b2500000.m3u8
 
 #EXTINF:-1 tvg-id="hanoi1" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/hanoi1.png", Hà Nội 1
 #KODIPROP:inputstream.adaptive.manifest_type=hls
