@@ -401,7 +401,7 @@ http://livevlisctcdnw.seenow.vn/livesnv2/PHIM_VIET/manifest.mpd
 http://livevlisctcdnw.seenow.vn/livesnv2/VAN_HOA/manifest.mpd
 
 #EXTINF:-1 tvg-id="oncine" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/on_cine.png", ON  Cine
-#KODIPROP:inputstream.adaptive.manifest_type=dash
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.max_video_width=1920
 #KODIPROP:inputstream.adaptive.max_video_height=1080
 #KODIPROP:inputstream.adaptive.license_type=clearkey
@@ -489,7 +489,7 @@ http://livevlisctcdnw.seenow.vn/livesnv2/GIAITRI_TV_HD/manifest.mpd
 http://livevlisctcdnw.seenow.vn/livesnv2/VFAMILY/manifest.mpd
 
 #EXTINF:-1 tvg-id="onbibi"  tvg-logo="http://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/VTVCab/OnBibi.png",On BiBi
-#KODIPROP:inputstream.adaptive.manifest_type=dash
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.max_video_width=1920
 #KODIPROP:inputstream.adaptive.max_video_height=1080
 #KODIPROP:inputstream.adaptive.license_type=clearkey
@@ -497,7 +497,7 @@ http://livevlisctcdnw.seenow.vn/livesnv2/VFAMILY/manifest.mpd
 http://livevlisctcdnw.seenow.vn/livesnv2/BIBI/manifest.mpd
 
 #EXTINF:-1 tvg-id="onkids" tvg-logo="http://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/VTVCab/OnKids.png",On Kids
-#KODIPROP:inputstream.adaptive.manifest_type=dash
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.max_video_width=1920
 #KODIPROP:inputstream.adaptive.max_video_height=1080
 #KODIPROP:inputstream.adaptive.license_type=clearkey
@@ -577,6 +577,12 @@ http://vtvgolive-sctvdrm.vtvdigital.vn/La2zJz1UvYrB5kJBQer-Ww/1784352462/manifes
 #KODIPROP:inputstream.adaptive.max_video_width=1920
 #KODIPROP:inputstream.adaptive.max_video_height=1080
 http://vtvgolive-sctvdrm.vtvdigital.vn/4SkQ9eWwAQXj5wLj_GzaQQ/1784352464/manifest/sctv13/playlist_720p.m3u8
+
+#EXTINF:-1 tvg-id="sctv14hd"  tvg-logo="http://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV14.png",SCTV14
+#KODIPROP:inputstream.adaptive.manifest_type=hls
+#KODIPROP:inputstream.adaptive.max_video_width=1920
+#KODIPROP:inputstream.adaptive.max_video_height=1080
+http://vmttv.dpdns.org/VTVGo/?sctv14
 
 #EXTINF:-1 tvg-id="sctv18hd"  tvg-logo="http://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV18.png",SCTV18
 #KODIPROP:inputstream.adaptive.manifest_type=hls
