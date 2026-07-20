@@ -132,12 +132,6 @@ http://live.fptplay53.net/epzhd1/htvcphunu_vhls.smil/chunklist_b5000000.m3u8
 #KODIPROP:inputstream.adaptive.max_video_height=1080
 http://live.fptplay53.net/epzhd1/htvcthuanviethd_vhls.smil/chunklist_b5000000.m3u8
 
-#EXTINF:-1 tvg-id="htvcdulichhd" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/dulich.png",Du Lịch
-#KODIPROP:inputstream.adaptive.manifest_type=hls
-#KODIPROP:inputstream.adaptive.max_video_width=1920
-#KODIPROP:inputstream.adaptive.max_video_height=1080
-http://live.fptplay53.net/epzhd1/htvcdulich_vhls.smil/chunklist_b5000000.m3u8
-
 #EXTINF:-1 tvg-id="antvhd" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/antv.png", An Ninh
 #KODIPROP:inputstream.adaptive.manifest_type=hls
 #KODIPROP:inputstream.adaptive.max_video_width=1920
