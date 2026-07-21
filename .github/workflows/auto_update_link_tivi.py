@@ -12,7 +12,10 @@ CHANNELS = {
     "sctv16": {"url": "http://vmttv.dpdns.org/VTVGo/?sctv16", "tvg_id": "sctv16hd"},
     "sctv18": {"url": "http://vmttv.dpdns.org/VTVGo/?sctv18", "tvg_id": "sctv18hd"},
     "sctvphim": {"url": "http://vmttv.dpdns.org/VTVGo/?sctvphim", "tvg_id": "sctvhdpth"},
-   }
+    "sctv19": {"url": "http://vmttv.dpdns.org/VTVGo/?sctv19", "tvg_id": "sctv19hd"},
+    "sctv21": {"url": "http://vmttv.dpdns.org/VTVGo/?sctv21", "tvg_id": "sctv21hd"},
+    
+}
 
 # Danh sách phân loại kênh theo tần suất
 FAST_CHANNELS = [""]
