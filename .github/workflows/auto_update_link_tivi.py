@@ -5,8 +5,10 @@ import requests
 # 1. Định nghĩa danh sách các kênh cần lấy và mã tvg-id tương ứng trong file m3u
 CHANNELS = {
     "sctv2": {"url": "http://vmttv.dpdns.org/VTVGo/?sctv2", "tvg_id": "sctv2hd"},
+    "sctv3": {"url": "http://vmttv.dpdns.org/VTVGo/?sctv3", "tvg_id": "sctv3hd"},
     "sctv4": {"url": "http://vmttv.dpdns.org/VTVGo/?sctv4", "tvg_id": "sctv4hd"},
     "sctv7": {"url": "http://vmttv.dpdns.org/VTVGo/?sctv7", "tvg_id": "sctv7hd"},
+    "sctv9": {"url": "http://vmttv.dpdns.org/VTVGo/?sctv9", "tvg_id": "sctv9hd"},
     "sctv11": {"url": "http://vmttv.dpdns.org/VTVGo/?sctv11", "tvg_id": "sctv11hd"},
     "sctv12": {"url": "http://vmttv.dpdns.org/VTVGo/?sctv12", "tvg_id": "sctv12hd"},
     "sctv13": {"url": "http://vmttv.dpdns.org/VTVGo/?sctv13", "tvg_id": "sctv13hd"},
