@@ -508,6 +508,9 @@ http://vtvgolive-sctvdrm.vtvdigital.vn/B0UIrGRUEJuI94MaGvQhjw/1785337607/manifes
 #KODIPROP:inputstream.adaptive.max_video_height=1080
 http://vtvgolive-sctvdrm.vtvdigital.vn/w3teLaDLBQ1lFZPFBcKu-Q/1785337610/manifest/sctv13/playlist_720p.m3u8
 
+#EXTINF:-1 tvg-id="sctv14hd"  tvg-logo="http://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV14.png",SCTV14
+https://vmttv.dpdns.org/VTVGo/?sctv14
+
 #EXTINF:-1 tvg-id="sctv16hd"  tvg-logo="http://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV16.png",SCTV16
 #KODIPROP:inputstream.adaptive.manifest_type=hls
 #KODIPROP:inputstream.adaptive.max_video_width=1920
