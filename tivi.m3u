@@ -278,28 +278,28 @@ http://liveatmvng.vtvprime.vn/live/data8/SCTV1/Live_DASHDRM/SCTV1.mpd
 http://freem3u.xyz/api/live/play.m3u8?vid=201 
 
 #EXTINF:-1 tvg-id="sctv4hd"  tvg-logo="http://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV4.png",SCTV4
-http://vtvgolive-sctvdrm.vtvdigital.vn/46AHjtbZY9AKJOXGblfRzA/1785669917/manifest/sctv4/playlist_720p.m3u8
+http://vtvgolive-sctvdrm.vtvdigital.vn/JExo6EAy64SF9_uUJN6O-w/1785739288/manifest/sctv4/playlist_720p.m3u8
 
 #EXTINF:-1 tvg-id="sctv6hd"  tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/sctv6.png",SCTV6
 http://live.fptplay53.net/epzhd2/film360_vhls.smil/chunklist.m3u8|User-Agent=FPTPlay/3.0 (Android; SmartTV) 
 
 #EXTINF:-1 tvg-id="sctv7hd"  tvg-logo="http://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV7.png",SCTV7
-http://vtvgolive-sctvdrm.vtvdigital.vn/bj1-Om3cRY9W9W9EdVKnqA/1785669920/manifest/sctv7/playlist_720p.m3u8
+http://vtvgolive-sctvdrm.vtvdigital.vn/x3XpStOqZ00ERLuduosf2g/1785739291/manifest/sctv7/playlist_720p.m3u8
 
 #EXTINF:-1 tvg-id="sctv11hd"  tvg-logo="http://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV11.png",SCTV11
-http://vtvgolive-sctvdrm.vtvdigital.vn/cgtXl7RzbMkIcXJc7_rqDQ/1785669923/manifest/sctv11/playlist_720p.m3u8
+http://vtvgolive-sctvdrm.vtvdigital.vn/T-XO_0pYK5yCdlpsiPNQPw/1785739294/manifest/sctv11/playlist_720p.m3u8
 
 #EXTINF:-1 tvg-id="sctv13hd"  tvg-logo="http://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV13.png",SCTV13
-http://vtvgolive-sctvdrm.vtvdigital.vn/ptEFx3-AHtzELkC8sIsGlg/1785669926/manifest/sctv13/playlist_720p.m3u8
+http://vtvgolive-sctvdrm.vtvdigital.vn/_TapHdczU_E7vIqaaUcr5w/1785739295/manifest/sctv13/playlist_720p.m3u8
 
 #EXTINF:-1 tvg-id="sctv16hd"  tvg-logo="http://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV16.png",SCTV16
-http://vtvgolive-sctvdrm.vtvdigital.vn/FdOMJagO8Xln_6OlVD8BGg/1785669929/manifest/sctv16/playlist_720p.m3u8
+http://vtvgolive-sctvdrm.vtvdigital.vn/M1_B32QnCzib0I39Y-IiFA/1785739297/manifest/sctv16/playlist_720p.m3u8
 
 #EXTINF:-1 tvg-id="sctv18hd"  tvg-logo="http://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV18.png",SCTV18
-http://vtvgolive-sctvdrm.vtvdigital.vn/ApEXLGZOVY1VI5nzNpLvCQ/1785669932/manifest/sctv18/playlist_720p.m3u8
+http://vtvgolive-sctvdrm.vtvdigital.vn/uA6vSWlyOLL_wvASnkVfmQ/1785739300/manifest/sctv18/playlist_720p.m3u8
 
 #EXTINF:-1 tvg-id="sctvhdpth"  tvg-logo="http://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTVPTH.png",SCTV Phim Tổng Hợp
-http://vtvgolive-sctvdrm.vtvdigital.vn/nFPCZZrxUSf8EfUyizyI8w/1785669935/manifest/sctvpth/playlist_1080p.m3u8
+http://vtvgolive-sctvdrm.vtvdigital.vn/YiZuVQgZzDvu5e0PHTff7Q/1785739302/manifest/sctvpth/playlist_1080p.m3u8
 
 #EXTINF:-1 tvg-id="onbibi" tvg-logo="https://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/VTVCab/OnBibi.png",On BiBi
 #KODIPROP:inputstream.adaptive.manifest_type=dash
