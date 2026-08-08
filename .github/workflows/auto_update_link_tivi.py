@@ -10,6 +10,8 @@ CHANNELS = {
     "sctv13": {"url": "http://vmttv.dpdns.org/VTVGo/?sctv13", "tvg_id": "sctv13hd"},
     "sctv16": {"url": "http://vmttv.dpdns.org/VTVGo/?sctv16", "tvg_id": "sctv16hd"},
     "sctv18": {"url": "http://vmttv.dpdns.org/VTVGo/?sctv18", "tvg_id": "sctv18hd"},
+    "sctv19": {"url": "http://vietanhtv.id.vn/sctv/tv.php?id=sctv19-bf00bd02", "tvg_id": "sctv19hd"},
+    "sctv21": {"url": "http://vietanhtv.id.vn/sctv/tv.php?id=sctv-21-57de221a", "tvg_id": "sctv21hd"},
     "sctvphim": {"url": "http://vmttv.dpdns.org/VTVGo/?sctvphim", "tvg_id": "sctvhdpth"},
     
 }
