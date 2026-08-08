@@ -302,6 +302,9 @@ http://vtvgolive-sctvdrm.vtvdigital.vn/hDjQMtuSo4NwFqldIjRb1A/1784876583/manifes
 #EXTINF:-1 tvg-id="sctv8hd"  tvg-logo="http://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV8.png",SCTV8
 http://vietanhtv.id.vn/sctv/proxy.php/https://e1.endpoint.cdn.sctvonline.vn/cdn-secure/v1/sctvonline/2/8japbHvbfN_tV2b-lX3RYQ/1788786458/PI8HI3T/live/hls/sctv8/index.m3u8
 
+#EXTINF:-1 tvg-id="sctv9hd"  tvg-logo="http://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV9.png",SCTV9
+https://vmttv.dpdns.org/VTVGo/?sctv9
+
 #EXTINF:-1 tvg-id="sctv11hd"  tvg-logo="http://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV11.png",SCTV11
 http://vtvgolive-sctvdrm.vtvdigital.vn/quvvdzmfXZywnOc2osYHQg/1784876588/manifest/sctv11/playlist_720p.m3u8
 
@@ -315,10 +318,10 @@ http://vtvgolive-sctvdrm.vtvdigital.vn/edq1eQuhgiT01gv3YtK_Gw/1784876594/manifes
 http://vtvgolive-sctvdrm.vtvdigital.vn/VTSHqQt9bTowgEIHuMiUmA/1784876596/manifest/sctv18/playlist_720p.m3u8
 
 #EXTINF:-1 tvg-id="sctv19hd"  tvg-logo="http://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV19.png",SCTV19
-http://vietanhtv.id.vn/sctv/proxy.php/https://e8.endpoint.cdn.sctvonline.vn/cdn-secure/v1/sctvonline/2/iiLrlLUmfkJyfCkd9AzPfw/1788787067/PI8HI3T/live/hls/sctv19/index.m3u8
+http://vtvgolive-sctvdrm.vtvdigital.vn/VTSHqQt9bTowgEIHuMiUmA/1784876596/manifest/sctv18/playlist_720p.m3u8
 
 #EXTINF:-1 tvg-id="sctv21hd"  tvg-logo="http://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV21.png",SCTV21
-http://vietanhtv.id.vn/sctv/proxy.php/https://e1.endpoint.cdn.sctvonline.vn/cdn-secure/v1/sctvonline/2/8ydnbHaB7gfZxcJ-tMDBGA/1788787068/PI8HI3T/live/hls/sctv21/index.m3u8
+http://vtvgolive-sctvdrm.vtvdigital.vn/VTSHqQt9bTowgEIHuMiUmA/1784876596/manifest/sctv18/playlist_720p.m3u8
 
 #EXTINF:-1 tvg-id="sctvhdpth"  tvg-logo="http://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTVPTH.png",SCTV Phim Tổng Hợp
 http://vtvgolive-sctvdrm.vtvdigital.vn/vZIuzGcM5LVek8fjWb0Mlw/1784876598/manifest/sctvpth/playlist_1080p.m3u8 
