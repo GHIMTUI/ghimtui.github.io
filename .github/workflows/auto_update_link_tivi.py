@@ -14,7 +14,6 @@ CHANNELS = {
     "sctv19": {"url": "http://vietanhtv.id.vn/sctv/tv.php?id=sctv19-bf00bd02", "tvg_id": "sctv19hd"},
     "sctv21": {"url": "http://vietanhtv.id.vn/sctv/tv.php?id=sctv-21-57de221a", "tvg_id": "sctv21hd"},
     "sctvphim": {"url": "http://vmttv.dpdns.org/VTVGo/?sctvphim", "tvg_id": "sctvhdpth"},
-    "sctv4k": {"url": "http://vietanhtv.id.vn/sctv/tv.php?id=sctv-4k", "tvg_id": "sctv4k"},
     
 }
 
