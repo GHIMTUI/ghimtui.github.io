@@ -6,6 +6,7 @@ import requests
 CHANNELS = {
     "sctv4": {"url": "http://vmttv.dpdns.org/VTVGo/?sctv4", "tvg_id": "sctv4hd"},
     "sctv7": {"url": "http://vmttv.dpdns.org/VTVGo/?sctv7", "tvg_id": "sctv7hd"},
+    "sctv8": {"url": "http://vietanhtv.id.vn/sctv/tv.php?id=sctv8-c12d138b", "tvg_id": "sctv8hd"},
     "sctv11": {"url": "http://vmttv.dpdns.org/VTVGo/?sctv11", "tvg_id": "sctv11hd"},
     "sctv13": {"url": "http://vmttv.dpdns.org/VTVGo/?sctv13", "tvg_id": "sctv13hd"},
     "sctv16": {"url": "http://vmttv.dpdns.org/VTVGo/?sctv16", "tvg_id": "sctv16hd"},
@@ -13,6 +14,7 @@ CHANNELS = {
     "sctv19": {"url": "http://vietanhtv.id.vn/sctv/tv.php?id=sctv19-bf00bd02", "tvg_id": "sctv19hd"},
     "sctv21": {"url": "http://vietanhtv.id.vn/sctv/tv.php?id=sctv-21-57de221a", "tvg_id": "sctv21hd"},
     "sctvphim": {"url": "http://vmttv.dpdns.org/VTVGo/?sctvphim", "tvg_id": "sctvhdpth"},
+    "sctv4k": {"url": "http://vietanhtv.id.vn/sctv/tv.php?id=sctv-4k", "tvg_id": "sctv4k"},
     
 }
 
