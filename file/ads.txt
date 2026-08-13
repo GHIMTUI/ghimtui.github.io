@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Describe: Chặn quảng cáo
-! Updated: 13 Aug 2026 22:40
-! Blocked: 525
-! Size: 37.16 KB
+! Updated: 13 Aug 2026 23:48
+! Blocked: 527
+! Size: 37.31 KB
 ! ==================
 
 1thegioi.vn##[class^="c-banner-"],[id^="zone-"]
@@ -378,6 +378,8 @@ hcmcpv.org.vn##[class^="banner-"],[id^="chuyende"]
 
 hdbank.com.vn##.mobile-popup
 
+hoahoctro.tienphong.vn###sdaMobile_SdaMasthead
+
 hoanhap.vn##.section-1
 
 hochiminhcity.gov.vn###carouselExampleIndicators,[class^="banner-"],[class^="journal-"],[class^="wrapPartners-"]
@@ -736,6 +738,8 @@ suckhoedoisong.vn##.top-ads,[class^="c-banner-"],[id^="banner-"],[id^="placement
 
 suckhoetreem.vn##[class^="DnnModule-"],[class^="bn-"]
 
+svvn.tienphong.vn###sdaMobile_SdaMasthead
+
 taimienphi.vn##.adsbygoogle
 
 tapchicand.gov.vn##.adregion
@@ -832,7 +836,7 @@ thuysanvietnam.com.vn##.ft-fanpage,[class^="hd-cate-"]
 
 thvli.vn##.mt-4,.row-install-app,[class^="mobile-install-"]
 
-tienphong.vn###mg-gpt-popup-modal,.adsbygoogle,.close_ub-anchor,.sp-pto-mb-div,[class^="ad-"],[class^="adsMobile_"],[class^="ads_"],[class^="sp-"],[id^="sp_"],[id^="ub-anchor-"],adsbygoogle
+tienphong.vn###mg-gpt-popup-modal,.adsbygoogle,.close_ub-anchor,.sp-pto-mb-div,[class^="ad-"],[class^="adsMobile_"],[class^="ads_"],[class^="banner-"],[class^="sp-"],[id^="sp_"],[id^="ub-anchor-"],adsbygoogle
 
 tiin.vn###admFullTop,#advBallon,#advHomeTop,#ban-top-site,#top-logo,[id^="admLogoAd"],[id^="adm_"],[id^="adnzone_"],[id^="banner-"],[id^="placement-"],[id^="share-"],[id^="slot-"],[id^="ssppagebid_"],[id^="yomedia-"],[id^="zone-"]
 
@@ -850,7 +854,7 @@ tinhte.vn###admFullTop,#admbackground,#ban-top-site,#logo_adm,.pro-container,.to
 
 tinhthanhvn.com##.google-top-ads,.top-ads
 
-tintuconline.com.vn##.adsbygoogle,.vadslogo,[class^="vads-"],[class^="vmc_"],[id^="adzone"],[id^="mashead-"],[id^="sp-"]
+tintuconline.com.vn###Mobile_AdsArticleBodyInArticle,.adsbygoogle,.vadslogo,[class^="vads-"],[class^="vmc_"],[id*="adzone"],[id^="adzone"],[id^="mashead-"],[id^="sp-"]
 
 tintucvietnam.vn##.e,[class^="ads_"],[class^="banner-"],[id^="zone-"]
 
