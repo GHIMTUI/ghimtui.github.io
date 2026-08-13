@@ -62,41 +62,11 @@
             text-transform: uppercase;
         }
 
-        .tab-nav {
-            display: flex;
-            background: #0a0a0a;
-            border-bottom: 1px solid var(--border-color);
-            padding: 0 1rem;
-        }
-
-        .tab-btn {
-            padding: 0.8rem 1.2rem;
-            color: #555;
-            background: none;
-            border: none;
-            font-size: 0.8rem;
-            font-weight: 700;
-            cursor: pointer;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            border-bottom: 2px solid transparent;
-            transition: all 0.2s;
-        }
-
-        .tab-btn.active {
-            color: var(--accent-green);
-            border-bottom-color: var(--accent-green);
-        }
-
         .tab-content {
             flex: 1;
-            display: none;
+            display: flex;
             flex-direction: column;
             overflow: hidden;
-        }
-
-        .tab-content.active {
-            display: flex;
         }
 
         .actions {
@@ -183,7 +153,6 @@
         @media (max-width: 640px) {
             .info-path { font-size: 0.9rem; }
             .status-pill { padding: 0.5rem 0.8rem; font-size: 0.65rem; min-width: 80px; }
-            .tab-btn { padding: 0.8rem 0.6rem; font-size: 0.65rem; }
             .actions { gap: 5px; }
         }
     </style>
@@ -199,79 +168,14 @@
         </div>
     </div>
 
-    <div class="tab-nav">
-        <button id="btn-tab-editor" class="tab-btn active" onclick="switchTab('editor')">Bộ lọc</button>
-        <button id="btn-tab-config" class="tab-btn" onclick="switchTab('config')">Tiền tố</button>
-    </div>
-
-    <div id="tab-editor" class="tab-content active">
+    <div class="tab-content">
         <div class="textarea-wrapper">
             <textarea id="txtAr" class="code-input" spellcheck="false" placeholder="Đang tải bộ lọc từ GitHub..."></textarea>
-        </div>
-    </div>
-
-    <div id="tab-config" class="tab-content">
-        <div class="textarea-wrapper">
-            <textarea id="prefixInput" class="code-input" spellcheck="false" placeholder="Đang tải tiền tố..."></textarea>
         </div>
     </div>
 </div>
 
 <script>
-/**
- * Chuyển đổi giữa các tab giao diện
- */
-function switchTab(tabId) {
-    document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
-    document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
-    
-    const targetBtn = document.getElementById('btn-tab-' + tabId);
-    const targetTab = document.getElementById('tab-' + tabId);
-    
-    if (targetBtn) targetBtn.classList.add('active');
-    if (targetTab) targetTab.classList.add('active');
-}
-
-/**
- * Định dạng danh sách tiền tố domain (Prefixes) một cách thông minh
- */
-function formatPrefixesSmart(input) {
-    if (!input) return "";
-    
-    // Bước 1: Thay thế tất cả các dấu phẩy, khoảng trắng, xuống dòng thành khoảng trắng đơn lẻ
-    // Đồng thời loại bỏ các dấu chấm dư thừa ở cuối các từ nhưng bảo vệ cấu trúc chữ số và chữ cái dạng 2g, 5g, 15g
-    let cleanedInput = input.replace(/,/g, ' ');
-    
-    // Bước 2: Tách thành danh sách mảng dựa trên khoảng trắng
-    let rawList = cleanedInput.split(/\s+/).map(p => p.trim()).filter(p => p !== "");
-    
-    // Bước 3: Chuẩn hóa mỗi tiền tố: chuyển sang chữ thường, loại bỏ tất cả dấu chấm thừa ở đuôi và thêm lại duy nhất 1 dấu chấm ở cuối
-    let processedList = rawList.map(p => {
-        let cleanPrefix = p.toLowerCase().replace(/\.+$/, '');
-        return cleanPrefix ? cleanPrefix + '.' : '';
-    }).filter(p => p !== "" && p !== ".");
-    
-    // Bước 4: Lọc trùng lặp và sắp xếp thứ tự Alphabet
-    let uniqueSorted = [...new Set(processedList)].sort((a, b) => a.localeCompare(b));
-    
-    if (uniqueSorted.length === 0) return "";
-    let result = [];
-    let lastChar = "";
-    
-    // Bước 5: Phân nhóm các chữ cái đầu để xuống dòng cho đẹp mắt
-    uniqueSorted.forEach(item => {
-        let currentChar = item.charAt(0).toLowerCase();
-        if (lastChar && currentChar !== lastChar) {
-            result.push("\n\n" + item);
-        } else {
-            result.push(item);
-        }
-        lastChar = currentChar;
-    });
-
-    return result.join(' ').replace(/ \n/g, '\n').replace(/\n /g, '\n').trim();
-}
-
 /**
  * Tính toán dung lượng văn bản theo KB
  */
@@ -288,21 +192,16 @@ function _format_kb_only(text) {
         _k: _init_key(),
         _o: "ghimtui",
         _r: "ghimtui.github.io",
-        _p_ads: "file/ads.txt",
-        _p_pref: "file/ads-prefix.txt",
-        _p_block: "file/ads-block.txt",
-        _p_whitelist: "file/ads-whitelist.txt",
-        _p_unhide: "file/ads-unhide.txt"
+        _p_ads: "file/ads.txt"
     };
 
     const _api_base = `https://api.github.com/repos/${_app_opt._o}/${_app_opt._r}/contents/`;
     const _dom_ar = document.getElementById('txtAr');
     const _dom_sv = document.getElementById('svBtn');
     const _dom_st = document.getElementById('statusContainer');
-    const _dom_prefix = document.getElementById('prefixInput');
 
-    let _v_shas = { ads: null, pref: null, block: null, whitelist: null, unhide: null };
-    let _last_saved_content = "", _last_saved_prefixes = "";
+    let _v_sha_ads = null;
+    let _last_saved_content = "";
     let _is_loading = true;
 
     function setBtnState(state) {
@@ -362,31 +261,22 @@ function _format_kb_only(text) {
             return;
         }
         
-        const hasContentChanged = _dom_ar.value !== _last_saved_content;
-        const hasPrefixChanged = _dom_prefix.value !== _last_saved_prefixes;
-
-        if (hasContentChanged || hasPrefixChanged) {
+        if (_dom_ar.value !== _last_saved_content) {
             setBtnState('unsaved');
         } else {
             setBtnState('saved');
         }
     }
 
-    function _remove_subdomain_prefixes(domain) {
-        if (!domain) return "";
-        let cleaned = domain.toLowerCase().trim();
-        const activePrefixes = _dom_prefix.value.split(/\s+/).map(p => p.trim()).filter(p => p !== "" && p !== ".").sort((a, b) => b.length - a.length);
-        let parts = cleaned.split('.');
-        if (parts.length <= 2) return cleaned;
-        let currentParts = [...parts];
-        while (currentParts.length > 2) {
-            let firstLabel = currentParts[0] + '.';
-            if (activePrefixes.includes(firstLabel)) currentParts.shift();
-            else break;
-        }
-        return currentParts.join('.');
+    // Loại bỏ giao thức http, https và tiền tố www.
+    function _clean_url_prefix(str) {
+        if (!str) return "";
+        return str.trim().toLowerCase()
+                  .replace(/^https?:\/\//i, '')
+                  .replace(/^www\./i, '');
     }
 
+    // Kiểm tra định dạng tên miền hợp lệ
     function _is_valid_domain(str) {
         if (!str) return false;
         let s = str.trim().toLowerCase();
@@ -415,12 +305,12 @@ function _format_kb_only(text) {
             let hideMatch = line.match(/^([^#\[\]\s,]+)(##|#@?#|#\$#|#\?#)(.*)$/);
             
             if (hideMatch) {
-                let rawDomain = hideMatch[1].trim();
+                let rawDomain = _clean_url_prefix(hideMatch[1]);
                 let separator = hideMatch[2];
                 let selectorPart = hideMatch[3]?.trim() || "";
 
                 if (_is_valid_domain(rawDomain) && selectorPart !== "") {
-                    let domain = _remove_subdomain_prefixes(rawDomain);
+                    let domain = rawDomain;
                     if (!mergedMap.has(domain)) mergedMap.set(domain, new Set());
                     
                     let selectors = selectorPart.split(/,(?![^\[]*\])/);
@@ -431,9 +321,16 @@ function _format_kb_only(text) {
                 } 
             } else {
                 let trimmedLine = line.trim();
+                
+                // Loại bỏ http/https/www nếu dòng chỉ là URL/domain thông thường
                 if (!trimmedLine.startsWith('||') && !trimmedLine.startsWith('@@') && !trimmedLine.startsWith('/') && !trimmedLine.startsWith('#')) {
+                    trimmedLine = _clean_url_prefix(trimmedLine);
                     if (!_is_valid_domain(trimmedLine)) return; 
+                } else if (trimmedLine.startsWith('||')) {
+                    // Xử lý loại bỏ www trong quy tắc dạng ||www.example.com^
+                    trimmedLine = trimmedLine.replace(/^\|\|www\./i, '||');
                 }
+                
                 if (trimmedLine) otherRules.add(trimmedLine);
             }
         });
@@ -460,10 +357,6 @@ function _format_kb_only(text) {
         let uniqueBody = Array.from(new Set(processedBody)).sort(strictSort);
 
         const finalBlocked = uniqueBody.length; 
-        let blockRules = uniqueBody.filter(l => l.startsWith('||') && !l.startsWith('@@'));
-        let whitelistRules = uniqueBody.filter(l => l.startsWith('@@||'));
-        let unhideRules = uniqueBody.filter(l => l.includes('#@#'));
-
         const currentRulesOnly = uniqueBody.join('\n');
         const isRulesChanged = _last_saved_content.includes(currentRulesOnly) === false; 
         
@@ -510,12 +403,7 @@ function _format_kb_only(text) {
         
         return { 
             content: [...headerArr, "", ...tempBodyOutput].join('\n'), 
-            isRulesChanged: isRulesChanged,
-            subFiles: {
-                block: blockRules.join('\n'),
-                whitelist: whitelistRules.join('\n'),
-                unhide: unhideRules.join('\n')
-            }
+            isRulesChanged: isRulesChanged
         };
     }
 
@@ -539,26 +427,12 @@ function _format_kb_only(text) {
 
         setBtnState('loading');
         try {
-            const [ads, pref, blk, wht, unh] = await Promise.all([
-                _fetch_file(_app_opt._p_ads),
-                _fetch_file(_app_opt._p_pref),
-                _fetch_file(_app_opt._p_block),
-                _fetch_file(_app_opt._p_whitelist),
-                _fetch_file(_app_opt._p_unhide)
-            ]);
+            const ads = await _fetch_file(_app_opt._p_ads);
 
             if (ads) {
-                _v_shas.ads = ads.sha;
+                _v_sha_ads = ads.sha;
                 _dom_ar.value = _last_saved_content = decodeURIComponent(atob(ads.content).split('').map(c => '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2)).join(''));
             }
-            if (pref) { 
-                _v_shas.pref = pref.sha; 
-                const prefDec = atob(pref.content);
-                _dom_prefix.value = _last_saved_prefixes = formatPrefixesSmart(prefDec); 
-            }
-            if (blk) _v_shas.block = blk.sha;
-            if (wht) _v_shas.whitelist = wht.sha;
-            if (unh) _v_shas.unhide = unh.sha;
 
             _is_loading = false; 
             setBtnState('saved');
@@ -576,43 +450,18 @@ function _format_kb_only(text) {
     }
 
     if (_dom_ar) _dom_ar.addEventListener('input', checkChanges);
-    if (_dom_prefix) {
-        _dom_prefix.addEventListener('input', checkChanges);
-        _dom_prefix.addEventListener('blur', () => {
-            if (_is_loading) return;
-            const formatted = formatPrefixesSmart(_dom_prefix.value);
-            if (formatted !== _dom_prefix.value) {
-                _dom_prefix.value = formatted;
-                checkChanges();
-            }
-        });
-    }
 
     if (_dom_sv) {
         _dom_sv.addEventListener('click', async () => {
             if (_dom_sv.disabled || !navigator.onLine) return;
             setBtnState('saving');
             try {
-                const fPrefixes = formatPrefixesSmart(_dom_prefix.value);
                 const result = _standardize_content(_dom_ar.value);
 
-                const updateTasks = [
-                    _update_file(_app_opt._p_ads, result.content, _v_shas.ads, result.isRulesChanged ? `update filter` : "format rules"),
-                    _update_file(_app_opt._p_block, result.subFiles.block, _v_shas.block, "sync block"),
-                    _update_file(_app_opt._p_whitelist, result.subFiles.whitelist, _v_shas.whitelist, "sync whitelist"),
-                    _update_file(_app_opt._p_unhide, result.subFiles.unhide, _v_shas.unhide, "sync unhide")
-                ];
-
-                if (fPrefixes !== _last_saved_prefixes) {
-                    updateTasks.push(_update_file(_app_opt._p_pref, fPrefixes, _v_shas.pref, "update prefixes"));
-                }
-
-                await Promise.all(updateTasks);
+                await _update_file(_app_opt._p_ads, result.content, _v_sha_ads, result.isRulesChanged ? `update filter` : "format rules");
                 
                 _last_saved_content = result.content;
-                _last_saved_prefixes = fPrefixes;
                 _dom_ar.value = result.content;
-                _dom_prefix.value = fPrefixes;
                 
                 await _load();
                 setBtnState('saved');
