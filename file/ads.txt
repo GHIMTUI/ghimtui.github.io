@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Describe: Chặn quảng cáo
-! Updated: 07 Jul 2026 08:44
-! Blocked: 522
-! Size: 36.98 KB
+! Updated: 13 Aug 2026 22:14
+! Blocked: 521
+! Size: 36.94 KB
 ! ==================
 
 1thegioi.vn##[class^="c-banner-"],[id^="zone-"]
@@ -367,8 +367,6 @@ haiphong.gov.vn##.AdvertContent
 hanoi.gov.vn##.AdvertContent,.layout-3-col
 
 hanoimoi.vn##[class^="ads_"],[class^="c-banner-"],[class^="is-"],[id^="zone-"]
-
-hanoionline.vn##.full-width-breakout
 
 hatinh.edu.vn###module13,#module66
 
