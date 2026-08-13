@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Describe: Chặn quảng cáo
-! Updated: 13 Aug 2026 22:14
-! Blocked: 521
-! Size: 36.94 KB
+! Updated: 13 Aug 2026 22:40
+! Blocked: 525
+! Size: 37.16 KB
 ! ==================
 
 1thegioi.vn##[class^="c-banner-"],[id^="zone-"]
@@ -418,6 +418,8 @@ iq.com##.download-container,.qrcode-wrap
 
 irace.vn##.g-6,.td-visible-phone
 
+javsub.blog###underPlayerAdsContainer,.overlay-ad
+
 jomc.vn##.adv-wrapper,.center-block
 
 kalvo.com##.footer,[class^="klv_"],[class^="klvad"]
@@ -694,6 +696,8 @@ sc.com##.smartbanner,[class^="smartbanner-"]
 
 sctv.com.vn##.banner
 
+sctvonline.vn##.smartbanner
+
 sggp.org.vn##[class^="Is-"],[id^="Mobile_"],[id^="oa-"],[id^="sdaMobile_"]
 
 shinhan.com.vn##.responsive-wrapper
@@ -914,6 +918,8 @@ vdb.gov.vn##[class^="Ads_"]
 
 vdi.org.vn##[class^="link-"],[id^="WebPartctl00_"],[id^="ctl00_"]
 
+vexfile.com##.hero-banner>center
+
 vib.com.vn##.new-download-app
 
 viblo.asia##.el-dialog,.el-dialog__body,.el-dialog__wrapper,.el-notification,.v-modal
@@ -967,6 +973,8 @@ vinhlong.gov.vn##.DNNContainer_noTitle,.col-xs-12,.dnnPEMContNotitle,.link_item_
 vinid.net##[class^="VinID-modal-"],[class^="modal-"],[class^="vinid-modal-"],[id^="VinID-popup-"]
 
 vjst.vn##[class^="c-banner-"]
+
+vlxvn.love###abovePlayerAdsContainer,#bottomBannerContainer,#popBannerAds,.top-banner-item,.under-player-banner
 
 vn-z.vn##.notices,a[href="https://vn-z.vn/account/upgrades"]
 
