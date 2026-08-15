@@ -4,10 +4,21 @@ import requests
 
 # 1. Định nghĩa danh sách các kênh cần lấy và mã tvg-id tương ứng trong file m3u
 CHANNELS = {
+    "sctv2": {"url": "http://vmttv.dpdns.org/VTVGo/?sctv2", "tvg_id": "sctv2hd"},
+    "sctv3": {"url": "http://vmttv.dpdns.org/VTVGo/?sctv3", "tvg_id": "sctv3hd"},
+    "sctv4": {"url": "http://vmttv.dpdns.org/VTVGo/?sctv4", "tvg_id": "sctv4hd"},
+    "sctv7": {"url": "http://vmttv.dpdns.org/VTVGo/?sctv7", "tvg_id": "sctv7hd"},
+    "sctv8": {"url": "http://vietanhtv.id.vn/sctv/tv.php?id=sctv8-c12d138b", "tvg_id": "sctv8hd"},
+    "sctv9": {"url": "http://vmttv.dpdns.org/VTVGo/?sctv9", "tvg_id": "sctv9hd"},
+    "sctv11": {"url": "http://vmttv.dpdns.org/VTVGo/?sctv11", "tvg_id": "sctv11hd"},
+    "sctv13": {"url": "http://vmttv.dpdns.org/VTVGo/?sctv13", "tvg_id": "sctv13hd"},
+    "sctv16": {"url": "http://vmttv.dpdns.org/VTVGo/?sctv16", "tvg_id": "sctv16hd"},
+    "sctv18": {"url": "http://vmttv.dpdns.org/VTVGo/?sctv18", "tvg_id": "sctv18hd"},
+    "sctv19": {"url": "http://vietanhtv.id.vn/sctv/tv.php?id=sctv19-bf00bd02", "tvg_id": "sctv19hd"},
+    "sctv21": {"url": "http://vietanhtv.id.vn/sctv/tv.php?id=sctv-21-57de221a", "tvg_id": "sctv21hd"},
     "sctvphim": {"url": "http://vmttv.dpdns.org/VTVGo/?sctvphim", "tvg_id": "sctvhdpth"},
-    
-}
 
+}
 # Danh sách phân loại kênh theo tần suất
 FAST_CHANNELS = [""]
 
