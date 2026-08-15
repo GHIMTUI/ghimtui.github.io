@@ -274,9 +274,7 @@ http://tv.vietanhtv.top/mytv_b2c/mytvb2c.php?id=477&a=.m3u8
 http://live.fptplay53.net/fnxsd1/tuyenquang_hls.smil/chunklist_b2500000.m3u8
 
 #EXTINF:-1 tvg-id="sctv1hd" tvg-logo="http://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV1.png" ,SCTV1
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=9121ebe293bc46cd89e5d83a78c1a53c:9285615a491a424fb025f9e8d571bcd5
-https://liveatmvng.vtvprime.vn/live/data8/SCTV1/Live_DASHDRM/SCTV1.mpd
+http://tv.vietanhtv.top/mytv_b2c/mytvb2c.php?id=769
 
 #EXTINF:-1 tvg-id="sctv2hd"  tvg-logo="http://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV2.png",SCTV2
 http://vtvgolive-sctvdrm.vtvdigital.vn/5G9CFd4j0vfDleS6kXxQHg/1786770562/manifest/sctv2/playlist_720p.m3u8
