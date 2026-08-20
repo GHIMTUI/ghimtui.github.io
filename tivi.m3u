@@ -291,7 +291,7 @@ http://live.fptplay53.net/epzhd2/film360_vhls.smil/chunklist_b5000000.m3u8
 http://vtvgolive-sctvdrm.vtvdigital.vn/jNrg_n_56XlRhbU6FF5vDg/1787116153/manifest/sctv7/playlist_720p.m3u8
 
 #EXTINF:-1 tvg-id="sctv8hd"  tvg-logo="http://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV8.png",SCTV8
-http://vietanhtv.id.vn/sctv/proxy.php/https://e1.endpoint.cdn.sctvonline.vn/cdn-secure/v1/sctvonline/2/j28rUq7NB5ef0zdhvDZRvA/1789693755/PI8HI3T/live/hls/sctv8/index.m3u8
+http://vietanhtv.id.vn/sctv/proxy.php/https://e1.endpoint.cdn.sctvonline.vn/cdn-secure/v1/sctvonline/2/SATVcf-WY5l3du1Vi7_x2A/1789780495/PI8HI3T/live/hls/sctv8/index.m3u8
 
 #EXTINF:-1 tvg-id="sctv9hd"  tvg-logo="http://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV9.png",SCTV9
 http://vtvgolive-sctvdrm.vtvdigital.vn/S66BWTFn1phfr0lFhM59dQ/1787116157/manifest/sctv9/playlist_720p.m3u8
@@ -315,10 +315,10 @@ http://vtvgolive-sctvdrm.vtvdigital.vn/5ShujBNGCFGL7Sc4qP_txg/1787116164/manifes
 http://vtvgolive-sctvdrm.vtvdigital.vn/FBc51KGukYelayhSCTYaug/1787116166/manifest/sctv18/playlist_720p.m3u8
 
 #EXTINF:-1 tvg-id="sctv19hd"  tvg-logo="http://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV19.png",SCTV19
-http://vietanhtv.id.vn/sctv/proxy.php/https://e8.endpoint.cdn.sctvonline.vn/cdn-secure/v1/sctvonline/2/3ucGtxYJEzpbTqhCxi2MsA/1789693768/PI8HI3T/live/hls/sctv19/index.m3u8
+http://vietanhtv.id.vn/sctv/proxy.php/https://e8.endpoint.cdn.sctvonline.vn/cdn-secure/v1/sctvonline/2/D0Tq9rGOy7lSZz2AmhtNKA/1789780572/PI8HI3T/live/hls/sctv19/index.m3u8
 
 #EXTINF:-1 tvg-id="sctv21hd"  tvg-logo="http://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV21.png",SCTV21
-http://vietanhtv.id.vn/sctv/proxy.php/https://e1.endpoint.cdn.sctvonline.vn/cdn-secure/v1/sctvonline/2/NJ7Q8s0UC9dMRBrrFUpq-g/1789693770/PI8HI3T/live/hls/sctv21/index.m3u8
+http://vietanhtv.id.vn/sctv/proxy.php/https://e1.endpoint.cdn.sctvonline.vn/cdn-secure/v1/sctvonline/2/55hOiENQeyU11t_6fbYunw/1789780573/PI8HI3T/live/hls/sctv21/index.m3u8
 
 #EXTINF:-1 tvg-id="sctvhdpth"  tvg-logo="http://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTVPTH.png",SCTV Phim Tổng Hợp
 http://vtvgolive-sctvdrm.vtvdigital.vn/3v-j1HQpZQL8A5YPBve8Ig/1787116172/manifest/sctvpth/playlist_1080p.m3u8
