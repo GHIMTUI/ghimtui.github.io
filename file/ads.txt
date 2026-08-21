@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Describe: Chặn quảng cáo
-! Updated: 13 Aug 2026 23:48
-! Blocked: 527
-! Size: 37.31 KB
+! Updated: 21 Aug 2026 13:55
+! Blocked: 531
+! Size: 37.50 KB
 ! ==================
 
 1thegioi.vn##[class^="c-banner-"],[id^="zone-"]
@@ -42,15 +42,21 @@ angiang.gov.vn##.col-lg-4,[class^="sidebar-"],[class^="sl-"],[class^="slideshow-
 
 angiangtv.vn##.aligncenter,.footer-tabbar,.swiper,[class^="swiper-"],[class^="wp-image-"],[id^="media_image-"]
 
+apk.dog##.padding_top,[id^="adslot_"],[id^="adv_"],[id^="adx_"]
+
 apk.watch##.adv_text,.adx_center,[class*="adslot_"]
 
 apkcombo.com##.diseanmevrtt,div[style="margin-bottom: -15px; margin-top:
+
+apkmb.com##[id^="aads-"]
 
 apkmirror.com###bottom-slider,.adslot,.advertisement-text,[class*="ains-"],[class^="div-gpt-ad-"]
 
 apkpure.com##.ad,.adsbygoogle,.aegon,.js-ad-slot,.right,[class^="aegon-"]
 
 apkpure.net###google_vignette,.ad,.adsbygoogle,.js-ad-slot,[class*="-banner-"],[class^="banner-"]
+
+apkvision.org##.app-panel,.app-panel-wrap
 
 apnews.com##.FreeStar,.fs-feed-ad,[class*="-leaderboardAd"],[class^="LeaderBoardAd-"],[class^="apnews_home_"],[id^="nativo-hp-"],[id^="ntv"]
 
@@ -495,6 +501,8 @@ lichviet.app###smart-app-banner,[class*="banner"],[class*="swiper"]
 liendoanluatsu.org.vn###row-480566132,#row-660605896,#section_364720549
 
 liteapks.com##[id^="ad-"]
+
+lmhmod.me##a[style="margin-bottom:20px;display:block;"]
 
 lsvn.vn##.aanetwork-ads-box,.ads-item,[class^="aanetwork-"],[class^="ads-"],[class^="sys"],sys-ads
 
