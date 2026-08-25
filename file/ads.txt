@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Describe: Chặn quảng cáo
-! Updated: 21 Aug 2026 13:55
+! Updated: 25 Aug 2026 21:43
 ! Blocked: 531
-! Size: 37.50 KB
+! Size: 37.54 KB
 ! ==================
 
 1thegioi.vn##[class^="c-banner-"],[id^="zone-"]
@@ -92,7 +92,7 @@ baocantho.com.vn##[class^="paddingtop"],[id^="home_right_"],[id^="mobitop"],img[
 
 baocaobang.vn##.block-scroll-right,.mt-3,[class^="ads-"],[class^="zonegroup-"]
 
-baodaklak.vn##a[href="/chinh-tri/Bau-cu-DBQH-va-dai-bieu-HDND-cac-cap"],a[href="https://tgdv.vtscloud.vn/installation"],a[style="padding: 0 6px; width: 100%;"]
+baodaklak.vn##a[href="/chinh-tri/Bau-cu-DBQH-va-dai-bieu-HDND-cac-cap"],a[href="https://tgdv.vtscloud.vn/installation"],a[style="padding: 0 6px; width: 100%;"],a[style="padding: 0px; width: 100%;"]
 
 baodanang.vn##[class^="ads_"],[class^="c-banner-"],[class^="c-box__"],[class^="h-show-"],[id^="zone-"]
 
