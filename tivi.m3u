@@ -155,7 +155,7 @@ http://live.fptplay53.net/epzsd1/danang1_hls.smil/chunklist_b2500000.m3u8
 http://live.fptplay53.net/epzsd1/danang2_hls.smil/chunklist_b2500000.m3u8
 
 #EXTINF:-1 tvg-id="daklak" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/daklak.png", Đắk Lắk
-http://livecdn-vthcm-bp.vieon.vn/7b029a036b7d8264a1b4d04e3369cd95/1787736829000/livetv/group-05/968a33da1fd6f8af7fbb2f309be64552/playlist.m3u8 
+http://live.fptplay53.net/epzsd1/daklak_hls.smil/chunklist_b2500000.m3u8
 
 #EXTINF:-1 tvg-id="dienbien" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/dienbien.png", Điện Biên
 http://live.fptplay53.net/fnxsd1/dienbien_hls.smil/chunklist_b2500000.m3u8
