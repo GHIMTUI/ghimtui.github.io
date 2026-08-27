@@ -19,8 +19,8 @@ CHANNELS = {
     "sctv19": {"url": "http://vietanhtv.id.vn/sctv/tv.php?id=sctv19-bf00bd02", "tvg_id": "sctv19hd"},
     "sctv21": {"url": "http://vietanhtv.id.vn/sctv/tv.php?id=sctv-21-57de221a", "tvg_id": "sctv21hd"},
     "sctvphim": {"url": "http://vmttv.dpdns.org/VTVGo/?sctvphim", "tvg_id": "sctvhdpth"},
-   "onviedramas": {"url": "http://tv.vietanhtv.top/vieon/vieon.php?id=vie-dramas-hd", "tvg_id": "onviedramas"},
-  "onviegiaitri": {"url": "http://tv.vietanhtv.top/vieon/vieon.php?id=vie-giai-tri-hd", "tvg_id": "onviegiaitri"},
+   "ondramas": {"url": "http://tv.vietanhtv.top/vieon/vieon.php?id=vie-dramas-hd", "tvg_id": "onviedramas"},
+  "ongiaitri": {"url": "http://tv.vietanhtv.top/vieon/vieon.php?id=vie-giai-tri-hd", "tvg_id": "onviegiaitri"},
 
 }
 # Danh sách phân loại kênh theo tần suất
