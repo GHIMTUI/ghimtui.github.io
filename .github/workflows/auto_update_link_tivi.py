@@ -11,7 +11,7 @@ CHANNELS = {
     "sctv8": {"url": "http://vietanhtv.id.vn/sctv/tv.php?id=sctv8-c12d138b", "tvg_id": "sctv8hd"},
     "sctv9": {"url": "https://vmttv.dpdns.org/VTVGo/?sctv9", "tvg_id": "sctv9hd"},
     "sctv11": {"url": "https://vmttv.dpdns.org/VTVGo/?sctv11", "tvg_id": "sctv11hd"},
-    "sctv12": {"url": "http://vietanhtv.id.vn/sctv/tv.php?id=sctv12-b0d6c023", "tvg_id": "sctv12hd"},
+    "sctv12": {"url": "https://vmttv.dpdns.org/VTVGo/?sctv12", "tvg_id": "sctv12hd"},
     "sctv13": {"url": "https://vmttv.dpdns.org/VTVGo/?sctv13", "tvg_id": "sctv13hd"},
     "sctv14": {"url": "http://vietanhtv.id.vn/sctv/tv.php?id=sctv14-789c9f45", "tvg_id": "sctv14hd"},
     "sctv16": {"url": "https://vmttv.dpdns.org/VTVGo/?sctv16", "tvg_id": "sctv16hd"},
@@ -19,10 +19,10 @@ CHANNELS = {
     "sctv19": {"url": "http://vietanhtv.id.vn/sctv/tv.php?id=sctv19-bf00bd02", "tvg_id": "sctv19hd"},
     "sctv21": {"url": "http://vietanhtv.id.vn/sctv/tv.php?id=sctv-21-57de221a", "tvg_id": "sctv21hd"},
     "sctvphim": {"url": "https://vmttv.dpdns.org/VTVGo/?sctvphim", "tvg_id": "sctvhdpth"},
-   "onviedramas": {"url": "http://tv.vietanhtv.top/vieon/vieon.php?id=vie-dramas-hd", "tvg_id": "onviedramas"},
-  "onviegiaitri": {"url": "http://tv.vietanhtv.top/vieon/vieon.php?id=vie-giai-tri-hd", "tvg_id": "onviegiaitri"},
-
+    "onviedramas": {"url": "http://tv.vietanhtv.top/vieon/vieon.php?id=vie-dramas-hd", "tvg_id": "onviedramas"},
+    "onviegiaitri": {"url": "http://tv.vietanhtv.top/vieon/vieon.php?id=vie-giai-tri-hd", "tvg_id": "onviegiaitri"},
 }
+
 # Danh sách phân loại kênh theo tần suất
 FAST_CHANNELS = [""]
 
@@ -39,9 +39,10 @@ def get_live_link(url, channel_name):
             
         # Logic thay đổi đuôi master.m3u8 thành playlist phù hợp
         if "master.m3u8" in final_url:
-            if channel_name.lower() == "sctvphim":
+            ch_name = channel_name.lower()
+            if ch_name == "sctvphim":
                 final_url = final_url.replace("master.m3u8", "playlist_1080p.m3u8")
-            else:
+            elif ch_name != "sctv14":
                 final_url = final_url.replace("master.m3u8", "playlist_720p.m3u8")
             
         print(f"[{channel_name.upper()}] Đã lấy được link: {final_url}")
@@ -108,7 +109,7 @@ def update_m3u_file():
             f.write(content)
         print(f"\n Hoàn tất! Đã lưu các thay đổi vào {FILE_NAME}.")
     else:
-        print("\n Không có thay đổi nào được thực hiện  trên file.")
+        print("\n Không có thay đổi nào được thực hiện trên file.")
 
 if __name__ == "__main__":
     update_m3u_file()
