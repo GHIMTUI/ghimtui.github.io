@@ -70,16 +70,9 @@ http://livevlisctcdnw.seenow.vn/livesnv2/LIFE_TV/manifest.mpd
 http://livevlisctcdnw.seenow.vn/livesnv2/YEAH1_TV/manifest.mpd
 
 #EXTINF:-1 tvg-id="onviedramas" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/on_viedramas.png", ON Dramas
-#KODIPROP:inputstream.adaptive.manifest_type=dash
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=f2abb744acd24369943a79635f4fa43a:f674652c13211536e0e21d9ea860ca90
-#http://livevlisctcdnw.seenow.vn/livesnv2/D_DRAMAS_HD/manifest.mpd
 http://livecdn-vthcm-bp.vieon.vn/c1fa3727f34719c8e0e9ad6fb5a5182c/1787736921000/livetv/group-06/9416aa65cec57d5b01ed0e2297e1b4e3/playlist.m3u8 
 
-#EXTINF:-1 tvg-id="onviegiatri" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/on_viegiaitri.png", ON Giải Trí
-#KODIPROP:inputstream.adaptive.manifest_type=dash
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=3e1c6077ab034d3b9f02d0ae43825eec:c40b6a2c7b94cbd4958b1d93d9b23aed
+#EXTINF:-1 tvg-id="onviegiaitri" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/on_viegiaitri.png", ON Giải Trí
 http://livevlisctcdnw.seenow.vn/livesnv2/GIAITRI_TV_HD/manifest.mpd
 
 #EXTINF:-1 tvg-id="onvfamily" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/on_vfamily.png", ON VFamily
