@@ -284,11 +284,10 @@ http://vtvgolive-sctvdrm.vtvdigital.vn/1Jl_TXlcaRW1QNjYuVtEnQ/1787836999/manifes
 http://live.fptplay53.net/epzhd2/film360_vhls.smil/chunklist_b5000000.m3u8
 
 #EXTINF:-1 tvg-id="sctv7hd"  tvg-logo="http://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV7.png",SCTV7
-#http://vmttv.dpdns.org/VTVGo/?sctv7
 http://vietanhtv.id.vn/sctv/proxy.php/https://e1.endpoint.cdn.sctvonline.vn/cdn-secure/v1/sctvonline/2/lcMXbx5PHamRF5KNSqlWUg/1790399260/PI8HI3T/live/hls/sctv7/index.m3u8
 
 #EXTINF:-1 tvg-id="sctv8hd"  tvg-logo="http://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV8.png",SCTV8
-http://vietanhtv.id.vn/sctv/proxy.php/https://e1.endpoint.cdn.sctvonline.vn/cdn-secure/v1/sctvonline/2/ZD0F8AWwdkE6cMuoPRKwsw/1790414603/PI8HI3T/live/hls/sctv8/index.m3u8
+https://vmttv.dpdns.org/VTVGo/?sctv8
 
 #EXTINF:-1 tvg-id="sctv9hd"  tvg-logo="http://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV9.png",SCTV9
 http://vtvgolive-sctvdrm.vtvdigital.vn/eKFlKGi6kT20nsrIcxLByQ/1787837004/manifest/sctv9/playlist_720p.m3u8
@@ -303,7 +302,7 @@ http://vtvgolive-sctvdrm.vtvdigital.vn/r8olRMu44zj0noMWmsbbOg/1787837007/manifes
 http://vtvgolive-sctvdrm.vtvdigital.vn/5p3E1xbTU_YYOu9p3YTtOA/1787837009/manifest/sctv13/playlist_720p.m3u8
 
 #EXTINF:-1 tvg-id="sctv14hd"  tvg-logo="http://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV14.png",SCTV14
-http://vietanhtv.id.vn/sctv/proxy.php/https://e12.endpoint.cdn.sctvonline.vn/cdn-secure/v1/sctvonline/1/6b-aYv8dY5IDg2wRq_Fpqw/1790414611/PI8HI3T/live/sctv14/master.m3u8
+http://vmttv.dpdns.org/VTVGo/?sctv14
 
 #EXTINF:-1 tvg-id="sctv16hd"  tvg-logo="http://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV16.png",SCTV16
 http://vtvgolive-sctvdrm.vtvdigital.vn/O2W_jHQBVtz1wL8wb55mHg/1787837012/manifest/sctv16/playlist_720p.m3u8
