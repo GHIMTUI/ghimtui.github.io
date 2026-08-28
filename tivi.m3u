@@ -70,10 +70,10 @@ http://livevlisctcdnw.seenow.vn/livesnv2/LIFE_TV/manifest.mpd
 http://livevlisctcdnw.seenow.vn/livesnv2/YEAH1_TV/manifest.mpd
 
 #EXTINF:-1 tvg-id="onviedramas" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/on_viedramas.png", ON Dramas
-http://livecdn-vthcm-bp.vieon.vn/3cbb5d16e52684f29d4d6c974e557686/1787909027000/livetv/group-06/9416aa65cec57d5b01ed0e2297e1b4e3/playlist.m3u8?c=a
+http://livecdn-vthcm-bp.vieon.vn/f78a7b53af53a9e84f20b47523319f45/1787996491000/livetv/group-06/9416aa65cec57d5b01ed0e2297e1b4e3/playlist.m3u8?c=a
 
 #EXTINF:-1 tvg-id="onviegiaitri" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/on_viegiaitri.png", ON Giải Trí
-http://livecdn-vthcm-bp.vieon.vn/0f6f263b1fa25a78e5b17c7c7435955f/1787909029000/livetv/group-06/e1866a2319433853e08a3ab662932c34/playlist.m3u8?c=a
+http://livecdn-vthcm-bp.vieon.vn/2cf4b3f8fcb70bfd6e7f58b5cd22add6/1787996495000/livetv/group-06/e1866a2319433853e08a3ab662932c34/playlist.m3u8?c=a
 
 #EXTINF:-1 tvg-id="onvfamily" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/on_vfamily.png", ON VFamily
 #KODIPROP:inputstream.adaptive.manifest_type=dash
@@ -272,52 +272,52 @@ http://live.fptplay53.net/fnxsd1/tuyenquang_hls.smil/chunklist_b2500000.m3u8
 http://liveatmvng.vtvprime.vn/live/data8/SCTV1/Live_DASHDRM/SCTV1.mpd
 
 #EXTINF:-1 tvg-id="sctv2hd"  tvg-logo="http://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV2.png",SCTV2
-http://vtvgolive-sctvdrm.vtvdigital.vn/o5zCLd6hRV6Jp93nN6JuNg/1787836993/manifest/sctv2/playlist_720p.m3u8
+http://vmttv.dpdns.org/VTVGo/?sctv2
 
 #EXTINF:-1 tvg-id="sctv3hd"  tvg-logo="http://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV3.png",SCTV3
-http://vtvgolive-sctvdrm.vtvdigital.vn/aSeGEzFI7bDuCqlL_WAk8g/1787836997/manifest/sctv3/playlist_720p.m3u8
+http://vmttv.dpdns.org/VTVGo/?sctv3
 
 #EXTINF:-1 tvg-id="sctv4hd"  tvg-logo="http://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV4.png",SCTV4
-http://vtvgolive-sctvdrm.vtvdigital.vn/1Jl_TXlcaRW1QNjYuVtEnQ/1787836999/manifest/sctv4/playlist_720p.m3u8
+http://vmttv.dpdns.org/VTVGo/?sctv4
 
 #EXTINF:-1 tvg-id="sctv6hd"  tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/sctv6.png",SCTV6
 http://live.fptplay53.net/epzhd2/film360_vhls.smil/chunklist_b5000000.m3u8
 
 #EXTINF:-1 tvg-id="sctv7hd"  tvg-logo="http://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV7.png",SCTV7
-http://vietanhtv.id.vn/sctv/proxy.php/https://e1.endpoint.cdn.sctvonline.vn/cdn-secure/v1/sctvonline/2/lcMXbx5PHamRF5KNSqlWUg/1790399260/PI8HI3T/live/hls/sctv7/index.m3u8
+http://vmttv.dpdns.org/VTVGo/?sctv7
 
 #EXTINF:-1 tvg-id="sctv8hd"  tvg-logo="http://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV8.png",SCTV8
 https://vmttv.dpdns.org/VTVGo/?sctv8
 
 #EXTINF:-1 tvg-id="sctv9hd"  tvg-logo="http://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV9.png",SCTV9
-http://vtvgolive-sctvdrm.vtvdigital.vn/eKFlKGi6kT20nsrIcxLByQ/1787837004/manifest/sctv9/playlist_720p.m3u8
+http://vmttv.dpdns.org/VTVGo/?sctv9
 
 #EXTINF:-1 tvg-id="sctv11hd"  tvg-logo="http://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV11.png",SCTV11
-http://vtvgolive-sctvdrm.vtvdigital.vn/6elNITGQ9_PJEVEWtsO3tw/1787837005/manifest/sctv11/playlist_720p.m3u8
+http://vmttv.dpdns.org/VTVGo/?sctv11
 
 #EXTINF:-1 tvg-id="sctv12hd"  tvg-logo="http://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV12.png",SCTV12
-http://vtvgolive-sctvdrm.vtvdigital.vn/r8olRMu44zj0noMWmsbbOg/1787837007/manifest/sctv12/playlist_720p.m3u8
+http://vmttv.dpdns.org/VTVGo/?sctv12
 
 #EXTINF:-1 tvg-id="sctv13hd"  tvg-logo="http://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV13.png",SCTV13
-http://vtvgolive-sctvdrm.vtvdigital.vn/5p3E1xbTU_YYOu9p3YTtOA/1787837009/manifest/sctv13/playlist_720p.m3u8
+http://vmttv.dpdns.org/VTVGo/?sctv13
 
 #EXTINF:-1 tvg-id="sctv14hd"  tvg-logo="http://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV14.png",SCTV14
 http://vmttv.dpdns.org/VTVGo/?sctv14
 
 #EXTINF:-1 tvg-id="sctv16hd"  tvg-logo="http://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV16.png",SCTV16
-http://vtvgolive-sctvdrm.vtvdigital.vn/O2W_jHQBVtz1wL8wb55mHg/1787837012/manifest/sctv16/playlist_720p.m3u8
+http://vmttv.dpdns.org/VTVGo/?sctv16
 
 #EXTINF:-1 tvg-id="sctv18hd"  tvg-logo="http://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV18.png",SCTV18
-http://vtvgolive-sctvdrm.vtvdigital.vn/csepmBE0uWDfuKFP0U55Hg/1787837018/manifest/sctv18/playlist_720p.m3u8
+http://vmttv.dpdns.org/VTVGo/?sctv18
 
 #EXTINF:-1 tvg-id="sctv19hd"  tvg-logo="http://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV19.png",SCTV19
-http://vietanhtv.id.vn/sctv/proxy.php/https://e8.endpoint.cdn.sctvonline.vn/cdn-secure/v1/sctvonline/2/0JpfirYDUhPdTzUL-6CqrA/1790414620/PI8HI3T/live/hls/sctv19/index.m3u8
+http://vietanhtv.id.vn/sctv/proxy.php/https://e8.endpoint.cdn.sctvonline.vn/cdn-secure/v1/sctvonline/2/PjIUOic5hSqcxkAdkZkVPQ/1790502083/PI8HI3T/live/hls/sctv19/index.m3u8
 
 #EXTINF:-1 tvg-id="sctv21hd"  tvg-logo="http://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV21.png",SCTV21
-http://vietanhtv.id.vn/sctv/proxy.php/https://e1.endpoint.cdn.sctvonline.vn/cdn-secure/v1/sctvonline/2/BkFldi69vidWdDslwZgtKQ/1790414622/PI8HI3T/live/hls/sctv21/index.m3u8
+http://vietanhtv.id.vn/sctv/proxy.php/https://e1.endpoint.cdn.sctvonline.vn/cdn-secure/v1/sctvonline/2/2XkwHWH8WuFCAjhhwMeNWA/1790502086/PI8HI3T/live/hls/sctv21/index.m3u8
 
 #EXTINF:-1 tvg-id="sctvhdpth"  tvg-logo="http://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTVPTH.png",SCTV Phim Tổng Hợp
-http://vtvgolive-sctvdrm.vtvdigital.vn/CgRUHojIEHhMLdwxCyGikg/1787837023/manifest/sctvpth/playlist_1080p.m3u8
+http://vmttv.dpdns.org/VTVGo/?sctvphim
 
 #EXTINF:-1 tvg-id="onbibi" tvg-logo="https://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/VTVCab/OnBibi.png",On BiBi
 #KODIPROP:inputstream.adaptive.manifest_type=dash
