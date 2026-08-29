@@ -2,93 +2,133 @@ import os
 import re
 import requests
 
-# 1. Định nghĩa danh sách các kênh cần lấy và mã tvg-id tương ứng trong file m3u
+# 1. Định nghĩa danh sách các kênh, hỗ trợ cấu trúc danh sách URL để fallback khi lỗi
 CHANNELS = {
-    "sctv2": {"url": "https://vmttv.dpdns.org/VTVGo/?sctv2", "tvg_id": "sctv2hd"},
-    "sctv3": {"url": "https://vmttv.dpdns.org/VTVGo/?sctv3", "tvg_id": "sctv3hd"},
-    "sctv4": {"url": "https://vmttv.dpdns.org/VTVGo/?sctv4", "tvg_id": "sctv4hd"},
-    "sctv7": {"url": "https://vmttv.dpdns.org/VTVGo/?sctv7", "tvg_id": "sctv7hd"},
-    "sctv9": {"url": "https://vmttv.dpdns.org/VTVGo/?sctv9", "tvg_id": "sctv9hd"},
-    "sctv11": {"url": "https://vmttv.dpdns.org/VTVGo/?sctv11", "tvg_id": "sctv11hd"},
-    "sctv12": {"url": "https://vmttv.dpdns.org/VTVGo/?sctv12", "tvg_id": "sctv12hd"},
-    "sctv13": {"url": "https://vmttv.dpdns.org/VTVGo/?sctv13", "tvg_id": "sctv13hd"},
-    "sctv16": {"url": "https://vmttv.dpdns.org/VTVGo/?sctv16", "tvg_id": "sctv16hd"},
-    "sctv18": {"url": "https://vmttv.dpdns.org/VTVGo/?sctv18", "tvg_id": "sctv18hd"},
-    "sctv19": {"url": "http://vietanhtv.id.vn/sctv/tv.php?id=sctv19-bf00bd02", "tvg_id": "sctv19hd"},
-    "sctv21": {"url": "http://vietanhtv.id.vn/sctv/tv.php?id=sctv-21-57de221a", "tvg_id": "sctv21hd"},
-    "sctvphim": {"url": "https://vmttv.dpdns.org/VTVGo/?sctvphim", "tvg_id": "sctvhdpth"},
-    "onviedramas": {"url": "http://tv.vietanhtv.top/vieon/vieon.php?id=vie-dramas-hd", "tvg_id": "onviedramas"},
-    "onviegiaitri": {"url": "http://tv.vietanhtv.top/vieon/vieon.php?id=vie-giai-tri-hd", "tvg_id": "onviegiaitri"},
+    "sctv2": {
+        "url": [
+"https://vmttv.dpdns.org/VTVGo/?sctv2",           "http://tv.vietanhtv.top/vieon/vieon.php?id=sctv2-57c3884d"],
+        "tvg_id": "sctv2hd"
+},
+    "sctv3": {"url": ["https://vmttv.dpdns.org/VTVGo/?sctv3", 
+"http://tv.vietanhtv.top/vieon/vieon.php?id=sctv3-hd-cf3adaca"], 
+      "tvg_id": "sctv3hd"
+ },
+    "sctv4": {"url": ["https://vmttv.dpdns.org/VTVGo/?sctv4",
+"http://tv.vietanhtv.top/vieon/vieon.php?id=sctv4-ae779f7e"
+],
+     "tvg_id": "sctv4hd"
+   },
+    "sctv7": {"url": ["https://vmttv.dpdns.org/VTVGo/?sctv7",
+"http://tv.vietanhtv.top/vieon/vieon.php?id=sctv7-ef7e259a"], 
+  "tvg_id": "sctv7hd"
+  },
+    "sctv9": {"url": ["https://vmttv.dpdns.org/VTVGo/?sctv9",
+"http://tv.vietanhtv.top/vieon/vieon.php?id=sctv9-cdd19ab2"], 
+  "tvg_id": "sctv9hd"
+},
+    "sctv11": {"url": ["https://vmttv.dpdns.org/VTVGo/?sctv11", 
+"http://tv.vietanhtv.top/vieon/vieon.php?id=sctv11-1d565c47"], 
+  "tvg_id": "sctv11hd"
+},
+    "sctv12": {"url": ["https://vmttv.dpdns.org/VTVGo/?sctv12", "http://tv.vietanhtv.top/vieon/vieon.php?id=sctv12-b0d6c023"], 
+"tvg_id": "sctv12hd"
+},
+    "sctv13": {"url": ["https://vmttv.dpdns.org/VTVGo/?sctv13", "http://tv.vietanhtv.top/vieon/vieon.php?id=sctv13-67f88fcb"], 
+"tvg_id": "sctv13hd"
+},
+    "sctv16": {"url": ["https://vmttv.dpdns.org/VTVGo/?sctv16", "http://tv.vietanhtv.top/vieon/vieon.php?id=sctv16-dd1535e8"], 
+"tvg_id": "sctv16hd"
+},
+    "sctv18": {"url": ["https://vmttv.dpdns.org/VTVGo/?sctv18", "http://tv.vietanhtv.top/vieon/vieon.php?id=sctv18-398b0b4e"], 
+"tvg_id": "sctv18hd"
+},
+    "sctv19": {"url": ["http://vietanhtv.id.vn/sctv/tv.php?id=sctv19-bf00bd02"], 
+"tvg_id": "sctv19hd"
+},
+    "sctv21": {"url": ["http://vietanhtv.id.vn/sctv/tv.php?id=sctv-21-57de221a"], 
+"tvg_id": "sctv21hd"
+},
+    "sctvphim": {"url": ["https://vmttv.dpdns.org/VTVGo/?sctvphim, "http://tv.vietanhtv.top/vieon/vieon.php?id=sctv-phim-tong-hop-e6d2df88"], 
+"tvg_id": "sctvhdpth"
+},
+    "onviedramas": {"url": ["http://tv.vietanhtv.top/vieon/vieon.php?id=vie-dramas-hd"], 
+"tvg_id": "onviedramas"
+},
+    "onviegiaitri": {"url": ["http://tv.vietanhtv.top/vieon/vieon.php?id=vie-giai-tri-hd"], 
+"tvg_id": "onviegiaitri"
+},
+    "thanhhoa": {"url": ["http://tv.vietanhtv.top/vieon/vieon.php?id=thanh-hoa-48"], 
+"tvg_id": "thanhhoa"
+},
 }
 
-# Danh sách phân loại kênh theo tần suất
 FAST_CHANNELS = [""]
-
 FILE_NAME = "tivi.m3u"
 
-def get_live_link(url, channel_name):
-    try:
-        response = requests.get(url, timeout=15, allow_redirects=True)
-        final_url = response.url
-        
-        # Bắt buộc chuyển đổi đầu link https thành http
-        if final_url.startswith("https://"):
-            final_url = final_url.replace("https://", "http://", 1)
+def get_live_link(urls, channel_name):
+    # Đảm bảo urls luôn là danh sách để lặp qua
+    if isinstance(urls, str):
+        urls = [urls]
+
+    for idx, url in enumerate(urls, 1):
+        try:
+            print(f"[{channel_name.upper()}] Đang thử link {idx}: {url}")
+            response = requests.get(url, timeout=15, allow_redirects=True)
             
-        # Logic thay đổi đuôi master.m3u8 thành playlist phù hợp
-        if "master.m3u8" in final_url:
-            ch_name = channel_name.lower()
-            if ch_name == "sctvphim":
-                final_url = final_url.replace("master.m3u8", "playlist_1080p.m3u8")
-            elif ch_name != "sctv14":
-                final_url = final_url.replace("master.m3u8", "playlist_720p.m3u8")
-            
-        print(f"[{channel_name.upper()}] Đã lấy được link: {final_url}")
-        return final_url
-    except Exception as e:
-        print(f"[{channel_name.upper()}] Lỗi khi kết nối lấy link: {e}")
-        return None
+            if response.status_code == 200:
+                final_url = response.url
+                
+                # Logic thay đổi đuôi master.m3u8 thành playlist phù hợp
+                if "master.m3u8" in final_url:
+                    ch_name = channel_name.lower()
+                    if ch_name == "sctvphim":
+                        final_url = final_url.replace("master.m3u8", "playlist_1080p.m3u8")
+                    elif ch_name != "sctv14":
+                        final_url = final_url.replace("master.m3u8", "playlist_720p.m3u8")
+                
+                print(f"[{channel_name.upper()}] Thành công với link {idx}: {final_url}")
+                return final_url
+            else:
+                print(f"[{channel_name.upper()}] Link {idx} trả về mã lỗi HTTP {response.status_code}")
+        except Exception as e:
+            print(f"[{channel_name.upper()}] Lỗi khi kết nối link {idx}: {e}")
+
+    print(f"[{channel_name.upper()}] Tất cả các link dự phòng đều thất bại.")
+    return None
 
 def update_m3u_file():
     if not os.path.exists(FILE_NAME):
         print(f"Lỗi: Không tìm thấy file {FILE_NAME} trong thư mục để sửa đổi.")
         return
 
-    # Lấy chế độ chạy từ môi trường GitHub Actions gửi xuống (mặc định là 'all')
     update_type = os.getenv("UPDATE_TYPE", "all")
     print(f"Chế độ lọc kênh hoạt động: {update_type.upper()}")
 
-    # Lọc danh sách kênh cần cập nhật dựa trên chế độ
     channels_to_update = {}
     for name, config in CHANNELS.items():
         if update_type == "fast":
-            # Chỉ lấy các kênh thuộc nhóm 3h
             if name in FAST_CHANNELS:
                 channels_to_update[name] = config
         elif update_type == "slow":
-            # Bỏ qua các kênh thuộc nhóm 3h, chỉ lấy các kênh còn lại
             if name not in FAST_CHANNELS:
                 channels_to_update[name] = config
         else:
-            # Chạy 'all' khi kích hoạt thủ công
             channels_to_update[name] = config
 
     if not channels_to_update:
         print("Không có kênh nào cần cập nhật trong lượt này.")
         return
 
-    # Đọc toàn bộ nội dung hiện tại của file tivi.m3u
     with open(FILE_NAME, "r", encoding="utf-8") as f:
         content = f.read()
 
     has_changed = False
 
-    # Chỉ duyệt qua các kênh đã được lọc
     for channel_name, config in channels_to_update.items():
         tvg_id = config["tvg_id"]
-        source_url = config["url"]
+        source_urls = config["url"]
         
-        new_link = get_live_link(source_url, channel_name)
+        new_link = get_live_link(source_urls, channel_name)
         if not new_link:
             continue
 
