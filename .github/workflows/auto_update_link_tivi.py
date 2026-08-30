@@ -3,7 +3,7 @@ import re
 import requests
 
 # Import danh sách từ file dữ liệu riêng
-from channels_data import SLOW_CHANNELS
+from slow_channels import SLOW_CHANNELS
 
 # Gán CHANNELS bằng SLOW_CHANNELS (hoặc tổng hợp các nguồn kênh khác nếu có)
 CHANNELS = SLOW_CHANNELS
