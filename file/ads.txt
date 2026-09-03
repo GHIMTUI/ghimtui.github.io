@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Describe: Chặn quảng cáo
-! Updated: 25 Aug 2026 21:43
-! Blocked: 531
-! Size: 37.54 KB
+! Updated: 03 Sept 2026 11:07
+! Blocked: 532
+! Size: 37.57 KB
 ! ==================
 
 1thegioi.vn##[class^="c-banner-"],[id^="zone-"]
@@ -429,6 +429,8 @@ irace.vn##.g-6,.td-visible-phone
 javsub.blog###underPlayerAdsContainer,.overlay-ad
 
 jomc.vn##.adv-wrapper,.center-block
+
+jtexpress.vn##div[x-show="open"]
 
 kalvo.com##.footer,[class^="klv_"],[class^="klvad"]
 
