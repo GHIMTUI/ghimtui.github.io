@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Describe: Chặn quảng cáo
-! Updated: 08 Sept 2026 18:20
-! Blocked: 538
-! Size: 37.89 KB
+! Updated: 08 Sept 2026 19:50
+! Blocked: 539
+! Size: 37.95 KB
 ! ==================
 
 1thegioi.vn##[class^="c-banner-"],[id^="zone-"]
@@ -511,6 +511,8 @@ lifestyle.zingnews.vn###follow_oa
 liteapks.com##[id^="ad-"]
 
 lmhmod.me##a[style="margin-bottom:20px;display:block;"]
+
+logos.fandom.com##.sticky-placement-top
 
 lsvn.vn##.aanetwork-ads-box,.ads-item,[class^="aanetwork-"],[class^="ads-"],[class^="sys"],sys-ads
 
@@ -1032,7 +1034,7 @@ vtcpay.vn##[class^="alsli_ud_"],[class^="sli_ud_"]
 
 vtv.gov.vn##img[src="/assets/banner_cp.jpg"]
 
-vtv.vn##.top-aside,[id^="banner-"],[id^="lozad-"],[id^="placement-"],[id^="share-"],[id^="slot-"],[id^="zone-"]
+vtv.vn###admBannerPopup,.top-aside,[id^="banner-"],[id^="lozad-"],[id^="placement-"],[id^="share-"],[id^="slot-"],[id^="zone-"]
 
 vtvgo.vn##.micro-open-app
 
