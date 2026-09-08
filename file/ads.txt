@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Describe: Chặn quảng cáo
-! Updated: 08 Sept 2026 19:58
-! Blocked: 541
-! Size: 38.00 KB
+! Updated: 08 Sept 2026 22:06
+! Blocked: 540
+! Size: 37.99 KB
 ! ==================
 
 1thegioi.vn##[class^="c-banner-"],[id^="zone-"]
@@ -520,8 +520,6 @@ luatvietnam.vn##.section-lvn
 
 lyluanchinhtri.vn##[class^="ads_"],[class^="c-banner-"],[id^="zone-"]
 
-m.tiin.vn###lava_pto_container
-
 markettimes.vn##[class^="c-banner-"]
 
 masothue.com##[class^="mst_"]
@@ -860,7 +858,7 @@ thvli.vn##.mt-4,.row-install-app,[class^="mobile-install-"]
 
 tienphong.vn###mg-gpt-popup-modal,.adsbygoogle,.close_ub-anchor,.sp-pto-mb-div,[class^="ad-"],[class^="adsMobile_"],[class^="ads_"],[class^="banner-"],[class^="sp-"],[id^="sp_"],[id^="ub-anchor-"],adsbygoogle
 
-tiin.vn###admFullTop,#advBallon,#advHomeTop,#ban-top-site,#top-logo,[id^="admLogoAd"],[id^="adm_"],[id^="adnzone_"],[id^="banner-"],[id^="placement-"],[id^="share-"],[id^="slot-"],[id^="ssppagebid_"],[id^="yomedia-"],[id^="zone-"]
+tiin.vn###admFullTop,#advBallon,#advHomeTop,#ban-top-site,#lava_pto_container,#top-logo,[id^="admLogoAd"],[id^="adm_"],[id^="adnzone_"],[id^="banner-"],[id^="placement-"],[id^="share-"],[id^="slot-"],[id^="ssppagebid_"],[id^="yomedia-"],[id^="zone-"]
 
 tikop.vn##[class^="footer-ads"]
 
@@ -1050,8 +1048,6 @@ windy.com###open-in-app
 
 woori.com.vn##[class^="banner-"]
 
-x.xxphims.blog###catfishTop,[class^="ads-"],[id^="wap_bottombanner_"]
-
 xahoi.com.vn##[class^="ads-"]
 
 xamvn.garden###catfish_content,div[align="center"]
@@ -1081,6 +1077,8 @@ xosodaiphat.com##[class^="qc-"]
 xosominhngoc.net.vn##.hidemin720
 
 xsmn.mobi##.ads,.hdc-csi_square
+
+xxphims.blog###catfishTop,[class^="ads-"],[id^="wap_bottombanner_"]
 
 zalopay.vn##[class^="styles_promoteContainer__"]
 
