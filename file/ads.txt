@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Describe: Chặn quảng cáo
-! Updated: 03 Sept 2026 22:28
-! Blocked: 537
-! Size: 37.80 KB
+! Updated: 08 Sept 2026 18:20
+! Blocked: 538
+! Size: 37.89 KB
 ! ==================
 
 1thegioi.vn##[class^="c-banner-"],[id^="zone-"]
@@ -272,7 +272,7 @@ danchuphapluat.vn##.__ads_click,.qc,[class^="box-qc-"]
 
 dantocphattrien.vietnamnet.vn##.AdvBanner,[class^="Adv"]
 
-dantri.com.vn###desktop-home-top-page,#tpmInpageContainer,#tpmInpageContainerWrapper,[class^="dt-py-"],[id^="banner"],[id^="dta-"],[id^="dtad_"],[id^="mobile-top-page"],[id^="sp-wrapper-"]
+dantri.com.vn###desktop-home-top-page,#tpmInpageContainer,#tpmInpageContainerWrapper,[class^="dt-py-"],[id^="banner"],[id^="dta-"],[id^="dtad_"],[id^="mobile-top-page"],[id^="sp-wrapper-"],div[data-module="banner-open-install-app"]
 
 danviet.vn##[class^="ads-"],[class^="exp_qc_"],[class^="video-"],[id^="ads_"],[id^="zone-"]
 
@@ -1047,6 +1047,8 @@ woori.com.vn##[class^="banner-"]
 x.xxphims.blog###catfishTop,[class^="ads-"],[id^="wap_bottombanner_"]
 
 xahoi.com.vn##[class^="ads-"]
+
+xamvn.garden###catfish_content,div[align="center"]
 
 xedoisong.vn##.ads,[class^="ads-"]
 
