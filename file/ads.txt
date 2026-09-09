@@ -1008,7 +1008,7 @@ vnanet.vn##.background-image
 
 vnbusiness.vn##[class*="ad-"]
 
-vneconomy.vn##.user-login,[class^="mb-"]j
+vneconomy.vn##.user-login,[class^="mb-"]
 
 vnexpress.net###TOP_BANNER,#admbackground,#banner_top,#google_vignette,.adsbygoogle,.inner_ads,.text_ads,.txt_qc,.txt_qc .text_ads,[class^="ad_"]
 
