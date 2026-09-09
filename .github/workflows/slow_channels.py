@@ -92,8 +92,4 @@ SLOW_CHANNELS = {
         "url": ["http://tv.vietanhtv.top/vieon/vieon.php?id=vie-giai-tri-hd"],
         "tvg_id": "onviegiaitri",
     },
-    "thanhhoa": {
-        "url": ["http://tv.vietanhtv.top/vieon/vieon.php?id=thanh-hoa-48"],
-        "tvg_id": "thanhhoa",
-    },
-}
+   }
