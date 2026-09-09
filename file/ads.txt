@@ -318,6 +318,8 @@ dreamlogos.fandom.com##[class^="top_"],[id^="top_"]
 
 drt.vn##.col-sm-3,[class^="ads-"],[id^="ads-"]
 
+e.zingmp3.vn###js-banner-vip,.z-banner-vip,.z-btn-open-app
+
 edu.vn##.donor
 
 elle.vn##[class^="banner-"],[id^="div-gpt-ad-"]
@@ -1081,7 +1083,5 @@ xsmn.mobi##.ads,.hdc-csi_square
 xxphims.blog###catfishTop,[class^="ads-"],[id^="wap_bottombanner_"]
 
 zalopay.vn##[class^="styles_promoteContainer__"]
-
-zingmp3.vn###js-banner-vip,.z-banner-vip,.z-btn-open-app
 
 znews.vn##[class^="Hvx-"],[class^="Okv-"],[class^="follow-"],[id^="Hvx-"],[id^="Okv-"],[id^="ZingNews_"],[id^="Zingnews_"]
