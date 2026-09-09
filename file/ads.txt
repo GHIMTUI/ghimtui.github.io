@@ -1,15 +1,15 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Describe: Chặn quảng cáo
-! Updated: 10 Sept 2026 02:11
-! Blocked: 540
-! Size: 37.99 KB
+! Updated: 10 Sept 2026 02:15
+! Blocked: 541
+! Size: 38.00 KB
 ! ==================
 
 1thegioi.vn##[class^="c-banner-"],[id^="zone-"]
 
 24h.com.vn##[id^="ADS_"],[id^="div_inpage_"]
-
+24h.vn
 24hmoney.vn##.open-app-header
 
 24timezones.com##.adsbygoogle,.sidebar,[id^="div-gpt-ad"],[id^="google_ads_iframe"]
