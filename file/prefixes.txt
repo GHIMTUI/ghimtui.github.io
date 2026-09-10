@@ -8,8 +8,6 @@ m.
 
 mb.
 
-tv.
-
 uk.
 
 vn.
