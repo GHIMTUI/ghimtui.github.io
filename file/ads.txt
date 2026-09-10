@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Describe: Chặn quảng cáo
-! Updated: 10 Sept 2026 07:17
-! Blocked: 541
-! Size: 38.00 KB
+! Updated: 10 Sept 2026 18:30
+! Blocked: 540
+! Size: 37.98 KB
 ! ==================
 
 1thegioi.vn##[class^="c-banner-"],[id^="zone-"]
@@ -328,7 +328,7 @@ eva.vn##[class^="banr"],[class^="banr-"],[id^="ADS_"],[id^="spanTextAds_"]
 
 extract.me##.ad,.adsbygoogle,.premium-entry-button,.remove-ads
 
-fandom.com##.top-ads-container,[class^="ad-"],[class^="bottom-"],[class^="top_"],[id^="bottom_"],[id^="top_"]
+fandom.com##.sticky-placement-top,.top-ads-container,[class^="ad-"],[class^="bottom-"],[class^="top_"],[id^="bottom_"],[id^="top_"]
 
 faztaa.com##.btn-puzzle
 
@@ -511,8 +511,6 @@ lifestyle.zingnews.vn###follow_oa
 liteapks.com##[id^="ad-"]
 
 lmhmod.me##a[style="margin-bottom:20px;display:block;"]
-
-logos.fandom.com##.sticky-placement-top
 
 lsvn.vn##.aanetwork-ads-box,.ads-item,[class^="aanetwork-"],[class^="ads-"],[class^="sys"],sys-ads
 
