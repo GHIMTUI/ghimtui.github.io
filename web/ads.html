@@ -16,6 +16,7 @@
             --status-gray-bg: #1a1a1a;
             --status-text-gray: #666;
             --error-red: #ef4444;
+            --warning-orange: #d97706;
             --safe-area-inset-bottom: env(safe-area-inset-bottom, 0px);
         }
 
@@ -62,11 +63,54 @@
             text-transform: uppercase;
         }
 
+        .tab-switcher {
+            display: flex;
+            background-color: #0a0a0a;
+            border-bottom: 1px solid var(--border-color);
+            padding: 0 1.25rem;
+            gap: 10px;
+        }
+
+        .tab-btn {
+            background: none;
+            border: none;
+            color: var(--status-text-gray);
+            font-weight: 700;
+            font-size: 0.85rem;
+            padding: 0.75rem 1rem;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s ease;
+        }
+
+        .tab-btn.active {
+            color: var(--text-white);
+            border-bottom-color: var(--accent-green);
+        }
+
         .tab-content {
             flex: 1;
             display: flex;
             flex-direction: column;
             overflow: hidden;
+            position: relative;
+        }
+
+        .tab-pane {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: none;
+            flex-direction: column;
+            padding: 0.5rem;
+        }
+
+        .tab-pane.active {
+            display: flex;
         }
 
         .actions {
@@ -114,6 +158,12 @@
             cursor: default;
         }
 
+        .pill-duplicate-style {
+            background-color: var(--error-red) !important;
+            color: #ffffff !important;
+            cursor: pointer;
+        }
+
         .fast-flash {
             animation: fast-flash-anim 0.4s ease-in-out infinite;
         }
@@ -122,13 +172,6 @@
             0% { opacity: 1; }
             50% { opacity: 0.3; }
             100% { opacity: 1; }
-        }
-
-        .textarea-wrapper {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            padding: 0.5rem;
         }
 
         .code-input {
@@ -154,6 +197,7 @@
             .info-path { font-size: 0.9rem; }
             .status-pill { padding: 0.5rem 0.8rem; font-size: 0.65rem; min-width: 80px; }
             .actions { gap: 5px; }
+            .tab-btn { font-size: 0.75rem; padding: 0.6rem 0.8rem; }
         }
     </style>
 </head>
@@ -168,17 +212,25 @@
         </div>
     </div>
 
+    <!-- Thanh chuyển đổi tab -->
+    <div class="tab-switcher">
+        <button class="tab-btn active" data-target="pane-ads">Bộ Lọc Ads</button>
+        <button class="tab-btn" data-target="pane-prefix">Tiền Tố Link</button>
+    </div>
+
     <div class="tab-content">
-        <div class="textarea-wrapper">
+        <!-- Tab 1: Bộ lọc Ads -->
+        <div id="pane-ads" class="tab-pane active">
             <textarea id="txtAr" class="code-input" spellcheck="false" placeholder="Đang tải bộ lọc từ GitHub..."></textarea>
+        </div>
+        <!-- Tab 2: Tiền tố Link -->
+        <div id="pane-prefix" class="tab-pane">
+            <textarea id="prefixAr" class="code-input" spellcheck="false" placeholder="Nhập các tiền tố (vd: m. hd. g. hoặc cách dòng)..."></textarea>
         </div>
     </div>
 </div>
 
 <script>
-/**
- * Tính toán dung lượng văn bản theo KB
- */
 function _format_kb_only(text) {
     const bytes = new TextEncoder().encode(text).length;
     return (bytes / 1024).toFixed(2) + " KB";
@@ -192,25 +244,47 @@ function _format_kb_only(text) {
         _k: _init_key(),
         _o: "ghimtui",
         _r: "ghimtui.github.io",
-        _p_ads: "file/ads.txt"
+        _p_ads: "file/ads.txt",
+        _p_prefix: "file/prefixes.txt"
     };
 
     const _api_base = `https://api.github.com/repos/${_app_opt._o}/${_app_opt._r}/contents/`;
     const _dom_ar = document.getElementById('txtAr');
+    const _dom_prefix = document.getElementById('prefixAr');
     const _dom_sv = document.getElementById('svBtn');
     const _dom_st = document.getElementById('statusContainer');
+    const _tab_btns = document.querySelectorAll('.tab-btn');
+    const _tab_panes = document.querySelectorAll('.tab-pane');
 
     let _v_sha_ads = null;
-    let _last_saved_content = "";
+    let _v_sha_prefix = null;
+    let _last_saved_ads = "";
+    let _last_saved_prefix = "";
+    let _active_tab = 'pane-ads';
     let _is_loading = true;
+    let _typing_timer = null;
 
-    function setBtnState(state) {
+    _tab_btns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            _tab_btns.forEach(b => b.classList.remove('active'));
+            _tab_panes.forEach(p => p.classList.remove('active'));
+            
+            btn.classList.add('active');
+            const targetId = btn.getAttribute('data-target');
+            document.getElementById(targetId).classList.add('active');
+            _active_tab = targetId;
+            checkChanges();
+        });
+    });
+
+    function setBtnState(state, customText) {
         if (!_dom_sv || !_dom_st) return;
         
-        _dom_sv.classList.remove('visible', 'pill-gray-style', 'fast-flash');
+        _dom_sv.classList.remove('visible', 'pill-gray-style', 'pill-duplicate-style', 'fast-flash');
         _dom_st.classList.remove('visible', 'pill-gray-style');
         _dom_sv.disabled = false;
         _dom_st.style.color = "";
+        _dom_sv.style.backgroundColor = "";
         
         switch(state) {
             case 'loading': 
@@ -235,10 +309,17 @@ function _format_kb_only(text) {
                 _dom_sv.innerText = "LƯU LẠI"; 
                 _dom_sv.classList.add('visible'); 
                 break;
+            case 'duplicate':
+                _dom_sv.innerText = "TRÙNG NHAU..."; 
+                _dom_sv.classList.add('visible', 'pill-duplicate-style', 'fast-flash'); 
+                break;
             case 'saving': 
-                _dom_sv.innerText = "LƯU LẠI...";
+                _dom_sv.innerText = customText || "LOẠI BỎ...";
                 _dom_sv.disabled = true; 
                 _dom_sv.classList.add('visible', 'fast-flash');
+                if (customText === 'LOẠI BỎ...' || customText === 'SẮP XẾP...') {
+                    _dom_sv.style.backgroundColor = "var(--accent-blue)";
+                }
                 break;
             case 'offline':
                 _dom_st.innerText = "MẤT KẾT NỐI"; 
@@ -254,6 +335,33 @@ function _format_kb_only(text) {
         }
     }
 
+    function _check_duplicates_in_text(rawText, isPrefix = false) {
+        if (!rawText) return false;
+        let lines = rawText.split('\n');
+        let seen = new Set();
+
+        for (let line of lines) {
+            let l = line.trim();
+            if (!l) continue;
+            
+            if (isPrefix) {
+                let tokens = l.split(/[\s,]+/);
+                for (let token of tokens) {
+                    let t = token.trim().toLowerCase();
+                    if (!t) continue;
+                    if (!t.endsWith('.')) t += '.';
+                    if (seen.has(t)) return true;
+                    seen.add(t);
+                }
+            } else {
+                if (l.startsWith('!') || l.startsWith('[Adblock')) continue;
+                if (seen.has(l)) return true;
+                seen.add(l);
+            }
+        }
+        return false;
+    }
+
     function checkChanges() {
         if (_is_loading) return;
         if (!navigator.onLine) {
@@ -261,22 +369,69 @@ function _format_kb_only(text) {
             return;
         }
         
-        if (_dom_ar.value !== _last_saved_content) {
+        let hasDuplicate = false;
+        let hasChanged = false;
+
+        if (_active_tab === 'pane-ads') {
+            hasDuplicate = _check_duplicates_in_text(_dom_ar.value, false);
+            hasChanged = (_dom_ar.value !== _last_saved_ads);
+        } else {
+            hasDuplicate = _check_duplicates_in_text(_dom_prefix.value, true);
+            hasChanged = (_dom_prefix.value !== _last_saved_prefix);
+        }
+
+        if (hasDuplicate) {
+            setBtnState('duplicate');
+        } else if (hasChanged) {
             setBtnState('unsaved');
         } else {
             setBtnState('saved');
         }
     }
 
-    // Loại bỏ giao thức http, https và tiền tố www.
-    function _clean_url_prefix(str) {
-        if (!str) return "";
-        return str.trim().toLowerCase()
-                  .replace(/^https?:\/\//i, '')
-                  .replace(/^www\./i, '');
+    function handleInput() {
+        if (_is_loading) return;
+        if (!navigator.onLine) {
+            setBtnState('offline');
+            return;
+        }
+
+        let hasChanged = (_active_tab === 'pane-ads') ? 
+            (_dom_ar.value !== _last_saved_ads) : 
+            (_dom_prefix.value !== _last_saved_prefix);
+
+        if (hasChanged) {
+            clearTimeout(_typing_timer);
+            _typing_timer = setTimeout(() => {
+                checkChanges();
+            }, 600);
+        } else {
+            checkChanges();
+        }
     }
 
-    // Kiểm tra định dạng tên miền hợp lệ
+    function _clean_url_prefix(str) {
+        if (!str) return "";
+        let clean = str.trim().toLowerCase().replace(/^https?:\/\//i, '');
+
+        let prefixRaw = _dom_prefix ? _dom_prefix.value : "";
+        let prefixes = prefixRaw.split(/[\s,\n]+/)
+            .map(p => p.trim().toLowerCase())
+            .filter(p => p.length > 0)
+            .map(p => p.endsWith('.') ? p.slice(0, -1) : p)
+            .filter(p => p.length > 0);
+
+        if (!prefixes.includes("www")) prefixes.push("www");
+
+        if (prefixes.length > 0) {
+            let escapedPrefixes = prefixes.map(p => p.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'));
+            let regex = new RegExp(`^(${escapedPrefixes.join('|')})\\.+`, 'gi');
+            clean = clean.replace(regex, '');
+        }
+
+        return clean;
+    }
+
     function _is_valid_domain(str) {
         if (!str) return false;
         let s = str.trim().toLowerCase();
@@ -322,13 +477,13 @@ function _format_kb_only(text) {
             } else {
                 let trimmedLine = line.trim();
                 
-                // Loại bỏ http/https/www nếu dòng chỉ là URL/domain thông thường
                 if (!trimmedLine.startsWith('||') && !trimmedLine.startsWith('@@') && !trimmedLine.startsWith('/') && !trimmedLine.startsWith('#')) {
                     trimmedLine = _clean_url_prefix(trimmedLine);
                     if (!_is_valid_domain(trimmedLine)) return; 
                 } else if (trimmedLine.startsWith('||')) {
-                    // Xử lý loại bỏ www trong quy tắc dạng ||www.example.com^
-                    trimmedLine = trimmedLine.replace(/^\|\|www\./i, '||');
+                    let domainPart = trimmedLine.substring(2);
+                    let cleanedDomain = _clean_url_prefix(domainPart);
+                    trimmedLine = '||' + cleanedDomain;
                 }
                 
                 if (trimmedLine) otherRules.add(trimmedLine);
@@ -358,7 +513,7 @@ function _format_kb_only(text) {
 
         const finalBlocked = uniqueBody.length; 
         const currentRulesOnly = uniqueBody.join('\n');
-        const isRulesChanged = _last_saved_content.includes(currentRulesOnly) === false; 
+        const isRulesChanged = _last_saved_ads.includes(currentRulesOnly) === false; 
         
         let finalUpdated = oldMeta.u;
         if (isRulesChanged) {
@@ -388,13 +543,13 @@ function _format_kb_only(text) {
         });
 
         const bodyContent = tempBodyOutput.join('\n');
-        const mockHeader = `[Adblock Plus 2.0]\n! Title: STOP ADS\n! Describe: Chặn quảng cáo\n! Updated: ${finalUpdated}\n! Blocked: ${finalBlocked}\n! Size: 00.00 KB\n! ==================`;
+        const mockHeader = `[Adblock Plus 2.0]\n! Title: STOP ADS\n! Describe: Chặn Quảng Cáo\n! Updated: ${finalUpdated}\n! Blocked: ${finalBlocked}\n! Size: 00.00 KB\n! ==================`;
         const finalSize = _format_kb_only(mockHeader + "\n\n" + bodyContent);
 
         const headerArr = [
             "[Adblock Plus 2.0]", 
             "! Title: STOP ADS", 
-            "! Describe: Chặn quảng cáo", 
+            "! Describe: Chặn Quảng Cáo", 
             `! Updated: ${finalUpdated}`,
             `! Blocked: ${finalBlocked}`,
             `! Size: ${finalSize}`,
@@ -405,6 +560,39 @@ function _format_kb_only(text) {
             content: [...headerArr, "", ...tempBodyOutput].join('\n'), 
             isRulesChanged: isRulesChanged
         };
+    }
+
+    function _standardize_prefix(rawInput) {
+        let tokens = rawInput.split(/[\s,\n]+/);
+        let cleanedSet = new Set();
+
+        tokens.forEach(token => {
+            let l = token.trim().toLowerCase();
+            if (!l) return;
+            if (!l.endsWith('.')) l += '.';
+            cleanedSet.add(l);
+        });
+
+        // Sắp xếp các tiền tố theo bảng chữ cái
+        let sortedArray = Array.from(cleanedSet).sort((a, b) => a.localeCompare(b, 'en', { sensitivity: 'base' }));
+
+        // Gom nhóm theo chữ cái đầu tiên
+        let groups = new Map();
+        sortedArray.forEach(item => {
+            let firstChar = item.charAt(0);
+            if (!groups.has(firstChar)) {
+                groups.set(firstChar, []);
+            }
+            groups.get(firstChar).push(item);
+        });
+
+        // Cùng chữ cái -> cách nhau bởi ", ", Khác chữ cái -> chèn dòng trống phân cách
+        let resultLines = [];
+        groups.forEach((items) => {
+            resultLines.push(items.join(', '));
+        });
+
+        return resultLines.join('\n\n');
     }
 
     async function _fetch_file(path) { 
@@ -428,43 +616,68 @@ function _format_kb_only(text) {
         setBtnState('loading');
         try {
             const ads = await _fetch_file(_app_opt._p_ads);
-
             if (ads) {
                 _v_sha_ads = ads.sha;
-                _dom_ar.value = _last_saved_content = decodeURIComponent(atob(ads.content).split('').map(c => '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2)).join(''));
+                _dom_ar.value = _last_saved_ads = decodeURIComponent(atob(ads.content).split('').map(c => '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2)).join(''));
+            }
+
+            const prefixFile = await _fetch_file(_app_opt._p_prefix);
+            if (prefixFile) {
+                _v_sha_prefix = prefixFile.sha;
+                const rawPrefix = decodeURIComponent(atob(prefixFile.content).split('').map(c => '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2)).join(''));
+                _dom_prefix.value = _last_saved_prefix = _standardize_prefix(rawPrefix);
+            } else {
+                _dom_prefix.value = _last_saved_prefix = "";
             }
 
             _is_loading = false; 
-            setBtnState('saved');
+            checkChanges();
         } catch (e) { 
             setBtnState('error'); 
         }
     }
 
     async function _update_file(path, content, sha, message) {
-        return await fetch(`${_api_base}${path}`, {
+        const res = await fetch(`${_api_base}${path}`, {
             method: "PUT",
             headers: { "Authorization": `Bearer ${_app_opt._k}`, "Content-Type": "application/json" },
             body: JSON.stringify({ message: message, content: btoa(String.fromCharCode(...new TextEncoder().encode(content))), sha: sha })
         });
+        return res.ok ? await res.json() : null;
     }
 
-    if (_dom_ar) _dom_ar.addEventListener('input', checkChanges);
+    if (_dom_ar) _dom_ar.addEventListener('input', handleInput);
+    if (_dom_prefix) _dom_prefix.addEventListener('input', handleInput);
 
     if (_dom_sv) {
         _dom_sv.addEventListener('click', async () => {
             if (_dom_sv.disabled || !navigator.onLine) return;
-            setBtnState('saving');
             try {
-                const result = _standardize_content(_dom_ar.value);
+                if (_active_tab === 'pane-ads') {
+                    setBtnState('saving', 'LOẠI BỎ...');
+                    const result = _standardize_content(_dom_ar.value);
+                    _dom_ar.value = result.content;
+                    const resAds = await _update_file(_app_opt._p_ads, result.content, _v_sha_ads, result.isRulesChanged ? `update filter` : "format rules");
+                    if (resAds && resAds.content) _v_sha_ads = resAds.content.sha;
+                    _last_saved_ads = result.content;
+                } else {
+                    setBtnState('saving', 'LOẠI BỎ...');
+                    const formattedPrefix = _standardize_prefix(_dom_prefix.value);
+                    _dom_prefix.value = formattedPrefix;
+                    
+                    const resPrefix = await _update_file(_app_opt._p_prefix, formattedPrefix, _v_sha_prefix, "update prefixes");
+                    if (resPrefix && resPrefix.content) _v_sha_prefix = resPrefix.content.sha;
+                    _last_saved_prefix = formattedPrefix;
 
-                await _update_file(_app_opt._p_ads, result.content, _v_sha_ads, result.isRulesChanged ? `update filter` : "format rules");
+                    setBtnState('saving', 'SẮP XẾP...');
+                    const result = _standardize_content(_dom_ar.value);
+                    _dom_ar.value = result.content;
+                    const resAds = await _update_file(_app_opt._p_ads, result.content, _v_sha_ads, "auto purge prefixes from ads filter");
+                    if (resAds && resAds.content) _v_sha_ads = resAds.content.sha;
+                    _last_saved_ads = result.content;
+                }
                 
-                _last_saved_content = result.content;
-                _dom_ar.value = result.content;
-                
-                await _load();
-                setBtnState('saved');
+                checkChanges();
             } catch (e) { 
                 setBtnState('error'); 
             }
