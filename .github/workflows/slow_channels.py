@@ -84,12 +84,4 @@ SLOW_CHANNELS = {
         ],
         "tvg_id": "sctvhdpth",
     },
-    "onviedramas": {
-        "url": ["http://tv.vietanhtv.top/vieon/vieon.php?id=vie-dramas-hd"],
-        "tvg_id": "onviedramas",
-    },
-    "onviegiaitri": {
-        "url": ["http://tv.vietanhtv.top/vieon/vieon.php?id=vie-giai-tri-hd"],
-        "tvg_id": "onviegiaitri",
-    },
    }
