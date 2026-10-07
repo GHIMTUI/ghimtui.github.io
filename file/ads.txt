@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Describe: Chặn Quảng Cáo
-! Updated: 05 Oct 2026 07:47
-! Blocked: 540
-! Size: 37.97 KB
+! Updated: 07 Oct 2026 23:26
+! Blocked: 541
+! Size: 37.99 KB
 ! ==================
 
 1thegioi.vn##[class^="c-banner-"],[id^="zone-"]
@@ -337,6 +337,8 @@ fhsc.com.vn###smart-banner
 finhay.com.vn###smart-banner
 
 fmarket.vn##[class^="register__"]
+
+fpt.vn###popupBanner
 
 fptplay.vn##.flex-row
 
