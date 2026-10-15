@@ -84,4 +84,60 @@ SLOW_CHANNELS = {
         ],
         "tvg_id": "sctvhdpth",
     },
+    "onviedramas": {
+        "url": ["http://tv.vietanhtv.top/vieon/vieon.php?id=vie-dramas-hd"],
+        "tvg_id": "onviedramas",
+    },
+    "onviegiaitri": {
+        "url": ["http://tv.vietanhtv.top/vieon/vieon.php?id=vie-giai-tri-hd"],
+        "tvg_id": "onviegiaitri",
+    },
+  "htv1": {
+        "url": ["http://tv.vietanhtv.top/vieon/vieon.php?id=htv1"],
+        "tvg_id": "htv1",
+    },
+   "htv2": {
+        "url": ["http://tv.vietanhtv.top/vieon/vieon.php?id=htv2-hd"],
+        "tvg_id": "htv2",
+    },
+  "htv3": {
+        "url": ["http://tv.vietanhtv.top/vieon/vieon.php?id=htv3"],
+        "tvg_id": "htv3",
+    },
+  "htv4": {
+        "url": ["http://tv.vietanhtv.top/vieon/vieon.php?id=htv-key"],
+        "tvg_id": "htv4",
+    },
+  "htv5": {
+        "url": ["http://tv.vietanhtv.top/vieon/vieon.php?id=an-vien-hd"],
+        "tvg_id": "htv5",
+    },
+  "htv7": {
+        "url": ["http://tv.vietanhtv.top/vieon/vieon.php?id=htv7-hd"],
+        "tvg_id": "htv7",
+    },
+  "htv9": {
+        "url": ["http://tv.vietanhtv.top/vieon/vieon.php?id=htv9-hd"],
+        "tvg_id": "htv9",
+    },
+ "htvcplus": {
+        "url": ["http://tv.vietanhtv.top/vieon/vieon.php?id=htvc-plus"],
+        "tvg_id": "htvcplus",
+    },
+"htvcthuanviet": {
+        "url": ["http://tv.vietanhtv.top/vieon/vieon.php?id=htvc-thuan-viet-hd"],
+        "tvg_id": "htvcthuanviet",
+    },
+"htvcgiadinh": {
+        "url": ["http://tv.vietanhtv.top/vieon/vieon.php?id=htvc-gia-dinh"],
+        "tvg_id": "htvcgiadinh",
+    },
+"htvcphunu": {
+        "url": ["http://tv.vietanhtv.top/vieon/vieon.php?id=htvc-phu-nu"],
+        "tvg_id": "htvcphunu",
+    },
+"htvcdulich": {
+        "url": ["http://tv.vietanhtv.top/vieon/vieon.php?id=htvc-du-lich-cuoc-song"],
+        "tvg_id": "htvcdulich",
+    },
    }
