@@ -98,7 +98,7 @@ SLOW_CHANNELS = {
     },
    "htv2": {
         "url": ["http://tv.vietanhtv.top/vieon/vieon.php?id=htv2-hd"],
-        "tvg_id": "htv2",
+        "tvg_id": "htv2hd",
     },
   "htv3": {
         "url": ["http://tv.vietanhtv.top/vieon/vieon.php?id=htv3"],
@@ -114,15 +114,15 @@ SLOW_CHANNELS = {
     },
   "htv7": {
         "url": ["http://tv.vietanhtv.top/vieon/vieon.php?id=htv7-hd"],
-        "tvg_id": "htv7",
+        "tvg_id": "htv7hd",
     },
   "htv9": {
         "url": ["http://tv.vietanhtv.top/vieon/vieon.php?id=htv9-hd"],
-        "tvg_id": "htv9",
+        "tvg_id": "htv9hd",
     },
  "htvcplus": {
         "url": ["http://tv.vietanhtv.top/vieon/vieon.php?id=htvc-plus"],
-        "tvg_id": "htvcplus",
+        "tvg_id": "htvcplushd",
     },
 "htvcthuanviet": {
         "url": ["http://tv.vietanhtv.top/vieon/vieon.php?id=htvc-thuan-viet-hd"],
@@ -130,14 +130,14 @@ SLOW_CHANNELS = {
     },
 "htvcgiadinh": {
         "url": ["http://tv.vietanhtv.top/vieon/vieon.php?id=htvc-gia-dinh"],
-        "tvg_id": "htvcgiadinh",
+        "tvg_id": "htvcgiadinhhd",
     },
 "htvcphunu": {
         "url": ["http://tv.vietanhtv.top/vieon/vieon.php?id=htvc-phu-nu"],
-        "tvg_id": "htvcphunu",
+        "tvg_id": "htvcphunuhd",
     },
 "htvcdulich": {
         "url": ["http://tv.vietanhtv.top/vieon/vieon.php?id=htvc-du-lich-cuoc-song"],
-        "tvg_id": "htvcdulich",
+        "tvg_id": "htvcdulichhd",
     },
    }
