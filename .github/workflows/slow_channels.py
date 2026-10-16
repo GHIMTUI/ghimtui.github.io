@@ -164,14 +164,6 @@ SLOW_CHANNELS = {
         "url": ["http://tv.vietanhtv.top/vieon/vieon.php?id=tra-vinh-1"],
         "tvg_id": "vinhlong5hd",
     },
-"dongnai1": {
-        "url": ["http://tv.vietanhtv.top/vieon/vieon.php?id=dong-nai-1"],
-        "tvg_id": "dongnai1",
-    },
-"dongnai2": {
-        "url": ["http://tv.vietanhtv.top/vieon/vieon.php?id=dong-nai-2"],
-        "tvg_id": "dongnai2",
-    },
 "hue": {
         "url": ["http://tv.vietanhtv.top/vieon/vieon.php?id=thua-thien-hue-1"],
         "tvg_id": "hue",
