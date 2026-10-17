@@ -1,8 +1,8 @@
 CHANNELS = {
     "sctv2": {
         "url": [
-{"https://vmttv.dpdns.org/VTVGo/?sctv2", "getlink": True},
-{"https://vietanhtv.id.vn/sctv/sctv2-57c3884d/index.m3u8", "getlink": True},
+{"https://vmttv.dpdns.org/VTVGo/?sctv2", "getlink": true},
+{"https://vietanhtv.id.vn/sctv/sctv2-57c3884d/index.m3u8", "getlink": true},
         ],
         "tvg_id": "sctv2hd" ,
     },
