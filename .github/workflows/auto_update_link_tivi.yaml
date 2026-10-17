@@ -37,7 +37,9 @@ jobs:
           echo "Chạy theo lịch cron"
         fi
 
-    # Thêm các bước chạy script python của bạn tại đây (ví dụ: python main.py)
+    - name: Chạy script cập nhật liên kết
+      run: |
+        python auto_update_link_tivi.py
 
     - name: Lưu thay đổi
       run: |
