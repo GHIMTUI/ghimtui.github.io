@@ -5,7 +5,7 @@ from channels import CHANNELS
 def check_and_resolve_url(url_entry):
       url_lower = url_entry.lower().strip()    
     # Kiểm tra xem link có bắt đầu bằng 'get:' hoặc 'get ' hay không
-    if url_lower.startswith("get:"):
+    if url_lower.startswith("get: "):
         is_get = True
         raw_url = url_entry[4:].strip() # Cắt bỏ 4 ký tự 'get:'
     elif url_lower.startswith("get "):
