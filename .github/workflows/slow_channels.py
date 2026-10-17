@@ -92,9 +92,15 @@ SLOW_CHANNELS = {
             "https://vmttv.dpdns.org/VTVGo/?sctvphim",
             "https://vietanhtv.id.vn/sctv/sctv-phim-tong-hop-e6d2df88/index.m3u8 ",
         ],
-        "tvg_id": "sctvhdpth",
+        "tvg_id": "sctv4k",
     },
-    
+     "sctvphim": {
+        "url": [
+  "https://vietanhtv.id.vn/sctv-4k/index.m3u8 ",
+        ],
+        "tvg_id": "sctv4k",
+    },
+
   "htv1": {
         "url": ["http://tv.vietanhtv.top/vieon/vieon.php?id=htv1"],
         "tvg_id": "htv1",
