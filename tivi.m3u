@@ -23,7 +23,7 @@
 #EXTINF:-1 tvg-id="vinhlong5hd" tvg-logo="https://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/vinhlong5.png", Vĩnh Long 5
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-user-referer=https://vieon.vn/
-https://livecdn-vthcm-bp.vieon.vn/484e2cbf7d837a5d1aeba20be961692a/1792345712000/livetv/group-01/4613aed1b1174347f0c42c2296b893da/playlist.m3u8?c=a
+https://livecdn-vthcm-bp.vieon.vn/ba4af690ca41cc787775f5b62627b5fe/1792346677000/livetv/group-01/4613aed1b1174347f0c42c2296b893da/playlist.m3u8?c=a
 
 #EXTINF:-1 tvg-id="onphimviet" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/on_phimviet.png", ON Phim Việt
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
@@ -427,27 +427,27 @@ http://liveatmvng.vtvprime.vn/live/data8/SCTV1/Live_DASHDRM/SCTV1.mpd
 #EXTINF:-1 tvg-id="sctv2hd"  tvg-logo="http://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV2.png",SCTV2
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-user-referer=https://vtvprime.vn/
-https://vtvgolive-sctvdrm.vtvdigital.vn/Lx2I3Vj8CfKp-ePA4Zpucg/1792273587/manifest/sctv2/master.m3u8
+https://vtvgolive-sctvdrm.vtvdigital.vn/lrilhekv-EC2boJxshXWzw/1792274568/manifest/sctv2/master.m3u8
 
 #EXTINF:-1 tvg-id="sctv3hd"  tvg-logo="http://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV3.png",SCTV3
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-user-referer=https://vtvgo.vn/
-https://vtvgolive-sctvdrm.vtvdigital.vn/SlkaO1LUwFvQnRQg3bb9VQ/1792273589/manifest/sctv3/master.m3u8
+https://vtvgolive-sctvdrm.vtvdigital.vn/0F0VGjQt2UkCJQN5PGWcEQ/1792274573/manifest/sctv3/master.m3u8
 
 #EXTINF:-1 tvg-id="sctv4hd"  tvg-logo="http://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV4.png",SCTV4
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-user-referer=https://vtvgo.vn/
-https://vtvgolive-sctvdrm.vtvdigital.vn/Hhr9vsAw4Jd3hDiog07Iig/1792273602/manifest/sctv4/master.m3u8
+https://vtvgolive-sctvdrm.vtvdigital.vn/jpGAdomWZkUgtIJXBOVpsw/1792274577/manifest/sctv4/master.m3u8
 
 #EXTINF:-1 tvg-id="sctv6hd"  tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/sctv6.png",SCTV6
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-user-referer=https://vtvgo.vn/
-https://vtvgolive-sctvdrm.vtvdigital.vn/kzW_ItsRvJAgZJ6myiR3FQ/1792273605/manifest/sctv6/master.m3u8
+https://vtvgolive-sctvdrm.vtvdigital.vn/2sltsylKDShRzbFMXDL8xg/1792274581/manifest/sctv6/master.m3u8
 
 #EXTINF:-1 tvg-id="sctv7hd"  tvg-logo="http://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV7.png",SCTV7
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-user-referer=https://vtvgo.vn/
-https://vtvgolive-sctvdrm.vtvdigital.vn/nkmQuo_ya-mCQ8PbTqcN6Q/1792273608/manifest/sctv7/master.m3u8
+https://vtvgolive-sctvdrm.vtvdigital.vn/-dliVHypQeqOnIhLYO4pig/1792274588/manifest/sctv7/master.m3u8
 
 #EXTINF:-1 tvg-id="sctv8hd"  tvg-logo="http://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV8.png",SCTV8
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
@@ -457,22 +457,22 @@ https://vmttv.dpdns.org/VTVGo/?sctv8
 #EXTINF:-1 tvg-id="sctv9hd"  tvg-logo="http://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV9.png",SCTV9
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-user-referer=https://vtvgo.vn/
-https://vtvgolive-sctvdrm.vtvdigital.vn/UgdwRMPF0hrzOpmnEmn7ZQ/1792273606/manifest/sctv9/master.m3u8
+https://vtvgolive-sctvdrm.vtvdigital.vn/zBM1bPMcJF3DLAXrP7Ffqg/1792274591/manifest/sctv9/master.m3u8
 
 #EXTINF:-1 tvg-id="sctv11hd"  tvg-logo="http://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV11.png",SCTV11
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-user-referer=https://vtvgo.vn/
-https://vtvgolive-sctvdrm.vtvdigital.vn/tjzqYxocFXkXRW8EgotA6A/1792273615/manifest/sctv11/master.m3u8
+https://vtvgolive-sctvdrm.vtvdigital.vn/CfRvQdK3L5TRVirvBy15dg/1792274593/manifest/sctv11/master.m3u8
 
 #EXTINF:-1 tvg-id="sctv12hd"  tvg-logo="http://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV12.png",SCTV12
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-user-referer=https://vtvgo.vn/
-https://vtvgolive-sctvdrm.vtvdigital.vn/BWh9NrYitoCWcLdiEZIhJg/1792273618/manifest/sctv12/master.m3u8
+https://vtvgolive-sctvdrm.vtvdigital.vn/KEZG2POZYnekMzic_-_Fvg/1792274596/manifest/sctv12/master.m3u8
 
 #EXTINF:-1 tvg-id="sctv13hd"  tvg-logo="http://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV13.png",SCTV13
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-user-referer=https://vtvgo.vn/
-https://vtvgolive-sctvdrm.vtvdigital.vn/WV0tk7Ldu5CRQLX35zQuqA/1792273622/manifest/sctv13/master.m3u8
+https://vtvgolive-sctvdrm.vtvdigital.vn/gfv8FMqh03mctFUAJml1Vw/1792274603/manifest/sctv13/master.m3u8
 
 #EXTINF:-1 tvg-id="sctv14hd"  tvg-logo="http://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV14.png",SCTV14
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
@@ -482,12 +482,12 @@ https://vmttv.dpdns.org/VTVGo/?sctv14
 #EXTINF:-1 tvg-id="sctv16hd"  tvg-logo="http://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV16.png",SCTV16
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-user-referer=https://vtvgo.vn/
-https://vtvgolive-sctvdrm.vtvdigital.vn/z4JEUjxoeF9OHbOBGJXkEg/1792273629/manifest/sctv16/master.m3u8
+https://vtvgolive-sctvdrm.vtvdigital.vn/PJBgPedjekKDfKysYyCIvg/1792274610/manifest/sctv16/master.m3u8
 
 #EXTINF:-1 tvg-id="sctv18hd"  tvg-logo="http://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV18.png",SCTV18
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-user-referer=https://vtvgo.vn/
-https://vtvgolive-sctvdrm.vtvdigital.vn/RsuY9ZVryu8YyinAsd8SGA/1792273632/manifest/sctv18/master.m3u8
+https://vtvgolive-sctvdrm.vtvdigital.vn/mR4o7dYMqQyhfhV4GJ1jTw/1792274613/manifest/sctv18/master.m3u8
 
 #EXTINF:-1 tvg-id="sctv19hd"  tvg-logo="http://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV19.png",SCTV19
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
