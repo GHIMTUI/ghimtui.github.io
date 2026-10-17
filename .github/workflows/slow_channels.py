@@ -97,7 +97,7 @@ SLOW_CHANNELS = {
     },
     "sctv4k": {
         "url": [
-            "https://vietanhtv.id.vn/sctv-4k/index.m3u8",
+            "https://vietanhtv.id.vn/sctv/sctv-4k/index.m3u8",
         ],
         "tvg_id": "sctv4k",
     },
