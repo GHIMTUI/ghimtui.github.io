@@ -26,7 +26,7 @@ jobs:
           pip install requests
 
       - name: Run update script
-        run: python update_channels.py
+        run: python channels_update.py
 
       - name: Commit and push if changes detected
         run: |
