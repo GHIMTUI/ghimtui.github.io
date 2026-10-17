@@ -3,21 +3,22 @@ import requests
 from channels import CHANNELS
 
 def check_and_resolve_url(url_entry):
-    url_lower = url_entry.lower().strip()    
-    # Kiểm tra xem link có bắt đầu bằng 'get:' hoặc 'get ' hay không
-    if url_lower.startswith("get: "):
+    url_lower = url_entry.lower().strip()
+    is_get = False
+    raw_url = url_entry.strip()
+    
+    # Kiểm tra các dạng tiền tố get
+    if url_lower.startswith("get:"):
         is_get = True
-        raw_url = url_entry[4:].strip() # Cắt bỏ 4 ký tự 'get:'
+        raw_url = url_entry[4:].strip()
+        if raw_url.startswith(":"): # Phòng hờ trường hợp get::
+            raw_url = raw_url[1:].strip()
     elif url_lower.startswith("get "):
         is_get = True
-        raw_url = url_entry[4:].strip() # Cắt bỏ 4 ký tự 'get '
-    else:
-        is_get = False
-        raw_url = url_entry.strip()
-        
+        raw_url = url_entry[4:].strip()
+
     target_url = raw_url
     if is_get:
-        # Code xử lý lấy link stream giữ nguyên...
         try:
             headers = {"User-Agent": "Mozilla/5.0"}
             response = requests.get(raw_url, headers=headers, timeout=10, allow_redirects=True)
@@ -48,17 +49,60 @@ def check_and_resolve_url(url_entry):
 
     return url_entry, False
 
+def clean_get_prefix(url_str):
+    """ Hàm phụ trợ làm sạch chữ get: hoặc get ở đầu link trước khi in ra m3u """
+    u_lower = url_str.lower().strip()
+    if u_lower.startswith("get:"):
+        clean = url_str[4:].strip()
+        if clean.startswith(":"):
+            clean = clean[1:].strip()
+        return clean
+    elif u_lower.startswith("get "):
+        return url_str[4:].strip()
+    return url_str.strip()
+
 def update_channels():
     updated_channels = {}
+    
+    # Đọc file tivi.m3u cũ nếu tồn tại để giữ lại các kênh khác không nằm trong CHANNELS.py
+    existing_m3u_blocks = {} # key là tvg_id hoặc tên kênh, value là toàn bộ đoạn textEXTINF + URL
+    if os.path.exists("tivi.m3u"):
+        with open("tivi.m3u", "r", encoding="utf-8") as f:
+            content = f.read()
+            # Tách các dòng M3U
+            lines = content.splitlines()
+            i = 0
+            while i < len(lines):
+                line = lines[i].strip()
+                if line.startswith("#EXTINF:"):
+                    extinf_line = line
+                    stream_line = lines[i+1].strip() if i+1 < len(lines) else ""
+                    
+                    # Trích xuất tvg-id hoặc tvg-name để làm key nhận diện kênh
+                    ident = ""
+                    if 'tvg-id="' in extinf_line:
+                        try:
+                            ident = extinf_line.split('tvg-id="')[1].split('"')[0]
+                        except:
+                            pass
+                    if not ident and 'tvg-name="' in extinf_line:
+                        try:
+                            ident = extinf_line.split('tvg-name="')[1].split('"')[0]
+                        except:
+                            pass
+                    
+                    if ident:
+                        existing_m3u_blocks[ident] = (extinf_line, stream_line)
+                    i += 2
+                else:
+                    i += 1
+
     m3u_lines = ["#EXTM3U\n"]
+    processed_ids = set()
 
     for channel_name, data in CHANNELS.items():
         urls = data.get("url", [])
-        
-        # Lấy tvg_id từ channels.py (nếu không có thì lấy tạm tên kênh)
         tvg_id = data.get("tvg_id", channel_name)
-        
-        # Lấy thêm logo hoặc group nếu bạn có cấu hình trong channels.py
         tvg_logo = data.get("tvg_logo", "")
         group_title = data.get("group_title", "Truyền Hình")
 
@@ -80,32 +124,36 @@ def update_channels():
             urls.pop(working_index)
             urls.insert(0, working_url)
             
-            clean_stream_url = working_url[4:].strip() if working_url.startswith("get ") else working_url.strip()
-            
             updated_channels[channel_name] = data
             updated_channels[channel_name]["url"] = urls
 
-            # Bổ sung đúng chuẩn M3U: dùng dấu gạch ngang tvg-id, tvg-name, tvg-logo
+            # Làm sạch tiền tố get để lấy đúng link stream cuối cùng in ra file m3u
+            clean_stream_url = clean_get_prefix(working_url)
+
             extinf = f'#EXTINF:-1 tvg-id="{tvg_id}" tvg-name="{channel_name}"'
             if tvg_logo:
                 extinf += f' tvg-logo="{tvg_logo}"'
             if group_title:
                 extinf += f' group-title="{group_title}"'
-            
-            # Tên hiển thị của kênh trên ứng dụng (sau dấu phẩy)
-            extinf += f',{channel_name.upper()}\n'
+            extinf += f',{channel_name.upper()}'
 
-            m3u_lines.append(extinf)
-            m3u_lines.append(f'{clean_stream_url}\n')
+            # Cập nhật hoặc thêm mới vào bộ nhớ m3u theo đúng tvg_id
+            existing_m3u_blocks[tvg_id] = (extinf, clean_stream_url)
+            processed_ids.add(tvg_id)
         else:
             print(f"Cảnh báo: Kênh {channel_name} không có link nào hoạt động!")
             updated_channels[channel_name] = data
+
+    # Tổng hợp lại file tivi.m3u (Giữ lại các kênh cũ khác, cập nhật đúng các kênh có trong CHANNELS)
+    for ident, (extinf, stream_url) in existing_m3u_blocks.items():
+        m3u_lines.append(f"{extinf}\n")
+        m3u_lines.append(f"{stream_url}\n")
 
     # Ghi lại file channels.py
     with open("channels.py", "w", encoding="utf-8") as f:
         f.write("CHANNELS = " + repr(updated_channels) + "\n")
 
-    # Ghi file tivi.m3u
+    # Ghi lại file tivi.m3u mà không làm mất các kênh khác
     with open("tivi.m3u", "w", encoding="utf-8") as f:
         f.writelines(m3u_lines)
 
