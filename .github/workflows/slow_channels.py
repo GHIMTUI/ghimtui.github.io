@@ -83,8 +83,7 @@ SLOW_CHANNELS = {
     },
     "sctv21": {
         "url":[
-"https://vietanhtv.id.vn/sctv/sctv-21-57de221a
-/index.m3u8 ",
+"https://vietanhtv.id.vn/sctv/sctv-21-57de221a/index.m3u8",
 ],
         "tvg_id": "sctv21hd",
     },
