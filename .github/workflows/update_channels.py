@@ -1,10 +1,21 @@
 import os
 import requests
 from channels import CHANNELS
-# Sửa lại để chấp nhận cả "get " lẫn "GET "
-    is_get = url_entry.lower().startswith("get: ")
-    raw_url = url_entry[4:].strip() if is_get else url_entry.strip()
-target_url = raw_url
+
+def check_and_resolve_url(url_entry):
+    url_lower = url_entry.lower().strip()    
+    # Kiểm tra xem link có bắt đầu bằng 'get:' hoặc 'get ' hay không
+    if url_lower.startswith("get: "):
+        is_get = True
+        raw_url = url_entry[4:].strip() # Cắt bỏ 4 ký tự 'get:'
+    elif url_lower.startswith("get "):
+        is_get = True
+        raw_url = url_entry[4:].strip() # Cắt bỏ 4 ký tự 'get '
+    else:
+        is_get = False
+        raw_url = url_entry.strip()
+        
+    target_url = raw_url
     if is_get:
         # Code xử lý lấy link stream giữ nguyên...
         try:
