@@ -2,11 +2,6 @@ import os
 import re
 import requests
 
-# Giúp tìm được cả tvg-id="..." lẫn tvg_id="..."
-pattern = r'tvg[-_]id="([^"]+)"'
-match = re.search(pattern, line)
-if match:
-    tvg_id = match.group(1)
     
 # Import danh sách từ file dữ liệu riêng
 from slow_channels import SLOW_CHANNELS
