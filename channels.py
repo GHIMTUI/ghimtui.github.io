@@ -1,14 +1,14 @@
 CHANNELS = {
     "sctv2": {
         "url": [
-"https://vmttv.dpdns.org/VTVGo/?sctv2"
+"https://vmttv.dpdns.org/VTVGo/?sctv2",
 "https://vietanhtv.id.vn/sctv/sctv2-57c3884d/index.m3u8"
         ],
         "tvg_id": "sctv2hd" ,
     },
     "sctv3": {
         "url": [
-"https://vmttv.dpdns.org/VTVGo/?sctv3"
+"https://vmttv.dpdns.org/VTVGo/?sctv3",
 "https://vietanhtv.id.vn/sctv/sctv3-hd-cf3adaca/index.m3u8"
         ],
         "tvg_id": "sctv3hd" ,
@@ -103,79 +103,79 @@ CHANNELS = {
     },
     "htv1": {
         "url": [
-" http://tv.vietanhtv.top/vieon/vieon.php?id=htv1"
+"http://tv.vietanhtv.top/vieon/vieon.php?id=htv1"
 ],
         "tvg_id": "htv1" ,
     },
     "htv2": {
         "url": [
-" http://tv.vietanhtv.top/vieon/vieon.php?id=vie-channel-htv2-hd"
+"http://tv.vietanhtv.top/vieon/vieon.php?id=vie-channel-htv2-hd"
 ],
         "tvg_id": "htv2hd" ,
     },
     "htv3": {
         "url": [
-" http://tv.vietanhtv.top/vieon/vieon.php?id=htv3"
+"http://tv.vietanhtv.top/vieon/vieon.php?id=htv3"
 ],
         "tvg_id": "htv3" ,
     },
     "htv4": {
         "url": [
-" http://tv.vietanhtv.top/vieon/vieon.php?id=htv-key"
+"http://tv.vietanhtv.top/vieon/vieon.php?id=htv-key"
 ],
         "tvg_id": "htv4" ,
     },
     "htv5": {
         "url": [
-" http://tv.vietanhtv.top/vieon/vieon.php?id=an-vien-hd"
+"http://tv.vietanhtv.top/vieon/vieon.php?id=an-vien-hd"
 ],
         "tvg_id": "htv5" ,
     },
     "htv7": {
         "url": [
-" http://tv.vietanhtv.top/vieon/vieon.php?id=htv7-hd"
+"http://tv.vietanhtv.top/vieon/vieon.php?id=htv7-hd"
 ],
         "tvg_id": "htv7hd" ,
     },
     "htv9": {
         "url": [
-" http://tv.vietanhtv.top/vieon/vieon.php?id=htv9-hd"
+"http://tv.vietanhtv.top/vieon/vieon.php?id=htv9-hd"
 ],
         "tvg_id": "htv9hd" ,
     },
     "htvcplus": {
         "url": [
-" http://tv.vietanhtv.top/vieon/vieon.php?id=htvc-plus"
+"http://tv.vietanhtv.top/vieon/vieon.php?id=htvc-plus"
 ],
         "tvg_id": "htvcplushd" ,
     },
     "htvcthuanviet": {
         "url": [
-" http://tv.vietanhtv.top/vieon/vieon.php?id=htvc-thuan-viet-hd"
+"http://tv.vietanhtv.top/vieon/vieon.php?id=htvc-thuan-viet-hd"
 ],
         "tvg_id": "htvcthuanviet" ,
     },
     "htvcgiadinh": {
         "url": [
-" http://tv.vietanhtv.top/vieon/vieon.php?id=htvc-gia-dinh"
+"http://tv.vietanhtv.top/vieon/vieon.php?id=htvc-gia-dinh"
 ],
         "tvg_id": "htvcgiadinhhd" ,
     },
     "htvcphunu": {
         "url": [
-" http://tv.vietanhtv.top/vieon/vieon.php?id=htvc-phu-nu"
+"http://tv.vietanhtv.top/vieon/vieon.php?id=htvc-phu-nu"
 ],
         "tvg_id": "htvcphunuhd" ,
     },
     "htvcdulich": {
         "url": [
-" http://tv.vietanhtv.top/vieon/vieon.php?id=htvc-du-lich-cuoc-song"
+"http://tv.vietanhtv.top/vieon/vieon.php?id=htvc-du-lich-cuoc-song"
 ],
         "tvg_id": "htvcdulichhd" ,
     },
     "vinhlong1": {
         "url": [
-" http://tv.vietanhtv.top/vieon/vieon.php?id=thvl1-hd"
+"http://tv.vietanhtv.top/vieon/vieon.php?id=thvl1-hd"
 ],
         "tvg_id": "vinhlong1hd" ,
     },
@@ -187,13 +187,13 @@ CHANNELS = {
     },
     "vinhlong3": {
         "url": [
-" http://tv.vietanhtv.top/vieon/vieon.php?id=thvl3-hd"
+"http://tv.vietanhtv.top/vieon/vieon.php?id=thvl3-hd"
 ],
         "tvg_id": "vinhlong3hd" ,
     },
     "vinhlong4": {
         "url": [
-" http://tv.vietanhtv.top/vieon/vieon.php?id=thvl4-hd"
+"http://tv.vietanhtv.top/vieon/vieon.php?id=thvl4-hd"
 ],
         "tvg_id": "vinhlong4hd" ,
     },
@@ -205,7 +205,7 @@ CHANNELS = {
     },
     "hue": {
         "url": [
-" http://tv.vietanhtv.top/vieon/vieon.php?id=thua-thien-hue-1"
+"http://tv.vietanhtv.top/vieon/vieon.php?id=thua-thien-hue-1"
 ],
         "tvg_id": "hue" ,
     },
