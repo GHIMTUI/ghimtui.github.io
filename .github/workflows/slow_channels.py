@@ -1,19 +1,19 @@
 SLOW_CHANNELS = {
-    "sctv2": {
+    "sctv2hd": {
         "url": [
             "https://vmttv.dpdns.org/VTVGo/?sctv2",
             "https://vietanhtv.id.vn/sctv/sctv2-57c3884d/index.m3u8",
         ],
         "tvg_id": "sctv2hd",
     },
-    "sctv3": {
+    "sctv3hd": {
         "url": [
             "https://vmttv.dpdns.org/VTVGo/?sctv3",
             "https://vietanhtv.id.vn/sctv/sctv3-hd-cf3adaca/index.m3u8",
         ],
         "tvg_id": "sctv3hd",
     },
-    "sctv4": {
+    "sctv4hd": {
         "url": [
             "https://vmttv.dpdns.org/VTVGo/?sctv4",
             "https://vietanhtv.id.vn/sctv/sctv4-ae779f7e/index.m3u8",
