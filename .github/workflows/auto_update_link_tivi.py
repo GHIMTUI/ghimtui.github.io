@@ -1,9 +1,7 @@
-Cấu trúc mà cấu hình thế nào
 import os
 import re
 import requests
 
-    
 # Import danh sách từ file dữ liệu riêng
 from slow_channels import SLOW_CHANNELS
 
