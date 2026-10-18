@@ -10,7 +10,6 @@ CHANNELS = SLOW_CHANNELS
 FAST_CHANNELS = [""]
 FILE_NAME = "tivi.m3u"
 
-
 def get_live_link(urls, channel_name):
     if isinstance(urls, str):
         urls = [urls]
@@ -47,7 +46,6 @@ def get_live_link(urls, channel_name):
 
     print(f"[{channel_name.upper()}] Tất cả các link dự phòng đều thất bại.")
     return None
-
 
 def update_m3u_file():
     if not os.path.exists(FILE_NAME):
