@@ -86,7 +86,8 @@ def update_m3u_file():
         if not new_link:
             continue
 
-        pattern = rf'(#EXTINF:[^\n]*tvg-id="{tvg_id}"[^\n]*\n(?:#KODIPROP:[^\n]*\n)*)(https?://[^\n]+)'
+        # Cho phép linh hoạt dấu nháy đơn/kép và không phân biệt chữ hoa/thường của tvg-id
+pattern = rf'(#EXTINF:[^\n]*tvg-id=[\'"]{tvg_id}[\'"][^\n]*\n(?:#KODIPROP:[^\n]*\n)*)(https?://[^\n]+)'
 
         if re.search(pattern, content, re.IGNORECASE):
             content, count = re.subn(
