@@ -1,0 +1,57 @@
+name: Auto Update Channel
+
+on:
+  schedule:
+    # Nhóm chạy 12 tiếng một lần (sctv14, sctv19, sctv21)
+    # - cron: '0 */12 * * *'
+    # Nhóm chạy 24 tiếng một lần (các kênh còn lại)
+    - cron: '0 */24 * * *'
+  workflow_dispatch: # Cho phép bấm chạy thủ công tất cả các kênh
+
+jobs:
+  update-link:
+    name: cập nhật liên kết
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+    - name: Tải mã nguồn
+      uses: actions/checkout@v4
+
+    - name: Cài đặt Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.x'
+
+    - name: Cài thư viện
+      run: |
+        python -m pip install --upgrade pip
+        pip install requests
+
+    - name: Kiểm tra lịch cron
+      id: check-group
+      run: |
+        UPDATE_TYPE="Tất cả kênh"
+        if [ "${{ github.event_name }}" = "schedule" ]; then
+          echo "Chạy theo lịch cron"
+        fi
+
+    - name: Chạy script cập nhật liên kết
+      run: |
+        python .github/workflows/auto_update_link_tivi.py
+
+    - name: Lưu thay đổi
+      run: |
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "github-actions[bot]@users.noreply.github.com"
+        
+        # Bỏ qua các file cache python không cần thiết
+        find . -type d -name "__pycache__" -exec rm -rf {} +
+        
+        # Đưa các file đã cập nhật vào staging area
+        git add .
+        
+        # Chỉ commit khi có thay đổi mới, tránh báo lỗi exit code 1
+        git diff --staged --quiet || git commit -m "Auto update channel links"
+        git push
