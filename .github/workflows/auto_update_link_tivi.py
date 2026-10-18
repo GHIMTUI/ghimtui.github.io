@@ -106,4 +106,29 @@ def update_m3u_file():
 
 
 if __name__ == "__main__":
-    update_m3u_file()
+   for channel_name, config in channels_to_update.items():
+        tvg_id = config["tvg_id"]
+        source_urls = config["url"]
+
+        new_link = get_live_link(source_urls, channel_name)
+        if not new_link:
+            print(f"--> Bỏ qua {channel_name.upper()} vì không lấy được link mới.")
+            continue
+
+        # Regex cải tiến: 
+        # - Cho phép tvg-id linh hoạt (không phân biệt hoa thường trong thuộc tính)
+        # - Cho phép bất kỳ dòng phụ nào (hoặc không có dòng nào) bắt đầu bằng dấu # giữa EXTINF và URL
+        # - Xử lý sạch ký tự xuống dòng \r nếu có
+        pattern = rf'(#EXTINF:[^\n]*tvg-id=["\']{re.escape(tvg_id)}["\'][^\n]*\n(?:#.*?\n|\s*\n)*(https?://[^\s\r]+))'
+
+        match = re.search(pattern, content, re.IGNORECASE)
+        if match:
+            old_link = match.group(2)
+            if old_link != new_link:
+                content = content.replace(old_link, new_link)
+                print(f"--> [THÀNH CÔNG] Đã cập nhật link mới cho {channel_name.upper()}")
+                has_changed = True
+            else:
+                print(f"--> [BỎ QUA] Link của {channel_name.upper()} đã là link mới nhất.")
+        else:
+            print(f'--> [CẢNH BÁO] Không tìm thấy cấu trúc kênh {channel_name.upper()} với tvg-id="{tvg_id}" trong m3u.')
