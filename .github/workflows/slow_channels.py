@@ -1,17 +1,17 @@
 SLOW_CHANNELS = {
-    "sctv2hd": {
+    "sctv2": {
         "url": [
             "https://vmttv.dpdns.org/VTVGo/?sctv2",       "https://vietanhtv.id.vn/sctv/sctv2-57c3884d/index.m3u8",
         ],
         "tvg_id": "sctv2hd",
     },
-    "sctv3hd": {
+    "sctv3": {
         "url": [
             "https://vmttv.dpdns.org/VTVGo/?sctv3",           "https://vietanhtv.id.vn/sctv/sctv3-hd-cf3adaca/index.m3u8",
         ],
         "tvg_id": "sctv3hd",
     },
-    "sctv4hd": {
+    "sctv4": {
         "url": [
             "https://vmttv.dpdns.org/VTVGo/?sctv4",            "https://vietanhtv.id.vn/sctv/sctv4-ae779f7e/index.m3u8",
         ],
@@ -82,12 +82,6 @@ SLOW_CHANNELS = {
             "https://vmttv.dpdns.org/VTVGo/?sctvphim",            "https://vietanhtv.id.vn/sctv/sctv-phim-tong-hop-e6d2df88/index.m3u8",
         ],
         "tvg_id": "sctvhdpth",
-    },
-    "sctv4k": {
-        "url": [
-"https://vietanhtv.id.vn/sctv/sctv-4k/index.m3u8",
-        ],
-        "tvg_id": "sctv4k",
     },
     "htv1": {
         "url": [
