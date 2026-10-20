@@ -83,6 +83,12 @@ SLOW_CHANNELS = {
         ],
         "tvg_id": "sctvhdpth",
     },
+    "sctv4k": {
+        "url": [
+"https://vietanhtv.id.vn/sctv/sctv-4k/index.m3u8",
+        ],
+        "tvg_id": "sctv4k",
+    },
     "htv1": {
         "url": [
 "http://tv.vietanhtv.top/vieon/vieon.php?id=htv1",
@@ -185,10 +191,22 @@ SLOW_CHANNELS = {
 ],
         "tvg_id": "vinhlong5hd",
     },
+    "dongnai3": {
+        "url": [
+"http://tv.vietanhtv.top/vieon/vieon.php?id=dong-nai-3",
+],
+        "tvg_id": "dongnai3",
+    },
     "hue": {
         "url": [
 "http://tv.vietanhtv.top/vieon/vieon.php?id=thua-thien-hue-1",
 ],
         "tvg_id": "hue",
+    },
+"quangngai2": {
+        "url": [
+"http://tv.vietanhtv.top/vieon/vieon.php?id=kon-tum-1",
+],
+        "tvg_id": "quangngai2",
     },
 }
