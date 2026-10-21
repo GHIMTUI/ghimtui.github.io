@@ -203,10 +203,5 @@ SLOW_CHANNELS = {
 ],
         "tvg_id": "hue",
     },
-"quangngai2": {
-        "url": [
-"http://tv.vietanhtv.top/vieon/vieon.php?id=kon-tum-1",
-],
-        "tvg_id": "quangngai2",
-    },
+
 }
