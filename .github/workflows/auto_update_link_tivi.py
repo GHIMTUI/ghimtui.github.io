@@ -1,11 +1,8 @@
 import os
 import re
 import requests
-
-# Import danh sách từ file dữ liệu riêng
 from slow_channels import SLOW_CHANNELS
 
-# Gán CHANNELS bằng SLOW_CHANNELS (hoặc tổng hợp các nguồn kênh khác nếu có)
 CHANNELS = SLOW_CHANNELS
 FAST_CHANNELS = [""]
 FILE_NAME = "tivi.m3u"
@@ -14,37 +11,31 @@ def get_live_link(urls, channel_name):
     if isinstance(urls, str):
         urls = [urls]
 
+    ch_upper = channel_name.upper()
+    ch_lower = channel_name.lower()
+
     for idx, url in enumerate(urls, 1):
         try:
-            print(f"[{channel_name.upper()}] Đang thử link {idx}: {url}")
+            print(f"[{ch_upper}] Đang thử link {idx}: {url}")
             response = requests.get(url, timeout=15, allow_redirects=True)
 
             if response.status_code == 200:
                 final_url = response.url
 
                 if "master.m3u8" in final_url:
-                    ch_name = channel_name.lower()
-                    if ch_name == "sctvphim":
-                        final_url = final_url.replace(
-                            "master.m3u8", "playlist_1080p.m3u8"
-                        )
-                    elif ch_name != "sctv14":
-                        final_url = final_url.replace(
-                            "master.m3u8", "playlist_720p.m3u8"
-                        )
+                    if ch_lower == "sctvphim":
+                        final_url = final_url.replace("master.m3u8", "playlist_1080p.m3u8")
+                    elif ch_lower != "sctv14":
+                        final_url = final_url.replace("master.m3u8", "playlist_720p.m3u8")
 
-                print(
-                    f"[{channel_name.upper()}] Thành công với link {idx}: {final_url}"
-                )
+                print(f"[{ch_upper}] Thành công với link {idx}: {final_url}")
                 return final_url
-            else:
-                print(
-                    f"[{channel_name.upper()}] Link {idx} trả về mã lỗi HTTP {response.status_code}"
-                )
+            
+            print(f"[{ch_upper}] Link {idx} trả về mã lỗi HTTP {response.status_code}")
         except Exception as e:
-            print(f"[{channel_name.upper()}] Lỗi khi kết nối link {idx}: {e}")
+            print(f"[{ch_upper}] Lỗi khi kết nối link {idx}: {e}")
 
-    print(f"[{channel_name.upper()}] Tất cả các link dự phòng đều thất bại.")
+    print(f"[{ch_upper}] Tất cả các link dự phòng đều thất bại.")
     return None
 
 def update_m3u_file():
@@ -52,19 +43,16 @@ def update_m3u_file():
         print(f"Lỗi: Không tìm thấy file {FILE_NAME} trong thư mục để sửa đổi.")
         return
 
-    update_type = os.getenv("UPDATE_TYPE", "all")
+    update_type = os.getenv("UPDATE_TYPE", "all").lower()
     print(f"Chế độ lọc kênh hoạt động: {update_type.upper()}")
 
-    channels_to_update = {}
-    for name, config in CHANNELS.items():
-        if update_type == "fast":
-            if name in FAST_CHANNELS:
-                channels_to_update[name] = config
-        elif update_type == "slow":
-            if name not in FAST_CHANNELS:
-                channels_to_update[name] = config
-        else:
-            channels_to_update[name] = config
+    # Lọc kênh gọn gàng hơn
+    if update_type == "fast":
+        channels_to_update = {k: v for k, v in CHANNELS.items() if k in FAST_CHANNELS}
+    elif update_type == "slow":
+        channels_to_update = {k: v for k, v in CHANNELS.items() if k not in FAST_CHANNELS}
+    else:
+        channels_to_update = CHANNELS
 
     if not channels_to_update:
         print("Không có kênh nào cần cập nhật trong lượt này.")
@@ -77,49 +65,38 @@ def update_m3u_file():
 
     for channel_name, config in channels_to_update.items():
         tvg_id = config["tvg_id"]
-        source_urls = config["url"]
-
-        new_link = get_live_link(source_urls, channel_name)
+        ch_upper = channel_name.upper()
+        
+        new_link = get_live_link(config["url"], channel_name)
         if not new_link:
             continue
 
-        # Regex cải tiến: 
-        # 1. Hỗ trợ cả xuống dòng \r\n (Windows) và \n (Linux)
-        # 2. Hỗ trợ khoảng trắng linh hoạt quanh dấu = (tvg-id\s*=\s*)
-        # 3. Cho phép bất kỳ dòng thuộc tính phụ nào bắt đầu bằng dấu # nằm giữa #EXTINF và URL
+        # 1. Thử tìm và thay thế theo tvg-id
         pattern = rf'(#EXTINF:[^\r\n]*tvg-id\s*=\s*["\']{re.escape(tvg_id)}["\'][^\r\n]*\r?\n(?:#[^\r\n]+\r?\n)*)(https?://[^\r\n]+)'
+        content, count = re.subn(pattern, rf'\1{new_link}', content, flags=re.IGNORECASE)
 
-        if re.search(pattern, content, re.IGNORECASE):
-            content, count = re.subn(
-                pattern, rf'\1{new_link}', content, flags=re.IGNORECASE
-            )
-            if count > 0:
-                print(f"--> Đã cập nhật link {channel_name.upper()}")
-                has_changed = True
-                continue
+        if count > 0:
+            print(f"--> Đã cập nhật link {ch_upper}")
+            has_changed = True
+            continue
 
-        # Fallback phụ: Thử tìm theo tên kênh hoặc tvg-name nếu không khớp được tvg-id chính xác
+        # 2. Fallback phụ: Thử tìm theo tên kênh hoặc tvg-name
         fallback_pattern = rf'(#EXTINF:[^\r\n]*(?:tvg-name|channel-title)\s*=\s*["\'][^"\']*{re.escape(channel_name)}[^"\']*["\'][^\r\n]*\r?\n(?:#[^\r\n]+\r?\n)*)(https?://[^\r\n]+)'
-        if re.search(fallback_pattern, content, re.IGNORECASE):
-            content, count = re.subn(
-                fallback_pattern, rf'\1{new_link}', content, flags=re.IGNORECASE
-            )
-            if count > 0:
-                print(f"--> Đã cập nhật link {channel_name.upper()} (khớp qua tên kênh dự phòng)")
-                has_changed = True
-                continue
+        content, count = re.subn(fallback_pattern, rf'\1{new_link}', content, flags=re.IGNORECASE)
 
-        print(
-            f'--> Cảnh báo: Không tìm thấy cấu trúc kênh {channel_name.upper()} với tvg-id="{tvg_id}" trong m3u.'
-        )
+        if count > 0:
+            print(f"--> Đã cập nhật link {ch_upper} (khớp qua tên kênh dự phòng)")
+            has_changed = True
+            continue
+
+        print(f'--> Cảnh báo: Không tìm thấy cấu trúc kênh {ch_upper} với tvg-id="{tvg_id}" trong m3u.')
 
     if has_changed:
         with open(FILE_NAME, "w", encoding="utf-8") as f:
             f.write(content)
-        print(f"\n Hoàn tất! Đã lưu các thay đổi vào {FILE_NAME}.")
+        print(f"\nHoàn tất! Đã lưu các thay đổi vào {FILE_NAME}.")
     else:
-        print("\n Không có thay đổi nào được thực hiện trên file.")
-
+        print("\nKhông có thay đổi nào được thực hiện trên file.")
 
 if __name__ == "__main__":
     update_m3u_file()
