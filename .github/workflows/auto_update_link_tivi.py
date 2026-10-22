@@ -8,32 +8,46 @@ FAST_CHANNELS = [""]
 FILE_NAME = "tivi.m3u"
 
 def get_live_link(urls, channel_name):
+    # Chuẩn hóa đầu vào: Hỗ trợ cả chuỗi đơn, list chuỗi cũ, hoặc list dict mới
     if isinstance(urls, str):
-        urls = [urls]
+        urls = [{"link": urls, "type": "getlink"}]
+    elif isinstance(urls, list):
+        normalized_urls = []
+        for item in urls:
+            if isinstance(item, str):
+                normalized_urls.append({"link": item, "type": "getlink"})
+            elif isinstance(item, dict):
+                normalized_urls.append(item)
+        urls = normalized_urls
 
     ch_upper = channel_name.upper()
     ch_lower = channel_name.lower()
 
-    for idx, url in enumerate(urls, 1):
+    for idx, item in enumerate(urls, 1):
+        link = item.get("link")
+        link_type = item.get("type", "getlink").lower()
+        
         try:
-            print(f"[{ch_upper}] Đang thử link {idx}: {url}")
-            response = requests.get(url, timeout=15, allow_redirects=True)
+            if link_type == "no":
+                print(f"[{ch_upper}] Sử dụng link thay thế trực tiếp {idx}: {link}")
+                return link
+            
+            # Xử lý loại "getlink"
+            print(f"[{ch_upper}] Đang thử getlink {idx}: {link}")
+            response = requests.get(link, timeout=15, allow_redirects=True)
 
             if response.status_code == 200:
                 final_url = response.url
 
                 if "master.m3u8" in final_url:
-                    if ch_lower == "sctvphim":
-                        final_url = final_url.replace("master.m3u8", "playlist_1080p.m3u8")
-                    elif ch_lower != "sctv14":
-                        final_url = final_url.replace("master.m3u8", "playlist_720p.m3u8")
+                    final_url = final_url.replace("master.m3u8", "playlist_720p.m3u8")
 
-                print(f"[{ch_upper}] Thành công với link {idx}: {final_url}")
+                print(f"[{ch_upper}] Thành công với getlink {idx}: {final_url}")
                 return final_url
             
             print(f"[{ch_upper}] Link {idx} trả về mã lỗi HTTP {response.status_code}")
         except Exception as e:
-            print(f"[{ch_upper}] Lỗi khi kết nối link {idx}: {e}")
+            print(f"[{ch_upper}] Lỗi khi xử lý link {idx}: {e}")
 
     print(f"[{ch_upper}] Tất cả các link dự phòng đều thất bại.")
     return None
@@ -46,7 +60,6 @@ def update_m3u_file():
     update_type = os.getenv("UPDATE_TYPE", "all").lower()
     print(f"Chế độ lọc kênh hoạt động: {update_type.upper()}")
 
-    # Lọc kênh gọn gàng hơn
     if update_type == "fast":
         channels_to_update = {k: v for k, v in CHANNELS.items() if k in FAST_CHANNELS}
     elif update_type == "slow":
