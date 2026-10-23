@@ -1,4 +1,4 @@
- SLOW_CHANNELS = {
+SLOW_CHANNELS = {
     "sctv2": {
         "url": [
             ("https://vmttv.dpdns.org/VTVGo/?sctv2", "Getlink"),
