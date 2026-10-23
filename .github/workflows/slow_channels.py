@@ -95,12 +95,6 @@ SLOW_CHANNELS = {
         ],
         "tvg_id": "sctvhdpth",
     },
-    "sctv4k": {
-        "url": [
-            ("https://vietanhtv.id.vn/sctv/sctv-4k/index.m3u8", "Getlink"),
-        ],
-        "tvg_id": "sctv4k",
-    },
     "htv1": {
         "url": [
             ("http://tv.vietanhtv.top/vieon/vieon.php?id=htv1", "Getlink"),
