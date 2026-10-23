@@ -7,34 +7,27 @@ CHANNELS = SLOW_CHANNELS
 FAST_CHANNELS = [""]
 FILE_NAME = "tivi.m3u"
 
-def get_live_link(urls, channel_name):
-    # Chuẩn hóa đầu vào: Hỗ trợ cả chuỗi đơn, list chuỗi cũ, hoặc list dict mới
-    if isinstance(urls, str):
-        urls = [{"link": urls, "type": "getlink"}]
-    elif isinstance(urls, list):
-        normalized_urls = []
-        for item in urls:
-            if isinstance(item, str):
-                normalized_urls.append({"link": item, "type": "getlink"})
-            elif isinstance(item, dict):
-                normalized_urls.append(item)
-        urls = normalized_urls
+def get_live_link(urls_config, channel_name):
+    if isinstance(urls_config, str):
+        urls_config = [(urls_config, "Getlink")]
 
     ch_upper = channel_name.upper()
-    ch_lower = channel_name.lower()
 
-    for idx, item in enumerate(urls, 1):
-        link = item.get("link")
-        link_type = item.get("type", "getlink").lower()
-        
+    for idx, item in enumerate(urls_config, 1):
+        # Hỗ trợ cả trường hợp chỉ điền chuỗi url (mặc định hiểu là Getlink) hoặc tuple (url, trạng_thái)
+        if isinstance(item, tuple):
+            url, action_type = item
+        else:
+            url, action_type = item, "Getlink"
+
+        # Nếu là "No" thì bỏ qua không get link này
+        if str(action_type).strip().lower() == "No":
+            print(f"[{ch_upper}] Link {idx}: Cấu hình No, bỏ qua không get.")
+            continue
+
         try:
-            if link_type == "no":
-                print(f"[{ch_upper}] Sử dụng link thay thế trực tiếp {idx}: {link}")
-                return link
-            
-            # Xử lý loại "getlink"
-            print(f"[{ch_upper}] Đang thử getlink {idx}: {link}")
-            response = requests.get(link, timeout=15, allow_redirects=True)
+            print(f"[{ch_upper}] Đang thử link {idx} (Getlink): {url}")
+            response = requests.get(url, timeout=15, allow_redirects=True)
 
             if response.status_code == 200:
                 final_url = response.url
@@ -42,14 +35,14 @@ def get_live_link(urls, channel_name):
                 if "master.m3u8" in final_url:
                     final_url = final_url.replace("master.m3u8", "playlist_720p.m3u8")
 
-                print(f"[{ch_upper}] Thành công với getlink {idx}: {final_url}")
+                print(f"[{ch_upper}] Thành công với link {idx}: {final_url}")
                 return final_url
             
             print(f"[{ch_upper}] Link {idx} trả về mã lỗi HTTP {response.status_code}")
         except Exception as e:
-            print(f"[{ch_upper}] Lỗi khi xử lý link {idx}: {e}")
+            print(f"[{ch_upper}] Lỗi khi kết nối link {idx}: {e}")
 
-    print(f"[{ch_upper}] Tất cả các link dự phòng đều thất bại.")
+    print(f"[{ch_upper}] Tất cả các link được phép Getlink đều thất bại.")
     return None
 
 def update_m3u_file():
@@ -77,7 +70,7 @@ def update_m3u_file():
     has_changed = False
 
     for channel_name, config in channels_to_update.items():
-        tvg_id = config["tvg_id"]
+        tvg_id = config.get("tvg_id", "")
         ch_upper = channel_name.upper()
         
         new_link = get_live_link(config["url"], channel_name)
