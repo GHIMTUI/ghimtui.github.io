@@ -34,12 +34,12 @@ def test_url_speed(idx, item, channel_name):
             if "master.m3u8" in final_url:
                 final_url = final_url.replace("master.m3u8", "playlist_720p.m3u8")
             
-            print(f"[{ch_upper}] Link {idx} thành công: {final_url} (Thời gian: {elapsed_time:.2f}s)")
+            print(f"[{ch_upper}] Link {idx} {elapsed_time:.2f}s thành công: {final_url}")
             return (idx, final_url, elapsed_time)
         else:
-            print(f"[{ch_upper}] Link {idx} lỗi HTTP {response.status_code}: {url}")
+            print(f"--> Link {idx} lỗi HTTP {response.status_code}")
     except Exception as e:
-        print(f"[{ch_upper}] Lỗi kết nối link {idx} ({url}): {e}")
+        print(f"--> Lỗi kết nối link {idx}")
     
     return None
 
