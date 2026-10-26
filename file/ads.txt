@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
 ! Title: STOP ADS
 ! Describe: Chặn Quảng Cáo
-! Updated: 07 Oct 2026 23:26
-! Blocked: 541
-! Size: 37.99 KB
+! Updated: 26 Oct 2026 18:11
+! Blocked: 542
+! Size: 38.04 KB
 ! ==================
 
 1thegioi.vn##[class^="c-banner-"],[id^="zone-"]
@@ -557,6 +557,8 @@ motthegioi.vn##.adsbygoogle,[class^="tdi_"]
 mp3cut.net##.ad,.adsbygoogle,.premium-entry-button,.remove-ads
 
 msn.com##[class^="banner-"],[class^="consumption-"]
+
+mtc1.idahoscotties.com##[id^="div-gpt-ad-"]
 
 muvi.vn###advHeaderMb,.adsbygoogle
 
