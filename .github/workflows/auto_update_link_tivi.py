@@ -1,49 +1,76 @@
 import os
 import re
+import time
 import requests
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from slow_channels import SLOW_CHANNELS
 
 CHANNELS = SLOW_CHANNELS
 FAST_CHANNELS = [""]
 FILE_NAME = "tivi.m3u"
 
-def get_live_link(urls_config, channel_name):
+def test_url_speed(item, channel_name):
+    """Hàm kiểm tra tốc độ phản hồi của một link đơn lẻ"""
+    ch_upper = channel_name.upper()
+    
+    if isinstance(item, tuple):
+        url, action_type = item
+    else:
+        url, action_type = item, "Getlink"
+
+    # Nếu cấu hình là "No" thì bỏ qua
+    if str(action_type).strip().lower() == "no":
+        print(f"[{ch_upper}] Link {url}: Cấu hình No, bỏ qua không test.")
+        return None
+
+    try:
+        print(f"[{ch_upper}] Đang test tốc độ link: {url}")
+        start_time = time.time()
+        # Dùng stream=True hoặc requests.get với timeout vừa phải
+        response = requests.get(url, timeout=12, allow_redirects=True)
+        elapsed_time = time.time() - start_time
+
+        if response.status_code == 200:
+            final_url = response.url
+            if "master.m3u8" in final_url:
+                final_url = final_url.replace("master.m3u8", "playlist_720p.m3u8")
+            
+            print(f"[{ch_upper}] Thành công: {final_url} (Thời gian: {elapsed_time:.2f}s)")
+            return (final_url, elapsed_time)
+        else:
+            print(f"[{ch_upper}] Link lỗi HTTP {response.status_code}: {url}")
+    except Exception as e:
+        print(f"[{ch_upper}] Lỗi kết nối link {url}: {e}")
+    
+    return None
+
+def get_fastest_live_link(urls_config, channel_name):
     if isinstance(urls_config, str):
         urls_config = [(urls_config, "Getlink")]
 
     ch_upper = channel_name.upper()
+    valid_results = []
 
-    for idx, item in enumerate(urls_config, 1):
-        # Hỗ trợ cả trường hợp chỉ điền chuỗi url (mặc định hiểu là Getlink) hoặc tuple (url, trạng_thái)
-        if isinstance(item, tuple):
-            url, action_type = item
-        else:
-            url, action_type = item, "Getlink"
+    # Sử dụng ThreadPoolExecutor để test tất cả các link cùng một lúc (song song)
+    max_workers = min(len(urls_config), 5)  # Giới hạn tối đa 5 luồng chạy song song mỗi kênh
+    with ThreadPoolExecutor(max_workers=max_workers) as executor:
+        future_to_url = {executor.submit(test_url_speed, item, channel_name): item for item in urls_config}
+        
+        for future in as_completed(future_to_url):
+            result = future.result()
+            if result:
+                valid_results.append(result)
 
-        # Nếu là "No" thì bỏ qua không get link này
-        if str(action_type).strip().lower() == "No":
-            print(f"[{ch_upper}] Link {idx}: Cấu hình No, bỏ qua không get.")
-            continue
+    if not valid_results:
+        print(f"[{ch_upper}] Tất cả các link đều thất bại hoặc không phản hồi.")
+        return None
 
-        try:
-            print(f"[{ch_upper}] Đang thử link {idx} (Getlink): {url}")
-            response = requests.get(url, timeout=15, allow_redirects=True)
-
-            if response.status_code == 200:
-                final_url = response.url
-
-                if "master.m3u8" in final_url:
-                    final_url = final_url.replace("master.m3u8", "playlist_720p.m3u8")
-
-                print(f"[{ch_upper}] Thành công với link {idx}: {final_url}")
-                return final_url
-            
-            print(f"[{ch_upper}] Link {idx} trả về mã lỗi HTTP {response.status_code}")
-        except Exception as e:
-            print(f"[{ch_upper}] Lỗi khi kết nối link {idx}: {e}")
-
-    print(f"[{ch_upper}] Tất cả các link được phép Getlink đều thất bại.")
-    return None
+    # Sắp xếp các link thành công theo thời gian phản hồi tăng dần (nhanh nhất đứng đầu)
+    valid_results.sort(key=lambda x: x[1])
+    fastest_url, best_time = valid_results[0]
+    
+    print(f"[{ch_upper}] -> Đã chọn link nhanh nhất: {fastest_url} ({best_time:.2f}s)\n")
+    return fastest_url
 
 def update_m3u_file():
     if not os.path.exists(FILE_NAME):
@@ -73,12 +100,14 @@ def update_m3u_file():
         tvg_id = config.get("tvg_id", "")
         ch_upper = channel_name.upper()
         
-        new_link = get_live_link(config["url"], channel_name)
+        raw_url_config = config.get("url")
+        # Gọi hàm lấy link nhanh nhất thay vì duyệt tuần tự
+        new_link = get_fastest_live_link(raw_url_config, channel_name)
         if not new_link:
             continue
 
-        # 1. Thử tìm và thay thế theo tvg-id
-        pattern = rf'(#EXTINF:[^\r\n]*tvg-id\s*=\s*["\']{re.escape(tvg_id)}["\'][^\r\n]*\r?\n(?:#[^\r\n]+\r?\n)*)(https?://[^\r\n]+)'
+        # 1. Thử tìm và thay thế theo tvg-id (Tự động quét & xóa bỏ các dòng EXTVLCOPT cũ nếu có)
+        pattern = rf'(#EXTINF:[^\r\n]*tvg-id\s*=\s*["\']{re.escape(tvg_id)}["\'][^\r\n]*\r?\n)(?:#EXTVLCOPT[^\r\n]*\r?\n)*https?://[^\r\n]+'
         content, count = re.subn(pattern, rf'\1{new_link}', content, flags=re.IGNORECASE)
 
         if count > 0:
@@ -87,7 +116,7 @@ def update_m3u_file():
             continue
 
         # 2. Fallback phụ: Thử tìm theo tên kênh hoặc tvg-name
-        fallback_pattern = rf'(#EXTINF:[^\r\n]*(?:tvg-name|channel-title)\s*=\s*["\'][^"\']*{re.escape(channel_name)}[^"\']*["\'][^\r\n]*\r?\n(?:#[^\r\n]+\r?\n)*)(https?://[^\r\n]+)'
+        fallback_pattern = rf'(#EXTINF:[^\r\n]*(?:tvg-name|channel-title)\s*=\s*["\'][^"\']*{re.escape(channel_name)}[^"\']*["\'][^\r\n]*\r?\n)(?:#EXTVLCOPT[^\r\n]*\r?\n)*https?://[^\r\n]+'
         content, count = re.subn(fallback_pattern, rf'\1{new_link}', content, flags=re.IGNORECASE)
 
         if count > 0:
@@ -102,7 +131,7 @@ def update_m3u_file():
             f.write(content)
         print(f"\nHoàn tất! Đã lưu các thay đổi vào {FILE_NAME}.")
     else:
-        print("\nKhông có thay đổi nào được thực hiện trên file.")
+        print("\nNone: Không có thay đổi nào được thực hiện trên file.")
 
 if __name__ == "__main__":
     update_m3u_file()
