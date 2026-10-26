@@ -9,8 +9,8 @@ CHANNELS = SLOW_CHANNELS
 FAST_CHANNELS = [""]
 FILE_NAME = "tivi.m3u"
 
-def test_url_speed(item, channel_name):
-    """Hàm kiểm tra tốc độ phản hồi của một link đơn lẻ"""
+def test_url_speed(idx, item, channel_name):
+    """Hàm kiểm tra tốc độ phản hồi của một link kèm theo số thứ tự idx"""
     ch_upper = channel_name.upper()
     
     if isinstance(item, tuple):
@@ -20,13 +20,12 @@ def test_url_speed(item, channel_name):
 
     # Nếu cấu hình là "No" thì bỏ qua
     if str(action_type).strip().lower() == "no":
-        print(f"[{ch_upper}] Link {url}: Cấu hình No, bỏ qua không test.")
+        print(f"[{ch_upper}] Link {idx}: Cấu hình No, bỏ qua không test.")
         return None
 
     try:
-        print(f"[{ch_upper}] Đang test tốc độ link: {url}")
+        print(f"[{ch_upper}] Đang test tốc độ link {idx}: {url}")
         start_time = time.time()
-        # Dùng stream=True hoặc requests.get với timeout vừa phải
         response = requests.get(url, timeout=12, allow_redirects=True)
         elapsed_time = time.time() - start_time
 
@@ -35,12 +34,12 @@ def test_url_speed(item, channel_name):
             if "master.m3u8" in final_url:
                 final_url = final_url.replace("master.m3u8", "playlist_720p.m3u8")
             
-            print(f"[{ch_upper}] Thành công: {final_url} (Thời gian: {elapsed_time:.2f}s)")
-            return (final_url, elapsed_time)
+            print(f"[{ch_upper}] Link {idx} thành công: {final_url} (Thời gian: {elapsed_time:.2f}s)")
+            return (idx, final_url, elapsed_time)
         else:
-            print(f"[{ch_upper}] Link lỗi HTTP {response.status_code}: {url}")
+            print(f"[{ch_upper}] Link {idx} lỗi HTTP {response.status_code}: {url}")
     except Exception as e:
-        print(f"[{ch_upper}] Lỗi kết nối link {url}: {e}")
+        print(f"[{ch_upper}] Lỗi kết nối link {idx} ({url}): {e}")
     
     return None
 
@@ -51,12 +50,15 @@ def get_fastest_live_link(urls_config, channel_name):
     ch_upper = channel_name.upper()
     valid_results = []
 
-    # Sử dụng ThreadPoolExecutor để test tất cả các link cùng một lúc (song song)
-    max_workers = min(len(urls_config), 5)  # Giới hạn tối đa 5 luồng chạy song song mỗi kênh
+    # Sử dụng ThreadPoolExecutor để test tất cả các link song song kèm theo index (bắt đầu từ 1)
+    max_workers = min(len(urls_config), 5)
     with ThreadPoolExecutor(max_workers=max_workers) as executor:
-        future_to_url = {executor.submit(test_url_speed, item, channel_name): item for item in urls_config}
+        future_to_idx = {
+            executor.submit(test_url_speed, idx, item, channel_name): idx 
+            for idx, item in enumerate(urls_config, 1)
+        }
         
-        for future in as_completed(future_to_url):
+        for future in as_completed(future_to_idx):
             result = future.result()
             if result:
                 valid_results.append(result)
@@ -66,10 +68,10 @@ def get_fastest_live_link(urls_config, channel_name):
         return None
 
     # Sắp xếp các link thành công theo thời gian phản hồi tăng dần (nhanh nhất đứng đầu)
-    valid_results.sort(key=lambda x: x[1])
-    fastest_url, best_time = valid_results[0]
+    valid_results.sort(key=lambda x: x[2])
+    best_idx, fastest_url, best_time = valid_results[0]
     
-    print(f"[{ch_upper}] -> Đã chọn link nhanh nhất: {fastest_url} ({best_time:.2f}s)\n")
+    print(f"[{ch_upper}] -> Đã chọn link {best_idx} nhanh nhất: {fastest_url} ({best_time:.2f}s)\n")
     return fastest_url
 
 def update_m3u_file():
@@ -101,12 +103,11 @@ def update_m3u_file():
         ch_upper = channel_name.upper()
         
         raw_url_config = config.get("url")
-        # Gọi hàm lấy link nhanh nhất thay vì duyệt tuần tự
         new_link = get_fastest_live_link(raw_url_config, channel_name)
         if not new_link:
             continue
 
-        # 1. Thử tìm và thay thế theo tvg-id (Tự động quét & xóa bỏ các dòng EXTVLCOPT cũ nếu có)
+        # 1. Thử tìm và thay thế theo tvg-id
         pattern = rf'(#EXTINF:[^\r\n]*tvg-id\s*=\s*["\']{re.escape(tvg_id)}["\'][^\r\n]*\r?\n)(?:#EXTVLCOPT[^\r\n]*\r?\n)*https?://[^\r\n]+'
         content, count = re.subn(pattern, rf'\1{new_link}', content, flags=re.IGNORECASE)
 
