@@ -34,7 +34,7 @@ def test_url_speed(idx, item, channel_name):
             if "master.m3u8" in final_url:
                 final_url = final_url.replace("master.m3u8", "playlist_720p.m3u8")
             
-            print(f"[{ch_upper}] Link {idx} {elapsed_time:.2f}s thành công: {final_url}")
+            print(f"[{ch_upper}] Link {idx} thành công: {final_url}")
             return (idx, final_url, elapsed_time)
         else:
             print(f"--> Link {idx} lỗi HTTP {response.status_code}")
@@ -71,7 +71,7 @@ def get_fastest_live_link(urls_config, channel_name):
     valid_results.sort(key=lambda x: x[2])
     best_idx, fastest_url, best_time = valid_results[0]
     
-    print(f"--> Đã chọn link {best_idx}")
+    print(f"--> Đã chọn link {best_idx} ({elapsed_time:.2f}s)")
     return fastest_url
 
 def update_m3u_file():
