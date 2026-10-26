@@ -71,7 +71,7 @@ def get_fastest_live_link(urls_config, channel_name):
     valid_results.sort(key=lambda x: x[2])
     best_idx, fastest_url, best_time = valid_results[0]
     
-    print(f"[{ch_upper}] -> Đã chọn link {best_idx} nhanh nhất: {fastest_url} ({best_time:.2f}s)\n")
+    print(f"--> Đã chọn link {best_idx})
     return fastest_url
 
 def update_m3u_file():
@@ -121,7 +121,7 @@ def update_m3u_file():
         content, count = re.subn(fallback_pattern, rf'\1{new_link}', content, flags=re.IGNORECASE)
 
         if count > 0:
-            print(f"--> Đã cập nhật link {ch_upper} (khớp qua tên kênh dự phòng)")
+            print(f" --> Đã cập nhật link {ch_upper} (khớp qua tên kênh dự phòng)")
             has_changed = True
             continue
 
