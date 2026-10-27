@@ -1,7 +1,7 @@
 SLOW_CHANNELS = {
     "sctv2": {
         "url": [
-            ("https://vmttv.dpdns.org/VTVGo/?sctv2", "Getlink"),
+            ("https://vmttv.dpdns.org/VTVGo/?sctv2", "https://vieon.vn", "Getlink"),
             ("https://vietanhtv.id.vn/sctv/sctv2-57c3884d/index.m3u8", "Getlink"),
             ("http://freem3u.xyz/api/live/play.m3u8?vid=201", "No"),
             ("https://vmttv.dpdns.org/tv360/?id=sctv2-today-tv", "No"),
