@@ -266,10 +266,14 @@ SLOW_CHANNELS = {
     },
     "hue": {
         "url": [
-            ("#EXTVLCOPT:http-user-referer=https://vieon.vn/\nhttp://tv.vietanhtv.top/vieon/vieon.php?id=thua-thien-hue-1", "Getlink"),
-            ("#EXTVLCOPT:http-user-referer=https://huetv.com.vn/\nhttps://live.huetv.com.vn/TRT-Online/chunklist.m3u8", "No"),
-            ("#EXTVLCOPT:http-user-referer=https://m.tv360.vn/\nhttp://freem3u.xyz/api/live/play.m3u8?vid=63", "No"),
-            ("#EXTVLCOPT:http-user-referer=https://m.tv360.vn/\nhttps://vmttv.dpdns.org/tv360/?id=hue", "No"),
+            ("#EXTVLCOPT:http-user-referer=https://vieon.vn/
+            http://tv.vietanhtv.top/vieon/vieon.php?id=thua-thien-hue-1", "Getlink"),
+            ("#EXTVLCOPT:http-user-referer=https://huetv.com.vn/
+            https://live.huetv.com.vn/TRT-Online/chunklist.m3u8", "No"),
+            ("#EXTVLCOPT:http-user-referer=https://m.tv360.vn/
+            http://freem3u.xyz/api/live/play.m3u8?vid=63", "No"),
+            ("#EXTVLCOPT:http-user-referer=https://m.tv360.vn/
+            https://vmttv.dpdns.org/tv360/?id=hue", "No"),
         ],
         "tvg_id": "hue",
     },
