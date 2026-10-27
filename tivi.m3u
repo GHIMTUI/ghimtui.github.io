@@ -1,10 +1,12 @@
 #EXTM3U
 
 #EXTINF:-1 tvg-id="vinhlong1hd" tvg-logo="https://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/vinhlong1.png", Vĩnh Long 1
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-user-referer=https://vieon.vn
 https://livecdn-vthcm-bp.vieon.vn/1845d1b4b4dca548e4146e78cfc64ecf/1793203726000/livetv/group-02/b39935eee4d0c52fd9a5357c4ade8cc2/playlist.m3u8?c=a
 
 #EXTINF:-1 tvg-id="vinhlong2hd" tvg-logo="https://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/vinhlong2.png", Vĩnh Long 2
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-user-referer=https://vieon.vn
 https://livecdn-vthcm-bp.vieon.vn/8b4f0c81ef702fcd74e231cd5c7eff93/1793203727000/livetv/group-02/8782328c0b24e63b80af42e73fabdad5/playlist.m3u8?c=a
 
