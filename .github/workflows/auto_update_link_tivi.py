@@ -18,8 +18,8 @@ def test_url_speed(idx, item, channel_name):
     else:
         url, action_type = item, "Getlink"
 
-    # Kiểm tra xem có cho phép Getlink (thay thế m3u8) hay không
-    is_getlink = str(action_type).strip().lower() != "no"
+    # Kiểm tra xem có phải cấu hình No hay không
+    is_no = str(action_type).strip().lower() == "no"
 
     try:
         print(f"[{ch_upper}] Đang test tốc độ link {idx}: {url}")
@@ -28,9 +28,14 @@ def test_url_speed(idx, item, channel_name):
         elapsed_time = time.time() - start_time
 
         if response.status_code == 200:
-            final_url = response.url
-            if is_getlink and "master.m3u8" in final_url:
-                final_url = final_url.replace("master.m3u8", "playlist_720p.m3u8")
+            if is_no:
+                # Nếu là No: giữ nguyên link gốc trong config, không getlink
+                final_url = url
+            else:
+                # Nếu là Getlink: xử lý thay thế master.m3u8 nếu có
+                final_url = response.url
+                if "master.m3u8" in final_url:
+                    final_url = final_url.replace("master.m3u8", "playlist_720p.m3u8")
             
             print(f"[{ch_upper}] Link {idx} thành công: {final_url} (Thời gian: {elapsed_time:.2f}s)")
             return (idx, final_url, elapsed_time)
