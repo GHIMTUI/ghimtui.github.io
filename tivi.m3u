@@ -4,16 +4,16 @@
 http://freem3u.xyz/api/live/play.m3u8?vid=25
 
 #EXTINF:-1 tvg-id="vinhlong2hd" tvg-logo="https://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/vinhlong2.png", Vĩnh Long 2
-http://freem3u.xyz/api/live/play.m3u8?vid=26
+https://livecdn-vthcm-bp.vieon.vn/2b8874b2f777f3ea2f0a155147f2b6b8/1793189655000/livetv/group-02/8782328c0b24e63b80af42e73fabdad5/playlist.m3u8?c=a
 
 #EXTINF:-1 tvg-id="vinhlong3hd" tvg-logo="https://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/vinhlong3.png", Vĩnh Long 3
-http://freem3u.xyz/api/live/play.m3u8?vid=219
+https://livecdn-vthcm-bp.vieon.vn/9cc01ec69551873a24d13256d35a36ac/1793189661000/livetv/group-02/d163c8c091b5c937a0b5789d2be251b4/playlist.m3u8?c=a
 
 #EXTINF:-1 tvg-id="vinhlong4hd" tvg-logo="https://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/vinhlong4.png", Vĩnh Long 4
-https://livecdn-vthcm-bp.vieon.vn/33392e1dd37d1f1cdcf38306215834c0/1793188751000/livetv/group-02/759df25e7b439639ed0c2588b776735b/playlist.m3u8?c=a
+https://livecdn-vthcm-bp.vieon.vn/046e286e77a4e898cd428fd75fa4ca54/1793189668000/livetv/group-02/759df25e7b439639ed0c2588b776735b/playlist.m3u8?c=a
 
 #EXTINF:-1 tvg-id="vinhlong5hd" tvg-logo="https://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/vinhlong5.png", Vĩnh Long 5
-http://freem3u.xyz/api/live/play.m3u8?vid=91
+https://livecdn-vthcm-bp.vieon.vn/cbbb994d28969ede338a6d93d42cce4f/1793189671000/livetv/group-01/4613aed1b1174347f0c42c2296b893da/playlist.m3u8?c=a
 
 #EXTINF:-1 tvg-id="onphimviet" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/on_phimviet.png", ON Phim Việt
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
@@ -125,16 +125,16 @@ http://livevliatmcdw.seenow.vn/live/data8/HAY_TV/Live_DASHDRM/HAY_TV.mpd
 http://livevlisctcdnw.seenow.vn/Live_DASHDRM2/THETHAO_HD/manifest.mpd
 
 #EXTINF:-1 tvg-id="htvcplushd" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/htvcplus.png", HTVC+
-https://livecdn-vthcm-bp.vieon.vn/f7a62d76a87ff786104d0948d5eee926/1793188714000/livetv/group-04/e74fd2dce10d3e3214a67179927ae5f1/playlist.m3u8?c=a
+http://freem3u.xyz/api/live/play.m3u8?vid=132
 
 #EXTINF:-1 tvg-id="htvcgiadinhhd" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/giadinh.png", Gia Đình
 http://freem3u.xyz/api/live/play.m3u8?vid=11
 
 #EXTINF:-1 tvg-id="htvcphunuhd" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/phunu.png", Phụ Nữ
-https://vmttv.dpdns.org/tv360/?id=htvc-phu-nu
+http://freem3u.xyz/api/live/play.m3u8?vid=12
 
 #EXTINF:-1 tvg-id="htvcthuanviet" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/thuanviet.png", Thuần Việt
-http://freem3u.xyz/api/live/play.m3u8?vid=13
+https://livecdn-vthcm-bp.vieon.vn/7095d58c61cd17f22fe3aad92a62f64d/1793189634000/livetv/group-04/c5ca04c91149a945c74c9f62c12d78c2/playlist.m3u8?c=a
 
 #EXTINF:-1 tvg-id="htvcdulichhd" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/dulich.png",Du Lịch
 http://freem3u.xyz/api/live/play.m3u8?vid=133
@@ -158,7 +158,7 @@ http://freem3u.xyz/api/live/play.m3u8?vid=151
 http://freem3u.xyz/api/live/play.m3u8?vid=193
 
 #EXTINF:-1 tvg-id="htv9hd" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/htv9.png", HTV9
-http://freem3u.xyz/api/live/play.m3u8?vid=194
+https://livecdn-vthcm-bp.vieon.vn/a242864ff7d1886eea9331fac66257ff/1793189629000/livetv/group-04/6d8dfd97165650a8935c57262d9be67f/playlist.m3u8?c=a
 
 #EXTINF:-1 tvg-id="antvhd" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/antv.png", An Ninh
 http://livesct.vtvprime.vn/Live_DASHDRM1/ANNINHTV/manifest.mpd
@@ -237,7 +237,7 @@ http://cdn.mediatech.vn/dongnai/tv1live-transmux.m3u8
 http://cdn.mediatech.vn/dongnai/tv2live-transmux.m3u8
 
 #EXTINF:-1 tvg-id="dongnai3" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/dongnai3.png", Đồng Nai 3
-https://livecdn-vthcm-bp.vieon.vn/d73b0f08e7ee8156635ac98e49cbacff/1793188760000/livetv/group-05/43ec53af7a809687be1a97622aec2eff/playlist.m3u8?c=a
+https://livecdn-vthcm-bp.vieon.vn/659de3aafa925a1882c4e33e4e279db8/1793189678000/livetv/group-05/43ec53af7a809687be1a97622aec2eff/playlist.m3u8?c=a
 
 #EXTINF:-1 tvg-id="dongthap1" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/dongthap1.png", Đồng Tháp 1
 http://liveh34.vtvprime.vn/hls/DONGTHAPTV/03.m3u8
@@ -386,19 +386,19 @@ http://streaming.tuyenquangtv.vn/channel/tuyenquang/chunks.m3u8
 http://liveatmvng.vtvprime.vn/live/data8/SCTV1/Live_DASHDRM/SCTV1.mpd
 
 #EXTINF:-1 tvg-id="sctv2hd" tvg-logo="http://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV2.png",SCTV2
-https://vmttv.dpdns.org/tv360/?id=sctv2-today-tv
+http://freem3u.xyz/api/live/play.m3u8?vid=201
 
 #EXTINF:-1 tvg-id="sctv3hd" tvg-logo="http://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV3.png",SCTV3
-https://vtvgolive-sctvdrm.vtvdigital.vn/fZtH5g-Rt8_5CB8pR0z_Iw/1793116656/manifest/sctv3/playlist_720p.m3u8
+https://vtvgolive-sctvdrm.vtvdigital.vn/TqjIbvDS02Ucd387Xe4oVw/1793117551/manifest/sctv3/playlist_720p.m3u8
 
 #EXTINF:-1 tvg-id="sctv4hd" tvg-logo="http://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV4.png",SCTV4
-https://vtvgolive-sctvdrm.vtvdigital.vn/fqBzk0MVgTaqMmqgqoijaw/1793116660/manifest/sctv4/playlist_720p.m3u8
+https://vtvgolive-sctvdrm.vtvdigital.vn/rAv7h-Z77nQZU-GX6kkVag/1793117558/manifest/sctv4/playlist_720p.m3u8
 
 #EXTINF:-1 tvg-id="sctv6hd" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/sctv6.png",SCTV6
-https://vtvgolive-sctvdrm.vtvdigital.vn/LGoGAULVQje6DXgrCvnaiA/1793116661/manifest/sctv6/playlist_720p.m3u8
+https://vtvgolive-sctvdrm.vtvdigital.vn/0dDt16057VVKcHV28-5a-A/1793117560/manifest/sctv6/playlist_720p.m3u8
 
 #EXTINF:-1 tvg-id="sctv7hd" tvg-logo="http://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV7.png",SCTV7
-https://vtvgolive-sctvdrm.vtvdigital.vn/zYoGMDwdqei53nv-fSE8ng/1793116665/manifest/sctv7/playlist_720p.m3u8
+https://vtvgolive-sctvdrm.vtvdigital.vn/3gQ16QG0DcrGLu68-8g40g/1793117565/manifest/sctv7/playlist_720p.m3u8
 
 #EXTINF:-1 tvg-id="sctv8hd" tvg-logo="http://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV8.png",SCTV8
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
@@ -406,16 +406,16 @@ https://vtvgolive-sctvdrm.vtvdigital.vn/zYoGMDwdqei53nv-fSE8ng/1793116665/manife
 https://vmttv.dpdns.org/VTVGo/?sctv8
 
 #EXTINF:-1 tvg-id="sctv9hd" tvg-logo="http://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV9.png",SCTV9
-https://vtvgolive-sctvdrm.vtvdigital.vn/lLR-T9UeHtuFJX2hMPeFOg/1793116668/manifest/sctv9/playlist_720p.m3u8
+https://vtvgolive-sctvdrm.vtvdigital.vn/L-vKYw3sEY0Yv-66YtyI1Q/1793117570/manifest/sctv9/playlist_720p.m3u8
 
 #EXTINF:-1 tvg-id="sctv11hd" tvg-logo="http://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV11.png",SCTV11
-https://vtvgolive-sctvdrm.vtvdigital.vn/5_hCFKdbshMeu8zTnlkacw/1793116669/manifest/sctv11/playlist_720p.m3u8
+https://vtvgolive-sctvdrm.vtvdigital.vn/Vi_w-0RjD8YfdEEu_0Gl3w/1793117576/manifest/sctv11/playlist_720p.m3u8
 
 #EXTINF:-1 tvg-id="sctv12hd" tvg-logo="http://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV12.png",SCTV12
-https://vtvgolive-sctvdrm.vtvdigital.vn/Hlt63rFm2HjzQ2joxWHlmg/1793116673/manifest/sctv12/playlist_720p.m3u8
+https://vtvgolive-sctvdrm.vtvdigital.vn/u_NyWc2UQwzMYC7Mxectnw/1793117582/manifest/sctv12/playlist_720p.m3u8
 
 #EXTINF:-1 tvg-id="sctv13hd" tvg-logo="http://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV13.png",SCTV13
-https://vtvgolive-sctvdrm.vtvdigital.vn/jLJzcZDyYLt_dm99iWedyQ/1793116674/manifest/sctv13/playlist_720p.m3u8
+https://vtvgolive-sctvdrm.vtvdigital.vn/xX5MXuUHCl1dglbo3BacxQ/1793117589/manifest/sctv13/playlist_720p.m3u8
 
 #EXTINF:-1 tvg-id="sctv14hd" tvg-logo="http://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV14.png",SCTV14
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
@@ -423,10 +423,10 @@ https://vtvgolive-sctvdrm.vtvdigital.vn/jLJzcZDyYLt_dm99iWedyQ/1793116674/manife
 https://vmttv.dpdns.org/VTVGo/?sctv14
 
 #EXTINF:-1 tvg-id="sctv16hd" tvg-logo="http://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV16.png",SCTV16
-https://vtvgolive-sctvdrm.vtvdigital.vn/xY7aqorw0ec0BRTrf8qs-w/1793116677/manifest/sctv16/playlist_720p.m3u8
+https://vtvgolive-sctvdrm.vtvdigital.vn/QM8bRXZhpTdsAR9_0G50OQ/1793117594/manifest/sctv16/playlist_720p.m3u8
 
 #EXTINF:-1 tvg-id="sctv18hd" tvg-logo="http://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV18.png",SCTV18
-https://vtvgolive-sctvdrm.vtvdigital.vn/b2Al9z447RzocIOgmywwCA/1793116679/manifest/sctv18/playlist_720p.m3u8
+https://vtvgolive-sctvdrm.vtvdigital.vn/0K0oul3PxM7nCR90uuVmTQ/1793117595/manifest/sctv18/playlist_720p.m3u8
 
 #EXTINF:-1 tvg-id="sctv19hd" tvg-logo="http://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV19.png",SCTV19
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
@@ -439,7 +439,7 @@ https://vietanhtv.id.vn/sctv/proxy.php/https://e8.endpoint.cdn.sctvonline.vn/cdn
 https://vietanhtv.id.vn/sctv/proxy.php/https://e1.endpoint.cdn.sctvonline.vn/cdn-secure/v1/sctvonline/2/GAdBhcCMZ_K_TEyDHnigtQ/1795226534/PI8HI3T/live/hls/sctv21/index.m3u8
 
 #EXTINF:-1 tvg-id="sctvhdpth" tvg-logo="http://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTVPTH.png",SCTV Phim Tổng Hợp
-https://vtvgolive-sctvdrm.vtvdigital.vn/ETwIgoBTIIXbwKS4rS4cvA/1793116684/manifest/sctvpth/playlist_720p.m3u8
+https://vtvgolive-sctvdrm.vtvdigital.vn/3j72-0yFTQFnwSIKuD_z0A/1793117603/manifest/sctvpth/playlist_720p.m3u8
 
 #EXTINF:-1 tvg-id="onbibi" tvg-logo="https://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/VTVCab/OnBibi.png",On BiBi
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
