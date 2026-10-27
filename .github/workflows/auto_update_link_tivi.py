@@ -13,13 +13,27 @@ def test_url_speed(idx, item, channel_name):
     """Hàm kiểm tra tốc độ phản hồi của một link kèm theo số thứ tự idx"""
     ch_upper = channel_name.upper()
     
+    extra_options = []
+    action_type = "Getlink"
+    
     if isinstance(item, tuple):
-        url, action_type = item
+        # Kiểm tra xem phần tử cuối có phải là cờ "No" hay không
+        last_elem = str(item[-1]).strip().lower()
+        if last_elem == "no":
+            action_type = "No"
+            # URL sẽ là phần tử đứng trước chữ "No"
+            url = item[-2] if len(item) >= 2 else item[0]
+            extra_options = list(item[:-2])
+        else:
+            # Nếu không có chữ "No", phần tử cuối có thể là URL hoặc cấu hình khác, ta quy ước URL là phần tử cuối hoặc áp dụng linh hoạt
+            # Trường hợp tuple gồm (opt1, opt2, ..., url)
+            url = item[-1]
+            extra_options = list(item[:-1])
     else:
-        url, action_type = item, "Getlink"
+        url = item
 
     # Nếu cấu hình là "No" thì bỏ qua
-    if str(action_type).strip().lower() == "no":
+    if action_type == "No":
         print(f"[{ch_upper}] Link {idx}: Cấu hình No, bỏ qua không test.")
         return None
 
@@ -35,7 +49,7 @@ def test_url_speed(idx, item, channel_name):
                 final_url = final_url.replace("master.m3u8", "playlist_720p.m3u8")
             
             print(f"[{ch_upper}] Link {idx} thành công {elapsed_time:.2f}s: {final_url}")
-            return (idx, final_url, elapsed_time)
+            return (idx, final_url, elapsed_time, extra_options)
         else:
             print(f"--> Link {idx} lỗi HTTP {response.status_code}")
     except Exception as e:
@@ -44,8 +58,9 @@ def test_url_speed(idx, item, channel_name):
     return None
 
 def get_fastest_live_link(urls_config, channel_name):
-    if isinstance(urls_config, str):
-        urls_config = [(urls_config, "Getlink")]
+    if isinstance(urls_config, str) or isinstance(urls_config, tuple):
+        if not isinstance(urls_config, list):
+            urls_config = [urls_config]
 
     ch_upper = channel_name.upper()
     valid_results = []
@@ -65,14 +80,14 @@ def get_fastest_live_link(urls_config, channel_name):
 
     if not valid_results:
         print(f"[{ch_upper}] Tất cả các link đều thất bại hoặc không phản hồi.")
-        return None
+        return None, []
 
     # Sắp xếp các link thành công theo thời gian phản hồi tăng dần (nhanh nhất đứng đầu)
     valid_results.sort(key=lambda x: x[2])
-    best_idx, fastest_url, best_time = valid_results[0]
+    best_idx, fastest_url, best_time, extra_options = valid_results[0]
     
     print(f"--> Đã chọn link {best_idx}")
-    return fastest_url
+    return fastest_url, extra_options
 
 def update_m3u_file():
     if not os.path.exists(FILE_NAME):
@@ -103,13 +118,17 @@ def update_m3u_file():
         ch_upper = channel_name.upper()
         
         raw_url_config = config.get("url")
-        new_link = get_fastest_live_link(raw_url_config, channel_name)
+        new_link, extra_options = get_fastest_live_link(raw_url_config, channel_name)
         if not new_link:
             continue
 
-        # 1. Thử tìm và thay thế theo tvg-id
-        pattern = rf'(#EXTINF:[^\r\n]*tvg-id\s*=\s*["\']{re.escape(tvg_id)}["\'][^\r\n]*\r?\n)(?:#EXTVLCOPT[^\r\n]*\r?\n)*https?://[^\r\n]+'
-        content, count = re.subn(pattern, rf'\1{new_link}', content, flags=re.IGNORECASE)
+        # Tạo chuỗi options đi kèm (nếu có, ví dụ EXTINVLCOPT, KODIPROP...)
+        options_str = "\n".join(extra_options) + "\n" if extra_options else ""
+        replacement_block = rf'\1{options_str}{new_link}'
+
+        # 1. Thử tìm và thay thế theo tvg-id (bao gồm quét các dòng option cũ nếu có để thay thế sạch sẽ)
+        pattern = rf'(#EXTINF:[^\r\n]*tvg-id\s*=\s*["\']{re.escape(tvg_id)}["\'][^\r\n]*\r?\n)(?:#(?:EXTVLCOPT|KODIPROP)[^\r\n]*\r?\n)*https?://[^\r\n]+'
+        content, count = re.subn(pattern, replacement_block, content, flags=re.IGNORECASE)
 
         if count > 0:
             print(f"--> Đã cập nhật link {ch_upper}")
@@ -117,8 +136,8 @@ def update_m3u_file():
             continue
 
         # 2. Fallback phụ: Thử tìm theo tên kênh hoặc tvg-name
-        fallback_pattern = rf'(#EXTINF:[^\r\n]*(?:tvg-name|channel-title)\s*=\s*["\'][^"\']*{re.escape(channel_name)}[^"\']*["\'][^\r\n]*\r?\n)(?:#EXTVLCOPT[^\r\n]*\r?\n)*https?://[^\r\n]+'
-        content, count = re.subn(fallback_pattern, rf'\1{new_link}', content, flags=re.IGNORECASE)
+        fallback_pattern = rf'(#EXTINF:[^\r\n]*(?:tvg-name|channel-title)\s*=\s*["\'][^"\']*{re.escape(channel_name)}[^"\']*["\'][^\r\n]*\r?\n)(?:#(?:EXTVLCOPT|KODIPROP)[^\r\n]*\r?\n)*https?://[^\r\n]+'
+        content, count = re.subn(fallback_pattern, replacement_block, content, flags=re.IGNORECASE)
 
         if count > 0:
             print(f" --> Đã cập nhật link {ch_upper} (khớp qua tên kênh dự phòng)")
