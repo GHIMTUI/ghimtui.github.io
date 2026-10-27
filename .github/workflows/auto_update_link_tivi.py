@@ -1,81 +1,71 @@
 import os
 import re
-import time
 import requests
-from concurrent.futures import ThreadPoolExecutor, as_completed
 from slow_channels import SLOW_CHANNELS
 
 CHANNELS = SLOW_CHANNELS
 FAST_CHANNELS = [""]
 FILE_NAME = "tivi.m3u"
 
-def test_url_speed(idx, item, channel_name):
-    """Hàm kiểm tra tốc độ phản hồi của một link kèm theo số thứ tự idx"""
+def get_live_link(urls_config, channel_name):
+    if isinstance(urls_config, str):
+        urls_config = [(urls_config, "", "Getlink")]
+
     ch_upper = channel_name.upper()
-    
-    if isinstance(item, tuple):
-        url, action_type = item
-    else:
-        url, action_type = item, "Getlink"
 
-    # Kiểm tra xem có phải cấu hình No hay không
-    is_no = str(action_type).strip().lower() == "no"
+    for idx, item in enumerate(urls_config, 1):
+        # Hỗ trợ các định dạng cấu hình:
+        # 1. Chuỗi đơn: "url"
+        # 2. Tuple 2 phần tử: ("url", "action") hoặc ("url", "referer")
+        # 3. Tuple 3 phần tử: ("url", "referer", "action")
+        referer = ""
+        action_type = "Getlink"
 
-    try:
-        print(f"[{ch_upper}] Đang test tốc độ link {idx}: {url}")
-        start_time = time.time()
-        response = requests.get(url, timeout=12, allow_redirects=True)
-        elapsed_time = time.time() - start_time
-
-        if response.status_code == 200:
-            if is_no:
-                # Nếu là No: giữ nguyên link gốc trong config, không getlink
-                final_url = url
+        if isinstance(item, tuple):
+            if len(item) == 3:
+                url, referer, action_type = item
+            elif len(item) == 2:
+                url, second_val = item
+                # Nếu phần tử thứ 2 là chuỗi hành động (Getlink/No)
+                if str(second_val).strip().lower() in ["getlink", "no"]:
+                    action_type = second_val
+                else:
+                    referer = second_val
             else:
-                # Nếu là Getlink: xử lý thay thế master.m3u8 nếu có
+                url = item[0]
+        else:
+            url = item
+
+        # Nếu là "No" thì bỏ qua không get link này
+        if str(action_type).strip().lower() == "no":
+            print(f"[{ch_upper}] Link {idx}: Cấu hình No, bỏ qua không get.")
+            continue
+
+        try:
+            print(f"[{ch_upper}] Đang thử link {idx} (Getlink): {url}")
+            
+            # Thiết lập header Referer nếu có cấu hình
+            headers = {}
+            if referer:
+                headers["Referer"] = referer
+
+            response = requests.get(url, headers=headers, timeout=15, allow_redirects=True)
+
+            if response.status_code == 200:
                 final_url = response.url
+
                 if "master.m3u8" in final_url:
                     final_url = final_url.replace("master.m3u8", "playlist_720p.m3u8")
+
+                print(f"[{ch_upper}] Thành công với link {idx}: {final_url}")
+                return final_url, referer
             
-            print(f"[{ch_upper}] Link {idx} thành công: {final_url} (Thời gian: {elapsed_time:.2f}s)")
-            return (idx, final_url, elapsed_time)
-        else:
-            print(f"[{ch_upper}] Link {idx} lỗi HTTP {response.status_code}")
-    except Exception as e:
-        print(f"[{ch_upper}] Lỗi kết nối link {idx} {e}")
-    
-    return None
+            print(f"[{ch_upper}] Link {idx} trả về mã lỗi HTTP {response.status_code}")
+        except Exception as e:
+            print(f"[{ch_upper}] Lỗi khi kết nối link {idx}: {e}")
 
-def get_fastest_live_link(urls_config, channel_name):
-    if isinstance(urls_config, str):
-        urls_config = [(urls_config, "Getlink")]
-
-    ch_upper = channel_name.upper()
-    valid_results = []
-
-    # Sử dụng ThreadPoolExecutor để test tất cả các link song song kèm theo index (bắt đầu từ 1)
-    max_workers = min(len(urls_config), 5)
-    with ThreadPoolExecutor(max_workers=max_workers) as executor:
-        future_to_idx = {
-            executor.submit(test_url_speed, idx, item, channel_name): idx 
-            for idx, item in enumerate(urls_config, 1)
-        }
-        
-        for future in as_completed(future_to_idx):
-            result = future.result()
-            if result:
-                valid_results.append(result)
-
-    if not valid_results:
-        print(f"[{ch_upper}] Tất cả các link đều thất bại hoặc không phản hồi.")
-        return None
-
-    # Sắp xếp các link thành công theo thời gian phản hồi tăng dần (nhanh nhất đứng đầu)
-    valid_results.sort(key=lambda x: x[2])
-    best_idx, fastest_url, best_time = valid_results[0]
-    
-    print(f"[{ch_upper}] -> Đã chọn link {best_idx} nhanh nhất ({best_time:.2f}s)\n")
-    return fastest_url
+    print(f"[{ch_upper}] Tất cả các link được phép Getlink đều thất bại.")
+    return None, None
 
 def update_m3u_file():
     if not os.path.exists(FILE_NAME):
@@ -105,28 +95,49 @@ def update_m3u_file():
         tvg_id = config.get("tvg_id", "")
         ch_upper = channel_name.upper()
         
-        raw_url_config = config.get("url")
-        new_link = get_fastest_live_link(raw_url_config, channel_name)
+        new_link, new_referer = get_live_link(config["url"], channel_name)
         if not new_link:
             continue
 
-        # 1. Thử tìm và thay thế theo tvg-id
-        pattern = rf'(#EXTINF:[^\r\n]*tvg-id\s*=\s*["\']{re.escape(tvg_id)}["\'][^\r\n]*\r?\n)(?:#EXTVLCOPT[^\r\n]*\r?\n)*https?://[^\r\n]+'
-        content, count = re.subn(pattern, rf'\1{new_link}', content, flags=re.IGNORECASE)
+        # Hàm trợ giúp tạo khối thay thế cho Referer
+        def make_replacement(match):
+            extinf_part = match.group(1)
+            other_tags = match.group(2) or ""
+            
+            if new_referer:
+                # Nếu có referer mới, kiểm tra xem dòng EXTVLCOPT đã có sẵn chưa để thay thế hoặc thêm mới
+                referer_line = f"#EXTVLCOPT:http-user-referer={new_referer}\n"
+                if "#EXTVLCOPT:http-user-referer=" in extinf_part + other_tags:
+                    # Thay thế dòng referer cũ bằng referer mới
+                    combined = extinf_part + other_tags
+                    combined = re.sub(r'#EXTVLCOPT:http-user-referer=[^\r\n]*\r?\n', referer_line, combined, flags=re.IGNORECASE)
+                    return f"{combined}{new_link}"
+                else:
+                    return f"{extinf_part}{referer_line}{other_tags}{new_link}"
+            else:
+                # Nếu không có cấu hình referer mới, giữ nguyên dòng referer cũ (nếu có) hoặc bỏ qua
+                return f"{extinf_part}{other_tags}{new_link}"
 
-        if count > 0:
-            print(f"--> Đã cập nhật link {ch_upper}")
-            has_changed = True
-            continue
+        # 1. Thử tìm và thay thế theo tvg-id
+        pattern = rf'(#EXTINF:[^\r\n]*tvg-id\s*=\s*["\']{re.escape(tvg_id)}["\'][^\r\n]*\r?\n)((?:#EXTVLCOPT:[^\r\n]*\r?\n)?)((?:#[^\r\n]+\r?\n)*)(https?://[^\r\n]+)'
+        
+        # Kiểm tra xem có khớp theo tvg_id không
+        if re.search(pattern, content, flags=re.IGNORECASE):
+            content, count = re.subn(pattern, make_replacement, content, count=1, flags=re.IGNORECASE)
+            if count > 0:
+                print(f"--> Đã cập nhật link và referer cho {ch_upper}")
+                has_changed = True
+                continue
 
         # 2. Fallback phụ: Thử tìm theo tên kênh hoặc tvg-name
-        fallback_pattern = rf'(#EXTINF:[^\r\n]*(?:tvg-name|channel-title)\s*=\s*["\'][^"\']*{re.escape(channel_name)}[^"\']*["\'][^\r\n]*\r?\n)(?:#EXTVLCOPT[^\r\n]*\r?\n)*https?://[^\r\n]+'
-        content, count = re.subn(fallback_pattern, rf'\1{new_link}', content, flags=re.IGNORECASE)
-
-        if count > 0:
-            print(f"--> Đã cập nhật link {ch_upper} (khớp qua tên kênh dự phòng)")
-            has_changed = True
-            continue
+        fallback_pattern = rf'(#EXTINF:[^\r\n]*(?:tvg-name|channel-title)\s*=\s*["\'][^"\']*{re.escape(channel_name)}[^"\']*["\'][^\r\n]*\r?\n)((?:#EXTVLCOPT:[^\r\n]*\r?\n)?)((?:#[^\r\n]+\r?\n)*)(https?://[^\r\n]+)'
+        
+        if re.search(fallback_pattern, content, flags=re.IGNORECASE):
+            content, count = re.subn(fallback_pattern, make_replacement, content, count=1, flags=re.IGNORECASE)
+            if count > 0:
+                print(f"--> Đã cập nhật link và referer cho {ch_upper} (khớp qua tên kênh dự phòng)")
+                has_changed = True
+                continue
 
         print(f'--> Cảnh báo: Không tìm thấy cấu trúc kênh {ch_upper} với tvg-id="{tvg_id}" trong m3u.')
 
@@ -135,7 +146,7 @@ def update_m3u_file():
             f.write(content)
         print(f"\nHoàn tất! Đã lưu các thay đổi vào {FILE_NAME}.")
     else:
-        print("\nNone: Không có thay đổi nào được thực hiện trên file.")
+        print("\nKhông có thay đổi nào được thực hiện trên file.")
 
 if __name__ == "__main__":
     update_m3u_file()
