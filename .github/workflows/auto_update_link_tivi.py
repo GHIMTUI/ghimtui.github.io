@@ -18,10 +18,8 @@ def test_url_speed(idx, item, channel_name):
     else:
         url, action_type = item, "Getlink"
 
-    # Nếu cấu hình là "No" thì bỏ qua
-    if str(action_type).strip().lower() == "no":
-        print(f"[{ch_upper}] Link {idx}: Cấu hình No, bỏ qua không test.")
-        return None
+    # Kiểm tra xem có cho phép Getlink (thay thế m3u8) hay không
+    is_getlink = str(action_type).strip().lower() != "no"
 
     try:
         print(f"[{ch_upper}] Đang test tốc độ link {idx}: {url}")
@@ -31,7 +29,7 @@ def test_url_speed(idx, item, channel_name):
 
         if response.status_code == 200:
             final_url = response.url
-            if "master.m3u8" in final_url:
+            if is_getlink and "master.m3u8" in final_url:
                 final_url = final_url.replace("master.m3u8", "playlist_720p.m3u8")
             
             print(f"[{ch_upper}] Link {idx} thành công: {final_url} (Thời gian: {elapsed_time:.2f}s)")
@@ -71,7 +69,7 @@ def get_fastest_live_link(urls_config, channel_name):
     valid_results.sort(key=lambda x: x[2])
     best_idx, fastest_url, best_time = valid_results[0]
     
-    print(f"[{ch_upper}] -> Đã chọn link {best_idx} nhanh nhất: {fastest_url} ({best_time:.2f}s)\n")
+    print(f"[{ch_upper}] -> Đã chọn link {best_idx} nhanh nhất ({best_time:.2f}s)\n")
     return fastest_url
 
 def update_m3u_file():
