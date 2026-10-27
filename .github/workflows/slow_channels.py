@@ -1,7 +1,7 @@
 SLOW_CHANNELS = {
        "sctv1": {
         "url": [
-            ("#EXTVLCOPT:http-user-referer=https://vtvprime.vn/\n#KODIPROP:inputstream.adaptive.license_key=9121ebe293bc46cd89e5d83a78c1a53c:9285615a491a424fb025f9e8d571bcd5\nhttp://liveatmvng.vtvprime.vn/live/data8/SCTV1/Live_DASHDRM/SCTV1.mpd", "No"),
+("#EXTVLCOPT:http-user-referer=https://vtvprime.vn/\n#KODIPROP:inputstream.adaptive.license_key=9121ebe293bc46cd89e5d83a78c1a53c:9285615a491a424fb025f9e8d571bcd5\nhttp://liveatmvng.vtvprime.vn/live/data8/SCTV1/Live_DASHDRM/SCTV1.mpd", "No"),
                ],
         "tvg_id": "sctv1hd",
     },
@@ -47,8 +47,7 @@ SLOW_CHANNELS = {
     },
   "sctv8": {
         "url": [
-            ("#EXTVLCOPT:http-user-referer=https://vtvgo.vn/\nhttps://vmttv.dpdns.org/VTVGo/?sctv8
-", "No"),
+("#EXTVLCOPT:http-user-referer=https://vtvgo.vn/\nhttps://vmttv.dpdns.org/VTVGo/?sctv8", "No"),
                ],
         "tvg_id": "sctv8hd",
     },
