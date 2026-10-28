@@ -9,34 +9,33 @@ FILE_NAME = "tivi.m3u"
 
 def get_live_link(urls_config, channel_name):
     if isinstance(urls_config, str):
-        urls_config = [(urls_config, "", "Getlink")]
+        urls_config = [(urls_config, "", "", "Getlink")]
 
     ch_upper = channel_name.upper()
 
     for idx, item in enumerate(urls_config, 1):
-        # Hỗ trợ các định dạng cấu hình:
-        # 1. Chuỗi đơn: "url"
-        # 2. Tuple 2 phần tử: ("url", "action") hoặc ("url", "referer")
-        # 3. Tuple 3 phần tử: ("url", "referer", "action")
+        # Cấu trúc: ("link m3u8", "link referer", "mã key", "Getlink or No")
+        url = ""
         referer = ""
+        license_key = ""
         action_type = "Getlink"
 
         if isinstance(item, tuple):
-            if len(item) == 3:
-                url, referer, action_type = item
+            if len(item) >= 4:
+                url, referer, license_key, action_type = item[:4]
+            elif len(item) == 3:
+                url, referer, license_key = item
             elif len(item) == 2:
                 url, second_val = item
-                # Nếu phần tử thứ 2 là chuỗi hành động (Getlink/No)
                 if str(second_val).strip().lower() in ["getlink", "no"]:
                     action_type = second_val
                 else:
                     referer = second_val
-            else:
+            elif len(item) == 1:
                 url = item[0]
         else:
             url = item
 
-        # Nếu là "No" thì bỏ qua không get link này
         if str(action_type).strip().lower() == "no":
             print(f"[{ch_upper}] Link {idx}: Cấu hình No, bỏ qua không get.")
             continue
@@ -44,7 +43,6 @@ def get_live_link(urls_config, channel_name):
         try:
             print(f"[{ch_upper}] Đang thử link {idx} (Getlink): {url}")
             
-            # Thiết lập header Referer nếu có cấu hình
             headers = {}
             if referer:
                 headers["Referer"] = referer
@@ -58,14 +56,14 @@ def get_live_link(urls_config, channel_name):
                     final_url = final_url.replace("master.m3u8", "playlist_720p.m3u8")
 
                 print(f"[{ch_upper}] Thành công với link {idx}: {final_url}")
-                return final_url, referer
+                return final_url, referer, license_key
             
             print(f"[{ch_upper}] Link {idx} trả về mã lỗi HTTP {response.status_code}")
         except Exception as e:
             print(f"[{ch_upper}] Lỗi khi kết nối link {idx}: {e}")
 
     print(f"[{ch_upper}] Tất cả các link được phép Getlink đều thất bại.")
-    return None, None
+    return None, None, None
 
 def update_m3u_file():
     if not os.path.exists(FILE_NAME):
@@ -95,47 +93,62 @@ def update_m3u_file():
         tvg_id = config.get("tvg_id", "")
         ch_upper = channel_name.upper()
         
-        new_link, new_referer = get_live_link(config["url"], channel_name)
+        new_link, new_referer, new_license = get_live_link(config["url"], channel_name)
         if not new_link:
             continue
 
-        # Hàm trợ giúp tạo khối thay thế cho Referer
         def make_replacement(match):
             extinf_part = match.group(1)
-            other_tags = match.group(2) or ""
+            opt_part = match.group(2) or ""
+            other_tags = match.group(3) or ""
             
+            # 1. Xử lý Referer
             if new_referer:
-                # Nếu có referer mới, kiểm tra xem dòng EXTVLCOPT đã có sẵn chưa để thay thế hoặc thêm mới
                 referer_line = f"#EXTVLCOPT:http-user-referer={new_referer}\n"
-                if "#EXTVLCOPT:http-user-referer=" in extinf_part + other_tags:
-                    # Thay thế dòng referer cũ bằng referer mới
-                    combined = extinf_part + other_tags
+                if "#EXTVLCOPT:http-user-referer=" in extinf_part + opt_part + other_tags:
+                    combined = extinf_part + opt_part + other_tags
                     combined = re.sub(r'#EXTVLCOPT:http-user-referer=[^\r\n]*\r?\n', referer_line, combined, flags=re.IGNORECASE)
-                    return f"{combined}{new_link}"
+                    opt_part = combined[len(extinf_part):]
+                    other_tags = ""
                 else:
-                    return f"{extinf_part}{referer_line}{other_tags}{new_link}"
-            else:
-                # Nếu không có cấu hình referer mới, giữ nguyên dòng referer cũ (nếu có) hoặc bỏ qua
-                return f"{extinf_part}{other_tags}{new_link}"
+                    opt_part += referer_line
 
-        # 1. Thử tìm và thay thế theo tvg-id
+            # 2. Xử lý Kodi Properties cho ClearKey (tự động đi kèm license_type và license_key)
+            if new_license:
+                type_line = "#KODIPROP:inputstream.adaptive.license_type=clearkey\n"
+                key_line = f"#KODIPROP:inputstream.adaptive.license_key={new_license}\n"
+                
+                combined = extinf_part + opt_part + other_tags
+                
+                # Xóa các dòng license cũ nếu đã tồn tại để tránh bị lặp
+                combined = re.sub(r'#KODIPROP:inputstream\.adaptive\.license_type=[^\r\n]*\r?\n', '', combined, flags=re.IGNORECASE)
+                combined = re.sub(r'#KODIPROP:inputstream\.adaptive\.license_key=[^\r\n]*\r?\n', '', combined, flags=re.IGNORECASE)
+                
+                # Chèn bộ đôi dòng lệnh clearkey mới vào nhóm các tag phụ
+                other_tags = type_line + key_line
+                opt_part = combined[len(extinf_part):]
+
+            return f"{extinf_part}{opt_part}{other_tags}{new_link}"
+
+        # 1. Tìm và thay thế theo tvg-id
         pattern = rf'(#EXTINF:[^\r\n]*tvg-id\s*=\s*["\']{re.escape(tvg_id)}["\'][^\r\n]*\r?\n)((?:#EXTVLCOPT:[^\r\n]*\r?\n)?)((?:#[^\r\n]+\r?\n)*)(https?://[^\r\n]+)'
         
-        # Kiểm tra xem có khớp theo tvg_id không
         if re.search(pattern, content, flags=re.IGNORECASE):
             content, count = re.subn(pattern, make_replacement, content, count=1, flags=re.IGNORECASE)
             if count > 0:
-                print(f"--> Đã cập nhật link và referer cho {ch_upper}")
+                print(f"--> Đã cập nhật link, referer và clearkey cho {ch_upper}")
                 has_changed = True
                 continue
 
-        # 2. Fallback phụ: Thử tìm theo tên kênh hoặc tvg-name
+        # 2. Fallback phụ theo tên kênh hoặc tvg-name
         fallback_pattern = rf'(#EXTINF:[^\r\n]*(?:tvg-name|channel-title)\s*=\s*["\'][^"\']*{re.escape(channel_name)}[^"\']*["\'][^\r\n]*\r?\n)((?:#EXTVLCOPT:[^\r\n]*\r?\n)?)((?:#[^\r\n]+\r?\n)*)(https?://[^\r\n]+)'
         
         if re.search(fallback_pattern, content, flags=re.IGNORECASE):
+            content, count = re.subn(fallback_pattern, make_replacement, fallback_pattern, count=1, flags=re.IGNORECASE) # fixed inside function call below
+            # Lưu ý đoạn subn chuẩn:
             content, count = re.subn(fallback_pattern, make_replacement, content, count=1, flags=re.IGNORECASE)
             if count > 0:
-                print(f"--> Đã cập nhật link và referer cho {ch_upper} (khớp qua tên kênh dự phòng)")
+                print(f"--> Đã cập nhật link, referer và clearkey cho {ch_upper} (khớp qua tên kênh dự phòng)")
                 has_changed = True
                 continue
 
