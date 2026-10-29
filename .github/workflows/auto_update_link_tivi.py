@@ -36,19 +36,33 @@ def get_live_link(urls_config, channel_name):
         else:
             url = item
 
-        if str(action_type).strip().lower() == "no":
-            print(f"[{ch_upper}] Link {idx}: Cấu hình No, sử dụng trực tiếp link và key.")
-            return url, referer, license_key
+        is_no_mode = str(action_type).strip().lower() == "no"
+
+        if is_no_mode:
+            print(f"[{ch_upper}] Đang kiểm tra nhanh link {idx} (Cấu hình No/DASH): {url}")
+        else:
+            print(f"[{ch_upper}] Đang thử link {idx} (Getlink): {url}")
 
         try:
-            print(f"[{ch_upper}] Đang thử link {idx} (Getlink): {url}")
-            
             headers = {}
             if referer:
                 headers["Referer"] = referer
 
-            response = requests.get(url, headers=headers, timeout=15, allow_redirects=True)
+            # Đối với link cấu hình "No" (thường là .mpd), ta dùng stream=True hoặc timeout ngắn 
+            # để check xem server có phản hồi hay chết hẳn (404) không.
+            response = requests.get(url, headers=headers, timeout=10, allow_redirects=True, stream=True)
 
+            # Nếu là chế độ "No": Miễn là server không trả về lỗi 404 (Not Found) hay 410, 
+            # ta coi như link còn sống và chấp nhận dùng nó luôn.
+            if is_no_mode:
+                if response.status_code != 404 and response.status_code != 410:
+                    print(f"[{ch_upper}] Link {idx} (No) hợp lệ (HTTP {response.status_code}), sử dụng trực tiếp.")
+                    return url, referer, license_key
+                else:
+                    print(f"[{ch_upper}] Link {idx} (No) đã chết (HTTP {response.status_code}), chuyển sang link dự phòng...")
+                    continue
+
+            # Xử lý bình thường cho các link Getlink (m3u8)
             if response.status_code == 200:
                 final_url = response.url
 
@@ -59,10 +73,11 @@ def get_live_link(urls_config, channel_name):
                 return final_url, referer, license_key
             
             print(f"[{ch_upper}] Link {idx} trả về mã lỗi HTTP {response.status_code}")
+
         except Exception as e:
             print(f"[{ch_upper}] Lỗi khi kết nối link {idx}: {e}")
 
-    print(f"[{ch_upper}] Tất cả các link được phép Getlink đều thất bại.")
+    print(f"[{ch_upper}] Tất cả các link đều thất bại.")
     return None, None, None
 
 def update_m3u_file():
