@@ -37,8 +37,8 @@ def get_live_link(urls_config, channel_name):
             url = item
 
         if str(action_type).strip().lower() == "no":
-            print(f"[{ch_upper}] Link {idx}: Cấu hình No, bỏ qua không get.")
-            continue
+            print(f"[{ch_upper}] Link {idx}: Cấu hình No, sử dụng trực tiếp link và key.")
+            return url, referer, license_key
 
         try:
             print(f"[{ch_upper}] Đang thử link {idx} (Getlink): {url}")
