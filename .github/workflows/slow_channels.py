@@ -1,8 +1,17 @@
 SLOW_CHANNELS = {
+         "sctv1": {
+        "url": [
+("http://liveatmvng.vtvprime.vn/live/data8/SCTV1/Live_DASHDRM/SCTV1.mpd",   "9121ebe293bc46cd89e5d83a78c1a53c:9285615a491a424fb025f9e8d571bcd5", "https://vtvprime.vn", "No"),
+
+("https://vietanhtv.id.vn/sctv/sctv1-hd-7f2aafec/index.m3u8", "https://sctvonline.vn", "Getlink"),
+        ],
+        "tvg_id": "sctv1hd",
+    },
+
     "sctv2": {
         "url": [
             ("https://vmttv.dpdns.org/VTVGo/?sctv2", "https://vtvprime.vn", "Getlink"),
-            ("https://vietanhtv.id.vn/sctv/sctv2-57c3884d/index.m3u8", "https://sctvonline.vn", "Getlink"),
+        ("https://vietanhtv.id.vn/sctv/sctv2-57c3884d/index.m3u8", "https://sctvonline.vn", "Getlink"),
             ("http://freem3u.xyz/api/live/play.m3u8?vid=201", "https://m.tv360.vn", "No"),
             ("https://vmttv.dpdns.org/tv360/?id=sctv2-today-tv", "https://m.tv360.vn", "No"),
         ],
@@ -159,8 +168,7 @@ SLOW_CHANNELS = {
     },
     "htv9": {
         "url": [
-            ("http://tv.vietanhtv.top/vieon/vieon.php?id=htv9-hd", "https://vieon.vn", "Getlink"),
-            ("http://freem3u.xyz/api/live/play.m3u8?vid=194", "https://m.tv360.vn", "No"),
+            ("http://tv.vietanhtv.top/vieon/vieon.php?id=htv9-hd", "https://vieon.vn", "Getlink"),            ("http://freem3u.xyz/api/live/play.m3u8?vid=194", "https://m.tv360.vn", "No"),
             ("https://vmttv.dpdns.org/tv360/?id=htv9-hd", "https://m.tv360.vn", "No"),
             ("http://1011154949.vnns.net/CDN-FPT02/HTV9-HD-1080p/playlist_720p.m3u8", "https://htvc.com.vn", "No"),
         ],
@@ -212,11 +220,13 @@ SLOW_CHANNELS = {
         "tvg_id": "htvcdulichhd",
     },
     "vinhlong1": {
-        "url": [
-            ("http://125hvt.ddns.net:21585/thvl1/tracks-v1a1/mono.m3u8", "http://125hvt.ddns.net", "No"),
-            ("http://tv.vietanhtv.top/vieon/vieon.php?id=thvl1-hd", "https://vieon.vn", "Getlink"),
+        "url": [            
+("http://tv.vietanhtv.top/vieon/vieon.php?id=thvl1-hd", "https://vieon.vn", "Getlink"),
             ("http://freem3u.xyz/api/live/play.m3u8?vid=25", "https://m.tv360.vn", "No"),
             ("https://vmttv.dpdns.org/tv360/?id=vinh-long-1", "https://m.tv360.vn", "No"),
+
+("http://125hvt.ddns.net:21585/thvl1/tracks-v1a1/mono.m3u8", "http://125hvt.ddns.net", "No"),
+
         ],
         "tvg_id": "vinhlong1hd",
     },
