@@ -24,7 +24,13 @@ def get_live_link(urls_config, channel_name):
             if len(item) >= 4:
                 url, referer, license_key, action_type = item[:4]
             elif len(item) == 3:
-                url, referer, license_key = item
+                url, referer, third_val = item
+                # Kiểm tra xem phần tử thứ 3 là action_type hay license_key thực sự
+                if str(third_val).strip().lower() in ["getlink", "no"]:
+                    action_type = third_val
+                    license_key = ""
+                else:
+                    license_key = third_val
             elif len(item) == 2:
                 url, second_val = item
                 if str(second_val).strip().lower() in ["getlink", "no"]:
@@ -48,12 +54,8 @@ def get_live_link(urls_config, channel_name):
             if referer:
                 headers["Referer"] = referer
 
-            # Đối với link cấu hình "No" (thường là .mpd), ta dùng stream=True hoặc timeout ngắn 
-            # để check xem server có phản hồi hay chết hẳn (404) không.
             response = requests.get(url, headers=headers, timeout=10, allow_redirects=True, stream=True)
 
-            # Nếu là chế độ "No": Miễn là server không trả về lỗi 404 (Not Found) hay 410, 
-            # ta coi như link còn sống và chấp nhận dùng nó luôn.
             if is_no_mode:
                 if response.status_code != 404 and response.status_code != 410:
                     print(f"[{ch_upper}] Link {idx} (No) hợp lệ (HTTP {response.status_code}), sử dụng trực tiếp.")
@@ -62,7 +64,6 @@ def get_live_link(urls_config, channel_name):
                     print(f"[{ch_upper}] Link {idx} (No) đã chết (HTTP {response.status_code}), chuyển sang link dự phòng...")
                     continue
 
-            # Xử lý bình thường cho các link Getlink (m3u8)
             if response.status_code == 200:
                 final_url = response.url
 
@@ -128,10 +129,11 @@ def update_m3u_file():
                 else:
                     opt_part += referer_line
 
-            # 2. Xử lý Kodi Properties cho ClearKey (tự động đi kèm license_type và license_key)
-            if new_license:
+            # 2. Xử lý Kodi Properties cho ClearKey (CHỈ thêm khi có license key thật, loại bỏ hoàn toàn Getlink/No/trống)
+            cleaned_license = str(new_license).strip()
+            if cleaned_license and cleaned_license.lower() not in ["getlink", "no"]:
                 type_line = "#KODIPROP:inputstream.adaptive.license_type=clearkey\n"
-                key_line = f"#KODIPROP:inputstream.adaptive.license_key={new_license}\n"
+                key_line = f"#KODIPROP:inputstream.adaptive.license_key={cleaned_license}\n"
                 
                 combined = extinf_part + opt_part + other_tags
                 
@@ -139,9 +141,15 @@ def update_m3u_file():
                 combined = re.sub(r'#KODIPROP:inputstream\.adaptive\.license_type=[^\r\n]*\r?\n', '', combined, flags=re.IGNORECASE)
                 combined = re.sub(r'#KODIPROP:inputstream\.adaptive\.license_key=[^\r\n]*\r?\n', '', combined, flags=re.IGNORECASE)
                 
-                # Chèn bộ đôi dòng lệnh clearkey mới vào nhóm các tag phụ
                 other_tags = type_line + key_line
                 opt_part = combined[len(extinf_part):]
+            else:
+                # Nếu không có license key hợp lệ, đảm bảo dọn sạch các dòng KODIPROP cũ (nếu có)
+                combined = extinf_part + opt_part + other_tags
+                combined = re.sub(r'#KODIPROP:inputstream\.adaptive\.license_type=[^\r\n]*\r?\n', '', combined, flags=re.IGNORECASE)
+                combined = re.sub(r'#KODIPROP:inputstream\.adaptive\.license_key=[^\r\n]*\r?\n', '', combined, flags=re.IGNORECASE)
+                opt_part = combined[len(extinf_part):]
+                other_tags = ""
 
             return f"{extinf_part}{opt_part}{other_tags}{new_link}"
 
@@ -151,7 +159,7 @@ def update_m3u_file():
         if re.search(pattern, content, flags=re.IGNORECASE):
             content, count = re.subn(pattern, make_replacement, content, count=1, flags=re.IGNORECASE)
             if count > 0:
-                print(f"--> Đã cập nhật link, referer và clearkey cho {ch_upper}")
+                print(f"--> Đã cập nhật link và referer cho {ch_upper}")
                 has_changed = True
                 continue
 
@@ -159,11 +167,9 @@ def update_m3u_file():
         fallback_pattern = rf'(#EXTINF:[^\r\n]*(?:tvg-name|channel-title)\s*=\s*["\'][^"\']*{re.escape(channel_name)}[^"\']*["\'][^\r\n]*\r?\n)((?:#EXTVLCOPT:[^\r\n]*\r?\n)?)((?:#[^\r\n]+\r?\n)*)(https?://[^\r\n]+)'
         
         if re.search(fallback_pattern, content, flags=re.IGNORECASE):
-            content, count = re.subn(fallback_pattern, make_replacement, fallback_pattern, count=1, flags=re.IGNORECASE) # fixed inside function call below
-            # Lưu ý đoạn subn chuẩn:
             content, count = re.subn(fallback_pattern, make_replacement, content, count=1, flags=re.IGNORECASE)
             if count > 0:
-                print(f"--> Đã cập nhật link, referer và clearkey cho {ch_upper} (khớp qua tên kênh dự phòng)")
+                print(f"--> Đã cập nhật link và referer cho {ch_upper} (khớp qua tên kênh dự phòng)")
                 has_changed = True
                 continue
 
