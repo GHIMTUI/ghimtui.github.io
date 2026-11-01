@@ -1,14 +1,13 @@
 import os
 import re
 import sys
+import concurrent.futures
 import requests
-from concurrent.futures import ThreadPoolExecutor, as_completed
 from slow_channels import SLOW_CHANNELS
 
 CHANNELS = SLOW_CHANNELS
 FAST_CHANNELS = [""]
 FILE_NAME = "tivi.m3u"
-MAX_WORKERS = 10  # Số luồng chạy song song (có thể tăng lên 15 hoặc 20 tùy ý)
 
 def get_live_link(urls_config, channel_name):
     if isinstance(urls_config, str):
@@ -45,6 +44,12 @@ def get_live_link(urls_config, channel_name):
 
         is_no_mode = str(action_type).strip().lower() == "no"
 
+        if is_no_mode:
+            print(f"[{ch_upper}] Đang kiểm tra nhanh link {idx} (Cấu hình No/DASH): {url}")
+        else:
+            print(f"[{ch_upper}] Đang thử link {idx} (Getlink): {url}")
+        sys.stdout.flush()
+
         try:
             headers = {}
             if referer:
@@ -54,10 +59,12 @@ def get_live_link(urls_config, channel_name):
 
             if is_no_mode:
                 if response.status_code not in [404, 410]:
-                    print(f"[{ch_upper}] Link {idx} (No) hợp lệ (HTTP {response.status_code})")
+                    print(f"[{ch_upper}] Link {idx} (No) hợp lệ (HTTP {response.status_code}), sử dụng trực tiếp.")
                     sys.stdout.flush()
                     return url, referer, license_key
                 else:
+                    print(f"[{ch_upper}] Link {idx} (No) đã chết (HTTP {response.status_code}), chuyển sang link dự phòng...")
+                    sys.stdout.flush()
                     continue
 
             if response.status_code == 200:
@@ -65,26 +72,25 @@ def get_live_link(urls_config, channel_name):
                 if "master.m3u8" in final_url:
                     final_url = final_url.replace("master.m3u8", "playlist_720p.m3u8")
 
-                print(f"[{ch_upper}] Thành công link {idx}: {final_url}")
+                print(f"[{ch_upper}] Thành công với link {idx}: {final_url}")
                 sys.stdout.flush()
                 return final_url, referer, license_key
+            
+            print(f"[{ch_upper}] Link {idx} trả về mã lỗi HTTP {response.status_code}")
+            sys.stdout.flush()
 
-        except Exception:
-            continue
+        except Exception as e:
+            print(f"[{ch_upper}] Lỗi khi kết nối link {idx}: {e}")
+            sys.stdout.flush()
 
     print(f"[{ch_upper}] Tất cả các link đều thất bại.")
     sys.stdout.flush()
     return None, None, None
 
 def process_single_channel(channel_name, config):
-    """Hàm xử lý độc lập cho từng kênh để chạy đa luồng"""
+    """Hàm xử lý lấy link cho từng kênh (dùng để chạy đa luồng)"""
     tvg_id = config.get("tvg_id", "")
-    ch_upper = channel_name.upper()
-    
     new_link, new_referer, new_license = get_live_link(config["url"], channel_name)
-    if not new_link:
-        return channel_name, tvg_id, None, None, None
-
     return channel_name, tvg_id, new_link, new_referer, new_license
 
 def update_m3u_file():
@@ -109,97 +115,110 @@ def update_m3u_file():
         sys.stdout.flush()
         return
 
-    # Đọc nội dung file m3u ban đầu
+    # 1. Quét song song tất cả các kênh bằng ThreadPoolExecutor (Tăng tốc độ kiểm tra mạng cực lớn)
+    print(f"\nBắt đầu quét đồng thời {len(channels_to_update)} kênh...")
+    sys.stdout.flush()
+
+    results = []
+    # max_workers=10 nghĩa là chạy tối đa 10 luồng cùng lúc, bạn có thể tăng lên 15 hoặc 20 nếu mạng khỏe
+    with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
+        future_to_channel = {
+            executor.submit(process_single_channel, ch_name, ch_conf): ch_name 
+            for ch_name, ch_conf in channels_to_update.items()
+        }
+        for future in concurrent.futures.as_completed(future_to_channel):
+            try:
+                res = future.result()
+                if res[2]: # Nếu có new_link
+                    results.append(res)
+            except Exception as exc:
+                print(f"Lỗi luồng xử lý kênh: {exc}")
+
+    if not results:
+        print("\nKhông có kênh nào lấy được link mới hợp lệ.")
+        sys.stdout.flush()
+        return
+
+    # 2. Đọc nội dung file m3u 1 lần duy nhất
     with open(FILE_NAME, "r", encoding="utf-8") as f:
         content = f.read()
 
     any_changed = False
 
-    print(f"Bắt đầu quét song song {len(channels_to_update)} kênh với {MAX_WORKERS} luồng...")
-    sys.stdout.flush()
+    # 3. Tiến hành thay thế hàng loạt trên nội dung chuỗi trong RAM
+    for channel_name, tvg_id, new_link, new_referer, new_license in results:
+        ch_upper = channel_name.upper()
+        channel_changed = False
 
-    # Sử dụng ThreadPoolExecutor để chạy đồng thời nhiều kênh
-    with ThreadPoolExecutor(max_workers=MAX_WORKERS) as executor:
-        futures = {
-            executor.submit(process_single_channel, ch_name, cfg): ch_name 
-            for ch_name, cfg in channels_to_update.items()
-        }
-
-        for future in as_completed(futures):
-            channel_name, tvg_id, new_link, new_referer, new_license = future.result()
-            if not new_link:
-                continue
-
-            ch_upper = channel_name.upper()
-
-            def make_replacement(match):
-                extinf_part = match.group(1)
-                opt_part = match.group(2) or ""
-                other_tags = match.group(3) or ""
-                
-                # 1. Xử lý Referer
-                if new_referer:
-                    referer_line = f"#EXTVLCOPT:http-user-referer={new_referer}\n"
-                    if "#EXTVLCOPT:http-user-referer=" in extinf_part + opt_part + other_tags:
-                        combined = extinf_part + opt_part + other_tags
-                        combined = re.sub(r'#EXTVLCOPT:http-user-referer=[^\r\n]*\r?\n', referer_line, combined, flags=re.IGNORECASE)
-                        opt_part = combined[len(extinf_part):]
-                        other_tags = ""
-                    else:
-                        opt_part += referer_line
-
-                # 2. Xử lý Kodi Properties cho ClearKey
-                cleaned_license = str(new_license).strip()
-                if cleaned_license and cleaned_license.lower() not in ["getlink", "no"]:
-                    type_line = "#KODIPROP:inputstream.adaptive.license_type=clearkey\n"
-                    key_line = f"#KODIPROP:inputstream.adaptive.license_key={cleaned_license}\n"
-                    
+        def make_replacement(match):
+            extinf_part = match.group(1)
+            opt_part = match.group(2) or ""
+            other_tags = match.group(3) or ""
+            
+            # Xử lý Referer
+            if new_referer:
+                referer_line = f"#EXTVLCOPT:http-user-referer={new_referer}\n"
+                if "#EXTVLCOPT:http-user-referer=" in extinf_part + opt_part + other_tags:
                     combined = extinf_part + opt_part + other_tags
-                    combined = re.sub(r'#KODIPROP:inputstream\.adaptive\.license_type=[^\r\n]*\r?\n', '', combined, flags=re.IGNORECASE)
-                    combined = re.sub(r'#KODIPROP:inputstream\.adaptive\.license_key=[^\r\n]*\r?\n', '', combined, flags=re.IGNORECASE)
-                    
-                    other_tags = type_line + key_line
-                    opt_part = combined[len(extinf_part):]
-                else:
-                    combined = extinf_part + opt_part + other_tags
-                    combined = re.sub(r'#KODIPROP:inputstream\.adaptive\.license_type=[^\r\n]*\r?\n', '', combined, flags=re.IGNORECASE)
-                    combined = re.sub(r'#KODIPROP:inputstream\.adaptive\.license_key=[^\r\n]*\r?\n', '', combined, flags=re.IGNORECase)
+                    combined = re.sub(r'#EXTVLCOPT:http-user-referer=[^\r\n]*\r?\n', referer_line, combined, flags=re.IGNORECASE)
                     opt_part = combined[len(extinf_part):]
                     other_tags = ""
+                else:
+                    opt_part += referer_line
 
-                return f"{extinf_part}{opt_part}{other_tags}{new_link}"
+            # Xử lý Kodi Properties cho ClearKey
+            cleaned_license = str(new_license).strip()
+            if cleaned_license and cleaned_license.lower() not in ["getlink", "no"]:
+                type_line = "#KODIPROP:inputstream.adaptive.license_type=clearkey\n"
+                key_line = f"#KODIPROP:inputstream.adaptive.license_key={cleaned_license}\n"
+                
+                combined = extinf_part + opt_part + other_tags
+                combined = re.sub(r'#KODIPROP:inputstream\.adaptive\.license_type=[^\r\n]*\r?\n', '', combined, flags=re.IGNORECASE)
+                combined = re.sub(r'#KODIPROP:inputstream\.adaptive\.license_key=[^\r\n]*\r?\n', '', combined, flags=re.IGNORECASE)
+                
+                other_tags = type_line + key_line
+                opt_part = combined[len(extinf_part):]
+            else:
+                combined = extinf_part + opt_part + other_tags
+                combined = re.sub(r'#KODIPROP:inputstream\.adaptive\.license_type=[^\r\n]*\r?\n', '', combined, flags=re.IGNORECASE)
+                combined = re.sub(r'#KODIPROP:inputstream\.adaptive\.license_key=[^\r\n]*\r?\n', '', combined, flags=re.IGNORECASE)
+                opt_part = combined[len(extinf_part):]
+                other_tags = ""
 
-            channel_changed = False
+            return f"{extinf_part}{opt_part}{other_tags}{new_link}"
 
-            # Cập nhật theo tvg-id
-            pattern = rf'(#EXTINF:[^\r\n]*tvg-id\s*=\s*["\']{re.escape(tvg_id)}["\'][^\r\n]*\r?\n)((?:#EXTVLCOPT:[^\r\n]*\r?\n)?)((?:#[^\r\n]+\r?\n)*)(https?://[^\r\n]+)'
-            if re.search(pattern, content, flags=re.IGNORECASE):
-                content, count = re.subn(pattern, make_replacement, content, count=1, flags=re.IGNORECASE)
+        # Tìm theo tvg-id
+        pattern = rf'(#EXTINF:[^\r\n]*tvg-id\s*=\s*["\']{re.escape(tvg_id)}["\'][^\r\n]*\r?\n)((?:#EXTVLCOPT:[^\r\n]*\r?\n)?)((?:#[^\r\n]+\r?\n)*)(https?://[^\r\n]+)'
+        if re.search(pattern, content, flags=re.IGNORECASE):
+            content, count = re.subn(pattern, make_replacement, content, count=1, flags=re.IGNORECASE)
+            if count > 0:
+                print(f"--> Đã cập nhật link và referer cho {ch_upper}")
+                channel_changed = True
+
+        # Fallback theo tên kênh nếu không khớp tvg-id
+        if not channel_changed:
+            fallback_pattern = rf'(#EXTINF:[^\r\n]*(?:tvg-name|channel-title)\s*=\s*["\'][^"\']*{re.escape(channel_name)}[^"\']*["\'][^\r\n]*\r?\n)((?:#EXTVLCOPT:[^\r\n]*\r?\n)?)((?:#[^\r\n]+\r?\n)*)(https?://[^\r\n]+)'
+            if re.search(fallback_pattern, content, flags=re.IGNORECASE):
+                content, count = re.subn(fallback_pattern, make_replacement, content, count=1, flags=re.IGNORECASE)
                 if count > 0:
+                    print(f"--> Đã cập nhật link và referer cho {ch_upper} (khớp qua tên kênh dự phòng)")
                     channel_changed = True
 
-            # Fallback theo tên kênh
-            if not channel_changed:
-                fallback_pattern = rf'(#EXTINF:[^\r\n]*(?:tvg-name|channel-title)\s*=\s*["\'][^"\']*{re.escape(channel_name)}[^"\']*["\'][^\r\n]*\r?\n)((?:#EXTVLCOPT:[^\r\n]*\r?\n)?)((?:#[^\r\n]+\r?\n)*)(https?://[^\r\n]+)'
-                if re.search(fallback_pattern, content, flags=re.IGNORECASE):
-                    content, count = re.subn(fallback_pattern, make_replacement, content, count=1, flags=re.IGNORECode if 're.IGNORECode' in globals() else re.IGNORECASE)
-                    if count > 0:
-                        channel_changed = True
+        if channel_changed:
+            any_changed = True
+        else:
+            print(f'--> Cảnh báo: Không tìm thấy cấu trúc kênh {ch_upper} với tvg-id="{tvg_id}" trong m3u.')
+            sys.stdout.flush()
 
-            if channel_changed:
-                # Ghi lưu ngay lập tức khi kênh nào check xong
-                with open(FILE_NAME, "w", encoding="utf-8") as f:
-                    f.write(content)
-                print(f"--> [ĐÃ LƯU] Cập nhật xong kênh {ch_upper}")
-                sys.stdout.flush()
-                any_changed = True
-
-    if not any_changed:
-        print("\nKhông có thay đổi nào được thực hiện trên file.")
-        sys.stdout.flush()
+    # 4. Ghi file 1 lần duy nhất vào cuối quá trình
+    if any_changed:
+        with open(FILE_NAME, "w", encoding="utf-8") as f:
+            f.write(content)
+        print(f"\n--> Đã ghi lưu toàn bộ kết quả vào {FILE_NAME}")
+        print("\nHoàn tất toàn bộ quá trình cập nhật các kênh!")
     else:
-        print("\nHoàn tất toàn bộ quá trình cập nhật song song!")
-        sys.stdout.flush()
+        print("\nKhông có thay đổi nào được thực hiện trên file.")
+    sys.stdout.flush()
 
 if __name__ == "__main__":
     update_m3u_file()
