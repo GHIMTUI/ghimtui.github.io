@@ -2,27 +2,27 @@
 
 #EXTINF:-1 tvg-id="vinhlong1hd" tvg-logo="https://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/vinhlong1.png", Vĩnh Long 1
 #EXTVLCOPT:http-user-referer=https://vieon.vn
-https://livecdn-vthcm-bp.vieon.vn/0cf139123b56391dd47d752654740701/1793587468000/livetv/group-02/b39935eee4d0c52fd9a5357c4ade8cc2/playlist.m3u8
+https://livecdn-vthcm-bp.vieon.vn/fe6c15f834468283a8dd31ef7487f12c/1793617814000/livetv/group-02/b39935eee4d0c52fd9a5357c4ade8cc2/playlist.m3u8?c=a
 
 #EXTINF:-1 tvg-id="vinhlong2hd" tvg-logo="https://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/vinhlong2.png", Vĩnh Long 2
 #EXTVLCOPT:http-user-referer=https://vieon.vn
-https://livecdn-vthcm-bp.vieon.vn/5afd026cae0dc73821734c72bca608e3/1793587471000/livetv/group-02/8782328c0b24e63b80af42e73fabdad5/playlist.m3u8?c=a
+https://livecdn-vthcm-bp.vieon.vn/ac062414d962d33fdcc7408b4b0199c4/1793617817000/livetv/group-02/8782328c0b24e63b80af42e73fabdad5/playlist.m3u8?c=a
 
 #EXTINF:-1 tvg-id="vinhlong3hd" tvg-logo="https://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/vinhlong3.png", Vĩnh Long 3
 #EXTVLCOPT:http-user-referer=https://vieon.vn
-https://livecdn-vthcm-bp.vieon.vn/8e8be2b7045858afb471807854534846/1793587473000/livetv/group-02/d163c8c091b5c937a0b5789d2be251b4/playlist.m3u8?c=a
+https://livecdn-vthcm-bp.vieon.vn/df48f7641953010bbf0657b916129a96/1793617820000/livetv/group-02/d163c8c091b5c937a0b5789d2be251b4/playlist.m3u8?c=a
 
 #EXTINF:-1 tvg-id="vinhlong4hd" tvg-logo="https://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/vinhlong4.png", Vĩnh Long 4
 #EXTVLCOPT:http-user-referer=https://vieon.vn
-https://livecdn-vthcm-bp.vieon.vn/1c8730f24d4f04d5da486bacd269eedd/1793587476000/livetv/group-02/759df25e7b439639ed0c2588b776735b/playlist.m3u8?c=a
+https://livecdn-vthcm-bp.vieon.vn/6d43c968760c28c3ca2076d8bf3cbdf1/1793617823000/livetv/group-02/759df25e7b439639ed0c2588b776735b/playlist.m3u8?c=a
 
 #EXTINF:-1 tvg-id="vinhlong5hd" tvg-logo="https://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/vinhlong5.png", Vĩnh Long 5
 #EXTVLCOPT:http-user-referer=https://vieon.vn
-https://livecdn-vthcm-bp.vieon.vn/0a2e3efa0a979f994e383413f7a2e9ef/1793587478000/livetv/group-01/4613aed1b1174347f0c42c2296b893da/playlist.m3u8?c=a
+https://livecdn-vthcm-bp.vieon.vn/3367fd3f4d7098acf0373f31f0e64eca/1793617825000/livetv/group-01/4613aed1b1174347f0c42c2296b893da/playlist.m3u8?c=a
 
 #EXTINF:-1 tvg-id="vinhlongfm" tvg-logo="https://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/vinhlong_logo.png", Phát Thanh – Vĩnh Long 
 #EXTVLCOPT:http-user-referer=https://vieon.vn
-https://livecdn-vthcm-bp.vieon.vn/0a2e3efa0a979f994e383413f7a2e9ef/1793587478000/livetv/group-01/4613aed1b1174347f0c42c2296b893da/playlist.m3u8?c=a
+https://livecdn-vthcm-bp.vieon.vn/3d8c26fa329eca8006292d8c80fd58aa/1793617829000/livetv/group-07/8c79528926768a54a5a56f58f8a37033/playlist.m3u8?c=a
 
 #EXTINF:-1 tvg-id="vinhlongfm" tvg-logo="https://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/vohm.png", Phát Thanh – TPHCM
 #EXTVLCOPT:http-user-referer=https://vieon.vn
@@ -144,242 +144,249 @@ http://livevlisctcdnw.seenow.vn/Live_DASHDRM2/THETHAO_HD/manifest.mpd
 
 #EXTINF:-1 tvg-id="htvcplushd" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/htvcplus.png", HTVC+
 #EXTVLCOPT:http-user-referer=https://vieon.vn
-https://livecdn-vthcm-bp.vieon.vn/58a0009042426ac5a823c93c59dbf93d/1793587456000/livetv/group-04/e74fd2dce10d3e3214a67179927ae5f1/playlist.m3u8?c=a
+https://livecdn-vthcm-bp.vieon.vn/fed59f8669ccfe4c3c686ace2067d2cb/1793617797000/livetv/group-04/e74fd2dce10d3e3214a67179927ae5f1/playlist.m3u8?c=a
 
 #EXTINF:-1 tvg-id="htvcgiadinhhd" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/giadinh.png", Gia Đình
 #EXTVLCOPT:http-user-referer=https://vieon.vn
-https://livecdn-vthcm-bp.vieon.vn/e6f6b5e4801dcdb07eb4a2fc61dfa8bf/1793587462000/livetv/group-04/eb22dc424b2b5f6dc465251ef7719271/playlist.m3u8?c=a
+https://livecdn-vthcm-bp.vieon.vn/42582bb9e8b17698593438a9ab8e5088/1793617803000/livetv/group-04/eb22dc424b2b5f6dc465251ef7719271/playlist.m3u8?c=a
 
 #EXTINF:-1 tvg-id="htvcphunuhd" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/phunu.png", Phụ Nữ
 #EXTVLCOPT:http-user-referer=https://vieon.vn
-https://livecdn-vthcm-bp.vieon.vn/6d5e314ee35333dd06d27ed4c85c5b1e/1793587464000/livetv/group-04/db7cbd168f683a415f970b3ccc31e2b1/playlist.m3u8?c=a
+https://livecdn-vthcm-bp.vieon.vn/037185c99c234d9ce010f53e00cd7ed0/1793617806000/livetv/group-04/db7cbd168f683a415f970b3ccc31e2b1/playlist.m3u8?c=a
 
 #EXTINF:-1 tvg-id="htvcthuanviet" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/thuanviet.png", Thuần Việt
 #EXTVLCOPT:http-user-referer=https://vieon.vn
-https://livecdn-vthcm-bp.vieon.vn/cf42a701ce37f975bd639433cc426b85/1793587459000/livetv/group-04/c5ca04c91149a945c74c9f62c12d78c2/playlist.m3u8?c=a
+https://livecdn-vthcm-bp.vieon.vn/27a61416c6264a62c9989ed9c2f95996/1793617800000/livetv/group-04/c5ca04c91149a945c74c9f62c12d78c2/playlist.m3u8?c=a
 
 #EXTINF:-1 tvg-id="htvcdulichhd" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/dulich.png",Du Lịch
 #EXTVLCOPT:http-user-referer=https://vieon.vn
-https://livecdn-vthcm-bp.vieon.vn/bc4c2a00c230fb918029ecfa1e1a8283/1793587466000/livetv/group-05/38c4313cc4259dc1319176800bf3ae4a/playlist.m3u8?c=a
+https://livecdn-vthcm-bp.vieon.vn/1f2398f3b7c76602023e0b0523835544/1793617809000/livetv/group-05/38c4313cc4259dc1319176800bf3ae4a/playlist.m3u8?c=a
 
 #EXTINF:-1 tvg-id="htv1" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/htv1.png", HTV1
 #EXTVLCOPT:http-user-referer=https://vieon.vn
-https://livecdn-vthcm-bp.vieon.vn/0cefe9c8d0a9111a4dd38643825e3c4c/1793587436000/livetv/group-04/93068c2a0ec828ae6ee56aa628341497/playlist.m3u8?c=a
+https://livecdn-vthcm-bp.vieon.vn/98fa69ac9e2fdd1ff4ae98a946035919/1793617772000/livetv/group-04/93068c2a0ec828ae6ee56aa628341497/playlist.m3u8?c=a
 
 #EXTINF:-1 tvg-id="htv2hd" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/htv2.png", HTV2
 #EXTVLCOPT:http-user-referer=https://vieon.vn
-https://livecdn-vthcm-bp.vieon.vn/283d09bda42766cba4860622464b1ae0/1793587440000/livetv/group-04/84e39f2158e950a0d63d783260f7ea75/playlist.m3u8?c=a
+https://livecdn-vthcm-bp.vieon.vn/89c1a3aa1bb8a022da0dc4d451971758/1793617776000/livetv/group-04/84e39f2158e950a0d63d783260f7ea75/playlist.m3u8?c=a
 
 #EXTINF:-1 tvg-id="htv3" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/htv3.png", HTV3
 #EXTVLCOPT:http-user-referer=https://vieon.vn
-https://livecdn-vthcm-bp.vieon.vn/2ee26ee247d79907a03dbae6469f276b/1793587443000/livetv/group-05/96f1e40fdc011502d396c2eb0c3d9627/playlist.m3u8?c=a
+https://livecdn-vthcm-bp.vieon.vn/1d2b91b00adc56ad36ec27c1f3b471ad/1793617779000/livetv/group-05/96f1e40fdc011502d396c2eb0c3d9627/playlist.m3u8?c=a
 
 #EXTINF:-1 tvg-id="htv4" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/htv4.png", HTV4
 #EXTVLCOPT:http-user-referer=https://vieon.vn
-https://livecdn-vthcm-bp.vieon.vn/ba96fe067b834b5e63571987b1586343/1793587445000/livetv/group-05/91e13f38078114329b4b4d45f613924b/playlist.m3u8?c=a
+https://livecdn-vthcm-bp.vieon.vn/12d791f014c32b2296a2087c0d1c967c/1793617783000/livetv/group-05/91e13f38078114329b4b4d45f613924b/playlist.m3u8?c=a
 
 #EXTINF:-1 tvg-id="htv5" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/htv5.png", HTV5
 #EXTVLCOPT:http-user-referer=https://vieon.vn
-https://livecdn-vthcm-bp.vieon.vn/2573e1a6f761acbaed87e3816c659cef/1793587447000/livetv/group-06/45ef7f63082488218aa1a8c93bb7c185/playlist.m3u8?c=a
+https://livecdn-vthcm-bp.vieon.vn/0c5c52e4986415df4a909dd45a2b8b62/1793617786000/livetv/group-06/45ef7f63082488218aa1a8c93bb7c185/playlist.m3u8?c=a
 
 #EXTINF:-1 tvg-id="htv7hd" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/htv7.png", HTV7
 #EXTVLCOPT:http-user-referer=https://vieon.vn
-https://livecdn-vthcm-bp.vieon.vn/cc9621107b41a7c99533a5458aa167a5/1793587451000/livetv/group-05/60efe6198ce953ae1411fb164e334367/playlist.m3u8?c=a
+https://livecdn-vthcm-bp.vieon.vn/73003bd413b1e60f1e10ed1b07c71202/1793617790000/livetv/group-05/60efe6198ce953ae1411fb164e334367/playlist.m3u8?c=a
 
 #EXTINF:-1 tvg-id="htv9hd" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/htv9.png", HTV9
 #EXTVLCOPT:http-user-referer=https://vieon.vn
-https://livecdn-vthcm-bp.vieon.vn/32cf9cc08486088ceb26d5f698ad95ea/1793587453000/livetv/group-04/6d8dfd97165650a8935c57262d9be67f/playlist.m3u8?c=a
+https://livecdn-vthcm-bp.vieon.vn/cab30d6fc8e2397a6eb94d24ab1ad329/1793617793000/livetv/group-04/6d8dfd97165650a8935c57262d9be67f/playlist.m3u8?c=a
 
 #EXTINF:-1 tvg-id="antvhd" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/antv.png", An Ninh
 http://livesct.vtvprime.vn/Live_DASHDRM1/ANNINHTV/manifest.mpd
 
 #EXTINF:-1 tvg-id="angiang1" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/angiang1.png", An Giang 1
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
-#EXTVLCOPT:http-user-referer=https://angiangtv.vn/
-http://tv.angiangtv.vn/live/kgtv/kgtv.m3u8
+#EXTVLCOPT:http-user-referer=https://angiangtv.vn
+https://tv.angiangtv.vn/live/kgtv/kgtv.m3u8
   
 #EXTINF:-1 tvg-id="angiang2" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/angiang2.png" , An Giang 2
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
-#EXTVLCOPT:http-user-referer=https://angiangtv.vn/
-http://tv.angiangtv.vn/live/kgtv2/kgtv2.m3u8
+#EXTVLCOPT:http-user-referer=https://angiangtv.vn
+https://tv.angiangtv.vn/live/kgtv2/kgtv2.m3u8
 
 #EXTINF:-1 tvg-id="angiang3" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/angiang3.png", An Giang 3
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
-#EXTVLCOPT:http-user-referer=https://angiangtv.vn/
-http://tv.angiangtv.vn/live/kgtv1/kgtv1.m3u8
+#EXTVLCOPT:http-user-referer=https://angiangtv.vn
+https://tv.angiangtv.vn/live/kgtv1/kgtv1.m3u8
 
 #EXTINF:-1 tvg-id="bacninh" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/bacninh.png", Bắc Ninh
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
-#EXTVLCOPT:http-user-referer=https://bacninhtv.vn/
+#EXTVLCOPT:http-user-referer=https://bacninhtv.vn
 http://live-hq.evgcdn.net/live/285f5f227e988ab4445a2138091d3d62e8d/chunklist.m3u8
 
 #EXTINF:-1 tvg-id="camau" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/camau.png", Cà Mau
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
-#EXTVLCOPT:http-user-referer=https://baocamau.vn/truyenhinh/
+#EXTVLCOPT:http-user-referer=https://baocamau.vn
 http://tv.ctvcamau.vn/live/tv/tv.m3u8
 
 #EXTINF:-1 tvg-id="caobang" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/caobang.png", Cao Bằng
-http://freem3u.xyz/api/live/play.m3u8?vid=48
+#EXTVLCOPT:http-user-referer=https://caobangtv.vn
+https://stream.thingnet.vn/live/smil:CRTV.smil/chunklist_w421131132_b1384000.m3u8
 
 #EXTINF:-1 tvg-id="cantho1" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/cantho1.png", Cần Thơ 1
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
-#EXTVLCOPT:http-user-referer=https://canthotv.vn/
-https://live.canthotv.vn/live/tv/chunklist_w1561386480.m3u8
+#EXTVLCOPT:http-user-referer=https://canthotv.vn
+https://live.canthotv.vn/live/tv/chunklist_w1675562931.m3u8
 
 #EXTINF:-1 tvg-id="cantho2" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/cantho2.png", Cần Thơ 2
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
-#EXTVLCOPT:http-user-referer=https://canthotv.vn/
-https://live.canthotv.vn/cs2/live.stream/chunklist_w601762686.m3u8
+#EXTVLCOPT:http-user-referer=https://canthotv.vn
+https://live.canthotv.vn/cs2/live.stream/chunklist_w1915604216.m3u8
 
 #EXTINF:-1 tvg-id="cantho3" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/cantho3.png", Cần Thơ 3
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
-#EXTVLCOPT:http-user-referer=https://canthotv.vn/
-https://live.canthotv.vn/cs3/tv/chunklist_w379326021.m3u8
+#EXTVLCOPT:http-user-referer=https://canthotv.vn
+https://live.canthotv.vn/cs3/tv/chunklist_w2036289642.m3u8
 
 #EXTINF:-1 tvg-id="danang1" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/danang1.png", Đà Nẵng 1
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
-#EXTVLCOPT:http-user-referer=https://danangtv.vn/
+#EXTVLCOPT:http-user-referer=https://danangtv.vn
 http://live.mediatech.vn/live/285b59a111d76974225a8e3004bfc31a509/chunklist.m3u8
 
 #EXTINF:-1 tvg-id="danang2" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/danang2.png", Đà Nẵng 2
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
-#EXTVLCOPT:http-user-referer=https://danangtv.vn/
-http://live.mediatech.vn/live/2859145290d0d7947ef88b6240123b62474/chunklist.m3u8
+#EXTVLCOPT:http-user-referer=https://danangtv.vn
+http://live.mediatech.vn/live/2859145290d0d7947ef88b6240123b62474/playlist.m3u8
 
 #EXTINF:-1 tvg-id="daklak" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/daklak.png", Đắk Lắk
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
-#EXTVLCOPT:http-user-referer=https://drt.vn/
+#EXTVLCOPT:http-user-referer=https://drt.vn
 http://cdn.drt.vn/live/285a27750861b964c27af22091662a74f2f/chunklist.m3u8
 
 #EXTINF:-1 tvg-id="dienbien" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/dienbien.png", Điện Biên
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
-#EXTVLCOPT:http-user-referer=https://đienientv.vn/truyen-hinh
+#EXTVLCOPT:http-user-referer=https://dienbientv.vn
 http://live.mediatech.vn/live/2855dfeccb7f49a41a2b0441b3bfeda413c/chunklist.m3u8
 
 #EXTINF:-1 tvg-id="dongnai1" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/dongnai1.png", Đồng Nai 1
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
-#EXTVLCOPT:http-user-referer=https://baobinhphuoc.vn/truc-tuyen
+#EXTVLCOPT:http-user-referer=https://baobinhphuoc.vn
 http://cdn.mediatech.vn/dongnai/tv1live-transmux.m3u8
 
 #EXTINF:-1 tvg-id="dongnai2" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/dongnai2.png", Đồng Nai 2
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
-#EXTVLCOPT:http-user-referer=https://baobinhphuoc.vn/truc-tuyen
+#EXTVLCOPT:http-user-referer=https://baobinhphuoc.vn
 http://cdn.mediatech.vn/dongnai/tv2live-transmux.m3u8
 
 #EXTINF:-1 tvg-id="dongnai3" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/dongnai3.png", Đồng Nai 3
 #EXTVLCOPT:http-user-referer=https://vieon.vn
-http://dethich.pw/dongnai3/index.m3u8
+https://livecdn-vthcm-bp.vieon.vn/dd3b4193263b9d921c38587ff2e90273/1793617855000/livetv/group-05/43ec53af7a809687be1a97622aec2eff/playlist.m3u8?c=a
 
 #EXTINF:-1 tvg-id="dongthap1" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/dongthap1.png", Đồng Tháp 1
+#EXTVLCOPT:http-user-referer=https://vtvprime.vn
 http://liveh34.vtvprime.vn/hls/DONGTHAPTV/03.m3u8
 
 #EXTINF:-1 tvg-id="dongthap2" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/dongthap2.png", Đồng Tháp 2
+#EXTVLCOPT:http-user-referer=https://vtvprime.vn
 http://liveh34.vtvprime.vn/hls/DONGTHAP2/03.m3u8
 
 #EXTINF:-1 tvg-id="gialai" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/gialai.png", Gia Lai 
-http://freem3u.xyz/api/live/play.m3u8?vid=55
+#EXTVLCOPT:http-user-referer=https://vieon.vn
+https://livecdn-vthcm-bp.vieon.vn/7a8354efbba4114b0f44e02dd3cc8349/1793617860000/livetv/group-01/9f4355c411f129b47035075582d97e8f/playlist.m3u8?c=a
 
 #EXTINF:-1 tvg-id="hanoi1" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/hanoi1.png", Hà Nội 1
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
-#EXTVLCOPT:http-user-referer=https://freem3u.xyz/
-http://freem3u.xyz/api/live/play.m3u8?vid=33
+#EXTVLCOPT:http-user-referer=https://vtvprime.vn
+https://liveh34.vtvprime.vn/hls/HANOI1TV/03.m3u8
 
 #EXTINF:-1 tvg-id="hanoi2" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/hanoi2.png", Hà Nội 2
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
-#EXTVLCOPT:http-user-referer=https://freem3u.xyz/
-http://freem3u.xyz/api/live/play.m3u8?vid=34
+#EXTVLCOPT:http-user-referer=https://vtvprime.vn
+http://liveh34.vtvprime.vn/hls/HANOI2/03.m3u8
 
 #EXTINF:-1 tvg-id="hatinh" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/hatinh.png", Hà Tĩnh
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
-#EXTVLCOPT:http-user-referer=https://baohatinh.vn/tv/
+#EXTVLCOPT:http-user-referer=https://hatinhtv.vn
 http://cohauw9bgpvod.vcdn.cloud/httv1/index.m3u8
 
 #EXTINF:-1 tvg-id="haiphong" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/haiphong.png", Hải Phòng
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
-#EXTVLCOPT:http-user-referer=https://thhp.vn/
+#EXTVLCOPT:http-user-referer=https://thhp.vn
 http://cdn.thhp.vn/live/285a4c99665fdf84e94956c66bc7dc7eb5d/chunklist.m3u8
 
 #EXTINF:-1 tvg-id="haiphong3" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/haiphong3.png", Hải Phòng 3
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
-#EXTVLCOPT:http-user-referer=https://thhp.vn/
+#EXTVLCOPT:http-user-referer=https://thhp.vn
 http://cdn.thhp.vn/live/28548ca35823d41426d8b3da7ed82bdab13/chunklist.m3u8
 
 #EXTINF:-1 tvg-id="hue" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/hue.png", Huế
-#EXTVLCOPT:http-user-referer=https://vieon.vn
-https://livecdn-vthcm-bp.vieon.vn/0718797912898099b6cc75a066d50860/1793587482000/livetv/group-01/e8d9b4d14a7c8fa9b05bffe5d557684c/playlist.m3u8?c=a
+#EXTVLCOPT:http-user-referer=https://vtvprime.vn
+http://liveh34.vtvprime.vn/hls/HUE/03.m3u8
 
 #EXTINF:-1 tvg-id="hungyen" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/hungyen.png", Hưng Yên
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
-#EXTVLCOPT:http-user-referer=https://hungyentv.vn/
+#EXTVLCOPT:http-user-referer=https://hungyentv.vn
 http://live.mediatech.vn/live/285f5449d7d7d2946e0bd2d54b7e60f25a4/chunklist.m3u8
 
 #EXTINF:-1 tvg-id="khanhhoa" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/khanhhoa.png", Khánh Hòa
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
-#EXTVLCOPT:http-user-referer=https://freem3u.xyz/
-http://freem3u.xyz/api/live/play.m3u8?vid=65
+#EXTVLCOPT:http-user-referer=https://vtvprime.vn
+http://liveh12.vtvprime.vn/hls/KHANHHOATV/03.m3u8
 
 #EXTINF:-1 tvg-id="khanhhoa1" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/khanhhoa1.png", Khánh Hòa 1
+#EXTVLCOPT:http-user-referer=https://vtvprime.vn
 http://liveh34.vtvprime.vn/hls/KHANHHOA1/03.m3u8
 
 #EXTINF:-1 tvg-id="laichau" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/laichau.png", Lai Châu
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
-#EXTVLCOPT:http-user-referer=https://truyenhinhso.vn/
+#EXTVLCOPT:http-user-referer=https://truyenhinhso.vn
 http://luuchieu.truyenhinhso.vn/media/live/AF157BFA0E9FE004C61AD76E/index.m3u8
 
 #EXTINF:-1 tvg-id="lamdong1" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/lamdong1.png", Lâm Đồng 1
+#EXTVLCOPT:http-user-referer=https://vtvprime.vn
 http://liveh12.vtvprime.vn/hls/LTV1/04.m3u8
 
 #EXTINF:-1 tvg-id="lamdong2" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/lamdong2.png", Lâm Đồng 2
+#EXTVLCOPT:http-user-referer=https://vtvprime.vn
 http://liveh34.vtvprime.vn/hls/LAMDONG/03.m3u8
 
 #EXTINF:-1 tvg-id="langson" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/langson.png", Lạng Sơn
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
-#EXTVLCOPT:http-user-referer=https://langsontv.vn/
+#EXTVLCOPT:http-user-referer=https://langsontv.vn
 http://stream.langsontv.vn/live/285c78da0c246524c90917842f8de03bd21/chunklist.m3u8
 
 #EXTINF:-1 tvg-id="laocai" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/laocai.png", Lào Cai
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
-#EXTVLCOPT:http-user-referer=https://baolaocai.vn/
-https://live.baolaocai.vn/channel2/stream.m3u8
+#EXTVLCOPT:http-user-referer=https://baolaocai.vn
+http://live.baolaocai.vn/channel2/stream.m3u8
 
 #EXTINF:-1 tvg-id="nghean" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/nghean.png", Nghệ An
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
-#EXTVLCOPT:http-user-referer=https://truyenhinhnghean.vn/
+#EXTVLCOPT:http-user-referer=https://truyenhinhnghean.vn
 http://live.mediatech.vn/live/2859591eef2e92249b682db021f4247c364/chunklist.m3u8
 
 #EXTINF:-1 tvg-id="ninhbinh" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/ninhbinh.png", Ninh Bình
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
-#EXTVLCOPT:http-user-referer=https://nbtv.vn/
-http://live.mediatech.vn/live/28597f8fd7ea5064d0f84ab00b3699dfd86/chunklist.m3u8
+#EXTVLCOPT:http-user-referer=https://nbtv.vn
+http://live.mediatech.vn/live/28597f8fd7ea5064d0f84ab00b3699dfd86/playlist.m3u8
 
 #EXTINF:-1 tvg-id="phutho" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/phutho.png", Phú Thọ
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
-#EXTVLCOPT:http-user-referer=https://phuthotv.vn/
+#EXTVLCOPT:http-user-referer=https://phuthotv.vn
 http://live.mediatech.vn/live/2856e81d201c99b4649b5c62f3cddad3881/chunklist.m3u8
 
 #EXTINF:-1 tvg-id="quangngai1" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/quangngai1.png", Quảng Ngãi 1
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
-#EXTVLCOPT:http-user-referer=https://quangngaitv.vn/
+#EXTVLCOPT:http-user-referer=https://quangngaitv.vn
 http://live.mediatech.vn/live/285aaa79b4b265a457d81bb72bc32e2c114/playlist.m3u8
 
 #EXTINF:-1 tvg-id="quangngai2" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/quangngai2.png", Quảng Ngãi 2
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
-#EXTVLCOPT:http-user-referer=https://nethubtv.vn/
-http://ott3.nethubtv.vn/live/bentretv/chunklist_2.m3u8
+#EXTVLCOPT:http-user-referer=https://vtvgo.vn
+http://vtvgolive-ott3.vtvdigital.vn/live/bentretv/chunklist_2.m3u8
 
 #EXTINF:-1 tvg-id="quangninh1" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/quangninh1.png", Quảng Ninh 1
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
-#EXTVLCOPT:http-user-referer=https://baoquangninh.vn/
+#EXTVLCOPT:http-user-referer=https://baoquangninh.vn
 http://cdn.baoquangninh.vn/live/285f5e4256ea38d48eebdc6175909c847fe/chunklist.m3u8
 
 #EXTINF:-1 tvg-id="quangninh3" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/quangninh3.png", Quảng Ninh 3
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
-#EXTVLCOPT:http-user-referer=https://baoquangninh.vn/
-http://live.baoquangninh.vn/qtvlive/tv3live.m3u8
+#EXTVLCOPT:http-user-referer=https://baoquangninh.vn
+https://live.baoquangninh.vn/qtvlive/tv3live.m3u8
 
 #EXTINF:-1 tvg-id="quangtri" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/quangtri.png", Quảng Trị
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
-#EXTVLCOPT:http-user-referer=https://baoquangtri.vn/
+#EXTVLCOPT:http-user-referer=https://baoquangtri.vn
 https://tructuyen.baoquangtri.vn:5443/LiveApp/streams/20VcR6dL2B9Krwob13486956694488871.m3u8
 
 #EXTINF:-1 tvg-id="qpvnhd" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/qpvn.png", Quốc Phòng
@@ -389,26 +396,27 @@ http://qpvn.vn/live/qpvn/1080p.m3u8
 
 #EXTINF:-1 tvg-id="sonla" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/sonla.png" , Sơn La
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
-#EXTVLCOPT:http-user-referer=https://sonlatv.vn/
-http://cdn.sonlatv.vn/live/28595222e707a364251b8724717894baa46/chunklist.m3u8
+#EXTVLCOPT:http-user-referer=https://sonlatv.vn
+https://cdn.sonlatv.vn/live/28595222e707a364251b8724717894baa46/chunklist.m3u8
 
 #EXTINF:-1 tvg-id="tayninh1" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/tayninh.png", Tây Ninh
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
-#EXTVLCOPT:http-user-referer=https://baotayninh.vn/
-http://live.mediatech.vn/live/2851dc2c9af68834814a89e61db0faee561/chunklist.m3u8
+#EXTVLCOPT:http-user-referer=https://baotayninh.vn
+https://live.mediatech.vn/live/2851dc2c9af68834814a89e61db0faee561/chunklist.m3u8
 
 #EXTINF:-1 tvg-id="thainguyen" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/thainguyen.png", Thái Nguyên
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
-#EXTVLCOPT:http-user-referer=https://thainguyentv.vn/
-http://streaming.thainguyentv.vn/hls/livestream.m3u8
+#EXTVLCOPT:http-user-referer=https://baothainguyen.vn
+https://streaming.thainguyentv.vn/hls/livestream.m3u8
 
 #EXTINF:-1 tvg-id="thanhhoa" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/thanhhoa.png",Thanh Hóa
+#EXTVLCOPT:http-user-referer=https://baothanhhoa.vn
 http://123.31.36.68/live.m3u8?c=vstv525&q=sd&type=tv&location=NA&pkg=pkg12.hni
  
 #EXTINF:-1 tvg-id="tuyenquang" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/tuyenquang.png", Tuyên Quang
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
-#EXTVLCOPT:http-user-referer=https://tuyenquangtv.vn/truyen-hinh
-http://streaming.tuyenquangtv.vn/channel/tuyenquang/chunks.m3u8
+#EXTVLCOPT:http-user-referer=https://tuyenquangtv.vn
+https://streaming.thainguyentv.vn/hls/livestream.m3u8
 
 #EXTINF:-1 tvg-id="sctv1hd" tvg-logo="http://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV1.png" ,SCTV1
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
@@ -418,72 +426,72 @@ http://streaming.tuyenquangtv.vn/channel/tuyenquang/chunks.m3u8
 http://liveatmvng.vtvprime.vn/live/data8/SCTV1/Live_DASHDRM/SCTV1.mpd
 
 #EXTINF:-1 tvg-id="sctv2hd" tvg-logo="http://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV2.png",SCTV2
-#EXTVLCOPT:http-user-referer=https://vtvprime.vn
-https://vtvgolive-sctvdrm.vtvdigital.vn/eeJ8T_JpRwbC0CVOdgZH_w/1793515404/manifest/sctv2/playlist_720p.m3u8
+#EXTVLCOPT:http-user-referer=https://vtvgo.vn
+https://vtvgolive-sctvdrm.vtvdigital.vn/E8Vph5-WvLQLbTyYqCl45A/1793545720/manifest/sctv2/playlist_720p.m3u8
 
 #EXTINF:-1 tvg-id="sctv3hd" tvg-logo="http://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV3.png",SCTV3
-#EXTVLCOPT:http-user-referer=https://vtvprime.vn
-https://vtvgolive-sctvdrm.vtvdigital.vn/Uc9ad9YRNKtNTVQzPvamRA/1793515407/manifest/sctv3/playlist_720p.m3u8
+#EXTVLCOPT:http-user-referer=https://vtvgo.vn
+https://vtvgolive-sctvdrm.vtvdigital.vn/u6CUTrG0MzwNbWiUa9jjsg/1793545726/manifest/sctv3/playlist_720p.m3u8
 
 #EXTINF:-1 tvg-id="sctv4hd" tvg-logo="http://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV4.png",SCTV4
-#EXTVLCOPT:http-user-referer=https://vtvprime.vn
-https://vtvgolive-sctvdrm.vtvdigital.vn/GtZIESOQJp6DnSzqTU540Q/1793515409/manifest/sctv4/playlist_720p.m3u8
+#EXTVLCOPT:http-user-referer=https://vtvgo.vn
+https://vtvgolive-sctvdrm.vtvdigital.vn/Yq7sCP9coOfS6SRg3SHwqQ/1793545728/manifest/sctv4/playlist_720p.m3u8
 
 #EXTINF:-1 tvg-id="sctv6hd" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/sctv6.png",SCTV6
-#EXTVLCOPT:http-user-referer=https://vtvprime.vn
-https://vtvgolive-sctvdrm.vtvdigital.vn/4QFFiK3v9ZDanOnhe2XVug/1793515411/manifest/sctv6/playlist_720p.m3u8
+#EXTVLCOPT:http-user-referer=https://vtvgo.vn
+https://vtvgolive-sctvdrm.vtvdigital.vn/VsqToh84d3MaEYd4jyaVkA/1793545730/manifest/sctv6/playlist_720p.m3u8
 
 #EXTINF:-1 tvg-id="sctv7hd" tvg-logo="http://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV7.png",SCTV7
-#EXTVLCOPT:http-user-referer=https://vtvprime.vn
-https://vtvgolive-sctvdrm.vtvdigital.vn/_USyCoCl8ejcyZODPPEfoA/1793515413/manifest/sctv7/playlist_720p.m3u8
+#EXTVLCOPT:http-user-referer=https://vtvgo.vn
+https://vtvgolive-sctvdrm.vtvdigital.vn/BsIduNiWVH0_BHD7fgH3ZQ/1793545732/manifest/sctv7/playlist_720p.m3u8
 
 #EXTINF:-1 tvg-id="sctv8hd" tvg-logo="http://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV8.png",SCTV8
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
-#EXTVLCOPT:http-user-referer=https://vtvprime.vn
+#EXTVLCOPT:http-user-referer=https://vtvgo.vn
 https://vmttv.dpdns.org/VTVGo/?sctv8
 
 #EXTINF:-1 tvg-id="sctv9hd" tvg-logo="http://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV9.png",SCTV9
-#EXTVLCOPT:http-user-referer=https://vtvprime.vn
-https://vtvgolive-sctvdrm.vtvdigital.vn/0d9p2qlAf69tkKpH97sP6Q/1793515417/manifest/sctv9/playlist_720p.m3u8
+#EXTVLCOPT:http-user-referer=https://vtvgo.vn
+https://vtvgolive-sctvdrm.vtvdigital.vn/5wNOyVGu3lswBQx-4kKFXw/1793545738/manifest/sctv9/playlist_720p.m3u8
 
 #EXTINF:-1 tvg-id="sctv11hd" tvg-logo="http://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV11.png",SCTV11
-#EXTVLCOPT:http-user-referer=https://vtvprime.vn
-https://vtvgolive-sctvdrm.vtvdigital.vn/1FvHs2NHkhZ2Jl0BOQN9sA/1793515424/manifest/sctv11/playlist_720p.m3u8
+#EXTVLCOPT:http-user-referer=https://vtvgo.vn
+https://vtvgolive-sctvdrm.vtvdigital.vn/HktxI0_hwYqQcJL4NIqaKg/1793545740/manifest/sctv11/playlist_720p.m3u8
 
 #EXTINF:-1 tvg-id="sctv12hd" tvg-logo="http://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV12.png",SCTV12
-#EXTVLCOPT:http-user-referer=https://vtvprime.vn
-https://vtvgolive-sctvdrm.vtvdigital.vn/oxYCMeT1iXe81BxnjQvT3w/1793515425/manifest/sctv12/playlist_720p.m3u8
+#EXTVLCOPT:http-user-referer=https://vtvgo.vn
+https://vtvgolive-sctvdrm.vtvdigital.vn/E0vJWS_l3O0Bi3Gtdu_ITg/1793545742/manifest/sctv12/playlist_720p.m3u8
 
 #EXTINF:-1 tvg-id="sctv13hd" tvg-logo="http://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV13.png",SCTV13
-#EXTVLCOPT:http-user-referer=https://vtvprime.vn
-https://vtvgolive-sctvdrm.vtvdigital.vn/ranhPvmlHrMc9kBn4yZk8A/1793515426/manifest/sctv13/playlist_720p.m3u8
+#EXTVLCOPT:http-user-referer=https://vtvgo.vn
+https://vtvgolive-sctvdrm.vtvdigital.vn/jqFxYYx2kqFHLgOtiP3ubA/1793545744/manifest/sctv13/playlist_720p.m3u8
 
 #EXTINF:-1 tvg-id="sctv14hd" tvg-logo="http://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV14.png",SCTV14
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
-#EXTVLCOPT:http-user-referer=https://vtvgo.vn/
+#EXTVLCOPT:http-user-referer=https://vtvgo.vn
 https://vmttv.dpdns.org/VTVGo/?sctv14
 
 #EXTINF:-1 tvg-id="sctv16hd" tvg-logo="http://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV16.png",SCTV16
-#EXTVLCOPT:http-user-referer=https://vtvprime.vn
-https://vtvgolive-sctvdrm.vtvdigital.vn/WwgujA4vEasJfT3TbKFiJw/1793515428/manifest/sctv16/playlist_720p.m3u8
+#EXTVLCOPT:http-user-referer=https://vtvgo.vn
+https://vtvgolive-sctvdrm.vtvdigital.vn/lGfzPn1DnXAeHn6gJ4X8ew/1793545752/manifest/sctv16/playlist_720p.m3u8
 
 #EXTINF:-1 tvg-id="sctv18hd" tvg-logo="http://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV18.png",SCTV18
-#EXTVLCOPT:http-user-referer=https://vtvprime.vn
-https://vtvgolive-sctvdrm.vtvdigital.vn/TVSfQCnQrK88Ods21vScdQ/1793515429/manifest/sctv18/playlist_720p.m3u8
+#EXTVLCOPT:http-user-referer=https://vtvgo.vn
+https://vtvgolive-sctvdrm.vtvdigital.vn/x_E0IqILNbA8_IgSuaCzkg/1793545757/manifest/sctv18/playlist_720p.m3u8
 
 #EXTINF:-1 tvg-id="sctv19hd" tvg-logo="http://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV19.png",SCTV19
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
-#EXTVLCOPT:http-user-referer=https://sctvonline.vn/
-https://vietanhtv.id.vn/sctv/proxy.php/https://e8.endpoint.cdn.sctvonline.vn/cdn-secure/v1/sctvonline/2/rynBrqYXUds0HxhXIs_dtQ/1795226532/PI8HI3T/live/hls/sctv19/index.m3u8
+#EXTVLCOPT:http-user-referer=https://vtvgo.vn
+https://vmttv.dpdns.org/VTVGo/?sctv19
 
 #EXTINF:-1 tvg-id="sctv21hd" tvg-logo="http://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV21.png",SCTV21
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
-#EXTVLCOPT:http-user-referer=https://sctvonline.vn/
-https://vietanhtv.id.vn/sctv/proxy.php/https://e1.endpoint.cdn.sctvonline.vn/cdn-secure/v1/sctvonline/2/GAdBhcCMZ_K_TEyDHnigtQ/1795226534/PI8HI3T/live/hls/sctv21/index.m3u8
+#EXTVLCOPT:http-user-referer=https://vtvgo.vn
+https://vmttv.dpdns.org/VTVGo/?sctv21
 
 #EXTINF:-1 tvg-id="sctvhdpth" tvg-logo="http://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTVPTH.png",SCTV Phim Tổng Hợp
-#EXTVLCOPT:http-user-referer=https://vtvprime.vn
-https://vtvgolive-sctvdrm.vtvdigital.vn/5QZ3fCbB5Nu3vNzrPww5ug/1793515433/manifest/sctvpth/playlist_720p.m3u8
+#EXTVLCOPT:http-user-referer=https://vtvgo.vn
+https://vtvgolive-sctvdrm.vtvdigital.vn/9bKX5dNOkVhXTsusJOdXtQ/1793545769/manifest/sctvpth/playlist_720p.m3u8
 
 #EXTINF:-1 tvg-id="onbibi" tvg-logo="https://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/VTVCab/OnBibi.png",On BiBi
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
