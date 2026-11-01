@@ -120,7 +120,7 @@ def update_m3u_file():
     sys.stdout.flush()
 
     results = []
-    # max_workers=10 nghĩa là chạy tối đa 10 luồng cùng lúc, bạn có thể tăng lên 15 hoặc 20 nếu mạng khỏe
+    # max_workers=15 nghĩa là chạy tối đa 10 luồng cùng lúc, bạn có thể tăng lên 15 hoặc 20 nếu mạng khỏe
     with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
         future_to_channel = {
             executor.submit(process_single_channel, ch_name, ch_conf): ch_name 
@@ -192,7 +192,7 @@ def update_m3u_file():
         if re.search(pattern, content, flags=re.IGNORECASE):
             content, count = re.subn(pattern, make_replacement, content, count=1, flags=re.IGNORECASE)
             if count > 0:
-                print(f"--> Đã cập nhật link và referer cho {ch_upper}")
+                print(f"--> Đã cập nhật link {ch_upper}")
                 channel_changed = True
 
         # Fallback theo tên kênh nếu không khớp tvg-id
