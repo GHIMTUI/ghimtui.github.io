@@ -1,11 +1,10 @@
 name: Auto Update Channel
 
 on:
-  schedule:
-    # Nhóm chạy 12 tiếng một lần (sctv14, sctv19, sctv21)
-    # - cron: '0 */12 * * *'
-    # Nhóm chạy 24 tiếng một lần (các kênh còn lại)
-    - cron: '0 */24 * * *'
+  # Nhóm chạy 12 tiếng một lần (sctv14, sctv19, sctv21)
+  # - cron: '0 */12 * * *'
+  # Nhóm chạy 24 tiếng một lần (các kênh còn lại)
+  - cron: '0 */24 * * *'
   workflow_dispatch: # Cho phép bấm chạy thủ công tất cả các kênh
 
 jobs:
@@ -14,9 +13,11 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+      
+    # >>> THÊM KHỐI ENV VÀO ĐÂY <<<
     env:
-    PYTHONUNBUFFERED: "1"
-  
+      PYTHONUNBUFFERED: "1"
+
     steps:
     - name: Tải mã nguồn
       uses: actions/checkout@v4
@@ -57,4 +58,3 @@ jobs:
         # Chỉ commit khi có thay đổi mới, tránh báo lỗi exit code 1
         git diff --staged --quiet || git commit -m "Auto update channel links"
         git push
-        
