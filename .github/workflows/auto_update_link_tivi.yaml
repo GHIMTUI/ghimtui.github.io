@@ -14,7 +14,9 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-
+    env:
+    PYTHONUNBUFFERED: "1"
+  
     steps:
     - name: Tải mã nguồn
       uses: actions/checkout@v4
@@ -55,3 +57,4 @@ jobs:
         # Chỉ commit khi có thay đổi mới, tránh báo lỗi exit code 1
         git diff --staged --quiet || git commit -m "Auto update channel links"
         git push
+        
