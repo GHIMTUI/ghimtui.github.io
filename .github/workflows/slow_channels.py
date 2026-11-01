@@ -691,10 +691,10 @@ SLOW_CHANNELS = {
  },
   "sonla": {
   "url": [
-("http://tv.vietanhtv.top/vieon/vieon.php?id=son-la-1", "https://vieon.vn", "Getlink"), 
-("http://cdn.sonlatv.vn/live/28595222e707a364251b8724717894baa46/chunklist.m3u8", "https://sonlatv.vn", "No"), 
+("http://tv.vietanhtv.top/vieon/vieon.php?id=son-la", "https://vieon.vn", "Getlink"), 
 ("http://freem3u.xyz/api/live/play.m3u8?vid=85", "https://m.tv360.vn", "No"), 
-("https://vmttv.dpdns.org/tv360/?id=son-la", "https://m.tv360.vn", "No"),
+("https://vmttv.dpdns.org/tv360/?id=son-la", "https://m.tv360.vn", "No"), 
+("http://cdn.sonlatv.vn/live/28595222e707a364251b8724717894baa46/chunklist.m3u8", "https://sonlatv.vn", "No"), 
   ],
   "tvg_id": "sonla",
  },
