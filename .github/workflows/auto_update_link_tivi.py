@@ -81,6 +81,89 @@ def get_live_link(urls_config, channel_name):
     print(f"[{ch_upper}] Tất cả các link đều thất bại.")
     return None, None, None
 
+import os
+import re
+import requests
+from slow_channels import SLOW_CHANNELS
+
+CHANNELS = SLOW_CHANNELS
+FAST_CHANNELS = [""]
+FILE_NAME = "tivi.m3u"
+
+def get_live_link(urls_config, channel_name):
+    if isinstance(urls_config, str):
+        urls_config = [(urls_config, "", "", "Getlink")]
+
+    ch_upper = channel_name.upper()
+
+    for idx, item in enumerate(urls_config, 1):
+        # Cấu trúc: ("link m3u8", "link referer", "mã key", "Getlink or No")
+        url = ""
+        referer = ""
+        license_key = ""
+        action_type = "Getlink"
+
+        if isinstance(item, tuple):
+            if len(item) >= 4:
+                url, referer, license_key, action_type = item[:4]
+            elif len(item) == 3:
+                url, referer, third_val = item
+                # Kiểm tra xem phần tử thứ 3 là action_type hay license_key thực sự
+                if str(third_val).strip().lower() in ["getlink", "no"]:
+                    action_type = third_val
+                    license_key = ""
+                else:
+                    license_key = third_val
+            elif len(item) == 2:
+                url, second_val = item
+                if str(second_val).strip().lower() in ["getlink", "no"]:
+                    action_type = second_val
+                else:
+                    referer = second_val
+            elif len(item) == 1:
+                url = item[0]
+        else:
+            url = item
+
+        is_no_mode = str(action_type).strip().lower() == "no"
+
+        if is_no_mode:
+            print(f"[{ch_upper}] Đang kiểm tra nhanh link {idx} (Cấu hình No/DASH): {url}")
+        else:
+            print(f"[{ch_upper}] Đang thử link {idx} (Getlink): {url}")
+
+        try:
+            headers = {}
+            if referer:
+                headers["Referer"] = referer
+
+            response = requests.get(url, headers=headers, timeout=10, allow_redirects=True, stream=True)
+
+            if is_no_mode:
+                if response.status_code != 404 and response.status_code != 410:
+                    print(f"[{ch_upper}] Link {idx} (No) hợp lệ (HTTP {response.status_code}), sử dụng trực tiếp.")
+                    return url, referer, license_key
+                else:
+                    print(f"[{ch_upper}] Link {idx} (No) đã chết (HTTP {response.status_code}), chuyển sang link dự phòng...")
+                    continue
+
+            if response.status_code == 200:
+                final_url = response.url
+
+                if "master.m3u8" in final_url:
+                    final_url = final_url.replace("master.m3u8", "playlist_720p.m3u8")
+
+                print(f"[{ch_upper}] Thành công với link {idx}: {final_url}")
+                return final_url, referer, license_key
+            
+            print(f"[{ch_upper}] Link {idx} trả về mã lỗi HTTP {response.status_code}")
+
+        except Exception as e:
+            print(f"[{ch_upper}] Lỗi khi kết nối link {idx}: {e}")
+
+    print(f"[{ch_upper}] Tất cả các link đều thất bại.")
+    return None, None, None
+
 def update_m3u_file():
     if not os.path.exists(FILE_NAME):
         print(f"Lỗi: Không tìm thấy file {FILE_NAME} trong thư mục để sửa đổi.")
