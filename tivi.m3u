@@ -146,10 +146,6 @@ http://livevliatmcdw.seenow.vn/live/data8/HAY_TV/Live_DASHDRM/HAY_TV.mpd
 #KODIPROP:inputstream.adaptive.license_key=f3d73b3a9b89462ebf7911004ea3b3b9:2e547a81ff90aa02648cb9e3f79e7339
 http://livevlisctcdnw.seenow.vn/Live_DASHDRM2/THETHAO_HD/manifest.mpd
 
-#EXTINF:-1 tvg-id="" tvg-logo="",Phim Việt
-#EXTVLCOPT:http-user-referer=https://bozztv.com
-http://dvrfl05.bozztv.com/vch_vchannel2/tracks-v1a1/mono.m3u8
-
 #EXTINF:-1 tvg-id="" tvg-logo="",Giọng Ca Để Đời
 #EXTVLCOPT:http-user-referer=https://bozztv.com
 http://dvrfl05.bozztv.com/vch_vchannel5/tracks-v1a1/mono.m3u8
@@ -157,10 +153,6 @@ http://dvrfl05.bozztv.com/vch_vchannel5/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="" tvg-logo="",Bolero
 #EXTVLCOPT:http-user-referer=https://bozztv.com
 http://dvrfl05.bozztv.com/vch_vchannel6/tracks-v1a1/mono.m3u8
-
-#EXTINF:-1 tvg-id="" tvg-logo="",VIETSKY TV
-#EXTVLCOPT:http-user-referer=https://bozztv.com
-http://dvrfl05.bozztv.com/vch_vchannel13/tracks-v1a1/mono.m3u8
 
 #EXTINF:-1 tvg-id="htvcplushd" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/htvcplus.png", HTVC+
 #EXTVLCOPT:http-user-referer=https://vieon.vn
