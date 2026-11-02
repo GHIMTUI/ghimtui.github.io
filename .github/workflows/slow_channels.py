@@ -237,7 +237,13 @@ SLOW_CHANNELS = {
  ],
   "tvg_id": "vohm",
  }, 
- 
+  "voh": {
+  "url": [
+("http://tv.vietanhtv.top/vieon/vieon.php?id=vohm-fm-95-6-mhz", "https://vieon.vn", "Getlink"),
+ ],
+  "tvg_id": "voh",
+ }, 
+
  "vinhlong1": {
   "url": [
 ("http://tv.vietanhtv.top/vieon/vieon.php?id=thvl1-hd", "https://vieon.vn", "Getlink"), 
@@ -474,12 +480,13 @@ SLOW_CHANNELS = {
  },
   "gialai": {
   "url": [ 
-("http://tldigital-17th06day-tl9648290.duckdns.org/tv.m3u8", "No"), 
 ("http://tv.vietanhtv.top/vieon/vieon.php?id=gia-lai-1", "https://vieon.vn", "Getlink"), 
 ("http://tv.gialaitv.vn/tv.m3u8", "https://gialaitv.vn", "No"), 
 ("http://vtvgolive-ott3.vtvdigital.vn/live/binhdinhtv/chunklist_1.m3u8", "https://vtvgo.vn", "No"), 
 ("http://freem3u.xyz/api/live/play.m3u8?vid=55", "https://m.tv360.vn", "No"), 
-("https://vmttv.dpdns.org/tv360/?id=gia-lai", "https://m.tv360.vn", "No"),
+("https://vmttv.dpdns.org/tv360/?id=gia-lai", "https://m.tv360.vn", "No"), 
+("http://tldigital-17th06day-tl9648290.duckdns.org/tv.m3u8", "No"), 
+
   ],
   "tvg_id": "gialai",
  },
