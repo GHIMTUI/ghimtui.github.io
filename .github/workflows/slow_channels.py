@@ -473,7 +473,8 @@ SLOW_CHANNELS = {
   "tvg_id": "dongthap2",
  },
   "gialai": {
-  "url": [
+  "url": [ 
+("http://tldigital-17th06day-tl9648290.duckdns.org/tv.m3u8", "No"), 
 ("http://tv.vietanhtv.top/vieon/vieon.php?id=gia-lai-1", "https://vieon.vn", "Getlink"), 
 ("http://tv.gialaitv.vn/tv.m3u8", "https://gialaitv.vn", "No"), 
 ("http://vtvgolive-ott3.vtvdigital.vn/live/binhdinhtv/chunklist_1.m3u8", "https://vtvgo.vn", "No"), 
