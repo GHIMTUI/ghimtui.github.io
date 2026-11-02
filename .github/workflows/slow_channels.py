@@ -52,14 +52,13 @@ SLOW_CHANNELS = {
  },
  "sctv8": {
   "url": [ 
-("http://vtvgolive-sctvdrm.vtvdigital.vn/manifest/sctv8/playlist_720p.m3u8", "https://vtvdigital.vn", "No"), 
 ("https://vmttv.dpdns.org/VTVGo/?sctv8", "https://vtvgo.vn", "No"),
   ],
   "tvg_id": "sctv8hd",
  },
  "sctv9": {
   "url": [ 
-("http://vtvgolive-sctvdrm.vtvdigital.vn/manifest/sctv14/playlist_720p.m3u8", "https://vtvdigital.vn", "No"), 
+("http://vtvgolive-sctvdrm.vtvdigital.vn/manifest/sctv9/playlist_720p.m3u8", "https://vtvdigital.vn", "No"), 
 ("https://vmttv.dpdns.org/VTVGo/?sctv9", "https://vtvgo.vn", "Getlink"),
 ("https://vietanhtv.id.vn/sctv/sctv9-cdd19ab2/index.m3u8", "https://sctvonline.vn", "Getlink"),
   ],
@@ -125,8 +124,8 @@ SLOW_CHANNELS = {
  },
  "sctv21": {
   "url": [ 
-("https://vietanhtv.id.vn/sctv/sctv-21-57de221a/index.m3u8", "https://sctvonline.vn", "Getlink"),
-("https://vmttv.dpdns.org/VTVGo/?sctv21", "https://vtvgo.vn", "No"),
+("https://vmttv.dpdns.org/VTVGo/?sctv21", "https://vtvgo.vn", "No"), 
+("https://vietanhtv.id.vn/sctv/sctv-21-57de221a/index.m3u8", "https://sctvonline.vn", "Getlink"), 
   ],
   "tvg_id": "sctv21hd",
  },
