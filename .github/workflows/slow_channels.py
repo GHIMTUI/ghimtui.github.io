@@ -50,12 +50,6 @@ SLOW_CHANNELS = {
   ],
   "tvg_id": "sctv7hd",
  },
- "sctv8": {
-  "url": [ 
-("https://vmttv.dpdns.org/VTVGo/?sctv8", "https://vtvgo.vn", "No"),
-  ],
-  "tvg_id": "sctv8hd",
- },
  "sctv9": {
   "url": [ 
 ("http://vtvgolive-sctvdrm.vtvdigital.vn/manifest/sctv9/playlist_720p.m3u8", "https://vtvdigital.vn", "No"), 
@@ -121,13 +115,6 @@ SLOW_CHANNELS = {
 
   ],
   "tvg_id": "sctv19hd",
- },
- "sctv21": {
-  "url": [ 
-("https://vmttv.dpdns.org/VTVGo/?sctv21", "https://vtvgo.vn", "No"), 
-("https://vietanhtv.id.vn/sctv/sctv-21-57de221a/index.m3u8", "https://sctvonline.vn", "Getlink"), 
-  ],
-  "tvg_id": "sctv21hd",
  },
  "sctvphimtonghop": {
   "url": [ 
