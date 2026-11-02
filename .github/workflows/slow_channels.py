@@ -1,6 +1,7 @@
 SLOW_CHANNELS = {
 "sctv1": {
-  "url": [
+  "url": [ 
+("http://vtvgolive-sctvdrm.vtvdigital.vn/manifest/sctv1/playlist_1080p.m3u8", "https://vtvdigital.vn", "No"), 
 ("http://liveatmvng.vtvprime.vn/live/data8/SCTV1/Live_DASHDRM/SCTV1.mpd",  "https://vtvprime.vn",  "9121ebe293bc46cd89e5d83a78c1a53c:9285615a491a424fb025f9e8d571bcd5", "No"), 
 ("https://vietanhtv.id.vn/sctv/sctv1-hd-7f2aafec/index.m3u8", "https://sctvonline.vn", "Getlink"),
   ],
@@ -8,7 +9,8 @@ SLOW_CHANNELS = {
  },
 
  "sctv2": {
-  "url": [
+  "url": [ 
+("http://vtvgolive-sctvdrm.vtvdigital.vn/manifest/sctv2/playlist_1080p.m3u8", "https://vtvdigital.vn", "No"), 
 ("https://vmttv.dpdns.org/VTVGo/?sctv2", "https://vtvgo.vn", "Getlink"),
 ("https://vietanhtv.id.vn/sctv/sctv2-57c3884d/index.m3u8", "https://sctvonline.vn", "Getlink"),
 ("http://freem3u.xyz/api/live/play.m3u8?vid=201", "https://m.tv360.vn", "No"),
@@ -17,21 +19,24 @@ SLOW_CHANNELS = {
   "tvg_id": "sctv2hd",
  },
  "sctv3": {
-  "url": [
+  "url": [ 
+("http://vtvgolive-sctvdrm.vtvdigital.vn/manifest/sctv3/playlist_1080p.m3u8", "https://vtvdigital.vn", "No"), 
 ("https://vmttv.dpdns.org/VTVGo/?sctv3", "https://vtvgo.vn", "Getlink"),
 ("https://vietanhtv.id.vn/sctv/sctv3-hd-cf3adaca/index.m3u8", "https://sctvonline.vn", "Getlink"),
   ],
   "tvg_id": "sctv3hd",
  },
  "sctv4": {
-  "url": [
+  "url": [ 
+("http://vtvgolive-sctvdrm.vtvdigital.vn/manifest/sctv4/playlist_1080p.m3u8", "https://vtvdigital.vn", "No"), 
 ("https://vmttv.dpdns.org/VTVGo/?sctv4", "https://vtvgo.vn", "Getlink"), 
 ("https://vietanhtv.id.vn/sctv/sctv4-ae779f7e/index.m3u8", "https://sctvonline.vn", "Getlink"),
   ],
   "tvg_id": "sctv4hd",
  },
  "sctv6": {
-  "url": [
+  "url": [ 
+("http://vtvgolive-sctvdrm.vtvdigital.vn/manifest/sctv6/playlist_1080p.m3u8", "https://vtvdigital.vn", "No"), 
 ("https://vmttv.dpdns.org/VTVGo/?sctv6", "https://vtvgo.vn", "Getlink"), ("https://vietanhtv.id.vn/sctv/sctv6-202e4566/index.m3u8", "https://sctvonline.vn", "Getlink"),
 ("http://freem3u.xyz/api/live/play.m3u8?vid=232", "https://m.tv360.vn", "No"),
 ("https://vmttv.dpdns.org/tv360/?id=sctv6", "https://m.tv360.vn", "No"),
@@ -39,48 +44,55 @@ SLOW_CHANNELS = {
   "tvg_id": "sctv6hd",
  },
  "sctv7": {
-  "url": [
+  "url": [ 
+("http://vtvgolive-sctvdrm.vtvdigital.vn/manifest/sctv7/playlist_1080p.m3u8", "https://vtvdigital.vn", "No"), 
 ("https://vmttv.dpdns.org/VTVGo/?sctv7", "https://vtvgo.vn", "Getlink"),
 ("https://vietanhtv.id.vn/sctv/sctv7-ef7e259a/index.m3u8", "https://sctvonline.vn", "Getlink"),
   ],
   "tvg_id": "sctv7hd",
  },
  "sctv8": {
-  "url": [
+  "url": [ 
+("http://vtvgolive-sctvdrm.vtvdigital.vn/manifest/sctv8/playlist_1080p.m3u8", "https://vtvdigital.vn", "No"), 
 ("https://vmttv.dpdns.org/VTVGo/?sctv8", "https://vtvgo.vn", "No"),
   ],
   "tvg_id": "sctv8hd",
  },
  "sctv9": {
-  "url": [
+  "url": [ 
+("http://vtvgolive-sctvdrm.vtvdigital.vn/manifest/sctv14/playlist_1080p.m3u8", "https://vtvdigital.vn", "No"), 
 ("https://vmttv.dpdns.org/VTVGo/?sctv9", "https://vtvgo.vn", "Getlink"),
 ("https://vietanhtv.id.vn/sctv/sctv9-cdd19ab2/index.m3u8", "https://sctvonline.vn", "Getlink"),
   ],
   "tvg_id": "sctv9hd",
  },
  "sctv11": {
-  "url": [
+  "url": [ 
+("http://vtvgolive-sctvdrm.vtvdigital.vn/manifest/sctv11/playlist_1080p.m3u8", "https://vtvdigital.vn", "No"), 
 ("https://vmttv.dpdns.org/VTVGo/?sctv11", "https://vtvgo.vn", "Getlink"),
 ("https://vietanhtv.id.vn/sctv/=sctv11-1d565c47/index.m3u8", "https://sctvonline.vn", "Getlink"),
   ],
   "tvg_id": "sctv11hd",
  },
  "sctv12": {
-  "url": [
+  "url": [ 
+("http://vtvgolive-sctvdrm.vtvdigital.vn/manifest/sctv12/playlist_1080p.m3u8", "https://vtvdigital.vn", "No"), 
 ("https://vmttv.dpdns.org/VTVGo/?sctv12", "https://vtvgo.vn", "Getlink"),
 ("https://vietanhtv.id.vn/sctv/=sctv12-b0d6c023/index.m3u8", "https://sctvonline.vn", "Getlink"),
   ],
   "tvg_id": "sctv12hd",
  },
  "sctv13": {
-  "url": [
+  "url": [ 
+("http://vtvgolive-sctvdrm.vtvdigital.vn/manifest/sctv13/playlist_1080p.m3u8", "https://vtvdigital.vn", "No"), 
 ("https://vmttv.dpdns.org/VTVGo/?sctv13", "https://vtvgo.vn", "Getlink"),
 ("https://vietanhtv.id.vn/sctv/sctv13-67f88fcb/index.m3u8", "https://sctvonline.vn", "Getlink"),
   ],
   "tvg_id": "sctv13hd",
  },
  "sctv14": {
-  "url": [
+  "url": [ 
+("http://vtvgolive-sctvdrm.vtvdigital.vn/manifest/sctv14/playlist_1080p.m3u8", "https://vtvdigital.vn", "No"), 
 ("https://vmttv.dpdns.org/VTVGo/?sctv14", "https://vtvgo.vn", "No"),
 ("https://vietanhtv.id.vn/sctv/sctv14-789c9f45/index.m3u8", "https://sctvonline.vn", "Getlink"),
   ],
@@ -88,21 +100,24 @@ SLOW_CHANNELS = {
  },
 
  "sctv16": {
-  "url": [
+  "url": [ 
+("http://vtvgolive-sctvdrm.vtvdigital.vn/manifest/sctv16/playlist_1080p.m3u8", "https://vtvdigital.vn", "No"), 
 ("https://vmttv.dpdns.org/VTVGo/?sctv16", "https://vtvgo.vn", "Getlink"),
 ("https://vietanhtv.id.vn/sctv/sctv16-dd1535e8/index.m3u8", "https://sctvonline.vn", "Getlink"),
   ],
   "tvg_id": "sctv16hd",
  },
  "sctv18": {
-  "url": [
+  "url": [ 
+("http://vtvgolive-sctvdrm.vtvdigital.vn/manifest/sctv18/playlist_1080p.m3u8", "https://vtvdigital.vn", "No"), 
 ("https://vmttv.dpdns.org/VTVGo/?sctv18", "https://vtvgo.vn", "Getlink"),
 ("https://vietanhtv.id.vn/sctv/sctv18-398b0b4e/index.m3u8", "https://sctvonline.vn", "Getlink"),
   ],
   "tvg_id": "sctv18hd",
  },
  "sctv19": {
-  "url": [
+  "url": [ 
+("http://vtvgolive-sctvdrm.vtvdigital.vn/manifest/sctv19/playlist_1080p.m3u8", "https://vtvdigital.vn", "No"), 
 ("https://vietanhtv.id.vn/sctv/sctv19-bf00bd02/index.m3u8", "https://sctvonline.vn", "Getlink"),
 ("https://vmttv.dpdns.org/VTVGo/?sctv19", "https://vtvgo.vn", "No"),
 
@@ -110,14 +125,16 @@ SLOW_CHANNELS = {
   "tvg_id": "sctv19hd",
  },
  "sctv21": {
-  "url": [
+  "url": [ 
+("http://vtvgolive-sctvdrm.vtvdigital.vn/manifest/sctv21/playlist_1080p.m3u8", "https://vtvdigital.vn", "No"), 
 ("https://vietanhtv.id.vn/sctv/sctv-21-57de221a/index.m3u8", "https://sctvonline.vn", "Getlink"),
 ("https://vmttv.dpdns.org/VTVGo/?sctv21", "https://vtvgo.vn", "No"),
   ],
   "tvg_id": "sctv21hd",
  },
  "sctvphimtonghop": {
-  "url": [
+  "url": [ 
+("http://vtvgolive-sctvdrm.vtvdigital.vn/manifest/sctvpth/playlist_1080p.m3u8", "https://vtvdigital.vn", "No"), 
 ("https://vmttv.dpdns.org/VTVGo/?sctvphim", "https://vtvgo.vn", "Getlink"),
 ("https://vietanhtv.id.vn/sctv/sctv-phim-tong-hop-e6d2df88/index.m3u8", "https://sctvonline.vn", "Getlink"),
   ],
@@ -296,10 +313,10 @@ SLOW_CHANNELS = {
   "tvg_id": "antvhd",
  },
   "qpvn": {
-  "url": [
+  "url": [ 
+("http://qpvn.vn/live/qpvn/1080p.m3u8", "https://qpvn.vn", "No"), 
 ("http://livesct.vtvprime.vn/Live_DASHDRM1/QPTV/manifest.mpd", "https://vtvprime.vn", "No"), 
 ("http://tv.vietanhtv.top/vieon/vieon.php?id=qpvn-hd", "https://vieon.vn", "Getlink"), 
-("http://qpvn.vn/live/qpvn/1080p.m3u8", "https://qpvn.vn", "No"), 
 ("http://freem3u.xyz/api/live/play.m3u8?vid=19", "https://m.tv360.vn", "No"), 
 ("https://vmttv.dpdns.org/tv360/?id=qpvn-hd", "https://m.tv360.vn", "No"), 
   ],
@@ -332,9 +349,9 @@ SLOW_CHANNELS = {
 "tvg_id": "angiang3",
  },
 "bacninh": {
-  "url": [
+  "url": [ 
+("http://tv.vietanhtv.top/vieon/vieon.php?id=bac-ninh-1", "https://vieon.vn", "Getlink"), 
 ("http://liveh34.vtvprime.vn/hls/BACGIANGTV/03.m3u8", "https://vtvprime.vn", "No"), 
-("http://tv.vietanhtv.top/vieon/vieon.php?id=bac-ninh-1", "https://vieon.vn", "Getlink"),
 ("http://freem3u.xyz/api/live/play.m3u8?vid=39", "https://m.tv360.vn", "No"), 
 ("https://vmttv.dpdns.org/tv360/?id=bac-ninh", "https://m.tv360.vn", "No"),
 
@@ -391,7 +408,7 @@ SLOW_CHANNELS = {
  },
  "danang1": {
   "url": [
-("http://live.mediatech.vn/live/285b59a111d76974225a8e3004bfc31a509/chunklist.m3u8", "https://danangtv.vn", "No"), 
+("http://live.mediatech.vn/live/285b59a111d76974225a8e3004bfc31a509/playlist.m3u8", "https://danangtv.vn", "No"), 
 ("http://liveh12.vtvprime.vn/hls/DANANGTV/03.m3u8", "https://vtvprime.vn", "No"), 
 ("http://tv.vietanhtv.top/vieon/vieon.php?id=da-nang-1", "https://vieon.vn", "Getlink"), 
 ("http://freem3u.xyz/api/live/play.m3u8?vid=49", "https://m.tv360.vn", "No"), 
@@ -531,10 +548,9 @@ SLOW_CHANNELS = {
 
   "hue": {
   "url": [
-("http://liveh34.vtvprime.vn/hls/HUE/03.m3u8", "https://vtvprime.vn", "No"), 
 ("http://tv.vietanhtv.top/vieon/vieon.php?id=thua-thien-hue-1", "https://vieon.vn", "Getlink"), 
 ("https://live.huetv.com.vn/TRT-Online/chunklist.m3u8", "https://huetv.com.vn", "No"), 
-("http://freem3u.xyz/api/live/play.m3u8?vid=63", "https://m.tv360.vn", "No"), ("https://vmttv.dpdns.org/tv360/?id=hue", "https://m.tv360.vn", "No"),
+("http://freem3u.xyz/api/live/play.m3u8?vid=63", "https://m.tv360.vn", "No"), ("https://vmttv.dpdns.org/tv360/?id=hue", "https://m.tv360.vn", "No"), ("http://liveh34.vtvprime.vn/hls/HUE/03.m3u8", "https://vtvprime.vn", "No"), 
   ],
   "tvg_id": "hue",
  },
@@ -578,7 +594,8 @@ SLOW_CHANNELS = {
  },
 
  "lamdong1": {
-  "url": [
+  "url": [ 
+("http://live.baolamdong.vn/ltv1/index.m3u8", "https://baolamdong.vn", "No"), 
 ("http://liveh12.vtvprime.vn/hls/LTV1/04.m3u8", "https://vtvprime.vn", "No"), 
 ("http://tv.vietanhtv.top/vieon/vieon.php?id=lam-dong-1", "https://vieon.vn", "Getlink"), 
 ("http://freem3u.xyz/api/live/play.m3u8?vid=69", "https://m.tv360.vn", "No"), 
@@ -607,8 +624,8 @@ SLOW_CHANNELS = {
 
   "laocai": {
   "url": [
-("http://live.baolaocai.vn/channel2/stream.m3u8", "https://baolaocai.vn", "No"), 
 ("http://tv.vietanhtv.top/vieon/vieon.php?id=lao-cai-1", "https://vieon.vn", "Getlink"), 
+("http://live.baolaocai.vn/channel2/stream.m3u8", "https://baolaocai.vn", "No"), 
 ("http://freem3u.xyz/api/live/play.m3u8?vid=71", "https://m.tv360.vn", "No"),  ("https://vmttv.dpdns.org/tv360/?id=lao-cai", "https://m.tv360.vn", "No"),
   ],
   "tvg_id": "laocai",
@@ -684,6 +701,7 @@ SLOW_CHANNELS = {
   "url": [
 ("https://tructuyen.baoquangtri.vn:5443/LiveApp/streams/20VcR6dL2B9Krwob13486956694488871.m3u8", "https://baoquangtri.vn", "No"), 
 ("http://tv.vietanhtv.top/vieon/vieon.php?id=quang-tri-1", "https://vieon.vn", "Getlink"), 
+("http://luuchieu.truyenhinhso.vn/media/live/07F4162EA25E7311C230CA00/index.m3u8", "https://truyenhinhso.vn", "No"), 
 ("http://freem3u.xyz/api/live/play.m3u8?vid=83", "https://m.tv360.vn", "No"), 
 ("https://vmttv.dpdns.org/tv360/?id=quang-tri", "https://m.tv360.vn", "No"),
   ],
