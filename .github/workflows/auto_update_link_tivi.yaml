@@ -40,7 +40,7 @@ jobs:
 
     - name: Lưu thay đổi
       run: |
-        git config --global user.name "github-actions[bot]"
+        git config --global user.name "TIVI A.I [bot]"
         git config --global user.email "github-actions[bot]@users.noreply.github.com"
         
         # Bỏ qua các file cache python không cần thiết
