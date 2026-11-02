@@ -239,7 +239,7 @@ SLOW_CHANNELS = {
  }, 
   "voh": {
   "url": [
-("http://tv.vietanhtv.top/vieon/vieon.php?id=vohm-fm-95-6-mhz", "https://vieon.vn", "Getlink"),
+("http://tv.vietanhtv.top/vieon/vieon.php?id=voh-fm-95-6-mhz", "https://vieon.vn", "Getlink"),
  ],
   "tvg_id": "voh",
  }, 
