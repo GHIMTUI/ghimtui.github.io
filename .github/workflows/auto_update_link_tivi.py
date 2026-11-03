@@ -121,7 +121,7 @@ def update_m3u_file():
 
     results = []
     # max_workers=15 nghĩa là chạy tối đa 10 luồng cùng lúc, bạn có thể tăng lên 15 hoặc 20 nếu mạng khỏe
-    with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
+    with concurrent.futures.ThreadPoolExecutor(max_workers=5) as executor:
         future_to_channel = {
             executor.submit(process_single_channel, ch_name, ch_conf): ch_name 
             for ch_name, ch_conf in channels_to_update.items()
