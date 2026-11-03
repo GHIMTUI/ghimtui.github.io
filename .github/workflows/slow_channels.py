@@ -869,7 +869,7 @@ SLOW_CHANNELS = {
   }, 
  "onbibi": {
     "url": [
-      ("http://livevliatmcdw.seenow.vn/live/data8/HAY_TV/Live_DASHDRM/HAY_TV.mpd", "https://vtvprime.vn", "f3d73b3a9b89462ebf7911004ea3b3b9:2e547a81ff90aa02648cb9e3f79e7339", "No"), 
+      ("http://livevlisctcdnw.seenow.vn/livesnv2/BIBI/manifest.mpd", "https://vtvprime.vn", "4196ec8c5fca4f1cb50e8f2668c63b10:a52178cddaf1b8726aadf6fa697b5bf4", "No"), 
 ("http://freem3u.xyz/api/live/play.m3u8?vid=178", "https://m.tv360.vn", "No"),
 ("http://vmttv.dpdns.org/tv360/?id=vtvcab-8-on-bi-bi-sd", "https://m.tv360.vn", "No"),
 
@@ -878,7 +878,7 @@ SLOW_CHANNELS = {
   }, 
  "onkids": {
     "url": [
-      ("http://livevliatmcdw.seenow.vn/live/data8/HAY_TV/Live_DASHDRM/HAY_TV.mpd", "https://vtvprime.vn", "f3d73b3a9b89462ebf7911004ea3b3b9:2e547a81ff90aa02648cb9e3f79e7339", "No"), 
+      ("http://livevlisctcdnw.seenow.vn/Live_DASHDRM1/BIBI_PLUS_clear/manifest.mpd", "https://vtvprime.vn", "c07669233e07416594577b29d60372a6:e8cfcf678750f494312dfcbdaee5132e", "No"), 
 ("http://freem3u.xyz/api/live/play.m3u8?vid=179", "https://m.tv360.vn", "No"),
 ("http://vmttv.dpdns.org/tv360/?id=vtvcab-21-cartoon-kids-hd", "https://m.tv360.vn", "No"),
 
