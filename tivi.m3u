@@ -136,6 +136,42 @@ http://livesct.vtvprime.vn/mean/VTVCAB13/index.m3u8
 #KODIPROP:inputstream.adaptive.license_key=f3d73b3a9b89462ebf7911004ea3b3b9:2e547a81ff90aa02648cb9e3f79e7339
 http://livevliatmcdw.seenow.vn/live/data8/HAY_TV/Live_DASHDRM/HAY_TV.mpd
 
+#EXTM3U
+#EXTINF:-1 tvg-id="" tvg-logo="https://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/vtvgo.png",VTVgo1 Phim Truyền Hình
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
+#EXTVLCOPT:http-user-referer=https://vtvgo.vn
+http://fast-channel-stg.vtvdigital.vn/playout/releases/go-20261013/channels/auto-phim-truyen/1080p/index.m3u8
+
+#EXTINF:-1 tvg-id="" tvg-logo="https://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/vtvgo.png",VTVgo2 Du Lịch
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
+#EXTVLCOPT:http-user-referer=https://vtvgo.vn
+http://fast-channel-stg.vtvdigital.vn/playout/releases/go-20261013/channels/auto-du-lich-kham-pha/1080p/index.m3u8
+
+#EXTINF:-1 tvg-id="" tvg-logo="https://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/vtvgo.png",VTVgo3 Game Show
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
+#EXTVLCOPT:http-user-referer=https://vtvgo.vn
+http://fast-channel-stg.vtvdigital.vn/playout/releases/go-20261013/channels/auto-game-show/1080p/index.m3u8
+
+#EXTINF:-1 tvg-id="" tvg-logo="https://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/vtvgo.png",VTVgo4 Ca Nhạc
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
+#EXTVLCOPT:http-user-referer=https://vtvgo.vn
+http://fast-channel-stg.vtvdigital.vn/playout/releases/go-20261013/channels/auto-ca-nhac/1080p/index.m3u8
+
+#EXTINF:-1 tvg-id="" tvg-logo="https://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/vtvgo.png",VTVgo5 Sức Khỏe
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
+#EXTVLCOPT:http-user-referer=https://vtvgo.vn
+http://fast-channel-stg.vtvdigital.vn/playout/releases/go-20261013/channels/auto-suc-khoe-nguoi-gia/1080p/index.m3u8
+
+#EXTINF:-1 tvg-id="" tvg-logo="https://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/vtvgo.png",VTVgo6 Thiếu Nhi
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
+#EXTVLCOPT:http-user-referer=https://vtvgo.vn
+http://fast-channel-stg.vtvdigital.vn/playout/releases/go-20261013/channels/auto-thieu-nhi/1080p/index.m3u8
+
+#EXTINF:-1 tvg-id="" tvg-logo="https://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/vtvgo.png",VTVgo7 Ký Sự
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
+#EXTVLCOPT:http-user-referer=https://vtvgo.vn
+http://fast-channel-stg.vtvdigital.vn/playout/releases/go-20261013/channels/auto-phim-tai-lieu/1080p/index.m3u8
+
 #EXTINF:-1 tvg-id="sctv1hd" tvg-logo="http://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/SCTV/SCTV1.png" ,SCTV1
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-user-referer=https://vtvprime.vn
