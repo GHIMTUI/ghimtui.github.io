@@ -231,19 +231,6 @@ SLOW_CHANNELS = {
   "tvg_id": "htvcdulichhd",
  }, 
 
- "vohm": {
-  "url": [
-("http://tv.vietanhtv.top/vieon/vieon.php?id=vohm-fm-92-92-5-mhz", "https://vieon.vn", "Getlink"),
- ],
-  "tvg_id": "vohm",
- }, 
-  "voh": {
-  "url": [
-("http://tv.vietanhtv.top/vieon/vieon.php?id=voh-fm-95-6-mhz", "https://vieon.vn", "Getlink"),
- ],
-  "tvg_id": "voh",
- }, 
-
  "vinhlong1": {
   "url": [
 ("http://tv.vietanhtv.top/vieon/vieon.php?id=thvl1-hd", "https://vieon.vn", "Getlink"), 
@@ -286,12 +273,7 @@ SLOW_CHANNELS = {
   ],
   "tvg_id": "vinhlong5hd",
  },
- "vinhlongfm": {
-  "url": [
-("http://tv.vietanhtv.top/vieon/vieon.php?id=vinh-long-audio", "https://vieon.vn", "Getlink"),
- ],
-  "tvg_id": "vinhlongfm",
- },
+
   "antv": {
   "url": [
 ("http://livesct.vtvprime.vn/Live_DASHDRM1/ANNINHTV/manifest.mpd", "https://vtvprime.vn", "No"), 
