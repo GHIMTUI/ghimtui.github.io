@@ -597,9 +597,9 @@ SLOW_CHANNELS = {
  },
 
   "laocai": {
-  "url": [
-("http://tv.vietanhtv.top/vieon/vieon.php?id=lao-cai-1", "https://vieon.vn", "Getlink"), 
+  "url": [ 
 ("http://live.baolaocai.vn/channel2/stream.m3u8", "https://baolaocai.vn", "No"), 
+("http://tv.vietanhtv.top/vieon/vieon.php?id=lao-cai-1", "https://vieon.vn", "Getlink"), 
 ("http://freem3u.xyz/api/live/play.m3u8?vid=71", "https://m.tv360.vn", "No"),  ("https://vmttv.dpdns.org/tv360/?id=lao-cai", "https://m.tv360.vn", "No"),
   ],
   "tvg_id": "laocai",
@@ -699,10 +699,10 @@ SLOW_CHANNELS = {
   "tvg_id": "tayninh1",
  },
   "thainguyen": {
-  "url": [
-("http://streaming.thainguyentv.vn/hls/livestream.m3u8", "https://baothainguyen.vn", "No"), 
-("http://tv.vietanhtv.top/vieon/vieon.php?id=thai-nguyen-1", "https://vieon.vn", "Getlink"), 
+  "url": [ 
 ("http://liveh34.vtvprime.vn/hls/THAINGUYENTV/03.m3u8", "https://vtvprime.vn", "No"), 
+("http://tv.vietanhtv.top/vieon/vieon.php?id=thai-nguyen-1", "https://vieon.vn", "Getlink"), 
+("http://streaming.thainguyentv.vn/hls/livestream.m3u8", "https://baothainguyen.vn", "No"), 
 ("http://freem3u.xyz/api/live/play.m3u8?vid=88", "https://m.tv360.vn", "No"),
 ("https://vmttv.dpdns.org/tv360/?id=thai-nguyen", "https://m.tv360.vn", "No"),
   ],
