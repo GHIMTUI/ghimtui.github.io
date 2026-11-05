@@ -234,6 +234,7 @@ SLOW_CHANNELS = {
  "vinhlong1": {
   "url": [
 ("http://tv.vietanhtv.top/vieon/vieon.php?id=thvl1-hd", "https://vieon.vn", "Getlink"), 
+("http://vtvgolive-ssaimh.vtvdigital.vn/manifest/dp-vinhlong1tv/playlist_720p.m3u8", "http://vtvgo.vn", "No"), 
 ("http://freem3u.xyz/api/live/play.m3u8?vid=25", "https://m.tv360.vn", "No"), 
 ("https://vmttv.dpdns.org/tv360/?id=vinh-long-1", "https://m.tv360.vn", "No"),
 ("http://125hvt.ddns.net:21585/thvl1/tracks-v1a1/mono.m3u8", "http://125hvt.ddns.net", "No"),
@@ -607,6 +608,7 @@ SLOW_CHANNELS = {
   "nghean": {
   "url": [
 ("http://live.mediatech.vn/live/2859591eef2e92249b682db021f4247c364/chunklist.m3u8", "https://truyenhinhnghean.vn", "No"), 
+("http://67tz1gnwrvxic.cmccdn.net/hls/NGHEANTV/03.m3u8","http://cmccdn.net","No"), 
 ("http://liveh12.vtvprime.vn/hls/NGHEANTV/03.m3u8", "https://vtvprime.vn", "No"), 
 ("http://tv.vietanhtv.top/vieon/vieon.php?id=nghe-an-1", "https://vieon.vn", "Getlink"), ("http://freem3u.xyz/api/live/play.m3u8?vid=74", "https://m.tv360.vn", "No"), 
 ("https://vmttv.dpdns.org/tv360/?id=nghe-an", "https://m.tv360.vn", "No"),
