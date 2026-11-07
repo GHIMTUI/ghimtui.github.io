@@ -410,8 +410,9 @@ SLOW_CHANNELS = {
   "tvg_id": "daklak",
  },
 "dienbien": {
-  "url": [
+  "url": [ 
 ("http://live.mediatech.vn/live/2855dfeccb7f49a41a2b0441b3bfeda413c/chunklist.m3u8", "https://dienbientv.vn", "No"), 
+("http://kenhdp-vtvgo.vtvdigital.vn/kenhdp/dienbientv-720p.m3u8", "No"), 
 ("http://tv.vietanhtv.top/vieon/vieon.php?id=dien-bien-1", "https://vieon.vn", "Getlink"), 
 ("http://freem3u.xyz/api/live/play.m3u8?vid=52", "https://m.tv360.vn", "No"), 
 ("https://vmttv.dpdns.org/tv360/?id=dien-bien", "https://m.tv360.vn", "No"),
@@ -495,6 +496,7 @@ SLOW_CHANNELS = {
 ("http://tv.vietanhtv.top/vieon/vieon.php?id=ha-tinh-1", "https://vieon.vn", "Getlink"), 
 ("http://cohauw9bgpvod.vcdn.cloud/httv1/index.m3u8", "https://baohatinh.vn", "No"), 
 ("http://liveh34.vtvprime.vn/hls/HATINH/03.m3u8", "https://vtvprime.vn", "No"), 
+("http://vtvgolive-ott3.vtvdigital.vn/live/hatinhtv/chunklist_2.m3u8", "No"), 
 ("http://freem3u.xyz/api/live/play.m3u8?vid=58", "https://m.tv360.vn", "No"), 
 ("https://vmttv.dpdns.org/tv360/?id=ha-tinh", "https://m.tv360.vn", "No"),
   ],
@@ -684,7 +686,8 @@ SLOW_CHANNELS = {
   "tvg_id": "quangtri",
  },
   "sonla": {
-  "url": [
+  "url": [ 
+("http://kenhdp-vtvgo.vtvdigital.vn/kenhdp/sonla-720p.m3u8", "No"), 
 ("http://tv.vietanhtv.top/vieon/vieon.php?id=son-la", "https://vieon.vn", "Getlink"), 
 ("http://freem3u.xyz/api/live/play.m3u8?vid=85", "https://m.tv360.vn", "No"), 
 ("https://vmttv.dpdns.org/tv360/?id=son-la", "https://m.tv360.vn", "No"), 
