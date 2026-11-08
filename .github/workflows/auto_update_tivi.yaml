@@ -2,7 +2,7 @@ name: Auto Update Channel
 
 on:
   schedule:
-    - cron: '30 11 * * *' # GMT+0
+    - cron: '58 16 * * *' # GMT+0
   workflow_dispatch: # Cho phép bấm chạy thủ công tất cả các kênh
 
 jobs:
