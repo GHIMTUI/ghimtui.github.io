@@ -36,7 +36,7 @@ jobs:
 
     - name: Chạy script liên kết
       run: |
-        python auto_update_link_tivi.py
+        python .github/workflows/auto_update_link_tivi.py
 
     - name: Lưu thay đổi
       run: |
