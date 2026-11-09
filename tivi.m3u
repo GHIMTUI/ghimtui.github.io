@@ -1,4 +1,4 @@
-#EXTM3U
+#EXTM3U url-tvg="https://vnepg.site/epg.xml"
 
 #EXTINF:-1 tvg-id="vinhlong1hd" tvg-logo="https://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/vinhlong1.png", Vĩnh Long 1
 #EXTVLCOPT:http-user-referer=https://vieon.vn
