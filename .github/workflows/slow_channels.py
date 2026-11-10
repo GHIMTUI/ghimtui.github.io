@@ -49,6 +49,12 @@ SLOW_CHANNELS = {
 ("https://vietanhtv.id.vn/sctv/sctv7-ef7e259a/index.m3u8", "https://sctvonline.vn", "Getlink"),
   ],
   "tvg_id": "sctv7hd",
+ }, 
+ "sctv7": {
+  "url": [ 
+("https://vmttv.dpdns.org/VTVGo/?sctv8", "https://vtvgo.vn", "No"),
+  ],
+  "tvg_id": "sctv8hd",
  },
  "sctv9": {
   "url": [ 
@@ -234,6 +240,7 @@ SLOW_CHANNELS = {
  "vinhlong1": {
   "url": [
 ("http://tv.vietanhtv.top/vieon/vieon.php?id=thvl1-hd", "https://vieon.vn", "Getlink"), 
+("http://dethich.pw/vinhlong1/index.m3u8", "http://vieon.vn", "Getlink"), 
 ("http://vtvgolive-ssaimh.vtvdigital.vn/manifest/dp-vinhlong1tv/playlist_720p.m3u8", "http://vtvgo.vn", "No"), 
 ("http://freem3u.xyz/api/live/play.m3u8?vid=25", "https://m.tv360.vn", "No"), 
 ("https://vmttv.dpdns.org/tv360/?id=vinh-long-1", "https://m.tv360.vn", "No"),
@@ -244,7 +251,8 @@ SLOW_CHANNELS = {
  },
  "vinhlong2": {
   "url": [
-("http://tv.vietanhtv.top/vieon/vieon.php?id=thvl2-hd", "https://vieon.vn", "Getlink"),
+("http://tv.vietanhtv.top/vieon/vieon.php?id=thvl2-hd", "https://vieon.vn", "Getlink"), 
+("http://dethich.pw/vinhlong2/index.m3u8", "http://vieon.vn", "Getlink"), 
 ("http://freem3u.xyz/api/live/play.m3u8?vid=26", "https://m.tv360.vn", "No"),
 ("https://vmttv.dpdns.org/tv360/?id=vinh-long-2", "https://m.tv360.vn", "No"),
   ],
@@ -252,7 +260,8 @@ SLOW_CHANNELS = {
  },
  "vinhlong3": {
   "url": [
-("http://tv.vietanhtv.top/vieon/vieon.php?id=thvl3-hd", "https://vieon.vn", "Getlink"),
+("http://tv.vietanhtv.top/vieon/vieon.php?id=thvl3-hd", "https://vieon.vn", "Getlink"), 
+("http://dethich.pw/vinhlong3/index.m3u8", "http://vieon.vn", "Getlink"), 
 ("http://freem3u.xyz/api/live/play.m3u8?vid=219", "https://m.tv360.vn", "No"),
 ("https://vmttv.dpdns.org/tv360/?id=vinh-long-3", "https://m.tv360.vn", "No"),
   ],
@@ -260,7 +269,8 @@ SLOW_CHANNELS = {
  },
  "vinhlong4": {
   "url": [
-("http://tv.vietanhtv.top/vieon/vieon.php?id=thvl4-hd", "https://vieon.vn", "Getlink"),
+("http://tv.vietanhtv.top/vieon/vieon.php?id=thvl4-hd", "https://vieon.vn", "Getlink"), 
+("http://dethich.pw/vinhlong4/index.m3u8", "http://vieon.vn", "Getlink"), 
 ("http://freem3u.xyz/api/live/play.m3u8?vid=220", "https://m.tv360.vn", "No"),
 ("https://vmttv.dpdns.org/tv360/?id=vinh-long-4", "https://m.tv360.vn", "No"),
   ],
@@ -268,8 +278,10 @@ SLOW_CHANNELS = {
  },
  "vinhlong5": {
   "url": [
-("http://tv.vietanhtv.top/vieon/vieon.php?id=tra-vinh-1", "https://vieon.vn", "Getlink"),
-("http://freem3u.xyz/api/live/play.m3u8?vid=91", "https://m.tv360.vn", "No"),
+("http://tv.vietanhtv.top/vieon/vieon.php?id=tra-vinh-1", "https://vieon.vn", "Getlink"), 
+("http://dethich.pw/vinhlong5/index.m3u8", "http://vieon.vn", "Getlink"), 
+("http://freem3u.xyz/api/live/play.m3u8?vid=91", "https://m.tv360.vn", "No"), 
+("http://dethich.pw/thvl5/index.m3u8", "No"), 
 ("https://vmttv.dpdns.org/tv360/?id=vinh-long-5", "https://m.tv360.vn", "No"),
   ],
   "tvg_id": "vinhlong5hd",
@@ -422,8 +434,9 @@ SLOW_CHANNELS = {
   "dongnai1": {
   "url": [
 ("http://cdn.mediatech.vn/dongnai/tv1live-transmux.m3u8", "https://mediatech.vn", "No"), 
+("http://vtvgolive-ott3.vtvdigital.vn/live/dongnai1tv/chunklist_2.m3u8", "http://vtvprime.vn", "No"), 
 ("http://tv.vietanhtv.top/vieon/vieon.php?id=dong-nai-1", "https://vieon.vn", "Getlink"), 
-("http://freem3u.xyz/api/live/play.m3dongnai53", "https://m.tv360.vn", "No"),  
+("http://freem3u.xyz/api/live/play.m3u8?vid=53", "https://m.tv360.vn", "No"),  
 ("https://vmttv.dpdns.org/tv360/?id=dong-nai-1", "https://m.tv360.vn", "No"),
   ],
   "tvg_id": "dongnai1",
@@ -431,6 +444,7 @@ SLOW_CHANNELS = {
   "dongnai2": {
   "url": [
 ("http://cdn.mediatech.vn/dongnai/tv2live-transmux.m3u8", "https://mediatech.vn", "No"), 
+("http://vtvgolive-ott3.vtvdigital.vn/live/dongnai2tv/chunklist_2.m3u8", "http://vtvprime.vn", "No"), 
 ("http://tv.vietanhtv.top/vieon/vieon.php?id=dong-nai-2", "https://vieon.vn", "Getlink"), 
 ("http://freem3u.xyz/api/live/play.m3u8?vid=255", "https://m.tv360.vn", "No"), 
 ("https://vmttv.dpdns.org/tv360/?id=dong-nai-2", "https://m.tv360.vn", "No"),
@@ -440,7 +454,8 @@ SLOW_CHANNELS = {
 
  "dongnai3": {
   "url": [
-("http://tv.vietanhtv.top/vieon/vieon.php?id=dong-nai-3", "https://vieon.vn", "Getlink"),
+("http://tv.vietanhtv.top/vieon/vieon.php?id=dong-nai-3", "https://vieon.vn", "Getlink"), 
+("http://dethich.pw/dongnai3/index.m3u8", "http://vieon.vn", "Getlink"), 
   ],
   "tvg_id": "dongnai3",
  },
