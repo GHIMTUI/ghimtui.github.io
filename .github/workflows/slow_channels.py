@@ -50,9 +50,9 @@ SLOW_CHANNELS = {
   ],
   "tvg_id": "sctv7hd",
  }, 
- "sctv7": {
+ "sctv8": {
   "url": [ 
-("https://vmttv.dpdns.org/VTVGo/?sctv8", "https://vtvgo.vn", "No"),
+("http://vmttv.dpdns.org/VTVGo/?sctv8", "https://dpdns.vn", "No"),
   ],
   "tvg_id": "sctv8hd",
  },
