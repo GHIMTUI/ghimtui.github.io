@@ -672,9 +672,9 @@ SLOW_CHANNELS = {
 
   "quangninh1": {
   "url": [
-("http://tv.vietanhtv.top/vieon/vieon.php?id=quang-ninh-1", "https://vieon.vn", "Getlink"), 
 ("http://liveh12.vtvprime.vn/hls/QUANGNINHTV/03.m3u8", "https://vtvprime.vn", "No"), 
 ("http://cdn.baoquangninh.vn/live/285f5e4256ea38d48eebdc6175909c847fe/chunklist.m3u8", "https://baoquangninh.vn", "No"), 
+("http://tv.vietanhtv.top/vieon/vieon.php?id=quang-ninh-1", "https://vieon.vn", "Getlink"), 
 ("http://freem3u.xyz/api/live/play.m3u8?vid=82", "https://m.tv360.vn", "No"), 
 ("https://vmttv.dpdns.org/tv360/?id=quang-ninh-1", "https://m.tv360.vn", "No"),
   ],
