@@ -23,55 +23,46 @@ https://livecdn-vthcm-bp.vieon.vn/fb76a3d7619a78292d6ac4fd9e320d74/1794485750000
 #EXTINF:-1 tvg-id="onphimviet" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/on_phimviet.png", ON Phim Việt
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-user-referer=http://onsports.vn
-#KODIPROP:inputstream.adaptive.manifest_type=dash
 http://cdnet-cdn-01.onsports.vn/vtvcabvtvgo/PHIM_VIET/sc-gaFEAQ/index.m3u8
 
 #EXTINF:-1 tvg-id="onmovies" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/on_movies.png", ON Movies
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-user-referer=http://onsports.vn
-#KODIPROP:inputstream.adaptive.manifest_type=dash
 http://cdnet-cdn-01.onsports.vn/vtvcabvtvgo/VAN_HOA/sc-gaFEAQ/index.m3u8
 
 #EXTINF:-1 tvg-id="oncine" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/on_cine.png", ON  Cine
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-user-referer=http://onsports.vn
-#KODIPROP:inputstream.adaptive.manifest_type=dash
 http://cdnet-cdn-01.onsports.vn/vtvcabvtvgo/FILM_TV/sc-gaFEAQ/index.m3u8
 
 #EXTINF:-1 tvg-id="onstyletv" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/on_styletv.png", ON Style
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-user-referer=http://onsports.vn
-#KODIPROP:inputstream.adaptive.manifest_type=dash
 http://cdnet-cdn-01.onsports.vn/vtvcabvtvgo/STYLE_TV_HD/sc-gaFEAQ/index.m3u8
 
 #EXTINF:-1 tvg-id="ono2tv" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/on_o2tv.png", ON O2
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-user-referer=http://onsports.vn
-#KODIPROP:inputstream.adaptive.manifest_type=dash
 http://cdnet-cdn-01.onsports.vn/vtvcabvtvgo/O2_TV/sc-gaFEAQ/index.m3u8
 
 #EXTINF:-1 tvg-id="onechannel" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/on_echannel.png", ON E Channel
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-user-referer=http://onsports.vn
-#KODIPROP:inputstream.adaptive.manifest_type=dash
 http://cdnet-cdn-01.onsports.vn/vtvcabvtvgo/E_CHANNEL/sc-gaFEAQ/index.m3u8
 
 #EXTINF:-1 tvg-id="oninfotv" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/on_infotv.png", ON Info
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-user-referer=http://onsports.vn
-#KODIPROP:inputstream.adaptive.manifest_type=dash
 http://cdnet-cdn-01.onsports.vn/vtvcabvtvgo/INFO_TV/sc-gaFEAQ/index.m3u8
 
 #EXTINF:-1 tvg-id="onlife" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/on_life.png", ON Life
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-user-referer=http://onsports.vn
-#KODIPROP:inputstream.adaptive.manifest_type=dash
 http://cdnet-cdn-01.onsports.vn/vtvcabvtvgo/LIFE_TV/sc-gaFEAQ/index.m3u8
 
 #EXTINF:-1 tvg-id="ontrendingtv" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/on_trendingtv.png", ON Trending
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-user-referer=http://onsports.vn
-#KODIPROP:inputstream.adaptive.manifest_type=dash
 http://cdnet-cdn-01.onsports.vn/vtvcabvtvgo/YEAH1_TV/sc-gaFEAQ/index.m3u8
 
 #EXTINF:-1 tvg-id="onviegiaitri" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/on_viegiaitri.png", ON Giải Trí
@@ -87,7 +78,6 @@ http://cdnet-cdn-01.onsports.vn/vtvcabvtvgo/D_DRAMAS_HD/sc-gaFEAQ/index.m3u8
 #EXTINF:-1 tvg-id="onvfamily" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/on_vfamily.png", ON VFamily
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-user-referer=http://onsports.vn
-#KODIPROP:inputstream.adaptive.manifest_type=dash
 http://cdnet-cdn-01.onsports.vn/vtvcabvtvgo/VFAMILY/sc-gaFEAQ/index.m3u8
 
 #EXTINF:-1 tvg-id="onhomeshopping" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/on_homeshopping.png", ON Home Shopping
@@ -451,19 +441,16 @@ http://live.mediatech.vn/live/2858e0e3ef3174443ae90f26ba4a8f0643f/chunklist.m3u8
 #EXTINF:-1 tvg-id="onbibi" tvg-logo="https://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/VTVCab/OnBibi.png",On BiBi
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-user-referer=http://onsports.vn
-#KODIPROP:inputstream.adaptive.manifest_type=dash
 http://cdnet-cdn-01.onsports.vn/vtvcabvtvgo/BIBI/sc-gaFEAQ/v2_index.m3u8
 
 #EXTINF:-1 tvg-id="onkids" tvg-logo="http://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/VTVCab/OnKids.png",On Kids
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-user-referer=http://onsports.vn
-#KODIPROP:inputstream.adaptive.manifest_type=dash
 http://cdnet-cdn-01.onsports.vn/vtvcabvtvgo/BIBI_PLUS_clear/sc-gaFEAQ/index.m3u8
 
 #EXTINF:-1 tvg-id="boomerang" tvg-logo="https://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/MSky/Cartoonito.png", Cartoonito
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-user-referer=https://mytv.com.vn/truyen-hinh 
-#KODIPROP:inputstream.adaptive.manifest_type=dash
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key={"keys":[{"kty":"oct","kid":"sfDXWekUNp2ziLOw3IFZcQ","k":"VnjTF-FwB6iKm5U55FJlEg"}],"type":"temporary"}
 http://s2129134.cdn.mytvnet.vn/pkg20/live_dzones/boomerang.smil/manifest.mpd
@@ -471,7 +458,6 @@ http://s2129134.cdn.mytvnet.vn/pkg20/live_dzones/boomerang.smil/manifest.mpd
 #EXTINF:-1 tvg-id="cartoonhd" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/cartoonnetwork.png", Cartoon Network
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-user-referer=https://mytv.com.vn/truyen-hinh 
-#KODIPROP:inputstream.adaptive.manifest_type=dash
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key={"keys":[{"kty":"oct","k":"PMGt1Drszj/jHJxqKluMIQ","kid":"PCAWZmCpOnWsd9uBVnOJ9w"}],"type":"temporary"}
 http://s2129134.cdn.mytvnet.vn/pkg20/live_dzones/cn.smil/manifest.mpd
@@ -479,7 +465,6 @@ http://s2129134.cdn.mytvnet.vn/pkg20/live_dzones/cn.smil/manifest.mpd
 #EXTINF:-1 tvg-id="dreamworks" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/dreamworks.png", Dreamworks
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-user-referer=https://mytv.com.vn/truyen-hinh 
-#KODIPROP:inputstream.adaptive.manifest_type=dash
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key={"keys":[{"kty":"oct","k":"WTKPYh1WdnvF/5QEqJQGgw","kid":"Z9riBSfGPa2qrmCaqRV3yw"}],"type":"temporary"}
 http://s2129134.cdn.mytvnet.vn/pkg20/live_dzones/dreamwork.smil/manifest.mpd
