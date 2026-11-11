@@ -630,7 +630,6 @@ SLOW_CHANNELS = {
  },
   "langson": {
   "url": [ 
-("http://vtvgolive-sctvdrm.vtvdigital.vn.vtvdigital.vn/aws-dp/langsontv_720p/chunks.m3u8", "https://vtvgo.vn", "No"), 
 ("http://stream.langsontv.vn/live/285c78da0c246524c90917842f8de03bd21/chunklist.m3u8", "https://langsontv.vn", "No"), 
 ("http://liveh34.vtvprime.vn/hls/LANGSON/03.m3u8", "https://vtvprime.vn", "No"), 
 ("http://tv.vietanhtv.top/vieon/vieon.php?id=lang-son-1", "https://vieon.vn", "Getlink"), 
