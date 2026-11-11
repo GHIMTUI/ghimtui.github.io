@@ -53,7 +53,7 @@ SLOW_CHANNELS = {
  }, 
  "sctv8": {
   "url": [ 
-("https://tv.vietanhtv.top/sctv/tv.php?id=sctv8-c12d138b", "https://sctvonline.vn", "Getlink"), 
+("https://liveatmvng.vtvprime.vn/live/data8/SCTV8/Live_DASHDRM/SCTV8.mpd", "https://sctvonline.vn","9121ebe293bc46cd89e5d83a78c1a53c:9285615a491a424fb025f9e8d571bcd5", "No"), 
 ("http://vmttv.dpdns.org/VTVGo/?sctv8", "https://dpdns.vn", "No"),
   ],
   "tvg_id": "sctv8hd",
@@ -126,12 +126,6 @@ SLOW_CHANNELS = {
   ],
   "tvg_id": "sctv19hd",
  }, 
-"sctv21": { 
-"url": [ 
-("http://tv.vietanhtv.top/sctv/tv.php?id=sctv-21-57de221a", "https://sctvonline.vn", "No"), 
-], 
-"tvg_id":"sctv21hd",
-}, 
 
  "sctvphimtonghop": {
   "url": [ 
@@ -474,7 +468,6 @@ SLOW_CHANNELS = {
 
  "dongnai3": {
   "url": [ 
-("http://tv.close.vn:8122/udp/225.1.1.36:30120", "https://close.vn", "No"),
 ("http://tv.vietanhtv.top/vieon/vieon.php?id=dong-nai-3", "https://vieon.vn", "Getlink"), 
 ("http://dethich.pw/dongnai3/index.m3u8", "http://vieon.vn", "Getlink"), 
   ],
@@ -788,7 +781,7 @@ SLOW_CHANNELS = {
  }, 
 "onphimviet": {
     "url": [ 
-("http://cdnet-cdn-01.onsports.vn/vtvcabvtvgo/PHIM_VIET/sc-gaFEAQ/v3_index.m3u8","http://onsports.vn","No"),  
+("http://cdnet-cdn-01.onsports.vn/vtvcabvtvgo/PHIM_VIET/sc-gaFEAQ/index.m3u8","http://onsports.vn","No"),  
 ("http://livevlisctcdnw.seenow.vn/livesnv2/PHIM_VIET/manifest.mpd", "https://vtvprime.vn", "7417db88928243fda4e03596bbd19a27:eebb689de1191ae1b207d32f0d5ca9fe", "No"), 
 ("http://freem3u.xyz/api/live/play.m3u8?vid=175", "https://m.tv360.vn", "No"),
 ("http://vmttv.dpdns.org/tv360/?id=vtvcab-2-on-phim-viet-hd", "https://m.tv360.vn", "No"),
@@ -798,7 +791,7 @@ SLOW_CHANNELS = {
   },
   "onmovies": {
     "url": [ 
-("http://cdnet-cdn-01.onsports.vn/vtvcabvtvgo/VAN_HOA/sc-gaFEAQ/v3_index.m3u8","http://onsports.vn","No"), 
+("http://cdnet-cdn-01.onsports.vn/vtvcabvtvgo/VAN_HOA/sc-gaFEAQ/index.m3u8","http://onsports.vn","No"), 
 ("http://livevlisctcdnw.seenow.vn/livesnv2/VAN_HOA/manifest.mpd", "https://vtvprime.vn", "2f571f6db60340e8a3cc3a5395d21611:553752778fe0d3ea79d434bf5f867f26", "No"), 
 ("http://freem3u.xyz/api/live/play.m3u8?vid=181", "https://m.tv360.vn", "No"),
 ("http://vmttv.dpdns.org/tv360/?id=vtvcab-4-on-movies", "https://m.tv360.vn", "No"),
@@ -808,7 +801,7 @@ SLOW_CHANNELS = {
   },
   "oncine": {
     "url": [ 
-("http://cdnet-cdn-01.onsports.vn/vtvcabvtvgo/FILM_TV/sc-gaFEAQ/v3_index.m3u8","http://onsports.vn","No"),  
+("http://cdnet-cdn-01.onsports.vn/vtvcabvtvgo/FILM_TV/sc-gaFEAQ/index.m3u8","http://onsports.vn","No"),  
 ("http://freem3u.xyz/api/live/play.m3u8?vid=176", "https://m.tv360.vn", "No"),  
 ("http://livevlisctcdnw.seenow.vn/onplus/FILM_TV/manifest.mpd", "https://vtvprime.vn", "c410ddc6a75244639fd0561fba5ef19b:30d13ea42031b9ff8271e5dc37d90e10", "No"), 
 ("http://vmttv.dpdns.org/tv360/?id=vtvcab-10-on-cine-hd", "https://m.tv360.vn", "No"),
@@ -818,7 +811,7 @@ SLOW_CHANNELS = {
   },
   "onstyletv": {
     "url": [ 
-("http://cdnet-cdn-01.onsports.vn/vtvcabvtvgo/STYLE_TV_HD/sc-gaFEAQ/v3_index.m3u8","http://onsports.vn","No"), 
+("http://cdnet-cdn-01.onsports.vn/vtvcabvtvgo/STYLE_TV_HD/sc-gaFEAQ/index.m3u8","http://onsports.vn","No"), 
 ("http://livevlisctcdnw.seenow.vn/livesnv2/STYLE_TV_HD/manifest.mpd", "https://vtvprime.vn", "414a288afe3d4f3985407d9613ec21eb:31d12c6d561e208f4c79b4a6c280dd5b", "No"), 
 ("http://freem3u.xyz/api/live/play.m3u8?vid=184", "https://m.tv360.vn", "No"),
 ("http://vmttv.dpdns.org/tv360/?id=vtvcab-12-on-styletv-hd", "https://m.tv360.vn", "No"),
@@ -828,7 +821,7 @@ SLOW_CHANNELS = {
   },
   "ono2tv": {
     "url": [ 
-("http://cdnet-cdn-01.onsports.vn/vtvcabvtvgo/O2_TV/sc-gaFEAQ/v3_index.m3u8","http://onsports.vn","No"), 
+("http://cdnet-cdn-01.onsports.vn/vtvcabvtvgo/O2_TV/sc-gaFEAQ/index.m3u8","http://onsports.vn","No"), 
 ("http://livevlisctcdnw.seenow.vn/livesnv2/O2_TV/manifest.mpd", "https://vtvprime.vn", "1b5a915f267e417085e0f68200395a41:5544d7c1e523a53d404ab2823132ee7e", "No"), 
 ("http://freem3u.xyz/api/live/play.m3u8?vid=136", "https://m.tv360.vn", "No"),
 ("http://vmttv.dpdns.org/tv360/?id=o2tv", "https://m.tv360.vn", "No"),
@@ -838,7 +831,7 @@ SLOW_CHANNELS = {
   },
   "onechannel": {
     "url": [ 
-("http://cdnet-cdn-01.onsports.vn/vtvcabvtvgo/E_CHANNEL/sc-gaFEAQ/v3_index.m3u8","http://onsports.vn","No"), 
+("http://cdnet-cdn-01.onsports.vn/vtvcabvtvgo/E_CHANNEL/sc-gaFEAQ/index.m3u8","http://onsports.vn","No"), 
 ("http://livevlisctcdnw.seenow.vn/livesnv2/E_CHANNEL/manifest.mpd", "https://vtvprime.vn", "04c8d53c9d4f48a78efdfd74888ffc38:8dfc9ea0293e3b94e5f44b8d9f2fac9f", "No"), 
 ("http://freem3u.xyz/api/live/play.m3u8?vid=182", "https://m.tv360.vn", "No"),
 ("http://vmttv.dpdns.org/tv360/?id=vtvcab-5-e-channel-hd", "https://m.tv360.vn", "No"),
@@ -848,7 +841,7 @@ SLOW_CHANNELS = {
   },
   "oninfotv": {
     "url": [ 
-("http://cdnet-cdn-01.onsports.vn/vtvcabvtvgo/INFO_TV/sc-gaFEAQ/v3_index.m3u8","http://onsports.vn","No"), 
+("http://cdnet-cdn-01.onsports.vn/vtvcabvtvgo/INFO_TV/sc-gaFEAQ/index.m3u8","http://onsports.vn","No"), 
 ("http://livevlisctcdnw.seenow.vn/livesnv2/INFO_TV/manifest.mpd", "https://vtvprime.vn", "39425f1a9f7f4db985b5e7b2e65e4208:63e3aad2bc5bed77e59724ba8d2e94f0", "No"), 
 ("http://freem3u.xyz/api/live/play.m3u8?vid=189", "https://m.tv360.vn", "No"),
 ("http://vmttv.dpdns.org/tv360/?id=vtvcab9-on-infotv-hd", "https://m.tv360.vn", "No"),
@@ -858,7 +851,7 @@ SLOW_CHANNELS = {
   },
   "onlife": {
     "url": [ 
-("http://cdnet-cdn-01.onsports.vn/vtvcabvtvgo/LIFE_TV/sc-gaFEAQ/v3_index.m3u8","http://onsports.vn","No"), 
+("http://cdnet-cdn-01.onsports.vn/vtvcabvtvgo/LIFE_TV/sc-gaFEAQ/index.m3u8","http://onsports.vn","No"), 
 ("http://livevlisctcdnw.seenow.vn/livesnv2/LIFE_TV/manifest.mpd", "https://vtvprime.vn", "ca9c781a5ba142f2b03a8028fcecb847:c69c101846413ae8faa8d353c7979121", "No"), 
 ("http://freem3u.xyz/api/live/play.m3u8?vid=188", "https://m.tv360.vn", "No"),
 ("http://vmttv.dpdns.org/tv360/?id=vtvcab-22-on-lifetv-hd", "https://m.tv360.vn", "No"),
@@ -868,7 +861,7 @@ SLOW_CHANNELS = {
   },
   "ontrendingtv": {
     "url": [ 
-("http://cdnet-cdn-01.onsports.vn/vtvcabvtvgo/YEAH1_TV/sc-gaFEAQ/v3_index.m3u8","http://onsports.vn","No"),  
+("http://cdnet-cdn-01.onsports.vn/vtvcabvtvgo/YEAH1_TV/sc-gaFEAQ/index.m3u8","http://onsports.vn","No"),  
  ("http://livevlisctcdnw.seenow.vn/livesnv2/YEAH1_TV/manifest.mpd", "https://vtvprime.vn", "765c826c381e4d58849784bb206c8e90:2970317ebf86d70fa11434eab4c59c5d", "No"), 
 ("http://freem3u.xyz/api/live/play.m3u8?vid=186", "https://m.tv360.vn", "No"),
 ("http://vmttv.dpdns.org/tv360/?id=vtvcab17-on-trending-hd", "https://m.tv360.vn", "No"),
@@ -878,7 +871,7 @@ SLOW_CHANNELS = {
   },
   "onviegiaitri": {
     "url": [ 
-("http://cdnet-cdn-01.onsports.vn/vtvcabvtvgo/GIAITRI_TV_HD/sc-gaFEAQ/v3_index.m3u8","http://onsports.vn","No"),  
+("http://cdnet-cdn-01.onsports.vn/vtvcabvtvgo/GIAITRI_TV_HD/sc-gaFEAQ/index.m3u8","http://onsports.vn","No"),  
 ("http://livevlisctcdnw.seenow.vn/livesnv2/GIAITRI_TV_HD/manifest.mpd", "https://vtvprime.vn", "3e1c6077ab034d3b9f02d0ae43825eec:c40b6a2c7b94cbd4958b1d93d9b23aed", "No"), 
 ("http://tv.vietanhtv.top/vieon/vieon.php?id=vie-giai-tri-hd", "https://vieon.vn", "Getlink"), 
 ("http://freem3u.xyz/api/live/play.m3u8?vid=180", "https://m.tv360.vn", "No"),
@@ -889,7 +882,7 @@ SLOW_CHANNELS = {
   },
   "onviedramas": {
     "url": [ 
-("http://cdnet-cdn-01.onsports.vn/vtvcabvtvgo/D_DRAMAS/sc-gaFEAQ/v3_index.m3u8","http://onsports.vn","No"), 
+("http://cdnet-cdn-01.onsports.vn/vtvcabvtvgo/D_DRAMAS_HD/sc-gaFEAQ/index.m3u8","http://onsports.vn","No"), 
  ("http://livevlisctcdnw.seenow.vn/livesnv2/D_DRAMAS_HD/manifest.mpd", "https://vtvprime.vn", "f2abb744acd24369943a79635f4fa43a:f674652c13211536e0e21d9ea860ca90", "No"), 
 ("http://tv.vietanhtv.top/vieon/vieon.php?id=vie-dramas-hd", "https://vieon.vn", "Getlink"), 
 ("http://freem3u.xyz/api/live/play.m3u8?vid=177", "https://m.tv360.vn", "No"),
@@ -899,7 +892,7 @@ SLOW_CHANNELS = {
   },
   "onvfamily": {
     "url": [ 
-("http://cdnet-cdn-01.onsports.vn/vtvcabvtvgo/VFAMILY/sc-gaFEAQ/v3_index.m3u8","http://onsports.vn","No"), 
+("http://cdnet-cdn-01.onsports.vn/vtvcabvtvgo/VFAMILY/sc-gaFEAQ/index.m3u8","http://onsports.vn","No"), 
 ("http://livevlisctcdnw.seenow.vn/livesnv2/VFAMILY/manifest.mpd", "https://vtvprime.vn", "c01b22c5f5b44d72b9902b33a4c36fb7:8fe81a99e5b1cc891bb9e9f848b6e2e7", "No"), 
 ("http://freem3u.xyz/api/live/play.m3u8?vid=187", "https://m.tv360.vn", "No"),
 ("http://vmttv.dpdns.org/tv360/?id=vtvcab-20-on-v-family-hd", "https://m.tv360.vn", "No"),
@@ -909,13 +902,12 @@ SLOW_CHANNELS = {
   },
   "onhomeshopping": {
     "url": [
-      ("http://livesct.vtvprime.vn/mean/VTVCAB13/sc-gaFEAQ/v3_index.m3u8", "https://vtvprime.vn", "No")
+      ("http://livesct.vtvprime.vn/mean/VTVCAB13/sc-gaFEAQ/index.m3u8", "https://vtvprime.vn", "No")
     ],
     "tvg_id": "onhomeshopping"
   },
   "onsportsplus": {
     "url": [
-("http://cdnet-cdn-01.onsports.vn/vtvcabvtvgo/HAY_TV/sc-gaFEAQ/v2_index.m3u8","http://onsports.vn","No"), 
 ("http://livevliatmcdw.seenow.vn/live/data8/HAY_TV/Live_DASHDRM/HAY_TV.mpd", "https://vtvprime.vn", "f3d73b3a9b89462ebf7911004ea3b3b9:2e547a81ff90aa02648cb9e3f79e7339", "No"), 
 ("https://s7484.cdn.mytvnet.vn/pkg20/__cl/gvtsig/vstv311/manifest.mpd", "https://mytv.com.vn", "https://tv.vietanhtv.top/mytv2/key.php", "No"), 
 ("http://freem3u.xyz/api/live/play.m3u8?vid=183", "https://m.tv360.vn", "No"),
@@ -936,7 +928,7 @@ SLOW_CHANNELS = {
   }, 
  "onkids": {
     "url": [
-("http://cdnet-cdn-01.onsports.vn/vtvcabvtvgo/BIBI_PLUS/sc-gaFEAQ/v2_index.m3u8","http://onsports.vn","No"), 
+("http://cdnet-cdn-01.onsports.vn/vtvcabvtvgo/BIBI_PLUS_clear/sc-gaFEAQ/index.m3u8","http://onsports.vn","No"), 
 ("http://livevlisctcdnw.seenow.vn/Live_DASHDRM1/BIBI_PLUS_clear/manifest.mpd", "https://vtvprime.vn", "c07669233e07416594577b29d60372a6:e8cfcf678750f494312dfcbdaee5132e", "No"), 
 ("http://freem3u.xyz/api/live/play.m3u8?vid=179", "https://m.tv360.vn", "No"),
 ("http://vmttv.dpdns.org/tv360/?id=vtvcab-21-cartoon-kids-hd", "https://m.tv360.vn", "No"),
