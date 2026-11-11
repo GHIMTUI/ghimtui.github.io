@@ -130,7 +130,7 @@ SLOW_CHANNELS = {
 "url": [ 
 ("http://tv.vietanhtv.top/sctv/tv.php?id=sctv-21-57de221a", "https://sctvonline.vn", "No"), 
 ], 
-"tvg_id","sctv21hd",
+"tvg_id":"sctv21hd",
 }, 
 
  "sctvphimtonghop": {
