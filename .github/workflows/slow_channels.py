@@ -417,6 +417,14 @@ SLOW_CHANNELS = {
 ],
 "tvg_id": "camau",
  },
+
+"camauradio": {
+  "url": [
+("https://tv.ctvcamau.vn/live/radio/radio.m3u8", "https://baocamau.vn", "No"), 
+],
+"tvg_id": "camauradio",
+ },
+
 "caobang": {
   "url": [
 ("http://freem3u.xyz/api/live/play.m3u8?vid=48", "https://m.tv360.vn", "No"), 
