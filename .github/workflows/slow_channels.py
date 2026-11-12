@@ -138,7 +138,7 @@ SLOW_CHANNELS = {
  "htv1": {
   "url": [
 ("http://tv.vietanhtv.top/vieon/vieon.php?id=htv1", "https://vieon.vn", "Getlink"), 
-("http://dethich.pw/htv1/index.m3u8","https://vieon.vn,"Getlink"), 
+("http://dethich.pw/htv1/index.m3u8","https://vieon.vn","Getlink"), 
 ("http://freem3u.xyz/api/live/play.m3u8?vid=190", "https://m.tv360.vn", "No"),
 ("https://vmttv.dpdns.org/tv360/?id=htv1", "https://m.tv360.vn", "No"), 
 ("http://1011154949.vnns.net/CDN-FPT02/HTV1-HD-1080p/playlist_720p.m3u8", "https://htvc.com.vn", "No"), 
