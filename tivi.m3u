@@ -1,6 +1,4 @@
 #EXTM3U 
-#EXT-X-VERSION:3
-#EXT-X-TARGETDURATION:4
 
 #EXTINF:-1 tvg-id="vinhlong1hd" tvg-logo="https://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/vinhlong1.png", Vĩnh Long 1
 #EXTVLCOPT:http-user-referer=https://vieon.vn
@@ -21,6 +19,11 @@ https://livecdn-vthcm-bp.vieon.vn/8369598c6dc529db1644fb5696b904a7/1794695009000
 #EXTINF:-1 tvg-id="vinhlong5hd" tvg-logo="https://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/vinhlong5.png", Vĩnh Long 5
 #EXTVLCOPT:http-user-referer=https://vieon.vn
 https://livecdn-vthcm-bp.vieon.vn/2a0a89c7d431058f912bc8f5fcecc76b/1794695009000/livetv/group-01/4613aed1b1174347f0c42c2296b893da/playlist.m3u8?c=a
+
+#EXTINF:-1 tvg-id="" tvg-logo="https://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/vinhlongtv.png",THVL PHIM
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36 
+#EXTVLCOPT:http-user-referrer=https://www.thvli.vn/live/fast_thvl-phim
+https://amg30823-amg30823c5-amgplt0985.playout.now3.amagi.tv/ts-ap-s1-n1/playlist/amg30823-amg30823c5-amgplt0985/y1Y-GWV1ZJCTwyFn0vBi5aZZKNgLbIUqarRUh229RgfA9PrTnBW7KgPGS85gCWZBPT6DTIJsBt7OC-gRaClwIcjj6z_GnBEOrNsJOjLIAnosghIFjHwId5nOHwuOMvw5Jhv6BmNTfdzpUbN2TMWeCpsCdtn0gTQpHgsJzh8E-qVdpOHiW1fMaqG4SknBehb610LL1wG6gYJagxGEfqAJlMPwgtZF04_AZaBXuEhjMiNtib97hsdZut_oB1PwZyYICl3wr5qwWSuRHQ42m_vCuxe5eYqNdIcwYr1SwQLdMtwy5132skvtrL_ZRww7opBdZCaivPCPqDRp1wyYpufJAR_zl0QiNKMF2TI7B578xhH2pH_zgguzmGBHSqr5TJ2cjZf2oIg4-k-u1-SRORg-CWwOh1Olj2zcLK8cwqwFKAY0Lt-ZWsqS3FAkXUOPllvHBwm82obxvGRamzprMI1n3FUXab5TBhnBP_iXPTbYTGmQJzGJEl_ISuisPOb9lKoRLKKQ00rpY-b7HNy5DqB7ORYEsuE4YFFEa9yjdgU5dJkvjrDG7GN7Y4aWnaSsOV0ENgdCDfmBjRHL1K5Dfx_CIU4KEjk2tFWbPoV2I2wgzArEoxt_ugggIOPVWTc-WL7-nbOfvLssE67stZ8PAXk-VbQ2EShv3sTiM58ZeA6x2R1tHiecFFNDkPuhE0O_HKaodqt4VB1tzbJgKc6pTBFozsESumrrnRX5r9hdjNmEHE3PXPFGeAqzrfO5cBfSz0yw0xBID1uv0f9TZ7c2xyKJnVjXj3YOFQNtQcyGbhc-08q3yDGTIKFOTCukKPvUz7rYc0680Ws9NxtaHnsSJ39X-OrcfAV3rOtupnz2-1msdVExFE7KzVUN0aYkStx9VUiRjefH7cYKG88u03DKawzvFy4m88M178zjp6LJPxpQl-brYbSjgY3JlvkneAp-OdSUDAI5i3CC4W2GjBN4_YaC4agMxiaYVbHn53y93MEuQI8Z9jlE4PS75nj4fz_y6OomX5E/129/1920x1080_4300000/index.m3u8
 
 #EXTINF:-1 tvg-id="onphimviet" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/on_phimviet.png", ON Phim Việt
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
@@ -440,11 +443,6 @@ http://123.31.36.68/live.m3u8?c=vstv525&q=sd&type=tv&location=NA&pkg=pkg12.hni
 #EXTVLCOPT:http-user-referer=https://tuyenquangtv.vn
 http://live.mediatech.vn/live/2858e0e3ef3174443ae90f26ba4a8f0643f/chunklist.m3u8
 
-#EXTINF:-1 tvg-id="camauradio" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/camau_logo.png" , Phát Thanh — Cà Mau
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
-#EXTVLCOPT:http-user-referer=https://baocamau.vn
-https://tv.ctvcamau.vn/live/radio/radio.m3u8
-
 #EXTINF:-1 tvg-id="vohm" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/vohm.png" , Phát Thanh — VOHm
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-user-referer=https://vieon.vn
@@ -459,7 +457,7 @@ https://livecdn-vthcm-bp.vieon.vn/87ef644c8d7d951ec90a9bec7472ac1c/1794695006000
 #EXTINF:-1 tvg-id="onbibi" tvg-logo="https://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/VTVCab/OnBibi.png",On BiBi
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-user-referer=http://onsports.vn
-http://cdnet-cdn-01.onsports.vn/vtvcabvtvgo/BIBI/sc-gaFEAQ/v2_index.m3u8
+http://cdnet-cdn-01.onsports.vn/vtvcabvtvgo/BIBI/sc-gaFEAQ/index.m3u8
 
 #EXTINF:-1 tvg-id="onkids" tvg-logo="http://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/VTVCab/OnKids.png",On Kids
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
