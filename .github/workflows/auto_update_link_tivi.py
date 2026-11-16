@@ -58,29 +58,38 @@ def get_live_link(urls_config, channel_name):
             response = requests.get(url, headers=headers, timeout=8, allow_redirects=True, stream=True)
 
             if is_no_mode:
-                if response.status_code not in [404, 410]:
-                    print(f"[{ch_upper}] Link {idx} (No) hợp lệ (HTTP {response.status_code}), sử dụng trực tiếp.")
+                status = response.status_code
+                response.close()
+                if status not in [404, 410]:
+                    print(f"[{ch_upper}] Link {idx} (No) hợp lệ (HTTP {status}), sử dụng trực tiếp.")
                     sys.stdout.flush()
                     return url, referer, license_key
                 else:
-                    print(f"[{ch_upper}] Link {idx} (No) đã chết (HTTP {response.status_code}), chuyển sang link dự phòng...")
+                    print(f"[{ch_upper}] Link {idx} (No) đã chết (HTTP {status}), chuyển sang link dự phòng...")
                     sys.stdout.flush()
                     continue
 
             if response.status_code == 200:
-    head = next(response.iter_content(512), b"")
-    if b"#EXTM3U" not in head:
-        print(f"[{ch_upper}] Link {idx} trả 200 nhưng không phải m3u8")
-        continue
+                # Kiểm tra nội dung thực sự là m3u8, tránh trang lỗi trả về 200
+                head = next(response.iter_content(512), b"")
+                if b"#EXTM3U" not in head:
+                    print(f"[{ch_upper}] Link {idx} trả 200 nhưng không phải m3u8")
+                    sys.stdout.flush()
+                    response.close()
+                    continue
+
+                final_url = response.url
+                response.close()
                 if "master.m3u8" in final_url:
                     final_url = final_url.replace("master.m3u8", "playlist_720p.m3u8")
 
                 print(f"[{ch_upper}] Thành công với link {idx}: {final_url}")
                 sys.stdout.flush()
                 return final_url, referer, license_key
-            
+
             print(f"[{ch_upper}] Link {idx} trả về mã lỗi HTTP {response.status_code}")
             sys.stdout.flush()
+            response.close()
 
         except Exception as e:
             print(f"[{ch_upper}] Lỗi khi kết nối link {idx}: {e}")
@@ -123,16 +132,16 @@ def update_m3u_file():
     sys.stdout.flush()
 
     results = []
-    # max_workers=15 nghĩa là chạy tối đa 10 luồng cùng lúc, bạn có thể tăng lên 15 hoặc 20 nếu mạng khỏe
+    # max_workers=10 nghĩa là chạy tối đa 10 luồng cùng lúc, bạn có thể tăng lên 15 hoặc 20 nếu mạng khỏe
     with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
         future_to_channel = {
-            executor.submit(process_single_channel, ch_name, ch_conf): ch_name 
+            executor.submit(process_single_channel, ch_name, ch_conf): ch_name
             for ch_name, ch_conf in channels_to_update.items()
         }
         for future in concurrent.futures.as_completed(future_to_channel):
             try:
                 res = future.result()
-                if res[2]: # Nếu có new_link
+                if res[2]:  # Nếu có new_link
                     results.append(res)
             except Exception as exc:
                 print(f"Lỗi luồng xử lý kênh: {exc}")
@@ -157,7 +166,7 @@ def update_m3u_file():
             extinf_part = match.group(1)
             opt_part = match.group(2) or ""
             other_tags = match.group(3) or ""
-            
+
             # Xử lý Referer
             if new_referer:
                 referer_line = f"#EXTVLCOPT:http-user-referer={new_referer}\n"
@@ -174,11 +183,11 @@ def update_m3u_file():
             if cleaned_license and cleaned_license.lower() not in ["getlink", "no"]:
                 type_line = "#KODIPROP:inputstream.adaptive.license_type=clearkey\n"
                 key_line = f"#KODIPROP:inputstream.adaptive.license_key={cleaned_license}\n"
-                
+
                 combined = extinf_part + opt_part + other_tags
                 combined = re.sub(r'#KODIPROP:inputstream\.adaptive\.license_type=[^\r\n]*\r?\n', '', combined, flags=re.IGNORECASE)
                 combined = re.sub(r'#KODIPROP:inputstream\.adaptive\.license_key=[^\r\n]*\r?\n', '', combined, flags=re.IGNORECASE)
-                
+
                 other_tags = type_line + key_line
                 opt_part = combined[len(extinf_part):]
             else:
