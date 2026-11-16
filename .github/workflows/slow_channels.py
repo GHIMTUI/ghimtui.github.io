@@ -851,14 +851,6 @@ SLOW_CHANNELS = {
   "tvg_id": "hitv",
 },
 
-"youtv": {
-"url": [
-("http://pop1-ec3-ateme.tv360.vn/live/eds/447/HLS_Clean_MHL_2s/447-avc1_5100000=10004-mp4a_214800=20001.m3u8", "http://tv360.vn", "No"),
-("http://pop1-ec3-ateme.tv360.vn/bpk-tv/447/output/447-audio_214834_und_iv_1=214800-video_iv_1=5254000.m3u8", "http://tv360.vn", "No"), 
-], 
-  "tvg_id": "youtv",
-},
-
  "hanoi1": {
   "url": [ 
 ("http://pop1-ec3-ateme.tv360.vn/live/eds/282/HLS_Clean_MHL_2s/282-avc1_5100000=10006-mp4a_214800_eng=20001.m3u8", "http://tv360.vn", "No"), 
