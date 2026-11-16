@@ -570,8 +570,10 @@ SLOW_CHANNELS = {
 "tvg_id": "caobang",
  },
 "cantho1": {
-  "url": [
-("https://live.canthotv.vn/live/tv/chunklist.m3u8", "https://canthotv.vn", "No"), 
+  "url": [ 
+("http://pop1-ec3-ateme.tv360.vn/live/eds/326/HLS_Clean_MHL_2s/326-avc1_5100000=10011-mp4a_214800_eng=20001.m3u8", "http://tv360.vn", "No"), 
+("https://live.canthotv.vn/live/tv/chunklist_w573873917.m3u8", "https://canthotv.vn", "No"), 
+("https://tv.canthotv.vn/live/tv/chunklist_w287130076.m3u8", "https://canthotv.vn", "No"), 
 ("http://vtvgoliveapp1-aws-plus-tn.vtvdigital.vn/aws-dp/cantho1tv/live/cantho1tv_720p/chunks.m3u8", "https://vtvdigital.vn", "No"), 
 ("http://vtvgoliveapp1-aws-plus-tn.vtvdigital.vn/aws-dp/canthotv_720p/chunks.m3u8", "https://vtvgo.vn", "No"), 
 ("http://vtvgolive-ott3.vtvdigital.vn/live/haugiangtv/chunklist_2.m3u8", "http://vtvprime.vn", "No"), 
@@ -587,11 +589,11 @@ SLOW_CHANNELS = {
  },
 "cantho2": {
   "url": [ 
-("https://live.canthotv.vn/cs2/live.stream/chunklist.m3u8", "https://canthotv.vn", "No"), 
-("http://pop1-ec3-ateme.tv360.vn/live/eds/326/HLS_Clean_MHL_2s/326-avc1_5100000=10011-mp4a_214800_eng=20001.m3u8", "http://tv360.vn", "No"), 
 ("http://pop1-ec3-ateme.tv360.vn/live/eds/397/HLS_Clean_MHL_2s/397-avc1_5100000=10007-mp4a_214800_eng=20002.m3u8", "http://tv360.vn", "No"), 
 ("http://pop1-ec3-ateme.tv360.vn/live/eds/1966/HLS_Clean_MHL_2s/1966-avc1_5100000=10005-mp4a_214800_eng=20002.m3u8", "http://tv360.vn", "No"), 
 ("http://pop1-ec3-ateme.tv360.vn/bpk-tv/397/output/397-audio_214835_eng_iv_4=214800-video_iv_4=5254000.m3u8", "http://tv360.vn", "No"), 
+("https://live.canthotv.vn/cs2/live.stream/chunklist_w2034722889.m3u8", "https://canthotv.vn", "No"), 
+("https://tv.canthotv.vn/cs2/live.stream/chunklist_w885575688.m3u8", "https://canthotv.vn", "No"), 
 ("http://d3006k9ptxe2oq.cloudfront.net/aws-dp/cantho1tv/live/cantho1tv_720p/chunks.m3u8","http://cloudfront.net","No"), 
 ("http://tv.vietanhtv.top/vieon/vieon.php?id=can-tho-2", "https://vieon.vn", "Getlink"), 
 ("http://dethich.pw/cantho2/index.m3u8","https://vieon.vn","Getlink"), 
@@ -600,8 +602,9 @@ SLOW_CHANNELS = {
  },
 "cantho3": {
   "url": [ 
-("https://live.canthotv.vn/cs3/tv/chunklist.m3u8", "https://canthotv.vn", "No"), 
 ("http://pop1-ec3-ateme.tv360.vn/live/eds/362/HLS_Clean_MHL_2s/362-avc1_5099968=10011-mp4a_196800_eng=20001.m3u8", "http://tv360.vn", "No"), 
+("https://live.canthotv.vn/cs3/tv/chunklist_w2101974776.m3u8", "https://canthotv.vn", "No"), 
+("https://tv.canthotv.vn/cs3/tv/chunklist_w1673355856.m3u8", "https://canthotv.vn", "No"), 
 ("http://1011154949.vnns.net/CDN-FPT02/SOCTRANG-SD-720p/chunks.m3u8","http://htvc.com.vn","No"), 
 ("http://tv.vietanhtv.top/vieon/vieon.php?id=can-tho-3", "https://vieon.vn", "Getlink"), 
 ("http://dethich.pw/cantho3/index.m3u8","https://vieon.vn","Getlink"), 
