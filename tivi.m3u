@@ -444,10 +444,6 @@ http://pop1-ec3-ateme.tv360.vn/live/eds/383/HLS_Clean_MHL_2s/383-avc1_5100000=10
 #EXTVLCOPT:http-user-referer=http://tv360.vn
 http://pop1-ec3-ateme.tv360.vn/live/eds/303/HLS_Clean_MHL_2s/303-avc1_5100000=10007-mp4a_214800_eng=20000.m3u8
 
-#EXTINF:-1 tvg-id="youtv" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/youtv.png",YouTV 
-#EXTVLCOPT:http-user-referer=http://tv360.vn
-http://pop1-ec3-ateme.tv360.vn/live/eds/447/HLS_Clean_MHL_2s/447-avc1_5100000=10004-mp4a_214800=20001.m3u8
-
 #EXTINF:-1 tvg-id="vohm" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/vohm.png" , Phát Thanh — VOHm
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-user-referer=https://vieon.vn
@@ -457,7 +453,6 @@ https://livecdn-vthcm-bp.vieon.vn/06986bc14a22be067990801fe9b1542b/1794928659000
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-user-referer=https://vieon.vn
 https://livecdn-vthcm-bp.vieon.vn/f417a4b18b8800bba97946c599d6df9f/1794928659000/livetv/group-07/2f46beba326f40af7467e58cbbc5da18/playlist.m3u8?c=a
-
 
 #EXTINF:-1 tvg-id="onbibi" tvg-logo="https://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/VTVCab/OnBibi.png",On BiBi
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
