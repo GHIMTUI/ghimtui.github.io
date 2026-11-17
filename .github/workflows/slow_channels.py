@@ -413,6 +413,7 @@ SLOW_CHANNELS = {
 ("http://pop1-ec3-ateme.tv360.vn/live/eds/1421/HLS_Clean_MHL_6s/1421-avc1_4500000=10002-mp4a_128000_eng=20000.m3u8", "http://tv360.vn", "No"), 
 ("http://pop1-ec3-ateme.tv360.vn/live/eds/1423/HLS_Clean_MHL_6s/1423-avc1_4500000=10002-mp4a_128000_eng=20000.m3u8", "http://tv360.vn", "No"), 
 ("http://pop1-ec3-ateme.tv360.vn/live/eds/1425/HLS_Clean_MHL_6s/1425-avc1_4500000=10002-mp4a_128000_eng=20000.m3u8", "http://tv360.vn", "No"), 
+("http://pop1-ec3-ateme.tv360.vn/live/eds/1429/HLS_Clean_MHL_6s/1429-avc1_4500000=10002-mp4a_96000_eng=20000.m3u8", "http://tv360.vn", "No"), 
 ("http://pop1-ec3-ateme.tv360.vn/live/eds/1433/HLS_Clean_MHL_6s/1433-avc1_4500000=10002-mp4a_96000_eng=20000.m3u8", "http://tv360.vn", "No"), 
 ("http://pop1-ec3-ateme.tv360.vn/live/eds/1435/HLS_Clean_MHL_6s/1435-avc1_4500000=10002-mp4a_96000_eng=20000.m3u8", "http://tv360.vn", "No"), 
 ("http://pop1-ec3-ateme.tv360.vn/live/eds/1439/HLS_Clean_MHL_6s/1439-avc1_4800000=10002-mp4a_96000_eng=20000.m3u8", "http://tv360.vn", "No"), 
@@ -844,13 +845,6 @@ SLOW_CHANNELS = {
   ],
   "tvg_id": "gialai",
  }, 
-"hitv": {
-"url": [
-("http://pop1-ec3-ateme.tv360.vn/live/eds/332/HLS_Clean_MHL_2s/332-avc1_5100000=10003-mp4a_214800_eng=20000.m3u8", "http://tv360.vn", "No"), 
-],
-  "tvg_id": "hitv",
-},
-
  "hanoi1": {
   "url": [ 
 ("http://pop1-ec3-ateme.tv360.vn/live/eds/282/HLS_Clean_MHL_2s/282-avc1_5100000=10006-mp4a_214800_eng=20001.m3u8", "http://tv360.vn", "No"), 
