@@ -305,10 +305,6 @@ http://pop1-ec3-ateme.tv360.vn/live/eds/335/HLS_Clean_MHL_2s/335-avc1_5100000=10
 #https://livecdn-vthcm-bp.vieon.vn/04aa1853ee59689aca935546ce248ddc/1794695018000/livetv/group-01/9f4355c411f129b47035075582d97e8f/playlist.m3u8?c=a
 http://pop1-ec3-ateme.tv360.vn/live/eds/259/HLS_Clean_MHL_2s/259-avc1_5100000=10003-mp4a_214800_eng=20000.m3u8
 
-#EXTINF:-1 tvg-id="hitv" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/hitv.png", HiTV
-#EXTVLCOPT:http-user-referer=http://tv360.vn
-http://pop1-ec3-ateme.tv360.vn/live/eds/332/HLS_Clean_MHL_2s/332-avc1_5100000=10003-mp4a_214800_eng=20000.m3u8
-
 #EXTINF:-1 tvg-id="hanoi1" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/hanoi1.png", Hà Nội 1
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-user-referer=http://tv360.vn
