@@ -1,6 +1,7 @@
 import os
 import re
 import sys
+import time
 import concurrent.futures
 import requests
 from slow_channels import SLOW_CHANNELS
@@ -9,101 +10,132 @@ CHANNELS = SLOW_CHANNELS
 FAST_CHANNELS = [""]
 FILE_NAME = "tivi.m3u"
 
+
+def _parse_item(item):
+    """Tách một mục cấu hình link thành (url, referer, license_key, action_type)."""
+    url, referer, license_key, action_type = "", "", "", "Getlink"
+    if isinstance(item, tuple):
+        if len(item) >= 4:
+            url, referer, license_key, action_type = item[:4]
+        elif len(item) == 3:
+            url, referer, third_val = item
+            if str(third_val).strip().lower() in ["getlink", "no"]:
+                action_type = third_val
+            else:
+                license_key = third_val
+        elif len(item) == 2:
+            url, second_val = item
+            if str(second_val).strip().lower() in ["getlink", "no"]:
+                action_type = second_val
+            else:
+                referer = second_val
+        elif len(item) == 1:
+            url = item[0]
+    else:
+        url = item
+    return url, referer, license_key, action_type
+
+
+def _check_link(idx, item, ch_upper):
+    """Kiểm tra 1 link. Trả về (thời_gian, url, referer, license) hoặc None."""
+    url, referer, license_key, action_type = _parse_item(item)
+    is_no_mode = str(action_type).strip().lower() == "no"
+    headers = {"Referer": referer} if referer else {}
+
+    start = time.monotonic()
+    try:
+        response = requests.get(url, headers=headers, timeout=8,
+                                allow_redirects=True, stream=True)
+
+        if is_no_mode:
+            status = response.status_code
+            response.close()
+            if status in [404, 410]:
+                print(f"[{ch_upper}] Link {idx} (No) đã chết (HTTP {status})")
+                sys.stdout.flush()
+                return None
+            elapsed = time.monotonic() - start
+            print(f"[{ch_upper}] Link {idx} (No) hợp lệ (HTTP {status}) - {elapsed:.2f}s")
+            sys.stdout.flush()
+            return elapsed, url, referer, license_key
+
+        if response.status_code != 200:
+            print(f"[{ch_upper}] Link {idx} trả về mã lỗi HTTP {response.status_code}")
+            sys.stdout.flush()
+            response.close()
+            return None
+
+        # Kiểm tra nội dung thực sự là m3u8, tránh trang lỗi trả về 200
+        head = next(response.iter_content(512), b"")
+        elapsed = time.monotonic() - start
+        if b"#EXTM3U" not in head:
+            print(f"[{ch_upper}] Link {idx} trả 200 nhưng không phải m3u8")
+            sys.stdout.flush()
+            response.close()
+            return None
+
+        final_url = response.url
+        response.close()
+        if "master.m3u8" in final_url:
+            final_url = final_url.replace("master.m3u8", "playlist_720p.m3u8")
+
+        print(f"[{ch_upper}] Link {idx} OK - {elapsed:.2f}s")
+        sys.stdout.flush()
+        return elapsed, final_url, referer, license_key
+
+    except Exception as e:
+        print(f"[{ch_upper}] Lỗi khi kết nối link {idx}: {e}")
+        sys.stdout.flush()
+        return None
+
+
 def get_live_link(urls_config, channel_name):
     if isinstance(urls_config, str):
         urls_config = [(urls_config, "", "", "Getlink")]
 
     ch_upper = channel_name.upper()
+    indexed = list(enumerate(urls_config, 1))
 
-    for idx, item in enumerate(urls_config, 1):
-        url = ""
-        referer = ""
-        license_key = ""
-        action_type = "Getlink"
+    # Tách: link m3u8 trực tiếp vs link còn lại (get)
+    m3u8_items = [(i, it) for i, it in indexed
+                  if ".m3u8" in str(_parse_item(it)[0]).lower()]
+    m3u8_idx = {i for i, _ in m3u8_items}
+    get_items = [(i, it) for i, it in indexed if i not in m3u8_idx]
 
-        if isinstance(item, tuple):
-            if len(item) >= 4:
-                url, referer, license_key, action_type = item[:4]
-            elif len(item) == 3:
-                url, referer, third_val = item
-                if str(third_val).strip().lower() in ["getlink", "no"]:
-                    action_type = third_val
-                    license_key = ""
-                else:
-                    license_key = third_val
-            elif len(item) == 2:
-                url, second_val = item
-                if str(second_val).strip().lower() in ["getlink", "no"]:
-                    action_type = second_val
-                else:
-                    referer = second_val
-            elif len(item) == 1:
-                url = item[0]
-        else:
-            url = item
-
-        is_no_mode = str(action_type).strip().lower() == "no"
-
-        if is_no_mode:
-            print(f"[{ch_upper}] Đang kiểm tra nhanh link {idx} (Cấu hình No/DASH): {url}")
-        else:
-            print(f"[{ch_upper}] Đang thử link {idx} (Getlink): {url}")
+    # Ưu tiên 1: test song song các link m3u8, chọn link nhanh nhất
+    if m3u8_items:
+        print(f"[{ch_upper}] Test song song {len(m3u8_items)} link m3u8...")
         sys.stdout.flush()
-
-        try:
-            headers = {}
-            if referer:
-                headers["Referer"] = referer
-
-            response = requests.get(url, headers=headers, timeout=8, allow_redirects=True, stream=True)
-
-            if is_no_mode:
-                status = response.status_code
-                response.close()
-                if status not in [404, 410]:
-                    print(f"[{ch_upper}] Link {idx} (No) hợp lệ (HTTP {status}), sử dụng trực tiếp.")
-                    sys.stdout.flush()
-                    return url, referer, license_key
-                else:
-                    print(f"[{ch_upper}] Link {idx} (No) đã chết (HTTP {status}), chuyển sang link dự phòng...")
-                    sys.stdout.flush()
-                    continue
-
-            if response.status_code == 200:
-                # Kiểm tra nội dung thực sự là m3u8, tránh trang lỗi trả về 200
-                head = next(response.iter_content(512), b"")
-                if b"#EXTM3U" not in head:
-                    print(f"[{ch_upper}] Link {idx} trả 200 nhưng không phải m3u8")
-                    sys.stdout.flush()
-                    response.close()
-                    continue
-
-                final_url = response.url
-                response.close()
-                if "master.m3u8" in final_url:
-                    final_url = final_url.replace("master.m3u8", "playlist_720p.m3u8")
-
-                print(f"[{ch_upper}] Thành công với link {idx}: {final_url}")
-                sys.stdout.flush()
-                return final_url, referer, license_key
-
-            print(f"[{ch_upper}] Link {idx} trả về mã lỗi HTTP {response.status_code}")
+        with concurrent.futures.ThreadPoolExecutor(max_workers=len(m3u8_items)) as ex:
+            futures = [ex.submit(_check_link, i, it, ch_upper) for i, it in m3u8_items]
+            ok = [r for r in (f.result() for f in futures) if r]
+        if ok:
+            best = min(ok, key=lambda r: r[0])
+            print(f"[{ch_upper}] Chọn link m3u8 nhanh nhất ({best[0]:.2f}s): {best[1]}")
             sys.stdout.flush()
-            response.close()
+            return best[1], best[2], best[3]
 
-        except Exception as e:
-            print(f"[{ch_upper}] Lỗi khi kết nối link {idx}: {e}")
+    # Ưu tiên 2: không có m3u8 nào sống -> thử link get lần lượt
+    for i, it in get_items:
+        print(f"[{ch_upper}] Đang thử link get {i}...")
+        sys.stdout.flush()
+        r = _check_link(i, it, ch_upper)
+        if r:
+            print(f"[{ch_upper}] Thành công với link get {i}: {r[1]}")
             sys.stdout.flush()
+            return r[1], r[2], r[3]
 
     print(f"[{ch_upper}] Tất cả các link đều thất bại.")
     sys.stdout.flush()
     return None, None, None
+
 
 def process_single_channel(channel_name, config):
     """Hàm xử lý lấy link cho từng kênh (dùng để chạy đa luồng)"""
     tvg_id = config.get("tvg_id", "")
     new_link, new_referer, new_license = get_live_link(config["url"], channel_name)
     return channel_name, tvg_id, new_link, new_referer, new_license
+
 
 def update_m3u_file():
     if not os.path.exists(FILE_NAME):
@@ -127,12 +159,11 @@ def update_m3u_file():
         sys.stdout.flush()
         return
 
-    # 1. Quét song song tất cả các kênh bằng ThreadPoolExecutor (Tăng tốc độ kiểm tra mạng cực lớn)
+    # 1. Quét song song tất cả các kênh bằng ThreadPoolExecutor
     print(f"\nBắt đầu quét đồng thời {len(channels_to_update)} kênh...")
     sys.stdout.flush()
 
     results = []
-    # max_workers=10 nghĩa là chạy tối đa 10 luồng cùng lúc, bạn có thể tăng lên 15 hoặc 20 nếu mạng khỏe
     with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
         future_to_channel = {
             executor.submit(process_single_channel, ch_name, ch_conf): ch_name
@@ -231,6 +262,7 @@ def update_m3u_file():
     else:
         print("\nKhông có thay đổi nào được thực hiện trên file.")
     sys.stdout.flush()
+
 
 if __name__ == "__main__":
     update_m3u_file()
