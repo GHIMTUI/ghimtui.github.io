@@ -169,10 +169,10 @@ def update_m3u_file():
 
             # Xử lý Referer
             if new_referer:
-                referer_line = f"#EXTVLCOPT:http-user-referer={new_referer}\n"
-                if "#EXTVLCOPT:http-user-referer=" in extinf_part + opt_part + other_tags:
+                referer_line = f"#EXTVLCOPT:http-referer={new_referer}\n"
+                if "#EXTVLCOPT:http-referer=" in extinf_part + opt_part + other_tags:
                     combined = extinf_part + opt_part + other_tags
-                    combined = re.sub(r'#EXTVLCOPT:http-user-referer=[^\r\n]*\r?\n', referer_line, combined, flags=re.IGNORECASE)
+                    combined = re.sub(r'#EXTVLCOPT:http-referer=[^\r\n]*\r?\n', referer_line, combined, flags=re.IGNORECASE)
                     opt_part = combined[len(extinf_part):]
                     other_tags = ""
                 else:
