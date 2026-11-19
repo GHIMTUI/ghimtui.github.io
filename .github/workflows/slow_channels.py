@@ -1241,10 +1241,10 @@ SLOW_CHANNELS = {
   "tvg_id": "quangngai1",
  },
   "quangngai2": {
-  "url": [
+  "url": [ 
+("http://zirhmaft3x2vc.cmccdn.net/live/bentretv/chunklist_2.m3u8", "http://cmccdn.net", "No"), 
 ("http://vtvgolive-ott3.vtvdigital.vn/live/bentretv/chunklist_2.m3u8", "https://vtvgo.vn", "No"), 
 ("http://ott3.nethubtv.vn/live/bentretv/chunklist_2.m3u8", "https://nethubtv.vn", "No"), 
-("http://zirhmaft3x2vc.cmccdn.net/live/bentretv/chunklist_2.m3u8", "http://cmccdn.net", "No"), 
 ("http://cmcdp.vtvdigital.vn/live/bentretv/chunklist_2.m3u8", "http://vtvdigital", "No"), 
 ("http://tv.vietanhtv.top/vieon/vieon.php?id=kon-tum-1", "https://vieon.vn", "Getlink"), 
 ("http://dethich.pw/qiangngai2/index.m3u8","https://vieon.vn","Getlink"), 
