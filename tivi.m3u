@@ -20,6 +20,10 @@ http://pop1-ec3-ateme.tv360.vn/live/eds/251/HLS_Clean_MHL_2s/251-avc1_5099968=10
 #EXTVLCOPT:http-referer=http://tv360.vn
 http://pop1-ec3-ateme.tv360.vn/live/eds/423/HLS_Clean_MHL_2s/423-avc1_5100000=10015-mp4a_214800_eng=20002.m3u8
 
+#EXTINF:-1 tvg-id="" tvg-logo="https://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/vtvprime.png",Prime1 Phim Truyện Việt
+#EXTVLCOPT:http-referer=http://vtvprime.vn
+http://srsfkobxdcliv.vcdn.cloud/hls/playout.m3u8
+
 #EXTINF:-1 tvg-id="onphimviet" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/on_phimviet.png", ON Phim Việt
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referer=http://tv360.vn
