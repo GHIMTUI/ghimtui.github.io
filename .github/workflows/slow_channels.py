@@ -709,7 +709,7 @@ SLOW_CHANNELS = {
 ("http://vtvgolive-ott3.vtvdigital.vn/live/haugiangtv/chunklist_2.m3u8", "http://vtvprime.vn", "No"),
 ("http://cmcdp.vtvdigital.vn/live/haugiangtv/chunklist_2.m3u8", "http://vtvdigital", "No"),
 
-("https://ott3.nethubtv.vn/live/haugiangtv/chunklist_2.m3u8", "http://nethubtv.vn", "No"),
+("http://ott3.nethubtv.vn/live/haugiangtv/chunklist_2.m3u8", "http://nethubtv.vn", "No"),
 
 ("http://zirhmaft3x2vc.cmccdn.net/live/haugiangtv/chunklist_2.m3u8", "http://cmccdn.net", "No"),
 
@@ -2052,7 +2052,10 @@ SLOW_CHANNELS = {
 
 ("http://tv.vietanhtv.top/vieon/vieon.php?id=tuyen-quang-1", "https://vieon.vn", "Getlink"),
 
-("http://dethich.pw/tuyenquang/index.m3u8", "https://vieon.vn", "Getlink"),
+("http://dethich.pw/tuyenquang/index.m3u8", "https://vieon.vn", "Getlink"), 
+("http://vtvgolive-ott4.vtvdigital.vn/live/hagiangtv/chunklist_2.m3u8","https://vtvdigital.vn","No"), 
+("http://l60ce8firhs9c.cmccdn.net/live/hagiangtv/chunklist_2.m3u8","http://cmccdn.net","No"), 
+("http://cmcdp1.vtvdigital.vn/live/hagiangtv/chunklist_2.m3u8","http://vtvdigital.vn","No"), 
   ],
   "tvg_id": "tuyenquang",
  }, 
@@ -2073,7 +2076,7 @@ SLOW_CHANNELS = {
 
 ("http://d37y8dxemvmem0.cloudfront.net/vtvcabvtvgo/PHIM_VIET/index.m3u8", "http://cloudfront.net", "No"),
 
-("http://livevlisctcdnw.seenow.vn/livesnv2/PHIM_VIET/manifest.mpd", "https://vtvprime.vn", "7417db88928243fda4e03596bbd19a27:eebb689de1191ae1b207d32f0d5ca9fe", "No"),
+("http://livevlisctcdnw.seenow.vn/livesnv2/PHIM_VIET/manifest.mpd", "https://vtvprime.vn", "7417db88928243fda4e03596bbd19a27:eebb689de1191ae1b207d32f0d5ca9fe", "No"), 
   ],
     "tvg_id": "onphimviet"
   },
