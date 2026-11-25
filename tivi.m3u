@@ -294,7 +294,7 @@ http://pop1-ec3-ateme.tv360.vn/live/eds/286/HLS_Clean_MHL_6s/286-avc1_5099968=10
 
 #EXTINF:-1 tvg-id="dongnai3" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/dongnai3.png", Đồng Nai 3
 #EXTVLCOPT:http-referer=https://vieon.vn
-https://livecdn-vthcm-bp.vieon.vn/975a606a23d38f26e1a2f95a758a3f21/1795576211000/livetv/group-05/43ec53af7a809687be1a97622aec2eff/playlist.m3u8?c=a
+https://livecdn-vthcm-bp.vieon.vn/3886bd1a51b74e8960d4ac1521f839b5/1795655751000/livetv/group-05/43ec53af7a809687be1a97622aec2eff/playlist.m3u8?c=a
 
 #EXTINF:-1 tvg-id="dongthap1" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/dongthap1.png", Đồng Tháp 1
 #EXTVLCOPT:http-referer=http://tv360.vn
@@ -447,12 +447,12 @@ http://pop1-ec3-ateme.tv360.vn/live/eds/303/HLS_Clean_MHL_2s/303-avc1_5100000=10
 #EXTINF:-1 tvg-id="vohm" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/vohm.png" , Phát Thanh — VOHm
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referer=https://vieon.vn
-https://livecdn-vthcm-bp.vieon.vn/e9536f65bd006574238a32945bf76827/1795576210000/livetv/group-07/08a2d42a4fbb65d596dffc6ad77fbe15/playlist.m3u8?c=a
+https://livecdn-vthcm-bp.vieon.vn/a45a948d5b02502b50b4da2954a1694d/1795655750000/livetv/group-07/08a2d42a4fbb65d596dffc6ad77fbe15/playlist.m3u8?c=a
 
 #EXTINF:-1 tvg-id="voh1" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/logo/tphcm_logo.png" , Phát Thanh — TPHCM
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referer=https://vieon.vn
-https://livecdn-vthcm-bp.vieon.vn/8db4ca1850963965a19537206cd79b4a/1795576210000/livetv/group-07/2f46beba326f40af7467e58cbbc5da18/playlist.m3u8?c=a
+https://livecdn-vthcm-bp.vieon.vn/e62c9a93e710631ec889b977c7193c9e/1795655750000/livetv/group-07/2f46beba326f40af7467e58cbbc5da18/playlist.m3u8?c=a
 
 #EXTINF:-1 tvg-id="onbibi" tvg-logo="https://raw.githubusercontent.com/PhatBee/phatbeetv/refs/heads/main/logo/VTVCab/OnBibi.png",On BiBi
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
