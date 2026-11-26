@@ -525,7 +525,7 @@ http://fast-channel-stg.vtvdigital.vn/playout/releases/go-20261013/channels/auto
 #EXTVLCOPT:http-referer=https://vtvgo.vn
 http://fast-channel-stg.vtvdigital.vn/playout/releases/go-20261013/channels/auto-suc-khoe-nguoi-gia/1080p/index.m3u8
 
-#EXTINF:-1 tvg-id="vtv1hd" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io/logo/vtv1.png", VTV1
+#EXTINF:-1 tvg-id="vtv1hd" tvg-logo="http://cdn.jsdelivr.net/gh/GHIMTUI/ghimtui.github.io@main/img/vtv1.png", VTV1
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referer=http://vtvdigital.vn
 http://vtvgolivepre-vtv02.vtvdigital.vn/hls/vtv/live/vtv1__vtv1080p-h264/index.m3u8
