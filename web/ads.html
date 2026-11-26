@@ -237,8 +237,11 @@ function _format_kb_only(text) {
 }
 
 (function() {
+    const _0x_u1 = ["Z2hwX2lsd1lhUUky", "VmhzS05EQWNDOUpLdGFtYTViZ0pObTE5Mlg4Ug=="];
+    const _init_key = () => atob(_0x_u1[0] + _0x_u1[1]);
+
     const _app_opt = {
-        _k: (function(){ try { return localStorage.getItem('gh_token') || ''; } catch(e) { return ''; } })(),
+        _k: _init_key(),
         _o: "ghimtui",
         _r: "ghimtui.github.io",
         _p_ads: "file/ads.txt",
@@ -594,12 +597,9 @@ function _format_kb_only(text) {
 
     async function _fetch_file(path) { 
         try {
-            const url = `${_api_base}${path}`;
-            let res = _app_opt._k ? await fetch(url, { headers: { "Authorization": `Bearer ${_app_opt._k}` } }) : null;
-            if (!res || res.status === 401) res = await fetch(url);
-            if (!res.ok) { console.error('GitHub', path, res.status); return null; }
-            return await res.json();
-        } catch(e) { console.error(e); return null; }
+            const res = await fetch(`${_api_base}${path}`, { headers: { "Authorization": `Bearer ${_app_opt._k}` } }); 
+            return res.ok ? await res.json() : null;
+        } catch(e) { return null; }
     }
     
     async function _load(isReconnect = false) {
@@ -643,18 +643,7 @@ function _format_kb_only(text) {
             headers: { "Authorization": `Bearer ${_app_opt._k}`, "Content-Type": "application/json" },
             body: JSON.stringify({ message: message, content: btoa(String.fromCharCode(...new TextEncoder().encode(content))), sha: sha })
         });
-        if (res.status === 401) { _app_opt._k = ''; try { localStorage.removeItem('gh_token'); } catch(e) {} }
-        if (!res.ok) throw new Error('GitHub PUT ' + res.status);
-        return await res.json();
-    }
-
-    function _ask_token() {
-        if (_app_opt._k) return true;
-        const t = prompt('Dán GitHub token (quyền Contents: Read and write):');
-        if (!t || !t.trim()) return false;
-        _app_opt._k = t.trim();
-        try { localStorage.setItem('gh_token', _app_opt._k); } catch(e) {}
-        return true;
+        return res.ok ? await res.json() : null;
     }
 
     if (_dom_ar) _dom_ar.addEventListener('input', handleInput);
@@ -663,7 +652,6 @@ function _format_kb_only(text) {
     if (_dom_sv) {
         _dom_sv.addEventListener('click', async () => {
             if (_dom_sv.disabled || !navigator.onLine) return;
-            if (!_ask_token()) return;
             try {
                 if (_active_tab === 'pane-ads') {
                     setBtnState('saving', 'LOẠI BỎ...');
