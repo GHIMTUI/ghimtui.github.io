@@ -60,7 +60,7 @@ def get_live_link(urls_config, channel_name):
             if is_no_mode:
                 status = response.status_code
                 response.close()
-                if status not in [404, 410]:
+                if status not in [403, 404, 410]:
                     print(f"[{ch_upper}] Link {idx} (No) hợp lệ (HTTP {status}), sử dụng trực tiếp.")
                     sys.stdout.flush()
                     return url, referer, license_key
