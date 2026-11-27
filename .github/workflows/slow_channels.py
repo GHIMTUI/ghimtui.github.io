@@ -613,6 +613,9 @@ SLOW_CHANNELS = {
 "bacninh": {
   "url": [
 
+("http://cmcdp2.vtvdigital.vn/hls/BACGIANGTV/03.m3u8", "http://vtvdigital.vn", "No"),
+("http://vtvgoliveapp1-aws-plus-tn.vtvdigital.vn/aws-dp/bacninhtv/live/bacninhtv_720p/chunks.m3u8", "https://vtvdigital.vn", "No"),
+
 ("http://cdn.drt.vn/live/285983d45f5bdab43ebb4cab75573adeda1/chunklist.m3u8", "https://mediatech.vn", "No"),
 ("http://cdn.drt.vn/live/285f5f227e988ab4445a2138091d3d62e8d/chunklist.m3u8", "https://mediatech.vn", "No"),
 
@@ -646,9 +649,6 @@ SLOW_CHANNELS = {
 
 ("https://live-hq.evgcdn.net/live/285983d45f5bdab43ebb4cab75573adeda1/chunklist.m3u8", "https://mediatech.vn", "No"),
 ("http://live-hq.evgcdn.net/live/285f5f227e988ab4445a2138091d3d62e8d/chunklist.m3u8", "https://mediatech.vn", "No"),
-
-("http://vtvgoliveapp1-aws-plus-tn.vtvdigital.vn/aws-dp/bacninhtv/live/bacninhtv_720p/chunkscd.m3u8", "https://vtvdigital.vn", "No"),
-("http://cmcdp2.vtvdigital.vn/hls/BACGIANGTV/03.m3u8", "http://vtvdigital.vn", "No"),
 
 ("http://d3006k9ptxe2oq.cloudfront.net/aws-dp/bacninhtv/live/bacninhtv_720p/chunks.m3u8", "http://cloudfront.net", "No"),
 
@@ -692,8 +692,8 @@ SLOW_CHANNELS = {
 
 "caobang": {
   "url": [
+("http://vtvgolive-vtclc1.vtvdigital.vn/hls/CAOBANG/tc-p720/index.m3u8?pull=9696a44714021d9f7241771acb4e2c33287299f2a7e4aff8eb56d464a4a92049", "http://vtvdigital.vn", "No"), 
 ("http://vtvgolive-ott4.vtvdigital.vn/live/caobangtv/chunklist_2.m3u8", "http://vtvprime.vn", "No"),
-("http://vtvgolive-vtclc1.vtvdigital.vn/hls/CAOBANG/tc-p720/index.m3u8?pull=9696a44714021d9f7241771acb4e2c33287299f2a7e4aff8eb56d464a4a92049", "http://vtvdigital.vn", "No"),
 
 ("http://pop1-ec3-ateme.tv360.vn/live/eds/364/HLS_Clean_MHL_2s/364-avc1_5099968=10007-mp4a_196800_eng=20001.m3u8", "http://tv360.vn", "No"),
 ("http://pop1-ec3-ateme.tv360.vn/bpk-tv/364/output/364-audio_198800_eng_iv_3=196800-video_iv_3=5256400.m3u8", "http://tv360.vn", "No"),
@@ -770,6 +770,7 @@ SLOW_CHANNELS = {
  },
  "danang1": {
   "url": [
+("http://67tz1gnwrvxic.cmccdn.net/hls/DANANGTV/03.m3u8", "http://cmccdn.net", "No"),
 
 ("http://cdn.drt.vn/live/285b59a111d76974225a8e3004bfc31a509/playlist.m3u8", "https://mediatech.vn", "No"),
 
@@ -803,8 +804,6 @@ SLOW_CHANNELS = {
 
 ("http://cdnet-cdn-02.onsports.vn/hls/DANANGTV/03.m3u8", "http://onsports", "No"),
 
-("http://67tz1gnwrvxic.cmccdn.net/hls/DANANGTV/03.m3u8", "http://cmccdn.net", "No"),
-
 ("http://d3006k9ptxe2oq.cloudfront.net/aws-dp/danangtv/live/danangtv_720p/chunks.m3u8", "http://cloudfront.net", "No"),
 
 ("http://1011154949.vnns.net/CDN-FPT02/DANANG-SD-720p/chunks.m3u8", "http://htvc.com.vn", "No"),
@@ -818,6 +817,7 @@ SLOW_CHANNELS = {
  },
  "danang2": {
   "url": [
+("http://cmcdp2.vtvdigital.vn/hls/DANANG2/04.m3u8", "http://vtvdigital.vn", "No"),
 
 ("http://cdn.drt.vn/live/2859145290d0d7947ef88b6240123b62474/playlist.m3u8", "https://mediatech.vn", "No"),
 
@@ -845,8 +845,6 @@ SLOW_CHANNELS = {
 
 ("http://liveh34.vtvprime.vn/hls/DANANG2/04.m3u8", "https://vtvprime.vn", "No"),
 ("http://liveh34byt.vtvprime.vn/hls/DANANG2/04.m3u8", "https://vtvprime.vn", "No"),
-
-("http://cmcdp2.vtvdigital.vn/hls/DANANG2/04.m3u8", "http://vtvdigital.vn", "No"),
 
 ("http://w2d0548bvazcc.cmccdn.net/hls/DANANG2/04.m3u8", "http://cmccdn.net", "No"),
 
@@ -901,6 +899,8 @@ SLOW_CHANNELS = {
  },
 "dienbien": {
   "url": [
+("http://l60ce8firhs9c.cmccdn.net/live/binhduongtv/chunklist_2.m3u8", "http://cmccdn.net", "No"),
+("http://l60ce8firhs9c.cmccdn.net/live/dbientv/chunklist_2.m3u8", "http://cmccdn.net", "No"),
 
 ("http://cdn.drt.vn/live/2855dfeccb7f49a41a2b0441b3bfeda413c/chunklist.m3u8", "https://drt.vn", "No"),
 
@@ -936,9 +936,6 @@ SLOW_CHANNELS = {
 ("http://ott4.nethubtv.vn/live/dbientv/chunklist_2.m3u8", "http://nethubtv.vn", "No"),
 ("http://ott4.nethubtv.vn/live/binhduongtv/chunklist_2.m3u8", "http://nethubtv.vn", "No"),
 
-("http://l60ce8firhs9c.cmccdn.net/live/dbientv/chunklist_2.m3u8", "http://cmccdn.net", "No"),
-("http://l60ce8firhs9c.cmccdn.net/live/binhduongtv/chunklist_2.m3u8", "http://cmccdn.net", "No"),
-
 ("http://1011154949.vnns.net/htvc/daklak.720p.nimble.adm.tms/playlist.m3u8", "https://htvc.com.vn", "No"),
 
 ("http://123.31.36.68/live.m3u8?c=vstv362&q=sd&type=tv&location=NA&pkg=pkg11.hni", "http://mytv.com.vn", "No"),
@@ -951,6 +948,12 @@ SLOW_CHANNELS = {
  },
   "dongnai1": {
   "url": [
+("http://vtvgoliveapp1-aws-plus-tn.vtvdigital.vn/aws-dp/dongnai1tv_720p/chunks.m3u8", "https://vtvgo.vn", "No"),
+("http://vtvgolive-ott3.vtvdigital.vn/live/dongnai1tv/chunklist_2.m3u8", "http://vtvprime.vn", "No"),
+("http://vtvgolive-ott4.vtvdigital.vn/live/gialaitv/chunklist_2.m3u8", "http://vtvprime.vn", "No"),
+("http://vtvgolive-ott4.vtvdigital.vn/live/dongnai1tv/chunklist_2.m3u8", "http://vtvprime.vn", "No"),
+("http://cmcdp.vtvdigital.vn/live/dongnai1tv/chunklist_2.m3u8", "http://vtvdigital.vn", "No"),
+("http://cmcdp1.vtvdigital.vn/live/dongnai1tv/chunklist_2.m3u8", "http://cmccdn.net", "No"),
 
 ("http://cdn.mediatech.vn/dongnai/tv1live-transmux.m3u8", "https://mediatech.vn", "No"),
 ("http://cdn-hls.mediatech.vn/hls/raventiger-1578/dongnai/tv1live/source.m3u8", "http://mediatech.vn", "No"),
@@ -978,13 +981,6 @@ SLOW_CHANNELS = {
 
 ("http://d3006k9ptxe2oq.cloudfront.net/aws-dp/dongnai1tv/live/dongnai1tv_720p/chunks.m3u8", "http://cloudfront.net", "No"),
 
-("http://vtvgoliveapp1-aws-plus-tn.vtvdigital.vn/aws-dp/dongnai1tv_720p/chunks.m3u8", "https://vtvgo.vn", "No"),
-("http://vtvgolive-ott3.vtvdigital.vn/live/dongnai1tv/chunklist_2.m3u8", "http://vtvprime.vn", "No"),
-("http://vtvgolive-ott4.vtvdigital.vn/live/gialaitv/chunklist_2.m3u8", "http://vtvprime.vn", "No"),
-("http://vtvgolive-ott4.vtvdigital.vn/live/dongnai1tv/chunklist_2.m3u8", "http://vtvprime.vn", "No"),
-("http://cmcdp.vtvdigital.vn/live/dongnai1tv/chunklist_2.m3u8", "http://vtvdigital.vn", "No"),
-("http://cmcdp1.vtvdigital.vn/live/dongnai1tv/chunklist_2.m3u8", "http://cmccdn.net", "No"),
-
 ("https://stream.thingnet.vn/live/smil:DNTV1.smil/chunklist_w714472745_b1384000.m3u8", "http://baodongnai.com.vn", "No"),
 
 ("http://ott3.nethubtv.vn/live/dongnai1tv/chunklist_2.m3u8", "http://nethubtv.vn", "No"),
@@ -1006,6 +1002,10 @@ SLOW_CHANNELS = {
  },
   "dongnai2": {
   "url": [
+("http://vtvgoliveapp1-aws-plus-tn.vtvdigital.vn/aws-dp/dongnai2tv_720p/chunks.m3u8", "https://vtvgo.vn", "No"),
+("http://vtvgolive-ott3.vtvdigital.vn/live/dongnai2tv/chunklist_2.m3u8", "http://vtvprime.vn", "No"),
+("http://vtvgolive-ott3.vtvdigital.vn/live/phuthotv/chunklist_2.m3u8", "http://vtvprime.vn", "No"),
+("http://cmcdp.vtvdigital.vn/live/dongnai2tv/chunklist_2.m3u8", "http://cmccdn.net", "No"),
 
 ("http://cdn.mediatech.vn/dongnai/tv2live-transmux.m3u8", "https://mediatech.vn", "No"),
 
@@ -1024,11 +1024,6 @@ SLOW_CHANNELS = {
 ("http://on.thhp.vn/dongnai/tv2live-transmux.m3u8", "http://thhp.vn", "No"),
 
 ("http://live.hungyentv.vn/dongnai/tv2live-transmux.m3u8", "http://hungyentv.vn", "No"),
-
-("http://vtvgoliveapp1-aws-plus-tn.vtvdigital.vn/aws-dp/dongnai2tv_720p/chunks.m3u8", "https://vtvgo.vn", "No"),
-("http://vtvgolive-ott3.vtvdigital.vn/live/dongnai2tv/chunklist_2.m3u8", "http://vtvprime.vn", "No"),
-("http://vtvgolive-ott3.vtvdigital.vn/live/phuthotv/chunklist_2.m3u8", "http://vtvprime.vn", "No"),
-("http://cmcdp.vtvdigital.vn/live/dongnai2tv/chunklist_2.m3u8", "http://cmccdn.net", "No"),
 
 ("https://ott3.nethubtv.vn/live/dongnai1tv/chunklist_2.m3u8", "http://nethubtv.vn", "No"),
 
@@ -1112,6 +1107,7 @@ SLOW_CHANNELS = {
  },
   "gialai": {
   "url": [
+("http://tv.gialaitv.vn/tv.m3u8", "https://gialaitv.vn", "No"),
 
 ("http://vtvgoliveapp1-aws-plus-tn.vtvdigital.vn/aws-dp/gialaitv_720p/chunks.m3u8", "https://vtvgo.vn", "No"),
 ("http://vtvgolive-ott3.vtvdigital.vn/live/binhdinhtv/chunklist_1.m3u8", "https://vtvgo.vn", "No"),
@@ -1120,8 +1116,6 @@ SLOW_CHANNELS = {
 ("http://pop1-ec3-ateme.tv360.vn/live/eds/259/HLS_Clean_MHL_2s/259-avc1_5100000=10003-mp4a_214800_eng=20000.m3u8", "http://tv360.vn", "No"),
 
 ("http://d3006k9ptxe2oq.cloudfront.net/aws-dp/gialaitv/live/gialaitv_720p/chunks.m3u8", "http://cloudfront.net", "No"),
-
-("http://tv.gialaitv.vn/tv.m3u8", "https://gialaitv.vn", "No"),
 
 ("http://113.161.25.3/tv.m3u8", "http://gialaitv.vn", "No"),
 
@@ -1193,6 +1187,9 @@ SLOW_CHANNELS = {
  },
  "hatinh": {
   "url": [
+("http://vtvgolive-ott3.vtvdigital.vn/live/hatinhtv/chunklist_2.m3u8", "No"),
+("http://cmcdp2.vtvdigital.vn/hls/HATINH/03.m3u8", "http://vtvdigital.vn", "No"),
+("http://cmcdp.vtvdigital.vn/live/hatinhtv/chunklist_2.m3u8", "http://vtvdigital", "No"),
 
 ("http://cohauw9bgpvod.vcdn.cloud/httv1/index.m3u8", "https://baohatinh.vn", "No"),
 ("http://im4czwkxf7liv.vcdn.cloud/hls/HATINH/03.m3u8", "http://vcdn.cloud", "No"),
@@ -1209,10 +1206,6 @@ SLOW_CHANNELS = {
 ("http://w2d0548bvazcc.cmccdn.net/hls/HATINH/03.m3u8", "http://cmccdn.net", "No"),
 ("http://zirhmaft3x2vc.cmccdn.net/live/hatinhtv/chunklist_2.m3u8", "http://cmccdn.net", "No"),
 ("http://l60ce8firhs9c.cmccdn.net/live/hatinhtv/chunklist_2.m3u8", "http://cmccdn.net", "No"),
-
-("http://vtvgolive-ott3.vtvdigital.vn/live/hatinhtv/chunklist_2.m3u8", "No"),
-("http://cmcdp2.vtvdigital.vn/hls/HATINH/03.m3u8", "http://vtvdigital.vn", "No"),
-("http://cmcdp.vtvdigital.vn/live/hatinhtv/chunklist_2.m3u8", "http://vtvdigital", "No"),
 
 ("http://ott3.nethubtv.vn/live/hatinhtv/chunklist_2.m3u8", "http://nethubtv.vn", "No"),
 
@@ -1438,6 +1431,7 @@ SLOW_CHANNELS = {
  },
  "laichau": {
   "url": [
+("http://im4czwkxf7liv.vcdn.cloud/hls/LAICHAU/03.m3u8", "http://vcdn.cloud", "No"),
 
 ("http://luuchieu.truyenhinhso.vn/media/live/AF157BFA0E9FE004C61AD76E/index.m3u8", "https://truyenhinhso.vn", "No"),
 
@@ -1453,8 +1447,6 @@ SLOW_CHANNELS = {
 
 ("http://w2d0548bvazcc.cmccdn.net/hls/LAICHAU/03.m3u8", "http://cmccdn.net", "No"),
 ("http://l60ce8firhs9c.cmccdn.net/live/laichautv/chunklist_2.m3u8", "http://cmccdn.net", "No"),
-
-("http://im4czwkxf7liv.vcdn.cloud/hls/LAICHAU/03.m3u8", "http://vcdn.cloud", "No"),
 
 ("http://cdnet-cdn-03.onsports.vn/hls/LAICHAU/03.m3u8", "http://onsports", "No"),
 
@@ -1596,13 +1588,13 @@ SLOW_CHANNELS = {
   "laocai": {
   "url": [
 
+("http://vtvgolive-vtclc1.vtvdigital.vn/hls/LAOCAI/tc-p720/index.m3u8?pull=f99d409444141f69b8dfc49115ca1649b56a920213515a3e7a2106b54e906e9a", "http://vtvdigital.vn", "No"),
+
 ("http://live.baolaocai.vn/channel2/stream.m3u8", "https://baolaocai.vn", "No"),
 
 ("http://pop1-ec3-ateme.tv360.vn/live/eds/385/HLS_Clean_MHL_2s/385-avc1_5099968=10007-mp4a_196800_eng=20001.m3u8", "http://tv360.vn", "No"),
 
 ("http://luuchieu.truyenhinhso.vn/media/live/42297BC521EC911B8934699E/index.m3u8", "http://truyenhinhso.vn", "No"),
-
-("http://vtvgolive-vtclc1.vtvdigital.vn/hls/LAOCAI/tc-p720/index.m3u8?pull=f99d409444141f69b8dfc49115ca1649b56a920213515a3e7a2106b54e906e9a", "http://vtvdigital.vn", "No"),
 
 ("http://tv.vietanhtv.top/vieon/vieon.php?id=lao-cai-1", "https://vieon.vn", "Getlink"),
 
@@ -1915,13 +1907,14 @@ SLOW_CHANNELS = {
  },
   "sonla": {
   "url": [
-("http://pop1-ec3-ateme.tv360.vn/live/eds/444/HLS_Clean_MHL_2s/444-avc1_5100000=10004-mp4a_214800=20001.m3u8", "http://tv360.vn", "No"),
-("http://pop1-ec3-ateme.tv360.vn/bpk-tv/444/output/444-audio_214835_und_iv_1=214800-video_iv_1=5254000.m3u8", "http://tv360.vn", "No"),
-
 ("http://events.vtvdigital.vn/kenhdp/sonla-720p.m3u8", "No"),
 ("http://kenhdp-vtvgo.vtvdigital.vn/kenhdp/sonla-720p.m3u8", "No"),
 ("http://vtvgolive-vtv.vtvdigital.vn/kenhdp/sonla-720p.m3u8", "No"),
 ("http://vtvgolive-qt.vtvdigital.vn/kenhdp/sonla-720p.m3u8", "No"),
+
+("http://pop1-ec3-ateme.tv360.vn/live/eds/444/HLS_Clean_MHL_2s/444-avc1_5100000=10004-mp4a_214800=20001.m3u8", "http://tv360.vn", "No"),
+("http://pop1-ec3-ateme.tv360.vn/bpk-tv/444/output/444-audio_214835_und_iv_1=214800-video_iv_1=5254000.m3u8", "http://tv360.vn", "No"),
+
 
 ("http://cdn.drt.vn/live/28595222e707a364251b8724717894baa46/chunklist.m3u8", "https://mediatech.vn", "No"),
 
@@ -1954,8 +1947,9 @@ SLOW_CHANNELS = {
   "tayninh": {
   "url": [
 
-("http://vtvgolive-sctvdrm.vtvdigital.vn/manifest/tayninhtv/playlist-pre_720p.m3u8", "No"),
 ("http://vtvgolive-ssaimh.vtvdigital.vn/manifest/dp-tayninhtv/playlist_720p.m3u8", "https://vtvdigital.vn", "No"),
+
+("http://vtvgolive-sctvdrm.vtvdigital.vn/manifest/tayninhtv/playlist-pre_720p.m3u8", "No"),
 
 ("http://pop1-ec3-ateme.tv360.vn/live/eds/430/HLS_Clean_MHL_2s/430-avc1_5100000=10015-mp4a_214800_eng=20001.m3u8", "http://tv360.vn", "No"),
 ("http://pop1-ec3-ateme.tv360.vn/live/eds/434/HLS_Clean_MHL_2s/434-avc1_5100000=10001-mp4a_214800=20001.m3u8", "http://tv360.vn", "No"),
